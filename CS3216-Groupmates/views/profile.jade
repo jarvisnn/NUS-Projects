@@ -1,0 +1,276 @@
+extends base
+
+block header
+  include ./navbar.jade
+
+block content
+  input#current-user-id(type='hidden',value=currentUser.id)
+  template#review-widget
+    .review
+      .review-info
+        .info
+          div
+            span.review-widget-start-word
+            a.review-widget-person-link
+            |&nbsp;for&nbsp;
+            span.module-code
+          div.review-stars
+            .star
+            .star
+            .star
+            .star
+            .star
+        .reviewer-image
+          img
+      .review-content
+        .content
+        hr
+        table
+          tr
+            td
+              .fb-like(
+                data-href=reviewUrl,
+                data-layout='button_count',
+                data-action='like',
+                data-show-faces='true',
+                data-share='true')
+            td(style="width:100%;text-align:right;font-size:20px;")
+              a.update(href="#")
+                span.glyphicon.glyphicon-pencil
+              | &nbsp;&nbsp;
+              a.delete(href="#")
+                span.glyphicon.glyphicon-trash
+
+  include ./components/add_review_widget.jade
+  include ./components/edit_review_widget.jade
+  include ./components/confirmation_modal.jade
+  .container
+    .row.profile-page-wrapper
+      .user-info-container.col-md-3
+        mixin profile_sidebar(user)
+      .user-reviews-container.col-md-9
+        ul.nav.nav-tabs.review-type-nav(role="tablist")
+          if currentUser.id === user.id
+            li.active(role="presentation")
+              a#reviews-of-list-button(
+                href="#reviews-of-list",
+                aria-controls="reviews-of-list",
+                role="tab",
+                data-toggle="tab") Reviews About You
+            li(role="presentation")
+              a#reviews-by-list-button(
+                href="#reviews-by-list",
+                aria-controls="reviews-by-list",
+                role="tab",
+                data-toggle="tab") Reviews By You
+          else
+            li.active(role="presentation")
+              a(href="#reviews-of-list", aria-controls="reviews-of-list", role="tab", data-toggle="tab") Reviews About #{user.name}
+        .tab-content
+          #reviews-of-list.review-list.tab-pane.active
+            div#review-of-waypoint(data-id=user.id, style='text-align: center')
+              .refresh-ring
+            .review-info.no-review-info.
+              There are no reviews on
+              #{currentUser.id === user.id ? 'you' : user.name} yet.
+          #reviews-by-list.review-list.tab-pane
+            div#review-by-waypoint(data-id=user.id, style='text-align: center')
+              .refresh-ring
+            .review-info.no-review-info.
+              You have not written any reviews yet. Check out your classmates from
+              the module list on the left or connect to IVLE first if you haven't done so.
+
+  script.
+    !function(){
+      $('body').on('click', '.add-review-button', function(event) {
+        $('#add-review-widget-modal')
+          .data('revieweeId', $(this).data('revieweeId'))
+          .data('revieweeName', $(this).data('revieweeName'))
+          .modal();
+      });
+
+      function requestReviews(options) {
+        return $.ajax('/reviews/get', {
+          cache: false,
+          data: options
+        });
+      }
+
+      function deleteReview(id) {
+        return $.ajax('/reviews/delete/' + id, {
+          cache: false,
+          method: 'post'
+        });
+      }
+
+      function fillInformation(element, review, target,
+        callbackDelete, callbackUpdate) {
+        var rootElement = $('.review', element)[0];
+        if (callbackDelete)
+          $('.delete', element).click(function(){
+            callbackDelete(rootElement, review.id);
+            return false;
+          });
+        else
+          $('.delete', element).remove();
+        if (callbackUpdate)
+          $('.update', element).click(function(){
+            callbackUpdate(rootElement, review);
+            return false;
+          });
+        else
+          $('.update', element).remove();
+        $('.review-widget-start-word', element)
+          .text(target === 'reviewee' ? 'For ' : 'By ');
+        $('.module-code', element).text(review.moduleCode);
+        $('.review-widget-person-link', element)
+          .attr('href', '/user/' + review[target].id)
+          .text(review[target].name);
+        $('.review-stars > .star', element)
+          .each(function (index) {
+            if (index + 1 <= review.stars)
+              $(this).addClass('selected');
+          });
+        $('.reviewer-image>img', element)
+          .attr('src', review[target].fbId ?
+            '//graph.facebook.com/' + review[target].fbId
+              + '/picture?type=square' :
+            '//graph.facebook.com/undefined/picture?type=large'
+            );
+        $('.review-content>.content', element).text(review.description);
+        var $fbLike = $('.review-content>.fb-like', element);
+        $fbLike.data('href', $fbLike.data('href') + review.id);
+      }
+
+      var currentUserId =
+        Number(document.getElementById('current-user-id').value);
+
+      function showEditReviewModal(rootElement, review) {
+        $('#edit-review-widget-modal')
+          .data('reviewId', review.id)
+          .data('revieweeName', review.reviewee.name)
+          .data('moduleCode', review.moduleCode)
+          .data('reviewDescription', review.description)
+          .data('stars', review.stars)
+          .modal();
+      }
+
+      var reviewOfCount = 0;
+      var waypointReviewOfEnable = true;
+      var waypointReviewOfInProgress = false;
+      var waypointReviewOfElement
+        = document.getElementById('review-of-waypoint');
+      function refreshReviewOf() {
+        requestReviews({
+          reviewee: waypointReviewOfElement.dataset.id,
+          offset: reviewOfCount
+        }).done(function (data) {
+          var reviewWidget = document.getElementById('review-widget');
+          var fragment = document.createDocumentFragment();
+          data.forEach(function (review) {
+            var reviewWidgetInstance =
+              document.importNode(reviewWidget.content, true);
+            // allow editing/removing review
+            if (review.reviewer && review.reviewer.id === currentUserId)
+              fillInformation(reviewWidgetInstance, review, 'reviewer',
+                function(rootElement, reviewId) {
+                  showConfirmationModal('Are you sure to delete?', function(){
+                    deleteReview(reviewId).done(function(){
+                      rootElement.remove();
+                      --reviewOfCount;
+                    });
+                  });
+                },
+                showEditReviewModal);
+            else
+              fillInformation(reviewWidgetInstance, review, 'reviewer');
+            fragment.appendChild(reviewWidgetInstance);
+          });
+          reviewOfCount += data.length;
+          waypointReviewOfElement.parentNode
+            .insertBefore(fragment, waypointReviewOfElement);
+          waypointReviewOfInProgress = false;
+          $('#review-of-waypoint > .refresh-ring').addClass('disable');
+        }).fail(function(xhr, status, error) {
+          waypointReviewOfInProgress = false;
+          $('#review-of-waypoint > .refresh-ring').addClass('disable');
+        });
+        waypointReviewOfInProgress = true;
+        $('#review-of-waypoint > .refresh-ring').removeClass('disable');
+      }
+      refreshReviewOf();
+
+      // review written by the current user
+      // policy: allow deletion
+      var reviewByCount = 0;
+      var waypointReviewByEnable = false;
+      var waypointReviewByInProgress = false;
+      var waypointReviewByElement
+        = document.getElementById('review-by-waypoint');
+      function refreshReviewBy() {
+        requestReviews({
+          reviewer: waypointReviewByElement.dataset.id,
+          offset: reviewByCount
+        }).done(function (data) {
+          var reviewWidget = document.getElementById('review-widget');
+          var fragment = document.createDocumentFragment();
+          data.forEach(function (review) {
+            var reviewWidgetInstance =
+              document.importNode(reviewWidget.content, true);
+            fillInformation(
+              reviewWidgetInstance, review, 'reviewee',
+              function(rootElement, reviewId) {
+                showConfirmationModal('Are you sure to delete?', function() {
+                  deleteReview(reviewId).done(function(){
+                    rootElement.remove();
+                    --reviewByCount;
+                  });
+                });
+              },
+              showEditReviewModal);
+            fragment.appendChild(reviewWidgetInstance);
+          });
+          reviewByCount += data.length;
+          waypointReviewByElement.parentNode
+            .insertBefore(fragment, waypointReviewByElement);
+          waypointReviewByInProgress = false;
+          $('#review-by-waypoint > .refresh-ring').addClass('disable');
+        }).fail(function (xhr, status, error) {
+          waypointReviewByInProgress = false;
+          $('#review-by-waypoint > .refresh-ring').addClass('disable');
+        });
+        waypointReviewByInProgress = true;
+        $('#review-by-waypoint > .refresh-ring').removeClass('disable');
+      }
+      refreshReviewBy();
+
+      $(window).scroll(function(event) {
+        var windowBottomY = window.scrollY + window.innerHeight + 10;
+        if (waypointReviewOfEnable &&
+          windowBottomY > $(waypointReviewOfElement).offset().top &&
+          !waypointReviewOfInProgress)
+          refreshReviewOf();
+        if (waypointReviewByEnable &&
+          windowBottomY > $(waypointReviewByElement).offset().top &&
+          !waypointReviewByInProgress)
+          refreshReviewBy();
+      });
+      $('#reviews-of-list-button').click(function() {
+        waypointReviewOfEnable = true;
+        waypointReviewByEnable = false;
+      });
+      $('#reviews-by-list-button').click(function() {
+        waypointReviewByEnable = true;
+        waypointReviewOfEnable = false;
+      });
+
+      $('#review-of-waypoint').click(function() {
+        if (!waypointReviewOfInProgress)
+          refreshReviewOf();
+      });
+      $('#review-by-waypoint').click(function() {
+        if (!waypointReviewByInProgress)
+          refreshReviewBy();
+      });
+
+    }();

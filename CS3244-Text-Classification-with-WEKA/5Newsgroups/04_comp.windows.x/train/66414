@@ -1,0 +1,22 @@
+from: cheong@solomon.technet.sg (scstech admin)
+subject: get pseudo tty in x/motif
+nntp-post-host: solomon.technet.sg
+organ: technet, singapor
+line: 16
+
+hi,
+
+i am about to write an applic in x/motif that will requir the
+embed of a pseudo tty. so, befor i re-invent the wheel, ha anyon
+written/gotten a motif widget that doe the job ? otherwis, i would
+appreci ani pointer to make such a beast.
+
+my environ is x11r4/motif 1.1 and x11r5/motif 1.2 (if thi help).
+
+
+thank in advanc.
+
+
+arthur lim
+email : arthur@mailhost.sc.com.sg
+

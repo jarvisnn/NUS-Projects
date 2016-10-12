@@ -1,0 +1,41 @@
+from: ranei@teal.csn.org (scott ranei)
+subject: re: hypercard for unix
+nntp-post-host: teal.csn.org
+organ: colorado supernet, inc.
+line: 35
+
+queloz@bernina.ethz.ch (ronald queloz) write:
+
+>hi netland,
+
+>doe anybodi know if there is someth like macintosh hypercard for ani unix 
+>platform?
+
+there ar sever product you might investig.  if you've got
+$20,000 per seat and high-end hardwar, gain momentum might be a good
+choic.  it isn't compat with hypercard, but ha a similar
+architectur (and *wai* more function).  i don't have contact
+inform, but thei were recent purchas by sybas who shouldn't
+be too hard to find.
+
+if you're run new on sparc, check out hyperlook
+(hyperlook@ture.com).  it us postscript as a script languag
+which is good if you need to do lot of displai orient script,
+but not so good for non-programm.  it wa $995, last i heard.
+
+you might also look at our product metacard.  we're alpha-test
+direct import of hypercard stack (we've even made the test releas
+avail for anonym ftp), so we're obvious the closest in
+function.  metacard run on most unix workstat and cost
+$495.  email to info@metacard.com for more detail.
+  scott
+
+>thank in advanc
+
+
+>ron.
+-- 
+***********************************************************************
+* scott ranei  303-447-3936            rememb: the better you look, *
+* ranei@metacard.com                   the more you'll see -- lidia   *
+***********************************************************************

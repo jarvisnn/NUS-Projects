@@ -1,0 +1,31 @@
+from: dcoleman@ccwf.cc.utexa.edu (daniel m. coleman)
+subject: re: diamond stealth 24 give 9.4 winmark?
+organ: the univers of texa at austin, austin, texa
+line: 25
+nntp-post-host: flubber.cc.utexa.edu
+
+in articl <westesc5qvap.bgj@netcom.com> west@netcom.com (will est) write:
+>i have just instal a diamond stealth 24 isa card in
+>a '486dx2-66 system with 256k cach, and 16 meg of memori,
+>that get about a 126 si 6.0 cpu benchmark rate.  us
+>the 1024x768x16 color driver under window, i am get a
+>winbench winmark rate of onli about 9.5 million.  sinc
+>i have heard that other get 15-to-16 million for thi card,
+>i assum that someth is veri wrong with my setup.
+
+>what ar some possibl caus of the card slow down like thi?
+
+most importantli, which winbench version ar you us?  on my local bu ati
+graphic ultra pro, i've gotten variou winbench score from 15.8 million to
+31 million winmark, depend on the version.  winbench 2.5 give the most
+optimist score, 3.11 give the least.  a winmark rate is meaningless
+without a correspond version number.
+
+dan
+
+-- 
+daniel matthew coleman		   |   internet: dcoleman@ccwf.cc.utexa.edu
+-----------------------------------+---------- : dcoleman@utxvm.cc.utexa.edu
+the univers of texa at austin  |	 decnet: utxvm::dcoleman
+electr/comput engin	   |	 bitnet: dcoleman@utxvm [.bitnet]
+-----------------------------------+------------------------------------------

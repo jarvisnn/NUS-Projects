@@ -1,0 +1,52 @@
+from: oj@world.std.com (oliv jone)
+
+subject: re: x design choic for color handl: question
+
+keyword: color
+
+organ: shawsheen softwar
+
+line: 20
+
+
+
+in articl <lu1oftinnnfk@cascai.cs.utexa.edu> sirosh@cs.utexa.edu (joseph sirosh) write:
+
+>
+
+>...why did x design decid to not associ
+
+>the color with the object be drawn, and instead associ it with the
+
+>displai it is be drawn on?
+
+
+
+in x10, the draw attribut were bundl into draw
+
+request;  that is, the server's draw model wa stateless.
+
+
+
+thi caus problem with perform and network traffic,
+
+so the x11 redesign includ the graphic context to codifi
+
+the draw state.  most applic design who want to
+
+draw thing in sever differ color creat a gc for
+
+each color dure initi, then pass the gc id in
+
+each draw request.
+
+
+
+for more inform see scheifler and getti's articl
+
+in the 1986 acm transact on graphic.
+
+
+
+
+

@@ -1,0 +1,81 @@
+from: trevor@telesoft.com (trevor bourget @ignit)
+subject: re: repost: acceler/translat
+keyword: acceler, case
+organ: alsi group, san diego, ca, usa
+line: 75
+
+in <sdenni.735423404@aa.cad.slb.com> sdenni@osf.org write:
+
+>i post thi a while ago and didn't receiv on repli, and now we
+>have anoth bug report on the same subject. can anybodi help me out?
+
+the problem is that motif us xgrabkei to implement menu acceler,
+and these grab ar specif about which modifi appli.  unfortun,
+the specif for xgrabkei doesn't allow anymodifi to be combin
+with other modifi, which is exactli what would be desir in thi case:
+"ctrl ani<kei>q".
+
+>in ora vol. 6, in the section on acceler it sai "for inform
+>on how to specifi translat tabl see vol. 4...", thi is so you
+>know what to put for the xmnacceler resourc.  if you go to
+>vol. 4 it sai, "likewis, if a modifi is specifi, there is
+>noth to prohibit other modifi from be present as well. for
+>exampl, the translat:
+>	shift<kei>q:	quit()
+>will take effect even if the ctrl kei is held down at the same time as
+>the shift kei (and the q kei).
+
+thi is true for acceler and mnemon, which ar implement us
+event handler instead of grab; it's not true for menu acceler.  if
+you're a motif implementor, i'd suggest lobbi to get the xlib semant
+chang to support the featur i describ abov.  otherwis, chang the
+document for menu acceler to properli set the user's
+expect, becaus menu acceler ar not the same thing as
+translat.
+
+>is it possibl to suppli > 1 acceler for a menu entri?
+
+if you mean "menu acceler", no it's not possibl.  that's accord to
+the definit of the xmnacceler resourc in the xmlabel manual page.
+
+>keep in mind when answer thi question that when us motif you
+>can't us xtinstallacceler().
+
+i can't think of a reason why not.
+
+>how can you ensur that acceler work the same independ of
+>case?  what i want is ctrl+o and ctrl+o to both be acceler on on
+>menu entri.
+
+there is a workaround for motif user.  in addit to the normal menu
+acceler you instal on the xmpushbutton[gadget], set an xtnacceler
+resourc on the shell (toplevel or applic).  instal the shell's
+acceler on itself and all of it descend with
+xtinstallallacceler (shell, shell).
+
+for exampl,
+
+  applicationshel - mainwindow - menubar - filecascad
+					  -- filepulldown - openpushbutton
+							  - exitpushbutton
+
+  *openpushbutton.acceler = ctrl<kei>o
+  *openpushbutton.acceleratortext = ctrl+o
+  *exitpushbutton.acceler = ctrl<kei>q
+  *exitpushbutton.acceleratortext = ctrl+q
+
+  *applicationshel.acceler = #overrid\n\
+    ctrl<kei>o: performact(*openpushbutton, armandactiv)\n\
+    ctrl<kei>q: performact(*exitpushbutton, armandactiv)
+
+you have to write and add the applic action performact, which you
+can implement by us xtnametowidget on the first argument and then
+xtcallactionproc with the rest of the argument.
+
+i test out someth similar to thi.  to shorten develop time, i
+us teleus's tuninstallacceler resourc to instal the acceler
+on the shell, and i directli invok the open and quit d action instead
+of ask the pushbutton to do it for me, but the more gener approach i
+describ abov should work.
+
+-- trevor bourget (trevor@telesoft.com)

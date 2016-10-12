@@ -1,0 +1,58 @@
+from: dlemoin@xobu.nswc.navi.mil (d. lemoin)
+
+subject: colormap problem
+
+organ: f31
+
+line: 24
+
+
+
+i am save an imag on on machin and redisplai the imag on
+
+anoth machin (both ar hp 9000 model 750s).  the imag is creat
+
+us xcreateimag and xgetimag and displai with xputimag.  the
+
+imag is redisplai correctli except that the color ar wrong becaus
+
+the server on the other machin is us a differ colormap.
+
+
+
+i tri save the colormap (pixel and rgb valu) and on the redisplai,
+
+perform a tabl lookup against the new colormap.  thi didn't work
+
+becaus some rgb combo don't exist in the new colormap.
+
+
+
+is there a wai to forc the server to load color into set pixel valu, or
+
+is there a simpler wai to solv thi problem?  i tri us xinitcolormap
+
+but couldn't get that to work either.
+
+
+
+ani help would be appreci.
+
+
+
+--------------------------------------
+
+don lemoin
+
+naval surfac warfar center
+
+dahlgren divis
+
+dahlgren, va 22405
+
+(703)663-7917
+
+dlemoin@xobu.nswc.navi.mil
+
+
+

@@ -1,0 +1,35 @@
+from: clump@acap.cs.mcgill.ca (clark verbrugg)
+subject: re: bgi driver for svga
+organ: soc, mcgill univers, montreal, canada
+x-newsread: tin [version 1.1 pl8]
+line: 29
+
+domin lai (cs_cylai@cs.ust.hk) wrote:
+: simon crow (scrow@hemel.bull.co.uk) wrote:
+: 8~> i requir bgi driver for super vga displai and super xvga displai. doe 
+: 8~> anyon know where i could obtain the relev driver ? (ftp site ??)
+
+: 	i would like to know too!
+
+: regard,
+: domin
+
+garbo.uwasa.fi (or on of it mani mirror) ha a file
+call "svgabg40" in the program subdirectori.
+these ar svga bgi driver for a varieti of card.
+
+[from the readm]:
+"card type support: (supervga driver)
+  ahead, ati, chip & tech, everex, genoa, paradis, oak, trident (both 8800 
+  and 8900, 9000), tseng (both 3000 and 4000 chipset) and video7.
+  these driver will also work on video card with vesa capabl.
+  the tweak driver will work on ani regist-compat vga card."
+
+enjoi,
+clark verbrugg
+clump@cs.mcgill.ca
+
+--
+
+ honk honk blat wak wak wak wak wak ungow!
+

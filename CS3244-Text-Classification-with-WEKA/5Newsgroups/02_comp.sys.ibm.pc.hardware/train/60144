@@ -1,0 +1,31 @@
+from: mulvei@blurt.oswego.edu (allen mulvei, suni, oswego, ny)
+subject: re: memori slot problem
+organ: suni colleg at oswego, oswego, ny
+line: 26
+
+in articl <1qiij$t27@bigboot.wpi.edu>, ralf@wpi.wpi.edu (ralph valentino) write:
+> i final decid to upgrad my 486-33 eisa's memori from 8 meg to 16
+> meg - two month after the part warranti ran out on the (anigma)
+> motherboard - two month too late.  it seem there's a problem with
+> on or both of the two 1m/2mx36bit sim slot in bank b.  on boot i get
+> a pattern test failur at address 0xa00000 and the system deconfigur
+> the top 6 meg.  the sim ar good, i tri rotat all of them into
+> bank a.  on on of the configur, howev, the pattern test
+... delet...
+> fail at 0x800000.  in all test, the pattern that appear wa the
+ same as the pattern if no sim wa in place.  thi lead me to believ
+> the on or two of the connector address pin ar at fault and, with a
+> lot of luck, might be patchabl.
+
+> 
+> -ralph
+> ===============
+> ralph valentino   (ralf@chpc.org)  (ralf@wpi.wpi.edu)
+> hardwar engin,  worcest  polytechn  institut
+> center for high perform comput, marlborough ma
+
+mani motherboard have jumper to enabl/disabl the memori bank.  did you 
+check that out?
+
+			allen mulvei
+			mulvei@blurt.oswego.edu

@@ -1,0 +1,32 @@
+from: sherri@a.cs.okstat.edu (sherri robert mich)
+subject: re: .scf file, help need
+organ: oklahoma state univers
+line: 27
+
+from articl <1993apr21.013846.1374@cx5.com>, by tlc@cx5.com:
+> 
+> 
+> i've got an old demo disk that i need to view. it wa made us rix softwork.  
+> the file on the two diskett set end with: .scf
+> 
+> the demo wa vga resolut (256 color), but i don't know the spatial  
+> resolut.
+> 
+
+accord to my colorix manual .scf file ar 640x480x256
+
+> first problem: when i try to run the demo, the screen ha two black bar that  
+> cut across (horizont) the screen, in the top third and bottom third of the  
+> screen. the bar ar about 1-inch wide. other than thi, the demo (the  
+> anim part) seem to be run fine.
+> 
+> second problem: i can't find ani graphic program that will open and displai  
+> these file. i have a coupl of imag convers program, none mention .scf  
+> file.
+> 
+
+you mai try vpic, i think it handl the 256 color rix file ok..
+
+
+rob sherri
+sherri@a.cs.okstat.edu

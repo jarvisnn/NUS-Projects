@@ -1,0 +1,28 @@
+from: toml@boulder.parcplac.com (tom lastrang)
+subject: re: forc a window manag to accept specif coordin for a window
+organ: parcplac boulder
+line: 23
+
+in articl <c5r25y.hfz@cs.columbia.edu> ethan@cs.columbia.edu (ethan solomita) write:
+|>
+|>	hi. i'm try to figur out how to make a window manag
+|>place the window where the creat window command tell it,
+|>regardless of what it mai think is right. (my applic ha
+|>reason to know better)
+|>
+|>	i don't want to set the overrid-redirect becaus i do
+|>want all the embellish that the window manag give, i just
+|>want the wm to accept my choic of locat.
+
+
+what "it mai think is right" mai be exactli what the user want.
+assum that your applic "ha reason to know better" is, imho,
+anti-social.  if i start your applic with a -geometri option ar
+you go to ignor that as well?
+
+there's realli no wai to forc a window manag to do much of anyth
+if it's manag your window.  you can ask, you can hint, but there's
+no guarante that you're go to get what you want.
+
+--
+tom lastrang        toml@boulder.parcplac.com

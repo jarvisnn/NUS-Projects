@@ -1,0 +1,64 @@
+from: brentw@netcom.com (brent c. william)
+subject: re: colorado jumbo 250 for gatewai 2000?
+organ: netcom on-line commun servic (408 241-9760 guest)
+line: 59
+
+pd@world.std.com (peter f davi) write:
+
+>i've just instal a new colorado jumbo 250 tape backup unit from
+>gatewai, and i have a coupl of complaint with it.  i don't know how
+>common or seriou these problem mai be.  i would appreci some
+>feedback from other who have us thi system.  (btw, thi is on a
+>4dx2-66v tower system.)
+
+	i have a similar configur: colorado 250mb on 66 dx/2 tower.
+
+>the problem ar:
+
+>    o	firstli, gatewai ship me onli 120 mb tape, even though the
+>	drive is a 250 mb unit.  when i call to complain, thei onli
+>	said:  "that's all we carri," and "with compress, you can
+>	fit 250 mb on on tape."  mayb so, but then why did i pai
+>	extra for the larg capac tape drive?
+
+	you got sucker in the same wai i did.  silli me, believ
+	that the "250" logo on the front meant actual carri capac.
+	the peopl who do thi sort of thing for a live call it 
+	"market."  lawyer who prosecut it call it "fraud."
+	perhap we can have a bunch of other dupe buyer march on 
+	their corpor headquart.
+
+>    o	i have about 230 mb of data on my c: drive.  i choos the
+>	space-optim compress scheme and start a full backup.
+>	the softwar estim it would take about 22 minut.  it
+>	took 4 1/2 hour.  doe thi sound about right?
+
+	thi is a bit long.  my system take about 45 minut to do 
+	the same thing.  usual 4.5 hour, particularli if the tape 
+	is grind awai the whole time mean that your block size for 
+	the write is too small.  is there ani wai to chang the block 
+	size or write buffer size so it's bigger?
+
+>    o	dure the backup, about a dozen file came up with "access
+>	deni" error.  most of these were in c:\window\system
+>	(comm.drv, keyboard.drv, shell.dll, etc.), but also
+>	c:\window\progman.ex and a coupl of file in the c:\tape
+>	directori.  anyon els had thi happen?
+
+	thi is becaus the file ar open by do.  the file in the 
+	tape directori ar like the execut file or the configur
+	file for the tape system.  i would recommend run the backup
+	from do so it will make a complet backup of the tape directori.
+
+>thank for ani and all feedback on thi system.  i'd also appreci
+>hear of good sourc for blank tape cartridg, prefer 250 mb
+>size.
+
+	the 250mb cartridg won't do you ani good sinc the drive
+	won't write 250mb of physic data on the tape.  
+
+>thank.
+>-pd
+
+-- 
+-brent william (brentw@netcom.com) san jose, california

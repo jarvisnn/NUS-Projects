@@ -1,0 +1,33 @@
+from: cgcad@bart.inescn.pt (comp. graphic/cad)
+subject: re: font in pov??
+nntp-post-host: bart
+organ: inesc-porto, portug
+line: 27
+
+hi.
+
+the rtrace rai tracer support 3d text as a primit, not collect of
+sphere, cylind and so on...
+the 3d char ar made of line and spline that ar extrud...
+
+pleas have a look at asterix.inescn.pt [192.35.246.17] in directori
+pub/rtrace.
+in pub/rtrace/tmp there ar some demo imag with high qualiti text.
+all of them ar call text?.jpg (jpeg encod). see them first and then
+tell me what you think.
+
+regard,
+antonio.
+.........................................................................
+     o     o
+    /     /                        i n e s c
+   | o   |        antonio costa        | e-mail   acc@asterix.inescn.pt
+   | |\  |   o                         |          acosta@porto.inescn.pt
+   | | \ |  /  o  comp. graphic & cad | decnet   porto::a_costa
+   | |  \| /  /                        |
+   | |  /  | |    largo mompilh 22   | uucp     {mcvax,...}!...
+   o | |-o | |    4100 porto portug  | bell     +351+02+321006
+    /   \ /   \
+   o     o     o          "let the good time roll..."
+
+

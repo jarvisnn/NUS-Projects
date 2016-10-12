@@ -1,0 +1,17 @@
+from: tdunbar@vtaix.cc.vt.edu (thoma dunbar)
+subject: re: x toolkit
+summari: get the athena 3d widget set
+distribut: inet
+organ: virginia tech, blacksburg, va
+line: 9
+nntp-post-host: vtaix.cc.vt.edu
+
+
+ libxaw3d, the 3d athena widget set will greatli improv the
+"sculptur" look. in linux, with it share, jump-tabl lib, you
+don't even have to recompil or relink. you mere have to:
+ ln -sf /lib/libxaw3d.so.3.0 /lib/libxaw.so.3
+
+
+
+   thoma

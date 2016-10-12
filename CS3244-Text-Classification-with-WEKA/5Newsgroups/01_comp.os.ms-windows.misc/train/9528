@@ -1,0 +1,34 @@
+from: rmohn@vax.clarku.edu
+subject: re: page setup in notepad
+organ: clark univers
+line: 29
+
+in a previou articl, joel@jach.hawaii.edu (joel aycock) wrote:
+> 
+>	i struggl with the margin problem for ag as well, until i
+>final got hold of the sharewar binari editor beav133, and dug into
+>notepad.ex (there is no setup facil to forc notepad to default to 
+>0.0 margin- it's hardwir into code!!!). 
+> 
+>	do a search for ".75", then chang the offend byte to ".00", 
+>et viola. who ar the gui who hardcod these "option" anywai?
+> 
+>	i'm interest in whether the problem onli rear it's ugli head for 
+>certain printer- i'm us an old epson lx-800 (or is that ex-800? never can 
+>rememb).
+> 
+>aloha.
+
+you ar nto alon.  i get the same problem with my panason kpx 1124i (24 
+pin).  oterhwis, it's a great printer.  i just can't find a driver for it, 
+onli for the non-"i" version.  anyon seen it?
+
+rob
+
+         |------------------------------------------------------------|
+                      \       rmohn@vax.clarku.edu       /
+               _________\                               /________
+                          \         rob mohn         /
+               ==================================================
+                    annoi rush limbaugh.  think for yourself.
+               ==================================================

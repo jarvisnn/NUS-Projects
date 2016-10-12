@@ -1,0 +1,40 @@
+from: venkatg@grace.cs.orst.edu (gopal venkatraman)
+subject: question regard overlai of graphic
+articl-i.d.: flop.1r5f7linnj71
+distribut: world
+organ: comput scienc depart, oregon state univers
+line: 32
+nntp-post-host: grace.cs.orst.edu
+
+hello...
+
+i wonder if some on can suggest an answer to the follow question:
+i am a total x novic and would appreci ani suggest you mai have.
+
+i am try to creat a simpl draw tool....
+
+       __________
+       |        |
+       |     ___|___
+       |_____|__|  |
+             |	   |
+	     |_____|
+
+let's sai i have two rectangl on the canva(see abov) 
+on intersect the other...
+now, i would like to delet on of the rectangl.
+the wai i do it is to creat anoth gc wherein i us the
+gxxor logic function and simpli redraw the rectangl us the newli
+creat graphic context thu delet it for all appar purpos.
+a problem with thi approach is that at the point of intersect the pixel 
+locat belong to the other rectangl also becom white, which is 
+someth that should be avoid.
+
+is there ani wai i can avoid thi problem without have to redraw the other
+rectangl too?
+i also would not like to gener an expos event for the affect area
+as thi degrad perform veri badli...
+
+
+thank you...
+gopal

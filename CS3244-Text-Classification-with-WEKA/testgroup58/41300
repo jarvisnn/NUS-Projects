@@ -1,0 +1,46 @@
+from: sirosh@cs.utexa.edu (joseph sirosh)
+
+subject: x design choic for color handl: question
+
+organ: cs dept, univers of texa at austin
+
+line: 16
+
+nntp-post-host: cascai.cs.utexa.edu
+
+keyword: color
+
+
+
+most graphic system i have seen have draw routin that also specifi
+
+a color for draw, like
+
+
+
+drawpoint(x,y,color) or drawlin(x1,y1,x2,y2,color) or
+
+fillrectangl(x1,y1,x2,y2,color) 
+
+
+
+with x, i have to do someth like 
+
+xsetforeground(current_color)
+
+xdrawpoint(d,w,x,y)
+
+
+
+why split thi into two function? why did x design decid to not associ
+
+the color with the object be drawn, and instead associ it with the
+
+displai it is be drawn on?
+
+
+
+joseph sirosh
+
+
+

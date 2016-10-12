@@ -1,0 +1,19 @@
+from: schneck@physik.tu-muenchen.de (bernhard schneck)
+subject: re: troubl compil x11r5 on suno_4.1.3
+organ: leibniz-rechenzentrum, muenchen (germani)
+line: 14
+
+nemo@aguirr.dia.fi.upm.es (francisco j. ballestero) write:
+
+>>   	   the problem occur dure the initi "make world".  when
+>>      it get up to compil the standard x client, it can't seem to find
+>>      some of the librari.  right now we highli suspect the program "ld"
+>>      which wa updat for 4_1_3.
+>>   
+
+>    yip, we had the same problem; the onli fix we found wa to link static
+>some of the client, ( btw, we us cc). :-(.
+
+or us a suno 4.1.1 ld.
+
+\bernhard.

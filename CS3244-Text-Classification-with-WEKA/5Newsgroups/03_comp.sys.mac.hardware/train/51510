@@ -1,0 +1,48 @@
+from: jbailei@world.std.com (jim bailei)
+subject: re: quadra 900/950 differ
+organ: the world public access unix, brooklin, ma
+line: 43
+
+jim@jagubox.gsfc.nasa.gov (jim jagielski) write:
+
+>jbailei@world.std.com (jim bailei) write:
+
+>>rdk2@cec2.wustl.edu (robert david klapper) write:
+
+>>>	i also believ that the 950 fix a bug in the cpu which screw up
+>>>some float point calcul.
+>>>-- 
+>>>robert d. klapper
+>>>washington univers in st. loui
+>>>rdk2@cec2.wustl.edu
+>>>lubarski's law of cybernet entomolog:  there's alwai on more bug.
+
+>>doe someon have ani definit inform on thi.  thi is the
+>>first i've heard of it.  how doe the cpu get fix by a hardwar
+>>upgrad?  thi doesn't make much sens to me.
+
+>let's see now... the differ between the 950 and 900 ar
+>basic:
+
+>	1. run at 33mhz, not 25mhz
+>	2. ha 25mhz i/o bu, not 16mhz
+>	3. upgrad graphic control
+>	4. #3 result in q950 requir 80ns vram, not 100ns
+>	5. rom fix:
+>	    a. round error in float point calcul
+>	       at 15th digit
+
+so patch the rom with the latest os version.  i don't see
+how thi is a problem.
+
+>	    b. ethernet problem with more than 16 buffer
+
+>so, no doubt, the person wa refer to 5a, hardli "screw
+>up" though :)
+
+>-- 
+>    jim jagielski               |  "and he's gonna stiff me. so i sai,
+>    jim@jagubox.gsfc.nasa.gov   |   'hei! lama! how about someth,
+>    nasa/gsfc, code 734.4       |   you know, for the effort!'"
+>    greenbelt, md 20771         |
+

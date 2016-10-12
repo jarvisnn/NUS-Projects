@@ -1,0 +1,27 @@
+from: rlm@helen.surfcti.com (robert l. mcmillin)
+subject: re: mix gl with x (xlib,xt,mwm)
+organ: surf citi softwar/tbfw project
+in-repli-to: graham@sparc1.ottawa.jade.com's messag of 19 apr 1993 16:59:12 -0400
+line: 21
+
+on 19 apr 1993 16:59:12 -0400, graham@sparc1.ottawa.jade.com (jai graham) said:
+
+> i am develop an x (xt,xm) applic that will includ a graphic window
+> of some sort with move symbol among other thing.  a pure x applic
+> could be implement with motif widget, on of which would be an 
+> xmdrawingarea for draw with xlib.  but i would like to take advantag of
+> the graphic librari (gl) avail on our ibm rs/6000 (sgi's gl i believ).
+
+> is it possibl to mix x and gl in on applic program?
+> can i us gl subroutin in an xmdrawingarea or in an x window open by me
+> with xopenwindow?
+
+in sgi's distribut with their indigo line (other as well, possibl),
+thei includ sourc code for a gl widget that fit on top of motif, and
+on that's xt base as well.  you mai wish to ask ibm whether thei
+support thi.
+--
+
+robert l. mcmillin | surf citi softwar | rlm@helen.surfcti.com | dude!
+#includ <std.disclaim.h>
+

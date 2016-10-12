@@ -1,0 +1,44 @@
+from: lwv26@ca.org (larri w. virden)
+
+subject: look for patch to xv to better support tiff output
+
+repli-to: lvirden@ca.org (larri w. virden)
+
+organ: nedriv softwar and shoe shiner, uninc.
+
+line: 16
+
+
+
+
+
+recent we have found tiff manipul packag which do not recogn
+
+tiff file output by xv.  thi is due to a miss xresolut and yresolut
+
+tag which appar is requir (or at least believ to be requir) for
+
+valid tiff.  i have check both xv 2.x and xv 3.x and neither of these
+
+do inde copi these tag.
+
+
+
+ha anyon out there hack in the fix for xv to support these tag?
+
+i have been told that i could find some code in tiff/tool/tiffcp.c, but
+
+that directori is on of mani of the tiff group not distribut with xv.  i
+
+hope to obtain the origin tiff src and look at it, but would prefer
+
+to find code alreadi known to work in xv.
+
+-- 
+
+:s 
+
+:s larri w. virden                 inet: lvirden@ca.org
+
+:s person: 674 fall place,   reynoldsburg, oh 43068-1614
+

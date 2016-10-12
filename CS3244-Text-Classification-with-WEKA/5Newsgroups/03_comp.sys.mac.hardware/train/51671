@@ -1,0 +1,114 @@
+from: jartsu@hut.fi (jartsu)
+subject: help want! monitor problem (nec 3d & iivi) 
+nntp-post-host: lk-hp-15.hut.fi
+repli-to: jartsu@vipunen.hut.fi
+organ: helsinki univers of technolog, finland
+line: 107
+
+
+hello all!
+
+for few past dai i've been fight to get my nec multisync 3d
+(predecessor of 3fg) to work properli with the intern video of mac
+iivi.
+
+with a vga-adapt (as describ in dale adam' post about quadra
+video) it work, onli some minor interfer occur, small enough not
+to prevent ani action on screen to be visibl & clear.
+
+but becaus the scanrat & stuff of 3d ar well enough for emul
+appl 13" rgb, i first made an adapt, then got on fron the local
+distributor of nec.
+with both adapt i can get a picur, which look excel most of
+the time or everi now and then.
+but with radic chang on screen (open palett, larg window
+etc.) there ar major interfer in sync. the pictur either tilt
+sidewai or scrabl up total. even when it is clear, there ar some
+"spiki" interfer on horizont line align when access
+pull-down etc.
+with the self-made adapt, almost ident to the vga on, onli
+sens pin differ, it is sometim imposs to even boot up with a
+pictur clear enough to shut down from menu...
+with the adapt from nec, everyth is well most of the time, but
+sometim the pictur tilt badli sidewai or the sync is complet
+lost. but not nearli as often as with the self-made on.
+
+i know, with self made adapt there can alwai be interfer, but
+with the on provid by nec... where's the sourc of thi interfer?
+
+i'll give you the pinout of the whole mess, and i hope that you can,
+at least someon (pleas try =) figur out what could be the best pin
+assign for nec 3d.
+i am go to make a complet new cabl with maximum shield and
+isol, as soon as someon figur out how the pin should be
+arrang, especi sync and ground.
+
+ye, i have check that the monitor is not defect, it work
+perfectli well with all pc graphic adapt up to 1024x768 pixel and
+also atari 71hz monochrom, which i am us now with it.
+
+here ar the pinout & stuff:
+
+15 pin mini d-sub (nec 3d)		15 pin d-sub (mac, at least quadra)
+
+1  red video				1  red gnd
+2  green video				2  red video
+3  blue video				3  composit sync
+4  gnd					4  sens 0
+5  gnd					5  green video
+6  red gnd				6  green gnd
+7  green gnd				7  sens 1
+8  blue gnd				8  nc
+9  nc					9  blue video
+10 gnd					10 sens 2
+11 gnd					11 c.sync & v.sync gnd
+12 nc					12 v.sync
+13 h.sync				13 blue gnd
+14 v.sync				14 h.sync gnd
+15 nc					15 h.sync
+shell gnd				shell gnd
+
+
+
+connect suggest by appl for vga/svga, sens pin chang to
+emul appl 13" with multisync (my self-made adapt)
+
+multisync (15pin mini d-sub)	mac (15pin d-sub)
+	  
+	  1  ---------------------- 2
+	  2  ---------------------- 5
+	  3  ---------------------- 9
+	  6  ---------------------- 1
+	  7  ---------------------- 6
+	  8  ---------------------- 13
+	  10 ---------------------- 14
+	  13 ---------------------- 15
+	  14 ---------------------- 12
+				    4 (sens0) ground to 11 (sync gnd)
+
+
+connect measur from an adapt to make nec 3fg/4fg 
+emul appl 13" (adapt provid by nec repres)
+
+	nec (15 mini)   	mac (15)
+
+	1   ----------------------- 2
+	2   ----------------------- 5
+	3   ----------------------- 9
+	4   ----------------------- shell gnd, 1, 4, 6, 13
+	5   ----------------------- same as abov
+	6   ----------------------- same...
+	7   ----------------------- same...
+	8   ----------------------- same...
+	10  ----------------------- same...
+	11  ----------------------- same...
+	13  ----------------------- 3
+	14    * not connect! *
+	
+
+well, i am wait for your solut...
+
+and thank!
+
+--
+jartsu

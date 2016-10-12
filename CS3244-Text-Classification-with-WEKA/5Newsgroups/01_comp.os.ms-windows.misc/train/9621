@@ -1,0 +1,23 @@
+from: wild@access.digex.com (wildstrom)
+subject: re: window 3.1 keep crash: pleas help
+organ: express access onlin commun, greenbelt, md usa
+line: 17
+nntp-post-host: access.digex.net
+
+
+
+>in articl <1993apr16.155637.15398@oracl.us.oracl.com> ebosco@us.oracl.com (eric bosco) write:
+>>from: ebosco@us.oracl.com (eric bosco)
+>>subject: window 3.1 keep crash: pleas help
+>>date: fri, 16 apr 1993 15:56:37 gmt
+>>
+>>as the subject sai, window 3.1 keep crash (givinh me gpf) on me of  
+>>late.  it wa never a veri stabl packag, but now it seem to crash everi  
+>>dai.  the worst part about it is that it doe not crash consist: ie i  
+
+there is a wai in sy.ini to turn off ram pariti check (unfortun,
+my good window refer ar at home, but ani standard win refer
+will tell you how to do it. if not, email back to me.) that weird memori
+mai be produc phoni pariti error. danger is, if you turn checkl off,
+you run the slight risk of data corrupt due to a miss real error.
+

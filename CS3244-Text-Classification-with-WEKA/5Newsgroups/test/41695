@@ -1,0 +1,44 @@
+from: johnm@spudg.lonestar.org (john munsch)
+
+subject: re: ati avi driver
+
+organ: /etc/organ
+
+line: 17
+
+
+
+in articl <qfwynh200wb78rzvpv@andrew.cmu.edu> "andrew a. houghton" <ah0i+@andrew.cmu.edu> write:
+
+>
+
+>i notic ati had post *beta* avi driver for their mach32 board on
+
+>compuserv..  ha anyon had the chanc tgo try them?  
+
+>
+
+>how well do thei work?
+
+
+
+veri well inde.  at home (a vl bu version of the graphic pro) i can stretch
+
+an avi window to 640x480 and it will continu to plai back smoothli.  it drop
+
+a few more frame but on most machin even attempt such a thing would mean
+
+on frame updat everi 30 second.  an isa graphic+ wa abl to do "zoom by
+
+2" without ani percept perform penalti.  it is the best perform
+
+i've seen so far with the possibl except of an intel indeo board (which
+
+us overlai so it doesn't have to move the decompress data over the isa
+
+bu at ani point).
+
+
+
+john munsch
+

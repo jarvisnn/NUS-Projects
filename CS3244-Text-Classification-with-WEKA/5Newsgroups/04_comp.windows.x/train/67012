@@ -1,0 +1,128 @@
+from: defaria@cup.hp.com (andi defaria)
+subject: mysteri beep
+nntp-post-host: hpclapd.cup.hp.com
+organ: hewlett-packard
+x-newsread: tin [version 1.1 pl8.8]
+line: 121
+
+[ articl crosspost from hp.window ]
+[ author wa andi defaria ]
+[ post on mon, 19 apr 1993 18:08:38 gmt ]
+
+for some reason the follow code caus my x applic to beep whenev i
+intercept a keystrok and chang it's mean.  the intent of thi code it to
+allow "date" field the follow special kei:
+
+	[tt]:	insert todai's date
+	[+=]:	bump dai up by on
+	[-_]:	bump dai down by on
+
+i hardcod some date for thi exampl.  perhap i shouldn't be us an
+xmtext field for thi.
+
+////////////////////////////////////////////////////////////////////////////// 
+// 
+// for some reason the follow code beep whenev ani of the special kei
+// of [tt+=-_] ar hit.  why?  the idea of thi code is to interpret these
+// kei have the special mean impli by the code.  i would like to get
+// rid of the beep but, as far as i can tell, i'm not do the beep and 
+// am at a lose as to understand who and why the beep is occur.
+// 
+////////////////////////////////////////////////////////////////////////////// 
+#includ <x11/intrins.h>
+#includ <xm/xm.h>
+#includ <xm/rowcolumn.h>
+#includ <xm/mainw.h>
+#includ <xm/text.h>
+
+widget		toplevel;
+widget		mainwindow;
+widget		mainpan;
+widget		datefield;
+xtappcontext	applic; 
+
+void marktodai (widget date) {
+   char *todaysd = "04/19/93";
+   xtvasetvalu (date, xmnvalu, todaysd, null);
+} // marktodai
+
+void marktomorrow (widget date) {
+   char *tomorrowsd = "04/20/93";
+   xtvasetvalu (date, xmnvalu, tomorrowsd, null);
+} // marktomorrow
+
+void markyesterdai (widget date) {
+   char *yesterdaysd = "04/18/93";
+   xtvasetvalu (date, xmnvalu, yesterdaysd, null);
+} // markyesterdai
+
+void datekei (widget          /* callingwidget */,
+	       widget          date,
+	       xmtextverifyptr callbackdata) {
+   // captur the kei [tt-_+=] can chang their behaviour.  if found
+   // set "doit" to fals so x won't interpret the keystrok. 
+   switch (callbackdata->text->ptr [0]) {
+      case 't': case 't': 
+	 marktodai (date);
+	 callbackdata->doit = fals;
+	 return;
+      case '-': case '_':
+	 markyesterdai (date);
+	 callbackdata->doit = fals;
+	 return;
+      case '+': case '=':
+	 marktomorrow (date);
+	 callbackdata->doit = fals;
+	 return;
+      default:
+	 return;
+   } // switch
+} // datekei
+
+void main (cardin argc, char *argv []) { 
+   // initi xt 
+   toplevel = xtvaappiniti (&applic, "applic", null, 0, 
+				 &argc, argv, null, null); 
+
+   // creat the toolfac
+   mainwindow = xtvacreatemanagedwidget 
+      ("mainwindow", xmmainwindowwidgetclass, toplevel, null);
+
+   // creat a mainwindow
+   mainpan = xtvacreatemanagedwidget
+      ("mainpan", xmrowcolumnwidgetclass, mainwindow, null);
+
+   // creat a small text area
+   datefield = xtvacreatemanagedwidget
+      ("datefield", xmtextwidgetclass, mainpan,
+       xmntopattach,	xmattach_form,
+       xmnrightattach,	xmattach_form,
+       xmncolumn,		8,
+       null);
+
+   // set modifyverifycallback to the datekei callback   
+   xtaddcallback (datefield, xmnmodifyverifycallback,
+		  (xtcallbackproc) datekei, (xtpointer) datefield);
+
+   // realiz the toplevel 
+   xtrealizewidget (toplevel);
+
+   // go into the xtmainloop
+   xtappmainloop (applic); 
+} // main 
+
+_______________________________________________________________________________
+i swear by my life and the love of it that i will    | andrew defaria
+never live for the sake of anoth man nor ask       | hewlett packard
+anoth man to live for mine.                        | california languag lab
+                    john galt                        | defaria@cup.hp.com
+_______________________________________________________________________________
+
+
+--
+_______________________________________________________________________________
+i swear by my life and the love of it that i will    | andrew defaria
+never live for the sake of anoth man nor ask       | hewlett packard
+anoth man to live for mine.                        | california languag lab
+                    john galt                        | defaria@cup.hp.com
+_______________________________________________________________________________

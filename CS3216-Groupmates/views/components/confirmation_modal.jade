@@ -1,0 +1,31 @@
+#confirmation-modal.modal.fade(role='dialog')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button',data-dismiss='modal',aria-label='Cancel')
+          span(aria-hidden='true') &times;
+        h3.modal-title Add Review
+      .modal-body
+        span.message
+      .modal-footer
+        button.btn.btn-default(type='button',data-dismiss='modal',
+          aria-label='Cancel')
+          |Cancel
+        button.btn.btn-primary.confirm(type='button',data-dismiss='modal',
+          aria-label='Confirm')
+          |Confirm
+script.
+  !function(){
+    var modal = document.currentScript.previousSibling;
+    window.showConfirmationModal = function(message, callbackConfirm) {
+      $('.confirm', modal).click(function(){
+        console.log('confirm');
+        callbackConfirm();
+      });
+      $('.message', modal).text(message);
+      $(modal).modal();
+    };
+    $(modal).on('hide.bs.modal', function() {
+      $('.confirm', modal).off('click');
+    });
+  }();

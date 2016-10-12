@@ -1,0 +1,63 @@
+from: xtifr@netcom.com (chri water)
+subject: re: pc/geo, window, os/2, and unix/x11
+organ: netcom on-line commun servic (408 241-9760 guest)
+line: 58
+
+in <sehari.734022369@vincent2.iastat.edu> sehari@iastat.edu (babak sehari) write:
+
+>---
+
+>with my limit knowladg about the pc geo, i came out with follow 
+>comparison:
+
+>                 pc geo      window       os/2    unix/x11
+>                ________      _______       ____    _______
+
+>2. can run win
+>   program        nop           yap         yap     nop
+                                                       ^
+                                                      novel is at least
+                                                      demo window app
+                                                      run under unixwar.
+
+
+>5. can run unix    nop        i have not     nop     yap
+>                              heard of it
+                                   ^           ^
+                                try mk.     mk &
+                                           other, esp.
+                                              emx
+
+note here: the mk toolkit (for do/window & os/2) give you a good
+suit of standard unix util.  there ar other similar system from
+other vendor as well.  the emx system for os/2 give you most of the
+standard unix system call for recompil your unix program under
+os/2.  not quit the same thing as actual run unix program
+directli in either case, but emx make os/2 almost as compat with
+unix system as mani unix system ar with each other.  and, best of
+all, emx is free.  :-)
+
+there is a similar system (go32) for do, but it doesn't work with
+window, as far as i know.
+
+>7. price          $120          $70         $120     free-$1000s
+>                                                     a good on
+>                                                     cost $400-$700 
+>                                                     avali on ext.
+>                                                     card too.
+
+should add in the cost for do with both geo and window, neither of
+which is a standalon os at thi point.  neither os/2 nor unix requir
+do.
+
+btw, two of the best unic i've seen for the pee cee ar unixwar ($300
+for the person edit) and linux (free).  so i don't agre that "a
+good on cost $400-$700."  :-)
+
+and, if you realli want to check out the variou option avail to
+you, you should also look into desqview and desqview/x.
+
+cheer
+-- 
+chri water    | the insan don't |"judi's in the bedroom,
+xtifr@netcom.com| need disclaim | invent situat."  -d. byrn

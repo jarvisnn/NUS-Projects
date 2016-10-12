@@ -1,0 +1,62 @@
+from: gel@cs.mcgill.ca (gill khouzam)
+subject: re: workgroup question (conven. ram and licens)
+summari: good choic
+keyword: w4wg
+organ: soc - mcgill univers, montreal, canada
+line: 55
+
+in articl <ny+0ra6abh107h@eosvcr.wimsei.bc.ca> aew@eosvcr.wimsei.bc.ca write:
+>i would be veri appreci if someon would answer a few 
+>question about window for workgroup.
+>
+>i current have novel netwar lite which doe not work with
+>window veri well and is a convent memori hog (ver. 1.1).
+>i am consid move all our machin to w4wg.
+>
+>q1:  how much convent ram doe w4wg us over and abov the
+>     driver for the network card?
+
+	i have just check it and you have three file that ar load:
+	protman :  128 byte
+	driver	: 9072 byte
+	workgrp	: 4416 byte
+>
+>q2:  if i have a novel ne2000 card, ar the lsl and ipx driver
+>     still need?
+
+	no w4wg us it's own driver.
+>
+>q3:  doe w4wg do a licens check over the network to ensur each
+>     machin is run it own licenc copi of w4wg? (note: i do
+>     not want to break the licens agreement and i will bui a copi
+>     of w4wg for each of our machin, it is just that i would like
+>     to try it out first to see if it meet our need. return on
+>     open copi is much easier than return n open copi.)
+
+	not that i know of, i bought two copi, had some problem with on
+	instal both from the same copi, no problem. do worri i just had
+	a realli old bio and that's the onli problem i got.
+>
+>q4:  if you bui the upgrad to window 3.1 for w4wg doe it replac
+>     all of win 3.1 as you instal it or doe it depend on current
+>     win 3.1 file?
+	it will replac all older file (i think) and prompt you for the
+	other.
+>
+>q5:  if i instal window nt on my server when it come out, will i have
+>     ani troubl with the w4wg machin?
+
+	thi i do not know...
+>
+>when i start thi messag, i wa go to ask onli 2 question but i got carri
+>awai. i'll stop now ;-).
+>
+>i look forward to your repli.
+>
+>al
+
+
+					hope thi help
+
+					gel
+

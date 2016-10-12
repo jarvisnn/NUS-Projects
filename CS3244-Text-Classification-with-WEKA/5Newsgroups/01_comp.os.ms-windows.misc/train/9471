@@ -1,0 +1,32 @@
+from: servi@author.ecn.purdu.edu (brian k servi)
+subject: re: ghostscript for win font????
+keyword: ghostscript,font
+organ: purdu univers engin comput network
+line: 26
+
+servi@author.ecn.purdu.edu (brian k servi) write:
+that's me....
+>i just download the window ghostscript packag(gswin252.zip,gs252ini.zip) 
+>from ftp.  when i load a ps file it sai it cant find font and substitut a
+>font call ugli. it is substitut for basic font such as helv, and cour.
+>i would imagin that these font ar includ in it font librari. is there
+>someth i am do wrong or am miss?  these ugli font ar not veri clear
+>and well defin, as in sharp, etc, basic thei ar ugli!  ani advic
+>is welcom.
+
+
+ok, i realiz i have to get the font file from some ftp site.  i found them
+at cica but i now have anoth question.....
+
+ar the 24*.zip font compat with gswin252??
+
+>pleas email
+
+brian servi
+===========================================================================
+||  servi@author.ecn.purdu.edu   ||         "it happen thi wai"     ||
+===================================|| actual quot from insur claim||
+||  what i sai mai not be what i   ||                                    ||
+||  think. what i sai mai not be   ||  "the pedestrian had no idea which ||
+||  what purdu think.            ||   wai to go, so i ran him over."   ||
+===========================================================================

@@ -1,0 +1,21 @@
+from: zxxst+@pitt.edu (zhihua xie)
+subject: for the poor owner of iisi
+organ: univers of pittsburgh
+line: 16
+
+macintosh iisi, 3/40, 80ns.
+clock-upgrad iisi work well at 25mhz, howev, doe not work with
+nubu adaptor and 1400k disk even though it can read/write 800k disk
+at32mhz. interestingli, upgrad iisi overcom basic the fight
+between the vedio and the system so that cpu never be reduc below 8 no
+mater whether the cach is on or off. thi is pretti us when you
+us the virtual memori of system 7. 
+
+                    20mhz         25mhz                 32mhz 
+     cpu            5.46(6.0.7)	   6.81(6.0.7)	8.83(6.0.7) 8.74(7vm)
+     graf.   	    6.72           8.56        11.07        9.19 
+     disk           1.44           1.50         1.56        1.49
+     math.          5.72           11.27(fpu)   9.36        8.84
+                                            
+                                      speedomet3.1
+

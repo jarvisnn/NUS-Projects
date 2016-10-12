@@ -1,0 +1,36 @@
+from: pramodmm@deforest.ee.washington.edu (pramod mahadev)
+subject: help on xlib and includ file
+articl-i.d.: shellei.1r6om2inn3tf
+distribut: world
+organ: univers of washington, seattl
+line: 28
+nntp-post-host: deforest.ee.washington.edu
+
+
+ hi xpert!
+   i have a sparc-1 with veri limit disk space on /usr partit.
+   previous, i wa abl to run all x-window applic  and then 
+   i upgrad my system to sun o.s. 4.1.3 and realiz that , the hard
+disk did not have enough space to load openwindow. my immedi altern
+wa to load onli the neccessari file to boot the system. thi result in
+not load openwindow. as a result of which none of the x-librari got load.
+
+   i am try to load just the librari and includ file and bin/x11 file 
+requir for run x-window and compil my program written for xlib and xaw.
+in a desper effort to regain x-window, i retriev /usr/lib/libx*.* file from
+the tape . /usr/bin/x11/*  and /usr/includ/x11/* . is thi enough for run x-window
+ 
+ but i did not get /usr/lib/x11/font/  sub directori . these ar mainli 100dpi, 75dpi
+ and misc. 
+
+when i run xinit, the error messag sai /usr/lib/x11/font/100dpi etc ar not in the
+default path. but the problem is i cannot load ani of those directori as there is no
+disk space. 
+ar there ani temporari suggest befor i get a 1.5 gb disk and load openwindow , to
+just have my x-window run. 
+
+thank
+
+pramod
+ 
+-- 

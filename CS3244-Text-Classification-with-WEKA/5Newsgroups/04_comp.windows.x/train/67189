@@ -1,0 +1,51 @@
+from: toml@blade.boulder.parcplac.com (tom lastrang)
+subject: re: forc a window manag to accept specif coordin for a window
+repli-to: toml@boulder.parcplac.com
+organ: parcplac boulder
+line: 45
+
+in articl <1r5l8g$bub@wsinfo03.win.tue.nl>, rcb5@wsinfo03.win.tue.nl (richard verhoeven) write:
+|> bade@cs.tu-berlin.de (tobia 'dope' bade) write:
+|> > 
+|> > try thi after xcreatewindow:
+|> > -----------------------------
+|> > ...
+|> >
+|> >   xsizehint->flag = usposit | ussiz;	/* or = pposit | psize */
+|> >   ...
+|> >   xsetwmnormalhint (displai, window, xsizehint);
+|> >   ...
+|> >
+|> > these hint tell the window manag that the posit and size of the window
+|> > ar specifi by the user and that the window manag should accept these
+|> > valu. if you us xsizehint->flag = pposit | psize, thi tell the window
+|> > manag that the valu ar prefer valu of the program, not the user.
+|> > i don't know a window manag that doesn't place the window like you prefer
+|> > if you specifi the posit and size like abov.
+|> 
+|> sorri, but olwm and tvtwm don't do it. thei place the titl at that posit
+|> and the window at a posit below it.
+
+the reason thei place their outsid corner at the locat you request
+is becaus that's what the icccm sai thei should do.
+
+|> thi becom a problem when you want a program to be abl to save it current
+|> configur and restor is later.
+|> 
+|> current, my solut is:
+|> 
+|> 	xcreatewindow(...);
+|> 	xsetwmproperti(..);
+|> 	xmapwindow(...);
+|> 	xflush(...);
+|> 	xmovewindow(...);
+
+thi code will almost certainli break.  call xmapwindow and then
+xflush doe not guarante that the window is visibl and manag by the
+window manag.  even if thi did work, there isn't a reliabl wai to
+find out how much decor the window manag place around your
+window, so you don't know how far to move it.  and what if the window
+manag refus to move your window?
+
+--
+tom lastrang        toml@boulder.parcplac.com

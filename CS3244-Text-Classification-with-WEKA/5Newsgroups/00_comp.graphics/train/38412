@@ -1,0 +1,18 @@
+from: disser@engin.umich.edu (david disser)
+subject: 2d bitmap interpol
+organ: univers of michigan
+line: 11
+distribut: world
+nntp-post-host: vesuviu.engin.umich.edu
+
+
+yesterdai i wrote a program to do bilinear interpol ala numer
+recip, with the pbmplu librari.  i'm pretti happi with the result,
+but i'm look for ani alreadi-code non-linear interpol scheme
+befor i go ahead an try to write on.  ani pointer?
+
+--
+
+) dave disser                 um-caen user servic         wealth is wast
+) disser@engin.umich.edu      229 chrysler center           on the old.
+) (313) 763-3067              ann arbor, mi 48109-2092

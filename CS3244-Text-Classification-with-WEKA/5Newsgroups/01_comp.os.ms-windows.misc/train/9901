@@ -1,0 +1,55 @@
+from: ran@doc.ic.ac.uk (robert a nichol)
+subject: vb to msaccess dde commun
+organ: depart of comput, imperi colleg, univers of london, uk.
+line: 49
+nntp-post-host: swan.doc.ic.ac.uk
+
+a coupl of week ago i post a question concern
+commun
+between vb and msaccess us dde. the answer i receiv at
+that time
+allow me to get a prototyp of my project work. howev,
+dure
+thi process i have come up with new problem.
+
+1) there seem to be a limit of 255 charact for a dde topic
+string. is
+thi inher in all dde system or just peculiar to msaccess
+or vb?
+
+2) it is easi to queri an access databas from vb us the
+dde sql command,
+(provid the abov limit is overcom by us short
+field and tabl
+name) but how is on meant to updat a databas?
+   a) a dde sql updat command doe not seem to work.
+   b) initi an access macro us a dde execut command
+from vb cannot
+      be us becaus when the macro request inform from
+vb us a
+      second dde channel the program dead lock until time-
+out occur.
+      (the vb to access channel ha to close befor the access
+to vb channel
+      is initi, i guess.)
+   c) access doe not allow vb to dde poke the inform.
+
+
+   the wai i eventu manag to updat a databas wa by
+send kei-
+   stroke from vb to access us the sendkei command. thi
+techniqu ha
+   the problem that access cannot be minimis and it must
+alwai be in a
+   state readi to respond to the sequenc of kei-stroke vb
+send.
+
+ar all the abov statement correct or have i made incorrect
+assumpt?
+ar there ani better work around to the abov? ar there ani
+sign of an
+odbc driver for access?
+
+bob
+ran@doc.ic.ac.uk
+

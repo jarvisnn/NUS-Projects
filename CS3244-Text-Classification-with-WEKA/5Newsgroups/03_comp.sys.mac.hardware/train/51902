@@ -1,0 +1,46 @@
+from: averi@gestalt.stanford.edu (averi wang)
+subject: serial line connect between duo 210 and pc???
+organ: dso, stanford univers
+line: 41
+
+in articl <19930419.062907.155@almaden.ibm.com> petrack@vnet.ibm.com write:
+> i have tri almost everyth under the sun to get a null modem connect
+> between a mac duo 210 and a pc. i have us mackermit and versaterm on
+> the mac side. i have us procomm, kermit, and softerm (on os/2) on
+> the pc (or ps) side. i have us non-hardwar handshak and hardwar
+> ahdshak cabl. and know my hand ar shake from the effort. noth
+> ha allow file transfer from the mac to the ps.
+
+..
+
+> could i hear from someon attest that thei can realli pump inform
+> out the serial port of a duo 210 fast? like via a modem or via a
+> sy-ex dump?
+> 
+> could anyon with a duo help me out?? i am go absolut insan.
+> i wanna know if the problem is my duo, or all duo 210s, or all duo,
+> or just me.
+> 
+
+
+hmmm... sound vagu similar to a problem i had a long time ago when i wa  
+try to us kermit.  i wa build a serial connect between my duo 210  
+and my next.  i think the problem wa in the handshak.  basic, you need  
+to make sure that the handshak protocol is the same on both side.  a safe  
+place to start is by select no handshak on either end.  on problem is  
+that the zilog serial chip seem to get perman wedg if you talk to it  
+wrong, and onli a reset will clear it.  i don't know the specif.  but thi  
+could be a nonlinear that screw up your attempt at debug the system.   
+it could veri well be that you ar do thing right--eventu-- but on  
+wrong move (like try a bad handshak protocol) can screw up ani further  
+correct action, until the next machin reset.  i have wedg my mac and also  
+my next that wai.
+
+now i can send file back and forth between the duo and the next without ani  
+problem, and at pretti high speed too.
+
+i don't know what kind of chip the pc us, but i think the zilog 8530 is  
+pretti standard.
+
+hope thi help,
+-averi

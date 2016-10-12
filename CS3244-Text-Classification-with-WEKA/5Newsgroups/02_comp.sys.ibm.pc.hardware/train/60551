@@ -1,0 +1,21 @@
+from: keegan-edward@cs.yale.edu (edward keegan)
+subject: dec mt 486, adaptec scsi, 3comm conflict
+organ: yale univers comput scienc dept., new haven, ct 06520-2158
+line: 14
+distribut: world
+nntp-post-host: thumper.cf.cs.yale.edu
+
+
+i have a dec nt 486dx33 that ha an adaptec scsi control, hard disk
+and cd-rom drive. when i add a 3comm ethernet card (3c503) and reboot
+the system i receiv an error messag that a boot devic cannot be
+found. pull the 3comm card and reboot, everyth is fine. i've move
+the control and 3comm card to variou slot, differ posit
+(slot befor the control, slot after the control) with the
+same result. dec hasn't respond to the problem yet. ani help would
+be appreci.
+-- 
+edward t. keegan, facil director             e-mail: keegan@cs.yale.edu
+yale univers, comput scienc depart     phone: 1-203-432-1254
+51 prospect street, room 009                       fax: 1-203-432-0593
+new haven, ct 06520

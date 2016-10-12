@@ -1,0 +1,29 @@
+from: noah@appl.com (noah price)
+subject: re: quadra scsi problem???
+organ: (not the opinion of) appl comput, inc.
+line: 24
+
+in articl <1qm2hvinnseq@shellei.u.washington.edu>,
+tz@stein2.u.washington.edu (tim smith) wrote:
+> 
+> > attent: mac quadra owner: mani storag industri expert have
+> > conclud that mac quadra suffer from time irregular deviat
+> > from the standard scsi specif. thi result in silent corrupt
+> > of data when us with some devic, includ ultra-modern devic.
+> > although i will not name the devic, sinc it is not their fault...
+
+that's fine, but would you name the "industi expert" so i can try to track
+thi down?
+
+> thi doesn't sound right to me.  don't quadra us the 53c96?  if so, the
+> mac ha noth to do with the scsi time.  that's all handl by the
+> chip.
+
+yup.  that's why i'm kinda curiou... most scsi problem i've encount
+ar due to cabl.
+
+noah
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+noah@appl.com                                 macintosh hardwar design
+...!{sun,decwrl}!appl!noah   (not the opinion of) appl comput, inc.

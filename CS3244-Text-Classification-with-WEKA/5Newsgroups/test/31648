@@ -1,0 +1,230 @@
+from: glazer@ohstpi.mp.ohio-state.edu
+
+subject: local window .vs. share window (discuss)
+
+organ: the ohio state univers, depart of physic
+
+line: 110
+
+
+
+i would like to see a seriou discuss on the best wai to instal window
+
+from a novel administr's point of view.
+
+ 
+
+i just got off the phone with ms access support and wa told that thei
+
+(microsoft) ha decid to implement, as a standard for softwar support,
+
+the local setup (describ below) as the "most advantag instal".
+
+if thi is true and microsoft deem thi to be the most prudent instal
+
+then i will compli but i'd like to hear it from administr first.
+
+ 
+
+the local window instal:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+window is fulli instal on each workstat hard drive (assum the
+
+resourc ar avail).  from a network administr's implement,
+
+he/she would instal all window disk on a network drive us setup/a.
+
+then instal window on a per/machin base by run setup off the network
+
+to instal the complet system on the local drive.  in thi wai, all driver
+
+ar avail to the setup procedur w/o the need to chang disk.
+
+ 
+
+advantag:
+
+- reduc traffic - run window local reduc network traffic due to
+
+  the local access of main window file.
+
+- network independ - if the network fail (and thei all do at on point
+
+  or anoth), the local instal would allow user to keep produc
+
+  and reduc the cost of down-time.
+
+- faster window - theoret, window will run faster from a local hard
+
+  drive than over a network.  thi mai be a hard point to prove if the network
+
+  ha an optic backbon and/or the network drive ar significantli faster
+
+  access than local on.
+
+- a user travel from machin to machin doe not need to worri about
+
+  vari setup (monochrom, color, type of mous, etc...) sinc the
+
+  window instal is assign to the workstat.
+
+ 
+
+disadvantag:
+
+- cost - instal window local requir a signific amount of disk
+
+  space.  workstat now must be purchas with a hard disk that can
+
+  increas the cost of the workstat from 10 to 30 percent.
+
+- administr - local window instal ar veri difficult to
+
+administ.
+
+  new driver for peripher ar constantli be made avail, each of
+
+  which would have to be individu instal on each workstat.
+
+- secur - user now have access to eras or corrupt their own system
+
+  file from simpl ignor.  thi could result in quit a headach for
+
+  administr who mai have to constantli repair damag instal.
+
+- backup - we all know the problem back up local hard disk.  the backup
+
+  set (if done via a central tape system) get veri larg veri quickli.
+
+  backup individu (to floppi) mai not happen at all.  thi mai be
+
+  elimin if it is assum that local hard disk onli contain replac
+
+  applic and *not* user data.
+
+ 
+
+the share window instal
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+window is fulli instal to a network disk via the setup/a procedur
+
+describ abov.  user (or administr) then instal a minim set of
+
+file to individu "user" directori.  these directori mai be on a
+
+local hard disk or perhap a network "home" directori.  the bulk of the
+
+window system file ar maintain on the network in a singl directori
+
+(some 400+ file) and ar access (share) as-need by user throughout
+
+their window session.  the user's file consist of a small set of file
+
+that the user ha updat dure hi/her window session.  these includ
+
+group file, .ini file and other regularli updat file.
+
+ 
+
+advantag:
+
+- a singl locat for all file make updat to drive easi.  as
+
+  an updat driver becom avail, it onli need to be instal in thi
+
+  singl directori for all user to be abl to take advantag of it.
+
+- assum that the user' file ar maintain in network (home) directori,
+
+  the administr can easili edit ani .ini file as-need to correct
+
+  problem that mai aris.  thi includ win.ini and system.ini.
+
+- backup of all pertin file is done easili.  even if the user' file
+
+  ar on a local hard disk, the bulk of the window system is back up with
+
+  all driver updat.
+
+ 
+
+disadvantag:
+
+- network traffic - sinc all window file ar be share in a network
+
+  directori, traffic on the network can becom a problem an effect the
+
+  speed of window.
+
+- if the network crash, all product come to a stop sinc window's
+
+  is reliant upon the network for it file.  loss of data usual occur
+
+  as well sinc user work in window at the time of the crash will
+
+  usual not be abl to save their work.
+
+- although minim, disk space is still a consider.  if the user' file
+
+  ar maintain on the network, a larg number of user can caus a
+
+  signific util of disk space due to their person window
+
+  file alon.
+
+- user cannot easili move from machin to machin unless the workstat
+
+  hardwar ar similar.  thi is due to the window instal be
+
+  ti to a particular usernam (in the case of network user file).
+
+  
+
+the discuss
+
+~~~~~~~~~~~~~~
+
+i would like to know, from other administr with a larg window
+
+userbas, how thei prefer set up window.  person, i have
+
+setup numer instal us the share setup.  all window and
+
+applic file ar on the network with littl or no util of
+
+local hard disk.  in fact, i sold a network on the fact that the
+
+compani would no longer need to purchas hard disk for their workstat
+
+and thu save that much more monei.
+
+ 
+
+i would also like to see recommend for applic.  should
+
+app such as word and/or excel be instal local regardless of how
+
+window is instal?  again, i keep all file on the network for easi
+
+backup and administr but thi is "put all egg in on basket";
+
+if the network crash, work come to a halt.
+
+ 
+
+now i am sure microsoft (and i know your out there) ha their own
+
+idea about thi and their insight would be of great valu but i hope to
+
+hear from peopl with "actual" work experi with user and network
+
+administr.
+
+ 
+
+
+

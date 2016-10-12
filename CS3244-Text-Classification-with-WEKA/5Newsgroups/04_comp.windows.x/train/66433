@@ -1,0 +1,1006 @@
+from: dbl@visual.com (david b. lewi)
+subject: comp.window.x frequent ask question (faq) 3/5
+summari: us inform about the x window system
+repli-to: faq%craft@uunet.uu.net (x faq mainten address)
+organ: visual, inc.
+expir: sun, 2 mai 1993 00:00:00 gmt
+line: 998
+
+archiv-name: x-faq/part3
+last-modifi: 1993/04/04
+
+----------------------------------------------------------------------
+subject:  58)! where can i get patch to x11r5?
+
+	the releas of new public patch by the mit x consortium is announc
+in the comp.window.x.announc newsgroup.
+
+	patch themselv ar avail via ftp from export and from other
+site from which x11 is avail. thei ar now also distribut through the 
+newsgroup comp.sourc.x. some sourc re-seller mai be includ patch in 
+their sourc distribut of x11.
+
+	peopl without ftp access can us the xstuff mail server. it now ha 
+23 patch for x11r5 [3/93].  send to xstuff@expo.lc.mit.edu the subject line
+		send fix #
+where # is the name of the patch and is usual just the number of the patch.
+
+	here ar a few complic:
+	1) fix 5 is in four part; you need to request "5a", "5b", "5c" and 
+"5d" separ
+	2) the file sungx.uu, which wa part of an earlier patch, wa 
+re-releas with patch 7 [note: the file doesn't work with solari]
+	3) fix 8 is in two part: "8a" and "8b"
+	4) fix 13 is in three part: "13a", "13b", and "13c"
+	5) fix 16 is in two part: "16a" and "16b"
+	6) fix 18 replac the r5fix-test1 for the x test suit, which 
+previous wa option
+	7) fix 19 also need pexlib.tar.z, which you can obtain from xstuff
+by ask for "pexlib.uu.[1234]".
+	8) fix 22 is in 9 part, "22a" through "22i"
+
+----------------------------------------------------------------------
+subject:  59)  what is the xstuff mail-archiv?
+
+	the xstuff server is a mail-respons program. that mean that you mail 
+it a request, and it mail back the respons.
+	ani of the four possibl command must be the first word on a line. the
+xstuff server read your entir messag befor it doe anyth, so you can 
+have sever differ command in a singl messag (unless you ask for help). 
+the xstuff server treat the "subject:" header line just like ani other line 
+of the messag.
+	the archiv ar organ into a seri of directori and 
+subdirectori.  each directori ha an index, and each subdirectori ha an 
+index. the top-level index give you an overview of what is in the 
+subdirectori, and the index for each subdirectori tell you what is in it.
+
+	1) the command "help" or "send help" caus the server to send you a 
+more detail version of thi help file.
+	2) if your messag contain a line whose first word is "index", then 
+the server will send you the top-level index of the content of the archiv. if
+there ar other word on that line that match the name of subdirectori, then 
+the index for those subdirectori ar sent instead of the top-level index. 
+for exampl, you can sai "send index fix" (or "index fix"). a messag that 
+request an index cannot request data.
+	3) if your messag contain a line whose first word is "send", then the
+xstuff server will send you the item(s) name on the rest of the line. to name 
+an item, you give it directori and it name. for exampl
+                send fix 1 4 8a 8b 9
+	you mai issu multipl send request. the xstuff server contain mani 
+safeguard to ensur that it is not monopol by peopl ask for larg 
+amount of data. the mailer is set up so that it will send no more than a fix
+amount of data each dai. if the work queue contain more request than the 
+dai's quota, then the unsent file will not be process until the next dai. 
+whenev the mailer is run to send it dai's quota, it send the request out 
+shortest-first.
+	4) some mailer produc mail header that ar unus for extract 
+return address.  if you us such a mailer, you won't get ani respons.  if 
+you happen to know an explicit path, you can includ a line like
+        path foo%bar.bitnet@mitvma.mit.edu
+or
+        path bar!foo!frotz
+in the bodi of your messag, and the daemon will us it.
+
+	the xstuff server itself can be reach at xstuff@expo.lc.mit.edu. if 
+your mailer deal in "!" notat, try send to 
+{someplac}!mit-eddi!expo.lc.mit.edu!xstuff.
+
+[base on inform from the mit x consortium, 8/89, 4/90.]
+
+----------------------------------------------------------------------
+subject:  60)! where can i get x11r4 (sourc and binari)?
+
+	integr comput solut, inc., ship x11r4 on half-inch, 
+quarter-inch, and tk50 format. call 617-621-0060 for order inform.
+
+	the free softwar foundat (617-876-3296) sell x11r4 on half-inch 
+tape and on qic-24 cartridg.  
+
+	yaser doleh (doleh@math-cs.kent.edu; p.o. box 1301, kent, oh 44240) is
+make x11r4 avail on hp format tape, 16 track, and sun cartridg. [2/90]
+
+	european site can obtain a free x11r4 distribut from jami watson,
+who mai be reach at chx400!pan!jw or jw@pan.uu.ch. [10/90]
+
+	non standard logic (+33 (1) 43 36 77 50; request@nsl.fr) make sourc
+avail.
+
+	ixi limit (+44 223 462 131) is sell x11r4 sourc on quarter-inch 
+cartridg format and on 5.25" and 3.5" floppi, with other format avail on
+request. [ixi, 2/90]
+
+	virtual technolog (703-430-9247) provid the entir x11r4 
+compress sourc releas on a singl qic-24 quarter-inch cartridg and also on
+1.2meg or 1.44 meg floppi upon request. [conor cahil 
+(cpcahil@virtech.uu.net) 2/90]
+
+	young mind (714-335-1350) make the r4 and gnu distribut avail
+on a full-text-index cd-rom.
+
+[note that some distribut ar media-onli and do not includ doc.]
+
+	x11r4 is ftp-abl from export.lc.mit.edu; these site ar prefer, 
+though, and ar more direct:
+
+                        machin                  internet      ftp
+    locat            name                     address       directori
+    --------            -------                  --------      -------------
+(1) west usa            gatekeep.dec.com       16.1.0.2      pub/x11/r4
+    central usa         mordr.cs.purdu.edu    128.10.2.2    pub/x11/r4
+(2) central usa         giza.ci.ohio-state.edu  128.146.8.61  pub/x.v11r4
+    southeast usa       uunet.uu.net             192.48.96.2   x/r4
+(3) northeast usa       crl.dec.com              192.58.206.2  pub/x11/r4
+(4) uk janet            src.doc.ic.ac.uk         129.31.81.36  x.v11r4
+    uk niftp            uk.ac.ic.doc.src                       <xv11r4>
+(5) australia           munnari.oz.au            128.250.1.21  x.v11/r4
+
+the giza.ci.ohio-state.edu site, in particular, is known to have much of the
+contrib stuff that can be found on export. 
+
+the releas is avail to dec easynet site as crl::"/pub/x11/r4".
+
+site in australia mai contact thi address: ftp.adelaid.edu.au [129.127.40.3]
+and check the directori pub/x/r4. the machin shadow export and archiv
+comp.sourc.x. (mark prior, mrp@uc.adelaid.edu.au, 5/90)
+
+note: a much more complet list is distribut as part of the introductori 
+post to comp.sourc.x.
+
+a set of x11r4 binari built by tom roell (roell@informatik.tu-muenchen.de) 
+for the 386/ix will avail from export.lc.mit.edu in /contrib and in 
+/pub/i386/x11r4 from 131.159.8.35 in europ. stephen hite 
+(shite@sinkhol.unf.edu) can also distribut to folk without ftp facil 
+via disk sent sase; contact him for usmail and ship detail. [12/90] in 
+addit, the binari ar avail via uucp from szebra [1-408-739-1520, tb+ 
+(pep); ogin:nuucp sword:nuucp] in /usr2/xbb/bb/x.  in addit, the sourc is
+on zok in /usrx/i386.r4server/. [2/91] in addit, if you ar in the us, the 
+latest svr4 binari (april 15), patch, and font ar avail on 
+piggi.ucsb.edu (128.111.72.50) in the directori /pub/x386, same filenam as 
+abov. (pleas us after 6pm pacif, as these ar larg file.) [5/91]
+
+a set of hp 9000/800 binari is avail on hpcvaaz.cv.hp.com (15.255.72.15)
+as ~ftp/pub/mitx11r4/lib.x800.z. [2/91]
+
+a set of x11r4 binari for the next 2.x have been made avail by howi kay
+on cunixf.cc.columbia.edu
+
+a set of binari by john coolidg (coolidg@cs.uiuc.edu) for the mac run 
+a/ux 2.0 is avail from wuarchiv.wustl.edu in the file
+(/archiv/system/aux/x11r4/xupdat2.tar.z). also in x11r4/diff is a set of 
+patch for make x11r4 with share librari with mkshlib.
+
+a complet distribut of sco x11r4 binari by baruch cochavi 
+(blue@techunix.technion.ac.il) can be found on uunet. the server is roell's 
+x386 1.1b, compil for et4000 base svga board.
+
+----------------------------------------------------------------------
+subject:  61)  where can i get osf/motif?
+	
+	you can obtain either osf/motif sourc or binari from a number of 
+vendor. 
+	motif 1.2.2 sourc is now avail; it is base on x11r5.
+	motif 1.1 is base on the r4.18 intrins and is current [7/92] at 
+1.1.5.
+	an osf/motif sourc licens must be obtain from osf befor sourc can
+be obtain from the open softwar foundat or ani valu-ad vendor for
+ani version. call the direct channel desk at osf at 617-621-7300 for order 
+inform.
+	variou hardwar vendor produc develop's toolkit of binari, 
+header file, and document; check your hardwar vendor, particularli if
+that vendor is an osf member. 
+	in addit, independ binari vendor produc motif toolkit for
+machin for which motif is not support by a vendor; the kit includ vari 
+level of bug-fix and support for share librari and ar base on wide
+diverg version of motif:
+	quest (408-988-8880) sell kit for sun, as well; 
+	ixi (+44 223 462 131) offer kit for sun3 and sun4. 
+	nsl (+33 (1) 43 36 77 50; request@nsl.fr) offer kit for the sun 3 
+and sun 4.
+	blueston consult make a kit for sun system.
+	ic (617-62-0060) make sever binari kit, notabl for sun, dec.
+	hp and dec have announc support for motif on sun system.
+	unipalm (+44-954-211-797) current offer for sun system a motif 
+develop kit includ x11r4 and base on motif 1.1.2. the us distributor is
+expert object corp (708-926-8500).
+	bim ship motif 1.1 binari for sun. share librari support is 
+includ. contact alain vermeiren (av@sunbim.be) or danni backx (db@sunbim.be) 
+at +32(2)759.59.25 (fax : +32(2)759.47.95) (belgium).
+	silog (+33 61.57.95.95) ship motif 1.2 and motif 1.1 on sun 
+machin.
+	s.i. system offer motif 1.2 for solari 2.1; info: 1-800-755-8649 in
+usa and canada.
+	metro link inc. (305-970-7353, sale@metrolink.com; in europ contact
+adnt, (33 1) 3956 5333, univis (uk) ltd. (44) 628 82 22 81) ship an 
+implement of x11r4 and motif 1.1.2 (includ a share-librari 
+implement of libxm.a) for the 386/486 unix market.  motif 1.1.2 is 
+also avail for sun sparc base workstat. it ha also announc 
+motif 1.2 for solari system.
+
+----------------------------------------------------------------------
+subject:  62)  doe motif work with x11r4? x11r5?
+
+	motif 1.2 is base on x11r5.
+	motif 1.1, avail in sourc form from osf as of august 1990, us 
+the "vanilla" x11r4 intrins, where "vanilla" mean "with just a few 
+patch"; the file fix-osf which osf distribut is obsolet by mit's patch 
+15-17.  the file fix-osf-1.1.1 distribut with the 1.1.1 version or it 
+subsequ modif need to be appli after mit fix-18, though.
+
+	motif 1.1.1 to 1.1.3 will work with x11r5 if x11r5 is compil with
+-dmotifbc; 1.1.4 and later should work with the vanilla r5, although there ar 
+some known new geometri-manag problem.
+	
+----------------------------------------------------------------------
+subject:  63)  where can i get toolkit implement open look?
+
+	sun's xview ha a sunview-style api. a version is on the x11r4 tape;
+the latest [2/92] 3.0 sourc ar on export in contrib/xview3/.
+	xview and x binari for the sun 386i ("roadrunn") ar avail for 
+ftp from svin01.win.tue.nl (131.155.70.70), directori pub/x11r4_386i.
+	support binari of xview 2.0 or 3.0 includ: 
+
+xview for non-sun platform  (domest and select intern vendor).
+sever ar also avail from sun; contact your local sale offic.
+
+amiga		gfxbase, inc.		1881 ellwel drive
+(amigado)	(408) 262-1469		milpita, ca 95035
+		fax: (408) 262-8276
+
+sgi
+soni (new-os)
+ibm rs/6000
+hp 9000
+decstat	unipress softwar	2025 lincoln highwai
+(ultrix)	(908) 985-8000		edison, nj 08817
+		fax: (908) 287-4929
+
+		unipress softwar, ltd.		po box 70
+		44-624-661-8850			vike hous
+		fax: 44-624-663-453		nelson street
+						dougla, isl of man
+						unit kingdom
+
+dec vaxstat	tgv			603 mission street
+(vm)		(800) tgv-3440		santa cruz, ca 95060
+		(408) 427-4366
+		fax: (408) 427-4365
+
+		unipalm ltd.			145-147 st. neot road
+		44-0954-211797			hardwick
+		fax: 44-0954-211244		cambridg cb3 7qj
+						england
+
+intel 386	quarterdeck offic	150 pico boulevard
+(do)		system			santa monica, ca 90405
+		(213) 392-9851
+		fax: (213) 399-3802
+
+intel 386	sunsoft corpor	6601 center drive west
+(interact	310-348-8649		suit 700
+ unix and				lo angel, ca  90045
+ sco unix)	
+
+stardent	scripp institut	clinic mb-5
+(stellix os	fax: (619) 554-4485	10666 n. torrei pine road
+ and titan os)	includ mailstop mb-5	la jolla, ca 92057
+		by ftp: 192.42.82.8 in pub/binari/{xview.readm,xview.tar.z}
+
+	at&t's open look gui 3.0 xt-base toolkit is now gener avail 
+[2/92]; contact 1-800-828-unix#544 for inform. binari ar produc
+for sparc system by intern quest corpor (408-988-8289). a version
+of the toolkit is also produc under the name olit by sun. 
+	more recent version of olit have been port to ibm 6000 and dec mip 
+by both unipress and ic. olit is also avail for hp from melillo consult
+(908-873-0075). mjm (somerset, nj) make olit 4.0 for hp 7xx seri run
+hpux 8.0, decstat, and rs/6000s [thank to joann newbauer, 
+jo@attunix.att.com, 908-522-6677.]
+
+	sun is ship openwindow 3.0; contact your local sale 
+repres for more detail; the packag includ toolkit binari and 
+header file.
+
+	parcplac's (formerli solbourn's) extens c++-base object 
+interfac librari, which support run-time select between open look or 
+motif, is avail from 303-678-4626. [5/92]
+
+----------------------------------------------------------------------
+subject:  64)! where can i get other x sourc? (includ r5 modif)
+
+	the mit softwar center ship the x test suit on tape.
+
+	a multi-thread version of xlib base on x11r5 patch 12 is now 
+avail for anonym ftp from (new version 1/93):
+        dec on gatekeep.dec.com (16.1.0.2) in /pub/x11/contrib/mt-xlib-1.1
+        mit on export.lc.mit.edu (18.24.0.12) in /contrib/mt-xlib-1.1
+
+	hp ha made avail driver to permit the build of the x11r5
+sampl server on the hp 9000 seri 700 workstat; the file ar on
+export.lc.mit.edu in ~ftp/contrib/r5.hp.srv. [8/92]
+
+	user-contribut softwar is distribut through the newsgroup
+comp.sourc.x, moder by chri olson (chri@imd.sterl.com); also check 
+that group for post inform.
+
+	richard hesketh (rlh2@ukc.ac.uk) ha been creat a list of freeli-
+avail x sourc.  the list is store on export.lc.mit.edu in contrib as
+x-sourc-list.z. it list the main storag locat for the program and 
+intern site from which it mai be ftp'ed.
+
+	the machin export.lc.mit.edu ha a great deal of user-contribut
+softwar in the contrib/ directori; a good deal of it is present in current or 
+earlier version on the x11r3, x11r4, and x11r5 contrib tape. there ar also
+directori for fix to contrib softwar.  the file on export in
+contrib/00-index.txt is a quick overal index of the softwar in that area,
+provid by daniel lewart (d-lewart@uiuc.edu).
+
+	these site us to and mai still mirror export and ar of particular 
+us for australasia: anonym ftp: ftp.adelaid.edu.au; acsnet fetchfil: 
+siriu.ua.oz.
+
+	the materi on giza.ci.ohio-state.edu, which tend to duplic 
+the export archiv, is also avail via anonym uucp from osu-ci, at tb+ 
+and v.32 speed.  write to uucp@ci.ohio-state.edu (same as osu-ci!uucp) for 
+instruct. [the archiv is now maintain by karl kleinpast]
+
+	a new west-coast uucp x11 archiv is administ by mark snitili 
+(mark@zok.uucp) and contain the full x11 distribut, the xtest
+distribut, an entir archiv of comp.sourc.x and other goodi.
+	the machin zok ha a tb+ modem which will connect to 19.2k, 2400, 
+1200 baud (in that order).  the anonym uucp account is uxarch with password 
+xgoodi.  the modem's phone number is 408-996-8285.
+	a sampl system (or l.sy) entri might be:
+   		zok ani acu 19200 4089968285 in:--in: uxarch word: xgoodi
+	to get a current list of the file that ar avail, download
+the file "/usrx/ls-lr.z".
+	a full subject index of the comp.sourc.x file is avail in the
+file "/usrx/comp.sourc.x/index".
+	the machin ha just the on modem, so pleas do not fetch larg 
+amount of data at on sit.
+[courtesi mark snitili, 2/90]
+
+in addit, uunet sourc archiv (703-876-5050) track comp.sourc.x and 
+provid 800mb+ of compress program on 6250 bpi tape or 1/4" tape.  it 
+also mirror export/contrib in it packag/x directori.
+	
+----------------------------------------------------------------------
+subject:  65)! where can i get interest widget?
+
+	the free widget foundat (fwf) librari sponsor by brian totti 
+(totti@cs.uiuc.edu) is now [2/93] avail on a.cs.uiuc.edu (128.174.252.1) 
+in pub/fwf-v3.41.shar.z. the set of widget there is intend to form the basi
+for futur contribut. to be ad to the discuss list, send to
+listserv@cs.uiuc.edu a messag sai "subscrib <listnam> <your-full-name>"
+where <listnam> is on of free-widget-announc, free-widget-develop, or 
+free-widget-bug.  version 3.4 is current; look for 4.0 in 4/93.
+	the xew widget set contain widget for data represent.  version 
+1.2 [4/93] is on export contrib/xew-1.2.tar.z.
+	peter ware's xo "open widget" set, which ha motif-like function, 
+is on archiv.ci.ohio-state.edu as pub/xo/xo-2.1.tar.z [8/92].
+	the athenatool plotter widget set version 6-beta [7/92] maintain by
+peter klingebiel (klin@iat.uni-paderborn.de) includ mani graph and plot 
+widget; a copi is on export in plotter.v6b.tar.z, plotter.doc.tar.z,
+plotter.afm.tar.z, and plotter.readm. the latest version mai in fact be on
+ftp@uni-paderborn.de (131.234.2.32) in /unix/tool.
+	an advanc version of marc quinton's motif port of the fwf multilist 
+widget is in ftp.stna7.stna.dgac.fr:pub/multilist.tar.z [143.196.9.31].
+	addit widget ar avail on the contrib/ portion of the x11r4
+tape; these includ the xcu set.
+	paul johnston's (johnston@spc5.jpl.nasa.gov) x control panel widget set
+emul hardwar counterpart; sourc ar on export.lc.mit.edu in 
+xc-1.3.tar.z.
+	o'reilli volum 4, doug young's book, the asent/swick book, and jerri 
+smith's "object-orient program with the x window system toolkit" all 
+includ detail on write widget and includ sever us widget; sourc 
+ar typic on export and/or uunet. 
+	the dirt interfac builder includ the libxukc widet set which extend
+the function of xaw. 
+	a graph widget and other 2d-plot and 3d-contour widget by sundar 
+narasimhan (sundar@ai.mit.edu) ar avail from ftp.ai.mit.edu as
+/com/ftp/pub/user/sundar/graph.tar.z. the graph widget ha been updat [3/91]
+with document and histogram capabl.
+	a graph widget is avail from ftp.stna7.stna.dgac.fr in
+pub/graph.tar.z; it us a segment list for draw and henc support a zoom
+oper.
+	ken lee's xm widget (demo) that us displai postscript to draw label 
+at a non-horizont angl is on export in contrib/dpslabel.tar.z.
+	the tabl widget (work like troff tbl tabl) is avail in sever
+flavor, on of which is with the widget creation librari releas.
+	bell commun research ha develop a matrix widget for complex
+applic layout; it's on export in contrib/xbae-widget-3.8.tar.z [2/93. 
+the distribut also includ a "caption" widget to associ label with 
+particular gui compon. (7/92)
+	dan connolli's (connolli@convex.com) xcrichtext interpret rtf data;
+it's on export as contrib/xcrichtext-1.1.tar.z.
+	the xmgraph motif-base graph widget is on iwork.ecn.uiowa.edu in
+/comp.hp/gui_classic/xmgraph.tar.z although it mai not be stabl.
+	a tex-style layout widget by keith packard is describ in the 
+proceed of the 7th mit technic confer (o'reilli x resourc volum 5);
+sourc is avail on export contrib/layout.tar.z.
+
+	a version of lee iverson's (leei@mcrcim.mcgill.edu) imag-view tool
+is avail as contrib/vimag-0.9.3.tar.z on export.lc.mit.edu.  the packag 
+also includ an imageviewport widget and a filedialog widget. [12/91;5/92] 
+	in addit, the pext toolkit by rich thomson (rthomson@dsd.es.com) is 
+avail on export as pext.tar.z; it includ a pex widget make it easier to
+us pex in xt-base program.
+	a motif port of the xaw clock widget is in ftp.stna7.stna.dgac.fr
+in pub/clock.tar.z.
+	a modif of the xaw scrollbar widget which support the arrowhead
+style of other toolkit is on export in contrib/xaw.scrollbar.mta.z.
+
+	a beta 0.3 (11/92) releas of the r5 xaw widget with a 3d visual 
+appear by kaleb keithlei (kaleb@thyme.jpl.nasa.gov) is avail on export 
+in contrib/xaw3d/r5/xaw3d-0.3.tar.z. the librari, which is binari-compat 
+with the mit xaw, implement a 3d subclass which handl the extra draw.
+
+also:
+	the xmt "motif tool", dovetail system's sharewar librari of 9 
+widget and mani conveni function, is avail from 
+export.lc.mit.edu:contrib and ftp.ora.com:/pub/xbook/xmt in xmt-readm and 
+xmt-1.0.tar.z.
+	the xtra xwidget set includ widget for pie and bar chart, xy 
+plot, help, spreadsheet, data entri form, and line and bar graph.  contact 
+graphic softwar technolog at 310-328-9338 (info@gst.com) for inform.
+	the xrt/graph widget, avail for motif, xview and olit, displai
+x-y plot, bar and pie chart, and support user-feedback, fast updat and
+postscript output. contact kl group inc. at 416-594-1026 (info@klg.com).
+	a set of data-entri widget for motif is avail from marlan 
+softwar, 713-467-1458 (gwg@world.std.com).
+	a set of graph widget is avail from expert databas system
+(212-370-6700).
+	a set of osf/motif compound widget and support routin for 2d
+visual is avail from ms quek lee hian, nation comput board,
+republ of singapor; tel : (65)7720435; fax : (65)7795966; 
+leehian@iti.gov.sg, leehian@itivax.bitnet.
+	the ic widget databook includ a varieti of control widget and 
+special-purpos widget, avail on a varieti of platform.  inform: 
+617-621-0060, info@ic.com.
+	inform on graph tool mai be obtain from info@tomsawy.com 
+(+1-510-848-0853, fax: +1-510-848-0854).
+
+----------------------------------------------------------------------
+subject:  66)  where can i get a good file-selector widget?
+
+	the free widget foundat set offer a fileselector widget, with 
+separ directori path and file list window, and the filecomplet, which
+ha emac-style file complet and ~ expans. 
+	other avail file-requestor widget includ the xifileselector from 
+iri softwar's book, the xdbx file-selector extract by david nedd 
+(daven@wpi.wpi.edu), and the filenomin from the ax distribut.
+	the ghostview, xfig, and vimag packag also includ file-selector 
+widget.
+
+----------------------------------------------------------------------
+subject:  67)  what widget is appropri to us as a draw canva?
+
+	some widget set have a widget particularli for thi purpos -- a
+workspac or drawingarea which doesn't displai anyth but let your xt 
+applic know when it ha been re-expos, resiz, and when it ha receiv
+user kei and mous input. 
+	the best thing to do for other widget set -- includ the athena set 
+-- is to creat or obtain such a widget; thi is prefer to draw into a 
+core widget and grab event with xtaddeventhandl(), which lose a number 
+of benefit of xt and encapsul of the function .  
+	at least on version ha been post to comp.sourc.x (name???). 
+	the publicli-avail program xball and xpic includ other version. 
+	the athena widget manual (mit/doc/xaw/templat in the r5 distribut) 
+includ a tutori and sourc code to a simpl widget which is suitabl for 
+us. 
+	the free widget foundat set contain a canva widget.
+
+----------------------------------------------------------------------
+subject:  68)  what is the current state of the world in x termin?
+
+jim morton (jim@applix.com) post quarterli to comp.window.x a list of 
+manufactur and termin; it includ price inform. 
+
+notabl buyer-guid survei includ:
+	- the septemb 1991 issu of system integr
+
+----------------------------------------------------------------------
+subject:  69)  where can i get an x server with a touchscreen or lightpen?
+
+	labtam (+61 3 587 1444, fax +61 3 580 5581) offer a 19" surfac 
+acoust wave touch-screen option on it xengin termin.
+	tektronix (1-800-225-5434) provid an x termin with the xtouch 
+touch-screen. thi termin mai also be resold through trident system
+(703-273-1012).
+	metro link (305-970-7353) support the elograph serial touch screen 
+control.
+
+----------------------------------------------------------------------
+subject:  70)  where can i get an x server on a pc (do or unix)?
+
+	mit x11r5 alreadi provid a server to mani 386/486 *unix* with 
+support for mani of the popular video graphic adapt; and for other 
+non-msdo pc you can obtain a server from these sourc:
+
+	xfree86 (formerli x386 1.2e) is an enhanc version of x386 1.2, which 
+wa distribut with x11r5; it includ mani bug fix, speed improv, and
+other enhanc. sourc for version 1.2 [2/93] is on export.lc.mit.edu in 
+pub/contrib, ftp.physic.su.oz.au in /x386, and ftp.win.tue.nl in /pub/x386. in
+addit, binari ar on ftp.physic.su.oz.au, and ftp.win.tue.nl among other 
+system. info: x386@physic.su.oz.au.
+	note: thi packag obsolet glenn lai's speedup patch for an 
+enhanc x11r5 server for 386 unix with et4000 board (speedup.tar.z on 
+export).
+
+
+	metro link inc. (305-970-7353, sale@metrolink.com; in europ contact
+adnt, (33 1) 3956 5333) ship an implement of x11r4 for the 386/486 unix
+market.
+
+	sgc offer x386 version 1.3, base on thoma roell's x11r5 two-head
+server, in binari and sourc form. inform: 408-255-9665, info@sgc.com.
+
+	isc, sco, uhc, and other well-known oper-system vendor typic
+offer x server.
+
+	for msdo pc:
+
+daniel j. mccoi (mccoi@gothamc.jsc.nasa.gov) ha start post monthli a 
+list of non-unix server for pc, mac, and amiga; it includ price 
+inform. the current copi is kept on export in contrib as 
+xserver-nonunix.txt.z. 
+
+an articl on pc x server appear in the march 2, 1992 open system todai.
+
+	also of possibl us:
+
+	net-i from programit (212-809-1707) enabl commun among 
+do, os/2 and unix machin and can be us to displai pc session on your
+unix x displai.
+
+
+----------------------------------------------------------------------
+subject:  71)  where can i get an x server on a macintosh run maco?
+
+	exodu from white pine softwar (603-886-9050) run on ani mac with
+at least 1mb of memori and run the x server within a standard macintosh 
+window.  version 3.0 [6/91] support intermix of x and mac window and
+the adsp protocol. the version support the shape extens and includ
+decwindow support.
+
+	appl's macx run on macplu or newer machin with >= 2mb of memori
+and system softwar 6.0.4 or later. version 1.1 is fulli x11r4-base.  it 
+support full icccm-compat cut and past of text and graphic between the 
+macintosh and x11 world, the shape extens (includ shape window on the 
+macintosh desktop), an option built-in icccm-compliant window manag, x11r4 
+font and color, a built-in bdf font compil, and built-in standard 
+colormap. upgrad to macx ar avail by ftp from aux.support.appl.com. 
+info: 408-996-1010.  
+	[note: macx is also the name of a vax-mac xmodem transfer util.]
+
+	also: 
+
+	liken (1-800-245-unix or info@qualix.com) softwar enabl monochrom
+68000 mac applic to run on a sparc system run x. 
+	xport (1-800-245-unix (415-572-0200) or xport@qualix.com) enabl mac 
+applic to displai on an x-base workstat by turn the mac into an x 
+client.
+	intercon ha a product call planet-x which enabl mac applic
+to displai on an x server.
+
+----------------------------------------------------------------------
+subject:  72)  where can i get x for the amiga?
+
+	the new amiga 3000 machin offer an x server and open look tool and
+librari on a full svr4 implement.
+
+        gfxbase, inc. provid "x11 r4.1" for the amigado comput; it 
+contain x11r4 client, font, etc., and a releas 4 color server. an option 
+programm's toolkit includ the header file, librari, and sampl program.
+info from gfxbase, 408-262-1469. [dale luck 
+(uunet!{cbmvax|pyramid}!bo!dale); 2/91]
+
+----------------------------------------------------------------------
+subject:  73)  where can i get a fast x server for a workstat?
+
+	the r5 server should be among the fastest avail for most machin.
+
+	sun sell a "direct xlib" product which improv render for 
+applic run on the same machin as the x server; the replac xlib
+librari access graphic hardwar directli us sun's direct graphic access 
+(dga) technolog.
+
+	intern quest corpor (408-988-8289) ha an optim r4 
+server for sun3/4 under suno 4.0.
+
+	unipalm have r4 server for sun3 and sparc platform. these ar 
+optimis to us graphic hardwar and will run with sunview. inform:
++44 954 211797 or xtech@unipalm.co.uk.
+
+	xgraph's xtool (408-492-9031) is an x server implement in sunview 
+which boast impress result on sun 3 and sparc system. [6/90]
+
+sever compani ar make hardwar acceller board:
+
+	dupont pixel system (302-992-6911), for sun.
+
+	megatek's (619-455-5590) x-celler board for the sun 3 and sun 4 is 
+base on the ti 34020; the compani claim perform improv of 5x to 
+10x over the sampl x11r3 server.
+
+----------------------------------------------------------------------
+subject:  74)! where can i get a server for my high-end sun graphic board?
+
+        takahashi naoto (electrotechn laboratori, ntakaha@etl.go.jp) ha 
+modifi the mit x11r5 server to support the sun cg8, cg9, and cg12 board.  
+the file ar on export in contrib/xsun24-3.[01].tar.z.  note that both file 
+ar necessari to build xsun24-3.1.
+
+	the jpl r5 xsun multi-screen server is a gener purpos replac
+for the mit server/ddx/sun layer; it provid for the screen to be split among
+sever monitor and implement sever other featur abov the mit 
+implement. avail on export.lc.mit.edu in the file
+contrib/r5.xsun.multi-screen.tar.z. [kaleb keithlei, kaleb@thyme.jpl.nasa.gov,
+12/91; the file wa updat 24 mar 1993.]
+
+----------------------------------------------------------------------
+subject:  75)  where can i get an "x termin" server for my low-end sun 3/50?
+
+	seth robertson (seth@ctr.columbia.edu) ha written xkernel; the current
+version [1.4 as of 8/91, 2.0 expect rsn] is on sol.ctr.columbia.edu 
+[128.59.64.40] in /pub/xkernel.gamma. it turn a sun 3/50 into a pseudo- x 
+termin; most of the overhead of the oper system is side-step, so it 
+is fairli fast and need littl disk space.
+	a similar approach is to run the regular x server by make /etc/init
+a shell script which doe the minim setup and then invok xsun, like thi
+exampl script from mous@larri.mcrcim.mcgill.edu:
+
+#! /bin/sh
+exec >/dev/consol 2>&1
+/etc/fsck -p /dev/nd0
+case $? in
+ 	0)	;;
+ 	4)	/etc/reboot -q -n
+ 		;;
+ 	8)	echo nd fsck fail - get help
+ 		/etc/halt
+ 		;;
+ 	12)	echo interrupt
+ 		/etc/reboot
+ 		;;
+ 	*)	echo unknown error in reboot fsck - get help
+ 		/etc/halt
+ 		;;
+esac
+/bin/dd if=/tmp-fs of=/dev/nd2 bs=512 count=128 >/dev/null 2>&1
+/etc/mount /dev/nd2 /tmp
+/etc/ifconfig le0 netmask 255.255.255.0 broadcast 132.206.41.255
+/etc/mount -o ro apollo:/u2/x11/lib /local/lib/x11
+/etc/rout add default 132.206.41.1 1 >/dev/null
+set `/etc/ifconfig le0`
+exec /xsun -onc -multidisp -mux -queri \
+	`(sh -vn </local/lib/x11/xdm-server/$2 2>&1)`
+
+----------------------------------------------------------------------
+subject:  76)  what termin emul other than xterm ar avail?
+
+	pc ha rewritten xterm from scratch us a multi-widget approach that
+can be us by applic. a version is on the r5 contrib tape and on
+export in contrib/emu.tar.z [10/91]. for more inform, contact 
+me@dude.pc.com.
+
+	mxterm, a motif-base xterm is avail from the paderborn 
+ftp-server ftp@uni-paderborn.de (131.234.2.32), file 
+/unix/x11/more_contrib/mxterm.tar.z.
+
+	the color termin widget provid ansi-termin emul compat
+with the vtx00 seri; a version is on export in contrib/ctw-1.1.tar.z. a
+motif version is on ftp.stna7.stna.dgac.fr in pub/term-1.0.tar.z.
+	
+	kterm 4.1.2 is an x11r4-base vt100/vt102 (and tektronix 4014) termin
+emul that support displai of chines, japanes, and korean text (in vt 
+mode).  also support ar: ansi color sequenc, multi-byte word select, 
+limit compound text support, and tab and newlin preserv in select.
+kterm 4.1.2 is also avail from these anonym ftp site:
+	clr.nmsu.edu:pub/misc/kterm-4.1.2.tar.z  [128.123.1.14]
+	export.lc.mit.edu:contrib/kterm-4.1.2.tar.z  [18.24.0.12]
+	kum.kaist.ac.kr:pub/unix/xstuff/kterm-4.1.2.tar.z  [137.68.1.65]
+[courtesi of mark leisher <mleisher@nmsu.edu> ]
+
+	kterm-5.1.1.tar.z is now on export [12/92].
+
+	mterm, by mous@larri.mcrcim.mcgill.edu, is an x termin emul
+which includ ansi x3.64 and dec emul mode.  mterm can be had by ftp to 
+larri.mcrcim.mcgill.edu (132.206.1.1), in x/mterm.src/mterm.ball-o-wax.
+
+	cxterm is a chines xterm, which support both gb2312-1980 and the 
+so-call big-5 encod.  hanzi input convers mechan is builtin in 
+cxterm.  most input method ar store in extern file that ar load at run
+time.  user can redefin ani exist input method or creat their own on.
+the x11r5 cxterm is the rewritten of cxterm (version 11.5.1) base on x11r5 
+xterm; it is in the r5 contrib softwar.  [thank to zhou ning 
+<zhou@tele.unit.no> and steinar bang <uunet!idt.unit.no!steinarb>.]
+
+	xvt is avail on export's contrib in xvt-1.0.tar.z and 
+xvt-1.0.readm. it is design to offer xterm's function with lower swap 
+space and mai be of particular us on system drive mani x termin.
+
+	x3270 is in x11r5 contrib/.
+
+also:
+	ibm sell a 3270 emul for the rs/6000 (part #5765-011); it's base
+on motif. 
+	
+	centuri softwar (801-268-3088) sell a vt220 termin emul for x. 
+vt102, wyse 50 and sco color consol emul ar also avail. 
+
+	grafpoint's tgraf-x provid emul of tektronix 4107, 4125, and 
+42xx graphic termin; it's avail for most major platform. inform
+(inc. free demo copi): 800-426-2230; fax. 408-446-0666; uunet!grafpnt!sale.
+
+	ixi's x.deskterm, a packag for integr charact-base 
+applic into an x environ, includ a number of termin-emul
+modul. inform: +44 (0223) 462131. [5/90]
+
+	pericom produc teem-x, a set of sever emul packag for a
+number of tek, dec, westward, and data gener termin. the softwar run on
+sun 3, sun 4, apollo, dec, isc, ibm/aix. inform: us: 609-895-0404, 
+uk: +44 (0908) 560022. [5/90]
+
+	sco's scoterm (info@sco.com), part of it open desktop environ, is
+a motif-compliant sco ansi color consol emul.
+
+----------------------------------------------------------------------
+subject:  77)! where can i get an x-base editor or word-processor?
+
+	you can ftp a version of gnu emac, the extens, customiz, 
+self-document, real-time displai editor, includ x11 support, from
+prep.ai.mit.edu [18.71.0.38]:/pub/gnu/emac-18.59.tar.z or
+informatik.tu-muenchen.de:/pub/gnu/emac/emac-18.59.tar.z.
+	
+	epoch is a modifi version of gnu emac (18) with addit 
+facil us in an x environ. current sourc ar on cs.uiuc.edu 
+(128.174.252.1) in ~ftp/pub/epoch-file/epoch; the current [3/92] version is 
+4.0. [in europ, try unido.informatik.uni-dortmund.de].  there ar two 
+subdirectori:  epoch contain the epoch sourc, and gwm contain the sourc 
+to the programm window manag gwm, with which epoch work well.] 
+you can get on the epoch mail list by send a request to 
+epoch-request@cs.uiuc.edu.
+
+	lucid emac is a version of gnu emac deriv from an earli version of
+emac version 19.  it current requir x window to run;  x support is
+greatli enhanc over gnu emac version 18, includ support for multipl x
+window, input and displai of all iso-8859-1 (latin1) charact, zmac/lispm
+style region highlight, a customiz motif-like menubar, more power
+keymap support, flexibl text attribut, support on region and screen-local
+basi through x resourc and/or lisp, and support for the x11 select
+mechan. lucid emac is free; the latest version (2/93) is 19.4, and is
+avail from labrea.stanford.edu in the pub/gnu/lucid/ directori.
+
+	the andrew system on the x11 contrib tape ha been describ as on of
+the best word-process packag avail. it support word process with 
+multi-media embed object: raster, tabl/spread sheet, draw, style 
+editor, applic builder, embed program languag, &c. releas 5.1 
+becam avail 2 june 92.  [fred hansen (wjh+@andrew.cmu.edu)]
+	you mai be abl to us the remot andrew demo servic to try thi 
+softwar; try "finger help@atk.itc.cmu.edu" for help.
+
+	the interview c++ toolkit contain a wysiwig editor call doc; it 
+save and load file in a latex-*like* format (not quit latex).  the packag 
+can also import idraw-postscript draw.
+
+	a simpl editor ax (by j.k.wight@newcastl.ac.uk) is avail on 
+export and arjuna.newcastl.ac.uk (128.240.150.1) as ax-4.1.tar.z [3/93]. it 
+is base around the xaw text widget.
+
+	ted is a simpl motif-base text editor; it is a wrapper around the 
+motif text widget which offer search/replac, paragraph format, and 
+navig featur. ted is avail from ftp.eo.ncsu.edu (152.1.9.25) as 
+/pub/bill.tar.z; here ar also execut there.
+
+	point, by crowlei@unmvax.cs.unm.edu (charli crowlei), is tcl/tk-base
+and offer dyanim configur and program in the tcl macro languag.
+the editor is avail from unmvax.cs.unm.edu (129.24.16.1) as
+pub/point/point1.1-tar.z.
+
+	asedit, by andrzej stochniol (astoch@ic.ac.uk) is on export in 
+contrib/asedit.tar.z. it is a simpl text editor built around the motif text 
+widget. version 1.11 wa releas 1/93.
+
+also:
+
+	elan comput group (mountain view, ca; 415-964-2200) ha announc the
+avalon publish 2.0, an x11/open look wysiwyg electron publish system.
+
+	framemak and framewrit ar avail as x-base binari product for
+sever machin. frame is at 800-843-7263 (ca: 408-433-3311).
+
+	wx2 (formerli indepthedit) is avail from non standard logic 
+(+33 (1) 43 36 77 50; request@nsl.fr).
+
+	buzzword intern inc. ha an editor call 'profession edit' 
+that run under x/motif for variou platform.  info: +1-314-334-6317.
+
+	decwrit is avail from dec for some dec hardwar and sunwrit is
+avail from sun.
+
+	islandwrit will soon be avail from island graphic (415-491-1000) 
+(info@island.com) for some hp & apollo platform.
+
+	interleaf is current avail from interleaf (800-241-7700, 
+ma: 617-577-9800) on all sun and dec platform; other ar under develop.
+
+	the aster*x offic integr tool from applix (1-800-8applix, 
+ma: 508-870-0300) includ a multi-font wysiwg document compos; for sever 
+system.
+
+	arbortext, inc. provid an x11 version of it electron publish 
+program call "the publish". the publish is avail on sun, hp and 
+apollo workstat. contact arbortext at 313-996-3566. [5/90]
+
+	iri comput laboratori offer the "ie" editor. info:  
++1-505-988-2670 or info@spectro.com.
+
+	bbn/slate from bbn softwar product includ a menu-driven word
+processor with multipl font and style sheet.  it support x on
+multipl platform. (617-873-5000 or slate-offer@bbn.com) [11/90]
+
+	the power "sam" editor by rob pike is split into a host portion and 
+a front-end graphic portion, which now ha an x implement.  sam is now 
+avail by anonym ftp from research.att.com, in dist/sam/bundl.z.  watch 
+that space for updat version.  there is a mail list for sam user; 
+request to <sam-fan-request@hawkwind.utc.toronto.edu>. a set of extens
+which augment the mous activ with the keyboard is avail from 
+uxc.cso.uiuc.edu in pub/sam/samx1.0.shar.
+
+	innov solut (505-883-4252; or brian zimbelman, 
+is!brian@bbx.basi.com) publish the user-configur motif-base xamin 
+editor.
+
+	qualix offer a product. inform: info@qualix.com or 800-245-unix 
+(415-572-0200).
+
+	typex is a motif-base editor avail for sever system. 
+inform: amcad research, 408-867-5705, fax -6209.
+
+	wordperfect offer an x-base version of wordperfect 5.1 for sever
+workstat. inform: 801-222-5300 or 800-451-5151.
+
+----------------------------------------------------------------------
+subject:  78)  where can i get an x-base mailer?
+
+	xmh, an x interfac to mh, is distribut with the x11 releas.
+
+	xmail is an x-base window interfac to berkelei-style mail handler;
+it is style primarili after the sunview mailtool applic and build on
+most unix system. the current releas [1/92] is 1.4, avail in the mit 
+x11r5 contrib tape and from export and uunet. info: jeff markham,
+markham@cadenc.com.
+
+	mmh (my mail handler), a motif interfac to the mh mail handler, is 
+avail from ftp.eo.ncsu.edu (152.1.9.25) in pub/bill.tar.z; it is bundl
+with the ted editor, which it us for compos messag. motif 1.1 is 
+requir; if you don't have it, look for dec and sparc execut in the same 
+place.  inform and problem to: erik scott, escott@eo.ncsu.edu. [1/92]
+
+	the andrew toolkit support the andrew messag system; it is avail
+from export and mani other x archiv and from emsworth.andrew.cmu.edu 
+(128.2.30.62), or send email to susan+@andrew.cmu.edu. releas 5.1 becam
+avail 2 june 92.
+	you mai be abl to us the remot andrew demo servic to try thi 
+softwar; try "finger help@atk.itc.cmu.edu" for help.
+
+	xmailtool is an xaw-base interfac to a bsd-style mail reader; version
+2.0 wa releas 9/92. inform: bob kierski, bobo@crai.com or 612-683-5874.
+
+	cem is a motif-base mailer us standard mailbox format; it is on
+nelson.tx.ncsu.edu in pub/cem. inform: sam moor (sam_moor@ncsu.edu).
+
+also:
+
+        alfalfa softwar offer post, a unix-base mailer that ha motif- and 
+command-base interfac.  it includ support for multimedia enclosur, and 
+support both the internet and x.400 mail standard.  inform: 
+info@alfalfa.com, +1 617-497-2922.
+
+	z-code softwar offer z-mail for most unix system; binari support
+both tty and motif interfac. the mailer includ a csh-like script 
+languag for custom and extend mail capabl.  inform: 
+info@z-code.com, +1 415 499-8649.
+
+	sever vendor' system includ x-base mailer. dec offer dxmail; 
+sun offer an x-base mailtool; sco (info@sco.com) includ scomail in it open
+desktop product.
+
+sever integr offic-product tool includ mailer:
+
+	the aster*x offic integr tool from applix (1-800-8applix, 
+ma: 508-870-0300) includ a mailer.
+
+----------------------------------------------------------------------
+subject:  79)! where can i get an x-base paint/draw program?
+
+	xpic is an object-orient draw program. it support multipl font 
+style and size and variabl line width; there ar no rotat or zoom.
+xpic is quit suitabl as an interact front-end to pic, though the 
+xpic-format produc can be convert into postscript. (the latest version is 
+on the r4 contrib tape in client/xpic.)
+
+	xfig (by brian v. smith (bvsmith@lbl.gov)) is an object-orient 
+draw program support compound object.  the xfig format can be convert 
+to postscript or other format. recent version ar on the r5 contrib tape or 
+on export in /contrib/r5fix (version 2.1.6 [11/92]).
+
+        idraw support numer font and variou line style and arbitrari 
+rotat. it support zoom and scroll and color draw and fill. the file 
+format is a postscript dialect. it can import tiff file. distribut as a part
+of the interview c++ toolkit (current releas 3.1, from 
+interview.stanford.edu) .
+
+	a version of robert forsman's (thoth@lightn.ci.ufl.edu) xscribbl,
+an 8-bit paint program for x, is now on ftp.ci.ufl.edu in pub/thoth/. [2/93]
+
+	xpaint is avail from ftp.ee.lbl.gov as xpaint.tar.z.
+	a rewrit, xpaint 2.0, by david kobla (kobla@netcom.com) wa releas
+2/93 as xpaint2pl3.tar.z. xpaint is a bitmap/pixmap edit tool.
+
+	a new openwindow postscript-base graphic editor name 'ic' is now 
+[2/91] avail for anonym ftp from internet host lamont.ldgo.columbia.edu 
+(129.236.10.30).  ic (imag composit environ) is an imag tool that
+allow raster imag to be combin with a wide varieti of postscript 
+annot in wysiwyg fashion via x11 imag routin and new postscript 
+raster. (it mai requir openwindow and sun c++ 2.0.)
+
+	tgif by william cheng (william@oahu.cs.ucla.edu) is avail from most
+uucp site and also from export and from cs.ucla.edu. it is frequent updat;
+version 2.12-patch18 wa releas 3/93.
+
+	the "pixmap" program (info: cola@sa.inria.fr) for creat pixmap is 
+on the r5 contrib tape; it resembl the bitmap client. version 2.1 is now 
+avail. [11/92]
+
+	although metacard is not gener classifi as a paint program, a 
+full 24-bit color imag editor is built into the program, which can be us for
+light imag edit and for produc color icon (info@metacard.com). metacard
+is avail via anonym ftp from ftp.metacard.com, csn.org, or 
+128.138.213.21.
+	
+	pixt by j. michael flaneri produc xpm output.
+
+also:
+
+	dxpaint is a bitmap-orient draw program most like macpaint; it's 
+good for us by artist but commonli held to be bad for draw figur or 
+draft. dxpaint is part of dec's ultrix releas.
+
+	framemak ha some draw capabl. [4/90]
+
+	bbn/slate from bbn softwar product includ a full-featur draw and
+paint program with object group and multipl pattern; multipl x platform.
+(617-873-5000 or slate-offer@bbn.com). [11/90]
+
+	dux ta-dah!, 1-800-543-4999
+
+	islandgraph offer islanddraw, islandpaint, islandpres.
+info: 415-491-1000.
+
+	corel draw, 613-728-8200; port to x by prior data scienc 
+800-267-2626
+
+	art&letter compos, 214-661-8960
+
+	ficor autograph, 513-771-4466
+
+	openwindow includ the olpixmap editor.
+	sco odt includ the scopaint editor.
+	hp vue includ the vueicon editor.
+
+sever integr offic-product tool includ draw/paint capabl:
+
+	the aster*x offic integr tool from applix (1-800-8applix, 
+ma: 508-870-0300) includ draw/paint capabl.
+
+[thank in part to stephen j. byer (af997@cobc1.cummin.com) and to 
+j. daniel smith (dsmith@ann-arbor.applicon.slb.com)]
+	
+----------------------------------------------------------------------
+
+david b. lewi 					faq%craft@uunet.uu.net
+
+		"just the faq, ma'am." -- joe fridai 
+-- 
+david b. lewi		temporarili at but not speak for visual, inc.
+dai: dbl@visual.com	even: david%craft@uunet.uu.net

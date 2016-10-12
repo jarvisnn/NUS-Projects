@@ -1,0 +1,24 @@
+from: caton@compstat.wharton.upenn.edu (toni caton)
+subject: re: 80486dx-50 vs 80486dx2-50
+organ: univers of pennsylvania
+line: 17
+nntp-post-host: compstat.wharton.upenn.edu
+in-repli-to: hamilton@golem.wcc.govt.nz's messag of 13 apr 93 01:34:36 gmt
+
+in articl <1qd5bcinnmep@golem.wcc.govt.nz> hamilton@golem.wcc.govt.nz (michael hamilton) write:
+
+   do you realli need to switch to a dx2/66 instead of a dx50?  as i
+   understand it, dx50's can have local bu devic (on the mother-board?)
+   but not local bu slot.  and accord to what i been told, mani
+   system go beyond the vesa local bu standard in order to provid dx50
+   system with a local bu slot capabl.  i have definitli seen a
+   mother board with 2 local bu slot which claim to be abl to
+   support ani cpu, includ the dx2/66 and dx50.  can someon throw
+   some more inform light on thi issu?
+
+you will need to check with peripher maker to see if their board
+will work at 50 mhz.  some will with some motherboard.
+
+
+- toni
+  caton@compstat.wharton.upenn.edu

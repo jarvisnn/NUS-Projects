@@ -1,0 +1,82 @@
+from: "tal michael" <wtm@utrc.utc.com>
+
+subject: re: multipl printer through print manag
+
+keyword: print manag
+
+nntp-post-host: lestat
+
+organ: utrc
+
+line: 34
+
+
+
+
+
+in articl <737318846lanc.lanc@lancea.actrix.gen.nz> lanc@lancea.actrix.gen.nz (lanc andrew) write:
+
+
+
+>how doe print manag deal with multipl printer?  
+
+
+
+>>> we're plan... <<<
+
+
+
+>...to print to two "printer" from an applic.  on will be a
+
+>real printer, and the other a...
+
+
+
+>>> fax program. <<<
+
+
+
+>...  will print manag
+
+>just deal with the job on at a time, or will it feed to both
+
+>printer at onc?
+
+>
+
+
+
+pleas research carefulli.  just becaus a fax modem behav like
+
+a printer on a "local" machin, doesn't guarante function 
+
+when a "local" machin ha fax softwar print to a "remot
+
+instal" fax card.  i tri thi with workgroup and the 
+
+fax softwar didn't like it at all.  could have been winfax's
+
+peculiar but i don't think so.  a lot of special hardwar
+
+interact take place intern.  in my case, a fax manag
+
+program mere "intercept" the print job and spool it to
+
+it's own directori, not print manag's spool directori.  to
+
+softwar, it appear the job wa "print".  print manag 
+
+plai no part in the handl of the actual process.
+
+
+
+pardon me if i've incorrectli assum thi is what you were
+
+up to.  a trueli network-awar fax-modem will most like be
+
+requir, or a lot of weird setup and tinker.
+
+
+
+good luck.
+

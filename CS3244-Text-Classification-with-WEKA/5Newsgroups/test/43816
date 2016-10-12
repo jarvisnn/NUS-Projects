@@ -1,0 +1,56 @@
+from: ngai@nova.bellcor.com (john ngai)
+
+subject: question on instal pa16 in gw2k dx2-66v
+
+nntp-post-host: nova.bellcor.com
+
+repli-to: ngai@apostl.bellcor.com
+
+organ: bellcor
+
+line: 21
+
+
+
+i went out and bought the pa16 yesterdai, and instal it into my gatewai
+
+dx2-66v. i follow the instruct and set the sb side with dma 1 and irq5
+
+(the default) and then the pa side with dma 5 and irq 10. my question is how
+
+should i configur for mpu-401 compat. the manual and instal
+
+program recommend irq2, but on my machin it is configur to [cascad] to
+
+irq8-15. so can i still us irq2, or should i choos a differ on? right now
+
+i have the mpu-401 emul mode turn off. actual what is thi "cascad to
+
+irq8-15" busi?  
+
+
+
+a relat question (to other gw or vl-bu machin owner) i wa told that 
+
+onli dma 5, 6, 7 ar 16 bit dma, and 0-4 ar 8 bit dma. now what about
+
+32-bit vl-bu master dma?? which dma channel(s) is us by the vl-bu
+
+extens to do 32-bit dma?
+
+
+
+yet anoth question, after instal pa16, my link (golf game) will hang
+
+the machin when i select sb mode and run, but work with adlib mode??
+
+civil howev work fine ( at least so far). ani bodi know what i might
+
+have done wrong? 
+
+
+
+thank (i am obvious a newbi) -- john
+
+
+

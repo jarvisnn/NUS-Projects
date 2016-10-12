@@ -1,0 +1,23 @@
+from: b91926@fnclub.fnal.gov (david sach)
+subject: re: appl tape backup 40sc under system 7.x
+organ: fermi nation acceler laboratori, batavia il
+line: 15
+distribut: usa
+nntp-post-host: fnclub.fnal.gov
+keyword: backup, tape,
+
+in articl <gener.734035090@nova>, gener@nova.sti.nasa.gov (curti gener) write:
+|> 
+|> i need to get an appl 40sc tape backup unit work under
+|> sy 7.0.x, but do not have ani driver/softwar to access
+|> the devic.  doe anyon know where i can fidn the tool
+|> to access thi devic?
+|> 
+|> appreci ani info/comment.
+|> 
+|> --curti
+|> -- 
+|> curti c. gener	gener@sti.nasa.gov		(703) 685-1140
+|> nasa sti, code jtt, washington, dc 20546
+
+retrospect (dantz) work nice with thi combin. you can bui it from the mail order vendor.

@@ -1,0 +1,1930 @@
+from: griegg@jpl-devvax.jpl.nasa.gov (john t. griegg)
+
+subject: (26apr93) comp.graphic frequent ask question (faq)
+
+origin: griegg@cerberu
+
+nntp-post-host: cerberu
+
+repli-to: griegg <griegg@jpl-devvax.jpl.nasa.gov>
+
+organ: jet propuls laboratori, pasadena, ca
+
+expir: mon, 10 mai 1993 16:05:30 gmt
+
+line: 956
+
+
+
+archiv-name: graphic/faq
+
+
+
+thi messag is automat post onc a week or so in an effort to
+
+cut down on the repetit junk in comp.graphic.  it wa last chang
+
+on 26apr93.  if you have answer to other frequent ask question that
+
+you would like includ in thi post, pleas send me mail.  if you
+
+don't want to see thi post everi week, pleas add the subject line
+
+to your kill file.  thank you.
+
+
+
+if your copi of the faq is more than a coupl of week old, you mai want to
+
+seek out the most recent version.  the latest version of thi faq is alwai
+
+avail on the archiv site pit-manag.mit.edu (alia rtfm.mit.edu) as
+
+pub/usenet/new.answer/graphic/faq.
+
+
+
+---
+
+_john
+
+
+
+	john griegg griegg@jpl-devvax.jpl.nasa.gov johng@portal.com
+
+---
+
+last updat: 26apr93
+
+
+
+sorri i haven't post thi for a coupl of week, but i wa call out of
+
+town due to a death in the famili.  thi is realiti, folk.
+
+
+
+what's new?
+
+
+
+siggraph onlin bibliographi project (spencer@cgrg.ohio-state.edu).
+
+
+
+		griegg@jpl-devvax.jpl.nasa.gov
+
+
+
+
+
+
+
+content:
+
+
+
+    1) gener refer for graphic question.
+
+    2) draw three-dimension object on a two-dimension screen.
+
+    3) quantiz 24 bit imag down to 8 bit.
+
+    4) convert color into grayscal.
+
+    5) quantiz grayscal to black&white.
+
+    6) rotat a raster imag by an arbitrari angl.
+
+    7) free imag manipul softwar.
+
+    8) format document for tiff, iff, biff, nff, off, fit, etc.
+
+    9) convert between vector format.
+
+    10) how to get pixar film.
+
+    11) how do i draw a circl as a bezier (or b-spline) curv?
+
+    12) how to order standard document.
+
+    13) how to ftp by email.
+
+    14) how to tell whether a point is within a planar polygon.
+
+    15) how to tessel a sphere.
+
+    16) specif refer on rai-trace and global illumin.
+
+    17) siggraph inform onlin
+
+    18) siggraph panel proceed avail
+
+    19) graphic mail list
+
+    20) specif refer on file format
+
+    21) what about gif?
+
+    22) what is morph?
+
+    23) how to rai-trace height field
+
+    24) how to find the area of a 3d polygon
+
+    25) how to join acm/siggraph
+
+    26) where can i find mri and ct scan volum data?
+
+    27) specif refer on spatial data structur includ quadtre
+
+	and octre
+
+    28) where can i get a program to plot xy(z) data or f(x) data?
+
+    29) specif refer on pex and phig
+
+    30) siggraph onlin bibliographi project
+
+
+
+
+
+1) gener refer for graphic question:
+
+
+
+    comput graphic: principl and practic (2nd ed.), j.d. folei,
+
+	a. van dam, s.k. feiner, j.f. hugh, addison-weslei 1990, isbn
+
+	0-201-12110-7
+
+    procedur element for comput graphic, david f. roger, mcgraw
+
+	hill 1985, isbn 0-07-053534-5
+
+    mathemat element for comput graphic 2nd ed., david f. roger
+
+	and j. alan adam, mcgraw hill 1990, isbn 0-07-053530-2
+
+    three dimension comput graphic, alan watt, addison-weslei 1990, isbn
+
+	0-201-15442-0
+
+    an introduct to rai trace, andrew glassner (ed.), academ press
+
+	1989, isbn 0-12-286160-4
+
+    graphic gem, andrew glassner (ed.), academ press 1990, isbn
+
+	0-12-286165-5
+
+    graphic gem ii, jame arvo (ed.), academ press 1991, isbn
+
+	0-12-64480-0
+
+    graphic gem iii, david kirk (ed.), academ press 1992, isbn
+
+	0-12-409670-0 (with ibm disk) or 0-12-409671-9 (with mac disk)
+
+    digit imag warp, georg wolberg, ieee comput societi press
+
+	monograph 1990, isbn 0-8186-8944-7
+
+    digit imag process (2nd ed.), rafael c. gonzalez, paul wintz,
+
+	addison-weslei 1987, isbn 0-201-11026-1
+
+    a programm's geometri, adrian bowyer, john woodwark, butterworth 1983,
+
+	isbn 0-408-01242-0 pbk
+
+
+
+an automat mail handler at brown univers allow user of "comput
+
+graphic: principl and practic," by folei, van dam, feiner, and
+
+hugh, to obtain text errata and inform on distribut of the
+
+softwar packag describ in the book.  also, user can send the
+
+author feedback, to report text error and softwar bug, make
+
+suggest, and submit exercis.  to receiv inform describ
+
+how you can us the mail handler, simpli mail graphtext@cs.brown.edu
+
+and put the word "help" in the subject line.  us the subject line
+
+"softwar-distribut" to receiv inform specif concern
+
+the softwar packag srgp and sphig.
+
+
+
+errata for "an introduct to rai trace" is avail on
+
+wuarchiv.wustl.edu in graphic/graphic/book/introtort.errata.
+
+
+
+errata for "digit imag warp" is in the same directori as
+
+"digit-imag-warp.errata".
+
+
+
+all c code from the "graphic gem" seri is avail via anonym ftp
+
+from princeton.edu.  look in the directori pub/graphic/graphicsgem for
+
+the variou volum (gem, gemsii, gemsiii), and get the readm file first.
+
+
+
+errata to _graphic gem_ and _graphic gem ii is avail on
+
+wuarchiv.wustl.edu in graphic/graphic/book.
+
+
+
+a list of comput graphic, comput geometri and imag process
+
+journal is avail from juhana kouhia, jk87377@cs.tut.fi.
+
+
+
+
+
+2) draw three-dimension object on a two-dimension screen.
+
+
+
+the simpl answer is, you divid by the depth.  for a more verbos
+
+explan, see ani of the abov refer, start with:
+
+
+
+the folei & van dam & feiner & hugh "comput graphic" book is certainli
+
+a good start.  chapter 6 is "view in 3d", then read chapter 15,
+
+"visibl-surfac determin".  for more inform go to chapter 16 for
+
+shade, chapter 19 for clip, and branch out from there.
+
+
+
+
+
+3) quantiz 24 bit imag down to 8 bit.
+
+
+
+find a copi of "color imag quantiz for frame buffer displai" by
+
+paul heckbert, siggraph '82 proceed, page 297.  there ar other
+
+algorithm, but thi on work well and is fairli simpl.  implement
+
+ar includ in most raster toolkit (see item 7 below).
+
+
+
+a variant method is describ in "graphic gem", p. 287-293.  note that
+
+the code from the "graphic gem" seri is all avail from an ftp site,
+
+as describ abov.
+
+
+
+check out john bradlei's "divers algorithm", which is incorpor into
+
+the xv packag and describ in the back of the manual.
+
+
+
+the imagemagick packag (see section 7 for where it is) contain anoth
+
+quantiz algorithm which is present as "do a better job than the
+
+other algorithm, but slower".
+
+
+
+there's also an implement of:
+
+
+
+wan, wong, and prusinkiewicz, _an algorithm for multidimension data
+
+cluster_, transact on mathemat softwar, vol. 14 #2 (june, 1988),
+
+pp. 153-162.
+
+
+
+avial as princeton.edu:pub/graphic/colorqu.shar.  thi code,
+
+in modifi form, appear in the utah raster toolkit as well.
+
+
+
+
+
+4) convert color into grayscal.
+
+
+
+the ntsc formula is:
+
+
+
+    luminos = .299 red + .587 green + .114 blue
+
+
+
+
+
+5) quantiz grayscal to black&white.
+
+
+
+the onli refer you need for thi stuff is:
+
+
+
+    digit halfton, robert ulichnei, mit press 1987, isbn 0-262-21009-6
+
+
+
+but befor you go off and start code, check out the imag manipul
+
+softwar mention in item 7 below.  all of the packag mention can do
+
+some form of grai to b&w convers.
+
+
+
+
+
+6) rotat a raster imag by an arbitrari angl.
+
+
+
+the obviou but wrong method is to loop over the pixel in the sourc
+
+imag, transform each coordin, and copi the pixel to the destin.
+
+thi is wrong becaus it leav hole in the destin.  instead,
+
+loop over the pixel in the destin imag, appli the *revers*
+
+transform to the coordin, and copi that pixel from the sourc.
+
+thi method is quit gener, and can be us for ani on-to-on
+
+2-d map, not just rotat.  you can add anti-alias by do
+
+sub-pixel sampl.
+
+
+
+howev, there is a much faster method, with antialis includ,
+
+which involv do three shear oper.  the method wa origin
+
+creat for the im raster toolkit (see below); an implement is
+
+also present in pbmplu.  refer: "a fast algorithm for raster
+
+rotat", by alan paeth (awpaeth@watcgl.waterloo.edu) graphic
+
+interfac '86 (vancouv).  an articl on the im toolkit appear in
+
+the same journal.  an updat version of the rotat paper appear
+
+in "graphic gem" (see section [1]) under the origin titl.
+
+
+
+
+
+7) free imag manipul softwar.
+
+
+
+there ar a number of toolkit for convert from on imag format to
+
+anoth, do simpl imag manipul such as size scale, plu
+
+the abov-mention 24 -> 8, color -> grai, grai -> b&w convers.
+
+here ar pointer to some of them:
+
+
+
+    xv by john bradlei.  x-base imag displai, manipul, and format
+
+    convers packag.  xv displai mani imag format and permit edit
+
+    of gif file, among other. the program wa updat 5/92; see the file
+
+    contrib/xv-2.21.tar.z on export.lc.mit.edu.
+
+
+
+    pbmplu, by jef poskanz.  comprehens format convers and imag
+
+    manipul packag.  the latest version is alwai avail via
+
+    anonym ftp as ftp.ee.lbl.gov:pbmplu*.tar.z,
+
+    wuarchiv.wustl.edu:graphic/graphic/packag/pbmplu/pbmplu*.tar.z,
+
+    and export.lc.mit.edu:contrib/pbmplu*.tar.z.
+
+
+
+    im raster toolkit, by alan paeth (awpaeth@watcgl.uwaterloo.ca).
+
+    provid a portabl and effici format and relat toolkit.  the
+
+    format is versatil in support pixel of arbitrari channel,
+
+    compon, and bit precis while allow compress and machin
+
+    byte-order independ.  the kit contain more than 50 tool with
+
+    extens support of imag manipul, digit halfton and format
+
+    convers.  previous distribut on tape c/o the univers of
+
+    waterloo, an ftp version will appear somedai.
+
+
+
+    utah rle toolkit.  convers and manipul packag, similar to
+
+    pbmplu.  avail via ftp as cs.utah.edu:pub/urt-*,
+
+    princeton.edu:pub/graphic/urt-*, and freebi.engin.umich.edu:pub/urt-*.
+
+
+
+    fuzzi pixmap manipul, by michael mauldin <mlm@nl.cs.cmu.edu>.
+
+    convers and manipul packag, similar to pbmplu.  version 1.0
+
+    avail via ftp as nl.cs.cmu.edu:/usr/mlm/ftp/fbm.tar.z,
+
+    ftp.uu.net:pub/fbm.tar.z, and ucsd.edu:graphic/fbm.tar.z.
+
+
+
+    img softwar set, by paul ravel <ravel@venera.isi.edu>.  read and
+
+    write it own imag format, displai on an x11 screen, and doe some
+
+    imag manipul.  version 1.3 is avail via ftp as
+
+    export.lc.mit.edu:contrib/img_1.3.tar.z, and
+
+    venera.isi.edu:pub/img_1.3.tar.z along with a larg collect of color
+
+    imag.
+
+
+
+    xim, x imag manipul, by philip r. thompson.  it doe essenti
+
+    interact imag manipul and us x11r4 and the osf/motif toolkit
+
+    for the interfac.  it support imag in 1, 8, 24 and 32 bit format.
+
+    read/write and convert to/from gif, xwd, xbm, tiff, rle, xim, and
+
+    other format.  write level 2 postscript.  other util and imag
+
+    applic librari ar includ.  not a paint packag.  avail via
+
+    ftp from gi.mit.edu.
+
+
+
+    xloadimag, by jim frost <madd@std.com>.  read in imag in variou
+
+    format and displai them on an x11 screen.  avail via ftp as
+
+    export.lc.mit.edu:contrib/xloadimag*, and in your nearest comp.sourc.x
+
+    archiv.
+
+
+
+    xli, by grame gill, is an updat xloadimag with numer improv
+
+    in both speed and in the number of format support.  avail in the
+
+    same place as xloadimag (contrib tape, comp.sourc.x archiv).
+
+
+
+    tiff softwar, by sam leffler <sam@okeeff.berkelei.edu>.  nice
+
+    portabl librari for read and write tiff file, plu a few tool
+
+    for manipul them and read other format.  avail via ftp as
+
+    ucbvax.berkelei.edu:pub/tiff/*.tar.z or ftp.uu.net:graphic/tiff.tar.z
+
+
+
+    xtiff, an x11 tool for view a tiff file.  it wa written to handl
+
+    as mani differ kind of tiff file as possibl while remain
+
+    simpl, portabl and effici.  xtiff illustr some common problem
+
+    with build pixmap and us differ visual class.  it is
+
+    distribut as part of sam leffler's libtiff packag and it is also
+
+    avail on export.lc.mit.edu, ftp.uu.net and comp.sourc.x.
+
+    xtiff 2.0 wa announc in 4/91; it includ xlib and xt version.
+
+
+
+    alv, a sun-specif imag toolkit.  version 2.0.6 post to
+
+    comp.sourc.sun on 11dec89.  also avail via email to
+
+    alv-user-request@cs.bri.ac.uk.
+
+
+
+    popi, an imag manipul languag.  version 2.1 post to
+
+    comp.sourc.misc on 12dec89.
+
+
+
+    imagemagick, an x11 packag for displai and interact manipul
+
+    of imag.  includ tool for imag convers, annot, composit,
+
+    anim, and creat montag.  imagemagick can read and write mani of
+
+    the more popular imag format.  avail via ftp as
+
+    export.lc.mit.edu:contrib/imagemagick.tar.z.
+
+
+
+    khoro, a huge (~100 meg) graphic develop environ base on
+
+    x11r4.  khoro compon includ a visual program languag, code
+
+    gener for extend the visual languag and ad new applic
+
+    packag to the system, an interact user interfac editor, an
+
+    interact imag displai packag, an extens librari of imag and
+
+    signal process routin, and 2d/3d plot packag.  avail via
+
+    ftp as pprg.eec.unm.edu:pub/khoro/*.
+
+
+
+    laboimag, a sunview-base imag process and analysi packag.  it
+
+    includ more than 200 imag manipul, process and measur
+
+    routin, on-line help, plu tool such as an imag editor, a color
+
+    tabl editor and sever biomed util.  avail via anonym
+
+    ftp as ad.com:pub/vision-list-archiv/sharewar/laboimag_3.1.tar.z
+
+
+
+    the san diego supercomput center imag tool, softwar tool for
+
+    read, write, and manipul raster imag.  binari for some
+
+    machin avail via anonym ftp in sdsc.edu:sdscpub.
+
+
+
+    the independ jpeg group ha written a packag for read and
+
+    write jpeg file.  ftp to ftp.uu.net:graphic/jpeg/jpegsrc.v?.tar.z
+
+
+
+don't forget to set binari mode when you ftp tar file.  for you milnet
+
+folk who still don't have name server, the ip address ar:
+
+
+
+    ad.com			128.229.30.16
+
+    cs.utah.edu			128.110.4.21
+
+    coral.cs.jcu.edu.au		137.219.17.4
+
+    export.lc.mit.edu		18.24.0.12
+
+    freebi.engin.umich.edu	141.212.103.21
+
+    ftp.ee.lbl.gov		128.3.112.20
+
+    ftp.uu.net			137.39.1.9 or 192.48.96.9
+
+    gi.mit.edu			18.80.1.118
+
+    gondwana.ecr.mu.oz.au	128.250.70.62
+
+    karazm.math.uh.edu		129.7.7.6
+
+    marsh.cs.curtin.edu.au	134.7.1.1
+
+    nic.funet.fir		128.214.6.100
+
+    ftp.ncsa.uiuc.edu		141.142.20.50
+
+    nl.cs.cmu.edu		128.2.222.56
+
+    pit-manag.mit.edu		18.172.1.27
+
+    pprg.eec.unm.edu		129.24.24.10
+
+    princeton.edu		128.112.128.1
+
+    sdsc.edu			132.249.20.22
+
+    ucbvax.berkelei.edu		128.32.133.1
+
+    venera.isi.edu		128.9.0.32
+
+    weedeat.math.yale.edu	128.36.23.17
+
+    wuarchiv.wustl.edu		128.252.135.4
+
+    zamenhof.cs.rice.edu	128.42.1.75
+
+
+
+pleas do *not* post or mail messag sai "i can't ftp, could someon
+
+mail thi to me?"  there ar a number of autom mail server that will
+
+send you thing like thi in respons to a messag.  see item 13 below for
+
+detail on some.
+
+
+
+also, the newsgroup alt.graphic.pixutil is specif for discuss
+
+of softwar like thi.  you mai find us inform there.
+
+
+
+
+
+8) format document for tiff, iff, biff, nff, off, fit, etc.
+
+
+
+you almost certainli don't need these.  read the abov item 7 on free
+
+imag manipul softwar.  get on or more of these packag and
+
+look through them.  chanc ar excel that the imag convert you
+
+were go to write is alreadi there.  but if you still want on of the
+
+format document, mani such file ar avail by anonym ftp from
+
+zamenhof.cs.rice.edu in directori pub/graphic.format.
+
+
+
+these file were collect off the net and ar believ to be correct.
+
+thi archiv includ pixel format, and two- and three-dimension object
+
+format.  the futur of thi archiv is uncertain at the moment, as mark
+
+hall <foo@cs.rice.edu> will appar no longer be maintain it.
+
+
+
+a second graphic file format archiv is now be activ maintain
+
+by quincei koziol (koziol@ncsa.uiuc.edu).  the latest version exist at
+
+ftp.ncsa.uiuc.edu in /misc/file.format/graphic.format.  appar,
+
+neither of these is complet, you might want to check both.
+
+
+
+fit stand for flexibl imag transport system. it's a file format most
+
+often us in astronomi.  despit the name, it can contain not onli imag
+
+but other thing as well.  there is a regular monthli fit basic and
+
+inform post on sci.astro.fit - read it if you want to know more.
+
+
+
+
+
+
+
+9) convert between vector format.
+
+
+
+a lot of peopl ask about convert from hpgl to postscript, or macdraw
+
+to cgm, or whatev.  it is import to understand that thi is a veri
+
+differ problem from the imag format convers in item 7.  convert
+
+on imag format to anoth is a fairli easi problem, sinc onc you
+
+get past all the file header junk, a pixel is a pixel -- the basic object
+
+ar the same for all imag format.  thi is not so for vector format.
+
+the basic object -- circl, ellips, drop-shadow pattern-fill
+
+round-corner rectangl, etc. -- vari from on format to anoth.
+
+except in extrem restrict case, it is simpli not possibl to do
+
+a on-to-on convers between vector format.
+
+
+
+there is softwar for convert to and from cgm file on ftp.psc.edu.  the
+
+contributor state that it run on unix, ms-window, and possibl the mac.
+
+a better, more specif blurb would be most welcom.
+
+
+
+on the other hand, it is quit possibl to do a close approxim,
+
+render an imag from on format us the primit from anoth.
+
+as far as i know, no on ha put togeth a gener toolkit of such
+
+convert, but two differ hpgl to postscript convert have been
+
+post to comp.sourc.misc.  check the index on your nearest archiv
+
+site.
+
+
+
+a relat frequent question is how to convert from some vector format
+
+to a bitmap imag - from postscript to sun raster format, or hpgl to
+
+x11 bitmap.  for exampl, some of the commerci postscript clone for
+
+pc's allow you to render to a disk file as well as a printer.  also,
+
+the postscript interpret in the next box and in sun's x11/new can
+
+be us to render to a file if you're clever.  but in gener, the
+
+answer is no.  howev, if someon were to put togeth a vector to
+
+vector convers toolkit, ad a vector to raster convert would be
+
+trivial.
+
+
+
+gnu ghostscript (from the fsf - current version 2.5.2) includ
+
+driver for both ppm and gif format file, thu it can be us as
+
+a postscript to ppm  or a postscript to gif filter.  (it implement
+
+essenti all of postscript level 1 and alot of displai postscript
+
+and level 2).
+
+
+
+
+
+10) how to get pixar film.
+
+
+
+the variou john lasset / pixar comput anim short ar avail
+
+on video tape.  you can order them from direct cinema limit:
+
+
+
+    film                           individu price      institut price
+
+    luxo, jr.				$14.95			$50.00
+
+    red's dream				$19.95			$75.00
+
+    tin toi				$24.95			$75.00
+
+    knickknack				$24.95			$75.00
+
+    luxo, jr./red's dream/tin toi	$39.95			$100.00
+
+
+
+all tape ar on 1/2" vh ntsc.  add $10/tape for pal format.  also
+
+avail:
+
+
+
+    tin toi t-shirt			$15.00
+
+    knickknack 3d t-shirt		$15.00 (includ glass)
+
+
+
+for individu order, add $5 s&h for the first tape or shirt, $2 for
+
+each addit tape or shirt.  for institut order, add $5 s&h
+
+for the first tape, $3 for each addit tape.  foreign ship, add
+
+$3/tape or shirt.  call 800-525-0000 (213-396-4774 intern,
+
+213-396-3233 fax) to charg to your credit card.  call first to verifi
+
+price and avail.  or, just write to:
+
+
+
+    direct cinema limit
+
+    1749 14th street
+
+    santa monica, ca 90404-4342
+
+
+
+allan braunsdorf ha thi to sai:
+
+
+
+at siggraph thei were sell a tape with all four short
+
+for $25.  that wa a sale price.  you can get it for slightli
+
+more than that normal.  ($35 mayb.)  i believ it's
+
+avail from renderman retail (at pixar's address).
+
+
+
+    pixar
+
+    1001 west cut blvd.
+
+    richmond, ca. 94804
+
+    (510) 236-4000 
+
+    (510) 236-0388 (fax)
+
+
+
+you can obtain a video directli from pixar which contain "luxo, jr.", "red's
+
+dream", "tin toi" and "knicknack" for $25.00, plu $2.50 for ship. thei
+
+will take your order over the phone or via fax with a major credit card. i 
+
+order mine just last week and receiv it sever dai later. don't expect 
+
+to be abl to rent a copi from your local video store. accord to the licens
+
+agreement print on the back cover of the case, it cannot be rent.
+
+
+
+
+
+11) how do i draw a circl as a bezier (or b-spline) curv?
+
+
+
+the short answer is, "you can't."  unless you us a ration spline you
+
+can onli approxim a circl.  the approxim mai look accept,
+
+but it is sensit to scale.  magnifi the scale and the error of
+
+approxim magnifi.  deviat from circular that were not
+
+visibl in the small can becom glare in the larg.  if you want to
+
+do the job right, consult the articl:
+
+
+
+  "a menageri of ration b-spline circl"
+
+  by lesli piegl and wayn tiller
+
+  in ieee comput graphic and applic, volum 9, number 9,
+
+  septemb, 1989, page 48-56.
+
+
+
+for rough, non-ration approxim, consult the book:
+
+
+
+  comput geometri for design and manufactur
+
+  by i. d. faux and m. j. pratt,
+
+  elli horwood publish, halst press, john wilei 1980.
+
+
+
+for the best known non-ration approxim, consult the articl:
+
+
+
+  "good approxim of circl by curvatur-continu bezier curv"
+
+  by tor dokken, morten daehlen, tom lych, and knut morken
+
+  in comput aid geometr design, volum 7, number 1-4 (combin),
+
+  june, 1990, page 33-41 [elsevi scienc publish (north-holland)]
+
+
+
+
+
+12) how to order standard document.
+
+
+
+the american nation standard institut sell ansi standard, and also
+
+iso (intern) standard.  their sale offic is at 1-212-642-4900,
+
+mail address is 1430 broadwai, ny ny 10018.  it help if you have the
+
+complet name and number.
+
+
+
+some us number to know:
+
+
+
+cgm (comput graphic metafil) is iso 8632-4 (1987).  gk (graphic
+
+kernel system) is ansi x3.124-1985.  phig (programm's hierarch
+
+interact graphic system) is ansi x3.144-1988.  ig is asm/ansi
+
+y14.26m-1987.  languag bind ar often separ but relat number;
+
+for exampl, the gk fortran bind is x3.124.1-1985.
+
+
+
+standard-in-progress ar made avail at kei mileston to solicit
+
+comment from the graphic public (thi includ you!).  ansi can let
+
+you know where to order them; most ar avail from global engin
+
+at 1-800-854-7179.
+
+
+
+
+
+13) how to ftp by email.
+
+
+
+there ar a number of site that archiv the usenet sourc newsgroup
+
+and make them avail via an email queri system.  you send a messag
+
+to an autom server sai someth like "send comp.sourc.unix/fbm",
+
+and a few hour or dai later you get the file in the mail.
+
+
+
+in addit, there is at least on ftp-by-mail server.  send mail to
+
+ftpmail@decwrl.dec.com sai "help" and it will tell you how to us
+
+it.  note that thi servic ha at time been turn off due to abus.
+
+
+
+
+
+14) how to tell whether a point is within a planar polygon.
+
+
+
+consid a rai origin at the point of interest and continu to
+
+infin.  if it cross an odd number of polygon edg along the wai,
+
+the point is within the polygon.  if the rai cross an even number of
+
+edg, the point is either outsid the polygon, or within an interior
+
+hole form from intersect polygon edg.  thi idea is known in
+
+the trade as the jordan curv theorem; see eric hain' articl in
+
+glassner's rai trace book (abov) for more inform, includ
+
+treatment of special case.
+
+
+
+anoth method is to sum the absolut angl from the point to all
+
+the vertic on the polygon.  if the sum is 2 pi, the point is insid,
+
+if the sum is 0 the point is outsid.  howev, thi method is about an
+
+order of magnitud slower than the previou method becaus evalu the
+
+trigonometr function is usual quit costli.
+
+
+
+code for both method (plu barycentr triangl test) can be found in
+
+the rai trace new, vol. 5, no. 3, avail from princeton.edu:
+
+pub/graphic/rtnew/rtnv5n3.z.
+
+
+
+
+
+15) how to tessel a sphere.
+
+
+
+on simpl wai is to do recurs subdivis into triangl.  the
+
+base of the recurs is an octahedron, and then each level divid
+
+each triangl into four smaller on.  jon leech <leech@cs.unc.edu>
+
+ha post a nice routin call sphere.c that gener the coordin.
+
+it's avail for ftp on ftp.ee.lbl.gov and princeton.edu.
+
+
+
+16) specif refer on rai-trace and global illumin.
+
+
+
+rick speer maintain a cross-index rai-trace bibliographi:
+
+
+
+highlight of thi edit-
+
+
+
+    i) more than 500 citat span the period from 1968 through
+
+       novemb '91;
+
+    ii) paper from all siggraph, graphic interfac, eurograph, cg
+
+        intern and ausgraph proceed through decemb, '91;
+
+    iii) all citat keyword for easi lookup;
+
+    iv) cross-indic by keyword and author;
+
+    v)  glossari of the 119 keyword us.
+
+
+
+the bib is in the form of a postscript file.  the printout is 41 page long.
+
+below is a list of ftp site and the dir that contain the file. it's name
+
+"speer.raytrac.bib.ps.z" and is compress at most site-
+
+
+
+             site                             dir
+
+	wuarchiv.wustl.edu	graphic/graphic/bib/rt.bib.speer/
+
+	karazm.math.uh.edu	pub/graphic/
+
+	gondwana.ecr.mu.oz.au	pub/paper/
+
+	nic.funet.fi		pub/sci/paper/graphic
+
+	coral.cs.jcu.edu.au     graphic/paper/
+
+
+
+eric hain (erich@ey.com) maintain rai trace and radios/global
+
+illumin bibliographi.  these ar in "refer" format, and so can be
+
+search electron (a simpl awk script to search for keyword is
+
+includ with each).  the bibliographi ar avail at most of the
+
+site list abov, and the most current version ar maintain at
+
+princeton.edu: pub/graphic/paper as "raybib.*" and "radbib.*".
+
+
+
+tom wilson (wilson@cs.ucf.edu) ha collect over 300 abstract from rai
+
+trace relat research paper and book.  the inform is essenti
+
+in plaintext, and latex and troff format program ar includ.  thi
+
+collect is avail at most of the site abov as "rtab.*".
+
+
+
+17) siggraph inform onlin
+
+
+
+[from steve cunningham and ralph orlick]
+
+
+
+acm-siggraph announc it onlin inform site at  siggraph.org
+
+(128.248.245.250).  thi site now provid siggraph inform via both
+
+anonym ftp and an electron mail archiv server.
+
+
+
+the anonym ftp servic is veri standard, and the ftp directori includ
+
+both confer and public subdirectori.
+
+
+
+to retriev inform by electron mail, send mail to
+
+     archiv-server@siggraph.org
+
+and in the subject or the bodi of the messag includ the messag  send
+
+follow by the topic and subtop you wish.  a good place to start is with
+
+the command
+
+     send index
+
+which will give you an up-to-date list of avail inform.
+
+
+
+
+
+18) siggraph panel proceed avail
+
+
+
+[from steve cunningham and bob judd]
+
+
+
+acm siggraph announc the avail of the siggraph '91 panel proceed
+
+at the  siggraph.org  site (128.248.245.250).  the proceed ar avail
+
+in three format:
+
+     text   (ascii)
+
+     rtf    (rich text format, suitabl for mani word processor)
+
+     word   (ms word for the macintosh)
+
+thei mai be retriev from siggraph.org in two wai:
+
+
+
+(1) by anonym ftp
+
+    chang to on of the directori
+
+       public/s91/panel_proceed/[text|rtf|word]
+
+    the text and rtf file mai be download in ascii mode, while the word
+
+    file ar store in macbinari format and must be download in binari 
+
+    mode.
+
+
+
+    each directori contain a tabl of content file (toc) that describ the
+
+    content of each panel file.
+
+
+
+(2) by electron mail
+
+    send mail to
+
+       archiv-server@siggraph.org
+
+    you can retriev either the  text  or  rtf  file.  we suggest that you
+
+    first retriev the index file by put on of the messag
+
+       send panel91-txt index
+
+       send panel91-rtf index
+
+    in the subject or bodi of the messag.  you will get the necessari
+
+    inform to retriev the actual transcript file.
+
+
+
+
+
+19) graphic mail list
+
+
+
+there ar a varieti of graphic-relat mail list out there, each
+
+cover either a singl product or a singl topic.  i have been an
+
+activ particip in on of these for some time now, and find the
+
+focu and expertis which can be brought to bear on an isol topic
+
+to be noth short of amaz.
+
+
+
+pleas send me the appropri inform if you have ani other you
+
+would like to see ad.
+
+
+
+name:		imagin mail list
+
+descript:	discuss forum for user of the imagin 3d render and
+
+		anim packag by impuls, inc.
+
+platform:	amiga, ibm
+
+subscript:	imagin-request@email.sp.paramax.com
+
+post:	imagin@email.sp.paramax.com
+
+
+
+name:		dctv mail list
+
+descript:	discuss forum for user of the digit creation dctv
+
+		box, softwar, and file format
+
+platform:	amiga
+
+subscript:	dctv-request@nova.cc.purdu.edu
+
+post:	dctv@nova.cc.purdu.edu
+
+
+
+name:		rayshad user mail list
+
+descript:	discuss forum for user of the rayshad raytrac
+
+platform:	most unix box, amiga, mac, ibm
+
+subscript:	rayshad-request@cs.princeton.edu
+
+post:	rayshad-user@cs.princeton.edu
+
+
+
+name:		lightwav 3d softwar for toaster mail list
+
+descript:	discuss forum for user of lightwav, the video
+
+		toaster model and render packag
+
+platform:	amiga
+
+subscript:	lightwav-request@bobsbox.rent.com
+
+		with "subscrib lightwav-l" in your messag
+
+post:	lightwav@bobsbox.rent.com
+
+
+
+name:		pov mail list
+
+descript:	discuss forum for dkbtrace and pov render
+
+platform:	unix
+
+subscript:	listserv@trearn.bitnet
+
+post:	dkb-l@trearn.bitnet
+
+
+
+name:		mail list for massiv parallel render
+
+descript:	same?
+
+platform:	unix
+
+subscript:	mp-render-request@icas.edu
+
+post:	mp-render@icas.edu
+
+
+
+20) specif refer on file format
+
+
+
+    graphic file format, david kai and john levin, windcrest/mcgraw-hill
+
+      1992, isbn 0-8306-3059-7 paper, isbn 0-8306-3060-0 $36.95 hardcov,
+
+      isbn 0-8306-3059-7 $24.95 paper.  comment - 26 format, no softwar
+
+      (thi is good, imho - i prefer book which ar non-platform-depend).
+
+      question about thi book mai be sent to gbook@iecc.cambridg.ma.us.
+
+
+
+
+
+21) what about gif?
+
+
+
+gif stand for graphic interchang format.  it is portabl and usabl upon
+
+a wide varieti of platform.  it is quit limit in some wai (ye, the
+
+keeper of the faq ha some opinion after all), and in fact, i don't like
+
+it much.  howev, it look to me like the most-frequent ask question
+
+which wa not previous cover in thi list.  the follow is a list
+
+of newsgroup and the like where on could go to find out about gif.
+
+
+
+subject: alt.binari.pictur faq - gener info
+
+subject: alt.binari.pictur faq - os specif info
+
+newsgroup: alt.binari.pictur.d,alt.binari.pictur.misc,
+
+	alt.binari.pictur.util,alt.binari.pictur.fractal,
+
+	alt.binari.pictur.fine-art.d,new.answer
+
+
+
+avail in the indic usenet newsgroup(s), or via anonym ftp from
+
+pit-manag.mit.edu in the file:
+
+
+
+/pub/usenet/new.answer/pictur-faq/part1
+
+/pub/usenet/new.answer/pictur-faq/part2
+
+
+
+also avail from mail-server@pit-manag.mit.edu by send a mail
+
+messag contain ani or all of:
+
+
+
+send usenet/new.answer/pictur-faq/part1
+
+send usenet/new.answer/pictur-faq/part2
+
+
+
+send a messag contain "help" to get gener inform about the
+
+mail server.
+
+
+
+also, you could check out the resourc describ in section 7, 8, and
+
+20 abov for more inform.
+
+
+
+
+
+22) what is morph?
+
+
+
+warp is the deform of an imag by map each pixel to a new
+
+locat. morph is blend from on imag or object to anoth on.
+
+valeri hall ha written an excel introduct to warp and
+
+morph. thi is avail for anonym ftp from marsh.cs.curtin.edu.au
+
+in the directori pub/graphic/bibliographi/morph. there ar three file:
+
+
+
+        morph_intro.ps.z     (postscript version, mani pictur - 1.5m)
+
+        morph_intro.txt.z    (text version)
+
+        m_respons.z        (respons to morph question)
+
+
+
+the file ar compress, so you must us binari transfer and
+
+uncompress them afterward.
+
+
+
+
+
+23) how to rai-trace height field
+
+
+
+height field ar a special case in rai-trace.  thei have a number of us,
+
+such as terrain render, and some optim is possibl.  thu, thei
+
+get their own faq section.  note that further refer can no doubt be
+
+locat via the rai-trace bib in section 16 abov.
+
+
+
+the follow paper seem to be the definit refer:
+
+
+
+f. kenton musgrav
+
+grid trace: fast rai trace for height field
+
+juli, 1988
+
+<musg88.ps.z>
+
+
+
+thi is avail as "research report yaleu/dc/rr-639" from yale univers,
+
+it's also in the siggraph '91 fractal model in 3d comput graphic and
+
+imag cours note, and (best of all) it's avail on the net:
+
+
+
+    nic.funet.fi		pub/sci/paper/musg88.ps.z
+
+    weedeat.math.yale.edu	pub/paper/musg88.ms.z
+
+    princeton.edu		pub/graphic/paper/musg88.ms.z
+
+    coral.cs.jcu.edu.au		graphic/paper/musg88.ps.z
+
+    gondwana.ecr.mu.oz.au	pub/paper/musg88.ms.z and musg88.ps.z
+
+
+
+an implement of thi paper mai be found in rayshad.
+
+
+
+anoth paper exist:
+
+
+
+%a david w. paglieroni
+
+%a sidnei m. petersen
+
+%t parametr height field rai trace
+
+%j proceed of graphic interfac '92
+
+%i canadian inform process societi
+
+%c toronto, ontario
+
+%d mai 1992
+
+%p 192-200
+
+
+
+and still on more:
+
+
+
+musgrav, kolb, and mace
+
+"the synthesi and render of erod fractal terrain",
+
+comput graphic vol 23, no. 3 (siggraph '89 proced) p. 41-50
+
+
+
+
+
+
+
+24) how to find the area of a 3d polygon
+
+
+
+	the area of a triangl is given by (in c notat),
+
+
+
+     area = 0.5 * ( ( x[0] * y[1] ) + ( x[1] * y[2] ) + ( x[2] * y[0] ) -
+
+	            ( x[1] * y[0] ) - ( x[2] * y[1] ) - ( x[0] * y[2] ) );
+
+
+
+and the area of a planar polygon is given by
+
+
+
+     area = 0.0;
+
+
+
+     for ( i = 0; i < n - 1; i++ )
+
+         area += ( x[i] * y[i + 1] ) - ( x[i + 1] * y[i] );
+
+     area += ( x[n - 1] * y[0] ) - ( x[0] * y[n - 1] );
+
+     area /= 2.0;
+
+
+
+if the area is a neg number, the polygon or triangl is
+
+clockwis, if posit, it is counterclockwis.
+
+
+
+>from ronald golman's gem (in graphic gem ii - see section 1 abov), "area
+
+ of planar polygon and volum of polyhedra:"
+
+
+
+the area of a polygon p0, p1, p2, ... pn, not in the x-y plane, is
+
+given by
+
+
+
+     area(polygon) = 1/2 * | n . sigma { pk x pk+1 } |
+
+
+
+where n is the unit vector normal to the plane and p is a polygon
+
+vertex.  the . repres the dot product oper and the x
+
+repres the cross product oper.  sigma repres the summat
+
+oper.  | | repres the absolut valu oper.  pn+1 is equal
+
+to p0.
+
+
+
+
+
+25) how to join acm/siggraph
+
+
+
+probabl the easiest wai to join acm/siggraph is to trot over to your
+
+local technic librari and find a copi of commun of the acm.
+
+somewher within the first few page will be an applic blank.
+
+fill it out and mail it in.  acm membership for student cost $23.00,
+
+vote or associ membership $77.00 (yearli)
+
+
+
+siggraph student membership cost an addit $16.00, $26.00 for
+
+vote or associ member (also yearli).  to get tog (transact
+
+on graphic) it's anoth $26.00 for student and $31.00 for vote or
+
+associ member.
+
+
+
+if you just want to join siggraph without join acm, it'll cost you
+
+$59.00 (no student discount).
+
+
+
+there ar surcharg for oversea airmail of public.
+
+
+
+acm member servic mai be contact via email at acmhelp@acmvm.bitnet. 
+
+their phone number is (212) 626-0500.  fax number (212) 944-1318.
+
+snailmail address:
+
+
+
+                acm
+
+                po box 12114
+
+                church street station
+
+                new york, new york 10257
+
+
+
+siggraph `93 will be held in anaheim, california, at the anaheim
+
+convent center (just up the street from disneyland) on august 1-6, 1993.
+
+
+
+26) where can i find mri and ct scan volum data?
+
+
+
+volum data set ar avail from the univers of north carolina at
+
+omicron.cs.unc.edu (152.2.128.159) in /pub/softlab/chvrtd.  (commer
+
+us is prohibit.)
+
+
+
+head data - a 109-slice mri data set of a human head.
+
+
+
+knee data - a 127-slice mri data set of a human knee.
+
+
+
+hipip data - the result of a quantum mechan calcul of a sod data
+
+of a on-electron orbit of hipip, an iron protein.
+
+
+
+sod data - an electron densiti map of the activ site of sod (superoxid
+
+dismutas). 
+
+
+
+ct cadav head data - a 113-slice mri data set of a ct studi of a cadav
+
+head. 
+
+
+
+mr brain data -  a 109-slice mri data set of a head with skull partial
+
+remov to reveal brain.
+
+
+
+rna data - an electron densiti map for staphylococcu aureu ribonucleas.
+
+
+
+
+
+27) specif refer on spatial data structur includ quadtre
+
+	and octre
+
+
+
+h. samet,
+
+the design and analysi of spatial data structur,
+
+addison-weslei, read, ma, 1990.
+
+isbn 0-201-50255-0.
+
+
+
+h. samet,
+
+applic of spatial data structur:  comput graphic, imag process, a
+
+nd gi,
+
+addison-weslei, read, ma, 1990.
+
+isbn 0-201-50300-0.
+
+
+
+
+
+28) where can i get a program to plot xy(z) data or f(x) data?
+
+
+
+gnuplot is a command-driven interact data/function  plot program.  it
+
+run on just about ani machin, and is veri flexibl in term of support
+
+output devic.  the offici north american distribut site for the latest
+
+version is dartmouth.edu in /pub/gnuplot.  more inform is avail from
+
+the usenet newsgroup comp.graphic.gnuplot and it faq, graphic/gnuplot-faq.
+
+
+
+ac/gr (xmgr - motif/xvgr - xview) is a data/function plot tool for 
+
+workstat or x-termin us x.  avail from ftp.ccalmr.ogi.edu
+
+in /ccalmr/pub/acegr.
+
+
+
+robotx (robot) is a gener purpos plot and data analysi program.
+
+requir xview, x-termin or workstat.  avail from sunsit.unc.edu
+
+in /pub/academ/data_analysi.
+
+
+
+xgraph is a popular two-dimension plot program that accept data in a
+
+form similar to the unix program graph and displai line graph, scatter plot,
+
+or bar chart on an x11 displai.  avail from ic.berkelei.edu in /pub.
+
+
+
+drawplot is a program for draw 2d plot on x10/x11 window, sunview
+
+displai, or hp2648 termin. avail from xcf.berkelei.edu in /src/local.
+
+
+
+29) specif refer on pex and phig
+
+
+
+    pexlib program manual, tom gaskin, 1154 page, o'reilli & associ,
+
+	isbn 1-56592-028-7
+
+
+
+    pexlib refer manual, edit by steve talbott, 577 page, o'reilli &
+
+	associ, isbn 1-56592-029-5
+
+
+
+    phig program manual, tom gaskin, 908 page, o'reilli & associ,
+
+	isbn 0-93775-85-4 (softcov), isbn 0-937175-92-7 (casebound)
+
+
+
+    phig refer manual, edit by linda kosko, 1099 page, o'reilli &
+
+	associ, isbn 0-937175-91-9
+
+
+
+
+
+30) siggraph onlin bibliographi project
+
+
+
+the acm siggraph onlin bibliographi project is a databas of over 15,000
+
+uniqu comput graphic and comput geometri refer in bibtex
+
+format, avail to the comput graphic commun as a research and
+
+educ resourc.
+
+
+
+the databas is locat at "siggraph.org".  user mai download the bibtex
+
+file via ftp and perus them offlin, or telnet to "siggraph.org" and log
+
+in as "biblio" and interact search the databas for entri of interest,
+
+by keyword.
+
+
+
+addit/correct/suggest mai be direct to the admin,
+
+"bibadmin@siggraph.org".
+
+-- 
+
+john t. griegg (telo @ jet propuls laboratori)
+
+4800 oak grove drive, pasadena, ca. 91109 m/s 525-3660    (818) 306-6506
+
+uucp: {cit-vax,elroi,cha2}!jpl-devvax!griegg
+
+arpa: ...jpl-devvax!griegg@cit-vax.arpa
+

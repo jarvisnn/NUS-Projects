@@ -1,0 +1,30 @@
+from: carol@ohsu.edu (carol suelzl)
+subject: re: window 3.1 keep crash: pleas help
+articl-i.d.: ohsu.1993apr19.213505.2883
+organ: oregon health scienc univers
+line: 23
+nntp-post-host: 137.53.130.7
+
+
+in articl <1qur7h$qrl@access.digex.net> wild@access.digex.com (wildstrom) write:
+>
+>
+>>in articl <1993apr16.155637.15398@oracl.us.oracl.com> ebosco@us.oracl.com (eric bosco) write:
+>>>from: ebosco@us.oracl.com (eric bosco)
+>>>subject: window 3.1 keep crash: pleas help
+>>>date: fri, 16 apr 1993 15:56:37 gmt
+>>>
+>>>as the subject sai, window 3.1 keep crash (givinh me gpf) on me of  
+>>>late.  it wa never a veri stabl packag, but now it seem to crash everi  
+>>>dai.  the worst part about it is that it doe not crash consist: ie i  
+>
+>there is a wai in sy.ini to turn off ram pariti check (unfortun,
+>my good window refer ar at home, but ani standard win refer
+>will tell you how to do it. if not, email back to me.) that weird memori
+>mai be produc phoni pariti error. danger is, if you turn checkl off,
+>you run the slight risk of data corrupt due to a miss real error.
+
+i had thi veri same problem, and did 'work around' by turn pariti check off, but that onli
+work while i wa in window, and the pariti error would occur immedi after exit
+window, howev,the problem turn out to be 3 chip simm vs 9 chip simm.  i can't us 3 chip simm in my 
+comput, and when i replac them, the problem vanish, forev.

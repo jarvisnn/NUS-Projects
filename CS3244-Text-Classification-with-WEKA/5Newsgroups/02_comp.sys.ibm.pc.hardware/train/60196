@@ -1,0 +1,51 @@
+from: bgrubb@dant.nmsu.edu (grubb)
+subject: re: id vs scsi
+organ: new mexico state univers, la cruce, nm
+line: 44
+distribut: world
+nntp-post-host: dant.nmsu.edu
+
+wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+>what doe a 200-400 meg 5 meg/sec scsi drive cost?
+sinc the quadra is the onli mac abl to deal with 5mb/s and hard drive start
+at 160mb i have no idea.
+for the mac i have the follow {these ar all extern}
+ 20mb $299 {$15/mb}
+ 52mb $379 {$7.3/mb}
+ 80mb $449 {$5.63/mb}
+120mb $569-$639 {$4.75-$5.33/mb
+210mb $979-$1029{$4.67-$4.90/mb}
+320mb $1499-$1549 {$4.68-$4.84/mb}
+510mb $1999-$2119 ($3.92-$4.31/mb}
+etc
+
+so scsi-1/scsi-2 for the mac goe down in price/mb as hard drive size goe
+up {and i assum the same for the pc world.}
+
+>i won't argu that the scsi standard make for a good, well impliment
+>data highwai, but i still want to know why it intrins better
+>(than id, on an isa bu) when it come to multi-task os's when
+>manag data from a singl scsi hard drive.
+well scsi is also a floppi drive interfac.  in the mac {sinc scsi is the
+intefac for ani non-card, non-modem, not-keyboard devic} the id 7 is us
+for the floppi drive {call cpu in all identifi.}  thi allow cross
+drive interfac as fast as the os, program, cpu, scsi, and drive can handl 
+it{thi show up best in the quatra line}.
+in the ibm that us scsi for the floppi drive thi should happen as well.
+also scsi is not just drive but printer, scanner, expands card 
+{thi show up for the plu as the nubu 'cage'}, cd-rom, etc.
+id seem to be mainli hard drive.  as for spec nobodi ha given me ani
+and i can't find ani.  besid the advertiz call id the at interfac
+{make of that what you will}
+scsi is a jack of all trade and id is a master of on.
+thi alon put scsi abov id.  scsi-2 blow id out of the water.
+rememb scsi wa us in high price machin until about 18 month ago
+{when the mac price came down to earth} so the rule of scale still plai
+and scsi remain high cost{cheap seem to mean chezzi in the high end
+comput world at time and thi more than anyth els proabli kept scsi
+off into the statospher price wise}
+scsi came from the high end comput world with multitask os were the
+standard for the most part.  of all the interfac next could have us it
+choos scsi.  in 16-bit and 32-bit mode scsi is a multi-task os desin
+interfac while id and 8-bit scsi ar braindead run on program interfac
+{at least the wai mac us 8-bit scsi.ugh}

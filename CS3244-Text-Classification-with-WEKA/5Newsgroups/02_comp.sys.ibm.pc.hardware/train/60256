@@ -1,0 +1,44 @@
+from: delman@mipg.upenn.edu (delman lee)
+subject: tandberg 3600 + futur domain tmc-1660 + seagat st-21m problem??
+distribut: comp
+organ: univers of pennsylvania, usa.
+line: 37
+nntp-post-host: mipgsun.mipg.upenn.edu
+
+i am try to get my system to work with a tandberg 3600 + futur
+domain tmc-1660 + seagat st-21m mfm control. 
+
+the system boot up if the tandberg is disconnect from the system,
+and of cours no scsi devic found (i have no other scsi devic).
+
+the system boot up if the seagat mfm control is remov from the
+system. the futur domain card report find the tandberg 3660 on
+the scsi bu. the system then of cours stop boot becaus my mfm
+hard disk can't be found.
+
+the system hang if all three (tandberg, futur domain tmc-1660 &
+seagat mfm control) ar in the system. 
+
+look like there is some conflict between the seagat and futur
+domain card. but the funni thing is that it onli hang if the tandberg
+is connect.
+
+i have check that there ar no conflict in bio address, irq & i/o
+port. have i miss anyth?
+
+i am lost here. ani suggest ar most welcom. thank in advanc.
+
+delman.
+
+
+
+--
+______________________________________________________________________
+
+  delman lee                                 tel.: +1-215-662-6780
+  medic imag process group,            fax.: +1-215-898-9145
+  univers of pennsylvania,
+  4/f blocklei hall, 418 servic drive,                         
+  philadelphia, pa 19104-6021,
+  u.s.a..                            internet: delman@mipg.upenn.edu
+______________________________________________________________________

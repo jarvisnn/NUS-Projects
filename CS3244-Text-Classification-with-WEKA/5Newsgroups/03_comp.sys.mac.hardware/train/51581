@@ -1,0 +1,91 @@
+from: andi@ie.utoronto.ca (andi sun)
+subject: re: centri 650 to decstat e-net adapt
+organ: univers of toronto, depart of industri engin
+line: 86
+
+>pnsf01dw@smuc1.umassd.edu (denni j. wilkinson) write:
+>not necessarili a thrid-parti adapt; appl doe manufactur transceiv
+>for thinwir and 10baset (twist pair) cabl media, as well as an aui
+>(attach unit interfac) transciev. thei run at ~$100 each. if you us
+>thinwir or 10baset, you'll probabl also need termin (appl's
+>transceiv ar self-termin, if i rememb correctli, but i have no
+>idea about dec). 
+
+the third-parti media adapt ar usual cheaper (at least in toronto) than
+appl's. i bought the adapt from asant instead of appl.
+
+gurman@umbra.gsfc.nasa.gov (joseph b. gurman) write:
+>    the decstat 5000 model 200 and 240 come with thinwir onli
+>(can't sai for certain about the model 125 and 133), so your best bet
+
+that's not true. onli the decstat 5000/200 come with a thinwir
+(bnc, coaxial) ethernet connector. the 5000/25, 5000/133 and 5000/240
+all have a singl 15-pin aui ethernet connector onli. i distinctli
+rememb thi becaus when got the 5000/200 first and i thought all
+of them ar go to be thinwir. i eventu had to go back and order
+desta (dec's overs version of an aui-to-bnc adapt that must be us
+with a transciev cabl) for the rest of the station.
+
+my advis to the veri origin poster (beverli?) is:
+
+(1) if all you want is to creat a lan with two workstat and won't add
+    machin to it ever, go for thinwir regardless of the media type. go
+    for utp (unshield twist pair) wire requir a concentr which
+    mean extra monei and i believ these unit come with at least 6 port.
+    as for thicknet, it's a nightmar and cabl is expens. avoid it
+    unless you have no choic (e.g. the two machin ar two floor part).
+
+(2) on the mac side, you will need:
+    - on thinwir media adapt (from appl or third-parti).
+    - macx (make sure you get version 1.2; 1.1.7 won't run on system 7.1).
+    - mactcp (which come with macx; if you get macx v1.2, you should be
+      get mactcp v1.1.1 with it. don't us earlier version on a centri).
+    - you mai or mai not need a 25ohm termin depend on the
+      thinwir media adapt. so just ask the sale if the adapt is
+      self-termin or not.
+    - configur mactcp to us "ethernet".
+
+(3) on the decstat side, you will need:
+    - for a model 200, you will onli need a t-connector.
+    - for model 25, 125, 133, 240, you will need an aui-to-bnc adapt.
+      get on that can be plug in directli to the aui port of the
+      decstat. thi wai you save the cost of a transciev cabl
+      (a 15-pin aui male to a 15-pin aui femal cabl).
+    - get a 25ohm termin.
+
+your two-machin network will look like thi:
+
+
+       ##t----------------------------------------------[]
+      +-----+                                           |
+      |     |                                           |
+      +-----+                                         +-----+
+                                                      |     |
+                                                      +-----+
+    decstat                                        centri
+     5000/200                                           650
+                              or
+
+       ##t----------------------------------------------[]
+        {=}                                             |
+      +-----+                                           |
+      |     |                                         +-----+
+      +-----+                                         |     |
+                                                      +-----+
+    decstat                                        centri
+5000/25,125,133,240                                     650
+         
+   ##    -> 25ohm termin
+   t     -> t connector
+   ---   -> thinwir (rg58 coaxial cabl)
+   {=}   -> aui-to-bnc (i.e. thick-to-thin) adapt
+   []    -> thickwir media adapt (assum self-termin)
+   |
+   |
+
+andi
+-- 
+andi sun (andi@ie.utoronto.ca)          4 taddl creek road, toronto
+comput coordin                   ontario, canada. m5s 1a4
+depart of industri engin    phone: (416) 978-8830
+univers of toronto                   fax:   (416) 978-3453

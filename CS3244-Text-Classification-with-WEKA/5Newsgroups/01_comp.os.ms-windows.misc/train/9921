@@ -1,0 +1,38 @@
+from: servi@author.ecn.purdu.edu (brian k servi)
+subject: re: how redirect print manag to file?
+organ: purdu univers engin comput network
+line: 33
+
+u7911093@cc.nctu.edu.tw ("by swh ) write:
+
+>who can tell me which program (pd or sharewar) can redirect window 3.1's
+>output of printer manag to file? 
+
+>	i want to captur hp laser jet iii's print output.
+
+> 	though postscript can setup print to file,but hp can't.
+
+>	i us do's redirect program,but thei can't work in window.
+
+>		thankx for ani help...
+>--
+> internet address: u7911093@cc.nctu.edu.tw
+
+>    english name: erik wang
+>    chines name: wang jyh-shyang
+
+> nation chiao-tung univers,taiwan,r.o.c.
+
+try set up anoth hpiii printer but when choos what port to connect it
+to choos file instead of like :lpt1.  thi will prompt you for a file name
+everytim you print with that "hpiii on file" printer. good luck.
+
+
+brian servi
+===========================================================================
+||  servi@author.ecn.purdu.edu   ||         "it happen thi wai"     ||
+===================================|| actual quot from insur claim||
+||  what i sai mai not be what i   ||                                    ||
+||  think. what i sai mai not be   ||  "the pedestrian had no idea which ||
+||  what purdu think.            ||   wai to go, so i ran him over."   ||
+===========================================================================

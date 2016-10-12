@@ -1,0 +1,43 @@
+from: michael@jester.gun.de (michael gerhard)
+distribut: world
+subject: re: modem and uart
+x-newsread: tin [version 1.1 pl8]
+organ: privat coher system
+line: 33
+
+ryan jeffrei baucom (rjbaucom@eo.ncsu.edu) wrote:
+> 1) what is a 16550 uart?
+
+i don't know the exact mean of uart, but i think it is someth like
+univers arithmet receiv transmitt. normal, the older board have
+a 8250 or 16450 uart on board. those chip gener an irq for everi char
+thei receiv. the 16550 uart ha an intern 16 byte buffer, so - with the
+right softwar instal - it gener an irq everi 16 char. 
+
+> 2) what doe it do for high-speed modem?
+> 3) is it necessari for 14.4k or higher throughput?
+
+if you ran do, you don't need a 16550, becaus do run onli on task at a
+time and the whole cpu-power could be us for the transfer. but if you ar
+run a multitask os such as os/2, unix, etc. ( window ? :-) ), the
+cpu cannot work the whole time with on task. 
+
+the result ar lost charact or broken transmiss becaus of timeout.
+
+> 4) is it onli for intern modem?
+
+no. the onli diffrenc is that intern modem have the uart on board,
+wherea extern modem ar connect to the comput over a serial port
+which ha the uart on board.
+
+> if you have ani experi with 9600 or higher speed modem, pleas
+> let me know what you think.  also, ani particular brand name reccomend,
+> or will a cheapo clone do just a well?
+
+i us a zyxel1496b with a 16550uart under coher 4.0. i'm veri satisfi
+with it but i think that nearli everyon is satisfi with hi own modem.
+
+michael
+--
+*  michael@jester.gun.de  *   michael gerhard   *   preussenstrass 59  *
+                          *  germani 4040 neuss  *  voic: 49 2131 82238 *

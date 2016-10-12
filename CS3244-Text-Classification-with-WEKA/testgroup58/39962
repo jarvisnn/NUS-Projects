@@ -1,0 +1,36 @@
+from: beck@irzr17.inf.tu-dresden.de (andr beck)
+
+subject: re: pov problem with tga output
+
+organ: dept. of comput scienc, tu dresden, germani.
+
+line: 10
+
+distribut: world
+
+repli-to: andr_beck@ir.inf.tu-dresden.de
+
+nntp-post-host: irzr17.inf.tu-dresden.de
+
+
+
+
+
+rememb that the unix version of pov don't creat tga but qrt file
+
+format output by default. +ft is need to make tga.
+
+
+
+--
+
++-o-+--------------------------------------------------------------+-o-+
+
+| o |                \\\-  brain insid -///                       | o |
+
+| o |                    ^^^^^^^^^^^^^^^                           | o |
+
+| o | andr' beck (abpsoft) mehl: andr_beck@ir.inf.tu-dresden.de | o |
+
++-o-+--------------------------------------------------------------+-o-+
+

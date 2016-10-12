@@ -1,0 +1,42 @@
+from: rai@netcom.com (rai fischer)
+subject: re: x86 ~= 680x0 ??  (how do thei compar?)
+organ: netcom. san jose, california
+distribut: usa
+line: 36
+
+dhk@ubbpc.uucp (dave kitabjian) write ...
+>i'm sure intel and motorola ar compet neck-and-neck for 
+>crunch-power, but for a given clock speed, how do we rank the
+>follow (from 1st to 6th):
+>  486		68040
+>  386		68030
+>  286		68020
+
+040 486 030 386 020 286
+
+>while you're at it, where will the follow fit into the list:
+>  68060
+>  pentium
+>  powerpc
+
+060 fastest, then pentium, with the first version of the powerpc
+somewher in the vicin.
+
+>and about clock speed:  doe doubl the clock speed doubl the
+>overal processor speed?  and fill in the __'s below:
+>  68030 @ __ mhz = 68040 @ __ mhz
+
+no.  comput speed is onli partli depend of processor/clock speed.
+memori system speed plai a larg role as doe video system speed and
+i/o speed.  as processor clock rate go up, the speed of the memori
+system becom the greatest factor in the overal system speed.  if
+you have a 50mhz processor, it can be read anoth word from memori
+everi 20ns.  sure, you can put all 20ns memori in your comput, but
+it will cost 10 time as much as the slower 80ns simm.
+
+and roughli, the 68040 is twice as fast at a given clock
+speed as is the 68030.
+
+-- 
+rai fischer                   "convict ar more danger enemi of truth
+rai@netcom.com                 than li."  -- friedrich nietzsch

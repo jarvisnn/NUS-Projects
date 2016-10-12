@@ -1,0 +1,51 @@
+from: dkennett@fraser.sfu.ca (daniel kennett)
+subject: [pov] have troubl bump map a gif to a sphere
+summari: have troubl bump map a gif to a spher in povrai
+keyword: bump map
+organ: simon fraser univers, burnabi, b.c., canada
+line: 44
+
+
+hello,
+  i've been try to bump map a gif onto a sphere for a while and i
+can't seem to get it to work.  imag map work, but not bump
+map.  here's a simpl file i wa work with, could some kind
+soul tell me what wrong with thi.....
+
+#includ "color.inc"
+#includ "shape.inc"
+#includ "textur.inc"
+ 
+camera {
+  locat  <0 1 -3>
+  direct <0 0 1.5>
+  up        <0 1 0>
+  right     <1.33 0 0>
+  look_at   <0 1 2>
+}
+ 
+object { light_sourc { <2 4 -3> color white }
+       }
+ 
+object {
+  sphere { <0 1 2> 1 }
+   textur {
+     bump_map { 1 <0 1 2> gif "surf.gif"}
+   }
+}
+
+note: surf.gif is a plasma fractal from fractint that is us the
+landscap palett map.
+
+  
+	thank in advanc
+	   -daniel-
+
+*======================================================================* 
+| daniel kennett	 		                               |
+| dkennett@sfu.ca          		   			       |
+| "our mind ar finit, and yet even in those circumst of        |
+|  finitud, we ar surround by possibl that ar infinit, and |
+|  the purpos of human life is to grasp as much as we can out of that |
+|  infinitud." - alfr north whitehead                               |  
+*======================================================================*

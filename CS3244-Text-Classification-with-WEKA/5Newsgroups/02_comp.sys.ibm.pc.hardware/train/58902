@@ -1,0 +1,25 @@
+from: neil@stone.oz.au (neil watkinson)
+subject: com3 com4 is there a hardwar standard ?
+organ: stone microsystem, nsw, australia
+keyword: com3 com4
+line: 19
+
+help....
+
+i need to implement com3 and com4 on a board that i'm design and i'm
+find it dificult to track down a definit (hardwar that is) of com3
+and com4.
+
+i have the io adress and the fact that com3 share irq4 with com1 and com4
+share irq3 with com2, except exactli how thi irq share is done is not
+clear especi if the exist com1/2 doe not allow irq share. doe the
+standard??? allow for a differ irq to be us and if so how.
+
+pleas answer by email to :-
+
+      neil@stone.oz.au
+
+thank in advanc
+
+neil watkinson.
+

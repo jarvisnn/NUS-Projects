@@ -1,0 +1,22 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 0 -stddev-width 0 -sig-width 0 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Percent_correct
+Datasets:   1
+Resultsets: 4
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       11/17/15 9:38 PM
+
+
+Dataset                   (4) function | (1) bayes (2) trees (3) lazy.
+----------------------------------------------------------------------
+5Newsgroups-train         (25)   83.86 |   74.75 *   70.39 *   78.24 *
+----------------------------------------------------------------------
+                               (v/ /*) |   (0/0/1)   (0/0/1)   (0/0/1)
+
+
+Key:
+(1) bayes.NaiveBayes '' 5995231201785697655
+(2) trees.J48 '-C 0.25 -M 1' -217733168393644444
+(3) lazy.IBk '-K 50 -W 0 -X -I -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(4) functions.SMO '-C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"functions.supportVector.PolyKernel -E 1.5 -C 250007\"' -6585883636378691736
+

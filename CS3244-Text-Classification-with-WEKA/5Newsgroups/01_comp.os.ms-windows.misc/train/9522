@@ -1,0 +1,33 @@
+from: wong@cs.tu-berlin.de (wolfgang jung)
+subject: cirru logic 5426 graph card
+organ: technic univers of berlin, germani
+line: 23
+nntp-post-host: athen.cs.tu-berlin.de
+mime-version: 1.0
+content-type: text/plain; charset=iso-8859-1
+content-transfer-encod: 8bit
+x-newsread: tin [version 1.1 pl8]
+
+after set up window for us my cirru logic 5426 vlb graphicscard
+it move a normal window from on place to anoth. 
+my paramet where just the follow : 486 dx 33 vlb 
+the card is equip with 1 mb dram (not vram, there ar 8 socket for vram) 
+and the move of the window just look like it look at a friend
+386dx 25 (387dx) and an normal isa et4000
+
+what i wa wonder why is it not us the bitblt  engin which
+is suupos to be on the chip.
+
+how ar the experi here..
+have i done someth wrong ?
+(i instal the mswin 3.1 multiresolut driver which where suppli 
+with the card ?!)
+would be nice if somebodi could tell about hi experi with thi card
+also if there ar new(hopefulli faster) drriver around i would love to 
+how to get hold of them :-) (ftp or whatsoev :-) )
+
+gruss
+	wolfgang
+
+
+

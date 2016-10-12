@@ -1,0 +1,17 @@
+from: tomk@skywalk.bocaraton.ibm.com (thoma chun-hong kok)
+subject: re: moolit and olit
+organ: ibm austin
+line: 12
+
+in articl <stevedavc5y2jz.3d7@netcom.com>, stevedav@netcom.com (steve davidson) write:
+> doe anyon know the differ between moolit and olit?  doe sun
+> support moolit?  is moolit avail on sparcstat?
+> 
+
+-- 
+moolit (motif/open look intrins toolkit allow develop to build 
+applic that can switch between motif and open look at run-time,
+while olit onli give you open look.
+
+--
+internet: chunhong@vnet.ibm.com

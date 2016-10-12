@@ -1,0 +1,124 @@
+from: ballou@martigni.ai.mit.edu (kenneth robert ballou)
+
+subject: re: soundblast irq and port set
+
+organ: oberon softwar, inc.
+
+line: 55
+
+distribut: world
+
+nntp-post-host: altdorf.ai.mit.edu
+
+
+
+in articl <pdb059-210493145738@kilimanjaro.jpl.nasa.gov> pdb059@ipl.jpl.nasa.gov (paul bartholomew) write:
+
+>in articl <3130@shaman.wv.tek.com>, andrew@frip.wv.tek.com (andrew
+
+>klossner) wrote:
+
+>> 
+
+>> []
+
+>> 
+
+>> 	"these lpt1, com1, disk control ar call devic.  there ar
+
+>> 	devic that requir exclus interrupt ownership, eg. disk
+
+>> 	control (i6) and keyboard (i1).  there ar also devic that
+
+>> 	doe not requir exclus ownership, ie. it will share an
+
+>> 	interrupt with anoth devic, eg. lpt1"
+
+>> 
+
+>> no.  in a standard isa bu, the on that almost all non-laptop pc us,
+
+>> two separ interfac card cannot share an interrupt.  thi is due to
+
+>> a screwup in the bu design.  for exampl, if your soundblast want
+
+>> to drive interrupt number 7, then it must hold a certain bu wire to 0
+
+>> or 1 at all time, depend on whether or not it want an interrupt.
+
+>> thi preclud let anoth card assert interrupt number 7.
+
+>> 
+
+>> when two or more devic in an isa bu pc share an interrupt, it's
+
+>> becaus thei're implement by a singl card.
+
+>
+
+>interest.  would you care to explain to me then, how my soundblast
+
+>pro card and my printer card ar share irq 7 successfulli?  i assur
+
+>you that thei ar both set to irq 7 and that i have no problem.  my
+
+>comput is a dtk 286-12 ibm clone.
+
+
+
+simpl.  first, andrew is correct, although i can see where there might be
+
+some confus.  it is inde possibl to have two card *configur* to us
+
+the same interrupt.  thei can not *share* the interrupt in the sens that it
+
+is not possibl to have both card activ at the same time.
+
+
+
+here is an exampl.  for some time, i wa short of "free interrupt."  i had a
+
+tape control (not a "floppi tape") that need on of irq0-irq7.  (it's an
+
+*old* tape drive.)  my solut wa to us irq3 (also us for com2, where my
+
+modem is).  i did thi becaus i reason i would never be us the modem and
+
+the tape simultan.  when kermit run, it instal it own interrupt
+
+handler for irq3 and us the serial port.  if the tape drive were to gener
+
+an interrupt, kermit would not have a clue what to do with/for the tape
+
+control.  (and sinc the tape control would not be servic, it would
+
+most like "hang.")  likewis, when the tape backup softwar run, it
+
+instal an interrupt handler for irq3.  that handler won't do anyth for
+
+the serial port.
+
+
+
+under do, print is not interrupt-driven.  instead, the bio poll the
+
+statu of the parallel port to determin when anoth byte mai be sent.
+
+that's why you can have your sound card and lpt1 both configur to us irq7.
+
+try that on nt and see how far you'll get. :-)
+
+-- 
+
+kenneth r. ballou				voic:		 (617) 494-0990
+
+oberon softwar, inc.				fax:		 (617) 494-0414
+
+on memori drive, cambridg, ma  02142	internet:     ballou@oberon.com
+
+
+
+the view and opinion express abov ar my own and do not necessarili
+
+reflect those of my employ.
+

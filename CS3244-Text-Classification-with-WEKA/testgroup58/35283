@@ -1,0 +1,50 @@
+from: goyal@utdalla.edu (mohit k goyal)
+
+subject: data-transfer-rate of the new 2100 seri fs-2 micropoli hd's
+
+nntp-post-host: apach.utdalla.edu
+
+organ: univ. of texa at dalla
+
+line: 19
+
+
+
+i have a question for y'all:
+
+
+
+i'm look at an ad for the new 3.5" fast scsi-2 drive from micropoli
+
+in the june, 1993, macworld. (i have seen similar ad for the id version
+
+in ibm pc magazin)
+
+
+
+well, the ad sai that all three drive have a fast scsi-2 interfac,
+
+but then it sai that the dtr rate for each drive is 5 megabyt/second,
+
+*max*.
+
+
+
+how can thi be?  i thought that if a drive wa to be fast scsi-2 it
+
+had to have a dtr of 10meg a second?
+
+
+
+(i am assum the 5meg/sec claim by micropoli is from the 512k cach.
+
+i admit that i would be veri impress if the drive can *read/write* data
+
+at 5meg a second!)
+
+
+
+thank you.
+
+
+

@@ -1,0 +1,36 @@
+from: sean michael goller <wipeout+@cmu.edu>
+
+subject: port athena widget to xview?
+
+organ: senior, electr and comput engin, carnegi mellon, pittsburgh, pa
+
+line: 12
+
+nntp-post-host: andrew.cmu.edu
+
+
+
+i check the faq on thi first, and no luck..
+
+
+
+
+
+i need to convert the r5 tree widget for us with xview v3.0. the
+
+problem is the fact that xview us their own event loop system, and i
+
+wa wonder if anyon had ani tip (or convert sourc) on convert
+
+these pup.
+
+
+
+
+
+thank,
+
+    sean. (wipeout+@cmu.edu)
+
+
+

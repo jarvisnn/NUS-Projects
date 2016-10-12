@@ -1,0 +1,18 @@
+from: wild@access.digex.com (wildstrom)
+subject: re: mathcad 4.0 swap file
+organ: express access onlin commun, greenbelt, md usa
+line: 12
+nntp-post-host: access.digex.net
+
+basebal@catch-the-fever.scd.ucar.edu (gregg walter) write:
+
+>i have 16mb of memori on my 386sx.  i have been run window
+>without a swap file for sever month.  will mathcad 4.0 be
+>happi with thi, or insist on a swap file?
+
+presum, you mean without a _perman_ swap file. if window need a
+swap file, it will upo and creat on if a perman on doesn't exist.
+perman is gener faster though. i don't know why mathcad wouldn't
+be happi with either type--ver. 3.0 is and so should ani program conform
+to the win specif.
+

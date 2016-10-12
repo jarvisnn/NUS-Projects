@@ -1,0 +1,49 @@
+from: ryanph@mrl.dsto.gov.au
+subject: dregister: xv for ms-do
+organ: defenc scienc and technolog organis
+line: 43
+nntp-post-host: mrl.dsto.gov.au
+
+pascal perret, in articl <1993apr21.125750.263@eicn.etna.ch>, wrote
+> 
+> 	site	: omnig.clarkson.edu
+> 	alias	: grape.ec.clarkson.edu
+> 	number	: 128.153.4.2
+> 
+> 	/pub/msdo/djgpp/pub
+> 
+> 	it's xv221.zip (?) i think...
+> certainli you read the other answer from kevin martin... he write about dv/x 
+> (?). 
+> 
+>     what is it ?????? could someon answer ????
+
+funni thing, the internet: i have no idea what xv221 might be - except that it
+might be someth to do with x-window on pc (? if you know, and have us
+it, and think that it is good, email me. [ryanph@mrl.dsto.gov.au]).
+
+dv/x is a common abbrevi for quarterdeck corpor's desqview/x
+softwar.
+
+i have not us dv/x yet, but read the blurb that quarterdeck sent me, it
+sound pretti great:
+	* allow multipl do machin - the wai that os/2 doe, but without
+requir 10 mb of ram to get os/2 go
+	* pre-emptiv multi-task
+	* network comput - a proper x-window client/server applic -
+thi mean that do program can be us on other x-window comput on your
+network, and that x-window program can be us on your dv/x comput
+	* although it is not a version of unix, it effect ha mani of
+unix's featur, and mostli you will be abl to compil unix-type program
+us the djgpp or gnu c compil
+
+thei advertis regularli in all of the major comput and program
+magazin. thei also have internet support onlin (support@qdeck.com).
+
+> *  pascal perret     		|	perret@eicn.etna.ch         *
+
+hope that thi help anyon want to know.
+
+phil ryan
+melbourn, australia
+

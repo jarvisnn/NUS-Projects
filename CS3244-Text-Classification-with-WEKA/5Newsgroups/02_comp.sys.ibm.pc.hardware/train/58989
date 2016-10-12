@@ -1,0 +1,25 @@
+from: towwang@statler.engin.umich.edu (tow wang hui)
+subject: floppi file copi
+articl-i.d.: srvr1.1pstlninn4r5
+repli-to: towwang@engin.umich.edu
+distribut: world
+organ: univers of michigan (caen)
+line: 15
+nntp-post-host: statler.engin.umich.edu
+origin: towwang@statler.engin.umich.edu
+
+
+a silli question: i frequent edit small file and need to make copi of them
+on sever floppi diskett of the same size and format, but my comput is
+onli equip with on 3.5" hd drive and on 5.25" hd drive; can't i do the
+copi without swap file temporarili to my hard disk (which is 99.9% full)
+us standard msdo 5.0 command? i know
+diskcopi a: a:
+work but for small select of file,
+xcopi a:*.txt a:
+doe not!
+mayb i'll have to write my own file copi command in c, but the idea doe not
+amus me.
+thank for your help.
+
+francisco

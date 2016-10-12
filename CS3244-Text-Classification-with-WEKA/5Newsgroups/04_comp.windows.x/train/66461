@@ -1,0 +1,28 @@
+from: ngai@nova.bellcor.com (john ngai)
+subject: how to disabl revers video on xterm/man
+nntp-post-host: nova.bellcor.com
+organ: bellcor
+line: 22
+
+well i am not sure if thi is the right newsgroup to ask, but let me try anywai.
+i am run xterm and like all unix user, i run man <someth>. recent,
+i switch to solari 2.1, and their man page ar litter with ".i" direct
+that ar somehow translat into revers video when displai by man under xterm.
+the result output (admittedli a person tast) is veri annoi to look at.
+back when i wa us suno 4.1.2, i rememb their man page have some keyword
+displai with underlin....
+
+so my question is how do i chang the xterm's behaviour under ".i" direct 
+for nroff man page, to perhap underlin, or at least disabl it. (".b" 
+direct ar fine, i like them. and of cours, i don't want to go in and edit
+the man page input...) somehow, xterm allow on to specifi both a normal font
+and a bold font, but not an ital font??
+
+ani pointer, suggest ar greatli appreci.
+thank -- john
+
+p.s. run xterm -rv won't work, i tri...
+
+
+
+

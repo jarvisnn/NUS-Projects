@@ -1,0 +1,84 @@
+from: pfuetz@igd.fhg.de (matthia pfuetzner)
+subject: re: avail memori to the xserver. how to get the actual size?
+repli-to: pfuetz@igd.fhg.de (matthia pfuetzner)
+organ: zentrum fuer graphisch datenverarbeitung, darmstadt, frg
+line: 78
+
+hello!
+
+in articl <1993apr17.144246.29806@thunder.mcrcim.mcgill.edu>,
+mous@mcrcim.mcgill.edu (der mous) write:
+>in articl <1965@igd.fhg.de>, pfuetz@igd.fhg.de (matthia pfuetzner) write:
+>
+>> is there a possibl to determin via x protocol call the size of
+>> free memori avail to the xserver?
+>
+>no.  even if you could, the answer could be out of date even befor you
+>get it (even if you grab the server, it could be taken up by buffer
+>user action).  you should just try to do whatev you want; a badalloc
+>error is your indic that insuffici server memori is avail.
+>
+>					der mous
+
+thi isn't of much help! especi when do phig (pex) via the libphig as
+suppli by mit, i have much troubl togeth with pex-termin that don't
+have enough memori!
+
+perform the follow:
+
+   visual.visualid = copyfrompar;
+
+   bg_pix = whitepixel( grafik_displai, defaultscreen( grafik_displai ) );
+   
+   xswa.back_store      = notus;
+   xswa.event_mask         = exposuremask | structurenotifymask;
+   xswa.background_pixel   = bg_pix;
+
+   graphic_window =
+         xcreatewindow( graphic_displai,
+                       rootwindow( graphic_displai,
+                                  defaultscreen( graphic_displai ) ),
+                       0,
+                       0,
+                       displaywidth(graphic_displai, 
+                                  defaultscreen( graphic_displai ) ),
+                       displayheight(graphic_displai, 
+                                  defaultscreen( graphic_displai ) ),
+                       (unsign int)0,
+                       8,
+                       inputoutput,
+                       &visual,
+                       cweventmask | cwbackingstor | cwbackpixel,
+                       &xswa );
+   xmapwindow( graphic_displai, graphic_window );
+   
+   /** sync and wait for exposur event **/
+   xsync( graphic_displai, fals );
+   xwindowev( graphic_displai, graphic_window, exposuremask, &exposureev );
+
+   conn.displai     = graphic_displai;
+   conn.drawabl_id = graphic_window;
+
+   xinfo.displai = graphic_displai;
+   xinfo.flag.no_monitor = 0;      /* fals -> monitor is run! */
+   xinfo.flag.forc_client_ss = 0; /* fals! */
+
+   popen_xphig( null, 0, pxphig_info_flag_no_mon |
+                          pxphig_info_flag_client_ss |
+                          pxphig_info_displai, &xinfo );
+
+   popen_ws( 1, (pconnid)(&conn), phig_ws_type_x_drawabl );
+
+i get core dump in the popen_ws call! (no badalloc, etc.! simpli a core
+dump!) so i need some wai of get info about the maxim avail memori
+to the xserver!
+
+but thank!
+
+sincerli,
+        matthia
+-- 
+    matthia pfuetzner  |  @work:  +49 6151 155-150  | @home: +49 6151 75717
+    6100 darmstadt, frg | zgdv, wilhelminenstrass 7 | lichtenbergstrass 73
+      pfuetzner@igd.fhg.de, pfuetzner@zgdvda.uucp    |  keith packard said:
+      r5 is differ from r4. that's why we chang the releas number :-)

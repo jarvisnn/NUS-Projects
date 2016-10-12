@@ -1,0 +1,26 @@
+from: d88-jwa@hemul.nada.kth.se (jon wätte)
+subject: re: why the drive speed differ??
+keyword: quantum, lp, speed
+nntp-post-host: hemul.nada.kth.se
+organ: royal institut of technolog, stockholm, sweden
+line: 19
+
+in <c5r70z.4gb@zimmer.csufresno.edu> mmatteo@mondrian.csufresno.edu (marc matteo) write:
+
+>i just got a la cie 240 meg extern hard drive.  speed test show that it's
+>substanti faster that my intern 105 meg quantum hd.  supposedli the 105
+>and the 240 (both lp drive) ar roughli rate the same speed.  why such a 
+>larg differ?
+
+could be better cach on the disk.
+could be faster coil for seek.
+could be that the disk spin faster so data transfer faster.
+could be that data is pack tighter so it transfer faster.
+could be a faster scsi command decod in the drive.
+
+among other thing...
+-- 
+ -- jon w{tte, h+@nada.kth.se, mac hacker delux --
+ engin: "how will thi work?" scienc: "why will thi work?" manag:
+ "when will thi work?"  liber art: "do you want fri with that?"
+                     -- jess n. schell

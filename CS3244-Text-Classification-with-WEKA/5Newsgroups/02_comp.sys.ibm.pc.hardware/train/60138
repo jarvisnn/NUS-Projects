@@ -1,0 +1,48 @@
+from: buckel@winx06.informatik.uni-wuerzburg.de (bernhard buckel)
+subject: re: help! my hard drive id mess!
+organ: univers of wuerzburg, germani
+x-newsread: tin [version 1.1 pl8]
+line: 42
+
+dave (david@c-cat.uucp) wrote:
+: vazzag@vccnw13.it.rpi.edu (gregori anthoni vazzana) write:
+
+: {> 
+: {> 	howdi,
+: {> 
+: {> 	the other dai i wa us norton's speeddisk to optim my seagat(125mb) h
+: {> problem persist.  i back up all essenti data and decid to reformat
+: {> my hard drive.  when i attempt thi it got to the 279th clylind 8th
+: {> head and gave me an error messag sai that it "could not find the sector"
+: {> i have tri everyth i can think of.  now i can't even access my hard driv
+: {> to write inform to it.  i tri to boot up with my ms-do disk but ms-d
+: {> tri to reformat my hard drive and get 29% of the wai through to sai "error
+: {> format hard drive. press f3 to exit"  i tri to scan my hard drive
+: {> for virus but i can;t access it and i get a messag (when i try to do a dir
+: {> sai "error int 24"  can anyon help me?  i have no idea what to do. 
+: {> 
+: {> thank in advanc for ani help!
+: {> 
+: {> 				greg
+
+: try a bio level format via the debug command.
+: -g=xxxx:5  where xxxx is the hex address of the hd control bio
+: locat.
+: if thi will not work, a last resort would be to take a larg magnet
+: to the hard disk, but thi ha to be done properli or you will caus
+: or could caus more damag than ha been done alreadi.
+
+: disclaim: i am not respons for your action by directli appli
+: a larg magnet to your hard disk.
+
+: if done correctli the magnet trick will wipe out everyth on the
+: hard disk _complet_ and a low level bio format might succe
+
+
+:                                                        -david
+
+: =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+: china cat bb                               c-cat!david@sed.csc.com
+: (301)604-5976 1200-14,400 8n1               ...uunet!mimsi!anagld!c-cat!david 
+: =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

@@ -1,0 +1,80 @@
+from: christer@cs.umu.se (christer ericson)
+
+subject: re: stereo sound problem (?) on mac game
+
+organ: dep. of info.proc, umea univ., sweden
+
+line: 35
+
+
+
+in <1993apr19.183437.28365@gallant.appl.com> steve bolling <buzz@appl.com> write:
+
+>[...]
+
+>us the sound manag and work fine on all machin.
+
+>[...]
+
+>the more of the stori is to develop: don't cheat!
+
+>realli, i am absolut, posit not allow to do what i am about to
+
+>do,
+
+>but i'm go sai it anywai.
+
+>stop cheat on sound!
+
+>realli soon, you will be sorri, as even those without extern speaker
+
+>will be disappoint with your sound on futur hardwar. the grace period
+
+>is about to end.
+
+>the sound manag is understand now, and work pretti well and will
+
+>work
+
+>even better soon, so us it.
+
+
+
+don't be silli.
+
+
+
+us the sound manag on a quadra is veri well, but us sm on
+
+ani of the low-end machin doesn't simpli work for a decent action
+
+game sinc it just steal too much time from the cpu. thi is
+
+a fact. by write directli to the hardwar on an se, it is
+
+possibl to have 4 simultan channel of sampl sound (11khz) for
+
+a cost of approx. 8000 cycl. exactli how would you do that us
+
+the sm, prai tell?
+
+
+
+the correct thing to do is to us the sm on the machin that can
+
+carri that extra load us the sm mean, and to write directli
+
+to the sound hardwar on the machin that can't. it's not the
+
+polit correct thing, but from the develop' point of
+
+view it is.
+
+
+
+
+
+christer ericson --- internet: christer@cs.umu.se --- tel: +46-90-166794
+
+depart of comput scienc, univers of umea, s-90187 umea, sweden
+

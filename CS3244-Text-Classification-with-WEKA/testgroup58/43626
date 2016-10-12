@@ -1,0 +1,60 @@
+from: jak@fff.chem.utah.edu (mr. stress)
+
+subject: hose hd?
+
+organ: univers of utah comput center
+
+line: 25
+
+
+
+
+
+
+
+hei all-
+
+
+
+we have an old (1990) extern hd attach to the plu in our lab.  it had  
+
+given us flawless servic until last week.  the problem: someon in our lab  
+
+ha an old 512 that wa upgrad a coupl year ago to a plu with an  
+
+aftermarket simm/scsi setup (digigraph "simmer").  the db25 scsi plug run  
+
+through the back of the machin and attach to the board with a 26-pin  
+
+rectangular connector.  well, thi gui had remov the back from the machin,  
+
+to put more memori in, and had disconnect the the scsi plug.  sinc the  
+
+26-pin connector is symmetr (not kei) he mai have reinstal it upsid  
+
+down, essenti revers the pin on the db25.  he came in and ask if he  
+
+could try out our hd on hi scsi port (it had never been us).  naiv fool  
+
+that we ar, we said o.k..  hi comput fail to recogn the drive.  now,  
+
+none of the comput in our lab will recogn it.  we tri disk doctor, and  
+
+it doesn't recogn anyth on the scsi chain.  could instal the scsi  
+
+upsid down have wreck the hd's driver board?  the drive seem to spin up  
+
+all right and unpark itself upon powerup.  the event ar too coincident to  
+
+attribut the problem to stiction.
+
+
+
+ani help greatli appreci-
+
+
+
+jame
+
+jak@fff.chem.utah.edu  (next mail)   
+

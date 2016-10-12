@@ -1,0 +1,18 @@
+from: gerard@dp.co.uk (gerard o'driscol)
+subject: re: mix gl with x (xlib,xt,mwm)
+organ: the internet
+line: 12
+to: xpert@expo.lc.mit.edu
+
+
+pyeatt@texaco.com write:
+
+>> there is a widget alreadi defin for gl.  it is the glxmdraw (motif) or
+>> glxdraw (athena) widget.  it is similar to a xmdrawingarea, except that it
+>> allow you to us gl call to render into the window.  look at glxlink,
+>> glxunlink, glxgetconfig, and glxwinset in the man page.
+
+where do i get hold of these widget?
+
+ 	gerard o'driscol (gerard.odriscol@dp.co.uk)
+ 	du pont pixel system ltd.

@@ -1,0 +1,104 @@
+from: jessea@u013.me.vp.com (jess w. asher)
+
+subject: compil mh-6.8 (and xmh) on sco 3.2.4.
+
+organ: varco-pruden build
+
+line: 47
+
+
+
+i'm try to get mh compil (and then xmh) and i'm have some problem.
+
+i've got mh-6.8, us gcc on sco 3.2.4.  my mh file is list below.  doe
+
+anyon have ani suggest on what i can add to get it to compil??
+
+
+
+===========
+
+
+
+bin             /usr/local/bin
+
+debug           off
+
+etc             /usr/local/lib/mh
+
+mail            /usr/mail
+
+mailgroup       mail
+
+mandir          /usr/man
+
+manual         gen
+
+chown           /bin/chown
+
+editor          prompter
+
+remov          /bin/mv -f
+
+# if no tcp/ip sendmail is avail: chang mt entri to sendmail
+
+mt             sendmail/smtp
+
+bboard         off
+
+bbdeliveri      off
+
+bbhome          /usr/spool/bboard
+
+mf              off
+
+pop             off
+
+# option       see below
+
+cc              gcc
+
+ccoption       -o -ansi -d__stdc__=0 -dsysv -dsysv386 -dsco -d_svid
+
+curs          -lcurs
+
+ldoption       -s
+
+ldoptlib
+
+lex             lex
+
+sprintf         int
+
+sharedlib       off
+
+slibdir         /usr/local/lib
+
+oldload         off
+
+ranlib          off
+
+
+
+# defin bind onli of the bsd4.3 name (tcp/ip) is us
+
+# defin socket onli if the system ha bsd4.3 socket (tcp/ip)
+
+option         atz bind dumb mhe mhrc more='"/usr/bin/more"'
+
+option         overhead shadow socket sy5 sy5dir
+
+option         tzname whatnow
+
+
+
+-- 
+
+      jess w. asher                                          (901)762-6000
+
+                             varco-pruden build
+
+                 6000 poplar av., suit 400, memphi, tn  38119
+
+    internet: jessea@vpbuild.vp.com                   uucp: vpbuild!jessea
+

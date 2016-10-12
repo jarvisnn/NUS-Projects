@@ -1,0 +1,260 @@
+from: ed hew <edhew@xenitec.on.ca>
+
+subject: biz.sco.* newsgroup/mlist faq (period post)
+
+organ: xenitec consult servic, kitchen, on, canada
+
+summari: how to subscrib (and why)
+
+keyword: biz, sco, newsgroup, mail list
+
+line: 123
+
+
+
+
+
+              evolut of sco newsgroup and mail list
+
+              ---------------------------------------------
+
+   
+
+   mani reader enjoi the opportun to obtain and contribut us
+
+   inform on sco open desktop sinc 1990 through the ancestr usenet
+
+   newsgroup sco.opendesktop or it's companion mail list.  similarli,
+
+   there wa a demonstr need for an inform and discuss forum
+
+   for sco product in gener.
+
+   
+
+   with the increas demand for access and for addit sco
+
+   newsgroup, mani current contributor includ those who have been
+
+   activ in circul sco relat newsgroup and mail list felt
+
+   that the readership would be best serv by creat a biz.sco.*
+
+   hierarchi to improv propag (and henc avail) worldwid.
+
+
+
+   biz.sco.{opendesktop,gener,announc} were newgroup mai 1, 1991 in
+
+   accord with accept procedur within "biz".  given the content,
+
+   thi chang reloc the "opendesktop" newsgroup to a more proper place
+
+   within the establish usenet new hierarchi and add the new "announc"
+
+   and "gener" group.  on aug 1, 1991, the former "sco-list@uunet.uu.net"
+
+   becam "scogen" in keep with establish biz.sco.* name convent.
+
+
+
+   biz.sco.binari and biz.sco.sourc were newgroup on june 1, 1992
+
+   to respect accommod sco xenix, unix and opendesktop specif
+
+   binari and sourc code.  the binari and sourc new group ar
+
+   moder, with moder and submiss inform and polici
+
+   outlin in the period imform post in those newsgroup.
+
+   respect usenet etiquit, these newsgroup ar _not_ gate to
+
+   mail list, but ar archiv on sever nuucp and ftp host.
+
+
+
+   biz.sco.magazin wa newgroup dec 14, 1992, to provid a discuss
+
+   area for the reader, writer and publish of sco magazin.
+
+   
+
+   subject to the usenet new hierarchi carri by your upstream feed,
+
+   you ar now abl to subscrib to the follow:
+
+   
+
+        newsgroup                    mail list subscript
+
+        ---------                    -------------------------
+
+        biz.sco.opendesktop          scoodt-request@xenitec.on.ca
+
+        biz.sco.gener              scogen-request@xenitec.on.ca
+
+        biz.sco.announc             scoann-request@xenitec.on.ca
+
+	biz.sco.sourc			<none>
+
+	biz.sco.binari		<none>
+
+	biz.sco.magazin	     scomag-request@xenitec.on.ca
+
+
+
+   you ar _strongli_ encourag to obtain these newsgroup via usenet
+
+   new mechan vr mail.  anyon have difficulti arrang a new
+
+   feed for these newsgroup is welcom to email the undersign and
+
+   i'll do my best to help.  we also offer all requir softwar in
+
+   sourc code form via anonym ftp and uucp, as do mani archiv site.
+
+   if, after have explor all option, you ar still unabl to receiv
+
+   biz.sco.* as new, you mai subscrib to the mail list.
+
+   
+
+   the 4 discuss newsgroup ar bi-direction gate to companion
+
+   mail list, so anyon not have access to new but who doe have a
+
+   uucp or internet mail feed can still particip fulli us email.
+
+   mail list subscrib should send their request to the appropri
+
+   "mail list subscript" address abov, includ in the messag bodi:
+
+
+
+	add: subscrib_address		-eg-
+
+	add: your_lognam@site.do.main  -or-
+
+	add: up!stream!yoursit!your_lognam
+
+
+
+   inclus of an altern work bang-path rel to a well know
+
+   major function site might prove benefici.  delet ar handl
+
+   the same wai, simpli substitut "delet:" for "add:", ensur that
+
+   you us the exact same address you subscrib with.  mail list
+
+   subscrib receiv "how to post to the mlist" articl submiss
+
+   inform when their request is process.  if you don't receiv
+
+   an acknowledg within a few dai, check your rout and try a test
+
+   messag via xenitec.on.ca back to your host.  in such case, it's like
+
+   that someon, somewher, is bounc mail repli to you (and would do
+
+   the same with mail list traffic), and you'll want to resolv your
+
+   connect problem befor try to subscrib again.  mail list
+
+   subscript ar free, subject to whatev arrang you mai have
+
+   with the site(s) feed you.
+
+   
+
+   should you receiv no respons or experi a sudden and prolong
+
+   drop to zero volum on on of the mail list, thi indic that we
+
+   ar no longer abl to find a work rout to your site.  we loos a
+
+   hand of subscrib thi wai each month.  if thi happen to you,
+
+   pleas email us your known work bang-path rel to a major site.
+
+
+
+   what's in the newsgroup (and mail_list where applic):
+
+   
+
+   biz.sco.opendesktop: technic question and answer and inform
+
+                        post relat to past, present, and futur
+
+                        implement of the sco opendesktop oper
+
+                        environ and it's variou bundl compon.
+
+   
+
+   biz.sco.gener:     question, answer and comment on sco product
+
+                        in gener, and of cours result discuss.
+
+   
+
+   biz.sco.announc:    sco and sco develop product announc of
+
+			interest to current and futur user of sco product,
+
+			and to sco develop, resel and distributor.
+
+                        (moder, followup direct to biz.sco.gener).
+
+
+
+   biz.sco.sourc:	sysv or bsd sourc code for us program and
+
+			util, modifi to compil and run with variou
+
+			incarn of sco xenix, unix, and/or opendesktop.
+
+
+
+   biz.sco.binari:	binari packag compil from sco compat sourc
+
+			code, often from sourc post in biz.sco.sourc
+
+			and often instal us the sco "custom" util.
+
+
+
+   biz.sco.magazin:	interact between the sco magazin reader, 
+
+			writer and publish.
+
+
+
+   you should alwai endeavour to post your articl to the most applic
+
+   newsgroup.  for exampl, post your odt question to the "gener"
+
+   newsgroup will preclud your question and answer to it from be
+
+   save in the public odt archiv.  appropri crosspost is allow.
+
+
+
+   the undersign is sole respons for administr of the biz.sco
+
+   namespac.  suggest for addit biz.sco.* newsgroup and/or
+
+   mail list should be email to the address below.
+
+--
+
+  ed. a. hew,    <edhew@xenitec.on.ca>    ....!uunet.ca!xenitec!eah
+
+  xenitec consult servic, kitchen on, canada +1 519 570 9848
+
+  trio train centr ltd. mississauga on canada +1 800-387-8649
+
+          [biz.sco.* newsgroup and mail list godfath]
+

@@ -1,0 +1,25 @@
+from: oj@world.std.com (oliv jone)
+subject: re: q: how to avoid xopendisplai hang?
+keyword: xlib
+articl-i.d.: world.c531a0.m3i
+organ: shawsheen softwar
+line: 18
+
+in articl <c512xr.3oy@skate.gsfc.nasa.gov> andi@ic.stx.com write:
+>i'm write 'xwall', a simpl x version of 'wall', and i want it to
+>put a messag up on each of a default list of displai.  the problem
+>is that xopendisplai hang if on of the displai is current
+>control by xdm (login screen). 
+
+xdm doe xgrabserv when it's run in secur mode (so do some
+screen-lock).  there's realli no simpl wai to tell thi is the case.
+
+you can take xdm out of secur mode;  probabl not too cool.
+
+you can wrap your call to xopendisplai in some code which solict
+a futur sigalrm and longjmp past the xopendisplai from the signal
+handler.  an exampl of thi can be seen in the xdm sourc.
+
+note that longjmp out of xopendisplai probabl caus a memori
+leak;  ani program function thi wai probabl need to exit() 
+regularli.

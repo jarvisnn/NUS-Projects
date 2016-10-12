@@ -1,0 +1,34 @@
+from: pj@euclid.jpl.nasa.gov (peter j. scott)
+
+subject: re: xv 3.00 ha escap!
+
+repli-to: pj@euclid.jpl.nasa.gov
+
+organ: jet propuls laboratori, nasa/caltech
+
+line: 10
+
+nntp-post-host: euclid.jpl.nasa.gov
+
+
+
+i've found that i have to add the "-8" option for displai jpeg
+
+with the new version.  for some reason, if i don't, it goe into
+
+24-bit mode and the result imag is displai with 216 color 
+
+(from a 6x6x6 arrai) instead of 256 and look grainier.  sinc i'm
+
+on the ubiquit 8-bit pseudo color displai i would have thought it
+
+could tell that.
+
+
+
+-- 
+
+thi is new.  thi is your       |    peter scott, nasa/jpl/caltech
+
+brain on new.  ani question?    |    (pj@euclid.jpl.nasa.gov)
+

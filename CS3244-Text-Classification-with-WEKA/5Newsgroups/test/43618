@@ -1,0 +1,250 @@
+from: lioness@mapl.circa.ufl.edu
+
+subject: kubota kenai/denali spec
+
+organ: center for instruct and research comput activ
+
+line: 118
+
+repli-to: lioness@ufcc.ufl.edu
+
+nntp-post-host: mapl.circa.ufl.edu
+
+
+
+
+
+okai, i got enough repli about the kubota kenai/denali system that i
+
+will post a summari of their capabl.  i haven't actual us on
+
+or seen on, so take the spec with a grain of salt.  i'd like to see
+
+an independ review of on against, sai, an sgi indigo extrem or
+
+someth.
+
+
+
+basic, the kenai workstat ar dec alpha axp base workstat that
+
+run osf/1 ( dec's ) and will like run window nt in the futur.  thei ar
+
+binari compat with digit's osf/1 alpha axp implement.  denali
+
+is their graphic subsystem, which is upgrad in the field by
+
+simpli ad "transform engin".
+
+
+
+the two main kenai machin ar the 3400 imag and 3d graphic workstat
+
+and the 3500 imag and 3d graphic workstat.
+
+
+
+
+
+			3400			3500
+
+
+
+cpu			dec alpha axp 133mhz	dec alpha axp 150mhz
+
+on-chip cach		8k/8k			8k/8k
+
+onboard cach		512k			512k
+
+word size		64-bit			64-bit
+
+memori ( initi )	32-128mb		32-256mb
+
+memori ( futur )	512mb			1gb
+
+specmark89		111			126
+
+specint92		75			84
+
+specfp92		112			128
+
+
+
+graphic
+
+
+
+transform modul	1-6			1-6
+
+frame buffer modul	5,10,20			5,10,20
+
+frame buffer		1280x1024x24bit		1280x1024x24bit
+
+			doubl buffer		doubl buffer
+
+z-buffer		24-bit			24-bit
+
+alpha/stencil		8-bit			8-bit
+
+stereo support		ye			ye
+
+other:				both machin will doubl buffer or do
+
+				stereo output per window.  both have an
+
+				auxiliari video output that is rs-170a,
+
+				ntsc, and pal
+
+
+
+storag
+
+
+
+intern-fix		2 3.5"			4 3.5"
+
+intern-remov	1 5.25"			2 5.25"
+
+max capac		9.5gb			11.6 gb
+
+
+
+io
+
+
+
+both have turbochannel 100mb/sec, scsi-2, ethernet, and fddi
+
+
+
+applic program interfac
+
+
+
+both have librari for xlib, motif, mit pexlib, dec-pexlib dec-phig, and gl
+
+
+
+okai, now the real stuff.  the kenai station work with a graphic architectur
+
+known as denali.  the denali come in three model, the e, p, and v.  thei
+
+us a decchip 21064 superscalar risc processor at 150mhz.  their
+
+capabl ar as follow:
+
+
+
+			e		p		v
+
+
+
+2d vector		800-200k	2000-3800k	4000-4800k
+
+3d vector #1		350-1100k	1100-1800k	1800-2100k
+
+3d vector #2		300-1000k	1000-1600k	1600-1900k
+
+3d vector #3		300-500k	800-1000k	1300-1400k
+
+3d triangl, #4	200-500k	600-1000k	1000-1200k
+
+3d triangl, #5	100-200k	300-400k	500-600k
+
+
+
+#1: 10 pixel, flat shade, connect
+
+#2: 10 pixel, gouraud shade, connect
+
+#3: 10 pixel, 2-pixel wide, anti-alias, connect
+
+#4: 50-pixel, gouraud shade, z-buffer, strip
+
+#5: 50-pixel, textur map, persp., point sampl
+
+
+
+imag process
+
+
+
+cine loop - 8-bit	15-36mp/s	37-58 mp/s	60-68 mp/s
+
+cine loop - 16-bit	14 mp/s		25 mp/s		38 mp/s
+
+cine loop - 24-bit	12-21 mp/s	21 mp/s		21 mp/s
+
+contrast stretch #1	14 mp/s		25 mp/s		20 mp/s
+
+bilinear zoom		6 mp/s		11 mp/s		20 mp/s
+
+trilinear interp#2	--		6 mvoxel/s	11 mvoxel/s
+
+
+
+#1: lookup tabl -- 12-,16-bit to 8
+
+#2: trilinear interpol, 8-bit voxel
+
+
+
+configur
+
+frame buffer modul	5		10		20
+
+transform engin mod.	1-3		3-5		5-6
+
+
+
+
+
+as you can see, these ar pretti power workstat, and the best part
+
+is the price.  i would recommend that you call kubota for more inform.
+
+their number is 408-727-8100.  i'm sure thei'll send you an inform you
+
+mai want.  oh, some price:
+
+
+
+low-end
+
+
+
+kenai 3400, e seri w/ 1 tem and 5 fbm --- 27,795 dollar u.s.
+
+kenai 3500, e seri w/ 1 tem and 5 fbm --- 45,345 dollar u.s.
+
+
+
+high-end
+
+
+
+kenai 3400, v seri w/ 6 tem and 20 fbm -- 61,795 dollar u.s.
+
+kenai 3500, v seri w/ 6 tem and 20 fbm -- 79,345 dollar u.s.
+
+
+
+if someon could post a rel comparis with an indigo extrem or
+
+someth i would appreci it.
+
+
+
+hope thi help someon out there,
+
+
+
+brian
+
+
+
+ps i am not affili with kubota in ani wai.  hell, i thought thei made
+
+tractor or someth. :-)
+

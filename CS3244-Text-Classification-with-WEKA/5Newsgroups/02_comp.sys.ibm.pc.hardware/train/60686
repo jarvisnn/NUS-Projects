@@ -1,0 +1,24 @@
+from: rkimbal@athena.qualcomm.com (robert kimbal)
+subject: vlb bu master problem?
+summari: is there a problem with vlb and bu master devic?
+keyword: vlb bu master control scsi
+organ: qualcomm, inc., san diego, ca
+line: 16
+nntp-post-host: athena.qualcomm.com
+
+i am try to put togeth a new pc with vesa local bu.  i would like
+to get vlb card for video and scsi but i have heard of a problem with
+bu master control on vlb.  someth to the effect that thei will
+actual slow down a system.  anyon heard of thi problem?
+
+specif, i am interest in the ultrastor 34f vlb scsi control.
+befor i shell out the buck for thi thing i would like to get the
+straight scoop from someon who know.  doe anyon have thi control?
+ani problem with it?
+
+
+-- 
+
+
+bob kimbal
+rkimbal@qualcomm.com

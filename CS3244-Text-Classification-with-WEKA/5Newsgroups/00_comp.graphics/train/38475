@@ -1,0 +1,47 @@
+from: zyeh@caspian.usc.edu (zhenghao yeh)
+subject: ellips again
+organ: univers of southern california, lo angel, ca
+line: 39
+distribut: world
+nntp-post-host: caspian.usc.edu
+keyword: ellips
+
+
+hi! everyon,
+
+becaus no on ha touch the problem i post last week, i guess
+my question wa not so clear. now i'd like to describ it in detail:
+
+the offset of an ellips is the locu of the center of a circl which
+roll on the ellips. in other word, the distanc between the ellips
+and it offset is same everywher.
+
+thi problem come from the geometr measur when a probe is us.
+the tip of the probe is a ball and the comput just output the
+posit of the ball's center. is the offset of an ellips still
+an ellips? the answer is no! iron, dmi - an american indutri
+standard sai it is ellips. so almost all the softwar which wa
+implement on the base of dmi wa wrong. the softwar wa also sold
+internationali. imagin, how mani peopl have or will suffer from thi bug!!!
+how mani qualifi part with ellips were/will be discard? and most
+importantli, how mani defect part with ellips ar/will be us?
+
+i wa emploi as a consult by a compani in lo angel last year
+to special solv thi problem. i spent two month on analysi of thi
+problem and six month on program. now my solut (nonlinear)
+is not ideal becaus i can onli reconstruct an ellips from it entir
+or half offset. it is veri difficult to find the origin ellips from
+a quarter or a segment of it offset becaus the method i us is not
+analyt. i am now wonder if i didn't touch the base and make thing
+complic. pleas give me a hint.
+
+i know you mai argu thi is not a cg problem. you ar right, it is not.
+howev, so mani peopl involv in the problem "sphere from 4 poit".
+why not an ellips? and why not it offset?
+
+pleas post here and let the other share our interest 
+(i got sever email from our netter, thei said thei need the
+summari of the answer).
+
+yeh
+usc

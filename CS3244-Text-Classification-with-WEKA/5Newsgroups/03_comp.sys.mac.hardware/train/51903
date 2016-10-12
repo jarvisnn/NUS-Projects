@@ -1,0 +1,19 @@
+from: folta@zen.holonet.net (steve folta)
+subject: re: us setwutim() with a pb170
+nntp-post-host: zen.holonet.net
+organ: holonet nation internet access system: 510-704-1058/modem
+line: 13
+
+aep@world.std.com (andrew e page) write:
+>   i can get the mac to go to sleep, but i can't make seem to 
+>make it wake up with setwutim().
+
+the powerbook 170 hardwar doesn't have a wakeup timer.  nor doe the 140.
+the mac portabl had on, and i think the powerbook 100 had on.  i don't
+know about the newer powerbook, but i kind of doubt it.  i got bit by
+thi too, and it took my a while root around on the develop cd
+befor i found thi out.
+
+steve folta
+folta@well.sf.ca.us
+

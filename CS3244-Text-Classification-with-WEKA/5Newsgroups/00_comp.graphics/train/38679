@@ -1,0 +1,29 @@
+from: diablo.uucp!cboesel (charl boesel)
+subject: re: postscript draw prog
+organ: diablo creativ
+repli-to: diablo.uucp!cboesel (charl boesel)
+x-mailer: uaccess lite - macintosh releas: 1.6v2
+line: 22
+
+
+in articl <1993apr19.171704.2147@informatik.tu-muenchen.de> (comp.graphic.gnuplot,comp.graphic), rdd@ut.ipp-garch.mpg.de (reinhard drube) write:
+>in articl <c5ecnn.7qo@mentor.cc.purdu.edu>, nish@cv4.chem.purdu.edu (nishantha i.) write:
+>|> 	could somebodi let me know of a draw util that can be
+>|> us to manipul postscript file.i am specif interest in
+>|> draw line, box and the sort on postscript contour plot.
+>|> 	i have tri xfig and i am impress by it's featur. howev
+>|> it is of no us sinc i cannot us postscript file as input for the
+>|> programm.is there a util that convert postscript to xfig format?
+>|> 	ani help would be greatli appreci.
+>|> 				nishantha
+have you check out adob illustr? there ar a few unix version
+for it avail, depend on your platform. i know of two unix version:
+on for mach (next) and for irix (sgi). there mai be other, such
+as for sun sparcstat, but i don't know for sure.
+
+ttyl,
+
+--
+charl boesel @ diablo creativ |  if pro = for   and   con = against
+cboesel@diablo.uu.holonet.net    |  then what's the opposit of progress?
++1.510.980.1958(pager)           |  what els, congress.

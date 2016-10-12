@@ -1,0 +1,66 @@
+from: support@qdeck.com (technic support)
+subject: re: desqview/x on a pc?
+organ: quarterdeck offic system, santa monica ca
+line: 61
+
+in articl <1qtk84$rn5@picasso.cssc-syd.tansu.com.au> gpatapi@boyd.tansu.com.au write:
+>in articl 14595639@wl.aecl.ca, harrisp@wl.aecl.ca () write:
+>>i us desqview/x and i think it is great. where it realli shine (imho) is
+>>to let unix user log into a pc and run do and window applic with
+>>the displai go to their screen.
+>>you'll need to get:
+>>desqview/x v 1.1
+>>desqview/x v 1.1                           $275 suggest retail
+>>desqview/x to other x system v 1.1        $200 suggest retail
+>>
+>>you also must be run a support network (ftp softwar pctcp,
+>>novel lan workplac for do, sun microsystem pc-nf, beam and whitesid,
+>>wollongong pathwai tcpip or hp microsoft lan manag)
+>>
+>>if you don't have ani of thi network stuff, quarterdeck will give you a
+>>copi of novel tcpip transprot for do with the network manag.
+>>
+>>you can get more info by send email to (appropri) info@qdeck.com.
+
+actual, info@qdeck.com is our custom servic depart. if you have
+technic question, you can write to support@qdeck.com.
+
+>>in my opinion, if you want to have other peopl log in and run
+>>applic at your pc, you'll want to have a 486 33 with 16 meg of ram.
+>>also, the xwindow softwar in desqviewx realli seem to like an et 4000
+>>(tseng lab chipset) base graphic card. person, i found that thing
+>>ran better with a scsi drive in the pc than with esdi drive, but that is
+>>my experi onli
+>
+>what sort of traffic is gener with the x-call?  i am curiou to find
+>out the requir bandwidth that a link must have  if on machin run
+>dv/x is support multipl user (client) and we requir adequ respons
+>time.  anyon have ani idea ??  
+
+i expect the limit factor will be your server machin, not the network
+itself. to give you a real-world exampl, here at quarterdeck we have
+roughli 100 peopl us dvx to talk to a bunch of unix box, novel
+file server, and each other. it's not _too_ much of a load on our
+ethernet (with mayb 4 concentr, so you have 20-30 peopl on each
+segment). if you had a badli load net, or the app you want to run
+were veri network intens, you could run into some slowdown.
+
+but the biggest problem would be the machin itself. sai you have a 486
+33 with plenti of ram and a fast hard disk and network card. if you have
+10 peopl run program off it, you're go to see some slowdown
+becaus you're now on (effect) a 3.3 mhz 486. of cours, dvx will
+attempt to see if task ar idl and make sure thei give up their time
+slice, but if you have 10 work program run, you'll know it.
+
+have said that, if you can tweak the program be run (by ad
+in call to give up time slice when idl and that sort of
+thing), you could probabl run 15-20 peopl on a given machin befor
+you start see slowdown again (thi time from network bandwidth).
+it all realli depend on what the program ar do (ie. you're go
+to see a slowdown from x-bandwidth a lot sooner if your app ar all
+do network thing also...)
+-- 
+       quarterdeck offic system - internet support - tom bortel
+ price/order : info@qdeck.com  |  tech question : support@qdeck.com
+  bb: (310) 314-3227 * fax: (310) 314-3217 * compuserv: go quarterdeck
+   q/fax: (310) 314-3214 from touch-tone phone for technot on demand!

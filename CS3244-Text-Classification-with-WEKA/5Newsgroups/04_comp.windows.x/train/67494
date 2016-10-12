@@ -1,0 +1,29 @@
+from: greg@softwar.mitel.com (gregori lehman)
+subject: look for draw packag
+organ: mitel. kanata (ontario). canada.
+line: 24
+
+greet.
+
+i am develop an applic that allow a *user* to interact
+creat/edit/view a visual "model" (i.e. topolog) of their network, and
+i wa wonder if anyon knew of ani builder tool that exist to
+simplifi thi task.
+
+in the past i have us visual edg's uim/x product to develop other
+gui, so i am familiar with uimss in gener.
+
+the topolog will support object and connect link.  onc the
+topolog is creat, i want to provid the user with capabl to
+support group, zoom, etc.
+
+i am look for some form of a higher abstract other than x draw
+routin to accomplish thi.  specif, the zoom and group
+aspect mai prove difficult, and certainli time consum,  if i have
+to "roll my own".
+
+suggest?
+
+-greg
+
+greg@softwar.mitel.com

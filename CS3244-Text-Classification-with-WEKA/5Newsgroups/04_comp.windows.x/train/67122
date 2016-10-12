@@ -1,0 +1,22 @@
+from: wam3090@yak.com (bill massena)
+subject: function kei to text string translat
+organ: boe comput servic, seattl
+line: 17
+
+
+	i want to press a function kei and have a text string appear in an
+xmtext widget.  when i put
+
+	*xmtext.translat: #augment \n\
+		<kei>f1:  insert-string(hello)
+
+in my resourc file, the translat doesn't happen.  if i put
+
+	*xmtext.translat: <kei>f1:  insert-string(hello)
+
+in the file, i get the text string hello when f1 is press, but no other 
+kei work, which make sens sinc the default translat mode is "replac".  
+
+	do i have a syntax problem here, or someth deeper?
+
+..bill massena (wam3090@yak.boe.com)

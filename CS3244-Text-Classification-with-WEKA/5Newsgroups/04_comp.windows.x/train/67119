@@ -1,0 +1,63 @@
+from: markhof@ls12r.informatik.uni-dortmund.de (ingolf markhof)
+subject: re: titl for xterm
+organ: cs depart, dortmund univers, germani
+line: 55
+distribut: world
+nntp-post-host: ls12r.informatik.uni-dortmund.de
+keyword: xterm
+
+in articl <1quh74$r71@irz401.inf.tu-dresden.de>, beck@irzr17.inf.tu-dresden.de (andr beck) write:
+|> 
+|> in articl <c5ol74.3b1@aeon.in-berlin.de>, thoma@aeon.in-berlin.de (thoma wolfram) write:
+|> |> >hei gui!
+|> |> >i work on mani station and would like thi name and current lognam
+|> |> >to be in a titl of xterm when it's open and a machin name onli
+|> |> >when it's close. in other word, i want $host and $lognam to appear
+|> |> >as a titl of open xterm and $host when xterm is close.
+|> |> >how can i do it?
+|> |> 
+|> |> almost all window manag (twm, mwm, olwm and their deriv) support
+|> |> escap sequenc for it. for your purpos put follow into your
+|> |> .login (if you're us csh or tcsh), for sh you have to modifi it.
+|> |> 
+|> |> if ( "$term" == "xterm" ) then
+|> |> 	echo "^[]2;${lognam}@${host}^g^[]1;${host}^g"
+|> |> endif
+|> |> 
+|> 
+|> 1) thi is not a featur of the window manag but of xterm.
+|> 2) thi sequenc ar not ansi compat, ar thei ?
+|>    doe anyon know if there ar compat sequenc for thi and what thei
+|>    ar ? i would think thei ar dc (devic control sequenc) introduc,
+|>    but mai be a csi sequenc exist, too ?
+|>    thi must work on a dxterm (vt and ansi compat), it mai not work
+|>    on xterm.
+
+it work on xterm. at least i have no problem with it. - back to the origin
+question:
+
+i usual start new xterm by select the proper menu entri in my desktop
+menu. here is a sampl command:
+
+	xterm -sl 999 -n ls12i -titl ls12i -e rlogin ls12i &
+
+the -n and -titl option give the text for window and icon. as i us the
+tcsh (a wonder extens of the csh), i can do the follow:
+
+i have an
+
+	alia precmd echo -n '^[]2\;${host}:$cwd^g'
+
+in my ~/.tcshrc. thi is a special alia for tvtwm. it is execut each time
+befor print the prompt. so, i have the current host name and the current
+directori path in the titl bar of my xterm.
+
+------------------------------------------------------------------------------
+      ____                                                                    
+  unido  /  ingolf markhof  univers of dortmund, ls informatik xii         
+ ___/   /                   p.o. box 500 500, d-4600 dortmund 50, f.r. germani
+ \  \  /                    phone: +49 (231) 755 6142, fax: +49 (231) 755 6555  
+  \__\/                     email: markhof@ls12.informatik.uni-dortmund.de    
+                                                                              
+------------------------------------------------------------------------------
+

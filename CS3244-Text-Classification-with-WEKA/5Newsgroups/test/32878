@@ -1,0 +1,2474 @@
+from: lee@sq.sq.com (liam r. e. quin)
+
+subject: open look gui frequent ask question
+
+organ: softquad inc., toronto, canada
+
+expir: 10 jun 1993 06:02:12 gmt 
+
+line: 1231
+
+
+
+
+
+frequent-ask question about the open look graphic user interfac.
+
+
+
+if your question isn't here, pleas try (at *least*)
+
+	man openwin
+
+	man xnew
+
+	man 7 xview
+
+and look in the appropri manual list in the bibliographi below
+
+befor post to the comp.window.open-look, comp.window.x or
+
+alt.toolkit.xview newsgroup and/or their correspond mail list.
+
+
+
+special note:
+
+    * i have not updat thi faq for the recent-announc openwindow 4,
+
+      due to ship later thi year.
+
+    * ye, sun is move to motif, along with all of cose.  but the motif to
+
+      which thei move will be a new motif, with some of the open look ui
+
+      featur ad.
+
+    * ye, openwindow 4 will us dp instead of new.  new is dead.
+
+      thi mean tnt is dead, too.
+
+    * xview and olit will be support, but probabl not enhanc after the
+
+      next releas.  i don't know if there will be a sourc releas of
+
+      xview 3.1 or not.
+
+    * the cose environ will includ at least some of sun's deskset,
+
+      port to motif.  look for calendar manag and mailtool, at least.
+
+    * ye, the new mailtool will be mime-compliant.
+
+
+
+frequent ask question for x11 ar post to comp.window.x monthli.
+
+
+
+thi is version: $revis: 1.48 $; last post version:  1.46
+
+
+
+content: (in rn and trn you can us control-g to go to the next topic)
+
+
+
+    subject: terminolog: open look, openwindow, x11, xview, (mo)olit, motif
+
+    subject: window manag -- olwm, olvwm
+
+    subject: openwindow, termin, and other displai
+
+    subject: configur file: get start with openwindow
+
+    subject: kei bind, cut and past
+
+    subject: applic: find out...
+
+    subject: deskset, calendar manag, etc.
+
+    subject: troubl shoot: strang error messag
+
+    subject: troubl shoot: it won't let me type
+
+    subject: troubl shoot: not author to us displai
+
+    subject: troubl shoot: other common problem
+
+    subject: troubl shoot: xview problem
+
+    subject: font
+
+    subject: environ variabl
+
+    subject: where can i get it? ftp, implement, etc...
+
+    subject: bibliographi -- book, manual, journal, paper, beer-mat
+
+    subject: get thi file, revis histori, recent chang
+
+
+
+
+
+subject: terminolog: open look, openwindow, x11, xview, olit, moolit, motif
+
+
+
+@ what is open look?
+
+    open look is a specif of a graphic user interfac (gui).
+
+    a gui determin the `look and feel' of a system -- the shape of
+
+    window, button and scroll-bar, how you resiz thing, how you
+
+    edit file, etc.
+
+
+
+    the open look gui is specifi, develop and maintain jointli by
+
+    sun microsystem and at&t (or usl?).
+
+
+
+    see also:
+
+	bibliographi
+
+
+
+@ what is openwindow?
+
+    openwindow is a window environ that conform to the open look
+
+    graphic user interfac specif.  it's compat with the
+
+    x11 window system from mit as well as (current) sun's new and sunview,
+
+    so you can intermix program written for ani of those system.
+
+    it come from sun and also with system v releas 4 from certain vendor.
+
+    openwindow is sometim also call openwin or xnew, after the
+
+    program us to start it and the main execut itself, respect.
+
+    it should not be call `window' or 'open look' or `openlook', as
+
+    these term ar either wrong or appli to someth els.
+
+    a commer openwindow sourc licenc cost about $5,000 for the server,
+
+    plu about $25,000 for deskset, and anoth $40,000 for tooltalk.
+
+    the current version of openwindow for variou platform ar:
+
+	suno 4.1.1 on sun 3: 2.0
+
+	solari 1.x (suno 4.1.x) on sparc: 3.0
+
+	solari 2.0 (suno 5) on sparc: 3.0.1
+
+
+
+    see also:
+
+	mix x11 and openwindow
+
+	where can i get it?
+
+
+
+@ what ar olit, xview and tnt?
+
+    these ar all toolkit for programm to us in develop program
+
+    that conform to the open look specif.  see the bibliographi
+
+    for document on the individu toolkit.  here's a brief summari:
+
+
+
+    olit wa at&t's open look intrins toolkit for the x window system;
+
+    it us a widget set, and wa probabl the easiest for peopl who were
+
+    alreadi x11/xt programm to learn.  you could bui the sourc from at&t,
+
+    although you didn't get the same version tht sun ship.  sun includ the
+
+    olit librari in openwindow (q.v.); it is also often includ in
+
+    system v releas 4.  it wa written in c.  the releas of olit in
+
+    openwindow 3.0 wa olit 3.0.  olit support pass to usl (then a
+
+    divis of at&t, now own by novel), who replac it with moolit (q.v.).
+
+    note that becaus of the natur of xt subclass, you will probabl
+
+    want or need olit sourc in order to develop a larg applic or
+
+    anyth els that us subclass.
+
+    [see the proceed of the 1991 x technic confer]
+
+
+
+    xview is sun's toolkit for x11, written in c.  xview is similar in
+
+    programm interfac to sunview.  there's even a shell script to help
+
+    migrat sourc code from sunview to xview.	 xview is often said to be
+
+    the easiest toolkit to learn if you ar not familiar with x window.
+
+    the xview toolkit is includ in openwindow, and full sourc is
+
+    avail by anonym ftp from export.lc.mit.edu (and elsewher).
+
+    the current version of xview from sun is 3.0.
+
+    despit rumour to the contrari -- some even from within sun -- the
+
+    xview toolkit is *not* about to be drop by sun.  xview *will* be
+
+    includ in the next releas of openwindow, unlik new.
+
+    on the other hand, the xview toolkit is not like to receiv as much
+
+    attent from sun in the futur as olit.
+
+
+
+    the new toolkit (tnt) wa an object-orient program system base
+
+    on the postscript languag and new.  tnt implement mani of the
+
+    open look interfac compon requir to build the user interfac of
+
+    an applic.  it's current includ in openwindow.
+
+
+
+    the current version of tnt from sun is 3.1; releas 3 contain some
+
+    incompat with `tnt' 1.0 and tnt 2.0, but sun ar commit to
+
+    support the api, at least until thei stop new support some time
+
+    later thi year and replac it with displai postscript.  wail.
+
+    you might ask what `is commit to' mean in thi context; the
+
+    answer seem to be that it mean absolut noth.
+
+    sun current assert that it is commit to olit, howev.
+
+
+
+    the c++ user interfac toolkit (uit) consist of an object-orient c++
+
+    class librari layer on top of xview and a tool to gener code from
+
+    devguid 3 gil file.  the uit also includ featur that simplifi
+
+    event manag and the us of postscript and color.  it is said to be
+
+    compat with openwindow v2 and v3, and presum v3.0.1, sinc the
+
+    releas mention that it work on solari 2.
+
+    uit is not an offici sun-support product but an ongo project of
+
+    variou peopl within sun.  it can be found on export.lc.mit.edu in
+
+    the mit contrib directori as uitv2.tar.z (us binari mode!).
+
+
+
+@ where doe motif fit in?
+
+    it doesn't :-).  motif is an altern graphic user interfac that
+
+    is be develop by osf.	it ha a `look and feel' reminisc of
+
+    microsoft window and the os/2 present manag.  there ar no non-
+
+    commerci motif toolkit avail, although the motif sourc is sold
+
+    reason cheapli by osf.	although motif is current avail on
+
+    more platform than openwindow, the open look gui is almost certainli
+
+    us on mani more machin, simpli becaus sun (and sysvr4) have such a
+
+    larg instal base.
+
+    sun's cd/ware volum 2 contain a roadmap for improv motif
+
+    applic by convert them to olit [:-)]; there ar also note in
+
+    the `period tabl' olit demo, $openwinhom/demo/olitt.
+
+
+
+@ what is moolit?
+
+    moolit is a version of olit from at&t/usl that let user choos between
+
+    a motif and an open look ui feel at run-time.  it will be part of system v
+
+    releas 4.2.
+
+    contact: joann newbauer, jo@usl.com, (908) 522-6677
+
+
+
+@ what about that displai postscript thing?
+
+    sun and adob have agre that sun will includ the dp extens to x
+
+    in the next releas of openwindow.  dp is essenti a badli design
+
+    hack on top of a slow level 2 postscript interpret intend to give a
+
+    veri small subset of the function of new whilst simultan
+
+    be harder to us, as i understand it.  the onli real advantag it
+
+    ha over new is that the manual is much smaller, be gener less
+
+    complet; dp is also avail on more kind of machin.
+
+    perform on our rs/6000 is not suitabl for interact work;
+
+    what it will be like on the sparcstat remain to be seen.
+
+    note that wherea x/new font ar share by both subsystem, the dp
+
+    extens to x doe _not_ make type 1 postscript font avail to
+
+    ordinari x11 program.  it is not like atm on a pc in thi regard.
+
+    (there is at least on third-parti version which doe make font
+
+    avail, howev)
+
+
+
+subject: window manag -- olwm, olvwm
+
+
+
+@ what ar olwm and olvwm?
+
+    thei ar window manag.  a window manag is the part of the x window
+
+    system (e.g. x11) that is respons for decid how to lai out window
+
+    on the screen, and for manag the user's interact with the window.
+
+
+
+    olwm is the standard open look window manag.
+
+    it's includ with all of the openwindow (q.v.) implement, and
+
+    you can also get the sourc by ftp, sinc sun donat it.
+
+
+
+    olvwm is a version of olwm that manag a `virtual desktop' (henc the
+
+    `v' in it name).  it show a littl map on the screen, with the
+
+    current displai area repres by a littl rectangl.	 you can
+
+    move around by drag the rectangl or with the arrow kei.  thi
+
+    let you run sever client (applic) and move the displai around
+
+    from on to the other.  olvwm wa deriv from the openwindow 3.0 olwm
+
+    by scott oak; you need to have xview 3.0 to compil it.
+
+    get olvwm from an ftp site such as export.lc.mit.edu (in the contrib
+
+    directori; there ar three patch).
+
+
+
+@ can i us my favorit window manag with openwindow instead of olwm?
+
+    ye.  if you us twm, for exampl, or mwm, you won't be abl to us
+
+    the pin and unpin featur of olwm, and you (probabl) won't see the
+
+    footer some window us to displai certain messag.
+
+
+
+    if you us twm, you'll want to us the f.delet function to unpin menu
+
+    and get rid of program that don't have a `quit' button when not run
+
+    under olwm.
+
+    for twm, put thi in your $home/.twmrc:
+
+	lefttitlebutton "target" = f.delet
+
+    where "target" is a 16x16 icon from /usr/includ/x11/bitmap.
+
+    altern, try
+
+	# add a menu to each window manag by twm or tvtwm
+
+	lefttitlebutton ":menu" = f.menu "ol.menu"
+
+
+
+	menu "ol.menu" {
+
+	    "quit"         f.delet
+
+	}
+
+
+
+    for mwm, you can doubl-click on the menu icon on the left of the titl
+
+    bar to dismiss a pop-up window (i am told).
+
+
+
+    see the manual page for your window manag (twm, etc).
+
+
+
+subject: openwindow, termin, and other displai
+
+
+
+@ can i us olwm and olvwm without openwindow or on an x termin?
+
+    the openwindow xnew server combin sunview, new (postscript) and x11.
+
+    thi mean that it can run program compil for ani of those system.
+
+    unfortun, it mean that some openwindow program need either new
+
+    or sunview support, and thu won't run on an x termin.  thi includ
+
+    pageview in particular.
+
+
+
+    you can us olwm or olvwm (see abov) on an x termin or a non-open-
+
+    window displai, and most open look client (e.g. olit or xview on)
+
+    will work perfectli well.  you mai find that you get complaint about
+
+    font not be found.  if so, see the font section below.
+
+    if you ar run the window manag built-in to an ncd termin, you
+
+    mai have problem with input focu; set *input: true in the termin's
+
+    xdefault file in /usr/lib/x11/xdm mai or mai not help.
+
+
+
+
+
+subject: configur file: get start with openwindow
+
+     
+
+@ what configur file do i need to know about?
+
+
+
+    .xinitrc and .xsessionrc
+
+
+
+    the first time you run openwindow, a .xinitrc file will be creat in
+
+    your login directori ($home).  if it alreadi exist, you might have to
+
+    edit it somewhat; it's simplest to move it and ani other old x11 file
+
+    you have to anoth directori, and then merg the old and new file.
+
+
+
+    if your site us xdm, you should us .xsession instead of .xinitrc,
+
+    sinc xdm doesn't look at your .xinitrc file.
+
+
+
+    .openwin-init, .openwin-menu and .openwin-sy
+
+
+
+    these ar option file you can creat in your $home directori,
+
+    depend on which version of olwm or olvwm you us.
+
+    look in $openwinhom/lib (normal /usr/openwin/lib) for these file
+
+    without the lead . and copi ani you want to chang.  you mai need
+
+    to edit your .xinitrc to get them recogn.  if you ar not on an
+
+    x termin, you will want to run a consol window (such as cmdtool -c,
+
+    shelltool -c, xterm -c) or chuck musciano's "contool" program so that
+
+    system output will be direct there instead of write over your screen.
+
+    note that .openwin-sy is not execut unless you edit .xinitrc.
+
+
+
+    .xdefault
+
+
+
+    you can put x window resourc specif in here.  in particular,
+
+    it is a good idea to includ at least:
+
+	openwindow.focusleni:	true
+
+	*input: true
+
+    these allow non-icccm-compliant program to receiv input even if thei
+
+    forget to ask for it.
+
+
+
+    prop, the program that run when you select `properti' from the default
+
+    root menu under olwm or olvwm, write your choic into .xdefault.
+
+    don't put comment in .xdefault, sinc `prop' delet them.
+
+
+
+    .startup.ps
+
+
+
+    thi is the new user profil file, read by openwindow (actual xnew)
+
+    on startup.	 thi is document in the new program manual, near the
+
+    back.  the most us thing to put here is postscript code to chang
+
+    the keyboard repeat rate, although you must be veri care, sinc a
+
+    syntax error in the postscript mean that xnew will either not start up
+
+    at all or will get broken in strang wai.	the new manual give code
+
+    that is both incorrect and insuffici.
+
+    warn: thing in thi file rare work on both openwindow 2 and 3.
+
+
+
+    note that the mous speed is best set in your .xinitrc with xset m; see
+
+    the man page for xset ("man xset", and "xset -help") for more inform.
+
+
+
+    here's what $home/.startup.ps  should look like if you want a delai of
+
+    about a third of a second (300000 microsecond), and a repeat rate of
+
+    twenti or so kei per second (30000 microsecond between repeat) for
+
+    openwindow 3.  you'll have to experi a bit becaus the repeattim
+
+    is the delai between kei sent, and thu doesn't includ the time to
+
+    process each kei, which is probabl higher on my 4/110 than on your
+
+    supersparc 10/51 gti inject :-)  again, thi is for openwindow 3...
+
+
+
+	% don't want the demo - see p. xxxii of new toolkit refer manual
+
+	% /includedemo? fals def
+
+
+
+	userprofil begin
+
+	    /keyrepeatthresh 0 300000 timev storetimev def
+
+	    /keyrepeattim 0 30000 timev storetimev def
+
+	    % note: 300000 and 30000 differ greatli...
+
+	end
+
+
+
+    you must also have a .user.ps file in the same directori, like thi:
+
+
+
+	/new 3 0 findpackag beginpackag
+
+	/tntcore 3 0 findpackag beginpackag
+
+	/tnt 3 0 findpackag beginpackag
+
+
+
+	classrepeatkei pop	% forc repeat.ps to autoload
+
+
+
+	endpackag endpackag endpackag
+
+
+
+    if you chang these paramet, you can test them without restart the
+
+    openwindow server like thi:
+
+	$ psh -i .startup.ps
+
+	welcom to x11/new version3
+
+	$ psh -i
+
+	welcom to x11/new version3
+
+	/classinit classrepeatkei send
+
+	%%% now press control-d
+
+
+
+    you can also either of these two file (.startup.ps and .user.ps) to make
+
+    the root window be "retain", so that a postscript draw on the
+
+    background won't be eras when you move window:
+
+	frambuff /retain true put
+
+    will do thi.  note that thi mai increas the amount of memori us
+
+    by the new server (xnew) dramat.
+
+    
+
+    see also:
+
+	troubl shoot: it won't let me type
+
+	troubl shoot: is there an easi wai to edit xdefault?
+
+	environ variabl
+
+
+
+@ how can i configur open look for a left-hand mous and keyboard?
+
+    you can us xmodmap to chang the mous button, but be prepar for on
+
+    or two occasion surpris.  see also "man 7 xview" for a list of
+
+    keybind you can chang, at least for xview program.
+
+
+
+    with openwindow 2.0, you can us defaultsedit to set the mous map
+
+    and then let sunview handl them.  the statu return by svenv should
+
+    tell you whether your server is run under sunview or not; put thi
+
+    in your .xinitrc:
+
+
+
+    if eval `svenv -env`
+
+    then
+
+	xmodmap -e "pointer = 1 2 3"
+
+	input_from_default
+
+    els
+
+	xmodmap -e "pointer = 3 2 1"
+
+    fi
+
+
+
+
+
+@ how can i get the screen to go blank when the system is idl?
+
+
+
+    run screenblank from /etc/rc.local if you can; it's a bore but
+
+    effect screen saver.  see `man screenblank'.
+
+    under solari 2 you'll need to copi screenblank from an older system, as
+
+    it's not suppli.  then add a new file in /etc/rc2.d to make the system
+
+    run screenblank automat.
+
+
+
+subject: kei bind, cut and past
+
+
+
+@ how do i cut and past between xterm and openwindow program?
+
+
+
+    to go from xterm to textedit (sai):
+
+    * select the text you want to copi by drag the select mous button
+
+      in xterm
+
+    * press copi in the xterm (thi kei is l6, or meta+c (the o'reilli
+
+      xview manual get thi wrong)
+
+    * move to the textedit window, and press past (l8 or meta+v)
+
+
+
+    if thi doesn't work, see troubl shoot: cut and past
+
+
+
+   to go the other wai, from textedit to xterm:
+
+    * select the text in textedit.  no need to us copi
+
+    * move to the xterm window and press adjust (the middl mous button).
+
+    * you can also us the copi/cut and past button.
+
+
+
+@ copi/past is bore.	 what short-cut ar avail?
+
+
+
+    quick copi within textedit, mailtool, etc:
+
+    * click select to get a text caret where you want the copi text to go
+
+    * press and hold down the past (or cut) button
+
+    * select the text you want to copi/move.  you'll see that it's underlin
+
+      or cross out, as appropri.  (in the jed demo it goe grei)
+
+    * let go of the past (or cut) button.
+
+    * the text you underlin or cross out appear at the insert caret.
+
+
+
+    drag and drop to move a select
+
+    * select the text you want to copi or move, by drag or multipl-
+
+      click the select or adjust mous button
+
+    * put the mous pointer anywher within the select
+
+    * press and hold down down the select mous button, and move the mous
+
+      pointer a littl to the right; you'll see the cursor chang to be the
+
+      first 3 letter of the text (or some other icon).
+
+    * still hold select down, move the mous over the point where you want
+
+      to drop the text
+
+    * you mai see the mous pointer chang to a rifl-sight or target, to show
+
+      that it's ok to drop thing here
+
+    * let go of select, and the text is move.	thi work in text field of
+
+      dialogu box as well as in text subwindow.
+
+
+
+    drag and drop to copi a select
+
+    * thi is the same as us drag and drop to move a select, except that
+
+      you must hold the control kei down as well as the select mous button.
+
+
+
+@ what ar the default kei bind in textedit and elsewher?
+
+
+
+    see the man page for textedit(1) for some of them.
+
+    in gener, the edit/move command go in the opposit direct when
+
+    shift - e.g. ctrl+w delet a word, and ctrl+w delet the word to the
+
+    right of the insert point.
+
+
+
+	meta-i - includ file	    meta-f - find select (forward/backward)
+
+
+
+	ctrl-a - start of line	    ctrl-< - back word
+
+	ctrl-e - end of line	    ctrl-> - forward word
+
+	ctrl-w - delet word	    ctrl-u - delet to start/end of line
+
+	ctrl-return - move to end/start of document
+
+
+
+    see the o'reilli xview refer manual for a list of some of the default
+
+    kei; see also the olwm or olvwm manual page.
+
+
+
+@ what can i put in my .ttysrc?	 where is it document?
+
+
+
+    see the manual page for shelltool.
+
+
+
+subject: applic: find out...
+
+    contact sunsoft (or sun) and ask for the catalyst open look guid,
+
+    which list over 200 page of applic, and also the _huge_
+
+    catalyst list of product for sun, updat six-monthli.
+
+
+
+    sun's free cdware cd/rom each contain demo version of sever popular
+
+    open look applic.  often you can simpli contact the vendor
+
+    concern to have the licens upgrad from demo, and receiv the full
+
+    product document.
+
+
+
+    sunpic produc a cd/rom for newsprint user, printer's pallat, which
+
+    contain newsprint driver for a varieti of printer and plotter, as
+
+    well as 600 scaleabl font that you can licens.
+
+
+
+    there is a separ faq post in comp.window.open-look that list
+
+    a number of free and commerci aplic; mail lee@sq.com for a
+
+    copi, includ open look ui applic list in the subject for a
+
+    faster repli.
+
+
+
+subject: deskset, mailtool, calendar manag, etc.
+
+
+
+@ is there a tty-base interfac to cm (calendar manag)?
+
+    ye, cm_delet, cm_insert and cm_lookup; these all have manual page.
+
+    if "man cm_delet" doesn't work or give strang messag, see under
+
+    troubl shoot: strang error messag, below.
+
+
+
+@ how can i arrang to have my .signatur includ in my outgo mail?
+
+    the best wai is:
+
+    $ cd
+
+    $ cp /usr/lib/.textswrc .
+
+    $ chmod +w .textswrc
+
+    edit .textswrc (us vi, textedit, or whatev you prefer)
+
+    add the follw:
+
+	kei_right(3)    filter
+
+	cat ~/.signatur
+
+    (you might need to chang ~ to $home)
+
+
+
+    now press r3 will insert your .signatur file.
+
+
+
+
+
+
+
+subject: font
+
+
+
+@ doe openwindow support type 1 postscript font?
+
+    ye, under either solari 2.0 or 2.1 (i'm not sure which).
+
+    or, not yet, in other word.
+
+
+
+    if you have framemak there is a util to import them, i'm told.
+
+    the 57 font suppli with openwindow ar fulli hint, though, and
+
+    compar them to the microsoft window and appl truetyp font is
+
+    interest...  the f3 font format is describ in a public from the
+
+    sun openfont group, list in the bibliographi below.  document on
+
+    the unbundl version of typescal is also avail from sun openfont.
+
+
+
+    you can bui f3 font from sunpic, monotyp, linotyp, urw and probabl
+
+    other major foundri.
+
+
+
+    sunpic' newsprint softwar support type 1 font.
+
+
+
+@ improv font render time
+
+    although the sun type render (typescal) is pretti fast, it's not as
+
+    fast as load a bitmap :-).  you can pre-gener bitmap font for size
+
+    that you us a lot, and you can also alter and access the font cach
+
+    paramet.	 if you have a lot of memori you might want to increas the
+
+    font cach size.
+
+	$ psh -i
+
+	welcom to x11/new version3 <--- psh will sai thi at you
+
+	currentfontmem =	% type thi line ...
+
+	300	% and here's whai my server wa us -- 300 kbyte
+
+	1024 setfontmem
+
+	% just to check:
+
+	currentfontmem =
+
+	1024
+
+    see pp. 328ff of the new 3.0 programm's guid.  you need to sai psh -i
+
+    so that the postscript packag ar load - see the psh man page.
+
+
+
+@ make bitmap font for faster startup:
+
+	$ mkdir $home/myfont
+
+	$ cd $home/myfont
+
+	$ makeafb -20 -m $openwinhom/lib/font/bembo.f3b
+
+	creat bembo20.afb
+
+	$ convertfont -b bembo20.afb
+
+	bembo20.afb->./bembo20.fb
+
+	char paramet greater than number of charact suppli.
+
+	$ ls
+
+	bembo20.afb	bembo20.fb	synonym.list
+
+	$ bldfamili
+
+	* bembo		       ./bembo.ff (encod: latin)
+
+	cat: ./compat.list: no such file or directori
+
+	$ xset +fp `pwd`
+
+	$ xset fp rehash
+
+
+
+    if you want the server to see your new font directori everi time,
+
+    add thi directori to your fontpath environ variabl in on
+
+    of your start-up file, e.g. .login or .profil.
+
+
+
+@ convert between font format (convertfont, etc.)
+
+    you can also us folio font with an x11 server, by convert them to a
+
+    bitmap (x11 bdf format) first.  your licenc forbid you from us the
+
+    font on anoth machin, and unless you have newsprint you shouldn't
+
+    us them for print.  have said all that...  you can us makeafb and
+
+    convertfont to gener bdf file that you can compil with bdftosnf or
+
+    bdftopcf.
+
+
+
+    us mftobdf (from the seetex distribut) to convert tex pk font to
+
+    x11 bdf format, which you can then us with either x11 or oenwindow.
+
+
+
+    you can also us der mous's "getbdf" to get bdf font from a run
+
+    x displai server -- ftp: larri.mcrcim.mcgill.edu (132.206.1.1) /x/getbdf
+
+
+
+@ xview/olit font at 100 dpi
+
+    there aren't ani.  more precis, the variou text font, such as
+
+    lucida typewrit san, ar avail at 100 dpi, and in fact ar
+
+    scalabl under openwindow.	 the glyph font ar bitmap, and don't
+
+    scale veri well.
+
+
+
+subject: troubl shoot: strang error messag
+
+
+
+@ no manual entri for cm_lookup
+
+
+
+    if man doesn't seem to find openwindow command, even though you ar
+
+    run openwindow, try set the manpath environ variabl:
+
+	manpath=$openwinhom/share/man:/usr/man; export manpath
+
+    or
+
+	setenv manpath $openwinhom/share/man:/usr/man
+
+    for csh user.  $openwinhom should be /usr/openwin on most system.
+
+
+
+@ window: window creation fail to get new fd 
+
+@ window: base frame not pass parent window in environ 
+
+@ cannot creat base frame.  process abort. 
+
+
+
+    these messag all come from sunview program.  sunview wa an
+
+    earlier window system for sun, and wa not network.  some of
+
+    the sunview program ar still around in /usr/bin, and have name
+
+    that ar the same as their openwindow counterpart.  you almost
+
+    certainli want to run the program in $openwinhom instead.
+
+
+
+    set your path so that $openwinhom/bin (and $openwin/bin/xview for
+
+    openwindow 2) come befor /bin (or /usr/bin, thei're the same), or
+
+    you'll get the sunview version of mailtool, cmdtool, shelltool, etc.
+
+
+
+@ memori fault - core dump
+
+    if you get thi from the binder, or if binder vanish suddenli,
+
+    get the follow patch:
+
+	100493-02 binder
+
+	100524-03 cetabl
+
+	100626-03 tooltalk
+
+
+
+@ troubl compil xt, xmu or olit program: _get_wmshellwidgetclass
+
+ 
+
+    if you ar us openwindow 3.0 (x11r4-base xt), contact your local
+
+    sun offic and request the follow patch:
+
+100512-02   4.1.x openwindow 3.0 libxt jumbo patch
+
+100573-03   4.1.x openwindow 3.0 undefin symbol when us share libxmu
+
+
+
+    if you can't instal the patch, a workaround is to add 
+
+	-u get_wmshellwidgetclass -u get_applicationshellwidgetclass
+
+    on the link (ld or cc ... -o ...) line.  an altern is to add
+
+	-assert nodefinit
+
+    to cflag in your makefil, or even in imak.tmpl.
+
+
+
+
+
+subject: troubl shoot: it won't let me type
+
+
+
+@ when i try to type into some program, i just get beep or noth happen
+
+    it is a good idea to includ at least:
+
+	openwindow.focusleni:	true
+
+	*input: true
+
+    in your .xdefault file, as these allow non-icccm-compliant program to
+
+    receiv input even if thei forget to ask for it.
+
+    see the next item for edit .xdefault
+
+
+
+subject: troubl shoot: cut and past not work
+
+
+
+@ i can't past from xterm to xview (includ sun deskset) program
+
+    under openwindow 2, you need to add the follow either to your
+
+    $home/.xdefault file, or to $openwinhom/lib/app-default/xterm instead:
+
+
+
+	xterm*vt100.translat: #overrid \
+
+		<kei>l6:select-set(clipboard)\n\
+
+		<kei>l8:insert-select(clipboard)
+
+  
+
+    you must not move the mous between end the select and press
+
+    l8 (the past kei)!
+
+
+
+    under openwindow 3, thi is alreadi in the app-default file, so if it
+
+    isn't work, check that xfilesearchpath is set to
+
+	/usr/openwin/lib/%t/%n%s
+
+    and if it isn't, either set it or copi/merg the abov line from
+
+    $openwinhom/lib/app-default/xterm into /usr/lib/x11/app-default/xterm.
+
+    [see also: environ variabl]
+
+
+
+    thi version automat put each xterm select onto the clipboard:
+
+	xterm*vt100.translat: #overrid\n\
+
+	    ~ctrl ~meta<btn2up>: insert-select(primari,cut_buffer0)\n\
+
+	    ~ctrl ~meta<btnup>: select-end(primari,cut_buffer0,clipboard)\n\
+
+	    <keypress>l8: insert-select(clipboard)
+
+    [note: be sure that the \n\ is at the veri end of the line, there must
+
+     be no follow space, and ani + or | sign show that thi faq file
+
+     wa alter must also be remov!]
+
+
+
+    if you ar us x11r5, you mai find that ad the line
+
+<kei>l10: start-extend() select-end(primari, clipboard, cut_buffer0)\n\
+
+       <keyreleas>l10: kill-select() \n
+
+    befor the <keypress>l8 line will make l10 (cut) work as a cut kei!
+
+
+
+    if you alter $home/.xdefault instead, you must us what x call a
+
+    `more specif' resourc name:
+
+	xterm.vt100.translat
+
+    will do.
+
+
+
+@ i can't past from xview (includ sun deskset) program to xterm
+
+
+
+    if you don't have the sun l kei on the left of your keyboard, you can
+
+    us meta-x, meta-c and meta-v for cut, coi and past respect.
+
+    you can chang the kei by ad the follow two line to
+
+    your .xdefault file, edit as you wish (the valu shown here ar the
+
+    default):
+
+
+
+	openwindow.keyboardcommand.copi: c+meta,l6
+
+	openwindow.keyboardcommand.past", "v+meta,l8
+
+    
+
+    list of resourc ar in the manual page for xview, and also in the
+
+    thinnish blue book `companion to volum 7, xview refer manual' from
+
+    o'reilli, and also in the olwm and olvwm manual page.
+
+
+
+@ i alwai get the same piec of text when i press past (l8, meta+v)
+
+    remov the file /tmp/textsw_shelf and see if that help; see also the
+
+    next item.
+
+
+
+@ cut copi and past don't work at all (openwindow onli)
+
+    oh dear.  us ps -xuaww | grep xv  to check that sv_xv_sel_svc is run
+
+    and that either you or root start it, depend on whether you start
+
+    openwindow with "openwin" or by log in through xdm.
+
+    if not, start it.  if it di, check that there is no /tmp/.sv_xv_sel_svc
+
+    befor restart it - you mai need to be root to remov it, or you can
+
+    reboot your workstat.
+
+    check that there is space in /tmp (us "df /tmp"), and also see if there
+
+    ar a lot of file there with name like /tmp/tty.txt.a01246; if there ar
+
+    sever hundr of them, cut and past mai take so long that it time out.
+
+
+
+    quit ani deskset tool such as mailtool, filemgr and cm (calendar), start
+
+    a termin emul and remov and /tmp/tty.txt* and /tmp/text* file
+
+    that ar still there.  it's simplest to quit openwin and start it again
+
+    after do that, if cut and past wa broken, but if it start work
+
+    again you can just carri on.  note that file in /tmp not own by you
+
+    might be in us by anoth worker comrad, so don't remov those without
+
+    check first!
+
+
+
+subject: troubl shoot: not author to us displai
+
+
+
+    if you get error messag that look like
+
+	xlib:  connect to ":0.0" refus by server
+
+	xlib:  intern error dure connect author check
+
+	error: can't open displai
+
+    try, on the machin run openwindow or x11,
+
+	xhost +machin
+
+    where "machin" is the comput on which you ran the command that fail.
+
+    if you want to let other user run program on the same machin as you,
+
+    us your displai, you will have to type the bizarr-look
+
+	xhost +`hostnam`
+
+    (or xhost +happyboi, if happyboi is the name of your workstat).
+
+    thi let ani user on `happyboi' access your displai.
+
+
+
+    with openwindow 3.0 you can also us xauth, and the programm's guid 
+
+    describ how to do thi in chapter 8, p. 101.  thi is more secur.
+
+    also check the man page for fbtab(5) to stop other user access the
+
+    framebuff directli!
+
+
+
+    also note that there is a sun patch for openwindow 3.0 under suno 4.1.1
+
+    to fix a seriou secur problem.  it is avail through your local
+
+    sun answer center as well as through anonym ftp from ftp.uu.net
+
+    [192.48.96.2] system in /sun-dist:
+
+    fix                     patchid        filenam            checksum
+
+    loadmodul              1076118        100448-01.tar.z     04354  5
+
+
+
+
+
+    on an x termin, there mai be a setup menu that let you chang or
+
+    disabl the list of host that can access the displai.
+
+
+
+    if you start get thi messag after you've been log in overnight,
+
+    there might be a cron job that's remov the unix socket in /tmp
+
+    that ar us to commun with the server when $displai doesn't have
+
+    a hostnam befor the :, or is empti.  have the system administr
+
+    chang the cron script to skip socket.
+
+
+
+subject: troubl shoot: other common problem
+
+
+
+@ i get consol error messag on my screen and thei don't go awai (sun 3 or 4)
+
+    if "refresh" make the messag vanish, but new on come along later,
+
+	you need to run "xterm -c" from your .xinitrc, or start on up in
+
+	the background and then  choos save workspac from the
+
+	workspac->util menu.  better still, pick up "contool" and run
+
+	that.  get it from export.lc.mit.edu in the contrib directori.  it
+
+	will monitor the consol and open, flash it icon or beep when a
+
+	messag appear; it's veri easi to configur.
+
+
+
+    if "refresh" from the workspac->util menu doesn't make the messag,
+
+    go awai...
+
+	a sun with a cg4 frame buffer ha two screen - you can move the
+
+	mous off the right-hand (by default) edg of the screen and onto
+
+	a whole new (but monochrom) displai, call ":0.1".  see the man.
+
+	page for openwin; i have a shell script that check for thi and,
+
+	if there's a /dev/cgfour0, doe
+
+		openwin -dev /dev/cgfour0 -dev /dev/bwtwo0
+
+	if you ar run x11 or openwindow 2, you might need to add thi
+
+	to your .xinitrc or other startup file:
+
+	(
+
+	    eval `svenv -displai unix:0.1 -env`
+
+	    olvwm -displai unix:0.1
+
+	) &
+
+	later releas of olwm and olvwm do thi automat.
+
+	you can also run switcher -e 0 to get rid of the messag.  also, see
+
+	the note about contool, abov.
+
+
+
+@ is there an easi wai of edit .xdefault?
+
+    us `prop', which appear in the default root menu as `properti'.
+
+    thi start `prop', a properti editor which will re-write your
+
+    .xdefault after remov comment.  it then appli ani chang.
+
+    keep comment by us "comment." instead of "!", for exampl,
+
+	comment.*.font: palatino-ital-37
+
+
+
+@ how do i get the file manag to us emac instead of textedit?
+
+    set the default editor to
+
+	sh -c "exec emac -font lucidasanstypewrit-18 \"$file\""
+
+    (you can chang the font if you prefer a smaller on)
+
+
+
+@ how do i run openwindow in invers video?
+
+    thi tend not to work under openwindow 2.	 with opwnwindow 3.0,
+
+    there ar variou wai, includ us -bg and -fg option.  if you're
+
+    us openwindow 2 on a sun 3 , probabl the best you can do (short of
+
+    upgrad the workstat to a sparc!) is to us xterm instead of cmdtool.
+
+
+
+@ why don't flat check-box work?
+
+    a known bug mai make guid's output dump core if you us these.
+
+    a workaround is to edit the guid output, as it's onli guid's output
+
+    that's broken, not the actual check-box code.
+
+    thi appli onli to version of devguid befor devguid 3.0.  if you're
+
+    still us an ancient devguid, you should upgrad as soon as possibl;
+
+    the new on is fantast!
+
+
+
+@ when i leav openwindow, my screen goe blank or my mous cursor stai
+
+  on the screen.
+
+    try run clear_colormap; if thi help, put it as the last line in
+
+    the shell script you us to start openwindow (e.g. `openwin').
+
+
+
+@ when i us snapshot, the system crash, or the server hang, or someth.
+
+    thi wa a bug relat to some system onli.  the onli work-round wa to
+
+    us some other screen dump program, such as xwd, xv 2.21 or xgrabsc.
+
+    
+
+@ why have some of my function kei stop work?
+
+    kei f11 and f12 chang from sunf36 and sunf37 to sunxk_f36 and sunxk_f37
+
+    respect in openwindow 3.  applic must be recompil, or you
+
+    might be abl to us xmodmap or the public domain xkeycap program to
+
+    chang your keyboard layout back again.
+
+
+
+@ when i type shelltool or cmdtool or textedit, i get the sunview version
+
+    see under "troubl shoot: strang error messag" below.
+
+
+
+    (see also next item)
+
+
+
+@ mix x11 and openwindow
+
+    (see also next item)
+
+
+
+    note that openwindow 3.0 includ the x11r4 core distribut (to patch
+
+    level 18), but not the contrib directori.  these note appli to
+
+    openwindow 2.0, although you could also the do same sort of thing with
+
+    openwindow 3.0 and x11r5.
+
+
+
+    instal the x11 librari in /usr/lib/x11.	you can intermix openwindow
+
+    and x11r4 or x11r5, thei're all compat in thi respect.
+
+    put the x11 binari in (for exampl) /usr/bin/x11.
+
+
+
+    put /usr/bin/x11 last in your path, so that you get openwindow version
+
+    of program instead of x11 on where appropri, although thi is a
+
+    matter of prefer.  in ani event, put the openwindow bin directori
+
+    first -- see the preced item for more detail on that.  if you have
+
+    /bin (or /usr/bin, thei're the same directori on suno) earlier in
+
+    your path than $openwinhom/bin/xview, you'll get sunview program instead
+
+    of openwindow on!
+
+
+
+    set ld_librari_path so that /usr/openwin/lib is last, after the x11
+
+    librari directori.	thi doesn't matter with openwindow 3.0, but with
+
+    older version you'll get error messag from x11 program if you don't
+
+    do thi.  the messag ar gener harmless (see next item), although
+
+    xdm core dump if thi isn't right.
+
+
+
+    set openwinhom to the directori contain openwindow if it isn't
+
+    /usr/openwin.
+
+
+
+    see also:
+
+	environ variabl (especi xfilesearchpath).
+
+
+
+@ i get error messag on my screen about ld.so: libx11.so.4 not found
+
+    set ld_librari_path to be /usr/openwin.  if you also us x11, us
+
+	     /usr/lib:/usr/5lib:/usr/openwin/lib
+
+    if you put thi in a shell script or your .profil, us
+
+    ${openwinhom-/usr/openwin}/lib instead of /usr/openwin; thi is for
+
+    /bin/sh; for csh it is differ.
+
+
+
+@ i launch my filemgr and i get ld.so:map heap error (9) at /dev/zero
+
+    your system need to be patch.  look in $openwinhom/lib/ospatch
+
+    and instal the patch.
+
+
+
+@ why doesn't answerbook run for me?
+
+    you must be run openwindow to us answerbook.	it won't run under
+
+    x11 (on an x termin or on anyth els) becaus it us new to draw
+
+    the postscript text and pictur.
+
+    if you ar us openwindow 3.0, you need to us the openwindow 3.0
+
+    compat navig; it's call .navig.ow3 on the answerbook cd/rom.
+
+    if all answerbook user ar us openwindow 3.0, you can replac
+
+    navig wih .navig.ow3 altogeth (renam the old on first to
+
+    satisfi your sens of paranoia!)
+
+    the navig.ow3 binari is also on cd/ware vol 2.
+
+    note that the data file ar in postscript, so you can look at them with
+
+    a postsript viewer (q.v.).
+
+
+
+@ why aren't there ani fish in realxfishdb?
+
+    a fix version of realxfishdb is avail by ftp from
+
+    ftp.eng.auburn.edu [131.204.10.91] as /pub/realxfishdb.z
+
+
+
+@ why is the properti choic disabl in the window menu?
+
+    it isn't implement yet.  mani program do respond to the properti
+
+    kei (l3), though, or have a pop-up menu with properti on it.
+
+
+
+@ file complet in the c-shell is broken in cmdtool
+
+    sadli true, but us shelltool or xterm instead and it's fine.  it also
+
+    work if you run command tool on a remot machin.
+
+    fix in openwindow 3.0.1 ship with solari 2.
+
+
+
+@ when i run olit program, some of the widget ar red!
+
+    releas 3 of olit ad mouseless oper; action widget can be
+
+    select via the keyboard.  the current select item is highlight
+
+    in red (the `red stain') to show that it ha the input focu.
+
+    to disabl it in most place, add thi to your $home/.xdefault file:
+
+	*traversalon: off
+
+	*textedit.traversalon: on
+
+	*textfield.traversalon: on
+
+    you can chang the color us (for exampl)
+
+	*inputfocuscolor: grei50
+
+	*input*focuscolor: green
+
+	*list*inputfocuscolor: <your background color>
+
+    see the man page resourc(3w), at the start of the olit 3 widget set
+
+    refer manual includ in the openwindow 3 programm document.
+
+    meanwhil contact your distributor and ask for patch id 100451-30, the
+
+    olit/3.0 cte jumbo patch.
+
+
+
+@ when i run sever program, the color on the screen all chang when
+
+  i move into a differ window! ("colormap flash")
+
+    
+
+    thi is becasu most hardwar can onli displai a few color at a time.
+
+    howev, you can minimis the effect with the follow procedur:
+
+    *  start all the applic with color that you wish to reserv.
+
+    *  run
+
+	cmap_compact save
+
+       to creat the .owcolor file
+
+    *  put the line
+
+	cmap_compact init
+
+       near the start of your start-up file (.xinitrc)
+
+    *  exit and then restart the window system.
+
+    *  cmap_compact init will push those color .owcolor to the end of
+
+	the colormap and reserv them.
+
+
+
+    also note that control-l2 lock the color of the current window, and
+
+    control-l4 unlock them -- thi is describ in the olwm manual page.
+
+
+
+@ pageiew us the wrong color, or make the colormap flash (see abov):
+
+    thi problem wa report by peopl for some reason run the motif
+
+    window manag (mwm) with openwindow.
+
+    try run pageview like thi:
+
+	$openwinhom/bin/reservecolor -svmono
+
+	$openwinhom/bin/pageview
+
+	$openwinhom/bin/reservecolor -discard
+
+
+
+@ xdm break thing
+
+    command tool doesn't like be run without a unix `control termin'.
+
+    us /etc/setsid to start your command tool and all will be well.
+
+    sunview applic mai need to be run with svenv, as in
+
+	svenv -exec /usr/bin/traffic
+
+    becaus xdm won't set the necessari environ variabl.
+
+    note that the mit xdm start up the x server as root, which is a secur
+
+    hole for openwindow; us the openwindow 3.0 xdm or be awar that your
+
+    user can access file and start unix process ass root...
+
+
+
+@ function kei 11 and 12 stop work
+
+    in openwindow 3.0, the x11 name ("keysym") for these kei wa chang
+
+    to sunxk_f36 and sunxk_f37.	 code which us them should be recompil,
+
+    or you might be abl to get awai with
+
+	xmodmap -e 'keysym sunxk_f36 = sunf36'
+
+
+
+subject: troubl shoot: xview problem
+
+    thi section is here onli until an xview faq appear, which ha been
+
+    promis, but hasn't reach here.	note that there is also a usenet
+
+    newsgroup, alt.toolkit.xview, although it doesn't sem to have veri
+
+    wide distribut and ha triffic of the order of on or two articl
+
+    per month.	you should also look at the faq in comp.window.x.
+
+
+
+@ how do i set the font of individu scroll list item?
+
+    panel_list_font take an int row_number and an xv_opaqu font_handl.
+
+    panel_list_font take a null termin list of xv_opaqu font_handl.
+
+    there is no easi wai to make an entir list fix width font.
+
+    you have to make sure that you alwai specifi panel_list_font when you
+
+    insert a new row into that list, or write a conveni function
+
+    insert_row(list, row, string) that hide the nasti bit.
+
+
+
+@ how do i keep an xview pop-up window displai after a button is press?
+
+    in the button callback, do
+
+        xv_set(button, panel_notifi_statu, xv_error, null);
+
+    thi will keep the window visibl.
+
+    you might also need to investig the menu_notifi_statu attribut.
+
+
+
+@ how do i make an xview button look press?
+
+    call panel_begin_preview() and panel_cancel_preview(); these ar
+
+    document in -- er -- the xview 3 sourc...
+
+
+
+@ openwindow 3 imak doesn't work properli
+
+    here is greg earl's patch, to be appli in $openwinhom; note that you
+
+    should edit lib/config/sun.cf afterward to get osnam and
+
+    osminorvers right (minorvers is 1 in suno 4.1.2, for exampl).
+
+    i have edit the patch a littl, so ani bug ar mine [lee@sq.com] :-)
+
+ 
+
+*** bin/xmkmf.orig	wed sep 18 07:02:02 1991
+
+--- bin/xmkmf	tue aug  6 00:39:20 1991
+
+***************
+
+*** 30,34 ****
+
+  
+
+  elif [ -n "$openwinhom" ]; then
+
+! 	arg="-duseinstal $openwinhom/lib/config"
+
+  
+
+  els
+
+--- 30,34 ----
+
+  
+
+  elif [ -n "$openwinhom" ]; then
+
+! 	arg="-i$openwinhom/lib/config -duseinstal -dxcomm='/**/#'"
+
+  
+
+  els
+
+*** lib/config/site.def.orig	wed sep 18 01:26:19 1991
+
+--- lib/config/site.def	tue aug  6 00:44:37 1991
+
+***************
+
+*** 0 ****
+
+--- 1,7 ----
+
++ #defin bindir $(openwinhom)/bin
+
++ #defin libdir $(openwinhom)/lib
+
++ #defin incroot $(openwinhom)/share/includ
+
++ #defin installnonexecfil(file,dest)					@@\
+
++ instal:: file								@@\
+
++ 	$(instal) -c $(instdatflag) file dest
+
++ #defin nullparamet
+
+
+
+[note: the patch is new, but i have not mark each line with a "+" -- liam]
+
+
+
+subject: environ variabl
+
+
+
+    environ variabl, and plausibl valu to us -- thi list doesn't
+
+    take into account ani local chang that you might have made, of cours.
+
+    thi list is for openwindow 3.0 -- differ for openwindow 2.0 ar
+
+    mark, and i've ad some comment for user of x11r4 and x11r5, too.
+
+
+
+    displai  the name of the x window displai to us
+
+	:0.0 (on the local machin, the on actual run x11 or xnew)
+
+	:0.1 (on some machin for a second, monochrom screen)
+
+	machin-run-unix:0.0 (on other machin)
+
+	(you mai need to do "xhost +other-machin" to let program on other
+
+	machin us your displai; see also under troubl shoot, and see
+
+	the section on xauth in the openwindow version 3 programm's guid,
+
+	pp. 101ff)
+
+	see also: consol messag, under troubl shoot
+
+    fontpath  where xnew search for font
+
+	/usr/openwin/lib/font
+
+	(you can also us "xset fp+ dir" to add a directori to the font path,
+
+	but you mai have to do "xset fp rehash" afterward.  thi is fine
+
+	under openwindow, but mani x11 server have font problem)
+
+    helppath  where xview look when you press the help kei (or f1)
+
+	/usr/openwin/lib/local:/usr/openwin/lib/help
+
+	(on suno 4.0.*, or with openwindow 2.0, omit the first entri, which
+
+	is for site us a local other than "c" or "usa").
+
+    ld_librari_path   where to look to find share c librari
+
+	/usr/lib:/usr/5lib:/usr/openwin/lib:/usr/cc/`arch`
+
+	(the /usr/cc/`arch`/lib entri is onli need if you us c++ program)
+
+    openwinhom	 where openwindow live
+
+	/usr/openwin  
+
+    keyboard, mous -- serial devic to us instead of the consol
+
+	(don't set these for normal us; /dev/kbd and /dev/mous)
+
+    path  where the shell search for program to run
+
+	$(openwinhom)/bin:$(openwinhom)/bin/xview:/usr/local/bin:.\
+
+	$home/bin.`arch`:/usr/ucb:/usr/bin:/usr/bin/x11:/usr/host:\
+
+	(you will certainli want to chang thi exampl!  there is no
+
+	$(openwinhom)/bin/xview in openwindow 3.0)
+
+    xfilesearchpath  where program look for app-default file
+
+	/usr/openwin/lib/%t/%n%s
+
+        (thi is set automat by "openwin" in openwindow 3.0)
+
+        you might want to us /usr/lib/x11/%t/%n%s, or perhap both,
+
+        separ with a :, for exampl (for sh user)
+
+            xfilesearchpath=$openwinhom/lib/%t/%n%s:/usr/lib/x11/%t/%n%s
+
+	    export xfilesearchpath
+
+	if you us x11r5, you might instead want
+
+	    /usr/lib/x11/%l/%t/%n%c%s:
+
+	    /usr/lib/x11/%l/%t/%n%c%s:
+
+	    /usr/lib/x11/%t/%n%c%s:
+
+	    /usr/lib/x11/%l/%t/%n%s:
+
+	    /usr/lib/x11/%l/%t/%n%s:
+
+	    /usr/lib/x11/%t/%n%s:
+
+	    $openwinhom/lib/%t/%n%s
+
+	(put all thi on on line, though, with no space!)
+
+
+
+	togeth with the follow in lib/xinitrc
+
+	xrdb -merg <<'end_xrdb'
+
+	   *custom:
+
+	end_xrdb
+
+
+
+	xrdb -merg <<'end_xrdb'
+
+	#ifdef color
+
+	   *custom:  -color
+
+	#endif
+
+	end_xrdb
+
+
+
+	you automat get a color oclock, editr, bitmap, xcalc, and
+
+	xlogo sinc thei us the "*custom" resourc appear as %c in
+
+	the xfilesearchpath. (see oclock (n))
+
+	accord to rainer sinkwitz <sinkwitz@ifi.unizh.ch>.
+
+
+
+
+
+subject: where can i get it? ftp, implement, etc...
+
+
+
+    xview 3.0 is avail by anonym ftp from export.lc.mit.edu and
+
+    elsewher.
+
+
+
+    moolit can be bought from at&t in sourc form.
+
+
+
+    openwindow can be obtain from sun, or you can get the sourc from
+
+    interact system inc.  it is also includ in some vendor' system v
+
+    releas 4 implement, although that's not alwai the latest version.
+
+    the current releas of openwindow from sun for support architectur
+
+    is 3.0; for the sun 3 seri it is frozen at openwindow 2.0.
+
+    note that sun includ openwindow with suno, and it is also includ as
+
+    the window system for solari.
+
+
+
+    there ar said (by sun) to be over 35 port of openwindow either
+
+    avail now or in progress.  unfortun, none of them seem to
+
+    be avail from anywher.  contact anthoni@ovi.com for more inform.
+
+
+
+
+
+subject: bibliographi: book, manual, journal, paper, beer-mat
+
+
+
+    the open look (tm) graphic interfac is document in two book:
+
+	sun microsystem inc., `open look graphic user interfac applic
+
+	style guidelin', addison weslei, 1989
+
+    and
+
+	sun microsystem inc., `open look graphic user interfac function
+
+	specif', addison weslei
+
+
+
+    the main document for the x window system come from
+
+    o'reilli & associ in about nine or ten volum.
+
+    the most us for open look user ar:
+
+	volum 1: xlib program manual
+
+	volum 2: xlib refer manual
+
+	volum 3: x window system user's guid
+
+	    (an open look edit of volum 3 should appear later thi year)
+
+	volum 7: xview programm's manual [dan heller]
+
+	    [make sure you get the 3rd edit for xview 3.0]
+
+	companion to volum 7: xview refer manual [ed. thoma van raalt]
+
+
+
+	the companion to volum 7 is an expand version of the attribut
+
+	summari from the previou edit of the xview program manual,
+
+	togeth with other refer inform, so that in practic you
+
+	have to bui both book.
+
+
+
+	o'reilli also have a thinnish orang book on the differ between
+
+	x11r4 and rx115.
+
+
+
+	olit programm will also want the xt book - volum 4 and 5.
+
+	there is a new big fat green vol 5 updat for x11r5.
+
+
+
+	a journal, the x resourc, mai also be of interest.
+
+
+
+	o'reilli & associ, 103 morri street, suita a, sebastopol, ca 95472
+
+	+1 707 829-0515, or, in the usa and canada onli, 1-800-998-9938
+
+	fax: +1 707-829-0104.
+
+	email nut@ora.com or uunet!ora!nut.
+
+	for other distributor: mail, fax, or call +1 707-829-0515.
+
+
+
+    some of the o'reilli exampl ar avail fro ftp from
+
+    export.lc.mit.edu in the contrib/oreilli directori.
+
+
+
+    the system v releas 4 document from prentic hall mai also includ
+
+    a section on openwindow.
+
+
+
+    david miller describ program with olit in hi
+
+	`an open look at unix' (m&t press).
+
+    
+
+    nabajyoti brkakati give an excel introduct to x and to olit
+
+    program, as well as set up and us x and openwindow, in:
+
+	`unix[r] desktop guid to open look'
+
+	sam, 1992  isbn 0-672-30023-0
+
+	you can get the exampl from thi book as
+
+	    export.lc.mit.edu:contrib/naba-olguid-exampl.tar.z
+
+
+
+    also about us olit, and xt in particular:
+
+	the x window system: program and applic with xt,
+
+	open look edit,
+
+	doug young and john pew, prentic hall, 1992,
+
+	isbn 0-13-982992-x
+
+    there ar also hp widget and motif (ugh) version of thi book.
+
+    the exampl sourc code in thi book can be obtain by ftp from
+
+    export.lc.mit.edu, file "contrib/young.pew.olit.z".
+
+
+
+    there is an introduct to xview in
+
+	`write applic for sun system', vol 1, `a guid for
+
+	macintosh(r) programm' (sun microsystem, pub. addison weslei)
+
+    
+
+    to learn more about the new and postscript languag, see
+
+
+
+	the new book, springer verlag, 1989 (sadli, a littl out of date)
+
+
+
+	postscript languag refer manual, second edit,
+
+	adob system inc., addison weslei, 1990 ["the red book"]
+
+	    note that openwindow 3 is a level 1 postscript implement,
+
+	    with certain level 2 featur (such as composit font) to some
+
+	    degre.
+
+	
+
+	postscript languag tutori and cookbook,
+
+	adob system inc., addison weslei, 1985 ["the blue book"]
+
+    
+
+    there's at least on book on us solari (i.e. suno).
+
+
+
+    sun also suppli a larg amount of document with openwindow,
+
+    although you mai have to order it separ.  here's what i have; thei
+
+    ar each a littl over 21 cm squar (wider than a4 paper), and vari from
+
+    about 1 cm to about 3cm thick.  thei sai `user's guid' or `programm's
+
+    guid' on the front.  the user manual have a red stripe on the bottom,
+
+    and the programm on have a green stripe.
+
+
+
+    800-6006-10 openwindow version 3 releas manual
+
+    800-6029-10 openwindow version 3 instal and start-up guid
+
+    800-6231-10 openwindow version 3 deskset refer guid
+
+    800-6618-10 openwindow version 3 user's guid
+
+    800-6323-10 desktop integr guid [also avail in bookstor?]
+
+    800-6027-10 programm's guid
+
+    800-6005-10 openwindow version 3 refer manual [the man page]
+
+    800-6319-10 the new toolkit 3.0 refer manual
+
+    800-6736-10 new 3.0 program guid
+
+    800-6055-10 olit 3.0 widget set refer manual
+
+    800-6198-10 xview 3.0 refer manual: convert sunview applic
+
+
+
+    800-6854-10 f3 font format specif [order separ]
+
+
+
+    there ar also some other set of document, includ the typescal
+
+    document from the openfont group, for exampl.  there doesn't seem
+
+    to be a complet list anywher.
+
+
+
+    ??????????? tooltalk 1.0 setup and administr guid (sunsoft, 1991)
+
+    800-6093-10 tooltalk 1.0 programm's guid (sunsoft, 1991)
+
+    there might be document about the link manag somewher, too.
+
+
+
+    at&t includ sever larg thorni bush' worth of paper with olit.
+
+
+
+    sun's answerbook cd/rom contain a lot of the abov document,
+
+    includ some of the o'reilli book (not the xview 3 volum 7, though).
+
+
+
+    volum 8 of the o'reilli seri is about x administr, and mention
+
+    openwindow, although it is primarili aim at x11r5.
+
+
+
+    sever other book ar in the work...
+
+
+
+
+
+subject: get thi file, revis histori, recent chang
+
+
+
+    mail lee@sq.com to ask for it.  dougla n. arnold (dna@math.psu.edu)
+
+    keep an up-to-date copi on ftp.math.psu.edu (current 146.186.131.129)
+
+    in the file ~ftp/pub/faq/open-look.
+
+    the net.answer archiv and server mai or mai not know about thi file,
+
+    sinc thei've just chang hand and thi file wa previous in on
+
+    archiv but not the other.
+
+
+
+    $id: open-look.faq,v 1.48 93/05/09 18:03:13 lee exp $
+
+
+
+
+
+acknowledg:
+
+    andrei arkhipov <andr@elvi.sovusa.com> (feb/binder patch)
+
+    dougla n arnold <dna@math.psu.edu> (feb/variou chang)
+
+    ian darwin <ian@sq.com>
+
+    christoph davi <ckd@eff.org>
+
+    paul eggert <eggert@bi.twinsun.com> (feb/screenblank on solari 2.1)
+
+    r.stewart elli <elliss@frith.egr.msu.edu> (feb/-assert nodefinit)
+
+    jeff fleck <jefff@meaddata.com> (feb/the colormap stuff)
+
+    rick heli <rick.heli@eng.sun.co> (feb/includ .signatur)
+
+    nichola hounsom <nh@cbnewsg.cb.att.com> (feb/xt/olit cc workaround)
+
+    larri matthia <matthia@arto.larc.nasa.gov> (feb/new colormap flash)
+
+    john b. melbi <melbi%yk.fujitsu.co.jp@fai.com> (feb/south paw)
+
+    christian sebek <sebek@frodo.lfi.uni-hannov.de> (feb/xt jumbo patch)
+
+    kevin w. thoma <kwthoma@nsslsun.nssl.uoknor.edu> (mar/olvwm patch)
+
+    larri w. virden <lvirden@ca.org> (mar/variou comment)
+
+
+
+    and mani other...	you get delet from thi list after a while.
+
+
+
+-- 
+
+liam quin, manag of contract, softquad inc, +1 416 239 4801 lee@sq.com
+
+open look ui faq; metafont list; hexsweep new game; lq-text text retriev
+

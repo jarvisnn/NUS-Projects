@@ -1,0 +1,30 @@
+from: pfuetz@igd.fhg.de (matthia pfuetzner)
+subject: avail memori to the xserver. how to get the actual size?
+organ: zentrum fuer graphisch datenverarbeitung, darmstadt, frg
+line: 25
+
+hello everybodi!
+
+i have a littl question:
+
+due to more featur (pex, drag&drop) mani applic when link with for
+exampl motif 1.2 instead motif 1.1 need more memori in the xserver.
+x-termin onli have limit memori (normal no swap possibl). so my
+question:
+
+is there a possibl to determin via x protocol call the size of free
+memori avail to the xserver?
+
+so on can determin for exampl whether to start a pex applic with the
+css on client side or on server side (when there is enough memori).
+
+pleas repli via e-mail, i'll summar!
+
+sincerli,
+        matthia
+
+-- 
+    matthia pfuetzner  |  @work:  +49 6151 155-150  | @home: +49 6151 75717
+    6100 darmstadt, frg | zgdv, wilhelminenstrass 7 | lichtenbergstrass 73
+      pfuetzner@igd.fhg.de, pfuetzner@zgdvda.uucp    |  keith packard said:
+      r5 is differ from r4. that's why we chang the releas number :-)

@@ -1,0 +1,28 @@
+from: r0506048@cml3 (chun-hung lin)
+subject: re: jpeg file format?
+nntp-post-host: cml3.csie.ntu.edu.tw
+repli-to: r0506048@csie.ntu.edu.tw
+organ: commun & multimedia lab, ntu, taiwan
+x-newsread: tin 1.1 pl3
+line: 20
+
+peterbak@microsoft.com (peter bako) write:
+: 
+: where could i find a descript of the jpg file format?  specif
+: i need to know where in a jpg file i can find the height and width of 
+: the imag, and perhap even the number of color be us.
+: 
+: ani suggest?
+: 
+: peter
+
+try ftp.uu.net, in /graphic/jpeg.
+--
+--------------------------------
+=================================================================
+chun-hung lin ( ªl«t§» )                     
+r0506048@csie.ntu.edu.tw    
+commun & multimedia lab.
+dept. of comp. sci. & info. eng.
+nation taiwan univers, taipei, taiwan, r.o.c.
+=================================================================

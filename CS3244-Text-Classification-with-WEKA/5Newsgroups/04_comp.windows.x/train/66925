@@ -1,0 +1,24 @@
+from: m91nen@tdb.uu.se (nil engstrom)
+subject: help: event propag
+organ: depart of scientif comput, uppsala univers
+line: 19
+
+
+the follow problem is realli bug me,
+and i would appreci ani help.
+
+i creat two window:
+
+w1 (child to root) with event_mask = buttonpressmask|keypressmask;
+w2 (child to w1) with do_not_propag_mask = buttonpressmask|keypressmask;
+
+
+keypress event in w2 ar discard, but buttonpress event fall through
+to w1, with subwindow set to w2.
+
+fyi, i'm us xnew/olvwm.
+
+am i do someth fundament wrong here?
+
+				n
+

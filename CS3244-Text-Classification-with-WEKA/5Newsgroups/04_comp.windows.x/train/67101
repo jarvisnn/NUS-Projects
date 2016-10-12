@@ -1,0 +1,23 @@
+from: thor@surt.atd.ucar.edu (richard e. neitzel)
+subject: xquerybestcursor semi-broken?
+organ: nation center for atmospher research
+line: 18
+
+some on ask me recent why thei when thei us xquerybestcursor to see
+if thei could creat of a given size it seem to impli thei could, but the
+server did not creat cursor of that size. investig show that some x
+server will happili return ani size up to the size of the root window, while
+other return some fix limit of more reason size. the interest thing
+to me is that the same server binari act differ on differ hardwar -
+a sun4 with a cg2 will claim cursor up to root window size ar ok, while a
+sun4 with a cg6 will stop at 32x32. so far i've also seen thi behavior on
+ncd and phase-x x termin and have been told it also occur on hp. 
+actual, the ncd is even more liber - size much larger then the root
+winodw ar gladli return as ok. is xquerybestcursor semi-broken or is thi
+behavior correct? i'd realli like to see a 2000x2000 cursor!
+
+-- 
+richard neitzel thor@thor.atd.ucar.edu          torren med sitt skjegg
+nation center for atmospher research        lokkar borni under sole-vegg
+box 3000 boulder, co 80307-3000	                gjo'i med sitt shinn
+303-497-2057                                    jagar borni inn.

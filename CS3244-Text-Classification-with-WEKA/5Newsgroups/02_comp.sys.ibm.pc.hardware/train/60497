@@ -1,0 +1,29 @@
+from: masaoki@hpysodk.tky.hp.com (masaoki kobayashi)
+subject: --- cr-rom drive recommend? ---
+organ: yhp hachioji hstd r&d, tokyo japan
+line: 24
+
+hi all,
+
+  i would like to purchas cd-rom drive. the spec i would like to have is:
+
+   * applic to kodak multisess photo-cd
+   * scsi(2) interfac
+   * compat with adaptec-1542b
+   * doe not need ani caddi
+   * cheaper ( < $500 if possibl)
+   * doubl speed
+
+  i believ there ar no drive satisfi all of the abov condit,
+  so i would like to know all of your opinion.  the abov condit
+  ar sort by my prioriti.
+  i think nec cdr74-1/84-1 is a littl bit expens, but it doe satisfi
+  almost all of the abov condit. the problem is that i do not know
+  the compat with 1542b. ha someon succeed to connect these
+  nec drive to 1542b? i have heard a rumor that nec drive is incompat
+  with 1542b adapt.
+  ani suggest ar greatli appreci.
+
+thank in advanc,
+kobayashi,masaoki
+(masaoki@tky.hp.com)

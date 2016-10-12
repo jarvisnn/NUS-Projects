@@ -1,0 +1,28 @@
+from: humesdg1@netnew.jhuapl.edu (dave hume)
+subject: xwd segment fault
+keyword: xwd x11
+organ: jhu/appli physic laboratori
+line: 22
+
+i wa plan to us the follow pipe to move some displai data to a system
+that ha a color hardcopi unit:
+
+	xwd | xwud -displai hostnam:0.0
+
+i had test it with some simpl window like the openwindow file manag,
+and it work fine, but when i tri it with a more complex (larger) imag,
+the xwd part blew up with a segment fault.  i tri it without the pipe,
+by redirect xwd's output to a file and then us the file as input to xwud
+and got the same error from xwud.  if i had to guess, it seem like it's
+run out of memori, but thi happen on a sparc 10 with 64 meg, 128 meg
+swap space, and onli on user with minim activ.  the file wa about 3 mb.
+
+thi verion of xwd/xwud wa suppli with the sun openwindow 3.0 distribut
+which i believ correspond to x11 r4.
+
+ani idea?  thank in advanc.
+-- 
+--------------------------------------------------------------------------
+dave hume        |    john hopkin univers appli physic laboratori
+(410) 792-6651    |    humesdg1@aplcomm.jhuapl.edu
+---------------------------------------------------------------------------

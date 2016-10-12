@@ -1,0 +1,43 @@
+from: ehung@ampex.com (eric hung)
+subject: re: help! instal second id drive
+nntp-post-host: dct3
+organ: ampex corpor, redwood citi ca
+line: 37
+
+>
+>>anoth possibl is that the 85mb on is alreadi partit into
+>>two seper drive, c and d, and the cmo ask for "c: drive" and "d:
+>>drive" setup info rather than "drive 1" and "drive 2" like most other
+>>i've seen.  could thi be confus thing?
+>
+>>so, i need help!  the drive came bereft of ani doc, except for some
+>>info for the cmo setup; the control ha a littl piec of paper
+>>about the size of an index card; i cannib the cabl (it's on
+>>of those with a connector at each end and the on in the middl, so
+>>it look like a serial connect); now i be lost!
+>
+>>mani, mani thank in advanc!  thi is practic an emerg (i have
+>>two paper to do on thi thing for mondai!)!  help!
+>>-- 
+>>-----------------------
+>>william barn         suranet oper
+>>wbarn@sura.net       (301) 982-4600 voic  (301) 982-4605 fax
+>>disclaim:  i don't speak for suranet and thei don't speak for me.
+>i've been told by our local comput guru that you can't do thi unless you 
+>perform a low level format on your exist hard drive and set your system 
+>up for two hard drive from the begin.  i took him at hi word, and i 
+>have not tri to find out ani more about it, becaus i'm not go to back 
+>everyth up just to add anoth hdd.  if anyon know for sure what the 
+>scoop is, i would like to know also.  thank in advanc also.
+>
+>bill willi
+>
+
+
+if you bought your id drive from a dealer, you shouldn 't have to 
+perform a low level format. even if the 1st hd is alreadi partit
+into c and d, fdisk will automat assign the 2 nd hd to d and 
+chang the 2nd partit of 1st drive to e.
+
+check the jumper set and cmo setup, in particular the correct
+number of cylind and track

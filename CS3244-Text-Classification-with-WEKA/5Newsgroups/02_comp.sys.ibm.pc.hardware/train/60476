@@ -1,0 +1,23 @@
+subject: re: soundblast irq and port set
+from: arowatt@massei.ac.nz (a.j. rowatt)
+organ: massei univers, palmerston north, new zealand
+x-reader: netnew/pc version 2c
+line: 17
+
+thei don't have a conflict becaus technic lpt1: doe not us
+irq7!.
+     the parallel printer processor (the actual number escap
+me) contain a printer control regist which enabl the chip
+to transmit an interrupt to the interrupt control as irq7,
+then onto the main processor as int 0x0f. by default the parallel
+printer processor doe not enabl it's interrupt line therefor
+no int 0x0f's will be sourc from the printer control chip,
+thu enabl other devic to us the actual irq7.
+
+     note, thi appli to com port also which by default do not
+rout interrupt to the system bu, although com's softwar
+usual enabl thi featur as it make monitor com port
+activ easier than poll the serial uart, thu probabl
+get the sound card slighti confus!.
+
+window mai be a differ stori....

@@ -1,0 +1,18 @@
+from: begolej@csgrad.cs.vt.edu (jame begol)
+subject: 16mb isa limit?
+organ: vpi&su comput scienc depart, blacksburg, va
+line: 13
+
+i wa just read in pc magazin that the peripher in a pc with an
+isa bu can onli access 16mb of memori.  also, that some video card on
+the isa bu look for a memori apertur to map their memori to.  so that
+if i want to put 16mb of memori on my pc, my video card wouldn't have
+anywher to map it's memori to.
+
+can someon explain thi in more detail.  is there a wai around thi
+limit.
+
+if you email me a respons, i will summar.
+	-bo	begolej@csgrad.cs.vt.edu
+-- 
+	--jame "bo" begol		begolej@csgrad.cs.vt.edu

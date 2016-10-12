@@ -1,0 +1,41 @@
+from: ykhan@gandalf.ca (yousuf khan)
+subject: re: id vs scsi (here we go again.....)
+organ: gandalf data ltd.
+line: 36
+
+in <1993apr16.205724.26258@mnemosyn.cs.du.edu> smace@nyx.cs.du.edu (scott mace) write:
+
+>in articl <1993apr12.171250.486@julian.uwo.ca> wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+
+>>i almost got a hernia laugh at thi on.
+
+>you'll probabl get on when you realiz that your $100 vesa super
+>dooper local bu ultra high tech control suck...
+
+>>if anyth, scsi (on a pc) will be obsolet-> kill off by vesa local
+>with ani luck pc bu archeitectur will be doen ani with by sbu.
+
+>have you ever seen what happen when you hook a busmast control to
+>a vesa local bu.  it actual  slow down your system
+>>bu id.  it must be real nice to get shaft by $20-$100 buck for the
+>>extra cost of a scsi drive, then pai anoth $200-$300 for a scsi control.
+
+yeah, there is absolut no us for vlb except for video graphic.
+and no id could possibl take advantag the vlb, becaus it run at
+8 mhz and 16 bit. do peopl forget that the id wa specif
+design to interfac directli with the at isa bu? we've seen
+id come out for eisa, xt isa, and now even mca, but at all time
+it wa a 16 bit standard, run at somewher near 8-10 mhz. when
+you run an id off of the vlb, there's no wai that you're run it
+at 33 mhz, it would burn up. of cours same goe for scsi, esdi, whatev,
+none of them run at cpu speed.
+
+the onli wai to gain advantag with a vlb id is to hook it up to
+a cach control. i suspect it would be much, much better to
+get a softwar disk cach instead, sinc you get write-cach as well.
+
+>becaus you have an id and no on make id disk that big.
+
+i've seen some fuji id drive go as high as 1g.
+
+						yousuf khan

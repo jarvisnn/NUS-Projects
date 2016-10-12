@@ -1,0 +1,70 @@
+from: kudla@acm.rpi.edu (robert kudla)
+subject: re: can i chang "licens to" data in window 3.1?
+nntp-post-host: herm.acm.rpi.edu
+line: 65
+
+in <0096b130.473b17c0@vm.csd.mu.edu> 2a42dubinski@vm.csd.mu.edu write:
+>	ahh, ye, thi is a fun topic.  no, onc the name is incrib on the
+>disk, that is it, it is encod.  not even a hex editor will find it.  you can
+
+but a disk compar util (old versu new) will.  and window 3.1 is
+also flexibl enough at instal time that you can copi all the file
+onto your hard disk, which greatli speed thing up and make them
+less annoi, if you can spare the 7 or so compress meg.
+
+>write over the "licens to:", but you can't chang the name underneth it.  i
+>think if you wish to chang thi you would have to be a pirat, and we're not
+>go to promot that here.
+
+no, we're not.  but we're also not go to promot pander to
+corpor paranoia when the real issu is conveni.  i don't *like*
+deal with floppi.  person, i have no us for chang the
+registr info, but i see it as a valid need, and on that ought to
+be solv us a quick littl util rather than a half-hour
+reinstal that's just about guarante to mess up your set in on
+wai or anoth.
+
+so, while i'm not go to put much time into it myself, here's the
+procedur for get on your wai to find the encod inform:
+
+1.  copi all your window disk into the directori from which you want
+to instal it.  i've been us c:\winstal myself.
+
+2.  from there, copi that directori to someth like c:\winorig.
+
+3.  instal from c:\winstal.
+
+4.  comp the two directori to determin chang.  
+    i.e., comp *.* \winorig\*.* >\report.txt
+
+5.  look in the report file for the file(s) that chang.  assum
+thei didn't cover themselv cover their own track, at least on
+file should have a differ note at a particular offset.  locat
+said offset in the origin directori and see what's there us a hex
+editor, and do the same for the modifi on.
+
+6.  you're on your own as far as break the code goe; i don't
+realli do cryptographi.  it's probabl just an xor kei or someth; i
+think ms is more concern with joe schmoe at the offic person
+hi copi than with "real pirat" who will probabl just disassembl
+the damn thing anywai.  thi techniqu should work with just about
+ani obnoxi corpor product that tri to write to the origin
+floppi when you instal; in some extrem case you mai not be abl
+to back the floppi up to hard disk, and will be stuck do a
+compar on floppi (lotu stuff is probabl like that).
+
+as i note befor, if you can afford the space on the hard disk, and
+don't do much in the wai of custom, reinstal from on
+directori to anoth mai be less arduou.  do some of the stuff
+i've mention here mai well void your licens with microsoft, as if
+thei'd ever find out.  if you aren't care with the disk editor, you
+could also mung someth import... duh.  i guess that's a
+disclaim.
+
+have at it....
+
+rob
+--
+rob kudla@acm.rpi.edu keyword - oldfield jane's leather ye win3.1 phish
+light blue right bondag r.e.m. dtp steeli dan ds9 fnm owl genesi in the
+spaceship, the silver spaceship, the lion take control..... 

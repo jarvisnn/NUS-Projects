@@ -1,0 +1,50 @@
+from: graem@labtam.labtam.oz.au (graem gill)
+
+subject: re: povrai : tga -> rle
+
+organ: labtam australia pty. ltd., melbourn, australia
+
+line: 20
+
+
+
+in articl <ltqp28innpa7@pageboi.cs.utexa.edu>, jhpark@cs.utexa.edu (jihun park) write:
+
+> hello,
+
+> i have some problem in convert tga file(gener by povrai) to
+
+> rle file. when i convert, i do not get ani warn messag. but
+
+> if i us xloadimag/getx11, someth is wrong.
+
+> 
+
+> error messag ar,
+
+> % targatorl -o o.rle data.tga
+
+> % xloadimag o.rle
+
+> o.rle is a 0x0 24 bit rle imag with no map (will dither to 8 bit), with gamma of 1.00
+
+>   dither imag...done
+
+>   build ximag...done
+
+> xloadimag: x error: badvalu (integ paramet out of rang for oper) on 0x0
+
+> xloadimag: x error: badwindow (invalid window paramet) on 0xb00003
+
+> ......
+
+
+
+	thi happen when your x server ha run out of memori. you need
+
+more memori or you need to quit ani un-neccessari run client.
+
+
+
+	graem gill.
+

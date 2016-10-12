@@ -1,0 +1,23 @@
+from: gai@venic.sedd.trw.com (lanc gai)
+subject: out of environ space run bat file from window
+articl-i.d.: venic.1993apr23.005117.21582
+organ: trw system engin & develop divis, carson, ca
+line: 17
+
+i have a .bat file that i run under a window icon.  i have set up a pif
+file to run the bat file in exclus mode and to us the entir screen.
+the first line of the bat file set an environ variabl.
+
+my problem is that on some of our machin (run ms-do 5.0 and window
+3.1 in enhanc mode), the set command in the bat file fail with the
+out of environ space error.  i have rais the amount of environ 
+space to 2048 byte us the shell command in config.sy so i know that
+i am nowher near to run out.  if i just click on the ms-do icon,
+i can creat a bunch of environ varibl from the do shell.  the problem
+is that on some machin, set the valu of an environ variabl in
+a bat file fail.  ha anyon seen such behavior befor?  i see no place in the
+pif fail to configur environ space.
+ 
+lanc j. gai                                 internet: gai@venic.sedd.trw.com
+trw system engin & develop div.   phone: 310-764-3988
+carson, ca  90746

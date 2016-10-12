@@ -1,0 +1,17 @@
+server:
+  host: 'localhost'
+  port: 3000
+  public_port: 3000
+  session_secret: ''
+facebook:
+  app_id: ''
+  app_secret: ''
+ivle:
+  lapi_key: ''
+db:
+  host: 'localhost'
+  username: ''
+  password: ''
+  db_name: ''
+feature_flags:
+  should_allow_without_facebook: false

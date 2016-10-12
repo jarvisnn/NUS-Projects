@@ -1,0 +1,37 @@
+from: dsk@ravl.rice.edu (dan s. kirkpatrick)
+subject: instal problem with x11r5
+organ: rice univers
+line: 32
+
+i am in the process of instal x11r5 on my sun sparcstat 2 and
+have run into a problem.  i imagin it ha someth to do with a miss
+screen driver, or someth along those line, but figur someon out there
+in internet land might be abl to help.
+
+i am instal it on a machin that alreadi ha openlook instal, and would
+like to have both instal concurr.  thu, i set it up to compil to my
+/usr/x11r5 directori.  i work out all the kink in get it compil (with
+gcc), so that it compil without ani warn.  i need it instal for pex-si,
+so i set all those appropri flag.  when i run it, howev, i get a messag
+along the line of:
+
+get interfac configur : oper not support on socket
+
+sunopenframebuff : inappropri ioctl for devic
+
+fatal server error : no screen found 
+
+
+ani idea on how i can fix it?  pleas respond by e-mail at the below
+address.
+
+thank in advanc.
+
+-dan
+-- 
+"i do not want to be immort through my work; i want to be 
+immort through not dy."  -woodi allen
+
+dan kirkpatrick                 | dept of electr & comput engin
+~dsk@rice.edu                   | rice univers
+uunet!rice.edu!dsk@uunet.uu.net | houston, tx

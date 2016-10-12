@@ -1,0 +1,22 @@
+from: dcc@dc.ed.ac.uk (david crook)
+subject: bitplan ("non-chunki" pixel) cfb????
+organ: depart of comput scienc, univers of edinburgh
+line: 17
+
+is there a pd version of cfb, or other pd server stuff, which ha a colour frame
+buffer implement which work in bitplan mode, i.e. where the screen
+memori is group so that "bit 0 of everi pixel is here, bit 1 is there, etc."
+
+the onli such beast i know if at the moment is the gfxbase server for the
+commodor amiga, and it is commerci. i don't know if thei wrote their own cfb,
+but i suspect thei did.
+
+pleas respond by email, as i don't read thi group.
+
+mani thank
+dave
+-- 
+david crook, depart of comput scienc, univers of edinburgh
+janet dcc@ed.dc  :  internet dcc@dc.ed.ac.uk  :  ip talk dcc@129.215.160.2
+work: jcmb rm 3310, king's bldg, w main rd., edinburgh eh9 3jz. 031 650 6013
+home: 2fl, 39 woodburn terr, m'side, edinburgh eh10 4st. tel: 031 452 9067

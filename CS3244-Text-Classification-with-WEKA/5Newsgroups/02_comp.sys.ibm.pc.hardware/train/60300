@@ -1,0 +1,28 @@
+from: simon@moscow.uidaho.edu (mike simon)
+subject: re: pleas help identifi thi old 3com ethernet card
+articl-i.d.: moscow.c5l5c5.gtm
+organ: univers of idaho cs dept.
+line: 21
+nntp-post-host: leopard.cs.uidaho.edu
+
+in articl <1qhvuninnhau@emori.mathc.emori.edu>, splee@pd.org (seng-poh lee, speedi) write:
+|> i have an old 3com ethernet card (pc at bu) that came out of a apollo
+|> workstat. i'm try to identifi it in order to us it on a pc.
+|> 
+|> the assembl number is 4008-00 rev 2 and it is a 16 bit card, circa
+|> 1985.  it ha an aui port as well as a bnc coax connect.  it ha
+|> select address for the bio, io, dma, and irq locat via berg
+|> jumper.  it also appear to have a intel 80186 processor on board,
+|> presum for buffer. 
+|> 
+|> the ethernet chip appear to be an intel 82586, a 48 pin dip packag. is
+|> thi chip an equival to the 8390 us in some card? there is also
+|> a 68 pin plcc chip, call a link+
+|> 
+|> pleas  e-mail as i don't think thi is of gener interest.
+
+my least favorit last line of a post.  um, it is of gener interest.
+as i prepar to retir 22 apollo myself, i'm look for wai to 
+recycl the us part.
+
+mike simon  simon@moscow.uidaho.edu

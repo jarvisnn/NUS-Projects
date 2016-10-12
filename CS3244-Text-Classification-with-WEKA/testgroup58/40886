@@ -1,0 +1,72 @@
+from: support@qdeck.com (technic support)
+
+subject: re: look for x window on a pc
+
+keyword: ibm pc, x window, window
+
+organ: quarterdeck offic system, santa monica ca
+
+line: 30
+
+
+
+in articl <c6wlij.l5k@bailgat.gpsemi.com> wilkinson_m@roborough.gpsemi.com write:
+
+>hi all,
+
+>       thi is the first time i've post to the net, so i hope thi is
+
+>go to the right peopl.
+
+>  i'm look for softwar packag that run on an ibm pc clone that
+
+>allow me to displai openlook and motif window on the pc. 
+
+>  the idea is to us the pc as a cheap x window termin for us by
+
+>process engin at work. 
+
+
+
+mai i humbl suggest desqview/x? (of cours, i'm bias...)
+
+
+
+desqview/x is a multitask for do comput, that us a standard
+
+x11r4 server as it's displai mechan. do applic and microsoft
+
+window standard mode ar convert on-the-fly to x-protocol, allow
+
+you to displai them, or ani r4 compat x-program from ani machin
+
+on the net to displai to the pc's local displai (or to ani other displai
+
+on the net).
+
+
+
+free tool ar avail for devlop x-applic for the dvx platform;
+
+mani x-program have been port between dvx and unix with littl or
+
+no modif. (often, you onli need to creat a new makefil!)
+
+
+
+if you're interest in more detail, you can check out the usenet group
+
+comp.os.msdo.desqview, or just email me directli at support@qdeck.com,
+
+and i'd be happi to fill you in.
+
+-- 
+
+       quarterdeck offic system - internet support - tom bortel
+
+ price/order : info@qdeck.com  |  tech question : support@qdeck.com
+
+  bb: (310) 314-3227 * fax: (310) 314-3217 * compuserv: go quarterdeck
+
+anonym ftp: qdeck.com (149.17.8.10), leav your email address as password
+

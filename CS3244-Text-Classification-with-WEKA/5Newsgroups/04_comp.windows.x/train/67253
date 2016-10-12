@@ -1,0 +1,70 @@
+from: barnett@grymoir.crd.ge.com (bruce barnett)
+subject: re: titl for xterm
+in-repli-to: lanzo@tekelec.com's messag of thu, 22 apr 1993 17:35:46 gmt
+nntp-post-host: grymoir.crd.ge.com
+repli-to: barnett@crdgw1.ge.com
+organ: ge corp. r & d, schenectadi, ny
+	<c5ol74.3b1@aeon.in-berlin.de> <1993apr22.173546.5198@gecko.uucp>
+
+in articl <1993apr22.173546.5198@gecko.uucp> lanzo@tekelec.com (mark lanzo) write:
+
+       [hint for sun os user:  us /usr/5bin/echo instead of
+       /bin/echo or csh's built-in echo.  otherwis you'll have
+       to emb liter esc and bel charact in the string
+       instead of us conveni octal sequenc.]
+
+bad idea. us /usr/5bin/echo is slower than the built-in echo.
+thi is what i do. it doe execut `hostnam` onc per shell window,
+and doe read in on extra file. but maniplu the titl doe not
+requir execut extra program.
+
+oh ye, it doe execut some program onc per each system. 
+but it store them in a file for the next time...
+
+
+if ( ! $?hostnam ) then
+	setenv  hostnam `hostnam`
+endif
+
+# figur how how to gener escap, bell, 
+# and echo command without a a line termin
+# i mai have done thi befor. if so, the variabl e is set
+
+# have i execut thi script befor on thi system?
+if ( $?e ) then
+#	echo "alreadi set the echo variabl">/dev/tty
+els if ( -f ~/.echo.${hostnam} ) then
+	sourc ~/.echo.${hostnam}
+els if ( `echo -n |wc -l`  == 0 ) then
+#	echo "built in echo is bsd" >/dev/tty
+	# then berkelei style echo
+	echo 'set ech = "echo -n"' >~/.echo.${hostnam}
+	echo "set e = `echo a | tr a '\033'`" >> ~/.echo.${hostnam}
+	echo "set b = `echo a | tr a '\007'`" >> ~/.echo.${hostnam}
+	echo 'set n = ""' >> ~/.echo.${hostnam}
+	sourc ~/.echo.${hostnam}
+els 
+#	echo "built in echo is sysv" >/dev/tty
+	echo 'set ech = "echo"' >~/.echo.${hostnam}
+	echo 'set e = "\033"' >> ~/.echo.${hostnam}
+	echo 'set b = "\007"' >> ~/.echo.${hostnam}
+	echo 'set n = "\c"' >> ~/.echo.${hostnam}
+	sourc ~/.echo.${hostnam}
+endif	
+
+
+# ar we us shelltool, cmdtool or xterm?
+# duplic these alias here to avoid problem
+if ( $term =~ sun* ) then
+	# sun alias
+	alia header '${ech}  "${e}]l\!:1${e}\${n}"'
+	alia ihead '${ech}  "${e}]l\!:1${e}\${n}"'
+els if ( $term =~ xterm ) then
+	alia header '${ech}  "${e}]2;\!:1${b}${n}"'
+	alia ihead '${ech}  "${e}]1;\!:1${b}${n}"'
+endif
+
+
+
+--
+bruce barnett <barnett@crd.ge.com> uunet!crdgw1!barnett

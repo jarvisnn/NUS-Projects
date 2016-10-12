@@ -1,0 +1,18 @@
+from: carl@teal.csn.org (carl podlogar)
+subject: need font famili, weight and slant from instanc of a widget
+summari: need font famili, weight and slant from instanc of a widget
+keyword: font
+nntp-post-host: teal.csn.org
+organ: colorado supernet, inc.
+line: 10
+
+how can i get the font famili, weight and slant from an
+instanc of a widget? us initfontcontext(), getnextfont()
+and freefontcontext() i can get the size of the font (and a
+bunch of other stuff concern the font) but nowher have
+i found famili, weight and slant. assum that i do not have
+access to the sourc where famili, weight and slant were
+orginali us when creat a fontlist.
+thank a bunch and have a great dai,
+carl
+carl@softsolut.com 

@@ -1,0 +1,40 @@
+from: du@dusw1.ctd.ornl.gov (steinert d a)
+
+subject: buttonpress/buttonreleas event -> multipl client
+
+repli-to: du@dusw1.ctd.ornl.gov (steinert d a)
+
+organ: oak ridg nation laboratori
+
+line: 14
+
+
+
+how can i captur buttonpress/buttonreleas event in multipl client?
+
+i want to know if the user is still at the displai befor lock the screen.
+
+i can get  keypress/keyreleas and pointer motion event, but if the user
+
+is press the mous button in the same locat (the mous doesn't move)
+
+i can't captur the event.  
+
+
+
+the o'reilli xlib program manual (vol. 1) sai on page 252;
+
+   "onli on client can select button event on ani on window at on time, 
+
+    due to the grab that automat take place."  
+
+
+
+ani help would be appreci.
+
+
+
+deryl steinert
+
+du@ornl.gov 
+

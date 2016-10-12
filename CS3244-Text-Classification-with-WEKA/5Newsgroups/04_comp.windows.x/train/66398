@@ -1,0 +1,38 @@
+from: stevevr@tt718.ec.comm.mot.com (steve vrany)
+subject: re: teleus, uim/x, and c++
+organ: motorola land mobil product sector
+nntp-post-host: 145.1.155.12
+line: 32
+
+in articl <1993apr1.213842.6086@ctp.com>, hubec@ctp.com (hubert chou) write:
+|> doe anyon have ani good idea on how to integr c++ code elegantli
+|> with teleus, uim/x / interfac architect gener code?
+|> 
+|> sourc would be great, but ani suggest ar welcom.
+|> 
+|> 
+|> hubi chou
+|> (617) 374-8454
+|> hubec@ctp.com
+|> 
+
+i don't know a great deal about the support for c++ in uim/x, but i can tell 
+you that there is good support for it in teleus.  in teleus you can call ani
+c++ method from a "d" modul.  what you can do then is to us the "d" languag
+for most of your interfac code and then us c++ for you applic code.
+
+i should tell you that there is some real neat stuff come out of teleus soon
+in regard to c++, but i can't give you mani detail.  you should talk to your local sale rep and get the lowdown on what thei will be do in the near furtur.
+
+if you want exampl code of how c++ integr with teleus you should look at
+$teleus/exampl/thermomet
+
+-- 
++------------------------------------------------------------------------------+
+|steve vrany                                                                 |
+|voic    : (708) 576 - 0338                                                   |
+|e-mail   : stevevr@ec.comm.mot.com                                           |
+|u.s.post : motorola inc.                                                      |
+|           1301 e. algonquin rd.                                              |
+|           schaumburg, il 60196                                               |
++------------------------------------------------------------------------------+

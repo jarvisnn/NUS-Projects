@@ -1,0 +1,30 @@
+from: bockamp@informatik.tu-muenchen.de (florian bockamp)
+subject: want: matrox pg-1281 cv driver
+origin: bockamp@hphall2g.informatik.tu-muenchen.de
+organ: technisch universitaet muenchen, germani
+line: 24
+
+
+
+
+
+hi!
+
+i need a window 3.1 driver for the matrox pg-1281 cv
+svga card. 
+at the moment window run onli in the 640x480 mode.
+if you have a driver for thi card, pleas send it 
+with the oemsetup.inf to 
+
+bockamp@informatik.tu-muenchen.de
+
+thank!
+
+-- 
++-----------------------------------------------------------------+
+| florian bockamp                                  '''            |
+| bockamp@informatik.tu-muenchen.de               (o o)           |
++---------------------------------------------ooo--( )--ooo-------+
+|                                                   -             |
+|         "it's not a bug, it's an undocu featur!"         |
++-----------------------------------------------------------------+

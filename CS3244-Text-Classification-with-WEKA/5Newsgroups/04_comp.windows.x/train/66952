@@ -1,0 +1,28 @@
+from: mous@thunder.mcrcim.mcgill.edu (der mous)
+subject: re: a question on window id
+keyword: window
+organ: mcgill research centr for intellig machin
+line: 23
+
+in articl <wnk.734824081@aquif.geologi.uiuc.edu>, wnk@aquif.geologi.uiuc.edu (walter kreil) write:
+
+> given a program run on a workstat with an x base window
+> system, how can on pop the window in which it is run to the top.
+> by window i mean the termin window from which it wa invok.
+
+on can't.  the applic mai not have been start from a termin
+emul; if it wa, the termin emul mai not still exist, and if
+it doe it mai be in no condit to be "pop[ped] to the top" (eg, it
+mai be iconifi).  and even if you can, it mai not do what you want -
+consid a virtual-root window manag like tvtwm, with the relev
+window in a portion of the virtual desktop that's outsid the real
+desktop.
+
+some (but not all) x termin emul provid environ variabl
+give a window id.  even if such a thing is present in the
+environ, it mai not be what you want; it mai correspond to a window
+on a differ server, for exampl.
+
+					der mous
+
+				mous@mcrcim.mcgill.edu

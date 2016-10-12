@@ -1,0 +1,16 @@
+from: lusardi@cs.buffalo.edu (christoph lusardi)
+subject: system file in /tmp
+organ: state univers of new york at buffalo/comp sci
+line: 10
+nntp-post-host: zanian.cs.buffalo.edu
+
+what is the directori .x11-unix for in /tmp? when i start
+x, it is creat by the system. thi directori wasn't creat 
+by root, and it contain an empti file (x0) that is own by me. 
+
+						
+-- 
+|  .-,                ###|for a lot of .au music: ftp sound.sdsu.edu
+| /   /   __  ,  _    ###|then cat file.au > /dev/audio
+| \_>/ >_/ (_/\_/<>_     |ub librari catalog:telnet bison.acsu.buffalo.edu
+|_                14261 _|(when in doubt ask: xarchi, xgopher, or xwai.)

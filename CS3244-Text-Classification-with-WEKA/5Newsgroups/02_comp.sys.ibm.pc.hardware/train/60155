@@ -1,0 +1,25 @@
+from: jk@tool.de (juergen keil)
+subject: re: sun cd-rom on pc???
+organ: tool gmbh, bonn, germani
+line: 15
+	<jk.93apr14173040@leo.tool.de>
+	<1993apr14.195220.21701@nb.rockwel.com>
+	<1993apr15.040231.17561@c3p0.novel.de>
+nntp-post-host: leo.tool.de
+in-repli-to: pbartok@c3p0.novel.de's messag of thu, 15 apr 1993 04:02:31 gmt
+
+in articl <1993apr15.040231.17561@c3p0.novel.de> pbartok@c3p0.novel.de (peter d. bartok) write:
+
+>>  great! but don't let your effort and talent be un-notic.
+>>  put the program on the net, upload it to some anonym ftp
+>>  site. so peopl (at least me) can have it and appreci it.
+>
+>   pleas put it into ftp.novel.de (193.97.1.1) pub/incom/pc
+
+ok, the small programm that can be us to switch a suncd drive into
+2048 byte/block mode for us with msdo/adaptec/apsi it now avail
+by 'ftp' from
+
+	ftp.novel.de (193.97.1.1) pub/pc/adaptec/cdblksize.zip
+--
+juergen keil          jk@tool.de ...!{uunet,mcsun}!unido!tool!jk

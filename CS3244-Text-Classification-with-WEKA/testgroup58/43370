@@ -1,0 +1,194 @@
+from: penev@rockefel.edu (penio penev)
+
+subject: re: 66dx2 isa,vlb xor 50dx eisa ??  advic want...
+
+repli-to: penev@venezia.rockefel.edu
+
+organ: rockefel univers
+
+x-newsread: tin [version 1.1 pl8]
+
+x-post-from: venezia.rockefel.edu
+
+nntp-post-host: sol.ctr.columbia.edu
+
+line: 88
+
+
+
+on thu, 22 apr 1993 00:22:31 gmt ross mitchel (rmitch@iru.rri.uwo.ca) wrote:
+
+
+
+| i want to us thi (propos) beast for basic four thing:  
+
+
+
+|      -	edit document us wordperfect 5.1 (under do)
+
+
+
+|      -	creat graph/analyz data us sigmaplot v5.0 (under do)
+
+
+
+|      -	edit/plai with imag us aldu photostyl, run under 
+
+| 	window 3.1 - these imag can be larg, sai 2k x 2k, 24bit/pixel
+
+
+
+|      -	us the pc as an xtermin, run desqview/x 1.1 and sun pc-nf, 
+
+| 	talk to our network of sparcstat's - thi is where a lot of
+
+| 	the imag/data come from, and is the most demand of these task.
+
+
+
+| i've read, read, read pc magazin, perform benchmark, read thi newsgroup,
+
+| and decid that a "nice" system (price/perform) would be:
+
+
+
+| 	486dx-50 256k cach, isa, vlb, 16meg ram
+
+| 	ati graphic ultra pro, 2 meg ram, local bu
+
+| 	15" monitor, 1280x1024 ni
+
+| 	3com etherlink iii 16bit
+
+| 	maxtor 240mb id hard drive
+
+
+
+| howev, the part don't fit!  our local retail appar put on of these
+
+| togeth, onli to discov that the ati card wouldn't run at 50mhz - surpris
+
+| surpris.  actual, after read thi group, i'm surpris that thei even
+
+| have a 50mhz local bu run...
+
+
+
+| i have a choic now between basic the abov system but with a
+
+| 486dx2-66 with isa and vlb,  or,   a 486dx-50 with eisa and no vlb (and thu
+
+| the non-local bu version of the ati card).  which is better, keep in mind
+
+| that i'm primarili interest in the last two task?  
+
+
+
+have in mind the size of the imag, my opinion is to go with vlb.
+
+it ha _much_ more bandwith that eisa, which in fact can be util
+
+by the craphic card. (i have not made measur, so someon els mai
+
+share experi on that.)
+
+
+
+also, the dx2/66 is faster in the oper, that run off intern
+
+cach, slightli slower off the extern and about the same off memori.
+
+so my advic is the 66/vlb.
+
+
+
+| we're quit happi with the ati card - veri fast, onc the data get to it!!
+
+| ~slow~ repaint imag under photostyl that have move off screen, or
+
+| been uncov!  
+
+
+
+| there doesn't seem to be enough raw cpu when run desqview/x!  it sluggish
+
+| run the local window manag.  also, mani function under photostyl take
+
+| a long time (even when the imag fit entir in ram).
+
+
+
+| there's not enough memori in the system - desqview/x and a 1 meg smartdriv
+
+| don't leav much room for other app.  photostyl will page to disk with
+
+| medium size imag.
+
+
+
+have you tri run photostyl without the cach? no need to have
+
+page and cach both. (well, you might argu, that the page is
+
+cach). my belief (no measur) is that app left with more
+
+memori will manag it better than smartdrv.ex(sy).
+
+
+
+| i have perform a number of benchmark on the ethernet transfer rate.  thi
+
+| machin sustain onli 120k/sec over ethernet while our sparc sustain 600k/sec 
+
+| on the same network.  go to the 16 bit version of the smc card increas
+
+| transfer rate to 160k/sec - still veri slow (especi when move larg 
+
+| imag).  is there such a thing as a local-bu ethernet card come??  will it
+
+| make a differ?  i'm hope so, and lean toward the 486dx2-66 choic 
+
+| (abov), for that reason.
+
+
+
+the bandwidth (theoret) of isa is over 5mb/s, which is far from
+
+0.15mb/s. i tri my isa id hard drive (maxtor 213mb) and got the
+
+same result - 0.65mb/s - regardless of the isa bu speed
+
+(5.5-8.25mhz). so i guess, that just the card/driver combin is
+
+lousi.
+
+
+
+| also, ar there dx2-100's on the horizon?  what about dx3-99's?  dx3-150's ???!
+
+
+
+the rumor ar that dx3-99 (if ani) is the most like chip to come
+
+out. but note, that ibm is closest to the technolog an it will onli
+
+sell whole motherboard, so you'll have to upgrad the mb.
+
+
+
+| ani inform is greatli appreci.
+
+
+
+just some view, not much figur.
+
+
+
+--
+
+penio penev  x7423 (212)327-7423 (w) internet: penev@venezia.rockefel.edu
+
+
+
+disclaim: all oppinion ar mine.
+

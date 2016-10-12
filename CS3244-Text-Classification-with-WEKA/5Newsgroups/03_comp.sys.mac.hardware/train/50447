@@ -1,0 +1,89 @@
+from: cmmiller@iastat.edu (c. m. miller)
+subject: result of mathematica speed test!!
+organ: iowa state univers, am, ia
+line: 84
+
+well, here ar the result of the mathematica test which i post to
+thi newsgroup.  the "test" wa the follow command:
+
+>plot3d[((-2*9000)/(2*3.1416*((x-5000)^2+(y-8000)^2+
+>81000000)^1.5))+((-3*9000)/(2*3.1416*((x-10000)^2+
+>(y-1000)^2+81000000)^1.5))+((4*2000)/(2*3.1416*
+>((x-7000)^2+(y-10000)^2+4000000)^1.5)),
+>{x,-5500,19500},{y,-5500,19500},plotpoint->50]
+
+
+i wa just curiou how fast the plot command would be execut on
+variou macintosh machin as well as other person comput and
+workstat.  the result ar post below:
+
+machin		system		math ver.	# of trial	time, min
+
+pb 170		7.0.0 with	2.1		2		2:08
+		tuneup/8mb
+		ram/5mb for
+		mathematica
+
+dec 5000	ultrix v4.2a	2.1 for		1		0:25
+		dec risc	
+					
+iisi		7.1/cach@96mb	1.2f33enh.	1		4:30
+		25mhz/5mb ram/
+		3mb for math./
+		w/ 68882
+
+c650		7.1/8mb ram			2		0:32
+
+q800		8mb/cach@384/	1.2				1:01
+		4mb for math.	
+
+sparc		suno4.1.3					0:14
+station		40mb ram
+
+sgi iri/4d	r3000 risc					<0:01
+		processor
+		version
+
+sparc		suno4.1.2	2.1 				0:26
+station2
+
+iisi		7.1						3:15
+
+next		nextstep 2.1	1.2				2:38
+cube		68030 base/
+		w/ coprocessor	
+
+next		nextstep 3.0	1.2		5(av)		0:52
+cube		68040/25mhz/
+		20 mb ram
+
+iisi		17mb/8mb for	2.102 enha			3:15
+		math.			
+		w/ 68882
+
+next		16mb ram/			1 		0:37
+		25 mhz 040/
+		workspac
+		manag 2.1
+
+funni how the iisi run at 25 mhz is slower than other equival
+machin, lot slower in fact.  perhap the version of mathematica
+make a differ or the fact that not much ram wa alloc.
+anoth interest thing is how fast the sgi did it.  wow. 
+
+basic, though, i wouldn't draw ani conclus from thi data.  it
+seem that mathematica's speed is depend on a lot of variabl.  i
+wa just curiou how differ machin would measur up.  
+
+well, if you have ani question or if i forgot someth, just drop me
+a line at "cmmiller@iastat.edu".  
+
+chad
+
+ps  if the space of the abov tabl doesn't come out right on your
+machin, tell me and i'll mail you a copi of thi in a binhex word
+5.1 document.  
+
+
+
+

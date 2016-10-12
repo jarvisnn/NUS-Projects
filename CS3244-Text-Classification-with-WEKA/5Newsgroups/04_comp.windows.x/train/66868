@@ -1,0 +1,687 @@
+from: art@cs.ualberta.ca (art mulder)
+subject: comp.window.x: get more perform out of x.  faq
+summari: thi post contain a list of suggest about what you can do to get the best perform out of x on your workstat -- without bui more hardwar.
+keyword: faq speed x
+nntp-post-host: spirit-riv.cs.ualberta.ca
+repli-to: art@cs.ualberta.ca (art mulder)
+organ: univers of alberta, edmonton, canada
+expir: thu, 20 mai 1993 23:00:00 gmt
+line: 677
+
+archiv-name: x-faq/speedup
+last-modifi: 1993/4/15
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	how to maxim the perform of x -- monthli post
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	    compil by art mulder (art@cs.ualberta.ca)
+
+  more ram, faster cpu's, more disk space, faster ethernet...  these
+  ar the standard respons you hear when you ask how to improv the
+  perform of your workstat.
+
+  well, more hardwar isn't alwai an option, and i wonder if more
+  hardwar is alwai even a necess.
+
+  thi "faq" list is a collect of suggest and idea from differ
+  peopl on the net on how you can the best possibl perform from x
+  window on your workstat, without purchas more hardwar.
+
+  perform is a highli subject issu.  the individu user must
+  balanc `speed' versu `featur' in order to come to a person
+  decis.  therefor thi document can be be expect to contain mani
+  subject opinion in and amongst the object fact.
+
+  thi document is specif concern with x.  there ar of cours
+  mani other factor that can affect the perform of a workstat.
+  howev, thei ar outsid the scope of thi document.
+
+    [ peopl serious interest in the whole area of system
+    perform, might want to look at the o'reilli nutshel handbook
+    "system perform tune" by mike loukid.  i'm about 25% of the
+    wai through read it, and it look like a well-written
+    comprehens treatment of system perform.  i'm unawar of ani
+    other similar book.  --ed.]
+
+-----------------
+tabl of content
+-----------------
+  0. introduct & administrivia
+  1. what about the "other x faq"?
+  2. window manag
+  3. the x server
+       which server?
+       lock the server into ram?
+       start your server
+       font
+       about the resourc file
+!      defin your displai properli
+  4. client
+       a better clock for x
+       a better termin emul for x
+       tune your client
+  5. miscellan suggest
+       pretti pictur
+       a quicker mous
+       program thought
+       sai what!?
+  6. other sourc of inform
+  7. author & note
+  
+! = chang sinc last issu.
+* = new sinc last issu.
+
+-----------------------------
+introduct & administrivia
+-----------------------------
+
+  thi document is post each month, on or around the 15th, to the
+  usenet new group comp.window.x, new.answer, and comp.answer.
+  if you ar read a copi of thi faq which is more than a few
+  month old (see the "last-modifi" date abov) you should probabl
+  locat the latest edit, sinc the inform mai be outdat.
+
+  if you do not know how to get those newsgroup and/or your site doe
+  not receiv them and/or thi articl ha alreadi expir, you can
+  retriev thi faq from an archiv site.
+
+  there exist sever usenet faq archiv site.  to find out more about
+  them and how to access them, pleas see the "introduct to the
+  new.answer newsgroup" post in new.answer.
+
+  the main faq archiv is at rtfm.mit.edu [18.172.1.27].  thi document
+  can be found there in /pub/usenet/new.answer/x-faq/speedup.  if
+  you do not have access to anonym ftp, you can retriev it by
+  send a mail messag to mail-server@pit-manag.mit.edu with the
+  command "send usenet/new.answer/x-faq/speedup" in the messag bodi.
+
+-----------------------------
+what about the "other x faq"?
+-----------------------------
+
+  david b. lewi (faq%craft@uunet.uu.net) maintain the inform and
+  well written "comp.window.x frequent ask question" document.
+  it focu is on gener x inform, while thi faq concentr
+  on perform.
+
+  the comp.window.x faq doe address the issu of speed, but onli with
+  regard to the x server.  the gist of that topic seem to be:
+	"us x11r5, it is faster than r4".
+  (pleas see the x faq for complet detail).
+
+---------------
+window manag
+---------------
+
+  there ar a lot of window manag out there, with lot of differ
+  featur and abil.  the choic of which to us is by necess a
+  balanc act between perform and us featur.  at thi
+  point, most respond have agre upon "twm" as the best candid
+  for a speedi window manag. 
+
+  a coupl of gener trick you can try to soup up your window manger,
+  is turn off unnecessari thing like "zoom" and "opaqu move".
+  also, if you lai out your window in a tile manner, you reduc the
+  amount of cpu power spent in rais and lower overlap
+  window.                           joe english (joe@trystero.art.com)
+
+  i've found that a good font for tile is 7x13 (aka:
+  -misc-fix-medium-r-normal--13-100-100-100-c-70-iso8859-1 ). it is
+  the biggest font i know of that i can us on my sun (1152x900 screen)
+  and still get two 80 column termin window side-by-side on the
+  displai with no overlap.  other font suggest will be accept.
+
+------------
+the x server
+------------
+
+which server?
+- - - - - - -
+  make sure that your server is a proper match for your hardwar.
+  if you have a monochrom monitor, us a monochrom x11 server.
+
+  on my monochrom sun, i haven't notic much differ between
+  the xsun (colour) server and xsunmono, howev it wa point out to
+  me that xsunmono is about 800k smaller and therefor should contribut
+  to less page.  
+         [ thank to: jonni farringdon (j.farringdon@psychol.ucl.ac.uk),
+                        michael salmon (michael.salmon@eo.ericsson.se) ]
+
+  how your server wa compil can also make a differ.  jeff law
+  (law@schirf.cs.utah.edu) advis us that on a sun system, x should be
+  compil with gcc (version 2.*) or with the unbundl sun compil.
+  you can expect to get "*veri* larg speedup in the server" by not
+  us the bundl suno compil.  i assum that similar result
+  would occur if you us on of the other high-qualiti commerci
+  compil on the market.
+
+lock the server into ram?
+- - - - - - - - - - - - - - -
+  ha anyon tri hack the x server so that it is lock into ram and
+  doe not get page?  eg: via a call to plock().  doe thi help
+  perform at all?  i've had on inquiri on thi topic, and a few
+  pointer to the plock() function call, but no hard evid from someon
+  who's tri it.  i am not in a posit to give it a try.  
+			  [thank to: eric c claei (ecc@eperm.att.com),
+				      danni backx (db@sunbim.be),
+				      juan d. martin (juando@cnm.us.es) ]
+start your server
+- - - - - - - - - - -
+  joe english (joe@trystero.art.com) :
+    if you start up a lot of client in your .xsession or whatev, sleep
+    for a second or two after launch each on.  after i chang my
+    .xclient script to do thi, log in actual took *less* time...
+    we have a heavili load system without much core, though.
+
+  thi sound crazi, but i have confirm that it work!  
+
+  warner losh (imp@solbourn.com) provid me with a good explan of
+  why thi work, which i have summar here:
+
+    when you start up an x server it take a huge amount of time to
+    start accept connect.  a lot of initi is done by
+    the server when it start.  thi process touch a larg number of
+    page.  ani other process run at the same time would fight the
+    server for us of the cpu, and more importantli, memori.  if you
+    put a sleep in there, you give the server a chanc to get itself
+    sort out befor the client start up.
+
+    similarli, there is also a lot of initi whenev an x
+    client program start: toolkit regist widget, resourc
+    be fetch, program initi state and "databas" and so
+    forth.  all thi activ is typic memori intens.  onc thi
+    initi is done ("the process ha reach a steadi state"),
+    the memori usag typic settl down to us onli a few page.
+    by us sleep to stagger the launch of your client in your
+    .xinitrc , you avoid them fight each other for your
+    workstat's limit resourc
+
+  thi is most definit a "your mileag mai vari" situat, as there
+  ar so mani variabl to be consid: avail ram, local swap
+  space, load averag, number of user on your system, which client
+  you ar start, etc.
+
+  current in my .xinitrc i have a situat like:
+	(sleep 1; exec xclock ) &
+	(sleep 1; exec xbiff ) &
+	(sleep 1; exec xterm ) &
+	(sleep 1; exec xterm ) &
+
+  i've experi with:
+	(sleep 1; exec xclock ) &
+	(sleep 2; exec xbiff ) &
+	(sleep 3; exec xterm ) &
+	(sleep 4; exec xterm ) &
+
+  i've even tri:
+	(sleep 2; exec start_x_client_script ) &
+  and then in start_x_client_script i had:
+	(sleep 1; exec xclock ) &
+	(sleep 1; exec xbiff ) &
+	(sleep 1; exec xterm ) &
+	(sleep 1; exec xterm ) &
+
+    [ the idea with thi last on wa to make sure that xinit had
+    complet finish process my .xinitrc, and had settl down
+    into a "steadi state" befor the sleep expir and all my client
+    were launch. ]
+
+  all of these yield fairli compar result, and so i just stuck with
+  my current setup, for it simplic.  you will probabl have to
+  experi a bit to find a setup which suit you.
+
+font
+- - -
+  load font take time and ram.  if you minim the number of font
+  your applic us, you'll get speed increas in load-up time.
+
+  on simpl strategi is to choos a small number of font (on small, on
+  larg, on roman, whatev suit you) and configur all your client -- or
+  at least all your heavili us client -- to us onli those few font.
+  client program should start up quicker if their font is alreadi load
+  into the server.  thi will also conserv server resourc, sinc fewer
+  font will be load by the server.
+			      [ farrel mckai (fbm@ptcburp.ptcbu.oz.au),
+			        joe english (joe@trystero.art.com) ]
+
+  eg: my main xterm font is 7x13, so i also have twm set up to us 7x13
+  in all it's menu and icon etc.  twm's default font is 8x13.  sinc
+  i don't normal us 8x13, i've elimin on font from my server.
+
+  oliv jone (oj@roadrunn.pictel.com):
+    keep font local to the workstat, rather than load them over nf.
+    if you will make extens us of r5 scalabl font, us a font server.
+
+about the resourc file
+- - - - - - - - - - - - -
+
+    keep your .xresourc / .xdefault file small.  save ram and save
+    on server startup time.          joe english (joe@trystero.art.com)
+
+  on suggest:
+
+    in your .xdefault (.xresourc) file, try put onli the minimum
+    number of resourc that you want to have avail to all of your
+    applic.  for exampl:  *reversevideo: true
+
+    then, separ your resourc into individu client-specif
+    resourc file.  for exampl: $home/lib/app-default.  in your
+    .login file set the environ variabl xuserfilesearchpath:
+
+	setenv xuserfilesearchpath $home/lib/app-default/%n
+
+    [ the "comp.window.x frequent ask question" faq contain
+    an excel explan of how these environ variabl work.
+    --ed.]
+
+    so, when xterm launch, it load it resourc from
+    .../app-default/xterm.  xdvi find them in .../app-default/xdvi,
+    and so on and so forth.  note that not all client follow the same
+    xxxxx resourc-file name pattern.  you can check in your system
+    app-default directori (often: /usr/x11r5/lib/x11/app-default/) to
+    find the proper name, and then name your person resourc file
+    with the same name.
+
+    thi is all document in the xt specif (pg 125 & 666).
+		    [thank to: kevin samborn (samborn@mtkgc.com),
+		         michael urban (urban@cobra.jpl.nasa.gov),
+		             and mike long (mikel@ee.cornel.edu).
+	     kevin is will mail hi setup file to inquir.]
+
+  thi method of organ your person resourc ha the follow
+  benefit:
+
+    - easier to maintain / more usabl.
+
+    - fewer resourc ar store in the x server in the resourc_manag
+      properti.  as a side benefit your server mai start fraction
+      quicker, sinc it doesn`t have to load all your resourc.
+
+    - applic onli process their own resourc, never have to sort 
+      through all of your resourc to find the on that affect them.
+
+  it also ha drawback:
+
+    - the applic that you ar interest in ha to load an
+      addit file everi time it start up.  thi doesn't seem to
+      make that much of a perform differ, and you might
+      consid thi a huge boon to usabl.  if you ar modifi an
+      applic's resourc databas, you just need to re-run the
+      applic without have to "xrdb" again.
+
+    - xrdb will by default run your .xdefault file through cpp.  when
+      your resourc ar split out into multipl resourc file and
+      then load by the individu client program, thei will not.
+      watch out for thi!!
+
+      i had c style comment in my .xdefault file, which cpp strip
+      out.  when i switch to thi method of distribut resourc
+      file i spent sever frustrat dai try to figur out why
+      my client were not find their resourc.  xt did *not*
+      provid ani error messag when it encount the c style
+      comment in the resourc file, it simpli, silent, abort
+      process the resourc file.
+
+      the loss of preprocess (which can be veri handi, e.g. ``#ifdef
+      color'' ...) is enough to caus some peopl to dismiss thi
+      method of resourc manag.
+
+    - you mai also run into some client which break the rule.  for
+      exampl, neither emac (18.58.3) nor xvt (1.0) will find their
+      resourc if thei ar anywher other than in .xdefault.
+
+    - when start up a client on a machin that doe not share file
+      with the machin where your resourc ar store, your client
+      will not find it resourc.  load all your resourc into the
+      server will guarante that all of your client will alwai find
+      their resourc.            casei leedom (casei@gauss.llnl.gov)
+
+  a possibl compromis suggest that i have (and am plan on try)
+  is to put resourc for all my heavili us client (eg: xterm) into my
+  .xdefault file, and to us the "separ resourc file" method for
+  client that i seldom us.
+
+defin your displai properli
+- - - - - - - - - - - - - - -
+
+  client program ar often execut on the same machin as the server.  in
+  that situat, rather than set your displai environ variabl to 
+  "<hostnam>:0.0", where <hostnam> is the name of your workstat, you
+  should set your displai variabl to "unix:0.0" or ":0.0".  by do thi
+  you access optim routin that know that the server is on the same
+  machin and us a share memori method of transfer request.
+			[thank to patrick j horgan (pjh70@ra.amdahl.com)]
+
+  see the _displai name_ section of the x(1) man page for further
+  explan of how to properli set your displai name.
+
+  "i don't think it's stock mit, but (at least) data gener and hp have
+  librari that ar smart enough to us local commun even when
+  the displai isn't set special."
+			      rob sartin (88opensi!sartin@uunet.uu.net)
+
+  [jodi goldberg (jodi@algorithm.com) sent me an xlib patch to chang
+  stock r5 to us local commun even if displai is not properli set.
+  i don't want to get in the busi of distribut or try to juggl
+  non-mit patch and so have elect not to includ it here.  hopefulli mit
+  will appli thi minor (~8 line) patch themselv.  in the meantim, if
+  you want to try it yourself, email jodi.  --ed.]
+
+-------
+client
+-------
+
+  if you onli have a few megabyt of ram then you should think
+  carefulli about the number of program you ar run.  think also
+  about the _kind_ of program you ar run.  for exampl:  is there
+  a smaller clock program than xclock?
+
+  unfortun, i haven't realli notic that program advertis how larg
+  thei ar, so the onu is on us to do the research and spread the word.
+
+  [ suggest on better altern to the some of the standard client
+  (eg: xclock, xterm, xbiff) ar welcom.  --ed.]
+
+  i've receiv some contradictori advic from peopl, on the subject
+  of x client program.  some advoc the us of program that ar
+  strictli xlib base, sinc xt, xaw and other toolkit ar rather
+  larg.  other warn us that other applic which you ar us
+  mai have alreadi load up on or more of these share librari.  in
+  thi case, us a non-xt (for exampl) client program mai actual
+  _increas_ the amount of ram consum.
+
+  the upshot of all thi seem to be: don't mix toolkit.  that is, try
+  and us just athena client, or just xview client (or just motif
+  client, etc).  if you us more than on, then you're drag in
+  more than on toolkit librari.
+
+  know your environ, and think carefulli about which client
+  program would work best togeth in that environ.
+
+		  [thank to: rob sartin (88opensi!sartin@uunet.uu.net),
+      duncan sinclair (sinclair@dc.gla.ac.uk | sinclair@uk.ac.gla.dc) ]
+
+a better clock for x
+- - - - - - - - - - -
+
+1) xcuckoo
+   suggest by: duncan sinclair (sinclair@dc.gla.ac.uk)
+   avail: on export.lc.mit.edu
+
+   xcuckoo displai a clock in the titl bar of *anoth* program.
+   save screen real estat.
+
+2) mclock
+   suggest by: der mous (mous@lightn.mcrcim.mcgill.edu)
+   avail: larri.mcrcim.mcgill.edu (132.206.1.1) in /x/mclock.shar
+
+   non xt-base.  extens configur.  it can be made to look
+   veri much like mit oclock, or mostli like xclock pure by chang
+   resourc.
+
+  of cours, the ultim clock --- on that consum no resourc, and 
+  take up no screen real estat --- is the on that hang on your wall.
+  :-) 
+
+a better termin emul for x
+- - - - - - - - - - - - - - - - -
+
+  from the readm file distribut with xterm:
+
+  +-----
+  |		 abandon all hope, ye who enter here
+  |
+  | thi is undoubtedli the most ugli program in the distribut.
+  | ...
+  +-----
+
+  ugli mayb, but at my site it's still the most us.  i suspect that
+  xterm is on of the most us client at mani, if not most site.
+  lazi?  isn't there a better termin emul avail?  see below.
+
+  if you must us xterm, you can try reduc the number of savelin
+  to reduc memori usag.  [ oliv jone (oj@roadrunn.pictel.com),
+		   jonni farringdon (j.farringdon@psychol.ucl.ac.uk) ]
+
+1) xvt
+   suggest by: richard hesketh (rlh2@ukc.ac.uk) :
+   avail: export.lc.mit.edu in /contrib/xvt-1.0.tar.z
+
+   "...if you don't need all the esoter featur of xterm, then get
+   hold of xvt ...  it wa written here just to save swap space as
+   xterm is rather a hog! "
+
+   thi wa written as a partial 'clone' of xterm.  you don't have to
+   renam your resourc, as xvt pretend to be xterm.  in it's current
+   version, you cannot bind kei as you can in xterm.  i've heard that
+   there ar version of xvt with thi featur, but i've not found ani
+   yet.
+
+   updat (march 1993):  i recent had a few email convers with
+   brian warkentin (brian.warkentin@eng.sun.com) regard xvt.  he
+   question whether xvt realli is at all faster than xterm.  for
+   instanc, xvt mai initi slightli faster, but compar scroll
+   speed (try thi quicki benchmark: /bin/time dd if=/etc/termcap
+   bs=40) and see which program can scroll faster.  also, while xterm
+   mai be slightli larger in ram requir (we don't have ani hard
+   number here, doe anyon els?) share librari and share text
+   segment mean that xterm's page requir ar not that major.
+
+   as an experi, he rip out all the tek stuff from xterm, but it
+   made littl differ, sinc if you never us it, it never get
+   brought into memori.
+
+   so here we stand with some conflict report on the valid of
+   xvt over xterm.  in summari?  caveat emptor, your mileag mai vari.
+   if you can provid some hard data, i'd like to see it.
+   specif: how much ram each occupi, how much swap each need,
+   rel speed of each
+
+2) mterm
+   suggest by: der mous (mous@lightn.mcrcim.mcgill.edu)
+   avail: larri.mcrcim.mcgill.edu (132.206.1.1) in
+     /x/mterm.src/mterm.ball-o-wax.
+
+   "i also have my own termin emul.  it major lack is
+   scrollback, but some peopl like it anywai."
+
+
+tune your client
+- - - - - - - - - -
+
+  suggest on how you can tune your client program to work faster.
+
+  from scott barman (scott@asd.com) come a suggest regard motif
+  text field widget:
+
+    i notic that dure data entri into motif text field widget, i
+    wa get a slight lag in respons to some keystrok,
+    particularli the initi on in the field.  examin the what wa
+    go on with xscope i found it.  it seem that when the resourc
+    xmnblinkrat is non-zero and the focu is on a text field widget
+    (or even just a text widget) the i-beam cursor will blink.
+    everi time the cursor appear or disappear in those widget, the
+    widget code is make a request to the server (copyarea).  the user
+    can stop thi by set the resourc xmnblinkrat to 0.  it is not
+    notic on a 40mhz sparc, but it doe make a littl differ
+    on a [slower system].
+
+  thi specif suggest can probabl be appli in gener to lot
+  of area.  consid your heavili us client, ar there ani minor
+  embellish that can be turn off and therebi save on server
+  request?
+
+-------------------------
+miscellan suggest
+-------------------------
+
+pretti pictur
+- - - - - - - -
+  don't us larg bitmap (gif's, etc) as root window background.
+
+  - the more complic your root window bitmap, the slower the server
+    is at redraw your screen when you reposit window (or redraw, etc)
+
+  - these take up ram, and cpu power.  i work on a sun sparc and i'm
+    consciou of perform issu, i can't comprehend it when i see
+    peopl with a 4mb sun 3/60 run xphoon as their root window.
+
+    i'll let someon els figur out how much ram would be occupi by
+    have a full screen root imag on a colour workstat.
+
+  - if you're anyth like me, you need all the screen real estat
+    that you can get for client, and so rare see the root window anywai.
+
+		      [ thank to qiang alex zhao (azhao@cs.arizona.edu) 
+			for remind me of thi on. --ed.]
+
+a quicker mous
+- - - - - - - -
+  us xset, you can adjust how fast your pointer move on the screen
+  when you move your mous.  i us "xset m 3 10" in my .xinitrc file,
+  which let me send my pointer across the screen with just a flick of
+  the wrist.  see the xset man page for further idea and inform.
+
+  hint: sometim you mai want to *slow down* your mous track for
+  fine work.  to cover my option, i have place a number of differ
+  mous set command into a menu in my window manag.  
+
+  e.g. (for twm) :
+      menu "mous set" {
+        "mous set:"			f.titl
+	"  veri fast"				! "xset m 7 10 &"
+	"  normal (fast)"			! "xset m 3 10 &"
+	"  system default (un-acceler)"	! "xset m default &"
+	"  glacial"				! "xset m 0 10 &"
+      }
+
+program thought
+- - - - - - - - - - -
+  joe english (joe@trystero.art.com) :
+    to speed up applic that you're develop, there ar ton of
+    thing you can do.  some that stick out:
+
+    - for motif program, don't set xmfontlist resourc for individu
+      button, label, list, et. al.; us the defaultfontlist or
+      labelfontlist or whatev resourc of the highest-level manag
+      widget.  again, stick to as few font as possibl.
+
+    - better yet, don't us motif at all.  it's an absolut pig.
+
+    - don't creat and destroi widget on the fly.  try to reus them.
+      (thi will avoid mani problem with buggi toolkit, too.)
+
+    - us a line width of 0 in gc.  on some server thi make a huge
+      differ.
+
+    - compress and collaps multipl expos event.  thi can make the
+      differ between a fast applic and a complet unus
+      on.
+
+  francoi stae (fran@kiwi.uia.ac.be) :
+    just a small remark: i onc heard that us a better malloc
+    function would greatli increas perform of xt base
+    applic sinc thei us malloc heavili. thei suggest try
+    out the gnui malloc, but i didn't find the time yet. i did some
+    test on small program just do malloc and free, and the
+    differ were inde veri notic ( somewhat 5 time faster)
+
+  [ ani confirm on thi from anyon?  --ed.]
+
+  andr' beck (andr_beck@ir.inf.tu-dresden.de) :
+
+  - unnecessari noexpos event.
+
+    most peopl us xcopyarea/xcopyplan as fastest blit routin, but
+    thei forget to reset graphic_exposur in the gc us for the
+    blit. thi will caus a noexpos event everi blit, that, in most
+    case, onli put load onto the connect and forc the client to
+    run through it's event-loop again and again.
+
+  - thousand of xchangegc request.
+
+    thi "gfx context switch" is also seen in most handcod x-app,
+    where onli on or few gc ar creat and then heavili chang
+    again and again.  xt us a definit better mechan, by cach
+    and share a lot of gc with all need paramet. thi will
+    remov the load of subsequ xchangegc request from the
+    connect (by move it toward the client startup phase).
+
+sai what!?
+- - - - - - 
+  some contributor propos idea that seem right off the wall at first:
+
+  david b. lewi (by dai: dbl@osf.org, by night: david%craft@uunet.uu.net) :
+    how about thi: swap displai with someon els. run all your program
+    on the other machin and displai local; the other user run off your
+    machin onto the other displai. goal: reduc context switch in the
+    same oper between client and server.
+
+  i'm not in a situat where i can easili try thi, but i have receiv
+  the follow confirm...
+
+  michael salmon (michael.salmon@eo.ericsson.se):
+    i regularli run program on other machin and i notic a big
+    differ. i try to run on a machin where i will reduc net usag
+    and usual with nice to reduc the impact of my intrus. thi
+    help a lot on my poor littl ss1+ with onli 16 mb, it wa
+    essenti when i onli had 8 mb.
+
+  casei leedom (casei@gauss.llnl.gov) :
+    [the x11 server and the client ar] compet for the same cpu as
+    your server when you run it on the same machin.  not realli a
+    major problem, except that the x11 client and the server ar in
+    absolut synchron and ar context thrash.
+
+  timothi h panton (thp@westhawk.uucp) :
+    firstli it reli on the fact that most cpu's ar mostli idl, x's
+    cpu usag is bursti.  so the chanc of you and your teammat
+    do someth cpu-intens at the same time is small. if thei
+    ar not then you get twice the cpu+memori avail for your
+    action.
+
+    the second factor is that context switch ar expens, us 2
+    cpu's halv them, you pai a price due to the overhead of go
+    over the network, but thi is offset in most case by the improv
+    buffer of a network (typic 20k vs 4k for a pipe), allow
+    even fewer context switch.
+
+----------------------------
+other sourc of inform
+----------------------------
+
+  volum 8 in o'reilli's x window system seri, ``x window system
+  administr's guid'' is a book all x administr's should read.
+
+  adrian nye (adrian@ora.com):
+    a lot more tip on perform ar in the paper "improv x
+    applic perform" by chri d. peterson and sharon chang, in
+    issu 3 of the x resourc.
+
+    an earlier version of thi paper appear in the xhibit 1992
+    confer proceed.
+
+    thi paper is absolut essenti read for x programm.
+
+--------------
+author & note
+--------------
+  thi list is current maintain by art mulder (art@cs.ualberta.ca)
+
+  suggest, correct, or submiss for inclus in thi list
+  ar gladli accept.  layout suggest and comment (spell
+  mistak's too! :-) ar also welcom.
+
+  current i have list all contributor of the variou comment and
+  suggest.  if you do not want to be credit, pleas tell me.
+
+  speedup-x-faq is copyright (c) 1993 by arthur e. mulder
+
+  you mai copi thi document in whole or in part as long as you don't
+  try to make monei off it, or pretend that you wrote it.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+--
+ ...art mulder ( art@cs.ualberta.ca )    | "do not be conform to thi world,
+ depart of comput scienc         |  but be transform by the renew
+ univers of alberta, edmonton, canada |  of your mind, ..."  roman 12:2

@@ -1,0 +1,42 @@
+from: dhk@ubbpc.uucp (dave kitabjian)
+subject: x86 ~= 680x0 ??  (how do thei compar?)
+distribut: usa
+organ: unisi unix portat center, blue bell, pa
+line: 36
+
+i'm sure intel and motorola ar compet neck-and-neck for 
+crunch-power, but for a given clock speed, how do we rank the
+follow (from 1st to 6th):
+  486		68040
+  386		68030
+  286		68020
+
+while you're at it, where will the follow fit into the list:
+  68060
+  pentium
+  powerpc
+
+and about clock speed:  doe doubl the clock speed doubl the
+overal processor speed?  and fill in the __'s below:
+  68030 @ __ mhz = 68040 @ __ mhz
+
+thank veri much.  i'd appreci hear ani further explan
+from ani experienc folk out there, too! 
+
+ 
+p.s.  folk have been have troubl repli to me late with the "repli"
+      command.  try type my address by hand and it should work.  thank!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dave kitabjian (kit-ahb'-jyin)    vital statist:
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ||||||   k-10 east garden wai    favorit guitarist     :  phil keaggi 
+| @  @ |  dayton, nj  08810       favorit comput      :  macintosh
+c  <   c  (908) 274-0892          spaghetti prefer   :  semi-broken
+ \ o  /   tredysvr!ubbpc!dhk@     tp instal pref.  :  over the top 
+  \__/     gvl1.vfl.paramax.com  favorit book          :  bibl
+                                  favorit rush limbaugh
+                                     commerci          : taxula, part iii
+                                  favorit contradict : "pro-child --
+                                                               pro-choic."
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

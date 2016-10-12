@@ -1,0 +1,42 @@
+from: ahleniu@rtsg.mot.com (mark ahleniu)
+subject: convert color gif to x pixmap
+summari: how to convert color gif to color pixmap
+keyword: gif pixmap
+nntp-post-host: turquois
+organ: motorola inc., cellular infrastructur group
+line: 34
+
+i have look through the faq section and have not
+seen a answer for thi.
+
+i have an x/motif applic that i have written.
+i have a coupl of gif file (or pict) that i have
+scan in with a color scanner.  now i would like
+to be abl to convert the gif file into a format
+that could be read into my applic and displai
+on the background of it main window. prefer with
+pixmap, or perhap as an ximag.
+
+i have found function in the pbmplu program suit
+to convert gif to xbm, but that is monochrom, and
+i realli do need color.
+
+i have look at xv, which read in gif, and write
+out sever format, but have not found a wai to write
+out a file which can be read in as a pixmap.
+
+is there an easi wai to do thi?
+
+email respons prefer.
+
+thank!
+
+'mark
+
+ahleniu@rtsg.mot.com
+
+-- 
+===============	regard   'mark  =============================================
+mark ahleniu 		  voic:(708)-632-5346  email: ahleniu@marbl.rtsg.mot.com
+motorola inc.		  fax:  (708)-632-2413
+arlington, ht. il, usa	 60004

@@ -1,0 +1,24 @@
+from: tdawson@llullaillaco.engin.umich.edu (chri herringshaw)
+subject: re: sun ipx root window displai - background pictur
+organ: univers of michigan engin, ann arbor
+line: 15
+distribut: world
+nntp-post-host: llullaillaco.engin.umich.edu
+keyword: sun ipx background pictur
+origin: tdawson@llullaillaco.engin.umich.edu
+
+
+i'm not sure if you got the inform you were look for, so i'll
+post it anywai for the gener public.  to load an imag on your root
+window add thi line to the end of your .xsession file:
+
+ xloadimag -onroot -fullscreen <gif_file_name> &
+
+thi is assum of cours you have the xloadimag client, and as
+for the switch, i think thei pretti much explain what is go on.
+if you leav out the <&>, the termin lock till you kill it.
+(you alreadi knew that though...)
+
+hope thi help.
+
+daemon

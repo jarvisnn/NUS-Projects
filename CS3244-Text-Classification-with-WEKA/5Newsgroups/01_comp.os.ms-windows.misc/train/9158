@@ -1,0 +1,16 @@
+from: htanab@ponder.csci.unt.edu (tanab)
+subject: termin softwar
+articl-i.d.: ponder.htanab.734110579
+organ: univers of north texa
+line: 10
+
+pleas repli via email...
+
+when i us the termin softwar for window such as termin.ex or 
+crossttalk, it doesn't us the whole window.  i mean, when the softwar's
+window size is max, it still scroll around the 2/3 of window.  it doe not
+us whole window.  i set "stty row 30", but still the same. scroll at 2/3
+from the top of the window.  could anyon tell me how to setup these softwar
+to us whole window?
+
+thank in advanc.

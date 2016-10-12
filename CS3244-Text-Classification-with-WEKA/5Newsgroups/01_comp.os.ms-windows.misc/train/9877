@@ -1,0 +1,21 @@
+from: mlin@pdx222.nosubdomain.nodomain (ming t. lin)
+subject: word = byte ??
+repli-to: mlin@ichip.intel.com
+organ: workgroup comput divis, pdx, intel
+line: 15
+
+
+    i just move from borland c++ 3.0 to visual c++ todai. when i tri
+to compil my c++ program, it complain a function prototyp problem.
+it turn out that the typedef word in ms c++ is a byte, not unsign int.
+
+    could anyon shine some light on thi subject ? why a word is a byte ?
+
+
+-ming t. lin
+
+
+---------------------------------------------------------------------------
+mlin@ichip.intel.com
+(503) 696-4806
+

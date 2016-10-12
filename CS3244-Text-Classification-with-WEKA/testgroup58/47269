@@ -1,0 +1,48 @@
+distribut: world
+
+from: elenai_creation@tc.la-vega.nv.us (anthoni d. saxton)
+
+organ: cyber sanctum bb 702.435.2179
+
+subject: re: appl 8*24 gc video card
+
+line: 18
+
+
+
+> a friend of mine recent acquir an 8!24 gc card for hi iisi
+
+> and wa wonder why it alwai start up in black and white.
+
+> i know there have been numer report about the worth of
+
+> the gc, but i wa wonder if anyon could elabor a littl
+
+> more on the subject.  ani repli encourag.  thank in ad-
+
+> vanc.
+
+>
+
+> 						joe kasan
+
+>
+
+
+
+i've had similar problem w/ other board type, and the problem is not a
+
+result of the 8/24gc board! try zap the pram by hold down
+
+"command-option-p-r" dur startup! you will have to reset everyth to
+
+your previou prefer (the date & time remain intact!), but the video
+
+board will start rememb it's previou set!
+
+
+
+anthoni d. saxton
+
+elenai creation
+

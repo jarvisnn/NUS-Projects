@@ -1,0 +1,39 @@
+from: lbyler@cup.hp.com (larri byler)
+subject: re: problem with maxtor 340mb id drive
+articl-i.d.: cup.c533lx.ao3
+organ: hewlett-packard
+line: 31
+nntp-post-host: hpmpec3c.cup.hp.com
+x-newsread: tin [version 1.1 pl8.10]
+
+first of all, thank to those of you who respond, both here and via e-mail.
+the tip didn't pan out, but it wa good hear from you.
+
+now, follow up to my earlier post:
+[...]
+: disk control:  acculog side-3 2 hard/2 floppi id control
+:   jumper:  all default (shown as *):  
+:     normal irq*/delai irq     primari*/secondari floppi address
+:     singl*/dual speed floppi   primari*/secondari id address
+:     precomp = 125ns*/187 ns     iochrdi not driven*/id drive control iochrdi
+[...]
+: other card:  (didn't check brand) 2 serial/1 parallel adapt
+: 	      logitech bu mous adapt
+: 	      roland mpu-401-compat midi interfac 
+: 		configur with default irq 2, mem address 0330
+
+i open up the box and remov all the "other card" abov.  no help there.
+then, not have anyth better to try, i chang normal irq to delai
+irq on the disk control (didn't make ani differ) and iochrdi_not_
+driven to id_drive_control_iochrdi (also had no effect).  so i put 
+everyth back to the wai it wa and re-instal the card.
+
+i then unplug the floppi drive cabl from the disk control.  voila!,
+the pc boot from power up, although it seem to take sever second 
+befor the first access to the hard disk.  plug the floppi cabl back
+to the control and the origin (non-boot) behavior return.
+
+o.k., with thi addit inform, doe anyon in netland have ani 
+word of wisdom for what's go on and how i should deal with it?
+
+-larri "still (un)plug awai" byler-

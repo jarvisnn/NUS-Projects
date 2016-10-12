@@ -1,0 +1,25 @@
+from: mspragu@superior.mcwbst311b (mike spragu)
+subject: re: soundblast irq and port set
+organ: xerox
+line: 20
+
+> my solut wa to switch the interrupt to irq 5, which is
+> unreserv in contemporari comput (us irq 5 for the
+> drive went out with the xt architechtur ... )
+
+not completli true.  for at class and later machin, irq5 is
+reserv for lpt2.  sinc it's rare to have a second parallel
+port in a pc, it's usual a good safe choic if you need an
+interrupt.
+
+on the other hand, we just ran into a problem with that here
+at work on a gatewai comput (4dx-33v).  it ha a modem on com1,
+a mous on com2, and the other serial port wa set to com3 (which
+normal us the same interrupt as com1).  we had a real fight
+with a board when try to us irq5, and discoverd the problem
+wa that gatewai had set it up such that com3 us irq5.  as soon
+as we disabl com3, our problem went awai.  grumbl ... after
+sever dai of try to figur out why the interrupt didn't work.
+
+			~ mike  (spragu.wbst311@xerox.com)
+

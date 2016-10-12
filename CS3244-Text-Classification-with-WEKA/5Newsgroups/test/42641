@@ -1,0 +1,104 @@
+from: bgrubb@dant.nmsu.edu (grubb)
+
+subject: re: id vs scsi
+
+organ: new mexico state univers, la cruce, nm
+
+line: 45
+
+distribut: world
+
+nntp-post-host: dant.nmsu.edu
+
+
+
+david@c-cat.uucp (dave) write:
+
+>ar we talk about a scsi-1 devic (e.g. hd) on a scsi-2 control
+
+>or          
+
+>ar we talk about a scsi-1 control that had a chip upgrad
+
+>us the same chip that is on a scsi-2 control board.
+
+we ar talk about a scsi-1 devic (e.g. hd) on a scsi-2 control.
+
+
+
+here is a rewrit of my mac & info sheet scsi section:
+
+scsi: onli extern devic expans interfac common to both mac and ibm.
+
+ allow the us of ani devic: hard drive, printer, scanner, nubu card 
+
+ expans {mac plu onli}, some monitor, and cd-rom.  normal {asynchron}
+
+ scsi is 5 mhz;  fast {synchron} scsi is 10 mhz.  differ between these
+
+ mode is mainli in the softwar driver.
+
+ main problem:  there ar a lot of extern devic which ar intern 
+
+ termin which caus problem for more then two devis off the scsi port 
+
+ {a scsi chain is suppos to be termin onli at the begin and end. 
+
+ ani other set up caus problem for either mac or ibm}. 
+
+scsi-1:  8-bit; 7 devic per scsi control.  asynchron {~1.5mb/s av}
+
+ and synchron {5mb/s max} transfer.  8-bit scsi-2 is often mistaken for
+
+ a fast version of scsi-1 {see scsi-2 for detail}.
+
+scsi-2: fulli scsi-1 compliant. scsi-2 mode - 10 devic per scsi control.
+
+ 8-bit scsi-2 is impliment as a veri fast scsi-1 sinc it can run us
+
+ scsi-1 hardwar and softwar driver which limit it to 7 devic, which
+
+ result in it sometim be mistakenli consit part of scsi-1.  16-bit
+
+ and 32-bit scsi-2 requir differ port, electron, and scsi softwar
+
+ driver from scsi-1 {which make them more expens than other scsi
+
+ interfac}.  32-bit scsi seem to run onli in synchron mode, henc term
+
+ 'wide and fast scsi' transfer speed ar 4-6mb/s with 10mb/s burst {8-bit},
+
+ 8-12mb/s with 20mb/s burst {16-bit}, and 15-20mb/s with 40mb/s burst
+
+ {32-bit}.
+
+
+
+8-bit scsi-2 is the biggest headach due to the fact that it is the onli scsi-2 
+
+that i know of that can pump scsi-2 speed through scsi-1 devic and softwar
+
+control.  it main impliment is on the mac though you do see add
+
+for scsi-2 at 10mb/s maximum throughput for pc.  sinc 8-bit scsi-2 doe not
+
+need all the hardwar {includ electon} and softwar of 16-bit and 32-bit
+
+scsi-2 it is the cheepest of the scsi-2 interfac.  just pop out the scsi-1
+
+electorn and pop in 8-bit scsi-2 electron.  some peopl consid
+
+16-bit where scsi-2 realli start {i us to be on of them} but
+
+4-6mb/s averag though put with a theoret burst of 10mb/s is not scsi-1
+
+but is 8-bit scsi-2.
+
+rule of thumb: if it is scsin and over 5mb/s then it is some type of scsi-2.
+
+
+
+8-bit scsi can us part of scsi-1 electron which further reduc it cost
+
+compar to 16 and 32-bit scsi-2.
+

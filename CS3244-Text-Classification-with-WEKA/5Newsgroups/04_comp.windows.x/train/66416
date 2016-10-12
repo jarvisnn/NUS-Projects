@@ -1,0 +1,34 @@
+from: bill.kayser@delft.sgp.slb.com (bill kayser)
+subject: re: teleus, uim/x, and c++
+articl-i.d.: parsiv.199304060629.aa00339
+organ: the internet
+line: 25
+nntp-post-host: enterpoop.mit.edu
+to: xpert@expo.lc.mit.edu
+cc: bill.kayser@delft.sgp.slb.com
+
+
+> 
+> doe anyon have ani good idea on how to integr c++ code elegantli
+> with teleus, uim/x / interfac architect gener code?
+> 
+> sourc would be great, but ani suggest ar welcom.
+
+it's my understand that the next releas of uim/x, due out
+last februari :-) ha full support for c++.
+
+i us xdesign which doe not have the interpret or ui meta languag
+of these other tool but doe fulli support c++ code gener,
+reusabl templat via c++ class which ar gener, a varieti of
+other handi featur for us c++ and layout function in differ
+wai, and gener motif 1.2 code (includ drag 'n drop, 
+internation, etc.).  fit in quit nice with doug young's
+paradigm for c++/motif.
+
+avail in the us from vi corp, in europ from imperi softwar,
+london (see faq for detail).
+
+bill
+________________________________________________________________________
+                                           schlumberg geco prakla
+                                           kayser@delft.sgp.slb.com

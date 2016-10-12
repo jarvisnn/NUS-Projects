@@ -1,0 +1,22 @@
+from: spowel@trentu.ca (stefan powel)
+subject: cool background pattern!
+new-softwar: vax/vm vnew 1.41    
+organ: trent comput and telecommun depart
+line: 16
+
+here ar some cool 3-d background pattern i made.
+
+edit your control.ini and add the follow line to your [pattern] section.
+
+brick=148 43 86 172 89 182 99 201
+tile=1 43 85 43 85 43 85 255
+tile (diagon)=148 107 54 156 73 182 99 201
+slat=0 170 85 170 85 170 85 255
+
+make sure your desktop color is on of the standard 16 color or the
+pattern might not work.  i like dark grei the best with these.
+
+if you have ani cool on's of your own, pleas mail them to me.
+_______________________________________________________________________________
+                                             stefan powel - spowel@trentu.ca
+                                                 peterborough, ontario, canada

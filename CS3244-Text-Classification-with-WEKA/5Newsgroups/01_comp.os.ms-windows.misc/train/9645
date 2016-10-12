@@ -1,0 +1,24 @@
+from: begolej@csgrad.cs.vt.edu (jame begol)
+subject: wincmd - troubl with string variabl
+organ: vpi&su comput scienc depart, blacksburg, va
+line: 19
+
+ha anyon els been plai with that wincmd util from pc magazin?
+if so, i am have troubl concaten string variabl togeth and
+need your help.  for exampl:
+temp = "path"
+temp2 = "file.ext"
+fullpath = temp+"/"
+sai fullpath			// output = 'th/'
+fullpath = fullpath+temp2
+sai fullpath			// output = 'h/file.ext'
+
+so, it seem to be drop the first few charact with each
+concaten.  is it that i am out of memori -- i onli have mayb 20
+variabl total -- the articl didn't mention memori limit. 
+
+email me if you have an idea or would like to see the actual sourc and
+output.  thank for your help.
+		-bo
+-- 
+	--jame "bo" begol		begolej@csgrad.cs.vt.edu

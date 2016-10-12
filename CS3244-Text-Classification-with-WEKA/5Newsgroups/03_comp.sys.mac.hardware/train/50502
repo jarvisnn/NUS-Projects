@@ -1,0 +1,35 @@
+from: kerr@ux1.cso.uiuc.edu (stan kerr)
+subject: re: sigma design doubl up??
+articl-i.d.: ux1.c52u8x.b62
+organ: univers of illinoi at urbana
+line: 29
+
+jap10@po.cwru.edu (joseph a. pellettier) write:
+
+
+>	i am look for ani inform about the sigma design
+>	doubl up board.  all i can figur out is that it is a
+>	hardwar compress board that work with autodoubl, but
+>	i am not sure about thi.  also how much would on cost?
+
+i've had the board for over a year, and it doe work with diskdoubl,
+but not with autodoubl, due to a licens problem with stac technolog,
+the owner of the board's compress technolog. (i'm write thi
+from memori; i've lost the refer. pleas correct me if i'm wrong.)
+
+us the board, i've had problem with file icon be lost, but it's
+hard to sai whether it's the board's fault or someth els; howev,
+if i decompress the troubl file and recompress it without the board,
+the icon usual reappear. becaus of the abov mention licens
+problem, the freewar expans util dd expand will not decompress
+a board-compress file unless you have the board instal.
+
+sinc stac ha it own product now, it seem unlik that the hole
+in autodoubl/diskdoubl relat to the board will be fix.
+which is sad, and make me veri reluct to bui stac's product sinc
+thei're be so stinki. (but hei, that's competit.)
+-- 
+
+stan kerr    
+comput & commun servic offic, u of illinoi/urbana
+phone: 217-333-5217  email: stankerr@uiuc.edu   

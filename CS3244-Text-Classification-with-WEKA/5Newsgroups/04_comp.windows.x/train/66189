@@ -1,0 +1,539 @@
+from: steve@ecf.toronto.edu (steve kotsopoulo)
+subject: x on intel-base unix frequent ask question [faq]
+summari: x option for intel-base unix (sysv/386, 386bsd, linux, mach)
+articl-i.d.: ecf.c4ri7o.4bw
+expir: sat, 1 mai 1993 04:00:00 gmt
+repli-to: steve@ecf.toronto.edu
+organ: univers of toronto, engin comput facil
+line: 530
+
+archiv-name: intel-unix-x-faq
+last-modifi: 30 mar 1993
+
+note: thi is a major re-organ (and replac) of my
+      "frequent ask question about x386" faq list.
+
+thi articl includ answer to:
+
+i) what option do i have for x softwar on my intel-base unix system?
+	1. free option
+	2. commerci option
+ii) what is xfree86 and where do i get it?
+	3. what is xfree86?
+	4. what oss ar support?
+	5. what video hardwar is support?
+	6. what about acceler board?
+	7. why doesn't xfree86 support 16-color vga mode?
+	8. what other hardwar or softwar requir ar there?
+	9. where can i get sourc for xfree86?
+	10. where can i get binari for xfree86?
+iv) what gener thing should i know about run xfree86?
+	11. instal directori
+	12. configur file
+	13. determin vga dot clock and monitor mode
+	14. rebuild/reconfigur the server from the link kit
+v) what os-specif thing should i know about run xfree86?
+	15. svr4
+	16. svr3
+	17. 386bsd
+	18. linux
+	19. mach
+vi) what thing should i know for build xfree86 from sourc?
+vii) is there anyth special about build client with xfree86?
+	20. bsd compat librari
+	21. ansiccopt
+
+thi articl doe not includ answer to gener x question, sinc these
+ar alreadi cover by the x faq that is regularli post by david b. lewi
+<faq%craft@uunet.uu.net>.
+
+if you have anyth to add or chang on the faq just let me know.
+(especi if you had a problem that someon els wa abl to help you with)
+send chang to steve@ecf.toronto.edu, pleas put 'faq' somewher
+in the subject line so that my mail filter will put it in the correct
+mail folder.
+
+pleas do not ask me question that ar not answer in the faq.  i do not
+have time to respond to these individu.  instead, post your question
+to the net, and send me the question and answer togeth when you get it.
+
+frequent ask question about x on intel-base unix (with answer)
+=====================================================================
+
+i) what option do i have for x softwar on my intel-base unix system?
+
+1. free option
+	the best option is xfree86, which is an enhanc version of x386 1.2.
+	ani other version of x386 will have slower perform, and will
+	be more difficult to compil.  inform on how to obtain xfree86
+	is list below.
+
+	x386 is the port of the x11 server to system v/386 that wa
+	done by thoma roell (roell@sgc.com).
+	it support a wide varieti of svga board.
+	there ar 2 major free version: x386 1.1 is base on x11r4,
+	x386 1.2 is includ in mit's x11r5 distribut (ie. you
+	don't need to patch it into the mit sourc ani more).
+	x386 1.3 is the current commerci offer from sgc (see below).
+
+2. commerci option
+
+     1) metro link
+	2213 w. mcnab road
+	pompano beach, fl  33069
+	(305) 970-7353
+	fax: (305) 970-7351
+	email: sale@metrolink.com
+
+	summari: os:    qnx, svr3, svr4.[012], sco, unixwar, lynxo, 
+			desqview/x, venix, isc, solari, pyramid, suno
+		 hw:    ega, vga, svga, tiga, targa, 8514/a, mach, 
+			s3, wd, fujistu, matrox, microfield graphic, r33020
+		 other: motif, openlook/xview, xie imag extens,
+			xv video extens, audio driver, multi media
+
+     2) sgc (snitili graphic consult servic)
+	894 brookgrov lane
+	cupertino, ca  95014
+	(800) 645-5501, (408) 255-9665
+	fax: (408) 255-9740
+	email: info@sgc.com  or ...!mip!zok!info
+
+	summari: os: svr3.2, svr4 
+		 hw: 8514/a (ati ultra), s3 (diamond stealth), svga
+		 other: motif, dual-head server
+
+     3) consensi corpor
+	1301 pat booker rd.
+	univers citi, tx 78148
+	phone: 1-800-388-1896
+	fax:   1-416-940-2903
+	email: info@consensi.com
+
+	summari: os: consensi v4.2, consensi' version of
+		     unix system v releas 4.2
+		 hw: x11r4 server support for vga, svga
+		 other: moolit, motif, x11r5 client
+
+     4) the santa cruz oper, inc.
+	p.o. box 1900
+	santa cruz, california 95061
+	(408) 425 7222, (800) sco unix,
+	fax: (408) 458 4227
+	email: info@sco.com
+
+	summari: os: odt 1.1, odt 2.0, sco unix 3.2v4
+		 hw: x11r4 server support for svga, 8514/a, s3, tm340x0,
+		     wd90c31, xga2, assort local bu (see sco hardwar
+		     compatabilti guid for actual card vendor).
+		 other: motif	
+
+     5) answer softwar & consult
+	p.o. box 14171
+	columbu, ohio 43214
+	614-263-xlab
+	email: sale@x4coher.com
+
+	summari: os: coher 4.0.1r72 or greater
+		 hw: work with ani vesa compliant video
+
+  note: other commerci vendor (includ os vendor describ
+	bundl softwar) ar welcom to submit summari inform
+	summari inform such as the abov.
+
+ii) what is xfree86 and where do i get it?
+
+3. what is xfree86?
+
+   xfree86 is an enhanc version of x386 1.2, which wa distribut with
+   x11r5.  thi releas consist of mani bug fix, speed improv, and
+   other enhanc.  here ar the highlight of the enhanc:
+
+    1) the speedup packag from glenn lai is an integr part of xfree86,
+       select at run-time via the xconfig file.  some speedup requir
+       an et4000 base svga, and other requir a virtual screen width of
+       1024.  the speedup suitabl to the configur ar select by
+       default.  with a high-qualiti et4000 board (vram), thi can yield
+       up to 40% improv of the xstone benchmark over x386 1.2.
+    2) the fx386 packag from jim tsilla ar includ as the default
+       oper mode if speedup is not select.  thi mode is now
+       equival in perform to x386 1.1b (x11r4), and approxim
+       20% faster than x386 1.2.
+    3) support for localconn, compil-time select for server, client,
+       or both.  thi support is for both svr3.2 and svr4.  for svr4.0.4
+       with the 'advanc compat packag', local connect from
+       sco xsight/odt client ar support.
+    4) driver for ati and trident tvga8900c and tvga9000 svga chipset.
+       refer to the file readm.ati and readm.trident for detail about
+       the ati and trident driver.
+    5) support for compress bitmap font ha been ad (thoma eberhardt's
+       code from the contrib directori on export.lc.mit.edu).
+    6) type1 font code from mit contrib tape ha been includ, and is
+       compil-time select.  there ar contribut type1 font in the
+       contrib directori on export.lc.mit.edu.
+    7) new configur method which allow the server's driver and font
+       render to be reconfigur from both sourc and binari
+       distribut.
+    8) integr support for 386bsd, mach, and linux.
+    9) a monochrom version of the server which will run on gener vga
+       card is now includ.
+
+   the follow kei featur were ad with the releas of xfree86 1.2
+   (thei were not in xfree86 1.1):
+
+    1) the monochrom server ha been enhanc to do bank-switch of
+       avail svga memori to allow virtual screen up to 1600x1200 
+       (see the x386(1) manual page for more inform).
+    2) support for the hercul mono card ha been ad to the
+       monochrom server, and with it the abil to support a "two
+       head" server - on vga, and on hercul.  so far thi ha onli
+       been test on svr4 (it is also report to work under linux).
+    3) svr3 share librari, test under isc svr3 2.2 and 3.0.1.
+    4) support for svr4.2 (there ar some special consider to
+       consid, due to new usl bug; see the readm.svr4 file for
+       more inform.)
+    5) support for ps/2 mice, and logitech mouseman/trackman (some 
+       version of these devic were not previous compat).
+    6) a new tutori on how to develop correct video card and monitor
+       time data, written by eric raymond (deriv from previou
+       document and a lot of experiment).
+    7) greatli improv support for intern keyboard, includ
+       implement of the compos kei function found on mani 
+       vendor server (see the x386keybd(1) manual page for more 
+       inform).
+    8) the accuraci with which the server detect svga pixel clock ha
+       been improv, and the time ar now store at accuraci of
+       0.1 mhz.  user mai want to consid remov an exist clock
+       line from their xconfig file and re-probe us the new server.
+    9) mani enhanc in error handl and pars of the xconfig
+       configur file.  error messag ar much more inform
+       and intuit, and more valid is done.  there ar mani new
+       option that can be enabl in the xconfig file (see the x386(1) 
+       manual page for more inform on the format of thi file).
+
+       plu a number of other small thing.  refer to the changelog file
+       in the sourc distribut for full detail.
+
+   also includ ar a tutori on monitor time by eric raymond, and the
+   current x386 mode databas and a sampl xdm configur by david wexelblat.
+
+4. what oss ar support?
+
+    xfree86 support:
+	svr4.2: consensi v4.2
+	svr4.0: microport, dell, esix, isc, at&t, mst, consensi, uhc
+	svr3: isc 2.2 & 3.0, at&t 2.2
+	linux, mach 386, 386bsd 0.1
+
+	bsd/386 is not support, but it should work. the most activ
+	bsd/386 person is greg lehei <grog@lemi.de>.
+
+	note that esix 3.2d and sco ar not support yet,
+	but anyon should feel free to submit patch.
+	if you ar interest in tackl thi, send mail to
+	xfree86@physic.su.oz.au
+
+5. what video hardwar is support?
+
+   at thi time, xfree86 1.2 support the follow svga chipset:
+
+	tseng et4000
+	tseng et3000
+	paradis pvga1
+	western digit wd90c00, wd90c10, wd90c11 (these ar superset of
+		the pvga1, and us it driver)
+	genoa gvga
+	trident tvga8900c, tvga9000
+	ati 18800, 28800
+
+	all of the abov ar support in both 256 color and monochrom mode,
+	with the except of the ati chipset, which ar onli support in
+	256 color mode.
+
+	the monochrom server also support gener vga card, us 64k of
+	video memori in a singl bank, and the hercul card.  on the
+	et3000, onli 64k of video memori is support for the monochrom
+	server, and the gvga ha not been test with more than 64k.
+
+	it appear that some of the svga card manufactur ar go to
+	non-tradit mechan for select pixel-clock frequenc.  to
+	avoid have to modifi the server to accommod these scheme xfree86
+	1.2 add support for us an extern program to select the pixel
+	clock.  thi allow program to be written as new mechan ar
+	discov.  refer to the readm.clkprog file for inform on how
+	these program work, if you need to write on.  if you do develop such
+	a program, the xfree86 team would be interest in includ it with
+	futur xfree86 releas.
+
+	if you ar purchas new hardwar for the purpos of us xfree86,
+	it is suggest that you purchas an et4000-base board such as the
+	orchid prodesign ii.  avoid recent diamond board; xfree86 will not
+	work with them, becaus diamond won't provid program detail.
+	in fact, the xfree86 project is activ not support new diamond
+	product, as long as such polici remain in effect.  contribut
+	of code will not be accept (becaus of the potenti liabil).
+	if you would like to see thi chang, tell diamond about it.
+
+	some peopl have ask if xfree86 would work with local bu or eisa
+	video card. theoret, the mean of commun between the
+	cpu and the video card is irrelev to xfree86 compat. it
+	could be isa, eisa, or local bu.  what should matter is the chipset
+	on the video card.  unfortun, the develop don't have a lot
+	of access to eisa or vlb machin, so thi is larg an untest
+	theori.  howev, we have yet to see ani report of thing not
+	work on on of these buse and we have sever report of xfree86
+	work fine on them.
+
+6. what about acceler board?
+
+	at thi time, there is no support in xfree86 for acceler board
+	like the s3, ati ultra (8514/a), tiga, etc.  thi support is avail
+	in commerci product from sgc and metrolink (for svr3 and svr4).
+
+	an s3 server is avail for 386bsd and linux.  contact
+	<hasti@netcom.com> for 386bsd or <jon@robot.ox.ac.uk> for linux.
+
+	a beta 8514/a server is avail for linux. contact <martin@cs.unc.edu>
+	or <jon@robot.ox.ac.uk>. note: these server ar not part of xfree86.
+
+7. why doesn't xfree86 support 16-color vga mode?
+
+	the reason that thi is not support is the wai vga implement the
+	16-color mode.  in 256-color mode, each byte of frame buffer memori
+	contain 1 pixel.  but the 16-color mode ar implement as bit-
+	plane.  each byte of frame- buffer memori contain 1 bit from each
+	of each of 8 pixel, and there ar four such plane.  the mit frame-
+	buffer code is not design to deal with thi.  if vga handl
+	16-color mode by pack 2 4-bit pixel into each byte, the mit code
+	could be modifi to support thi (or it alreadi mai; i'm not sure).
+	but for the vga wai of do thing, a complet new frame-buffer
+	implement is requir.  some beta tester ar look into thi,
+	but noth is yet avail from the project.
+
+8. what other hardwar or softwar requir ar there?
+
+	obvious, a support svga board and os ar requir.  to run
+	x effici, 12-16mb of memori should be consid a minimum.
+	the variou binari releas take 10-40mb of disk space, depend
+	on the os (e.g. whether or not it support share librari).
+	to build from sourc, at least 80mb of free disk space will
+	be requir, although 120mb should be consid a comfort 
+	lower bound.
+
+9. where can i get sourc for xfree86?
+
+	sourc patch for the current version (1.2, base on x11r5 pl22
+	from mit), ar avail via anonym ftp from:
+		export.lc.mit.edu (under /contrib/xfree86)
+		ftp.physic.su.oz.au (under /xfree86)
+		ftp.win.tue.nl (under /pub/xfree86)
+	(for the rest of thi faq, these 3 locat will be call $ftp)
+
+	refer to the readm file under the specifi directori for inform
+	on which file you need to get to build your distribut.
+
+10. where can i get binari for xfree86?
+
+	binari ar avail via anonym ftp from:
+		ftp.physic.su.oz.au		- svr4 binari
+			under /xfree86/svr4
+		ftp.win.tue.nl			- svr4 binari
+			under /pub/xfree86/svr4
+		ferkel.ucsb.edu			- svr4 binari
+			under /pub/svr4/xfree86
+		stasi.bradlei.edu		- svr4 binari
+			under /pub/xfree86/svr4
+		blancmang.ma.utexa.edu	- svr3 (isc) binari
+			under /pub/isc
+		ftp.prz.tu-berlin.de            - svr3 (isc) binari
+			under /pub/pc/isc/xfree86
+		tsx-11.mit.edu			- linux binari
+			under /pub/linux/packag/x11
+		agat.berkelei.edu		- 386bsd binari
+			under /pub/386bsd/0.1-port/xfree86
+		ftp.cs.uwm.edu			- mach binari
+			under /i386
+
+	ensur that you ar get xfree86 1.2 - some of these site mai
+	archiv older releas as well.  each binari distribut will
+	contain a readm file that describ what file you need to take
+	from the archiv, and which compil-time option select were
+	made when build the distribut.
+
+iv) what gener thing should i know about run xfree86?
+
+11. instal directori
+
+	the top-level instal directori is specifi by the projectroot
+	(/usr/x386, by default) variabl in config/site.def. binari, includ
+	file, and librari ar instal in $projectroot/{bin,includ,lib}.
+
+	thi can be chang when rebuild from sourc, and can be modifi
+	via symbol link for those oss that support them. thi directori is
+	nonstandard, and wa chosen thi wai to allow xfree86 to be instal
+	alongsid a commerci/vendor-suppli x implement.
+
+12. configur file
+
+	the xfree86 server read a configur file ("xconfig") on startup.
+	the search path, content and syntax for thi file ar document in
+	the server manpag, which should be consult befor ask question.
+
+13. determin vga dot clock and monitor mode
+
+	david e wexelblat (dwex@mtgzf3.att.com) maintain a databas of known
+	clock set for vga card and monitor set.
+	the databas is instal in /usr/x386/lib/x11/etc/modedb.txt, and
+	is in the sourc tree under mit/server/ddx/x386/etc. thi databas is
+	also avail from him (for the latest copi), and is kept on
+	export.lc.mit.edu in ~/contrib/x386.modedb.z, which is updat
+	occasion.  obtain a copi of thi databas.  it just might have the
+	set you need.  if you creat new set, pleas send them to
+	david for inclus in the databas.
+
+	if thi doesn't help you, the videomod.doc (by eric raymond) file 
+	with xfree86 contain tutori on how to come up with these time.
+	it mai be help to start with set that almost work, and us
+	thi descript to get them right.  when you do, send the inform
+	to david wexelblat for inclus in the databas.
+
+	note: the old 'clock.ex' program is not support ani more, and
+	      is complet unnecessari.  if you need to determin dot
+	      clock valu for a new board, remov the 'clock' line from
+	      your xconfig file (if present), and start the server.  the
+	      server will probe for clock itself and print them out.
+	      you can us these valu to put a 'clock' line into your
+	      xconfig file, which is not necessari, but will speed up
+	      start the server in the futur.
+
+14. rebuild/reconfigur the server from the link kit
+
+	if you have instal the server binari link kit, it is possibl to
+	reconfigur the driver and font render in the server.  thi is
+	fulli explain in the readm file that is avail with the link kit.
+
+v) what os-specif thing should i know about run xfree86?
+
+	first of all, the server must be instal suid-root (mode 4755).
+
+15. svr4
+	why won't my xterm run properli?
+
+	if your kernel is not built with the consem modul, you should defin
+	consem=no in you environ. otherwis xterm won't run.
+	csh user should us 'setenv consem no'
+
+	the esix consol driver patch 403019 is known to caus keymap
+	problem with xfree86.  it recommend that thi patch not be
+	instal.  altern thei keymap can be fix with xmodmap.
+
+16. svr3
+
+	make sure you look at $ftp/readm.isc, if that's what you ar run.
+
+17. 386bsd
+
+	make sure you look at $ftp/readm.386bsd.
+
+	also, a separ 386bsd faq is maintain by richard murphei
+	<rich@rice.edu>.  the latest version should be avail in the
+	file xfree86-1.2-386bsd-faq at the follow ftp site:
+
+	    agat.berkelei.edu:/pub/386bsd/0.1-port/xfree86-1.2
+	    wuarchiv.wustl.edu:/mirror4/386bsd/0.1-port/xfree86-1.2
+	    grasp1.univ-lyon1.fr:pub/386bsd/0.1-port/xfree86-1.2
+
+18. linux
+
+	you must be run linux 0.97pl4 or greater, and have the 4.1 gcc
+	jump librari instal.
+
+	make sure the binari x386, x386mono, xload and xterm ar setuid root.
+
+	if your kernel doesn't have tcp support compil in, you'll have to
+	run the server as "x -pn". the default startup configur assum
+	that tcp is not avail. if it is, chang the two file
+	/usr/x386/bin/startx and /usr/x386/lib/x11/xdm/xserver, remov the
+	-pn argument to x386.
+
+	make sure /dev/consol is either a link to /dev/tty0 or ha the major
+	number 4, minor number 0. also note that if /dev/consol is not
+	own by the user run x, then xconsol and xterm will not permit
+	consol output redirect. xdm will properli chang the owner, but
+	startx won't.
+
+	when run xdm from rc.local, you will need to provid it with
+	a tty, for exampl "xdm < /dev/consol &".
+
+	for more detail inform, pleas read the file readm present
+	with the distribut on tsx-11.mit.edu.
+
+19. mach
+
+	make sure you look at $ftp/readm.mach.
+
+vi) what thing should i know for build xfree86 from sourc?
+
+	thi section ha been remov from the faq, sinc it is
+	fulli explain in $ftp/readm and the os-specif readm.
+	pleas look at those file for inform on build xfree86.
+
+vii) is there anyth special about build client with xfree86?
+
+20. bsd compat librari
+
+	a lot of client make us of bsd function like bcopi(), etc.
+	the default configur file ar set up to link with libxbsd.a
+	which contain emul for bcopi(), bzero(), bcmp(), ff(), random(),
+	seed(). a better wai of provid the 'b' function is to includ
+	<x11/xfunc.h> in sourc file that call them.  xfunc.h provid macro
+	definit for these in term of the sysv 'mem' function.  if you ar
+	link with a vendor suppli librari which call some of these
+	function, then you should link with libxbsd.a
+
+21. ansiccopt
+
+	thi is someth that wa ad to allow a develop to get rid of the
+	ansi-ness defin in the default ccoption without have to rewrit
+	the entir ccoption line.  for exampl, with stock mit, you'd see
+	someth like
+		ccoption="-ansi -o2 -fwritabl-string"
+	and to get rid of the ansi-ness, the develop would have to put
+		ccoption="-o2 -fwritabl-string"
+	in hi imakefil.  with thi chang, you would see a default of
+		ansiccopt="-ansi"
+		ccoption="-o2 -fwritabl-string"
+	and all the develop would have to put in the imakefil is:
+		ansiccopt=
+	to get rid of the ansi-ness (mani x client will die a horribl death
+	with -ansi).  the effect is even more dramat in practic, becaus
+	ccoption is actual quit complex.  the other issu is that on must
+	add 'ansiccopt=$(ansiccopt)' to a passcdebugflag definit.
+
+xfree86 contact inform
+
+    ongo develop plan and support is coordin by the xfree86
+    core team.  at thi time the core team consist of:
+
+	the origin "gang of four":
+		david daw <daw@physic.su.oz.au>
+		glenn lai <glenn@cs.utexa.edu>
+		jim tsilla <jtsilla@damon.cc.northeastern.edu>
+		david wexelblat <dwex@mtgzf3.att.com>
+
+	those support non-sysv oper system:
+		robert baron <robert.baron@ernst.mach.cs.cmu.edu> [mach]
+		rich murphei <rich@rice.edu> [386bsd]
+		orest zborowski <obz@kodak.com> [linux]
+
+    e-mail sent to <xfree86@physic.su.oz.au> will reach all of the core team.
+
+	--------------------------------------------------
+
+thank to all the peopl who alreadi sent me correct or addit,
+especi david wexelblat (on of the major contributor of updat).
+-- 
+steve kotsopoulo  p.eng.           mail:   steve@ecf.toronto.edu
+system analyst                     bitnet: steve@ecf.utoronto.bitnet
+engin comput facil      uucp:   uunet!utai!ecf!steve
+univers of toronto               phone:  (416) 978-5898

@@ -1,0 +1,21 @@
+from: aep@world.std.com (andrew e page)
+subject: us setwutim() with a pb170
+organ: the world public access unix, brooklin, ma
+line: 16
+
+
+   i seem to be have some troubl with thi...
+
+   i can get the mac to go to sleep, but i can't make seem to 
+make it wake up with setwutim().  i am awar of the error in
+the header file and im vi.  i am set the wu time to be
+about two minut, then put the mac to sleep, but it doesn't
+wakeup at the appoint time....
+
+   doe it requir a call to systemtask in order to make sure that
+everyth is setup?
+
+-- 
+andrew e. page   (warrior poet) |   decis and effort the archer and arrow
+mac consult                  |     the differ between what we ar
+macintosh and dsp technolog    |           and what we want to be.

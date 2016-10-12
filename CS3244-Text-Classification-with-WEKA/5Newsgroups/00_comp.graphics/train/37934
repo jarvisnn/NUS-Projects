@@ -1,0 +1,16 @@
+from: renouar@amertum.ufr-info-p7.ibp.fr (renouard olivi)
+subject: re: pov preview
+nntp-post-host: amertum.ufr-info-p7.ibp.fr
+organ: universit pari 7 - ufr d'informatiqu
+line: 10
+
+actual i am try to write someth like thi but i encount some
+problem, amongst them:
+
+- draw a 3d wirefram view of a quadric/quartic requir that you have
+the explicit equat of the quadric/quartic (x, y, z function of some
+paramet). how to convert the implicit equat us by pov to an
+explicit on? is it mathemat alwai possibl?
+
+i don't have enough math to find out by myself, ha anybodi heard about
+us book on the subject?

@@ -1,0 +1,46 @@
+from: ethan@cs.columbia.edu (ethan solomita)
+
+subject: desqview/x over tcp/ip: how reliabl? how is it implement?
+
+organ: columbia univers depart of comput scienc
+
+line: 18
+
+
+
+
+
+	three q's:
+
+
+
+1) is it reliabl?
+
+
+
+2) how doe it send the inform from a ms window app over
+
+the x11 protocol? doe it just draw everyth as graphic into
+
+on window, or doe it us multipl window and essenti work
+
+more cleverli?
+
+
+
+3) if i want to run ms word, for exampl, remot, do i have to
+
+run a separ copi of ms window remot, and then start ms
+
+word from that, or can ms word be start remot on it own?
+
+
+
+	thank a lot!
+
+	-- ethan
+
+
+
+
+

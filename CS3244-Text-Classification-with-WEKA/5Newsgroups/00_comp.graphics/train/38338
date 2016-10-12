@@ -1,0 +1,48 @@
+from: ehgasm2@ut.mcc.ac.uk (simon marshal)
+subject: how do i compens for photograph viewpoint and distort?
+repli-to: s.marshal@dc.hull.ac.uk
+organ: manchest comput centr, manchest, england
+line: 42
+
+hi to all out there.  we have thi problem, and i'm not certain i'm solv it
+in the correct wai.  i wa wonder if anyon can shed light on thi, or point
+me in the right place to look...
+
+we have an x-rai imag camera and a metal tube with a cylindr hole
+pass through it at a right angl to the tube's axi:
+
+                                                          |
+                                     ||                   [ imag
+                                                          |
+  x-rai sourc ]                     ||                   | screen
+                            metal || tube              |
+                                     ||                   |
+                                                          |
+
+we know sourc--screen centr distanc, radiu of the tube, radiu of the hole.
+
+we do some calcul base on the imag of the hole on the screen.  howev,
+the calcul ar mathemat highli complex, and must assum that the
+object's hole project an imag (resembl an ellips if the tube is not
+parallel to the screen) in the centr of the screen.  howev, it is unlik
+that the object is place so conveni.  
+
+firstli, we must transform the major and minor axi of the ellips.  i cannot
+know what the angl between the tube and screen is.  do i have to assum that
+thei ar parallel to do the transform?  how do i do thi transform?
+
+secondli, there is a distort of the imag due to the screen be planar
+(the sourc--screen distanc increas as we move awai from the centr of the
+screen).  how can i compens the ellips's axi for thi imag distort?
+
+so, pleas can anyon give us a few pointer here?  how do we transform the
+imag so it appear as it would if it were in the centr of the screen, and how
+do i deal with distort due to the shape of the screen?
+
+we'd appreci ani help, either post or email.
+
+thank in advanc, simon.
+-- 
+simon marshal, dept. of comput scienc, univers of hull, hull hu6 7rx, uk
+  "footbal isn't about life and death.  it's more import than that." bill
+email: s.marshal@cs.hull.ac.uk   phone: +44 482 465951  fax: 466666   shanklei

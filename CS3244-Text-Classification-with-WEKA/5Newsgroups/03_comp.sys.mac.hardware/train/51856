@@ -1,0 +1,51 @@
+from: ryanph@mrl.dsto.gov.au
+subject: re: se rom
+organ: defenc scienc and technolog organis
+line: 45
+nntp-post-host: mrl.dsto.gov.au
+
+gosh, i wish peopl would read the post that thei ar 'follow up' to.
+
+in articl <c5pmsv.jtp@wyvern.wyvern.com>, dashlei@wyvern.wyvern.com (doug ashlei) write:
+> seanmcd@ac.dal.ca write:
+> 
+>>in articl <wgwc5pdl4.43y@netcom.com>, wgw@netcom.com (william g. wright) write:
+>>> 
+>>> 	anywai, i wa hope someon knowledg
+>>> about mac intern could set me straight: is it simpli
+>>> imposs for a mac se to print grayscal, or could
+>  	
+>>to us the grayscal featur, i believ you need a mac equip
+>>with colour quickdraw. i wa told thi somewher or other, but it's
+> 
+> i think you will find that the mac se can print grayscal imag, load
+> with the proper softwar. howev, the mac se cannot displai grayscal on
+
+the origin poster (w g wright) post an item sai that he had bought a new
+wizz-bang laser printer from appl (a select 300 i think) which can print
+grayscal. he then said that he cannot print grayscal from hi se comput
+(and also that all the 'expert' he ha dealt with agre that it is not
+possibl).
+
+thi is the on major bugbear about do a 3rd parti se upgrad (compar to
+appl's se to se/30 upgrad): you will never be abl to run color quickdraw. it
+is color quickdraw that control color and grayscal.
+
+se can print some colour: thi is becaus quickdraw - the origin, non-colour
+version, ha the right hook for eight colour. some of you will rememb the
+'scsigraph' solut to get a colour screen for your se (i think that it
+gave you sixteen colour by dither or someth).
+
+there is no reason that appl couldn't releas softwar patch for older
+comput (there ar lot of mac pluse, classic and se that have been
+upgrad to 68020 and 68030 processor which should be perfectli abl to deal
+with color quickdraw) - but thei wont, and 3rd parti ar have a difficult 
+time in duplic the mac's rom (i.e. nutek et al.).
+
+just on caveat: i would have thought that if you were print a postscript
+grayscal imag onto a postscript grayscal printer, that you would be abl to
+do so, whatev mac you were us. (and i am pretti sure that the select 300
+is not a postscript printer [? correct me if i'm wrong?]).
+
+phil ryan
+melbourn, australia

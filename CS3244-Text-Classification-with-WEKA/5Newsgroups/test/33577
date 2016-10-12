@@ -1,0 +1,82 @@
+from: wijkstra@fwi.uva.nl (marcel wijkstra (aio))
+
+subject: resourc and cpp - help!
+
+organ: fwi, univers of amsterdam
+
+line: 35
+
+nntp-post-host: ic.fwi.uva.nl
+
+
+
+hi,
+
+
+
+i am run x11r4 on an ibm rs/6000 (aix 3.2) and x11r5 on a sun4 (suno 4.1).
+
+
+
+sinc i run x on both colour and black&white displai, i need differ
+
+valu for the same resourc, so i want to us #ifdef color in my
+
+applic default file. howev, cpp is onli invok by xrdb, and
+
+not when the resourc ar load on demand.
+
+
+
+is there a proper solut to thi?
+
+
+
+so far, the onli proper solut i've come to think of, is to creat 2
+
+differ file in my ~/app-default/, sai xterm and xterm-color, and
+
+set my xfilesearchpath to either $home/%t/%n or $home/%t/%n-color.
+
+but that doe not alwai seem to work (e.g. execut a remot shell
+
+command without read the .cshrc doe not set xfilesearchpath).
+
+
+
+furthermor, i thought of us #includ "xterm" in xterm-color.
+
+howev, for resourc in xterm that i want to overrid in xterm-color,
+
+thing ar differ on both machin. on a sun, the first found resourc
+
+is us (i.e. the on from xterm, the b&w on), while on an rs/6000, the
+
+last found valu is us (i.e. the on from xterm-color). what can i do
+
+about it?
+
+
+
+i have on last question: for the specif of xfilesearchpath, i
+
+can us %t, %n, %c and %s. %t stand for app-default, %n for the
+
+resourc class, but what do %c and %s stand for?
+
+
+
+thank in advanc for repli,
+
+marcel.
+
+-- 
+
+ x   dr. marcel wijkstra     (aio  visual)   wijkstra@fwi.uva.nl
+
+|x|    faculti of mathemat and comput scienc   ph: +31 20 525 7522
+
+ x       univers of amsterdam   the netherland   fx: +31 20 525 7490
+
+=========== life stink. fortun, i've got a cold.==================
+

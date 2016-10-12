@@ -1,0 +1,43 @@
+from: nanci@neko.css.gov (nanci p. marin)
+subject: re: xcopyplan question
+organ: the internet
+line: 36
+nntp-post-host: enterpoop.mit.edu
+to: xpert@expo.lc.mit.edu
+
+in articl <buzz.93apr19101538@lion.bear.com> buzz@bear.com (buzz moschetti) write
+>in articl <whalei.93apr15103931@sigma.kpc.com> whalei@sigma.kpc.com (ken whalei) write:
+>>   actual, i must also ask the faq's #1 most popular reason why graphic
+>>   don't show up: do you wait for an expos event befor draw your
+>>   rectangl?
+>
+>suppos you have an idl app with a realiz and map window that contain
+>xlib graphic.  a button widget, when press, will caus a new item
+>to be drawn in the window.  thi action clearli should not call xcopyarea() 
+>(or equiv) directli; instead, it should regist the exist of the new
+>item in a memori structur and let the expos event handler take care
+>of render the imag becaus at that time it is guarante that the
+>window is map.
+>
+>the problem, of cours, is that no expos event is gener if the window
+>is visibl and map.  do you know the best wai to "tickl" a window so
+>that the expos event handler will be invok to draw thi new item?
+>
+
+what doe thi have to do with my origin question???  i previous
+state that i did an xcopyarea of the depth-8 pixmap to the screen
+just to make sure that my imag had data, and it did.  thi is not
+a problem with expos event, it ha to do with xcopyplan not
+work!!!
+
+doe anyon have a code fragment thei could send demonstr that
+xcopyplan work???  thi would be veri help!
+
+thank!
+
+ ----------------------------------------------------------------
+ nanci p. marin      net:  nanci@neko.css.gov
+ ensco inc.           mail: 445 pineda ct.  melbourn, fl.  32940
+ (407)254-4122        fax:  (407)254-3293
+ ----------------------------------------------------------------
+

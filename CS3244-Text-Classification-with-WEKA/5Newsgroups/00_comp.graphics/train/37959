@@ -1,0 +1,29 @@
+from: geoffrei@cosc.canterburi.ac.nz (geoff thoma)
+subject: re: help! 256 color displai in c.
+keyword: graphic
+articl-i.d.: cantua.c533em.cv7
+organ: univers of canterburi, christchurch, new zealand
+line: 21
+nntp-post-host: huia.canterburi.ac.nz
+
+
+you'll probabl have to set the palett up befor you try draw
+in the new colour.
+
+us the bio interrupt call to set the r g & b valu (in the rang
+from 0-63 for most card) for a particular palett colour (in the
+rang from 0-255 for 256 colour mode).
+
+then you should be abl to draw pixel in those palett valu and
+the result should be ok.
+
+you might have to do a bit of colourmap compress if you have
+more than 256 uniqu rgb triplet, for a 256 colour mode.
+
+
+geoff thoma			geoffrei@cosc.canterburi.ac.nz
+comput scienc dept.
+univers of canterburi
+privat bag				+-------+
+christchurch				| oook! |
+new zealand				+-------+

@@ -1,0 +1,20 @@
+from: neideck@nestvx.enet.dec.com (burkhard neideck-lutz)
+subject: re: anim with xputimag()?
+organ: cec karlsruh
+line: 14
+nntp-post-host: nestvx
+
+in articl <1993apr22.215913.23501@nrao.edu> rgooch@rp.csiro.au (richard gooch) write:
+>  ... remov the share memori segment...
+>  terribl, but it work.
+
+why is that terribl ? that's exactli the wai our code ha been do
+it for two year now and is the wai that temporari file in unix system
+ar manag most of the time (open, unlink).
+
+		burkhard neideck-lutz
+
+distribut multimedia group, cec karlsruh          eerp portfolio manag
+softwar motion pictur & berkom ii project         multimedia base technolog
+digit equip corpor
+neideck@nestvx.enet.dec.com

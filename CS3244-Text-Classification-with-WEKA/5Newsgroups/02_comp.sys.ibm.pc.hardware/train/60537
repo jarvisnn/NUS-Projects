@@ -1,0 +1,34 @@
+from: gjp@sei.cmu.edu (georg pandelio)
+subject: re: help: need diagnost disk for my compaq deskpro 286.
+organ: the softwar engin institut
+line: 29
+
+
+in articl <apr.11.20.16.21.1993.26848@clam.rutger.edu>, steuer@clam.rutger.edu (robert steuer) write:
+|> my emerg manag group wa given about 30 compaq deskpro 286's
+|> from a local compani as thei were outdat.  problem is though, it
+|> seem that the cmo set cannot be set without thi diagnost
+|> disk.
+|> we get thi error msg on boot up:
+|> 162-system option not set-(run setup)
+|>     insert diagnost diskett in drive a:
+|> 
+|> if someon ha thi disk, pleas e-mail me.  thank you!
+|> -------------------------------------------------------------------------------
+|> | robert m. steuer               amateur radio: kf2ek@n3foa.#epa.pa.usa.na    |
+|> | rutger univers             internet: steuer@clam.rutger.edu            |
+|> | vhf repeat system            cherri hill, nj - kf2ek repeat 145.370mhz  |
+|> | comput oper system      os/2 2.0 - why settl for less?              |
+|> -------------------------------------------------------------------------------
+
+robert,
+
+you have probabl solv your problem by now.  anywai, if you can get your
+hand on qa plu (version 4.21, mayb other as well), it will let you write
+the compaq cmo set.  i know becaus i just did it. 
+
+i wa just about to search for such a diagnost disk when my brother-in-law 
+fix an old deskpro with it.  you might try the simtel mirror ftp site.
+
+georg
+

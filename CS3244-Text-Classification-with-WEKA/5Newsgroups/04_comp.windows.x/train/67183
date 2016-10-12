@@ -1,0 +1,46 @@
+from: rob earhart <earhart+@cmu.edu>
+subject: re: anim with xputimag()?
+organ: pittsburgh supercomput center
+line: 38
+	<1993apr22.092830.2190@infodev.cam.ac.uk>
+nntp-post-host: po5.andrew.cmu.edu
+in-repli-to: <1993apr22.092830.2190@infodev.cam.ac.uk>
+
+dcr@mail.ast.cam.ac.uk (derek c. richardson) write:
+> share memori putimag (also mention by nkisseb@delphi.beckman.uiuc.edu,
+> nick kisseberth) look interest, but i need someon to point me to some
+> document. is thi method like to give better result than server-
+> resid pixmap? i'd also be interest in look at the xview code
+> mention abov...
+
+  there's document on how to us the share memori extens in the
+x11r5 distribut.
+
+  actual, i just finish write a motif anim program...
+(take-lot-of-imag-data-and-displai-it-pretti-darn-fast). when us
+on-server pixmap or share memori, i had to insert a delai loop to keep
+it from go too quickli :). test both method side by side, thei
+were just about equal.
+
+  the advantag of shm is that your x server doesn't grow to ridicul
+size; but pixmap can work over a network and *ar* remov if your
+applic di (on tend to us ipcrm manual quit a bit when
+debug shm app).
+
+  share memori also ha the problem that some oper system (e.g.
+ultrix) seem to allow onli a small number of segment (~6) to be
+attach to a process at onc; consequ, a redraw becom
+xshmattach();xshmputimag();xshmdetach(); on dec system. and dec's 24
+bit displai (like the on i tend to us most often) don't seem to
+support the extens (mayb someon compil them wrong?), and us
+pixmap caus the x server to crash (fail malloc), so on *ha* to
+us the local unix domain socket (which realli isn't that bad; on
+copi the info three time per redraw instead of on).
+
+  in short: allow all three form of displai, within the program is a
+good thing (minu shm if run over a network), and let the user pick
+whatev feel fastest.
+
+  (i just us an ximagehandl class and forget about it :)
+
+  )rob

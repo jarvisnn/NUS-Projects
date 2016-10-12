@@ -1,0 +1,32 @@
+from: graem@labtam.labtam.oz.au (graem gill)
+
+subject: re: help: need 24 bit viewer
+
+keyword: 24 bit
+
+organ: labtam australia pty. ltd., melbourn, australia
+
+line: 10
+
+
+
+in articl <5713@seti.inria.fr>, deniaud@cartoon.inria.fr (gill deniaud) write:
+
+> hi,
+
+> 
+
+> i'm look for a program which is abl to displai 24 bit
+
+> imag. we ar us a sun sparc equip with parallax
+
+> graphic board run x11.
+
+
+
+	xli, xloadimag or imagemagick - export.lc.mit.edu [18.24.0.12] /contrib
+
+
+
+	graem gill
+

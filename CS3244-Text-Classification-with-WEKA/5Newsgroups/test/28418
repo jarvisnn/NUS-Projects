@@ -1,0 +1,62 @@
+from: ebrew@scienc.smith.edu
+
+subject: re: where to put my swap file (id or scsi)
+
+keyword: 
+
+ 
+
+organ: smith colleg
+
+distribut: na
+
+line: 23
+
+
+
+in articl <1993apr28.160220.963@oracl.us.oracl.com> ebosco@us.oracl.com write:
+
+>
+
+>i have a 486 sx 25 and i recent ad a scsi drive to my system us an  
+
+>adaptec 1522 (non busmast) control. yesterdai i ran coretest to  
+
+>find out drive perform and these ar the valu i got
+
+>
+
+>seagat 106 meg: 875.1kb/sec	14.5ms avg seek   3.7ms track to track 
+
+>quantum 400 meg scsi: 991.2 kb/sec  12.7 avg seek 3.6 track to track.
+
+>
+
+>first off all ar these good result? i don't know what typic valu  
+
+>ar.
+
+
+
+those ar pretti typic, i believ.
+
+
+
+>what i'm wonder now is the follow. my swap file is current on the  
+
+>id. i could move it to the scsi which is 13% faster, but then i would not  
+
+>be abl to us 32-bit access which might actual make it slower. so on  
+
+>which drive should i put my swap file to get best result? is there a swap  
+
+>file speed test program out there?
+
+
+
+keep the swap file on the id.  32-bit access is worth a fair amount more
+
+than 13%.
+
+
+

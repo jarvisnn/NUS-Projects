@@ -1,0 +1,37 @@
+from: hildjj@jupit.fuentez.com (joe hildebrand)
+subject: re: question regard overlai of graphic
+organ: the internet
+line: 30
+to: venkatg@grace.cs.orst.edu (gopal venkatraman)
+cc: xpert@expo.lc.mit.edu
+
+
+> let's sai i have two rectangl on the canva(see abov) 
+> on intersect the other...
+> now, i would like to delet on of the rectangl.
+> the wai i do it is to creat anoth gc wherein i us the
+> gxxor logic function and simpli redraw the rectangl us the
+newli
+> creat graphic context thu delet it for all appar purpos.
+> a problem with thi approach is that at the point of intersect
+the pixel 
+> locat belong to the other rectangl also becom white, which
+is 
+> someth that should be avoid.
+
+you could set up a bitmap with a mask in it.  clear the
+bitmap, draw the rectangl to be delet with gxor.  draw the on
+that is to stai with gxclear.  then gxxor the entir pixmap with
+the screen.  
+
+note that thi is a pretti effect wai of anim, if you ever
+need to do that (replac the gxclear with a gxxor).
+
+----------
+joe hildebrand
+hildjj@fuentez.com
+softwar engin
+fuentez system concept
+(703)273-1447
+
+standard disclaim appli

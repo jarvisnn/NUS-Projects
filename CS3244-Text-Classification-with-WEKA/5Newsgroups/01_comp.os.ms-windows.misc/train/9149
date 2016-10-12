@@ -1,0 +1,61 @@
+from: davidgl@microsoft.com (david glenn)
+subject: re: atm or truetyp-which to choos?
+articl-i.d.: microsof.1993apr06.023730.5094
+distribut: usa
+organ: microsoft corp.
+line: 54
+
+in articl <c4tdgt.mqq@csn.org> rjn@teal.csn.org wrote:
+> csd25@keel.ac.uk (c.m. yearslei) write:
+> 
+> : i've just bought a pc which came with a bundl of lotu stuff, includ
+> : adob type manag version 1.15. as a newcom to window, i'm
+> : confus about which i should be us, atm or truetyp. 
+> 
+> if you ar go to stai with atm, be sure to upgrad to 2.5, which
+> replac 2.0. who know how old 1.15 is.  2.5 is as fast as tt, and if
+> you disabl the small screen font, atm doe better screen render at
+> the smaller point size.
+
+not true! both type 1 and tt font can be of excel qualiti and poor qualiti
+at ani size. it all depend on the font's maker and the complex of the glyph
+relat to the size and resolut at which thei ar view. probabl the reason
+for your opinion/experi that tt is inferior is becaus most tt font on the
+market todai have been convert from type 1 outlin to tt either by the font
+vendor or end-user us fontograph or fontmong instead of the tt font be
+hand-hint to take advantag of the tt hint languag. at best these convert
+tt font will be on a par with the type 1 font of it orgin.
+
+truetyp is a much richer and more robust hint languag than type 1 (the hint
+of diagon for instanc, which tt doe and type 1 cannot). if you check out the
+window 3.1 core font (time, arial, courier, symbol, wingd) you'll see what can
+be done with tt. there ar other font out there that have been hand-hint and not
+just convert. some of the microsoft tt font pack 2 font ar hint veri well.
+
+> you can us both tt and atm font at the same time, if you like.
+> atm (type 1) font tend to be of higher qualiti
+> and be more complet in term of foreign charact.
+
+again, not true. the charact in a tt or type 1 font depend on the maker. if someon
+convert a type 1 font to tt thei'll onli get the charact in the font of orgin. tt
+allow for much more flexibl in thi area as well. you can have thousand of glyph
+in a tt font file (mac/ps/window/unicod char set) and us the charact appropri
+for the particular platform you ar run the font on. for instanc, all or our fontpack
+2 tt font have the mac/window char set in them. the metric of the font ar such that
+if the font is brought over to the mac the user will have access to the full mac char set.
+
+
+> regard,                                            1001-a east harmoni road
+> bob niland                                          suit 503
+> internet:  rjn@csn.org                              fort collin co 80525
+> compuserv: 71044,2124                              (303) 223-5209
+
+hope thi clear up some of the confus. feel free to contact me if anyon would like
+more info.
+
+regard,
+
+dave glenn
+program manag, microsoft tt font stuff
+davidgl@microsoft.com
+compuserv: 72420,1067

@@ -1,0 +1,66 @@
+from: dan@igat.c-mol.siu.edu (dan ellison)
+
+subject: re: scientif graph - look for run-time librari
+
+organ: southern illinoi univers - carbondal, il (siu-c)
+
+distribut: usa
+
+line: 27
+
+
+
+in <1993mai10.212110.3980@serval.net.wsu.edu> d3e758@bucki.pnl.gov (je pelkei) write:
+
+
+
+
+
+>in articl <c6iem6.16xi@hawnew.watson.ibm.com> artg@watson.ibm.com (art goldberg) write:
+
+>>x guru:
+
+>>i am look for a scientif graph run-time x librari.  i want my code
+
+>>to open a window, and plot a graph in the window.  the librari should
+
+>>manag plot, scale of ax, label, etc.
+
+>>
+
+>>can someon recommend a librari to do thi?  pleas respond via e-mail.
+
+
+
+>i would also be interest in thi inform.
+
+
+
+check into the vopl and vogl librari.  i beleiv that i still have
+
+them avail on ftp.c-mol.siu.edu but i'm not sure.  i haven't seen
+
+ani new announc for the softwar but i'm sure it's still around.
+
+
+
+i have us it to do real-time data displai and analysi as well as
+
+just for produc graph after the fact.  it work well and support
+
+numer graphic output format (includ x.)  i tri it and like
+
+it.  you mai as well.
+
+
+
+-- 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+| dan ellison, network spec 	  -    	comput affair, siu-c 	| 
+
+| southern illinoi univers 	  - 	carbondal, il 62901            |   
+
+| fax:      (618) 453-3459        -   	phone:    (618) 453-6149 	|     
+

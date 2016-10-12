@@ -1,0 +1,100 @@
+from: hollasch@kpc.com (steve hollasch)
+
+subject: re: raytrac colour?
+
+summari: illumin equat
+
+organ: kubota pacif comput, inc.
+
+line: 44
+
+
+
+asecchia@cs.uct.ac.za (adrian secchia) write:
+
+| when an incid rai (i) strike an object at point p ...  the reflect
+
+| rai (r) and the transmit rai (t) is calcul from the formula.
+
+| 
+
+| call the routin recurs on r and t will return the colour 
+
+| along the rai (r and t) as rcol and tcol. each object ha it own
+
+| colour ocol and each light sourc ha licol (1 <= i <= n).
+
+| 
+
+| the question is: 
+
+|   how do you combin rcol, tcol, ocol and all the licol's to get
+
+|   the correct result colour to return along the i rai?
+
+
+
+    first of all (thi is not a snide respons), if you're confus about
+
+thi issu, you will stumbl over a lot of other thing as well.  i suggest
+
+that the weak is your refer materi.  get "an introduct to rai
+
+trace" by andrew glassner for veri good coverag of the raytrac
+
+algorithm.  you could also refer to the 2nd edit of folei & van dam.
+
+
+
+    on to the question.  the simpl answer is that you just keep ad up
+
+all the contribut and then clamp at the maximum intens.  for
+
+exampl, if your intens valu rang from 0.0 to 1.0, then keep ad up
+
+and clamp the result valu to 1.0 (you might have to clamp the lower
+
+bound to 0.0 if you have dark bulb, but that's anoth issu =^).  so, you
+
+get some illumin equat like thi:
+
+
+
+        i = lambient + ldiffus(light[n]) + lreflect + ltranspar
+
+
+
+    the contribut due to reflect is just sum with the light
+
+intens, as is the light due to transpar.  now, a slightli less
+
+hand-wave illumin equat is thi:
+
+
+
+        i = kala + kdld(light[n]) + krlr + ktlt
+
+
+
+    that is, each compon of the illumin equat is govern by the
+
+materi constant ka, kd, kr and kt.  so the maximum you can get from
+
+transpar for a given object, for exampl, might be [0.4, 0.1, 0.5] for a
+
+purpl-color glass object.
+
+
+
+    hopefulli thi answer your question.  i'll forward my "illumin
+
+equat sermon" to you also.
+
+
+
+______________________________________________________________________________
+
+steve hollasch                                   kubota pacif comput, inc.
+
+hollasch@kpc.com                                 santa clara, california
+

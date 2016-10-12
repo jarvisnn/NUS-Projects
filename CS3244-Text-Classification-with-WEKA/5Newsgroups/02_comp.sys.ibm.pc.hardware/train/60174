@@ -1,0 +1,20 @@
+from: peterd@jami.dev.cdx.mot.com (peter desnoy)
+subject: help with fix-frequenc (52khz?) vga monitor
+nntp-post-host: jami.dev.cdx.mot.com
+organ: motorola codex, canton, massachusett
+line: 14
+
+i recent bought a monichrom vga monitor for $99 that will do
+1024x768 non-interlac, which seem like a good deal. howev, it is
+a fix-scan rate monitor, and onli handl 52 khz horizont, i
+think. with my trident card it work onli in graphic mode 5e and 62
+- not much us, sinc just about ani applic will set the mode to
+someth els, especi if it want to do text, i suppos. anywai:
+
+ - is there ani wai that i can us thi as a gener-purpos vga
+   displai with a 1-meg trident 8900c card?
+
+ - if not, can i do so with some sort of differ vga card?
+
+				peter desnoy
+-- 

@@ -1,0 +1,13 @@
+from: mikael fredriksson <mikael.fredriksson@macexchang.se>
+subject: re-re: quadra scsi problem???
+x-mailer: telefind (version 3.0)
+organ: mac exchang bb
+             bb +46-31-948290, fax +46-31-948294
+             pl 3813,s-437 92 lindom, sweden
+line: 5
+
+ in articl <c5l39p.2qz@new.udel.edu>, johnston@me.udel.edu (bill johnston) write:|> in articl <1993apr16.144750.1568@mintaka.lc.mit.edu> nodin@lc.mit.edu (mark h. nodin) write:|> >i don't know about the specif problem mention in your|> >messag, but i definit had scsi problem between my|> >q700 and my vener jasmin megadr 10 cartridg|> >drive.  my solut wa to get silverlin.  none of|> >the loop that involv blind write work to the drive;
+op that work wa the "macintosh|> >softwar" loop (whatev that mean).|> |> i doubt thi is a quadra-specif problem.  i had to get|> rid of my "vener" bernoulli 20 last year (with enough |> cartridg purchas at ~$90 each to make the whole thing |> worth more than my whole comput ;).  the tech support gui|> at ocean microsystem suggest that some third-parti driver |> might fix the problem - in my case the cartridg wouldn't |> format/mount/partit for a/ux.  
+hat the megadr work perfectli on both mymac plu and my powerbook 140.  it wa for thi reason i assumthe problem had someth to do with the quadra.  even with thequadra, thei mostli work ok.  the problem occur when i ejecta cartridg from a drive: it would start pop up dialog boxsai "thi cartridg must be format with jasmin drivewar"even though there wa no cartridg in the drive.	--mark
+t to format) i have thi confirm from appl comput in sweden (i work for a appl dealer as a servic tech). we had problem that quadra want to format a diskett or a syquest when ther wa noth in the drive. thi problem wa fix sytem 7.1mikael fredriksson-------------------------------------------------email: mikael_fredriksson@macexchang.semac exchang bbpl 3813s-437 92 lindomswedenbb +46-31-948290 (5 line)fax +46-31-948294fido 2:203/211  
+<disclaim: mac exchang bb cannot be held respons for the content of thi messag>

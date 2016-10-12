@@ -1,0 +1,56 @@
+from: rgooch@rp.csiro.au (richard gooch)
+subject: re: anim with xputimag()?
+organ: csiro divis of radiophys/australia telescop nation facil
+line: 51
+
+in articl <1993apr22.092830.2190@infodev.cam.ac.uk>, dcr@mail.ast.cam.ac.uk (derek c. richardson) write:
+> i just implement thi and it seem i can just about achiev the displai
+> rate (20 400x400x8 frame / sec on ipx) that i get with sunview, though
+> it's a bit "choppi" at time. also, load the data, make an ximag,
+> then xput'ing it into a pixmap is a bit cumbersom, so the anim is
+> slower to load than with sunview. is there a better wai to load in the
+> data?
+> 
+> rgooch@rp.csiro.au (richard gooch) write:
+> >  if you need speed, and your client can run on the same host as the x server,
+> >  you should us the share memori extens to the sampl x server (mit-shm).
+> >  xdpyinfo  will tell you if your server ha thi extens. thi is certainli
+> >  avail with the sampl mit x server run under suno.
+> >  a word of warn: make sure your kernel is configur to support share
+> >  memori. and anoth word of warn: openwindow is slower than the mit
+> >  server.
+> >  i have written an imag tool (us xview for the gui, by the wai) which
+> >  yield over 10 frame per second for 512*512*8 bit imag, run on a sparc
+> >  ipc (half the cpu grunt of an ipx). thi ha prove quit suffici for
+> >  anim.
+> >
+> >				regard,
+> >
+> >					richard gooch....
+> 
+> share memori putimag (also mention by nkisseb@delphi.beckman.uiuc.edu,
+> nick kisseberth) look interest, but i need someon to point me to some
+> document. is thi method like to give better result than server-
+> resid pixmap? i'd also be interest in look at the xview code
+> mention abov...
+> 
+> thank for the help so far. if i get someth decent put togeth, i'll
+> definit post it to the net.
+> 
+
+  the mit tape come with document written by keith packard on the share
+  memori extens to x. look in:  mit/doc/extens/mit-shm.ms
+  i found thi invalubl. unfortun, there is a bit of work to set up the
+  share memori segment, make an ximag from it, etc. also, there is an
+  extens queri to determin if the server support it, but you still need to
+  test if the server is run on the same host and if share memori is enabl
+  in the kernel. i have written layer of convienc routin which make all thi
+  transpar.
+  as for the xview code, well, i doubt that would be consid interest.
+  the interest stuff is done in a c object librari. peopl interest in thi
+  code can email me.
+
+				regard,
+
+					richard gooch,
+					rgooch@atnf.csiro.au

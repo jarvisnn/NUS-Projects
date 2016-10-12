@@ -1,0 +1,70 @@
+from: bcasavan@skyhawk.ecn.uoknor.edu (brent casav)
+subject: re: permana swap file with do 6.0 dbldisk
+summari: explan of messag
+nntp-post-host: skyhawk.ecn.uoknor.edu
+organ: engin comput network, univers of oklahoma, norman, ok, usa
+line: 63
+
+in articl <93059@hydra.gatech.edu> gt4356c@prism.gatech.edu (jame dean barwick) write:
+[stuff delet]
+>
+>more on permen swap file...
+>
+>i'm sure everyon who ha an uncompress part of their compress hard disk
+>ha seen the messag "you have select a swap file greater than the suggest
+>size...window will onli us the size suggest...do you wan't to creat thi
+>swap file anywai" or someth like that.
+>
+>well, a friend of mine (robert) call microsoft and ask them what and why.
+>what thei said is that window check the amount of free disk space and
+>divid that number by 2.  then it check for the largest contigu block
+>of free disk space.  window then suggest the smaller of the two number.
+>
+>thei also said that under absolut no circumst...none!...will window
+>us a swap file larger than the suggest size.  well...that's what he 
+>said!
+>
+>i call bull@#$#.  if thi is true why doe window report the memori is
+>avail to me if it's not go to us it?
+>
+>ani taker?
+>
+>jame
+
+well, someon at microsoft told you wrong.  window will us a swap file
+larger than the recommend size.  last summer i went to a microsoft
+window 3.1 technic workshop and thei distribut a lot of inform
+that the gener public might not be awar of.  anywai in the main book
+thei hand out thei have a section on "creat larger than recommend
+swapfil".  i'll quot the inform
+
+  if you creat a perman swapfil larger than the recommend size, you
+  will receiv a messag tell you that window will not us anyth
+  larger than the recommend size.  thi error messag is incorrect, we
+  will allow the us of the larger swapfil, up to four time the amount
+  of ram on your machin.
+
+so as you see, microsoft doe know that the inform is incorrect.  you
+probabl just ran into some doofbal who wa new on the job and wa onli
+tell you what littl he knew.
+
+be that what it mai, i would realli suggest to everyon to take the
+opportun to go to these technic workshop.  thei aren't actual
+incred in-depth, but you do get a lot of materi about bug and
+optim straight from those in the know.  besid that thei offer
+you huge discount on softwar.  if i rememb correctli, you could pick
+up word 2.0, excel 4.0, or whatev their present program is for $130.
+that is the full blown version, not an upgrad or educ version.  you
+could also pick up microsoft offic for $500 or someth like that.  myself
+i sprang for word.
+
+well, hope that wa help to someon.  and besid that i hope someon
+will go to a workshop and save a littl monei.
+
+and if anyon at microsoft is read thi -- i realli love your product.
+i need a job onc i graduat also, can we work someth out?  ;-)
+
+thank,
+brent casav
+bcasavan@mailhost.ecn.uoknor.edu
+

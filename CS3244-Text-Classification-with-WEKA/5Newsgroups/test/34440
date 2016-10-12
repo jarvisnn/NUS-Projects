@@ -1,0 +1,60 @@
+from: soenk@wiwi12.uni-bielefeld.de (soenk voss)
+
+subject: how can i get a window to draw in ?
+
+nntp-post-host: wiwi12.uni-bielefeld.de
+
+organ: universitaet bielefeld
+
+keyword: window, widget
+
+line: 23
+
+
+
+
+
+i have the task to program a x applic for the first time and have some sever difficulti creat a window in which i can draw someth.
+
+unfortun some basic book on the topic of x applic program ar not avail to me for the moment.
+
+
+
+i am run a hp720 with hpux 8.07, vue and x11r4 us xt anbd xaw.
+
+
+
+what i did until now:
+
+i initi the x intrins cxreat a top level widget with xtappiniti. i pass as a applic_class name 'commandwidgetclass'.
+
+then i set the argument valu for window height and width us xtsetarg and
+
+pass it to the toplevel widget with xtsetvalu.
+
+when i call xtrealizewidget, i get a window of the specifi size, but i have no idea how i can draw someth in it.
+
+
+
+can anybodi send me some help and perhap some basic inform how to us the widget ?
+
+in which situat it is us to us them and in which not ?
+
+
+
+thank veri much in advanc
+
+
+
+soenk
+
+
+
+--------------------------------------------------------------------------------soenk voss                                                 faculti of econom
+
+soenk@wiwi12.uni-bielefeld.de                           univers of bielefeld
+
+                                                                         germani  
+
+--------------------------------------------------------------------------------
+

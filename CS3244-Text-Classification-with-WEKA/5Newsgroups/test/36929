@@ -1,0 +1,42 @@
+from: jhpark@kdb.snu.ac.kr (park jang ho)
+
+subject: x11r5 on ibm rs6000
+
+line:       18
+
+
+
+how ar you, everybodi?
+
+
+
+i instal x11r5 on our ibm rs6000 workstat. os version is aix 3.2.3.
+
+there wa no problem in instal.
+
+but there wa a problem in invok 'xinit'.
+
+when i invok 'xinit', there is a error messag as follow:
+
+
+
+give up.
+
+xinit: unabl to connect to x server
+
+xinit: no such process (errno 3): server error.
+
+
+
+i'm a navic. so i don't know the reason why i get thi messag.
+
+pleas help me. i am wait for your help.
+
+
+
+thank for read thi mail.
+
+
+
+-park jang ho  (jhpark@kdb.snu.ac.kr)
+

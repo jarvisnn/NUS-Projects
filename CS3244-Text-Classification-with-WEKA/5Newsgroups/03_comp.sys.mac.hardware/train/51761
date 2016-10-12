@@ -1,0 +1,26 @@
+from: skok@itwd1.energietechnik.uni-stuttgart.de (holger skok)
+subject: re: x86 ~= 680x0 ?? (how do thei compar?)
+organ: inst. f. thermodynamik u. waermetechnik (itw), u. of stuttgart, frg
+line: 19
+distribut: usa
+nntp-post-host: itwd1.energietechnik.uni-stuttgart.de
+
+in articl <c5nq9c.llp@new.cso.uiuc.edu> rvenkat@ux4.cso.uiuc.edu (ravikuma venkateswar) write:
+[... stuff delet]
+>
+>besid, for 0 wait state perform, you'd need a cach anywai. i mean,
+>who us a processor that run at the speed of 80ns simm? note that thi
+>memori speed correspond to a clock speed of 12.5 mhz.
+>
+[more stuff delet...]
+
+how do you calcul that figur? i'd assum even in person comput
+the board design would us bank switch to (optimist) 
+quadrupl the access speed  or am i miss someth here?
+
+hsk
+-- 
+sie singen da alt entsagungsli, da eiapopeia vom himmel,
+womit man beruhigt, wenn es greint, da volk, den grossen luemmel.
+ein neue li, ein besser li, oh freund, will ich euch dichten,
+wir wollen hier auf erden schon da himmelreich errichten.    ... h. hein

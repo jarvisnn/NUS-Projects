@@ -1,0 +1,60 @@
+from: khera@cs.duke.edu (vivek khera)
+
+subject: re: 'makedepend' problem
+
+organ: duke univers cs dept., durham, nc
+
+line: 21
+
+nntp-post-host: thneed.cs.duke.edu
+
+to: mlt@blue.infor.com (michael turok)
+
+in-repli-to: mlt@blue.infor.com's messag of 17 mai 93 20:59:30 gmt
+
+x-md4-signatur: 0f18fa5b225d03d3a401973b4318dd0e
+
+
+
+in articl <3032@crono.metaphor.com> mlt@blue.infor.com (michael turok) write:
+
+
+
+   we have a problem with 'makedepend': it doesn't know how to correctli process
+
+   #if claus in c preprocessor statement. it evalu everyth to
+
+   true no matter what the condit ar.
+
+
+
+   [...]
+
+
+
+   ha anybodi come up with some solut/fix to 'makdepend' other than
+
+   writeyourownpars... and will to share it with us?
+
+
+
+rewrit 'makedepend' to us 'cc -m' or 'gcc -m' or 'gcc -mm' (which is
+
+the on i prefer, sinc system header don't chang that often) for
+
+gener the actual depend.  you'll still need to write the
+
+part that edit the actual makefil.  i think there's a program in the
+
+berkelei distribut call mkdep that will do essenti thi.
+
+--
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+vivek khera, gradual student/system gui  depart of comput scienc
+
+internet:   khera@cs.duke.edu             box 90129
+
+            (mime mail accept)          durham, nc 27708-0129 (919)660-6528
+

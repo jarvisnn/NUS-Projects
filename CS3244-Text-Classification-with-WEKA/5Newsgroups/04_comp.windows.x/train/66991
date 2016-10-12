@@ -1,0 +1,23 @@
+from: gerard@dp.co.uk (gerard o'driscol)
+subject: re: xwindow alwai opaqu
+organ: the internet
+line: 16
+nntp-post-host: enterpoop.mit.edu
+to: xpert@expo.lc.mit.edu
+
+
+hess@swt1.informatik.uni-hamburg.de write:
+
+>> i wonder if it is possibl for a parent window to paint over the area of
+>> it child. if it is not, then how could it be possibl to implement a 
+>> rubberband across multipl xwindow to select the object that ar
+>> displai on in each window?
+
+us a gc with the subwindow_mode attribut set to includeinferior. the
+default is clipbychildren. howev, bewar if ani of the children ar of
+a differ depth to the parent; the semant of thi ar undefin by the
+protocol.
+
+ 	gerard o'driscol (gerard.odriscol@dp.co.uk)
+ 	du pont pixel system ltd.
+ 

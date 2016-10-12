@@ -1,0 +1,29 @@
+from: walsteyn@fy.ruu.nl (fred walsteijn)
+subject: re: built-in video problem on mac iisi !!??!!
+organ: physic depart, univers of utrecht, the netherland
+line: 24
+
+in <1993apr19.164611.1018@fy.ruu.nl> walsteyn@fy.ruu.nl (fred walsteijn) write:
+
+>i've seen the follow problem om three mac iisi machin
+>all with 17 mb ram instal (70 or 80 ns simm).
+
+>if the content of a window ar be calcul and updat
+>a lot of strang horizont line ar temporarili gener
+>on the screen.  the line translat to the top of the screen and
+>have a slightli lower bright than their surround (thei
+>ar a few millimet apart).
+>i admit that thei ar vagu, but thei can still be distinguish clearli,
+>especi if the environ (i.e. the rest of the room) is a bit dark.
+>applic which produc thi effect ar:
+>- the preview of directtex 1.2 (i.e. dviread 1.2)
+>- kaleidagraph 2.1.1/fpu
+
+anoth program which produc thi effect is:
+- spyglass transform 2.1 (while contour a big 257*257 arrai).
+
+thank for ani inform about thi problem,
+-----------------------------------------------------------------------------
+fred walsteijn                                | internet: walsteyn@fy.ruu.nl
+institut for marin and atmospher research | fax:      31-30-543163
+utrecht univers, the netherland           | phone:    31-30-533169

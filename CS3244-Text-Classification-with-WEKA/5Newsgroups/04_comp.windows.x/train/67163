@@ -1,0 +1,85 @@
+from: marca@ncsa.uiuc.edu (marc andreessen)
+subject: ncsa mosaic for x 1.0 avail.
+x-md4-signatur: b912a4b59c6065f2e86a15751149a3f2
+organ: nat'l center for supercomput applic
+line: 79
+
+version 1.0 of ncsa mosaic for the x window system, a network
+inform system and world wide web browser, is herebi releas:
+
+file://ftp.ncsa.uiuc.edu/mosaic/xmosaic-sourc/xmosaic-1.0.tar.z
+                            .../xmosaic-binari/xmosaic-sun.z
+                            .../xmosaic-binari/xmosaic-sgi.z
+                            .../xmosaic-binari/xmosaic-ibm.z
+                            .../xmosaic-binari/xmosaic-dec.z
+                            .../xmosaic-binari/xmosaic-alpha.z
+                            .../xmosaic-diff/xmosaic-0.13-1.0-diff.z
+
+ncsa mosaic provid a consist and easi-to-us hypermedia-base
+interfac into a wide varieti of network inform sourc,
+includ gopher, wai, world wide web, nntp/usenet new, techinfo,
+ftp, local filesystem, archi, finger, hyper-g, hytelnet, texinfo,
+telnet, tn3270, and more.
+
+thi releas of ncsa mosaic is known to compil on the follow
+platform:
+
+  sgi (irix 4.0.2) 
+  ibm (aix 3.2)
+  sun 4 (suno 4.1.3 with stock x11r4 and motif 1.1, and gcc).
+  dec ultrix.
+  dec alpha axp (osf/1).
+
+document is avail onlin.
+
+chang sinc 0.13 includ:
+
+ o ad new resourc, gethostbynameisevil, for sun's that
+   coredump when gethostbynam() is call to try to find out what
+   their own name ar. (command-line flag is -ghbnie.) 
+ o explicitli pop down all dialog box when document view
+   window is close, for window manag too dull to do so
+   themselv. 
+ o better visit anchor color for non-sgi's. 
+ o ad .hqx and .uu to list of file extens handl like .tar file. 
+ o ad 'clear' button to open box, to allow more conveni
+   cut-n-past entri of url's. 
+ o new resourc 'autoplacewindow'; if set to fals, new document
+   view window will not be automat posit by the
+   program itself (but it's still up to your window manag just how
+   thei're place). 
+ o command-line flag -i and -icon now have desir effect (new
+   resourc initialwindowicon can also be us). 
+ o gif-read code is a littl more bulletproof. 
+ o obscur infinit loop trigger by extra space in img tag fix. 
+ o elimin nonintuit error messag when imag can't be read
+   (inlin ncsa bitmap is indic enough that someth's not
+   right for author, and reader can't do anyth about bad imag
+   in ani case). 
+ o obscur pars bug (for construct like <address><a
+   href=...>text<a></address>) fix. 
+ o fix mysteri stupid coredump that onli hit sun. 
+ o fix stupid coredump on url's like '://cbl.leed.ac.uk/'. 
+ o fix buglet in handl rlogin url's. 
+ o new support for solari/sysvr4 (courtesi
+   dana@thumper.bellcor.com). 
+ o better support for hp-ux 8.x and 9.x (courtesi
+   john@hpwarf.wal.hp.com). 
+ o better support for next (courtesi scott@shrug.dur.ac.uk). 
+ o some miscellan portabl fix (courtesi
+   bingl@cs.purdu.edu). 
+ o miscellan bug fix and cleanup. 
+
+comment, question, and bug report should be sent to
+mosaic-x@ncsa.uiuc.edu.  thank in advanc for ani feedback you can
+provid.
+
+cheer,
+marc
+
+--
+--
+marc andreessen
+softwar develop group
+nation center for supercomput applic
+marca@ncsa.uiuc.edu

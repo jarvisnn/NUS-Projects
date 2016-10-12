@@ -1,0 +1,70 @@
+from: av@kielo.uta.fi (arto v. viitanen)
+
+subject: re: funet.fi
+
+repli-to: av@uta.fi (arto v. viitanen)
+
+distribut: world
+
+organ: univers of tamper, finland
+
+line: 26
+
+nntp-post-host: kielo
+
+in-repli-to: perri@wswiop15.win.tue.nl's messag of 20 apr 93 19:01:58 gmt
+
+
+
+>>>>> on 20 apr 93 19:01:58 gmt, perri@wswiop15.win.tue.nl (perri egelm) said:
+
+perri> nntp-post-host: wswiop15.win.tue.nl
+
+
+
+perri> artieb@vnet.ibm.com write:
+
+
+
+>    i saw a post earlier that refer to funet.fi directori /pub/msdo
+
+>howev, when i log on to funet.fi i cant even find the "pub" directori let
+
+>alon the "msdo" directori !!!!  can someon tell me what i'm do wrong??
+
+
+
+perri> perhap you should try nic.funet.fi instead of funet.fi ??!?!?
+
+
+
+anoth possibl is, that you did not give your email address as password
+
+for the anonym account. if you that, you see follow messag:
+
+
+
+230-
+
+230-you enter an invalid/inprop password, and ar now access
+
+230-restrict subset of file.    pleas read readm for more inform.
+
+230-we have special access featur, see file readm
+
+230 it wa last updat tue apr 13 23:45:09 1993 - 9.4 dai ago
+
+
+
+thi can happen, if your termin emul doe not gener the '@'
+
+charact as you think (it is hard to see, sinc password ar not echo..).
+
+--
+
+arto v. viitanen				         internet: av@cs.uta.fi
+
+univers of tamper,		        x.400: s=av;ou=cs;o=ut;admd=fumail;c=fi
+
+finland
+

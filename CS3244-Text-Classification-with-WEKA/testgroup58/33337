@@ -1,0 +1,44 @@
+from: x92gia@px2.stfx.ca (tanya adamsson)
+
+subject: help!
+
+organ: the internet
+
+line: 15
+
+nntp-post-host: enterpoop.mit.edu
+
+to: xpert@expo.lc.mit.edu
+
+
+
+i am just begin to try us the athena toolkit and am have some problem 
+
+get start.  i think that some file ar miss on the system, but there is
+
+the possibl that thei ar just in a differ directori.  when i try to link
+
+my program it can't find xtinitail, xtrealizewidget, xtmainloop, 
+
+xtcreatemanagedwidget, or commandwidgetclass.  i've includ intrins.h and
+
+command.h.  i also had a problem on compil with xtncallback but replac that with
+
+a null in order to compil and see if there were ani other problem.  i haven't 
+
+us a toolkit befor and thi is simpli an exampl i got from the manuel.  can
+
+someon tell me where i might look for these call, that is, in what file not what
+
+directori thei ar suppos to be under becaus the system manag doesn't believ
+
+in standard directori and gener doe thing hi own wai.  (i am us unix)
+
+
+
+thank you for your assist.
+
+
+
+t. j. adamsson
+

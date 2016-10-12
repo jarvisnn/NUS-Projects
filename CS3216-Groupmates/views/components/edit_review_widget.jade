@@ -1,0 +1,65 @@
+.modal.fade#edit-review-widget-modal(role='dialog')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button',data-dismiss='modal',aria-label='Close')
+          span(aria-hidden='true') &times;
+        h3.modal-title Edit Review
+      .modal-body
+        form#edit-review-form(method='POST')
+          .form-group
+            h4
+              | Edit your review for &nbsp;
+              span.reviewee-name
+            input.review-id(name='id',type='hidden')
+          .form-group
+            label Module Code
+            span.module-code.form-control
+          .form-group
+            include ./stars.jade
+          .form-group
+            textarea.form-control(name='description',placeholder='Your review description',required)
+          .form-group
+            input.btn.btn-primary(
+              type='submit',data-dismissal='modal',value='Submit')
+script.
+  !function(){
+
+  function search(modules, code) {
+    var start = 0, end = modules.length - 1;
+    while (start < end) {
+      var mid = (start + end) / 2|0;
+      if (modules[mid].moduleCode > code)
+        end = mid;
+      else if (modules[mid].moduleCode < code)
+        start = mid + 1;
+      else
+        return modules[mid].title;
+    }
+    if (modules[mid].moduleCode === code)
+      return modules[mid].title;
+    else
+      return '';
+  }
+
+  $('#edit-review-widget-modal').on('show.bs.modal', function() {
+    var modal = this;
+    $('#edit-review-form', this).attr('action', '/reviews/update/' + $(this).data('reviewId'));
+    $('.review-id', this).val($(this).data('reviewId'));
+    $('.reviewee-name', this).text($(this).data('revieweeName'));
+    $.getJSON('/misc/modules_processed.json', function(result) {
+      var code = $(modal).data('moduleCode');
+      $('.module-code', modal).text(code + ': ' + search(result, code));
+    });
+    $('textarea', this).val($(this).data('reviewDescription'));
+    var star_value = $(this).data('stars');
+    $('input[name=stars]', this).val(star_value);
+    $('.star', this).each(function(index, star) {
+      if (index + 1 <= star_value)
+        star.classList.add('selected');
+      else
+        star.classList.remove('selected');
+    });
+  });
+
+  }();

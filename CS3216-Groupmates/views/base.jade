@@ -1,0 +1,56 @@
+doctype html
+
+html(lang='en')
+  head
+    title Groupmates
+    block head
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      meta(name='description', content='')
+      meta(name='author', content='')
+
+      block ogMeta
+        meta(property='og:type', content='website')
+        meta(property='og:title', content='Groupmates')
+        meta(property='og:description', content='Finding groupmates, done the right way.')
+        meta(property='og:image', content='http://ec2-52-76-48-36.ap-southeast-1.compute.amazonaws.com/images/background-logo.png')
+
+      link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,800,700,700italic,400italic,300italic,800italic', rel='stylesheet', type='text/css')
+      link(href='https://fonts.googleapis.com/css?family=Exo+2:400,600,700', rel='stylesheet', type='text/css')
+      link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet')
+      link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+      link(href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.0/bootstrap-social.min.css', rel='stylesheet')
+      link(rel='stylesheet', href='/stylesheets/button.css')
+
+      link(rel='stylesheet', href='/stylesheets/common.css')
+      link(rel='stylesheet', href='/stylesheets/user.css')
+
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+      script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+
+  body
+    include ./components/mixins
+    #fb-root
+    script.
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=468078900032694";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-67083606-1', 'auto');
+      ga('send', 'pageview');
+
+    block header
+    block content
+    block footer
+      #footer

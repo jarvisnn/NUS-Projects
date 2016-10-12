@@ -1,0 +1,48 @@
+from: tommc@hpcvusj.cv.hp.com (tom mcfarland)
+subject: re: mysteri beep
+nntp-post-host: hpcvusj.cv.hp.com
+repli-to: tommc@cv.hp.com
+organ: hewlett packard utd-corval
+line: 41
+
+in articl <c5qtkk.wp@cup.hp.com>, defaria@cup.hp.com (andi defaria) write:
+|> [ articl crosspost from hp.window ]
+|> [ author wa andi defaria ]
+|> [ post on mon, 19 apr 1993 18:08:38 gmt ]
+|> 
+|> for some reason the follow code caus my x applic to beep whenev i
+|> intercept a keystrok and chang it's mean.  the intent of thi code it to
+|> allow "date" field the follow special kei:
+|> 
+|> 	[tt]:	insert todai's date
+|> 	[+=]:	bump dai up by on
+|> 	[-_]:	bump dai down by on
+|> 
+|> i hardcod some date for thi exampl.  perhap i shouldn't be us an
+|> xmtext field for thi.
+|> 
+|> ////////////////////////////////////////////////////////////////////////////// 
+|> // 
+|> // for some reason the follow code beep whenev ani of the special kei
+|> // of [tt+=-_] ar hit.  why?  the idea of thi code is to interpret these
+|> // kei have the special mean impli by the code.  i would like to get
+|> // rid of the beep but, as far as i can tell, i'm not do the beep and 
+|> // am at a lose as to understand who and why the beep is occur.
+|> // 
+|> ////////////////////////////////////////////////////////////////////////////// 
+
+
+code delet...
+
+>from the xmtextfield man page (dure discuss of resourc):
+
+   xmnverifybel
+
+      specifi whether a bell will sound when an action is revers
+      dure a verif callback.
+
+you ar set doit to fals in the callback, and text[field] is beep
+as it should.  to turn off thi behavior, set thi boolean resourc to fals.
+
+tom mcfarland
+<tommc@cv.hp.com>

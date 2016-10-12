@@ -1,0 +1,1164 @@
+from: lee@sq.sq.com (liam r. e. quin)
+
+subject: list of program with open look user interfac
+
+organ: softquad inc., toronto, canada
+
+expir: 2 jun 1993 04:00:04 gmt
+
+line: 576
+
+
+
+
+
+$id: open-look-program.faq,v 1.17 93/03/21 17:17:55 lee exp locker: lee $
+
+
+
+content:
+
+	subject: applic: applic builder
+
+	subject: applic: graph tool
+
+	subject: applic: util
+
+	subject: applic: other
+
+	subject: tool: termin emul
+
+	subject: other commerci applic
+
+	subject: applic: toolkit extens
+
+	subject: openwindow 3 port
+
+	subject: xview 3 port
+
+	subject: xview 2 port
+
+	subject: game (free and commerci)
+
+
+
+
+
+subject: applic: applic builder
+
+
+
+commerci: devguid 3.0
+
+contact: sunpic
+
+    let you us drag and drop to creat an open look applic with
+
+    xview, olit, uit or tnt.  veri easi to us.
+
+
+
+free: dirt
+
+    there _might_ be an olit port of thi ui builder.
+
+
+
+commerci: exocod
+
+contact: expert object
+
+    on of the first third-parti gui builder to support open look,
+
+    us the xview toolkit.  it wa review in sunexpert magazin
+
+    in 1990.
+
+
+
+commerci: objectbuild
+
+contact: parcplac, debra franc debra@parcplac.com, +1 303 440 9991
+
+    uib is a user interfac builder which support build applic
+
+    that support both open look and motif.	it gener code for
+
+    parcplac's oi c++ toolkit and can make us of user creat
+
+    subclass.  note: `oi' can also displai an osf/motif gui at runtim.
+
+
+
+free: wcl
+
+    us x resourc to specifi an xt widget hierarchi and action to
+
+    user-defin callback.  us olit, xt or motif.
+
+
+
+commerci: xvt
+
+contact: xvt system (+1 303-443-4223)
+
+    let you write code to a common subset of open look, motif, microsoft
+
+    window, the macintosh gui, and even termin (us curs).  you bui
+
+    an xvt toolkit for each environ.
+
+
+
+
+
+subject: applic: graph tool
+
+
+
+free: dstool
+
+    xview-base program that plot lorenz attractor and other chaotic thing
+
+    in real time.  also includ a mathemat express interpret.
+
+    ftp: macomb.tn.cornel.edu
+
+
+
+free: ac/gr --  graph and analysi program, xvgr
+
+ftp: ftp.ccalmr.ogi.edu [129.95.72.34]; xvgr-2.09.tar.z in /ccalmr/pub/acegr
+
+    handl x-y scatterplot, lineplot, bargraph, fft analysi, run
+
+    averag, polynomi fit, etc.
+
+
+
+free: robot - a scientif graph plot and data analysi tool 
+
+contact: robin corbet <corbet@astro.psu.edu>
+
+descript:
+
+    graph plot in variou style & ax; data manipul - arithmet,
+
+    function, smooth, fold, sort; fit to data us gaussian,
+
+    polynomi, lorentzian, and/or user defin function; annot of
+
+    graph; log file;  command with loop etc.; colour; postscript output.
+
+ftp: astrod.astro.psu.edu (128.118.147.28) in pub/astrod
+
+ftp: file: robotx0.35.tar.z - everyth
+
+ftp: file: robotmanu.ps.z - just the document.
+
+ftp: file: robot.sun4.z  - binari built on a sparcstat.
+
+requir:
+
+    robot is xview base. user interfac portion of code ar written in
+
+    'c'. data manipul code is written in fortran. henc a fortran
+
+    compil is also requir or the public domain f2c packag.
+
+    altern, a sparc binari is avail by anonym ftp.
+
+
+
+subject: applic: util
+
+
+
+free: boss
+
+descript:
+
+    an open look ui to the casio boss schedul
+
+
+
+free: prop
+
+ftp: export.lc.mit.edu /pub/r5untar/contrib/lib/xview3/client/prop/*
+
+descript:
+
+    thi is the openwindow properti editor, that appear when you choos
+
+    the properti... item from the workspac menu.
+
+
+
+free: contool
+
+ftp: from export.lc.mit.edu
+
+descript:
+
+    a special-purpos consol-window that can filter out or take special
+
+    action on specifi consol messag; written by chuck musciano.
+
+requir: xview
+
+
+
+free: face
+
+descript:
+
+    displai pictur of peopl who have sent you electron mail.
+
+    violat the data protect act in the u.k.
+
+
+
+subject: applic: other
+
+
+
+
+
+commerci: bimail 400
+
+contact: bim (+32-2-759.59.25) pge@sunbim.be
+
+x.400-address: c=be;a=rtt;p=bim;o=horizon;s=geurt;g=patrick
+
+note:
+
+    bimail is a complet x.400 electron mail system.  it consist
+
+    in a user interfac which give access to all x.400 servic
+
+    with a consist look and feel, a messag transfer agent (mta) system
+
+    which can transfer messag over x.25, tp.4 and tcp/ip (us rfc 1006).
+
+    a gatewai to smtp mail is also avail.
+
+
+
+free: calentool
+
+descript:
+
+    a dai/week/month/year at-a-glanc calendar and almanac.
+
+ftp: export.lc.mit.edu:/contrib/calentool2.2xp1.tar.z
+
+contact: bill randl, tektronix, inc. <billr@saab.cna.tek.com>
+
+
+
+free: emacstool
+
+descript:
+
+    a sunview program that wa convert to xview, and is includ with the
+
+gnu emac distribut.
+
+
+
+free: genix
+
+contact: ian darwin <ian@sq.com>
+
+    a genealog program, written in c us guid.
+
+    incomplet as of jan '93; inquir for detail.
+
+
+
+free: workman - audio cd player for x11 (sun, ultrix)
+
+requir: xview librari
+
+ftp: ultrix binari: ftp.hyperion.com in /workman
+
+ftp: ftp.ucsc.edu in "incom" - databas of over 750 cd
+
+contact: koreth@hyperion.com (steven grimm)
+
+
+
+free: pan - postit note
+
+
+
+free: wai
+
+ftp: sunsit.unc.edu
+
+descript:
+
+    network, distribut text-retriev system.  olit-base front end.
+
+note:
+
+    you might to need to add -lce to the makefil.
+
+
+
+free: xrolo - rolodex card index/address book
+
+
+
+free: xv_displai
+
+descript:
+
+    an xview program for show a text file, like more(1).
+
+
+
+commerci:  searchit 1.0
+
+contact: sunsoft or sunexpress 
+
+    us: 1-800-873-7869;  uk: 0800 89 88 88
+
+    germani: 01 30 81 61 91;  franc: 05 90 61 57
+
+platform: sparc, solari 1.x
+
+price: $249
+
+note:
+
+    searchit is a full text search and retriev applic design to
+
+    improv individu and group product.  it make an index to file
+
+    and can later retriev document by word or phrase, rank the result
+
+    in relev order.
+
+
+
+commerci: showm
+
+contact: sunsoft
+
+note:
+
+    conferenc softwar that let multipl connect user share the same
+
+    draw screen, with bitmap captur and moveabl pointer.
+
+requir:
+
+    you can onli run on showm per comput, so you have to have a cpu per
+
+    confer member.
+
+
+
+free: xvman - man page viewer
+
+
+
+free: xvtdl - todo list manag
+
+ftp: export.lc.mit.edu /contrib/xvtdl-4.0.tar.z, /contrib/xvtdl-4.0-readm
+
+requir: xview librari
+
+contact: mike jip jip@cs.hope.edu  (bitnet: jip@hope)
+
+organis: hope colleg depart of comput scienc
+
+     
+
+free: name_finder
+
+contact: richard.ell@eng.auburn.edu     +1 (205) 844-2280
+
+ftp: ftp.eng.auburn.edu [131.204.10.91] pub/name_finder1.2.tar.z.
+
+patch: pub/name_finder1.2.compil.patch1.
+
+requir: openwindow 3.0, c++ 2.1 or greater to recompil
+
+descript:
+
+    name_finder wa orgin design as a replac for the name finder
+
+    miss from the openwindow version 3.0 mailtool.  it ha sinc grown
+
+    into a tool for sever electron mail relat activ includ:
+
+    interact with local listserv robot for handl mail list,
+
+    request full.name style mail alias from your local postmast, and
+
+    provid mailbox statu inform ala finger(1).
+
+
+
+    name_finder is written in c++ (cfront 2.1) us gxv++ version 1.1.
+
+    if you don't have access to a c++ compil, a precompil sparc
+
+    execut is includ in the distribut.
+
+
+
+free: bibcard	interfac for bibtex databas
+
+requir: xview
+
+ftp: iamsun.unib.ch [130.92.64.10] in /x11/bibcard-1.11.tar.z
+
+ftp: 	includ sourc and sparc binari for suno 4.1.1.
+
+version: 1.11
+
+descript:
+
+    gui for mantain bibliographi databas which can be us with
+
+    latex, tex and framemak
+
+
+
+
+
+free: moxftp -- interfac to ftp.
+
+ftp: ftp.chpc.utexa.edu as file /packag/x/xftp.1.1.tar.z.
+
+contact: bill jone jone@chpc.utexa.edu
+
+requir: x11, olit or motif or athena widget
+
+note:
+
+    formerli call xftp.
+
+    compil under (at least) ultrix, aix 3.1.5, aix 3.2, convex os, suno,
+
+    unico 6.1.4, and irix.  us olit.
+
+    bug: can also us osf/motif and athena widget.
+
+
+
+
+
+free: olvwm -- open look virtual window manag
+
+contact: scott oak
+
+ftp: export.lc.mit.edu in the contrib directori
+
+patch: there ar two patch
+
+requir: xview 3
+
+descript:
+
+    olvwm is a version of olwm that manag a `virtual desktop' (henc the
+
+    `v' in it name).  it show a littl map on the screen, with the
+
+    current displai area repres by a littl rectangl.	 you can
+
+    move around by drag the rectangl or with the arrow kei.  thi
+
+    let you run sever client (applic) and move the displai around
+
+    from on to the other.  olvwm wa deriv from the openwindow 3.0 olwm.
+
+
+
+free: ftptool -- open look front-end to ftp
+
+requir: xview
+
+ftp: export.lc.mit.edu in /contrib
+
+
+
+free: hyperlook
+
+contact: the ture institut
+
+requir: openwindow 3 (run the xnew server, not x11)
+
+    hypertext packag written entir in new.  runtim from ture.com
+
+    in /pub or ftp.uu.net (graphic/new/hyperlook1.5-runtim.tar.z)
+
+
+
+maestro (ftp from sioux.stanford.edu)
+
+    multimedia author tool, includ support for sound, text & video.
+
+xvnew (ftp from export.lc.mit.edu)
+
+    an xview-base newsread for netnew.
+
+
+
+free: xvttool
+
+ftp: cs.dal.ca:/pub/comp.archiv
+
+ftp: nuri.inria.fr:/x/contrib/client
+
+ftp: lth.se:/pub/netnew/alt.sourc/volum92/dec/xvttool*.z
+
+ftp: src.doc.ic.ac.uk:/usenet/comp.archiv/x11/termin/xvttool
+
+descript:
+
+    a vt100/102 emul, in both xview and sunview version.  includ
+
+    button for the pf kei, etc.
+
+
+
+subject: postscript and graphic viewer
+
+
+
+commerci: pageview - postscript preview
+
+contact: includ in openwindow as part of deskset.
+
+note:
+
+    type 1 support onli in openwindow 3.0.1 under solari 2.1.
+
+    antialias support - with colour openwindow 3 try pageview -aa -dpi 150
+
+    note that pageview us the x11/new server to interpret the postscript,
+
+    and thu won't run on an x termin or other non-openwindow server.
+
+    it's *not* enough to be rune an open look ui [tm] window manag such
+
+    as olwm.
+
+
+
+commerci: xp - postscript program editor and preview
+
+contact: includ with openwindow 2.0 under demo and share/src
+
+note:
+
+    onli run under openwindow 2.
+
+
+
+commerci: psh
+
+contact: includ with openwindow
+
+	simpl interfac to new and the openwindow server
+
+
+
+free: ralpag
+
+ftp: export.lc.mit.edu in contrib/client
+
+note:
+
+    crispin goswel's postscript interpret, much hack.
+
+    not open look compliant.  no type 1 font support.
+
+    there ar other version of thi call `xp', `postscript', etc.;
+
+    don't confus thi `xp' with the on mention abov.
+
+
+
+free: ghostscript
+
+(from the free softwar foundat)
+
+    support type 1 font.  not open look base.
+
+
+
+
+
+subject: tool: termin emul
+
+
+
+free: cmdtool, shelltool
+
+requir: xview 3 toolkit
+
+note:
+
+    these ar includ in the xview sourc distribut from
+
+    export.lc.mit.edu in /contrib; thei're also includ with sun's
+
+    openwindow.
+
+
+
+commerci: switchterm
+
+contact: micro resourc inc., columnbu, ohio, usa, +1 614 766-2335
+
+note:
+
+    a version of xterm with an open look ui, print interfac,
+
+    ansi x3.64 colour escap sequenc, etc.
+
+
+
+commerci: isoterm
+
+contact: the bristol group ltd., +1 415 925-9250 and (49) 6105-2945 (germani)
+
+requir: openwindow 3 (??)
+
+other product: isotex, isofax, power base
+
+note:
+
+    an olit-base termin emul.  i couldn't get the demo version to
+
+    give me a shell prompt, although it did look like it wa a pretti fll
+
+    vt340 emul, with doubl-height charact, colour, font, grahic
+
+    and so forth.
+
+    with the union flag (the british flag) as their logo i somehow expect
+
+    an english address, perhap in bristol...
+
+
+
+subject: other commerci applic
+
+
+
+    contact sunsoft (or sun) and ask for the catalyst open look guid,
+
+    which list over 200 page of applic.
+
+
+
+    you can also get the free cdware cd/rom, which contain demo version
+
+    of sever popular open look ui applic.  onc you've done thi,
+
+    you can often simpli contact the vendor concern to have the licens
+
+    upgrad from demo, and receiv the full product document.
+
+
+
+
+
+product name: author/editor - sgml-base text editor/word processor
+
+compani name: softquad inc., +1 416 239 4801, mail@sq.com
+
+descript:
+
+    word processor or text editor that manipul iso 8879 sgml document.
+
+interfac: open look ui (xview), osf/motif, mac, ms/window
+
+ 
+
+
+
+subject: applic: toolkit extens
+
+
+
+
+
+product name:     xtra xwidget
+
+compani name:     graphic softwar technolog
+
+e-mail:           info@gst.com
+
+phone:            310-328-9338;    fax: 310-376-6224
+
+keyword:         graphic, librari, widget, spreadsheet, help
+
+interfac:       open look, motif
+
+platform:        sparc, hp9000s300/400/700, ibm rs6000, interact 386
+
+requir:     x11, xt, xol (or xm) librari and header; x11
+
+price:            $795/singl user, $3000/network, $5000/sourc
+
+support-price:    $400/30 call
+
+sourc-avail: ye
+
+descript:
+
+    the xtra xwidget librari contain a set of widget that ar subclass
+
+    from and compat with either olit or motif widget.  the librari
+
+    includ widget that implement the follow: spreadsheet, bar graph,
+
+    stack bar graph, line graph, pie chart, xy plot, hypertext, hypertext
+
+    base help system, and data entri form.  widget have been successfulli
+
+    integr with both teleus from telesoft and builder xcessori from
+
+    ic.  a free demo is avail for ani of the support platform.
+
+
+
+product name:     xrt/graph
+
+compani name:     kl group
+
+e-mail: sun.com!suncan!klg!info, info@klg.com
+
+phone: +1 416 594-1026
+
+descript:
+
+    xrt/graph is a graph object that extend the xview toolkit;  there ar
+
+    also xt version for olit and motif.  xrt/graph support line plot,
+
+    scatter-plot, strip-chart, bar chart, stack bar chart, pie chart
+
+    and fill-area chart, singli and in combin.  it support real-time
+
+    updat, true postscript output, and intellig user feedback.  it come
+
+    with builder, a graph prototyp tool, which support code & resourc
+
+    file gener.  a free demo (vmgraph) is avail.
+
+    there ar free integr kit for uim/x, teleus, and builder xcessori
+
+    (other in progress).
+
+avail:
+
+    xrt/graph for xview and olit ar onli avail on sparc.
+
+    xrt/graph for motif is avail on a dozen or so platform.
+
+
+
+
+
+free: slingshot xview extens
+
+
+
+    slingshot provid rectangl (like the xt intrins' rectobj gadget),
+
+    drag-and-drop support, imag, icon and text, tree, line, arrow...
+
+
+
+    get it by ftp from export.lc.mit.edu, in /contrib/slingshot2.0.tar.z
+
+    (rememb to us binari mode in ftp!).
+
+    you can also get it by send mail to archiv-server@gazooch.eng.sun.com
+
+    with the bodi of each messag contain a line like
+
+	send sspkg2.0 part01 part02
+
+    go up to
+
+	send sspkg2.0 part17 part18
+
+	send sspkg2.0 docpart01 docpart02 docpart03
+
+	send sspkg2.0 docpart04 docpart05 docpart06
+
+    you can ask for on file at a time to reduc the impact on intermedi
+
+    mail site.	 ask the mail server for help with the subject line: "help".
+
+    a human can be reach at archiv-manag@gazooch.eng.sun.com.
+
+    add a line in the messag
+
+	path <your-mail-address>
+
+    if you think the normal automat repli address might not work.
+
+
+
+
+
+ada bind for xview
+
+    sun ada 1.1 includ among other thing an ada sourc code gener
+
+    for devguid.  it us the verdix xview ada bind.
+
+    it doe not yet [juli 1992] support gfm (the guid file manag).
+
+
+
+c++ bind for xview
+
+
+
+qualix's xv++.
+
+
+
+uit
+
+
+
+
+
+subject: openwindow 3 port
+
+
+
+    sun: sparc, suno 4.1
+
+    sun: sparc, solari 2 (actual 3.0.1?)
+
+    other: none so far...
+
+
+
+there ar said (by sun) to be two or three port of openwindow either
+
+avail now or in progress.  contact anthoni flynn at open vista
+
+intern (anthoni@ovi.com) for more inform.  (origin thei
+
+said 35, but perhap thei meant 3.5)
+
+
+
+openwindow sourc is avail - commerci, it cost about $5,000 for
+
+the server, includ typescal and the toolkit; deskset (filemgr etc) is
+
+anoth $25,000; tooltalk is $40,000 or so.
+
+
+
+
+
+subject: xview 3 port
+
+
+
+what: xview 3
+
+system: appl a/ux
+
+porter: lmj@uncompaghr.jax.org (lou jone)
+
+ftp: encyclo.jax.org
+
+note:
+
+    the librari and util (olwm, cmdtool, etc) ar avail for
+
+    anonym ftp from encyclo.jax.org. i us gcc 2.1 to compil the
+
+    sourc. if there is enough interest, i can make the diff
+
+    avail.
+
+
+
+system: concurr 7000 (68040 base)
+
+porter: sinan@mtesol.boe.com (sinan karasu)
+
+
+
+system: decstat/ultrix
+
+porter: dscott@ittc.wec.com (dave scott)
+
+ftp: media-lab.media.mit.edu:~ftp/xview3-ultrix.4.2-mip.tar.z
+
+note:
+
+    let me stress that thi is *not* fulli test, but seem to work
+
+    pretti well.  pleas let me know about ani problem you find.
+
+    problem i alreadi know about:
+
+	larg button under *ani* non-sun x server (non-xnew; i.e. ani
+
+	standard mit x11r[45] server) have the bottom of the button
+
+	chop off.  we're work on thi on. :-)
+
+    xview 3 is also avail on the dec freewar cd, from decu.
+
+[actual thi seem *not* to be dave scott's port; pleas accept my apolog
+
+ for list thi incorrectli.  a correct entri will appear as soon as i get
+
+ the necessari inform.  -- lee]
+
+
+
+system: hp 720
+
+porter: (?)
+
+ftp: tesla.ucd.ie [137.43.24.44], /pub
+
+note:
+
+    includ hp 720 build, hp xview patch file, xvgr.
+
+
+
+system: hp9000/300 seri
+
+porter: tjc@ec.soton.ac.uk (tim chown)
+
+
+
+system: hp9000/7xx seri
+
+ftp: ftp.csc.liv.ac.uk (138.253.42.172) hpux/x11/xview-3.part[123].tar.z
+
+
+
+system: intel (sysvr4/i386)
+
+porter: daw@physic.su.oz.au (david daw)
+
+ftp: ftp.physic.su.oz.au, suphi.physic.su.oz.au  /esix_4/x11r5 hierarchi
+
+note:
+
+    hi patch were for esix 4.0.3 but should work on dell, isc and intel
+
+    svr4 with no worri. the file ar readm.xview3 and xview3.diff.z.
+
+see also: linux
+
+
+
+system: ibm rs/6000
+
+porter: tmcconn@sedona.intel.com (tom mcconnel)
+
+compil: bsdcc
+
+ftp: export.lc.mit.edu:contrib/xview3/fix/xview3_rs6k_unoffici.patch.z
+
+note:
+
+    there is still a problem with tty support for the rs/6000. for
+
+    instanc, the cmdtool will not work. still, most everyth els work.
+
+    for those of you who have alreadi instal my previou patch, i have
+
+    put a separ patch for just the share librari problem. thi file is
+
+    contrib/xview3/fix/xview3_rs6k_xview_lib.patch.z.
+
+
+
+system: linux
+
+porter: kenneth osterberg <lmfken@lmf.ericsson.se>
+
+icompil: gcc 2.3.3, libc4.2
+
+ftp: tsx-11.mit.edu /pub/linux/binari/usr.bin.x11/xview3l2
+
+ftp: sunsit.unc.edu
+
+note:
+
+    inlcud olvwm, uit
+
+
+
+system: sgi
+
+porter: rainer sinkwitz <sinkwitz@ifi.unizh.ch>
+
+ftp: export.lc.mit.edu:/contrib/xview3/fix/xview3_sgi_unoffici.patch.tar.z
+
+note:
+
+
+
+system: solbourn seri 5
+
+porter: tmcconn@sedona.intel.com (tom mcconnel)
+
+
+
+
+
+subject: xview 2 port
+
+
+
+in gener, there is no point in us xview 2 if you have xview 3 avail;
+
+it's a good idea to look for an xview 3 port first.  move from xview 2 to
+
+xview 3 is usual simpli a matter of recompil, unless you've done
+
+"dirti trick" or us undocu call.
+
+
+
+
+
+system: stellar gs100 (stardent 1000) and stardent 1500 & 3000
+
+porter: arvai@scripp.edu (andi arvai)
+
+ftp: perutz.scripp.edu (137.131.152.27) in the pub/xview directori
+
+note:
+
+    stardent is now kubota pacif (kpc)
+
+
+
+system: harri nighthawk 4000 system (cx/ux unix)
+
+porter: andi@harri.nl (andi warner)
+
+statu: commerci
+
+
+
+system: sgi/iri
+
+porter: (?)
+
+ftp: wuarchiv.wustl.edu:graphic/graphic/sgi-stuff/xview/xview2
+
+
+
+system: vax/vm
+
+porter: tgv inc (?)
+
+note:
+
+    steven fenger <svfeng@afterlif.ncsc.mil> wrote:
+
+    a compani call tgv make a product call "xview for vm".
+
+    thei made xview 2.0 librari.  i haven't seen them advertis
+
+    xview 3.0 librari yet.
+
+
+
+subject: game (free and commerci)
+
+
+
+commerci: aviat - flight simul for gx-equip sparcstat
+
+contact: artifici horizon inc, aviat-interest@ahi.com;  +1 415 367 5029
+
+requir: openwindow (2 or 3), suno 4.1 or later, sparc gx or gxplu
+
+
+
+free: hexsweep - minesweep game base on hexagon
+
+contact: lee@sq.com, includ hexsweep in subject
+
+requir: openwindow 3.0 or later
+
+toolkit: tnt 3
+
+
+
+free: 
+
+
+
+free: sidtool - pacman game
+
+ftp: ftp.uu.net /usenet/comp.sourc.game/volum1/sidtool/*
+
+ 
+
+
+
+    an open look pacman(tm) surrog that
+
+    appear as a debugg - the bad gui ar code bug that
+
+    move around your screen; you (the good gui) chase them
+
+    with a 19" monitor that eat bug.
+
+
+
+
+
+commerci: simciti
+
+contact: dux softwar, lo alto, ca
+
+price: us$89
+
+requir: openwindow 3 (us new).  doesn't run on a 4/110 with cg4 :-(
+
+
+
+free: spider (includ in openwindow under `demo' and `share/src')
+
+    a patienc-style card game with two pack of card and
+
+    excel bitmap card.
+
+    i suggest recompil to allow the card to have round edg.
+
+
+
+free: xblackjack (ftp from export.lc.mi.edu as contrib/xblackjack-2.1.tar.z)
+
+    a motif/olit base tool construct to get you readi for the casino.
+
+
+
+-- 
+
+liam quin, manag of contract, softquad inc, +1 416 239 4801 lee@sq.com
+
+open look ui faq; metafont list; hexsweep new game; lq-text text retriev
+

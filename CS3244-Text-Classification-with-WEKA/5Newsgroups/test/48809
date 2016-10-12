@@ -1,0 +1,146 @@
+from: sandiwai@research.nj.nec.com (sandiwai fong)
+
+subject: sun 4.1.3, openwindow 3.0 problem: static link and x librari
+
+origin: sandiwai@ecp
+
+repli-to: sandiwai@research.nj.nec.com
+
+organ: nec research institut
+
+line: 66
+
+
+
+
+
+i build two execut for the same applic. 
+
+let's call them papp (us share lib) and spapp (static link).
+
+
+
+the problem is that i get problem when try to build the *static on*, 
+
+but not the dynam on. see the trace below. 
+
+
+
+btw, the static on run fine despit the omin error messag. 
+
+can someon clue me in as to why the static on bomb at link time?
+
+
+
+thank veri much,
+
+
+
+sandiwai
+
+
+
+
+
+dr. sandiwai fong
+
+nec research institut inc.
+
+4 independ wai
+
+princeton nj 08540
+
+
+
+(609) 951-2733
+
+(609) 951-2482 (fax)
+
+
+
+here is the link stage...
+
+
+
+/usr2/quintu/bin3.1.1/sun4-4.1/ld -e start -bstatic papp.o \
+
+/usr2/quintu/gener/qplib3.1.1/librari/sun4-4/libpl.a  \
+
+/usr2/quintu/gener/qplib3.1.1/librari/sun4-4/libplm.a  \
+
+/usr2/quintu/bin3.1.1/sun4-4.1/libqp.a \
+
+-lsspkg -lxpm -lm -l/usr/local/guid/lib -lguidexv  -lxvp -lxview \
+
+-lolgx -lx11 -lxext -lcp  -lc -lpixrect -o spapp
+
+undefin:
+
+_xesetcreategc
+
+_xesetfreefont
+
+_xesetclosedisplai
+
+_xeseterror
+
+_xinitextens
+
+_xesetfreegc
+
+_xesetcopygc
+
+_xesetcreatefont
+
+_xesetflushgc
+
+_xeseteventtowir
+
+_xeseterrorstr
+
+_xesetwiretoev
+
+*** error code 1
+
+make: fatal error: command fail for target `spapp'
+
+
+
+ldd spapp
+
+spapp: static link
+
+
+
+the share lib version is link in exactli the same wai save for the omiss
+
+of -bstatic.
+
+
+
+ldd papp
+
+	-lsspkg.1 => /usr/local/lib/libsspkg.so.1.0
+
+	-lxpm.2 => /usr/local/lib/libxpm.so.2.7
+
+	-lxvp.0 => /usr/openwin/lib/libxvp.so.0.2
+
+	-lxview.3 => /usr/openwin/lib/libxview.so.3.1
+
+	-lolgx.3 => /usr/openwin/lib/libolgx.so.3.1
+
+	-lx11.4 => /usr/openwin/lib/libx11.so.4.3
+
+	-lcp.1 => /usr/openwin/lib/libcp.so.1.0
+
+	-lc.1 => /usr/lib/libc.so.1.8
+
+	-lpixrect.2 => /usr/lib/libpixrect.so.2.14
+
+	-ldl.1 => /usr/lib/libdl.so.1.0
+
+
+
+
+

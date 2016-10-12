@@ -1,0 +1,452 @@
+from: lillei@v5.cgu.mcc.ac.uk (chri lillei)
+
+subject: oh make up your mind!! (wa: re: xv problem)
+
+line: 220
+
+repli-to: c.c.lillei@mcc.ac.uk
+
+organ: comput graphic unit, mcc
+
+
+
+
+
+in articl <1rqisi$rhj@cc.tut.fi>, jk87377@lehtori.cc.tut.fi (kouhia juhana) write:
+
+
+
+>in articl <1993apr29.201420.19271@nessi.mcc.ac.uk>
+
+>c.c.lillei@mcc.ac.uk write:
+
+
+
+>>in articl <1rohjc$avt@cc.tut.fi>, jk87377@lehtori.cc.tut.fi (kouhia
+
+>>juhana) write:
+
+
+
+>>>i wrote someth about make color modif quickli
+
+>>>with 8bit quantiz imag and onli at the save the imag to file
+
+>>>process we have to make the modif to the 24bit imag.
+
+>>>thi make sens, becaus the main us of xv is onli view imag.
+
+
+
+>>>do mani chang to imag, we should keep all modif
+
+>>>in a buffer; and then befor make the oper to 24bit imag,
+
+>>>we should simplifi the oper list for unnecessari oper.
+
+
+
+>>think about what you ar sai here. the 24 bit imag is quantis down to 8
+
+>>bit so mani 'similar' colour ar map onto a singl palett colour. thi
+
+>>colour get modifi in fairli arbitrari wai. you then want to appli these
+
+>>modif back to the 24 bit file, so you have to find which
+
+>>colour map to thi on palett colour.
+
+
+
+>i suppos you don't know what about we have discuss.
+
+>we discuss about error(s) in xv 2.21 which show imag onli as 8bit,
+
+>and my suggest abov work perfectli with it.
+
+
+
+look be consist. first you post someth that seem to suggest that you see
+
+xv be an 8 bit program as some sort of error. 
+
+so i post and asi it is not a bug, it is meant to be like that. 
+
+so you post and sai it is not a bug, you never said it wa, i have misunderstood
+
+etc.
+
+now you ar sai:
+
+
+
+>we discuss about error(s) in xv 2.21 which show imag onli as 8bit,
+
+
+
+if you would make up your mind what you ar claim it would make the
+
+discuss a *lot* easier.
+
+
+
+----------------
+
+
+
+>so far i have seen a colormap edit window in xv -- that is, there
+
+>must be a colormap anywai. the problem you present ar exist anywai,
+
+>and i didn't tri to solv them at all, becaus i would not make such
+
+>problem to my program in the first place.
+
+
+
+eh? sorri, i don't understand what you ar sai here. i am awar that english is
+
+not your nativ languag and have tri hard to fathom your mean, but thi
+
+paragraph defeat me.
+
+
+
+>gamma and color correct ar easili done to 24bit imag
+
+>as i present. there's no need make trick from 8bit/quantiz imag
+
+>back to 24 bit imag.
+
+
+
+ye *as i origin said*, global chang ar easili possibl.
+
+
+
+but thi statement contradict what you said earlier: 
+
+
+
+>>>i wrote someth about make color modif quickli
+
+>>>with 8bit quantiz imag and onli at the save the imag to file
+
+>>>process we have to make the modif to the 24bit imag.
+
+
+
+---------------
+
+
+
+>>>>how would you suggest do colour edit on a 24 bit file? how
+
+>>>>would you group 'relat' colour to edit them togeth? onli global
+
+>>>>chang could be done unless the softwar were veri differ and
+
+>>>>much more complic.
+
+
+
+>ok, you're write about situat that user want edit imag as 24bit
+
+>and user want edit individu color -- your question, by the wai,
+
+>jump off the discuss a bit.
+
+
+
+no i don't think so actual. 
+
+
+
+you were talk about load a 24 bit imag into xv (by quantis),
+
+manipul the colour in the colour editor, then somewhow appli these
+
+chang to the 24 bit file when you exit xv. xv let you edit individu
+
+colour. where is thi sudden jump off the topic?
+
+
+
+>my solut doesn't work, becaus there's no colormap with real 24bit
+
+>imag 
+
+
+
+ye i am awar there is no colourmap in a 24 bit file!!
+
+
+
+>-- you see, user see 24bit imag; go back to 8bit is silli.
+
+
+
+i do not understand what thi statement is suppos to mean.
+
+
+
+>about chang individu color in 8bit/quantiz/raster imag:
+
+>chang individu color in colormap is useless in most
+
+>case if the imag is quantiz and raster -- small chang mai
+
+>make seriou error to anywher in the imag.
+
+
+
+???
+
+what ar you sai
+
+???
+
+
+
+>xv allow thi featur, but i don't recommend to us it with the
+
+>mention type imag.
+
+
+
+ah! now we see thew problem! first you want to extend xv to allow edit of 8
+
+bit preview of 24 bit imag. then i point out problem with thi. now you ar
+
+sai there is no problem becaus you, person, happen not to us those
+
+part of the program that caus the problem!!
+
+
+
+
+
+>moreov, xv is not a paint program; you can onli make those global
+
+>chang. 
+
+
+
+not sure what you ar sai here. certainli on can make local chang.
+
+
+
+>in full 24bit xv, chang individu color sound like
+
+>paint program job.
+
+>if person have 8bit screen, there's need for trick to get the
+
+>origin 24bit imag modifi. becaus user don't see full 24bit
+
+>imag, there's need to make approxim and it is not possibl to
+
+>modifi individu color but individu pixel or pixel group (if
+
+>imag is raster). to select indiavidu color, there could be 7x7
+
+>cursor window which show true color imag in cursor window area --
+
+>select individu color is possibl from that.
+
+
+
+ye that is on possibl approach. i would find a program that took such an
+
+approach clumsi, howev.
+
+
+
+>ok, i don't have thought veri much 24bit paint program, never seen
+
+>such in good view and ar not plan to make such. not to mention
+
+>24bit paint program in 8bit screen...
+
+
+
+well here we agre - you have not thought it through veri much. you don't seem
+
+to have a consist point to make and contradict yourself from on post to the
+
+next. ok, we all have off dai - perhap you should step back and think thi on
+
+through.
+
+
+
+>>ye again. what *is* (wa?) wrong with xv?
+
+
+
+>it save 8bit/quantiz/raster imag as 24bit jpeg; jpeg is not
+
+>design for that.
+
+
+
+as i said in the last post, jpeg is a compress algorithm. it is a wai of
+
+save disk space by trade off qualiti against compress. i fail to see what
+
+the problem is. you have not propos ani workabl altern.
+
+
+
+>also, human expect that 24bit will be save as 24bit imag; 
+
+
+
+speak for yourself. you ar the *onli* person i have met or spoken to who,
+
+have quantis a 24 bit imag down to 8 bit, expect thi process to somehow
+
+revers when the file is save; keep all modificv that heve been made
+
+to the 8 bit imag palett.
+
+
+
+perhap that is why you yuse the singular?
+
+
+
+>sai,
+
+>person would like to crop part of the imag and save it, then it is
+
+>expect that the imag still is the same. 
+
+
+
+look, next time you import a 24 bit imag into xv look carefulli at the main
+
+control panel - it tell you how mani colour have been alloc to the 8 bit
+
+imag. xv make it abundantli clear that you ar not edit the origin 24 bit
+
+file. you ar the *onli* person who claim thi is confus.
+
+
+
+>so, xv were design
+
+>without think about human interfac and how human expect the
+
+>program work -- design error.
+
+
+
+is a design error the same as a bug? ;-)
+
+
+
+read my lip. xv is a program for view and modifi 8 bit imag. it let
+
+you import other imag. it show, i would sai, a good deal of thought about the
+
+human interfac. and everyon els seem to us it happili for the purpos it
+
+wa design for. it make no fals claim.
+
+
+
+>i have heard xv were design first for 8bit imag/file, but
+
+>it were not good idea to take full 24bit imag without make
+
+>major chang to the origin design.
+
+
+
+if you would come up with a solid, logic, well argu and lucid descript of
+
+precis how these propos extens would work, feel free to post them. so 
+
+far, you have not done so.
+
+
+
+>so, even all screen imag ar 8bit, the process imag and save
+
+>imag could have been 24bit veri easili, instead of 8bit.
+
+
+
+argh!! after all thi, a comment like that. `veri easili'. ok, go ahead and code it
+
+if it is so easi.
+
+
+
+or altern, look up the term `import' and 'non-revers transform'.
+
+
+
+>befor anybodi will make a note: ye, i mai as well make a lift where
+
+>'up' mean that the lift goe down and 'down' mean that the lift goe
+
+>up, and put a note on thi design solut to the manual -- howev,
+
+>even the manual tell the correct situat, it doesn't solv the problem.
+
+>(american: the lift is just an exampl :)
+
+
+
+i think thi is a bit of an exager.
+
+
+
+what you ar actual sai is, you got into a lift (elev, if you ar in
+
+the state ;-) ) and mistakenli press the down button to go up. everyon els
+
+had no problem. now you ar try to sue the manufactur...
+
+
+
+>well, my text mai be a bit hard read, 
+
+
+
+you bet
+
+
+
+>hopefulli you suggeed to
+
+>read it.
+
+
+
+mostli. leav asid the languag issu howev, it betrai some veri wooli
+
+think (as you yourself admit) which is the same in ani languag. go think
+
+some more.
+
+
+
+--
+
+chri lillei
+
+----------------------------------------------------------------------------
+
+technic author, itti comput graphic and visualis train project
+
+comput graphic unit, manchest comput centr, oxford road, 
+
+manchest, uk.  m13 9pl                        internet: c.c.lillei@mcc.ac.uk 
+
+voic: +44 (0)61 275 6045  fax: +44 (0)61 275 6040 janet: c.c.lillei@uk.ac.mcc
+
+------------------------------------------------------------------------------
+

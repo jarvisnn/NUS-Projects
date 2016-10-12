@@ -1,0 +1,21 @@
+from: orourk@sophia.smith.edu (joseph o'rourk)
+subject: re: need a good concav -> convex polygon algorithm
+organ: smith colleg, northampton, ma, us
+line: 16
+
+in articl <c5juyz.ali@murdoch.acc.virginia.edu> rw2v@uvac.cs.virginia.edu (richard stoaklei) write:
+>	we need a good concav ->convex polygon convers routin.
+>i've tri a coupl without much luck.  pleas e-mail respons and i
+>will post a summari of ani repli.  thank you.
+>
+>richard stoaklei
+>rw2v@uvac.cs.virginia.edu
+
+the problem is not precis defin abov, but if you need to find
+the smallest convex polygon that enclos a given polygon, then
+you ar seek the convex hull of your origin polygon.  there
+ar two wai to do thi:  us a somewhat tricki but by-now well
+examin linear-time algorithm that exploit the polygon boundari,
+or just feed the vertic of the origin polygon to a convex hull
+routin and accept o(n log n).  both method ar discuss in
+preparata and shamo, for exampl.

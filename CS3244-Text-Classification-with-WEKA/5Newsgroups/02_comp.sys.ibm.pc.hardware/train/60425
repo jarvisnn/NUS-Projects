@@ -1,0 +1,32 @@
+from: bq274@cleveland.freenet.edu (andi j. berkvam)
+subject: how to detect mous at hardwar level?
+organ: case western reserv univers, cleveland, oh (usa)
+line: 25
+repli-to: bq274@cleveland.freenet.edu (andi j. berkvam)
+nntp-post-host: hela.in.cwru.edu
+
+
+'lo all,
+
+  i am writ a program that check a comput for it configur.
+it's go to be run everytim a comput boot up to our campu
+network.  (actual, it alreadi is run, it's just not get all
+the info i want it to yet...)  anywai, i want to check for a mous.  i
+alreadi check for a mous driver (us the code in microsoft's mous
+book).  but there is no guarante that the driver is load when my
+program run, or that thei ever load the driver.
+
+  sinc i am interest in what hardwar is attach to the machin, how
+do i detect is a mous is attach?  i know it can be done becaus the
+mous driver can do it.
+
+  thank in advanc,
+
+andi
+
+
+-- 
+andi berkvam                          |  few ar wholli dead:
+u of wisconsin - steven point        |  blow on a dead man's ember
+cleveland freenet: bq274              |  and a live flame will start.
+internet: aberkvam@spu1.uwsp.edu      |                -robert grave

@@ -1,0 +1,28 @@
+from: christi@cs.concordia.ca (christi)
+subject: xfree86 --- need help...
+organ: comput scienc, concordia univers, montreal, quebec
+line: 23
+
+hi,
+
+i just got xfree86 run on my pc with consensi and encount a few
+minor (i hope) probem.
+
+the pc is hook up to a lan where i want remot x applic to 
+connect to my x-server.  i believ the command to permit thi is
+xhost.  when i'm log on my pc and type 'xhost + '  ,  i get the error messag sai
+"you must be on local machin to enabl access". 
+what doe thi mean ?  ain't i alreadi on the local machin?
+
+anoth problem i have is with the mous movement.  i find that the 
+mous cursor move extrem slow and choppi.
+how can i make the mous cursor move more accur?
+
+
+thank in advanc.
+ani help is much appreci.
+
+pleas send repli to christi@alex.qc.ca.
+
+
+christi

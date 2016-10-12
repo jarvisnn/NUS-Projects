@@ -1,0 +1,33 @@
+from: d88-jwa@hemul.nada.kth.se (jon wtte)
+subject: re: stereo sound problem (?) on mac game
+keyword: sound stereo, quadra, 900, powerbook, 170
+organ: royal institut of technolog, stockholm, sweden
+line: 26
+nntp-post-host: hemul.nada.kth.se
+
+in <1qsfak$skc@network.ucsd.edu> dpb@sdchemw2.ucsd.edu (doug p. book) write:
+
+>but, the follow game onli plai out of the left channel:
+
+...
+
+>but still, stereo system beep do plai in stereo, through both speaker.
+
+mac sound hardwar is divers; some mac plai in stereo and
+mix the output (the se/30 for instanc) while other plai in
+stereo but onli ha the left channel for the speaker, while
+some ar "truli" mono (like the lc)
+
+develop know that stuff plai in the left channel is
+guarante to be heard, while the right channel isn't. some
+send data to both, some onli send data to the left channel
+(the first is preferr, of cours)
+
+cheer,
+
+					/ h+
+-- 
+ -- jon w{tte, h+@nada.kth.se, mac hacker delux --
+ engin: "how will thi work?" scienc: "why will thi work?" manag:
+ "when will thi work?"  liber art: "do you want fri with that?"
+                     -- jess n. schell

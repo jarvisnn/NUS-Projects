@@ -1,0 +1,39 @@
+from: richk@grebyn.com (richard krehbiel)
+subject: re: id vs scsi
+in-repli-to: wlsmith@valv.heart.rri.uwo.ca's messag of sat, 17 apr 1993 20:42:47 gmt
+line: 30
+organ: grebyn timeshar, inc.
+
+in articl <1993apr17.204247.6741@julian.uwo.ca> wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+
+>   in articl <wayn.02uv@amtow.spacecoast.org> wayn@amtow.spacecoast.orgx-newssoftwar: grn 1.16f (10.17.92) by mike schwartz & michael b. smith write:
+>
+>   >> but i still want to know why it intrins better
+>   >> (than id, on an isa bu) when it come to multi-task os's when
+>   >> manag data from a singl scsi hard drive.
+>   >
+>   >a scsi control that transfer data by dma allow the cpu to request data
+>   >from the hard drive and continu work while the control get the data
+>   >and move it to memori. 
+>
+>   id also us dma techniqu.  i believ floppi control also us dma,
+>   and most a/d board also us dma.  dma is no big deal, and ha noth to
+>   do directli with scsi.
+
+id doe not do dma.  thi is becaus it's like te pc at hard disk
+interfac.  the control move a sector to some buffer memori on the
+control card, then the cpu move the data from the buffer to main
+memori where it's need.  if id doesn't work thi wai, then it's not
+compat.
+
+heck, if id us dma, then you'd hear all kind of complaint about
+isa bu system with more than 16m ram not work with their id
+drive.  16m is the dma address limit of the isa bu, and if id
+did dma there would be troubl.
+
+(btw, there ar dma-enabl signal in the id cabl spec, but the
+last report i heard wa that thei ar never implement, becaus it
+would requir a differ kind of id adapt and differ driver.)
+-- 
+richard krehbiel                                 richk@grebyn.com
+os/2 2.0 will do for me until amigado for the 386 come along...

@@ -1,0 +1,24 @@
+from: rutijoh1@chico.acc.iit.edu (user)
+subject: re: > re: > re: 1024 x 768 video on q800 --- adaptor pinout
+in-repli-to: gene's messag of wed, 14 apr 1993 18:06:15 gmt
+organ: illinoi institut of technolog, chicago
+x-new-reader: vm new 1.24
+line: 17
+
+> thi doe not make senc...why would the 4fg work but the 3fgx not
+> work...it is the
+> same monitor without accucolor and digit control...work fine at
+> 1024x768 with
+> svga...what's the deal....anywai you can get a svga 14" with .28mm and
+> 1024x7 68
+> for $279 at damark...ar you sa that it probabl would work while a
+> $600 nec won't?
+the 3fgx ha a maximum horizont scan rate of 49khz, so drive it
+at 60.24khz to get 1024 x 768 on the mac is wai beyond the toler            the 4fg is spec'ed at 57khz, so go 60.24khz is onli 5-6% abov
+the minim guarante figur.
+
+i too doubt if the damark monitor would sync to a mac at 1024 x 768.            like most thing, you get what you pai.  that's the deal.
+
+-john rutirasiri.
+
+p.s. i wouldn't have post if i wasn't sure.  

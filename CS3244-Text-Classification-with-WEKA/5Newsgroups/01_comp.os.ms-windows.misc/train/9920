@@ -1,0 +1,30 @@
+from: gt2617c@prism.gatech.edu (brad small)
+subject: re: help with chang startup logo
+distribut: usa
+organ: georgia institut of technolog
+line: 24
+
+in articl farlei@access.digex.com (charl u. farlei) write:
+>i instal the s/w for my ati graphic card, and it bash my window
+>logo file.  when i start window now, it ha the 3.0 logo instead of
+>the 3.1 logo.
+>i thought the file that control thi were
+>\window\system\vgalogo.rle
+>\window\system\vgalogo.lgo	
+>i restor these file, but it didn't chang the logo.  anyon know what
+>the correct file ar?
+
+for a vga card these ar the correct file but you can't just copi them
+back and expect it to work.  you have to creat a new win.com file.  try
+the command (you will have to worri about what directori each file is in
+sinc i don't know your setup):
+
+copi /b win.cnf+vgalogo.lgo+vgalogo.rle win.com
+
+(i grab thi from _supercharg window_ by judd robbin--great book)
+thi is also how you can put your own logo into the window startup screen.
+an rle file is just a special compress bmp file.
+
+hope thi help
+-- 
+brad small :: jr.ee :: ga tech :: atlanta, ga :: gt2617c@prism.gatech.edu

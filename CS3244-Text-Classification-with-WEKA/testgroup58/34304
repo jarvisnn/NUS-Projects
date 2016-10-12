@@ -1,0 +1,102 @@
+from: johnston@me.udel.edu (bill johnston)
+
+subject: re: iici rom offer 32-bit clean rom for iix
+
+nntp-post-host: me.udel.edu
+
+organ: univers of delawar
+
+line: 45
+
+
+
+in articl <mdavi.735319596@crash.ct.com> mdavi@crash.ct.com (morgan davi) write:
+
+
+
+>last week's macweek articl by ric ford indic that david ramsei's
+
+>mac iix ha been run nice with a mac iici rom in it, offer
+
+>clean 32-bit rom code (liber hi iix from the virtual memori
+
+>nightmar caus by appl's 32-bit system enabl).
+
+
+
+[ thi would make me a bit suspect of mr. ramsei's qualif
+
+as a self-style "expert", in fact, when i read about anybodi
+
+us virtual memori regularli i kind of wonder ... ;-) ]
+
+
+
+ye, on can sometim get awai with run a newer rom (of the 
+
+correct size, obvious) in an older machin, but on should be 
+
+prepar for problem if run softwar that check for machin 
+
+type rather than rom trap avail and then draw incorrect 
+
+conclus when special-case - especi time-depend
+
+and driver-relat stuff.
+
+
+
+in thi particular case i see no reason to go to the troubl 
+
+of rom-swap.  the appl 32-bit enabl ha problem, but
+
+mode32 work just fine with 7.0, 7.0.1, and 7.1.
+
+
+
+>doe anyon know of a sourc for these rom?  
+
+
+
+sure.  bui a us iici motherboard.  call pre-own electron,
+
+shreve, or other part dealer (see the back of comput shopper
+
+or on of the mac trade for phone number) and ask for a price
+
+on a iici rom.  everyth ha a price.  if you happen to find
+
+somebodi who salvag a iici with a dead motherboard, you might
+
+get a decent price.  there is probabl a market for us mother-
+
+board as well, so thei might sell a rom anywai.
+
+
+
+>needless to sai, i'm interest in purchas such a rom.  what would
+
+>be a reason price to offer?
+
+
+
+ask for a quot and then try offer less?  pre-own and
+
+shreve have been known to dicker.  their ad in variou trade
+
+magazin often list consider differ price for the 
+
+same item, and their phone quot tend to vari as well.
+
+
+
+still, i'm not awar of ani technic reason for upgrad 
+
+the rom in a iix.  
+
+-- 
+
+-- bill johnston (johnston@me.udel.edu)
+
+-- 38 chamber street; newark, de 19711; (302)368-1949
+

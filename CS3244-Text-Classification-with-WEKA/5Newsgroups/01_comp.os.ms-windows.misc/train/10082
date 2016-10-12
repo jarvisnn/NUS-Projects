@@ -1,0 +1,36 @@
+from: dbstrutt@ac.ucalgari.ca (david bryan strutt)
+subject: re: help with chang startup logo
+distribut: usa
+nntp-post-host: ac5.ac.ucalgari.ca
+organ: the univers of calgari, alberta
+line: 29
+
+in articl <1rgtba$gtn@access.digex.net> farlei@access.digex.com (charl u. farlei) write:
+>
+>i know thi is probabl a faq, but...
+>
+>i instal the s/w for my ati graphic card, and it bash my window
+>logo file.  when i start window now, it ha the 3.0 logo instead of
+>the 3.1 logo.
+>
+>i thought the file that control thi were
+>
+>\window\system\vgalogo.rle
+>\window\system\vgalogo.lgo	
+>
+>i restor these file, but it didn't chang the logo.  anyon know what
+>the correct file ar?
+
+i believ you have the correct file. i think what you'll have to
+do is go back into setup and choos chang video adapt or
+whatev it is call. then the trick is choos the same adaptor
+you current have. what setup doe is it actual chang the
+file win.com whenev you go into it and chang the video
+hardwar select. it incorpor the content of vgalogo.rle
+into win.com when you do thi. thi trick can also be us to
+chang the startup logo into whatev you want it to be.
+-- 
+[.sig alert]
+
+dbstrutt@ac.ucalgari.ca
+[end .sig alert]

@@ -1,0 +1,94 @@
+from: pinki@tamu.edu (the man behind the curtain)
+subject: view on isomorph perspect?
+organ: texa a&m univers
+line: 87
+nntp-post-host: tamsun.tamu.edu
+keyword: isomorph perspect
+
+                             
+i'm work upon a game us an isometr perspect, similar to
+that us in popul.  basic, you look into a room that look
+similar to the follow:
+
+                             xxxx
+                         xxxxx   xxxx
+                     xxxx    x       xxxx
+                 xxxx        x           xxxx
+             xxxx     2      xxxx     1      xxxx
+             x           xxxx    xxxx           x
+             x       xxxx            xxxx       x
+             x   xxxx             o      xxxx   x
+             xxxx              3 /|\         xxxx
+                 xxxx            /~\     xxxx
+                     xxxx            xxxx
+                         xxxx    xxxx
+                             xxxx
+
+the good thing about thi perspect is that you can look and move
+around in three dimens and still maintain your peripher vision. [*]
+
+sinc your viewpoint is alwai the same, the routin can be hard-code
+for a particular vantag.  in my case, wall two's rise edg ha a slope
+of 1/4. (i'm also us mode x, 320x240).
+
+i've run into two problem; i'm sure that other reader have tri thi
+befor, and have perhap formul their own opinion:
+
+1) the routin for draw wall 1 & 2 were trivial, but when i ran a
+pack->planar imag through them, i wa dismai by the "jaggi."  i'm
+now consid some anti-alias routin (speed is not realli necessari).
+is it worth the effort to have the artist draw the wall alreadi skew,
+thu be assur of nice imag, or is thi too much of a burden?
+
+2) wall 3 present a problem; the algorithm i us tend to overli distort
+the origin.  i tri to decid on paper what pixel go where, and fail.
+ha anyon come up with method for map a planar to crosswis shear
+shape?
+
+current i take:
+
+  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+ 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+ 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64
+
+and produc:
+            
+             1  2  3  4
+33 34 35 36 17 18 19 20  5  6  7  8
+49 50 51 52 37 38 39 40 21 22 23 24  9 10 11 12
+            53 54 55 56 41 42 43 44 25 26 27 28 13 14 15 16
+                        57 58 59 60 45 46 47 48 29 30 31 32
+                                    61 62 63 64
+
+line 1 follow the slope.  line 2 is directli under line 1.
+line 3 move up a line and left 4 pixel.  line 4 is under line 3.
+thi fill the shape exactli without ani unfil pixel.  but
+it caus distort.  ha anyon come up with a better wai?
+perhap it is necessari to simpli draw the origin bitmap
+alreadi skew?
+
+ar there ani other particularli sticki problem with thi perspect?
+i wa plan on have hidden plane remov by us z-buffer.
+locat ar store in (x,y,z) form.
+
+[*] for those of you who notic, the top line of wall 2 (and wall 1)
+*ar* parallel with it bottom line.  thi is why there appear to
+be an optic illus (ie. it appear to be either the insid or outsid
+of a cube, depend on your mood).  there ar no vanish point.
+thi simplifi the draw code for object (which don't have to
+chang size as thei move about in the room).  i've decid that thi
+approxim is alright, sinc small displac at a larg enough
+distanc caus veri littl chang in the appar size of an object in
+a real perspect draw.
+
+hopefulli the "context" of the pictur (ie. chair on the floor, torch
+hang on the wall) will dispel ani visual ambigu.
+
+thank in advanc for ani help.
+
+-- 
+till next time,                \o/   \o/
+                                v \o/ v     email:pinki@tamu.edu
+<>  sam  inala  <>                 v
+

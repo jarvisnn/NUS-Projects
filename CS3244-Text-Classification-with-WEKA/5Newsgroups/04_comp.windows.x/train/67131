@@ -1,0 +1,20 @@
+from: rlm@helen.surfcti.com (robert l. mcmillin)
+subject: re: how do i find my appcontext?
+organ: surf citi softwar/tbfw project
+in-repli-to: masc0442@ucsnew.sdsu.edu's messag of 19 apr 1993 23:00:15 gmt
+line: 14
+
+on 19 apr 1993 23:00:15 gmt, masc0442@ucsnew.sdsu.edu (todd green) said:
+
+> is there an xt call to give me my applic context?
+> i am fix up an x/motif program, and am try to us xtappaddtimeout,
+> whose first argument is the app_context.  what call can i us
+> to give me thi valu?
+
+i believ it's xtvaappiniti or someth like that.
+
+--
+
+robert l. mcmillin | surf citi softwar | rlm@helen.surfcti.com | dude!
+#includ <std.disclaim.h>
+

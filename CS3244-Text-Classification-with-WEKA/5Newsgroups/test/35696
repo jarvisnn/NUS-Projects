@@ -1,0 +1,96 @@
+from: bnobl+@cs.cmu.edu (brian nobl)
+
+subject: x server scanlin pad question
+
+nntp-post-host: bach.coda.cs.cmu.edu
+
+organ: school of comput scienc, carnegi mellon
+
+line: 42
+
+
+
+
+
+i am *almost* done port xfree86 1.2 to a new piec of displai
+
+hardwar, but have run into a snag i think mai be somewhat
+
+commonplac, so i'm send a net-feeler.
+
+
+
+i have a displai that is a non-interlac, memori map, 1-bit
+
+720x280 displai.  the server's view of the world, (obtain via xwd |
+
+xwud), seem to be exactli what it should be.  howev, the displai
+
+version of the framebuff give the impress that the server is
+
+us scanlin that ar too long.  after a bit of experiment, it
+
+seem that the problem wa that the server wa pad the line out to
+
+a word boundri, but the scanlin size in the buffer is 90 byte, which
+
+isn't exactli divis by four.  chang the follow defin in
+
+mit/server/includ/servermd.h:
+
+
+
+----
+
+
+
+#defin bitmap_scanlin_pad  32
+
+#defin log2_bitmap_pad		5
+
+#defin log2_byte_per_scanlin_pad	2
+
+
+
+---
+
+
+
+to:
+
+
+
+---
+
+
+
+#defin bitmap_scanlin_pad  16
+
+#defin log2_bitmap_pad		4
+
+#defin log2_byte_per_scanlin_pad	2
+
+
+
+---
+
+
+
+wa not exactli the right solut.  how do i tell the server either
+
+(a) don't pad the scan line at all ('caus thi server is onli be
+
+built to run on thi particular displai), or to pad onli to byte
+
+boundri?
+
+
+
+i'm us a custom version of xfree86v1.2, under mach 3.0.
+
+
+
+thank
+
+brian
+

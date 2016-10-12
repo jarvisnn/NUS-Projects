@@ -1,0 +1,31 @@
+subject: wangtek tape control card revis e - address & irq want
+from: system@codewk.nacjack.gen.nz (wayn mcdougal)
+organ: the code work limit, po box 10 155, auckland, new zealand
+line: 26
+
+
+i have a wangtek tape control card (revis e) that wa us with the
+syto backup system to take backup of a friend's system. that system ha
+crash and i'm attempt to restor it.
+
+unfortun, the document for thi ancient card ha been lost in the
+mist of time, and i need to know the dma, irq and address for thi card.
+
+can anyon suggest how i could determin these thing?
+
+there is a bank of dip switch on the card which ar set to:
+
+---------------------
+1 2 3 4 5 6 7 8 9 10
+    upupup    upupup
+upup      upup
+------open----------
+
+thank for your time.
+
+-- 
+	thi post is definit. bljeghb'chugh vaj blhegh.
+  wayn mcdougal :: keeper of the list of show better than star trek(tm) ::
+            ask me about the auckland festiv of mission, 18-25 april, 1993
+i alwai chang my mind when new evid is avail. what method do you us?
+

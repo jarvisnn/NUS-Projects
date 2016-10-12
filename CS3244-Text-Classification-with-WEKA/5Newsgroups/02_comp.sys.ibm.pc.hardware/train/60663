@@ -1,0 +1,34 @@
+from: mulvei@blurt.oswego.edu (allen mulvei, suni, oswego, ny)
+subject: re: can't set com4
+distribut: usa
+organ: suni colleg at oswego, oswego, ny
+line: 28
+
+in articl <c5rajn.67@cbnewsh.cb.att.com>, k4bnc@cbnewsh.cb.att.com (john.a.siegel) write:
+> i have been unabl to get com 4 to work - diagnost program such as msd show
+> noth instal.  i think the softwar option ar ok - is there a known
+> hardwar conflict and/or workaround for thi problemand cd rom
+> system is a g2k 486dx2/66 tower with ati video card
+> port ar set as follow 
+>   on board coma = com1 irq4 to extern devic
+>   intern modem = com 3 irq5
+>   dfio port card primari port = com 2 irq3  mous
+>   on board com b = com 4 irq 9  <--- doe not work
+> i have run thi from a boot disk with onli command.com to elimin softwar
+> 
+> ani suggest befor i call technic support?
+> john siegel
+> k4bnc@cbnewsh.att.com
+> ja@hrolli.hr.att.com
+
+i had thi problem some time ago.  some bios do not automat instal 
+com3 or com4 in the port tabl. program like most modem program which 
+write directli to the port work fine but anyth that us a bio call 
+fail. find a bb or ftp site where you can get a copi of port finder. put 
+"devic=pf.sy" in your config.sy or run pf.com from your autoexec.bat. 
+thi littl program will locat all exist port and make sure the bio 
+tabl ar updat. it work great. pf will also let you swap port and 
+such also if that is of ani valu to you.
+
+			allen mulvei
+			mulvei@blurt.oswego.edu

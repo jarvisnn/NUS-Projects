@@ -1,0 +1,28 @@
+from: thoma_richard_stevenson@mt.cc.wayn.edu (thoma r. stevenson)
+
+subject: xcomm in imakefil file
+
+keyword: xcomm imakefil
+
+distribut: world
+
+organ: wayn state univers
+
+line: 6
+
+nntp-post-host: 141.217.4.31
+
+
+
+i've instal mani x app, and have that mani of them imakefil that have
+
+line startingwith xcomm in them. when i do a xmkmf to creat the makefil,
+
+the makefil also ha the xcomm (comment?) line in them. i alwai have
+
+to edit out these line becaus the make command barf on them. i wa
+
+wonder what these line were for, and what i might be do wrong that
+
+caus the make command to dislik them. thank!
+

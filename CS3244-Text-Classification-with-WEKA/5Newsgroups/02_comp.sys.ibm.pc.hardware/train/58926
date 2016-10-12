@@ -1,0 +1,51 @@
+from: lanc@hartmann.austin.ibm.com (lanc hartmann)
+subject: re: diamond stealth 24 & window problem!!!
+summari: user complain of servic from diamond.
+repli-to: lanc%hartmann.austin.ibm.com@ibmpa.awdpa.ibm.com
+organ: ibm, austin
+keyword: diamond video s3 window
+line: 43
+
+in articl <1pifisinnhsr@dn1.nmsu.edu> jdier@dant.nmsu.edu (dier) write:
+>
+>i own a stealth 24 card from diamond.  when us the 640x480x16.7mil win 3.1
+>driver the card and driver work but ar not veri fast.  all of the other
+>window driver have a number of bug.  shadow remain when window ar
+>eras and text box ar often unread.  all attempt to get help from
+>diamond have fail.  i have call the tech support and never been abl
+>to get past the hold line (a toll call) in a reason time (ie 10min).
+>leav voic mail ha not help either.  the bb is a joke! it alwai
+>ha too mani peopl on to download anyth.  you cannot even get a file
+>list (it consid that a download!).  i have fax the tech support group.
+>all thi with no repons.
+>
+>the bottom line is if you ar look for a fast card and want to us it
+>for window, do not get a diamond product.  try anoth vendor, i wish i had.
+
+while other here mai have had better experi, i, too, share the
+sentiment post abov.  though i have the origin stealth/vram,
+it is onli "rel" recent that the window driver for thi card
+have evolv to a point of decent perform.  note that there ar
+still a coupl of mode i cannot us (ie. will not) due to shadow,
+mi-drawn check box, etc.  i believ the version i have is 2.01.
+if there's a more recent releas, i'd appreci if someon would
+drop me a note to let me know -- i haven't been abl to get on their
+bb late to check again.  natur, diamond doesn't even bother
+notifi me of fix/releas.
+
+diamond wa help when i final reach the "right" person in cure
+some of my window' problem due to an address conflict.  the conflict
+address (2e0, 2e8) were omit in at least my version of the
+diamond/vram manual.  i hope it ha been correct by now.  the tech rep
+explain that all s3-base board us these address.  i have not
+confirm the valid of that statement.
+
+when i upgrad my motherboard in the near futur (hopefulli with some
+form of local bu), i'll seek a video solut from someon other than
+diamond.
+
+lanc hartmann (lanc%hartmann.austin.ibm.com@ibmpa.awdpa.ibm.com)
+               ye, that is a '%' (percent sign) in my network address.
+------------------------------------------------------------------------------
+all statement, comment, opinion, etc. herein reflect those of the author
+and shall not be misconstru as those of ibm or anyon els for that matter.

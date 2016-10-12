@@ -1,0 +1,28 @@
+from: russ@deakin.oz.au (russ sharp)
+subject: charact miss in ttf
+organ: deakin univers, victoria, australia
+line: 22
+nntp-post-host: ariel.eng.deakin.oz.au
+
+word 2.0c doesn't show the period-centr charact to indic
+space if i us the ttfont from coreldraw.  our editor need to
+be abl to see how mani space ar in text but the charact 
+displai is a larg hollow box.  thei overlap each other and
+charact on each side, which is useless.
+
+i believ the charact us by w4w is the period-centr (0183).
+thi charact show up with the window charmap displai as the
+hollow box which tend to confirm thi.  i have edit the corel
+font with fontmong and chang the font graphic for the 0183
+charact make no differ to the font output in charmap or w4w.
+alter the paragraph (0182) or cedilla (0184) doe alter their font
+graphic displai howev!!
+
+is the w4w charact us to indic space the period-centr
+charact?  ha anyon been abl to get thi charact displai
+from a coreldraw ttf?
+
+--
+                                                                         ____ 
+russ sharp    russ@deakin.edu.au    ph (052)27 1141    fax (052)27 2015  \  /
+deakin univers, school of engin & technolog, geelong, australia \/

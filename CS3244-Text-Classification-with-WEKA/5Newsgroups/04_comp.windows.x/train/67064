@@ -1,0 +1,26 @@
+from: weisberg@ee.rochest.edu (jeff weisberg)
+subject: problem: r5 server hang on sun3
+summari: annoi problem, server hang
+keyword: x11r5pl22, sun3, bw2, 4.1.1, gcc-2.3.3, xsun, vernal equinox
+organ: univ. of rochest, dept. of electr engin
+line: 19
+
+
+i recent compil the x11r5pl22 sourc us gcc-2.3.3 on
+a sun3/80. everyth seem to work fine. usual. but at
+seemingli random time the server will just hang. i will
+click the mous somewher (never happen while my back is turn),
+and without warn, it will freez there, requir the server
+to be kill. sometim it will run fine for week, sometim
+onli for minut.
+
+(os: 4.1.1; frame buffer: bw2).
+
+ha anyon seen thi befor, ani idea? (anyth at all?)
+
+thank,
+	--jeff
+
+---
+jeff weisberg  |  weisberg@ee.rochest.edu   |    real cherri,
+               |  ur-valhalla!weisberg        |        watch for pit!

@@ -1,0 +1,46 @@
+from: rvenkat@ux4.cso.uiuc.edu (ravikuma venkateswar)
+subject: re: x86 ~= 680x0 ?? (how do thei compar?)
+distribut: usa
+organ: univers of illinoi at urbana
+line: 40
+
+dhk@ubbpc.uucp (dave kitabjian) write:
+
+>i'm sure intel and motorola ar compet neck-and-neck for 
+>crunch-power, but for a given clock speed, how do we rank the
+>follow (from 1st to 6th):
+>  486		68040
+>  386		68030
+>  286		68020
+
+not a good idea to compar processor power. doesn't make sens for real
+world applic. at least not for total differ line of processor.
+
+>while you're at it, where will the follow fit into the list:
+>  68060
+>  pentium
+>  powerpc
+
+>and about clock speed:  doe doubl the clock speed doubl the
+>overal processor speed?  and fill in the __'s below:
+>  68030 @ __ mhz = 68040 @ __ mhz
+
+at least for x86 system doubl the clock speed increas perform
+by about 70% .
+
+>thank veri much.  i'd appreci hear ani further explan
+>from ani experienc folk out there, too! 
+
+> 
+>p.s.  folk have been have troubl repli to me late with the "repli"
+>      command.  try type my address by hand and it should work.  thank!
+
+>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>dave kitabjian (kit-ahb'-jyin)    vital statist:
+				   stuff delet
+>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- 
+ravikumar venkateswar
+rvenkat@uiuc.edu
+
+a pun is a no' bless form of whit.

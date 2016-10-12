@@ -1,0 +1,41 @@
+from: rap@coconut.ci.ufl.edu (ryan porter)
+subject: re: dmorph
+articl-i.d.: snoopi.1pqlhninn8k1
+organ: univ. of florida ci dept.
+line: 34
+nntp-post-host: coconut.ci.ufl.edu
+
+in articl <1993apr3.183303.6442@usl.edu> jna8182@uc.usl.edu (armstrong jai n) write:
+>can someon pleas tell me where i can ftp dta or dmorph?
+
+dmorf (dave's morph, i think is what it mean) and dtax (dave's 
+tga assembl) ar avail in the msdo_upload directori
+on the wuarchiv.
+
+thei ar arj and bundl with their respect xmemori version,
+dmorfx.ex and dtax.ex, you can also find a version of aaplai.ex
+there, with which you can view file you creat with dta.ex or
+dtax.ex.
+
+i download the whole bunch last week and have been morph 
+awai the afternoon sinc.  the programm ar all a bit buggi and
+definit not-readi-to-spread-to-the-mass, but thei ar veri
+well written. 
+
+the interfac is frustrat at first, but it get easi onc you
+figur out the trick.
+
+i have notic that dmorfx will crash horribl if you try to morph
+without us the spline option.  not sure why, sinc i don't have
+the sourc.  i think it wa written for tp 6.0.
+
+if anyon els come up with ani other hint on get the thing 
+to work right, tell me; it took me sever hour the first time
+just to figur out that if i just us the durn spline then 
+it would work...
+
+>jna
+>jna8182@usl.edu
+
+-ryan
+rap@ci.ufl.edu

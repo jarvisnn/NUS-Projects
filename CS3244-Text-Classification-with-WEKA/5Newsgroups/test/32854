@@ -1,0 +1,224 @@
+from: einkauf@austin.ibm.com (mark einkauf)
+
+subject: re: need help: z-buffer line & area togeth
+
+origin: mark@einkauf.austin.ibm.com
+
+organ: ibm austin
+
+keyword: z-buffer, roundoff, line, area
+
+line: 105
+
+
+
+
+
+  david gorgen write:
+
+
+
+> i'm ask for help on a sticki problem involv unreason low
+
+> appar precis in z-buffer, that i've encount in 2 differ
+
+> pex implement.  i can't find ani discuss of thi problem in ani
+
+> resourc i can lai hand on (e.g. the comp.window.x.pex faq, gaskin's
+
+> _pexlib_program_manual_, vendor' document).
+
+>
+
+> ....
+
+>
+
+> the problem to be solv is to elimin or minim "stitch"
+
+> artifact result from the us of z-buffer with polylin that ar
+
+> coplanar with fill area.  the interpol z valu along a line will
+
+> differ slightli, due to roundoff error, from the interpol z valu
+
+> across an area, even when the endpoint of the line ar coincid with
+
+> vertic of the area.  becaus of thi, it's a tossup whether the
+
+> z-buffer will allow the line pixel or the area pixel to be displai.
+
+> visual, the result tend to be a dash-line effect even though the
+
+> line is suppos to be solid.
+
+>
+
+> us the pexlib api, my approach to a solut is to us two slightli
+
+> differ pex view map transform, in two view tabl entri, on
+
+> for the area and on for the line.  the pex structur or immedi-
+
+> mode output must be organ so that on view tabl index is alwai in
+
+> effect for area, and the other is alwai in effect for line.  the
+
+> result is a slight shift in npc z coordin for the line, so as to
+
+> attempt to bia the tossup situat in favor of the line.
+
+>
+
+> thi shift is effect by move the front and back clip plane us
+
+> in the pexlib view tabl entri for line just a hair "backward" (i.e.
+
+> smaller vrc z coordin), compar to their posit in the view
+
+> tabl entri us for area.  thi mean that when a point is transform
+
+> to npc, it z valu will be slightli bigger if it come from a line than
+
+> if it come from an area, thu accomplish the desir bia.
+
+>
+
+> i would expect the z roundoff error which caus the problem to amount
+
+> to a few unit at most, out of the entir dynam rang of the z-buffer,
+
+> typic from 0 to 65535 if not 16777215 (i.e. 16 or 24 bit z-buffer).
+
+> therefor, it seem that a tini fraction of the rang of z in vrc
+
+> between the front and back clip plane ought to suffic to reliabl fix
+
+> the stitch.
+
+>
+
+> but in fact, experi show that the shift ha to be as much as 0.003
+
+> to 0.006 of the rang.  (empir, it's worst when the npc z
+
+> compon of the slope of the surfac is high, i.e. when it appear more
+
+> or less edg-on to the viewer.)  it's as if onli 8 or 9 bit of the
+
+> z-buffer have ani depend mean!  thi amount is so great that on
+
+> problem is replac by anoth: sometim the polylin "show through"
+
+> area which thei ar suppos to lie behind.
+
+>
+
+> i've observ the problem on both hewlett-packard and digit
+
+> workstat pex server, to approxim the same degre.  the test
+
+> program demonstr the problem on an mit pexlib 5.x implement;
+
+> thi version is known to compil and run on an hp-ux system with pex
+
+> 5.1.
+
+>
+
+> open question:
+
+>     (1) why doe thi happen?
+
+>         --  am i configur the pex view tabl wrongli?
+
+>         --  is there a systemat differ in z interpol for line
+
+>             as oppos to area (e.g. pixel center versu corner) which
+
+>             could be correct for?
+
+>         --  ar pex implementor wantonli discard z precis in their
+
+>             interpol?
+
+>         --  someth els?
+
+>     (2) what to do about it?
+
+>         --  can i fix my us of the view tabl to allow better precis
+
+>             in z-buffer hlhsr?
+
+>         --  is there anoth approach i can take to remov the stitch
+
+>             artifact?
+
+>         --  am i just out of luck?
+
+>
+
+
+
+we here at ibm have the same problem with our workstat.  i wa also
+
+shock when i first realiz that you have to offset line from fill by
+
+about 16 bit (assum 24 bit z buffer).  thi seem huge, but is onli
+
+1/256 of the dynam rang.  in those term it doesn't seem so bad.  what
+
+is happen is that the interpol in z is not total linear, due
+
+mainli to roundoff, i believ.  so the polygon is not planar in z, but is
+
+more like a ruffl potato chip.  ditto with line.  when you start/end at
+
+differ x/y valu, the "ridg" ar out of phase, result in the
+
+stitch effect.  you have the same problem if you try to draw 1 polygon
+
+right on top of anoth, but with differ vertic.  you will like see
+
+a smear effect where thei overlap.
+
+  exampl:
+
+  try polygon 1: (100,100,100) (100,200,100) (200,200,100) (200,100,100)
+
+      polygon 2: (125,125,100) (125,175,100) (175,175,100) (175,125,100)
+
+
+
+your implement is correct.  in fact, we do a similar trick when
+
+render primit that have line and polygon - such as nurb surfac
+
+with isoparametr line.  without the trick, the line appear stitch, as
+
+you sai.  when the applic draw line/polygon independ, the
+
+system doe not have the smart to automat do the z shift, so the
+
+applic must do it.  thi is what you have discov and ar do.
+
+bravo!
+
+
+
+(note to ibm'er:  the inform given here ha been previous disclos
+
+through proper channel so i'm not give awai ani new unpublish info.)
+
+
+
+-- 
+
+  mark einkauf     [ einkauf@austin.ibm.com ]
+
+  ibm - advanc workstat and system - graphic system
+
+  austin tx
+
+ * view and opinion express herein ar not necessarili those of ibm corp. *
+

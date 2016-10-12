@@ -1,0 +1,17 @@
+from: sigma@rahul.net (kevin martin)
+subject: re: xv under ms-do ?!?
+nntp-post-host: bolero
+organ: a2i network
+line: 11
+
+in <1993apr20.083731.260@eicn.etna.ch> no e-mail address@eicn.etna.ch write:
+>do somenon know the solut to run xv ??? ani help would be appreci..
+
+i would guess that it requir x, almost certainli dv/x, which commonli
+us the go32 (djgpp) setup for it program.  if you don't have dv/x
+run, you can't get anyth which requir interfac with x.
+
+-- 
+kevin martin
+sigma@rahul.net
+"i gotta get me anoth hat."

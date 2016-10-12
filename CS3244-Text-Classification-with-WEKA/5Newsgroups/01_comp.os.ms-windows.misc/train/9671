@@ -1,0 +1,30 @@
+from: david a. fuess
+subject: mathcad 4.0 vs ndw 2.2
+organ: uc llnl
+line: 23
+distribut: usa
+nntp-post-host: talon.llnl.gov
+
+
+i just got off the phone with mathsoft technic servic. thei
+ar now admit a problem of unknown natur with mapl and
+norton desktop for window. thei have no clue at thi time
+and ar collect configur inform on the system
+which exhibit the problem. anyon have problem load the
+mapl solver in mathcad 4.0 under ndw shoud call technic
+support at 617-577-1017. thei made no schedul promic,
+but ar activ work on the problem.
+
+in the meantim, the workaround is to provid a configur
+select in autoexec.bat to us progman (yuk, pew) whenev
+you plan to us the mapl solver and ndw otherwis. i am us
+norton be to place a littl menu on the screen with a 5 second
+timeout to auto boot ndw.
+
++---------------------------------+----------------------+
+|    _/      _/     _/    _/  _/  | david a. fuess       |
+|   _/      _/     _/_/  _/  _/   | dir, center for eec |
+|  _/      _/     _/  _/_/  _/    | phone: (510)423-2436 |
+| _/_/_/  _/_/_/ _/    _/  _/_/_/ | fax:   (510)422-9343 |
++-------- lawrenc livermor nation laboratori --------+
+

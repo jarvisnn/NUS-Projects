@@ -1,0 +1,78 @@
+from: gowen@jade.tuft.edu (g. lee owen)
+
+subject: xdm, xkernel, and olwm
+
+line: 33
+
+organ: tuft univers - medford, ma
+
+distribut: na
+
+
+
+
+
+	greet,
+
+	we have a network of ~20 sun workstat, run suno 4.1.1
+
+and openwindow 3.  7 of these ar sun 3's that we have modifi to
+
+run seth robertson's xkernel imag, effect turn them into
+
+xtermin.  we us xdm (x11r4) to manag the displai.
+
+
+
+	when we had 3 xkernel machin, thing work fine, but when
+
+we instal 4 more last weekend, we appear to have found a weak.
+
+with 7 client to 1 sparc 2, the sparc 2 window manag is eventu
+
+get mung.  
+
+
+
+	let me try to be precis:  the user sit at the machin
+
+that doe all the actual process for these xtermin is have
+
+control of hi keyboard and screen yank awai.  (when thi wa the
+
+depart chair, it wa kind of cute).  we poke at xdm for a few
+
+dai and ar satisfi that it is not at fault.  our current theori is
+
+that olwm (the sun version) wa not meant for run multipl copi
+
+on on machin (which is what happen -- the consol user run olwm,
+
+and everi xtermin log in ha olwm run on the xtermin
+
+server). 
+
+
+
+	ha anyon had ani prior experi with thi sort of behavior?
+
+	can anyon shoot obviou hole in thi theori?
+
+	how about obviou gimm?
+
+	and, of cours, ani idea on how to solv it?
+
+
+
+	ani idea ar greatli appreci.
+
+
+
+  greg owen  { gowen@fort.cs.tuft.edu, gowen@jade.tuft.edu }
+
+system programm and ta, tuft univers comput scienc dept.
+
+  person info: gc/go d++ -p+ c+++ m*/m- s++/- g+ w+/w-- x+
+
+  email for explan if interest...
+

@@ -1,0 +1,37 @@
+from: lourai@sea.gwu.edu (michael panayiotaki)
+subject: realiz colour/win.ini set chang to "y" automat:
+organ: georg washington univers
+line: 32
+
+mornin' all.  i wa wonderin'.....
+i got screenpeac (the screensav, which i think is *veri*
+good), and i got a problem with it...
+there is an option there, "realiz colour tabl", and if it's
+switch on, some wallpap' colour will get *uck up with
+some screensav (e.g. the "flashlight" on).  if i turn it off,
+howev, it work well, and it's faster, so i have it off.  all's
+nice and well.  howev, if i turn it off, then it will be on
+again next time i start window.  all the set ar set in the
+win.ini file, and i *do* have "save set on exit" select.
+
+also, i tri manual chang the set in the win.ini file
+to "n" (for no-->realiz colour tabl), and start window.  it
+will be fine for that session, but the next session will *again*
+turn the option on.
+
+i tri ad a +r (read-onli) attribut to my win.ini file, and
+it work, but my bitmap (wallpap) saver didn't work then.
+actual, it's the same applic.  anywya, it didn't work,
+sinc it must chang the set at the win.ini file.
+
+so anyon out there got ani answer/sugges/comment for me?
+
+thank, i.a.
+
+mickei
+aka mp
+-- 
+pe-|| ||  michael panayiotaki: lourai@sea.gwu.edu 
+ac|| ||                                   ...!uunet!sea.gwu.edu!lourai
+|||| \/|  *how do make a ms-window .grp file reflect a hd directori??*
+\\\\   |  "well i ain't alwai right, but i've never been wrong.."(gd)

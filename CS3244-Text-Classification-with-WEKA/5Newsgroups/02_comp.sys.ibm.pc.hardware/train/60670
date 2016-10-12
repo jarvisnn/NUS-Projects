@@ -1,0 +1,26 @@
+from: pastor@vfl.paramax.com (jon pastor)
+subject: re: no 32-bit box on gatewai
+nntp-post-host: athansor
+organ: not much...
+line: 20
+
+i got thi from gw2000:
+
+from: gatewai@aol.com
+x-mailer: america onlin mailer
+to: pastor@vfl.paramax.com
+subject: re: 32-bit disk access
+date: mon, 29 mar 93 14:26:45 est
+messag-id: <9303291426.tn05643@aol.com>
+statu: ro
+
+jon -
+
+to get 32bit access in window all you have to do is edit the system.ini...
+look under the 386enhanc section and add thi line to it
+"32bitdiskaccess=on"... thi will give you the 32bitdiskaccess that you
+need... thank  :)
+
+regard,
+scot oehlerk (g2kscooter)
+gatewai 2000

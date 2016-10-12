@@ -1,0 +1,29 @@
+from: boot@eureka.scd.ucar.edu (jeff w. boot)
+subject: re: mwm titl-drag crash x server (sigpip)
+organ: ncar/ucar
+line: 24
+
+in articl <4378@creatur.cs.vt.edu>, ramakri@csgrad.cs.vt.edu (s.ramakrishnan) write:
+> 
+>    environ:
+>       mach/arch : sparc/sun4  (ipx)
+>       os	: suno 4.1.3
+>       x11	: x11r5 (patchlevel 22)
+>       motif	: 1.2.2
+> 
+> i bring up x server us 'startx' and /usr/bin/x11/xsun. the follow sequenc
+> of action crash the x server (sigpip, errno=32, 'xinit' report that connexion 
+> to x server lost):
+
+i had thi problem as well - it had to do with the cg6 graphic card that
+come with the ipx.  what fix the problem for me wa to appli the "sungx.uu"
+that wa part of patch #7.  patch #1 also us thi file so perhap you
+didn't appli the on that came with patch #7.
+
+jeff
+-
+jeff w. boot  <boot@ncar.ucar.edu>      *********************************
+scientif comput divis             * there is noth good or bad  *
+nation center for atmospher research  * but think make it so.     *
+boulder                                   *                   hamlet      *
+                                          *********************************

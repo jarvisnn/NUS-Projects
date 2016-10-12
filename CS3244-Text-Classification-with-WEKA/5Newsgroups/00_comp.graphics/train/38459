@@ -1,0 +1,22 @@
+from: rdd@ut.ipp-garch.mpg.de (reinhard drube)
+subject: re: postscript draw prog
+organ: rechenzentrum der max-planck-gesellschaft in garch
+line: 17
+
+in articl <c5ecnn.7qo@mentor.cc.purdu.edu>, nish@cv4.chem.purdu.edu (nishantha i.) write:
+|> 	could somebodi let me know of a draw util that can be
+|> us to manipul postscript file.i am specif interest in
+|> draw line, box and the sort on postscript contour plot.
+|> 	i have tri xfig and i am impress by it's featur. howev
+|> it is of no us sinc i cannot us postscript file as input for the
+|> programm.is there a util that convert postscript to xfig format?
+|> 	ani help would be greatli appreci.
+|> 				nishantha
+i think you ar too optimist! postscript is a veri big languag and
+so the fig format can not be abl to be an interpret of ani arbitrari
+ps code. the onli program i know to manipul postscript file is
+islanddraw.
+i for myself us xfig and includ the postscript file (convert to
+epsi format). small chang then ar possibl (eras some letter,
+ad text and so on).
+reinhard

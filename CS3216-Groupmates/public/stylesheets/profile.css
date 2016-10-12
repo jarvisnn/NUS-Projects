@@ -1,0 +1,49 @@
+.user-info-container {
+  background-color: white;
+  border: 1px #D3E0E9 solid;
+  border-radius: 4px;
+  color: #1E3948;
+  margin-bottom: 15px;
+  /*width: 250px;*/
+}
+
+.user-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.user-matric {
+  margin-bottom: 10px;
+}
+
+.module-panel .panel-heading {
+  display: flex;
+}
+
+.module-panel .panel-title {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.module-refresh {
+  padding: 2px;
+}
+
+.module-list {
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.review ~ .review-info.no-review-info {
+  display: none;
+}

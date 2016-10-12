@@ -1,0 +1,64 @@
+subject: re: debug possibl hardwar problem
+
+organ: andrew univers
+
+from: hernandz@andrew.edu (aldi hernandez)
+
+line: 27
+
+
+
+>>i suspect the extern cach, but i have no real evid for thi.
+
+>>
+
+>>	. suggest about the caus of the problem
+
+>
+
+>	bad memori, bad motherboard, bad cach.
+
+>>
+
+>>	. suggest about how to debug the problem
+
+>>
+
+>
+
+>	turn off cach.
+
+
+
+gcc and other big program seem to crash about 15% of the time for me.
+
+gcc gave someth like "program as got fatal signal 11" and when do
+
+anyth past the complex of elvi, kermit, etc, i got kernel gener
+
+protect fault at *least* onc a session.
+
+
+
+i disabl my cach as suggest, and bingo, linux is as stabl as a rock
+
+(it hasn't given me a core dump or kernel error yet).
+
+
+
+doe ani on know why the cach would do someth like thi?
+
+
+
+aldi
+
+--
+
+hernandz@andrew.edu
+
+--------------------
+
+if programm ar paid by the hour, how do you suppos the arrai
+
+x [1..1000] is initi?-- "more program pearl"
+

@@ -1,0 +1,16 @@
+from: oj@world.std.com (oliv jone)
+subject: re: a question i do not found in faq
+organ: shawsheen softwar
+line: 11
+
+in articl <1993apr26.122007.25760@relai.nswc.navi.mil> rchui@opal.nswc.navi.mil write:
+>i creat a pixmap or drawabl window, then us xdrawlin() function 
+>to draw a [clip] line ... = 300
+...
+>i creat the pixmap or drawabl window onli with size 300x300.
+>but i draw line from p1(x1=270,y1=100) to p2(x2=500,y2=800).
+>my question is, dose the xdrawlin function can finger out that correct
+>p3(x3 and y3) for me? if you calcul x3 and y3. 
+
+if you're ask, "doe the x server perform clip
+correctli when draw line," the answer is "ye."

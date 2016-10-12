@@ -1,0 +1,54 @@
+from: guyd@austin.ibm.com (gui dawson)
+subject: re: why vesa local-bu ????
+origin: guyd@pal500.austin.ibm.com
+organ: ibm austin
+line: 48
+
+
+in articl <1993apr15.133138.17369@cc.umontr.ca>, gregof@jsp.umontr.ca (grego filippo) write:
+> hi fellow netter,
+> 
+> i have a question for you... i am gonna bui a 486dx2-66 mhz
+> with vesa local-bu. is the speed benefit that great ? 
+> would it be wise to spend on a local-bu system (hd control 
+> and graphic card) for normal us ( i mean i won't us it for a
+> server !!) ?
+> 
+> also, i read an articl from someon ( sorri, i can't rememb your
+> name ) and he said that even though you have a local-bu hard-disk
+> control, your perform won't be that much greater becaus
+> of the disk's throughtput !!! 
+> so what is the us of have a fast bu if the peripher can't 
+> cope with it ???
+
+someth to bear in mind is what the v in vlb stand for!
+
+v for video - the origion intent of the bu wa to speed up
+the bu so that larg memori to memori transfer would be faster.
+thi is espic us in transfer data from main memori to
+video memori.
+
+sinc there ar usual 3 vlb slot card maker have been make 
+card to fit in the other two. 
+
+how about an vlb ethernet card? move the data into the card at
+130 odd mb/s and then wait for it to tickl onto the net at
+just over 1mb/s.
+
+[ do do howev free the local bu for other card ]
+
+some time you need fast buss and sometim you don't!
+
+> 
+> thank you ...
+> 
+> gregof@jsp.umontr.ca
+> 
+> 
+
+gui
+-- 
+-- -----------------------------------------------------------------------------
+gui dawson - hoskyn group plc.
+        guyd@hoskyn.co.uk  tel hoskyn uk     -  71 251 2128
+        guyd@austin.ibm.com tel ibm austin usa - 512 838 3377

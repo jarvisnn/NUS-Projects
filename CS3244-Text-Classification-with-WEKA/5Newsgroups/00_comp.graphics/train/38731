@@ -1,0 +1,21 @@
+from: oehler@yar.cs.wisc.edu (wonko the sane)
+subject: 48-bit graphic...
+keyword: 48-bit alpha channel imag
+organ: univers of wisconsin, madison -- comput scienc dept.
+line: 15
+
+
+	i wa recent talk to a possibl employ ( mine! :-) ) and he made a refer to a
+48-bit graphic comput/imag process system.  i seem to rememb it be call imag or
+someth akin to that.  anywai, he claim it had 48-bit color + a 12-bit alpha channel.  that's
+60 bit of info--what could that possibl be for?  specif the 48-bit color?  that's 280
+trillion color, mani more than the human ey can resolv.  is thi an anti-alias thing?  or
+is thi just some magic number to make it work better with a certain processor.
+
+	also, to settl a bet with my roommat, what ar sgi's flagship product?  i know of
+iri, indigo, and crimson, but what ar the other on, and which is their top-of-the-line?
+(sadli, i have access to none of them.  just a dec 5000/25.  sigh.)
+
+eric oehler
+oehler@picard.cs.wisc.edu
+ 

@@ -1,0 +1,16 @@
+from: steed.bell@macrocosm.omahug.org (steed bell)
+subject: [ network ] how to get 10 ma
+repli-to: steed.bell@macrocosm.omahug.org
+organ: the macrocosm bb, lawrenc, ks
+line: 10
+
+peter, i'm sure someon out there ha a better/easier wai to do what you want
+to do, but i'll tell you how we do it where i work. we have about 15 mac
+network togeth us appletalk and phonenet connector. to chat we us a
+program call 'broadcast'. with it we can send brief messag to all or
+select machin within the network.
+
+hope that help...
+
+steed
+

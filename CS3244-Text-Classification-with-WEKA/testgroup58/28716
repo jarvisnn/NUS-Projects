@@ -1,0 +1,50 @@
+from: elbourn@undergrad.math.uwaterloo.ca (ed bourn)
+
+subject: sad mac (scsi?) question
+
+organ: univers of waterloo
+
+line: 20
+
+
+
+i hook up an old 40meg extern mac hardriv to a powerbook 230.  i 
+
+reformat the drive, copi all the file from the powerbook except the
+
+systemfold, delet the file from the powerbook (my biggest error, sigh)
+
+and then reboot the whole set up and... chime of death.
+
+i get the follow sad mac error, 
+
+00000f
+
+000003
+
+i ran norton and it claim it a bad scsi driver and suggest replac it.
+
+i us appl disk tool but i couldn't updat the hardriv scsi driver
+
+as it claim it wa in us, but i couldn't even mount the thing (though
+
+i could see it when check the scsi bu, after turn it on after boot
+
+my machin first).
+
+
+
+what doe that error abov refer to?  am i on the right track?  is there
+
+anyth i can do short of intialis the drive, sinc i need the data
+
+on there!
+
+
+
+thank
+
+ed bourn
+
+
+

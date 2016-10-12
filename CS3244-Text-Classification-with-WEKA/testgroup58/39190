@@ -1,0 +1,42 @@
+from: seang@ddbeezer.dunde.ncr.com (sean gordon)
+
+subject: help, i need a mac se modem port to pc 25 wai serial port cabl
+
+repli-to: seang@ddbeezer.dunde.ncr.com (sean gordon)
+
+distribut: world
+
+organ: ncr e&m dunde
+
+line: 14
+
+
+
+i'm try to connect a mac se modem port to a pc 25 wai serial port,
+
+can someon provid me with a wire diagram for a null modem lead for
+
+thi setup.
+
+
+
+pleas us email sinc my new feed is a bit quirki.
+
+
+
+thank in advanc
+
+
+
+sean gordon
+
+--------------------------------------------------------------------------------
+
+sean.gordon@dunde.ncr.com|#includ <stdio.h>
+
+ncr (e&m) ltd.            |long a=10000,b,c=2800,d,e,f[2801],g;main(){for(;b-c;)
+
+tel (0382) 592586         |f[b++]=a/5;for(;d=0,g=c*2;c-=14,printf("%.4d",e+d/a),
+
+fax (0382) 622243         |e=d%a)for(b=c;d+=f[b]*a,f[b]=d%--g,d/=g--,--b;d*=b);}
+

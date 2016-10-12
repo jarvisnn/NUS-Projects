@@ -1,0 +1,52 @@
+from: nelson@crynwr.com (russel nelson)
+
+subject: ip number on ethernet card 
+
+distribut: world
+
+organ: crynwr softwar
+
+line: 16
+
+
+
+in articl <1993apr21.162512.217@uvm.edu> djohnson@moos.uvm.edu write:
+
+
+
+   is it possibl through either pin configur or through softwar
+
+   program to chang the ip number on an ethernet card?
+
+
+
+the ethernet card doesn't us the ip number (32-bit, usual
+
+#.#.#.#); it us the ethernet address (48-bit, usual
+
+#:#:#:#:#:#). i have never run across an ethernet control that
+
+cannot be program to us an address that is not assign to it.
+
+decnet requir thi featur.
+
+
+
+howev, that said, there is no reason to ever chang the ethernet
+
+address.  thei ar global uniqu, the first three byte be
+
+assign to the manufactur by the ieee, and the last three by the
+
+manufactur.
+
+
+
+-russ <nelson@crynwr.com> what canst *thou* sai?
+
+crynwr softwar           crynwr softwar sell packet driver support.
+
+11 grant st.              315-268-1925 voic  |  lpf member - ask me about
+
+potsdam, ny 13676         315-268-9201 fax    |  the harm softwar patent do.
+

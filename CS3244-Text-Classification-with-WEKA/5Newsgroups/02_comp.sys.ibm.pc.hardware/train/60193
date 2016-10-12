@@ -1,0 +1,60 @@
+from: kxn3796@hertz.njit.edu (ken nakata ci stnt)
+subject: re: help with simm
+keyword: simm question answer
+organ: new jersei institut of technolog, newark, n.j.
+line: 53
+nntp-post-host: hertz.njit.edu
+
+in articl <c5fu1u.pxx@austin.ibm.com> guyd@austin.ibm.com (gui dawson) write:
+>
+>in articl <10998@lhdsy1.lahabra.chevron.com>, jjctc@lhdsy1.lahabra.chevron.com (jame c. tsiao) write:
+>> in articl <1993apr12.172751.27270@fct.unl.pt> fcm@diana.fct.unl.pt (fernando correia martin (mei 1)) write:
+>> >spectr (spectr@nmt.edu) wrote:
+>> >: when i look at a magazin ad that sai:
+[delet]
+>> >: what exactli do the number mean?  (i.e.  which is the mb, ns...)
+>> >
+>> >the number 60, 70 and 80 refer to nanosecond. could someon explain
+>> >*exactli* what thi number mean? (time spent bettwen processor's request
+>> >and answer retriev (in case of read)? )
+>> 
+>> it mean the time requir for the memori to refresh,  i.e. a 1x9-60
+>> need 60ns befor it is readi to be read again.
+>
+>nope! it's the time taken to read data from memori. it's the read time.
+>the memori will still have to be refresh. the whole phase is call
+>a cycl, the cycl time be about twice the access time.
+
+i'm sorri if i'm misunderstand your post, but dram *doe not* have to
+be refresh on *each access cycl*.  so cycl time doe *not* have to be
+twice the access time *becaus of refresh phase*.
+
+the access time usual mean the delai time from fall edg of raw
+address strobe (ra) to data bu driven.
+
+dram access cycl time chart can be roughli shown as follow (some
+signal ar intention omit);
+
+addr --<ra><ca>-------<ra><ca>--------- ra=raw address, ca=column address
+ra  ~~~~\________/~~~~~\________/~~~~~		~=high, _=low, -=float
+ca  ~~~~~~~\_______/~~~~~~\_______/~~~		<..>=driven either h or l
+data ---------<valid>--------<valid>---
+         |-------+------|
+         |-+--|  |
+           |     +----------- cycl time
+           +---- access time (or ra access time)
+
+ye, the cycl time is more than twice as the access time but *not*
+becaus of the refresh phase.  the refresh can be done either as a
+trail phase of normal access cycl or as an individu cycl.
+
+>
+[other stuff delet]
+>
+
+ken nakata
+-- 
+/* i apolog if there ar incorrect, rude, and/or impolit express in
+thi mail or post. thei ar not intend. pleas consid that english is a
+second languag for me and i don't have full understand of certain word
+or each nuanc of a phrase.  thank you. -- ken nakata, ci student, njit */

@@ -1,0 +1,34 @@
+from: jliukkon@klaava.helsinki.fi (juha-matti liukkonen)
+subject: re: pleas help identifi thi old 3com ethernet card
+organ: univers of helsinki
+line: 29
+
+simon@moscow.uidaho.edu (mike simon) write:
+
+>in articl <1qhvuninnhau@emori.mathc.emori.edu>, splee@pd.org (seng-poh lee, speedi) write:
+>|> i have an old 3com ethernet card (pc at bu) that came out of a apollo
+>|> workstat. i'm try to identifi it in order to us it on a pc.
+>|> 
+>|> the assembl number is 4008-00 rev 2 and it is a 16 bit card, circa
+>|> 1985.  it ha an aui port as well as a bnc coax connect.  it ha
+>|> select address for the bio, io, dma, and irq locat via berg
+>|> jumper.  it also appear to have a intel 80186 processor on board,
+>|> presum for buffer. 
+>|> 
+>|> the ethernet chip appear to be an intel 82586, a 48 pin dip packag. is
+>|> thi chip an equival to the 8390 us in some card? there is also
+>|> a 68 pin plcc chip, call a link+
+
+i got two veri similar sound board for dirt cheap, too. their assi
+number were not 4000-seri, but your descript fit otherwis. thei
+ar 3com 3c505's aka etherlink plu card. check out ftp.3com.com, there
+ar driver and diagnost program for just about ani and all 3com
+card. i conclud that my card wa the 505 after i ran their diagnost
+program for 3c505 succesfulli ("..pass with fly colour") :)
+
+anybodi know of packet driver for these card under os/2..?
+
+-- 
+               juha liukkonen, aka jliukkon@cc.helsinki.fi
+              univers of helsinki,  dept. of  lost soul
+           "trust me, i know what i'm do." - sledg hammer

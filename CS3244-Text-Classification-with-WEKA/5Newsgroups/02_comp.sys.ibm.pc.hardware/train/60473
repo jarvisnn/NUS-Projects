@@ -1,0 +1,65 @@
+subject: netwar server 286a and sft netwar 286 level ii v2.0a serialis
+from: system@codewk.nacjack.gen.nz (wayn mcdougal)
+organ: the code work limit, po box 10 155, auckland, new zealand
+line: 60
+
+fact:
+=====
+- a netwar server 286a wa roughli move to a new locat and left power
+down for three month.
+- from memori it ha an 80 mb hard drive.
+- manual and origin disk ar for sft netwar 286 level ii v2.0a
+- when power up, the cmo wa wipe. a technician examin it and 
+pronounc the disk drive unus.
+
+my investig indic that drive c is a type 27 (1024 cylind, 9 side).
+when cmo set thi wai, compsurf run happili, with 13 bad block.
+
+i us prepar to hotfix the on intern drive.
+
+instal will proce "successfulli", but when i try to boot the server, it
+report that the softwar is not serialis for thi hardwar.
+
+intern examin indic that the keycard is present, and there is on
+disk drive (or at least on larg singl unit). 
+
+attempt to configur a second drive in cmo result in drive not readi
+error.
+
+question:
+=========
+the softwar is netwar 286 level ii and i can see burnt on to the screen
+sft netwar 286 level ii v2.0a. howev, to configur netwar for level ii
+(mirror or duplex disk) requir a second disk, ye? 
+
+so how is the novel server 286a normal configur?
+
+1. can i instal sft netwar 286 level ii v2.0a as level i, or is thi what
+is caus my serialis error?
+2. is the novel server 286a normal equip with two hard drive, on of
+which ha fail?
+3. would thi mean i can not instal the network softwar becaus it will not
+be serialis for thi hardwar with a fail drive?
+4. what els can caus a serialis error?
+5. what happen if the keycard fail?
+6. am i do someth wrong? can someon knowledg offer some comment
+and guid.
+
+thank for your time.
+
+apolog:
+=======
+i appreci that i have post thi request somewhat wide. as i'm
+deal with somewhat archaic hardwar and softwar i'm hope that by cast
+my net further, i'm more like to captur someon who ha met thi system
+befor. i believ i can justifi the group to which i am post. pleas
+feel free to correct me if you feel thi is an inappropri place to post
+thi.
+
+
+-- 
+	thi post is definit. bljeghb'chugh vaj blhegh.
+  wayn mcdougal :: keeper of the list of show better than star trek(tm) ::
+            ask me about the auckland festiv of mission, 18-25 april, 1993
+i alwai chang my mind when new evid is avail. what method do you us?
+

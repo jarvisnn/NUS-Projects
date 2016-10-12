@@ -1,0 +1,43 @@
+from: gui@x.co.uk (gui singh)
+subject: re: >>>>> mous button 1,2 & 3 <<<<<<<< urgent !
+in-repli-to: it4ik@dmu.ac.uk's messag of 5 apr 93 10:10:23 gmt
+x-disclaim: thi is not the view of ixi ltd unless explicitli state.
+line: 29
+nntp-post-host: york.x.co.uk
+organ: not a lot
+x-copyright: the author assert the right of patern in thi messag.
+
+>>>>> on 5 apr 93 10:10:23 gmt, it4ik@dmu.ac.uk (i kler) said:
+ik> nntp-post-host: elm
+
+ik> i know it sound stupid, but....
+
+ik> doe anyon know how to control individu mous button.
+ik> i am write an applic, which current make us of
+ik> buttonpressmask, howev thi is invok by the press
+ik> of ani mous button. i want to be abl to restrict thi
+ik> to on of the 3 button. i tri button1pressmask, but
+ik> just get undefin error. i know it can be done, and i
+ik> am pretti sure there an easi answer to it, but i just don't know
+ik> what it is.
+ik> "time is of the essenc ..."
+
+there is no event mask for a particular mous button press. howev in your
+event handler you can us the event structur pass in and queri it to find
+which button wa press i.e.
+
+void
+someeventhandl(widget w, xtpointer data, xevent *event)
+{
+    /* catch the button 1 (usual left button) */
+    if ( event->xbutton.button == button1 ) {
+        /* do some action */
+    } els {
+        /* do noth and exit from function */
+    } 
+}
+--
+-gui singh,                 ixi            internet: gui@x.co.uk
+                            vision park    uucp:     gui@ixi.uucp
+                            cambridg      bang:     ...!uunet!ixi!gui
+                            cb4 4zr, uk    tel:      +44 223 236 555

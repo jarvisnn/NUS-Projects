@@ -1,0 +1,44 @@
+from: stevenm@kralizec.zeta.org.au (steven murrai)
+
+subject: do we need sdk as well as ddk?
+
+organ: kralizec dialup unix sydnei: +61-2-837-1183 v.32bi
+
+line: 14
+
+nntp-post-host: kralizec.zeta.org.au
+
+summari: do we need sdk as well as ddk?
+
+keyword: sdk, window
+
+
+
+
+
+
+
+the microsoft window devic driver kit (ddk) document (blurb)
+
+state that the user must separ acquir the microsoft window
+
+softwar develop kit (sdk), which contain the window tool
+
+to build the driver. if we ar us borland c++ with applic
+
+framework, is thi necessari? we also have a copi of the microsoft
+
+press programm's refer librari (book) which normal come
+
+with the sdk, and microsoft macro assembl 6.0. why is the sdk
+
+neccessari for develop of virtual devic driver?
+
+
+
+ - steven murrai 
+
+   (post on behalf of brian davi)
+
+
+

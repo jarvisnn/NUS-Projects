@@ -1,0 +1,106 @@
+from: gillei@decvaxrobin.af.mil
+
+subject: re: look for draw packag
+
+repli-to: gillei@decvaxrobin.af.mil ()
+
+organ: lnew -- robin afb
+
+line: 46
+
+nntp-post-host: decvax.robin.af.mil
+
+
+
+
+
+in articl <14569@greg>, greg@softwar.mitel.com (gregori lehman) write:
+
+|>path: wrdi01!gatech!howland.reston.an.net!usc!cs.utexa.edu!utnut!torn!nott!uotcsi2!geovis!softwar.mitel.com!greg
+
+|>from: greg@softwar.mitel.com (gregori lehman)
+
+|>newsgroup: comp.window.x,comp.window.x.motif
+
+|>subject: look for draw packag
+
+|>messag-id: <14569@greg>
+
+|>date: 27 apr 93 20:08:10 gmt
+
+|>organ: mitel. kanata (ontario). canada.
+
+|>line: 24
+
+|>xref: wrdi01 comp.window.x:36152 comp.window.x.motif:13750
+
+|>
+
+|>greet.
+
+|>
+
+|>i am develop an applic that allow a *user* to interact
+
+|>creat/edit/view a visual "model" (i.e. topolog) of their network, and
+
+|>i wa wonder if anyon knew of ani builder tool that exist to
+
+|>simplifi thi task.
+
+|>
+
+|>in the past i have us visual edg's uim/x product to develop other
+
+|>gui, so i am familiar with uimss in gener.
+
+|>
+
+|>the topolog will support object and connect link.  onc the
+
+|>topolog is creat, i want to provid the user with capabl to
+
+|>support group, zoom, etc.
+
+|>
+
+|>i am look for some form of a higher abstract other than x draw
+
+|>routin to accomplish thi.  specif, the zoom and group
+
+|>aspect mai prove difficult, and certainli time consum,  if i have
+
+|>to "roll my own".
+
+|>
+
+|>suggest?
+
+|>
+
+|>-greg
+
+|>
+
+|>greg@softwar.mitel.com
+
+|>
+
+
+
+
+
+you don't mention your platform but digit ha a custom widget, nete, 
+
+which doe exactli what you want to do. cost is nomin 300 or so - call your
+
+local offic.  the widget is support on a varieti of platform and i heard
+
+rumbl of port to sun, etc. so it mai be worth the check.
+
+
+
+charli gillei
+
+digit equip corp.
+

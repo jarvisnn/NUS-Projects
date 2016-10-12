@@ -1,0 +1,16 @@
+from: marc@pinet.aip.org (marc wiener)
+subject: core dump from getcon(?)
+organ: american institut of physic
+line: 11
+
+we ar get a memori fault and a core dump whenev we end a motif
+session under ultrix 4.3, run on a dec 5000/240. an examint of the 
+core file lead us to believ it's from getcon. doe anyon know what
+thi is all about?
+
+marc
+-- 
+marc wiener                    |    marc@aip.org
+american institut of physic  |    
+500 sunnysid blvd.            |    voic: (516)576-2329 
+woodburi, ny 11797             |    fax:   (516)349-7669

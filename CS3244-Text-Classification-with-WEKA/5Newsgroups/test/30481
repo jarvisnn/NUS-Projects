@@ -1,0 +1,68 @@
+from: ebosco@us.oracl.com (eric bosco)
+
+subject: where to put my swap file (id or scsi)
+
+nntp-post-host: monica.us.oracl.com
+
+repli-to: ebosco@us.oracl.com
+
+organ: oracl corp., redwood shore ca
+
+x-disclaim: thi messag wa written by an unauthent user
+
+              at oracl corpor.  the opinion express ar those
+
+              of the user and not necessarili those of oracl.
+
+line: 24
+
+
+
+
+
+i have a 486 sx 25 and i recent ad a scsi drive to my system us an  
+
+adaptec 1522 (non busmast) control. yesterdai i ran coretest to  
+
+find out drive perform and these ar the valu i got
+
+
+
+seagat 106 meg: 875.1kb/sec	14.5ms avg seek   3.7ms track to track 
+
+quantum 400 meg scsi: 991.2 kb/sec  12.7 avg seek 3.6 track to track.
+
+
+
+first off all ar these good result? i don't know what typic valu  
+
+ar.
+
+
+
+what i'm wonder now is the follow. my swap file is current on the  
+
+id. i could move it to the scsi which is 13% faster, but then i would not  
+
+be abl to us 32-bit access which might actual make it slower. so on  
+
+which drive should i put my swap file to get best result? is there a swap  
+
+file speed test program out there?
+
+
+
+final, i also ran the abov test with the aspi2do driver load and i  
+
+got no differ whatsoev in perform. is there ani reason at all  
+
+why i should load thi driver?
+
+
+
+thank in advanc, i will post a summari if i get enough respons.
+
+
+
+-eric
+

@@ -1,0 +1,39 @@
+from: bash@tware.com (paul bash)
+subject: re: x11r5 and open look
+organ: techwar design, boulder, co. usa
+line: 34
+
+in articl <1993apr12.220600.10691@nrao.edu> rgooch@rp.csiro.au (richard gooch) write:
+>in articl <1993apr12.155820.82@aedc-vax.af.mil>, bond@aedc-vax.af.mil write:
+>> i am repost thi becaus i am not sure my first post ever made it out.
+>> i have built and instal x11r5 on my sparcstat 2.  my aim is to run
+>> the mit x server but retain the openlook window manag.  i am sure thi
+>> is not uncommon, but i just want to make sure that i chang and/or delet
+>> everyth that i need to.  for instanc, i can start xdm in rc.local, but
+>> how do i get rid of xnew?
+>> 
+>
+>  the openlook window manag sourc is avail on the mit contrib tape
+>  or from  export.lc.mit.edu  .i would suggest build thi too, rather than
+>  us the version from openwindow. it is  olwm  v3.
+>
+
+i would suggest skip olwm and get olvwm instead. thi version of the
+olwm window manag implement a virtual desktop that i find realli handi even
+on larg monitor. 
+
+thi version is also avail at export.lc.mit.edu:/contrib/olvwm3.tar.z.
+the readm file also suggest get the file in /contrib/xview3.
+
+in my case, i built the x server first, xview second, then olvwm. all of these
+were instal into /usr/x5. onc i verifi the server work correctli,
+i happili issu "rm -rf /usr/openwin/*".
+
+us gcc 2.3.3 to build all of the abov result in a window system that 
+is, for all intent and purpos, ident to openwindow 3.0 and that is     
+incred faster. there is a bit of tweak you will have to do if you want
+thing to work _exactli_ like openwindow, but not much. 
+
+-- 
+paul bash                                                   techwar design 
+bash@tware.com                                              boulder, co  u.s.a.

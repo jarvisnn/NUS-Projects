@@ -1,0 +1,64 @@
+body {
+  padding-top: 0px;
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/background.jpg');
+    background-position: center center;
+    background-repeat: none;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+header .intro-text .intro-lead-in {
+    margin-top: 110px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.logo img {
+    margin-top: 15px;
+    width: 80%;
+}
+
+@media(min-width:768px) {
+    header {
+        text-align: left;
+    }
+    header .intro-text {
+        padding-top: 250px;
+        padding-bottom: 200px;
+    }
+    header .intro-text .intro-lead-in {
+        margin-top: 50px;
+        margin-bottom: 60px;
+        font-size: 50px;
+        line-height: 40px;
+    }
+    .logo img {
+        margin-top: 15px;
+        width: 30%;
+    }
+}

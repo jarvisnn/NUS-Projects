@@ -1,0 +1,50 @@
+from: jl@atglab.atg.com (jerom schneider)
+repli-to: jl@atg.com
+distribut: world
+subject: re: out of environ space run bat file from window
+organ: aspen technolog group
+x-mailer: uupc/bsnew 2.1 modifi
+line: 42
+
+
+>i have a .bat file that i run under a window icon.  i have set up a pif
+>file to run the bat file in exclus mode and to us the entir screen.
+>the first line of the bat file set an environ variabl.
+>
+>my problem is that on some of our machin (run ms-do 5.0 and window
+>3.1 in enhanc mode), the set command in the bat file fail with the
+>out of environ space error.  i have rais the amount of environ
+>space to 2048 byte us the shell command in config.sy so i know that
+>i am nowher near to run out. 
+
+(from the window resourc toolkit (for win4workgroup)), add an entri to
+your "system.ini" file under the [nonwindowsapp] section:
+
+    commandenvs=nnnn
+
+"thi set the command.com env size, where nnnn must either be 0 or
+between 160 and 32768.  a valu of 0 disabl the set.  if thi
+valu is too small or too big, it is round up to 160 or down to 32768.
+if the valu is less than the current size of the actual environ,
+thi set is disabl, as if it were 0.  if you specifi the
+environ size in a pif file for command.com, the pif set
+overrid thi set.  the default is 0 with msdo version earlier
+than 3.2.  otherwis, the default valu is the /e: option in the
+shell= command in config.sy.  to set thi valu, you must edit your
+system.ini [and reboot]."
+
+
+i have us thi entri, as well as reli on the default /e: from
+the config.sy shell= line, and both give larger environ.  if
+you don't us on of these, then the environ pass by window
+to each new do box is just a littl bit bigger than the environ
+_variabl_ present when window wa start.  (no matter how big
+the do env wa, when window start, it truncat all unus space
+except for a few byte.)  thi should allow your batch file to run,
+but your mileag mai vari.
+
+--
+jerom (jerri) schneider             domain: jl@atg.com 
+aspen technolog group               uucp:   {uunet}!csn!atglab!jl
+po box 673, ft. collin, co 80522    voic:  (303) 484-1488
+

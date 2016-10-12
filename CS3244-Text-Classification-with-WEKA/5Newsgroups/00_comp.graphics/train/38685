@@ -1,0 +1,16 @@
+from: bernard@cs.su.oz.au (bernard gardner)
+subject: re: fast polygon routin need
+organ: basser depart of comput scienc
+keyword: polygon, need
+line: 10
+
+for some reason i never saw the origin post on thi thread, but if you ar
+look for fast polygon routin on vga on a pc, you realli can't go past
+the mode x stuff from dr dobb. thi code is all p.domain (as far as i know),
+and in the origin articl, the routin were all present as dumb vga
+routin, and then optimis to modex with some interest discuss along
+the wai.
+if you ar interest, i could find out more detail of the issu in question,
+(i have them at home).
+
+bernard.

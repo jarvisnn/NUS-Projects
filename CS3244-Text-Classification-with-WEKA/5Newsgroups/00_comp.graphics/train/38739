@@ -1,0 +1,30 @@
+from: baalk@kelvin.jpl.nasa.gov (ron baalk)
+subject: gaspra anim (quicktim)
+keyword: gaspra, jpl
+organ: jet propuls laboratori
+line: 22
+nntp-post-host: kelvin.jpl.nasa.gov
+new-softwar: vax/vm vnew 1.41
+
+
+                       ==============================
+                              gaspra anim
+                                march 12, 1993
+                       ==============================
+
+     the gaspra anim is now avail at the am space archiv in 
+quicktim format.  the anim wa form from 11 imag taken by the 
+galileo spaecraft shortli befor it closest approach to the asteroid in 
+octob 1991.  the anim is avail us anonym ftp to:
+
+        ftp:      am.arc.nasa.gov (128.102.18.3)
+        user:     anonym
+        cd:       pub/space/anim
+        file:
+                  gaspra.qt 
+     ___    _____     ___
+    /_ /|  /____/ \  /_ /|     ron baalk         | baalk@kelvin.jpl.nasa.gov
+    | | | |  __ \ /| | | |     jet propuls lab |
+ ___| | | | |__) |/  | | |__   m/s 525-3684 telo | it's kind of fun to do
+/___| | | |  ___/    | |/__ /| pasadena, ca 91109 | the imposs. 
+|_____|/  |_|/       |_____|/                     | walt disnei

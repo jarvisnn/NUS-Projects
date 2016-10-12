@@ -1,0 +1,26 @@
+from: bentz@bluston.uucp (rai bentz)
+subject: sparc ipc sprite goe off screen
+organ: blueston consult inc.
+line: 21
+
+environ:
+	x11r4
+	motif 1.1.4
+	sun ipc 4.1.3
+
+problem:
+	when mous is move across screen horizont, the sprite goe off
+	of the edg of the screen and reappear at the *other* edg.
+	it appear that the server think we ar run in multi-screen
+	mode; the cursor seem to "wrap" from on side of the screen to
+	the other.
+	as far as we can tell, we ar not run the server in multi-screen
+	mode.
+
+pleas repli via e-mail.
+
+-- 
+rai bentz                            phone: (609)727-4600
+blueston consult, inc.             fax: (609)778-8125
+1200 church street                   uunet: uunet!bluston!bentz
+mount laurel, nj 08054            internet: bluston!bentz@uunet.uu.net

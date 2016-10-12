@@ -1,0 +1,32 @@
+subject: xlib and 24 bit displai [info need]	
+from: sl0pr@riverdal.enet.dec.com (869883 thakkar rahul chandrak)
+repli-to: sl0pr@riverdal.enet.dec.com (869883 thakkar rahul chandrak)
+distribut: world
+organ: digit equip corpor
+keyword: xlib
+nntp-post-host: riverdal.declab.usu.edu
+line: 23
+
+hi,
+
+my name is rahul and i am do ms at usu, logan
+my queri is:
+	i have a hp workstat: hp seri 400 with x run on it.
+i have a true color - 24bit color monitor connect to thi machin.
+normal i have the capabl to displai 256 color from a max of
+16.7 million. sinc the monitor is true color i can see 16.7
+million at a time. 
+que: do we have a facil in x(c-function call) that will enabl me
+to specifi ani rgb combin and see it on screen? i am us
+xstorecolor to set the pallett of a max of 256 color.
+que: if not. is there ani wai i can displai a true color imag
+on a true color monitor us xlib function call?
+
+we ar gener rai trace imag and 256 color ar inde a
+pain limit. besid i need the facil to displai the true color imag 
+i will be gener on a true color system without color 
+quantif.
+pleas, if anyon can help i'd be oblig
+
+rahul
+sl0pr@cc.usu.edu

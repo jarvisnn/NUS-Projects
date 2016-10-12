@@ -1,0 +1,74 @@
+from: qman@casbah.acn.nwu.edu (charli kuehmann)
+
+subject: re: quadra 900 startup w/out monitor...ya right.
+
+nntp-post-host: ironman.ms.nwu.edu
+
+organ: northwestern univers
+
+line: 31
+
+
+
+in articl <1r1p2r$gv2@umcc.umcc.umich.edu>, chungkuo@umcc.umcc.umich.edu
+
+(shawn fitzgerald) wrote:
+
+> 
+
+> in articl <1993apr20.104310.22861@tdb.uu.se> mat.bredel@udac.uu.se write:
+
+> >shawn fitzgerald (chungkuo@umcc.umcc.umich.edu) wrote:
+
+> >: is there a fix for thi? we have a quadra 900 that will not finish startup
+
+> >: unless there is a monitor connect. thi would be no problem, but sinc
+
+> >: we're run it as a file server, there is no need to have a monitor
+
+> >: connect all the time.
+
+> >
+
+> >i've seen a control panel made for thi. i don't rememb the name, where i
+
+> >saw it, or on what quadra model it will work. but i do know it exist :)
+
+> >
+
+> >/mat
+
+> >
+
+> >-- 
+
+> >mat bredel                                   mat.bredel@udac.uu.se
+
+> >uppsala univers comput center (udac)     ph:  +46 18 187817
+
+> >depart of medic system                  fax: +46 18 187825
+
+> >sweden                                         think straight - be gai!
+
+> 
+
+> i will poke around in the u of m archiv and see if i find someth. if
+
+> anyon els find thi, pleas post the locat! :-)
+
+
+
+i think i found what your look for on ftp.appl.com in the
+
+/dt/mac/sy.soft/video directori and is call "virtual monitor switch
+
+1.0".  hope thi help.
+
+
+
+charl kuehmann
+
+northwestern univers
+
+steel research group
+

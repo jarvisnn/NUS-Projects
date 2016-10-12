@@ -1,0 +1,299 @@
+from: rjn@teal.csn.org (robert j. niland)
+subject: re: procomm plu for window problem....
+nntp-post-host: teal.csn.org
+organ: colorado supernet, inc.
+x-newsread: tin 1.1 pl4
+line: 292
+
+kentil@matt.ksu.ksu.edu (kent p. iler) write:
+
+:   i have normal procomm plu for do, but i've been consid bui
+: the window version....it got realli great review in comput shopper.
+: i have a friend who connect to the mainfram and unix machin here
+: us it, but the screen seem to have a problem keep up with the
+: modem....he ha a 14,400 modem on a 486 50 mhz machin.  i can't
+: see it have troubl keep up.  hi pcplu for do work great,
+
+re: what to do after the high speed modem arriv.       edit 01 apr 93
+
+thi articl appli onli to window 3.0 and 3.1, and not to nt, os/2
+or do app not run under window.
+
+on of the unadvertis limit of most current window pc is that
+their rs-232c (serial, com) perform is serious defici.  almost
+everyon who purchas a high-speed modem (v.32bi, v.32, pep or hst)
+discov the problem the first time thei try to download a file or accept
+an incom fax (at 9600+) after upgrad the modem.  overrun and retri
+error abound, even when the onli activ applic is the datacomm or
+fax program.  if the transfer complet at all, it mai take even longer
+than with the old 2400bp modem.
+
+
+there ar three reason for the problem:
+
+1. the univers asynchron receiv/transmitt (uart) us in most
+   pc ar primit ns8250 devic with singl-byte fifo buffer.  if the
+   oper system/driver cannot read and flush each charact at high
+   interrupt rate, the next incom charact overwrit the fifo and
+   the previou on is lost.  do, be a fairli singl-mind
+   environ dure datacomm, can usual keep up. window can't.
+
+2. window ha more oper system overhead than plain do, and
+   interrupt often take longer to servic.  overrun ar much more like
+   than under do.  as soon as you report to your pc/modem vendor that you
+   ar lose data, you mai be advis that "you need to upgrad to a
+   16550". more like, sinc there seem to be a conspiraci of ignor
+   about thi issu,  you'll get no us advic at all.  most of the
+   store-front and mail-order sourc i spoke with in attempt to solv
+   my own problem had never heard the term "16550" and mani didn't even
+   know what a uart wa.
+
+3. even your pc ha ns16550a uart (and ps/2's do), or if you can upgrad
+   your mother/com board or add a new com board, you mai still experi
+   error and overrun becaus the standard microsoft window com driver
+   don't take full advantag of the 16550.  window 3.1 is improv in thi
+   regard over 3.0, but i still recommend a driver upgrad.  applic
+   like procomm+/win (which is what i us) cannot get around thi problem
+   by themselv.
+
+if you have a modem card, you mai not have a problem, as the modem part of
+the card can be design to be awar of the state of the uart, and avoid
+overrun it; howev, i wouldn't want to bet that the card design
+were that clever, and will insist on a 16550 uart if i ever bui a modem
+card.  some modem card don't even have convent uart, but if thei
+ar to work with standard window driver, thei need to simul on.
+us msd.ex (below) to see what the modem card is, or is pretend to be.
+
+
+the hardwar situat.
+
+the uart on most pc com port ar base on nation semiconductor ns8250
+or ns16450 chip (or megacel insid vlsi chip where you can't replac
+them).  you can id the uart type on your system by run the microsoft
+diagnost program \window\msd.ex.  be sure to run it in do *befor*
+bring up window.   the window serial api mai prevent msd from
+accur identifi a 16550 if you run it from a window do prompt.
+
+the ns16550 uart ha separ 16-byte transmit and receiv fifo with
+configur trigger level, and can run reliabl at clock rate up to
+460,800 bp, although with current modem technolog, there's no point in
+push your luck by go over 115,200 bp. the 16550 ha short access
+cycl time than the 16450 or 8250.  the 16550 also ha dma capabl, but
+it is not clear that ani pc driver ever us thi.  for more technic info,
+see nation semiconductor applic note an-491.
+
+so, what uart compon do you have?
+
+try to locat the uart on your mother board, multi-function i/o card, com
+board or isa/mca modem card.  if you can't find a socket compon with
+the number "8250" or "16450", your com port ar probabl buri in vlsi,
+and you won't be abl to perform a chip replac.  if you can disabl
+your vlsi com port (as i chose to do), you can at least add an aftermarket
+com board.
+
+if you have on or more socket 8250 or 16450 chip, you can bui plug-in
+ns16550afn or pc16c550cn (low power cmo version) ic from sever
+supplier typic for $9 to $15 each.  the "n" chip is the normal 40-pin
+dual-in-line packag.  other style ar avail, but avoid ani ns16550
+chip without the "a" (the 16c550c ar presum all ok).
+
+earli ns chip have bug, although nation will reportedli exchang those
+of their own manufactur for free.  clone chip ar avail from variou
+ic maker other than nation.  the manual for the turbocom driver state
+support for the follow (appar equival) chip:
+nation semiconductor: 16550a, 16551, 16552
+chip&technolog:       82c607
+texa instrument:      t16c550a
+silicon system:        73m550
+vlsi                    16c550
+turbocom warn about the pre-"a" ns16550 and western digit 16c550,
+sai that problem have been report with earli ibm ps/2 55sx and 70
+system (ibm reportedli will upgrad them).
+
+if you don't have socket 8250/16450 chip, you'll need to bui an after-
+market com or multi-function board. if thi is a modem card situat, you
+mai be hose. to add a new com or multi-function card, you'll need to
+either disabl the com1/2 port(s) you ar replac, or re-assign them to
+com3/4 (although watch out for irq conflict without turbocom).
+
+although cheaper card ar avail, in the interest of get the
+problem solv quickli i elect bui the modular circuit technolog
+mct-aio+ card from:
+
+jdr microdevic
+2233 samaritan drive
+san jose  ca  95124
+(800) 538-5000 voic us
+(408) 559-1200 voic other
+(800) 538-5005 fax us
+
+the mct-aio+ (and the "+" is import) sell for $89.95.  it is an 8-bit
+isa card provid:
+
+port type  connector  address and irq        comment
+com        db9m       com 1,2,3 irq 2,3,4,5  ns16550afn in socket
+com        ribbon     com 2,3,4 irq 2,3,4,5  ns16550afn in socket
+parallel   db25f      lpt1,2,3  irq 5,7
+game       ribbon
+
+the kit includ a ribbon cabl and db25f connector for the secondari com
+port, a ribbon cabl/connector for the game port, two bulkhead plate for
+the ribbon-base connector and a 9f-to-25f adaptor cabl.  each port can
+be individu disabl, and the com port have tx, rx, rt, ct, dtr,
+dcd, and dsr jumper.
+
+jdr also sell a super-i/o m-f card that also ha id.
+
+i have heard from sever peopl about less expens m-f i/o card
+with 16550s:
+
+tsd system
+(407) 331-9130
+$19.95 for the card, plu $9.95 per 16550.
+
+greenfield trade and distributor
+(518) 271-2473 (voic), (518) 271-7811(fax).
+their card is $33 w/on 16550, $45 w/2, and thei sell 16550afn for $13.
+
+r&s data system, inc.
+820 east highwai 434
+longwood, fl  32750
+phone: (407) 331-1424
+fax: (407) 331-8606
+2com/lpt/game card w/2 16550s for $39
+
+i have no person experi with ani of the firm except jdr.
+
+meanwhil, back at the mct card from jdr... i onli need two serial port,
+and am run out of irq on my pc, so i disabl my built-in vlsi-base
+8250 port. howev, with the turbocom driver (below), i could have set
+the intern as com3 and 4, us irq share.
+
+
+the softwar situat
+
+simpli upgrad to 16550 uart will not complet solv common overrun
+problem.  the standard ms serial driver don't take full advantag of the
+16550. the window 3.0 driver ar even less capabl, and the window 3.1
+driver have the follow limit:
+ - thei enabl onli the receiv fifo, and onli at rate abov 2400 bp.
+ - thei never enabl the transmit fifo, which  result in an interrupt
+   rate of 10x dure upload.
+ - thei set the trigger level at 14 byte (too high - it's easi for 2
+   more byte to arriv befor the driver can read the fifo).
+ - the port menu of the control panel onli allow speed up to 19200.
+   with a v.32bi modem,  spars data and text can easili compress 3:1
+   or more, suggest that a host dte connect rate of 57,600 bp would
+   be effect.
+ - the api won't accept rate abov "cbr_128000".
+ - the api won't let do program know there is a 16550 there, and even
+   if it did, do program that aren't 16550-awar get littl benefit
+   from a 16550 port with the standard driver.
+ - thei don't allow irq share for com3,4.
+ - the bio doesn't initi com3,4 properli in mani system.
+ - window provid no workaround for app that don't provid port
+   speed option abov 19200 bp.
+
+these problem ar reportedli not solv in window nt or do 6.0, and mai
+or mai not be address in ani window releas after 3.1 (but befor 4.0).
+rumor suggest thei "mai" be solv in window "4.0".
+
+you can get replac driver that solv all of those problem by bui
+a copi of "turbocom", current version 1.2, from:
+
+bio-engin research
+pacif commwar divis
+180 beacon hill lane
+ashland  or   97520-9701
+(503) 482-2744 voic
+(503) 482-2627 fax
+(503) 482-2633 bb
+mcimail:    344-5374
+compuserv: 71521,760
+
+price wa around $50 as i recal.  bio-eng is not set up to accept credit
+card, so i had to send a check.  egghead and 1-800-softwar list turbocom
+but as far as i know, thei don't stock it.  bio is not a softwar compani
+per se.  thei appar need reliabl hi-speed serial connect for
+an in-hous instrument applic, wrote their own driver, discov a
+market for it, revis it to be a gener purpos com driver suit. thei
+recent upgrad it for window 3.1.  it is run-time licens.
+
+i now have my host (dte) connect rate set to 57,600 bp most of  my
+datacomm app, and i am have zero problem with download. i routin
+see transfer rate that exce 2,000 bp. i am also us 115,200 bp
+when link an hp95lx to my pc, with lossless bi-direct i/o.
+upload to variou remot system ar anoth matter, becaus mani host
+ar still us antiqu uart and driver.
+
+note that 19200 is still the highest rate that the window 3.1 port menu
+in control panel will allow in configur a com port.  turbocom get
+around thi by allow you to specifi, on each port, a factor that will
+set the real uart rate to a multipl of the rate pass through the
+window api and dialog box.
+
+i also have ct/rt hardwar flow control enabl, and i suggest that you
+do the same.  even if you onli ever transfer 7-bit ascii data, xon/xoff is
+not a suffici reliabl method of flow control.  the inform (dec)
+standard for xon/xoff hysteresi is that the sender mai transmit anoth
+16 (ye, sixteen) byte after receipt of the xoff from the receiv
+system or devic.  the 16 byte fifo in the 16550 is clearli not big enough
+to let us reli exclus on xon/xoff.  a well-respect datacomm
+engin ha inform me that the 16550's can't realli do ct/rt all
+by itself in the do/window environ, so us data rate abov
+115,200 mai still be riski.
+
+even with hardwar flow control, a 16550 with turbocom can still
+experi overrun in veri busi system, with lot of app run and
+seriou swap in progress. if thi is your situat, you mai need to
+bui a co-process com board, but thi will cost you more than a
+16550/turbocom upgrad.  a review of two such board, and a review of
+turbocom, can be found in the feb'93 issu of "window sourc" magazin.
+i suggest try a 16550/turbocom upgrad first, and experi with
+process prioriti and time slice if you ar a "power user" whose
+thrash system still run into comm problem.
+
+
+close soapbox comment
+
+the state of rs-232c serial datacomm support is an embarrass across
+the comput industri.  becaus it is the oldest standard i/o interfac,
+the job of design hardwar and write softwar often seem to be
+assign to the least senior or lowest rank engin at comput
+compani.  the design of the averag serial port is at least ten year
+behind the state of the art. in my last job, with a major workstat
+vendor, i lobbi for improv serial port when thei were do the
+initi design of a new system.  that famili of machin wa
+subsequ introduc with 16550 port.  howev, thi is the
+except.  few comput compani seem to have ani champion for decent
+i/o.
+
+you mai as well learn what you can about serial i/o, becaus thi
+situat show no sign of improv soon.  when v.fast arriv, i expect
+cri of outrag from window user world-wide whose 8250 pc "sort of"
+work todai with v.32, but will fail miser with v.fast.  without a
+hardwar-buffer uart (like the 16550) and without softwar driver that
+us that uart to best advantag, a v.fast modem will be a wast of monei.
+
+regard,                                          1001-a east harmoni road
+bob niland                                        suit 503
+internet:  rjn@csn.org                            fort collin co 80525
+compuserv: 71044,2124                            (303) 223-5209
+
+                     copyright 1993 robert j. niland
+                           all right reserv
+
+  permiss is grant for automat redistribut of thi articl, via
+  electron, magnet and optic media, in an unedit form, through ani
+  usenet newsgroup where the articl is post by the author.  permiss
+  is grant for each compuserv and usenet reader subscrib and each
+  person who receiv thi articl from compuserv, an ftp site author
+  by the author or via electron mail from the author, to retain on
+  electron copi and to make hardcopi reproduct of thi edit of
+  thi articl for person non-commerci us, provid that no materi
+  chang ar made to the articl or thi copyright statement. all other
+  copi, storag, reproduct or redistribut of thi articl, in
+  ani form, is prohibit without the express written consent of the
+  author,  robert j. niland.
+
+eof

@@ -1,0 +1,136 @@
+from: stevea@lachman.com (steve alexand)
+
+subject: re: compil mh-6.8 (and xmh) on sco 3.2.4.
+
+nntp-post-host: lancelot.i88.isc.com
+
+organ: lachman technolog, inc., napervil, il
+
+line: 62
+
+
+
+in articl <1993apr30.132044.15762@vpbuild.vp.com> jessea@u013.me.vp.com (jess w. asher) write:
+
+>i'm try to get mh compil (and then xmh) and i'm have some problem.
+
+>i've got mh-6.8, us gcc on sco 3.2.4.  my mh file is list below.  doe
+
+>anyon have ani suggest on what i can add to get it to compil??
+
+
+
+here's the on that i us:
+
+
+
+# @(#)$id: mh,v 1.7 90/04/06 09:44:31 sourc exp $
+
+# sco 3.2.4v2
+
+bin	/usr/local/bin
+
+bboard	on
+
+etc	/usr/local/lib/mh
+
+mail	/usr/spool/mail
+
+mailgroup	mail
+
+ldoptlib	-lsocket -lcrypt_i
+
+mandir	/usr/man
+
+cc	gcc
+
+ccoption	-tradit
+
+manual	none
+
+chown	/bin/chown
+
+mt	sendmail/smtp
+
+pop	on
+
+debug	off
+
+sharedlib	off
+
+signal	void
+
+sprintf int
+
+option	attvibug bind dpop dumb renam socket sy5 sy5dir vsprintf fcntl mhe mhrc mime more='"/usr/bin/more"' popservic='"pop3"' rpath foldprot='"700"' msgprot='"600"' sbackup='"\\043"' shadow
+
+curs	-lcurs -ltermcap
+
+ranlib	off
+
+
+
+you mai want to us a differ lock style; my mailbox is mount over nf
+
+so i us fcntl-style lock.
+
+
+
+i also appli the follow tweak to sbr/makedir.c:
+
+
+
+*** /src/public/mh-6.8/sbr/makedir.c    tue dec 15 10:55:22 1992
+
+--- sbr/makedir.c       tue apr 13 14:02:04 1993
+
+***************
+
+*** 24,30 ****
+
+  #includ <sy/type.h>
+
+  #includ <sy/stat.h>
+
+  #endif        /* sy5dir */
+
+! #if defin(svr4) || defin(ncr)
+
+  #includ <unistd.h>
+
+  #endif
+
+
+
+--- 24,31 ----
+
+  #includ <sy/type.h>
+
+  #includ <sy/stat.h>
+
+  #endif        /* sy5dir */
+
+! #if defin(svr4) || defin(ncr) || defin(sy5)
+
+! #defin maxpathlen 1024
+
+  #includ <unistd.h>
+
+  #endif
+
+
+
+that took care of everyth but the man page, which i instal by hand.
+
+
+
+good luck,
+
+-- steve
+
+-- 
+
+steve alexand, lachman technolog, inc. | stevea@lachman.com
+
+(708) 505-9555 x256 fax: (708) 505-9574	  | ...!{sun,ico}!laidbak!stevea
+

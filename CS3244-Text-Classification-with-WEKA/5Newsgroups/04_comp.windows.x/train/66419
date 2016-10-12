@@ -1,0 +1,35 @@
+from: etxmesa@eo.ericsson.se (michael salmon)
+subject: re: xtshellstr,xtstring?
+nntp-post-host: eo6c02.ericsson.se
+repli-to: etxmesa@eo.ericsson.se (michael salmon)
+organ: ericsson telecom ab
+line: 28
+
+in articl <1993apr5.145635.16857@informatik.tu-muenchen.de>
+wilk@informatik.tu-muenchen.de (christian wilk) write:
+|> 
+|> hello,
+|> 
+|> doe somebodi know the function  xtshellstr and xtstring?
+|> i haven't found them in ani librari not xm, xt, nor x11, and i need
+|> them to instal a tool.
+|> 
+|> ani hint greatli appreci! pleas repli via e-mail.
+
+thei aren't function, thei ar charact arrai. the standard string
+ar either defin as string constant or charact pointer into
+xtshellstr and xtstring determin by xtstringdefin. your
+librari were compil with thi defin and your applic with it
+undefin so simpli recompil on or the other. it is probabl worth
+ad -dxtstringdefin to your cflag.
+
+-- 
+
+michael salmon
+
+#includ	<standard.disclaim>
+#includ	<witti.sai>
+#includ	<fanci.pseudo.graphic>
+
+ericsson telecom ab
+stockholm

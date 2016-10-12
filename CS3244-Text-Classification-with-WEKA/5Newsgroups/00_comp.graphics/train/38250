@@ -1,0 +1,29 @@
+from: channui@austin.ibm.com (christoph chan-nui)
+subject: re: two point devic in on com-port?
+repli-to: channui@austin.ibm.com
+organ: ibm austin
+x-newsread: tin [version 1.1 pl9]
+line: 22
+
+bob davi (sonni@trantor.harri-atd.com) wrote:
+: in articl <c4tkgm.1v6@unix.portal.com>, wil@shell.portal.com (vill v walveranta) write:
+: |> 
+: |>         is there ani wai to connect two point devic to on serial
+: |>         port? i haven't tri thi but i believ thei would interfer
+: |>         with each other (?) even if onli on at a time would be us.
+
+: 	just get an a-b switch for rs232. look in comput shopper.
+: thei ar avail fairli cheap. thei allow switch between two
+: serial devic on a singl port.
+
+unfortun the poster want to us an intern and an extern modem so a
+switch isn't go to help them.  if you aren't us your com port for
+anyth els, just defin them on differ com port.  defin your intern
+modem to be sai, com1, and your extern modem to be com3.  you realli
+shouldn't have to worri about interrupt conflict sinc you won't be us
+both modem at the same time :).
+
+---
+christoph chan-nui    | invest in reliabl will increas until it
+channui@austin.ibm.com  | exce the probabl cost of error, or until someon
+#includ <disclaim.h> | insist on get some us work done.

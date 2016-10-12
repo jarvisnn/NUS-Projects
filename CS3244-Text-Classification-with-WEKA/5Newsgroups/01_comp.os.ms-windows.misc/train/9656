@@ -1,0 +1,54 @@
+from: pmhudepo@cs.vu.nl (hudepohl pmj)
+subject: re: window hang on 486dx33???
+organ: fac. wiskund & informatica, vu, amsterdam
+line: 49
+
+wlieftin@cs.vu.nl (lieft w) write:
+: hello all you window freak out there.
+: 
+: i bought window 3.1 (dutch version) some time ago, and run it on a
+: 286. i recent upgrad my comput to a 486dx33, 256k cach, 4m memori,
+: 212m maxtor hd. work real fine, but not with window.
+: 
+: when plai patienc (sol) or minesweep, suddenli the system hang:
+: - i just can't move my mous anymor.
+: or
+: - screen goe blank, noth further
+: or
+: - screen goe blank, comput seem to reboot, but stop befor reach
+: the end of the memori test.
+: 
+: onc (or mayb even twice) i got a messag about some illeg kernel call
+: or someth (accompani by a hex adress) and a close-button. when press
+: it, the applic wouldn't close, though.
+: 
+: i haven't experienc thi problem with other program than these, but that's
+: mainli becaus i haven't realli us other program. i suspect them to hang 
+: too.
+: 
+: anyth known about thi problem. (or, better, ani patch avail?)
+: 
+: 
+: oh, forgot to tell, if, in cmo ram, i make the comput faster (higher
+: bu speed, less wait state, enabl both cach etc), the crash come
+: faster (after 10 min. or so). if i deliber slow the system down
+: (slow bu speed, wait state, disabl intern/extern cach, no
+: shadow) the crash come later, but come.
+: 
+: hope anyon can help.
+: 
+: wouter.
+: 
+: 
+
+hi,
+
+i got a problem too, with a 486dx2-66 vlb, 4 mb ram,  170mb disk.
+sometim, when i switch on the comput, it start window (3.1 dutch)
+window switch to 1024x768, switch back to text-mode and exit
+to do. after on or two reset, the system work fine...
+
+thank
+patrick
+vu amsterdam
+

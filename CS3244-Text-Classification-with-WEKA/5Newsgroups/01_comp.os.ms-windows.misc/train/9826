@@ -1,0 +1,42 @@
+from: sam4628@chensun2m.tamu.edu (arglebargl iv)
+subject: re: how can i us the mous in non-window
+organ: dept. of chemic engin, texa a&m univers
+line: 34
+distribut: world
+repli-to: sam4628@chensun2m.tamu.edu
+nntp-post-host: chensun2m.tamu.edu
+
+in articl 5iq@netcom.com, kasajian@netcom.com (kenneth kasajian) write:
+} wnkretz@ikesg1.energietechnik.uni-stuttgart.de (oliv kretzschmar) write:
+} 
+} 
+} 
+} }   hei,
+} 
+} }   could somebodi tell me, how it is possibl to work with the mous
+} }   in a non-window applic, which run in an window. we us
+} }   ms-window 3.1 and have clipper applic. exist there ani
+} }   routin or someth els ? pleas mail me your inform.
+} 
+} }   thank for your effort,
+} 
+} }     oliv
+} }-- 
+} } name : o.kretzschmar                      inst.ik / univers stuttgart
+} } phone: +49 711 685 2130                           pfaffenwaldr 31
+} } fax  : +49 711 685 2010                            7000 stuttgart 80
+} } email: wnkretz@ikesg1.energietechnik.uni-stuttgart.de
+} 
+} veri simpl.  you have to have the mous.com or mous.sy load in do
+} befor you run window.  note that you don't need to have these file load
+} to us the mous in window.
+
+
+... and you need a video driver which is complet window 3.1 compat, and
+your mous driver ha to be complet compat as well.  not quit so simpl.
+(i never could get my logitech mous to work 100% in a do window with my
+old paradis card:  now i have a diamond ss24x and the 6.2 mous driver, and
+everyth work perfectli).
+
+steven m.
+

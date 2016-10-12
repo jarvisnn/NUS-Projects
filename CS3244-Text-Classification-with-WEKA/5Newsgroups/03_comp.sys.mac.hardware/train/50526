@@ -1,0 +1,50 @@
+from: dcb@wdl1.wdl.loral.com (david c blume)
+subject: cannot move data fast enough!?
+summari: disk -> buffer -> network card
+keyword: nubu, scsi, disk, throughput
+organ: gokuraku video
+line: 43
+
+i want to achiev an overal throughput rate of around 5 megabyt / sec
+for veri larg data transfer.  (around 5 mb.)
+
+i have a quadra 950. 
+i have a nubu network card that can pump data in to mac memori at 8.5 mb/s.
+         (us block-mode transfer)
+i have a high-speed disk arrai (no asynchron pb call) that can
+         achiev 6.8 mb/s.
+
+let's sai all transfer go from disk to buffer to network card.
+
+it is not enough to first transfer all the data from the disk to buffer,
+then transfer all the data from the buffer to card.  (6.8 mb/s then 8.5 mb/s
+result in an overal 3.8 mb/s.  too slow!)
+
+so i tri the follow scheme: for an n-megabyt transfer, 
+
+step 1:                                load the 1st mb from disk to buffer.
+step 2: asynch send 1st mb out card,   load the 2nd mb from disk to buffer.
+step 3: asynch send 2nd mb out card,   load the 3rd mb from disk to buffer.
+        ...
+step n: asynch send the n-1 mb out card, load the nth mb from disk to buffer.
+step n+1: send the nth mb out card.
+
+even though the code appar doe execut the card transfer asynchron,
+and the card doe not us the mac cpu at all,  (it is us the buffer, tho')
+each of the step 2 through n take as long as if the two transfer were
+execut on after anoth.  so there is no improv in the rate.
+
+why?
+
+is the mac ram dual-port?  (so the nubu card and the disk driver can both
+access data at the same time.)
+is the problem that the two devic, card and disk driver, both have to us
+the same bu to mac ram?
+
+is there anyth i can do?
+
+--david
++---------------------------------------------------------------------+
+| david blume            | "i get tire think of all the thing i  |
+| dcb@wdl1.wdl.loral.com |  don't want to do."  --bukowski, _barfli_  |
++---------------------------------------------------------------------+

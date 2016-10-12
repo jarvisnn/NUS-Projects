@@ -1,0 +1,50 @@
+from: tmc@spartan.ac.brocku.ca (tim ciceran)
+
+subject: re: best ftp viewer pleas.
+
+organ: brock univers, st. catharin ontario
+
+x-newsread: tin [version 1.1 pl9]
+
+line: 19
+
+
+
+situnaya@ibm3090.bham.ac.uk wrote:
+
+: ==============================================================================
+
+: could someon pleas tell me the best ftp'abl viewer avail for msdo
+
+: i am run a 486 33mhz with svga monitor.
+
+: i need to look at gif mainli and it would be advantag if it ran
+
+: under window...........thank
+
+
+
+ftp to wuarchiv.wustl.edu,
+
+chang into mirror/msdo/graphic
+
+get "grfwk61t.zip"
+
+thi is the do version of graphic workshop.  there is a window version which
+
+you could probabl find in the mirror/msdo/window3 directori but i don't 
+
+know what the file name is. 
+
+
+
+-- 
+
+
+
+tmc
+
+(tmc@spartan.ac.brocku.ca)
+
+
+

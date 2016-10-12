@@ -1,0 +1,115 @@
+from: bgrubb@dant.nmsu.edu (grubb)
+subject: re: id vs scsi
+organ: new mexico state univers, la cruce, nm
+line: 108
+distribut: world
+nntp-post-host: dant.nmsu.edu
+
+wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+
+>in articl <1qpu0uinnbt1@dn1.nmsu.edu> bgrubb@dant.nmsu.edu (grubb) write:
+>>wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+>>sinc the mac us onli scsi-1 for hard drive ye the "figur includ a
+>>hundr $$$ for scsi driver"  thi is sloppi peopl and dumb.
+>what group is thi?  thi is not a mac group.
+nice of you to delet both your responc and the item that prompt it.
+to whit:
+>>i just bought at quantum 240 for my mac at home.  i paid $369 for it.  i
+                                      ^^^
+>>haven't seen id drive cheaper.
+to which you respond:
+>a friend of mine just got a maxtor 245 meg id drive for $320.  (that's 245
+>million byte, or 234 mega-byte).  with the basic $20 interfac, he get
+>close to 1 meg/sec transfer on hi 286-20.  doe your figur includ a few
+>hundr $$$ for scsi driver?
+to which i correctli point out the follow:                         
+>sinc the mac us onli scsi-1 for hard drive ye the "figur includ a
+>hundr $$$ for scsi driver"  thi is sloppi peopl and dumb.
+as i said thi is sloppi and dumb {you should resound by discount the mac
+not give "maxtor 245 meg id drive for $320" exampl.  by give an
+exampl you give the impli consent that for mac info to be includ
+in the scsi discus.}
+
+>>ok onc again with the scsi spec list:
+>why the spec list again?  we ar talk scsi on a pc, not on a mac or
+>a unix box.  and we ar talk isa bu, or possibl eisa or vlb.
+ok i will do thi v e r y  s l o w l y so you can understand
+reguardless of whether it is a mac or a pc scsi-1 and scsi-2 ar differ
+from each other as is asynchron and synchron scsi-1.  all of these
+have differ speed and cost. lump them all togeth as 'scsi' is
+dumb and sloppi.  take again the quot later on as an exampl of the problem 
+in the pc world {the spec list wa so that you knew where the number were
+come from in the articl.  it show the articl is correct in it
+stament about scsi but not consit}.
+
+>thi isin't comp.periph.scsi.
+with the wai thi thread ha gone how do you tell :-).
+>tell me what the perform figur ar with a singl scsi drive on a pc
+>with an isa (or eisa or vlb) bu.
+alreadi gave them.  you keep delet them! so here ar the spec
+on everybodi again {with some ad info}:
+
+scsi-1 {scsi-1 control chip} asynchron rang: 0-3mb/s
+ synchron rang: 0-5mb/s  both common to the pc world; differ is
+ mainli in softwar not hardwar.
+
+scsi-1 {scsi-2 control chip; also call scsi-2 (8-bit)}: 4-6mb/s with 
+10mb/s burst.  thi is advertis as scsi-2 in byte 4/93:159 for the
+ pc and at these speed.{not the mac, the pc.}
+
+{i have not seen the follow for either the mac or the pc}
+scsi-2 {16-bit/wide or fast mode}:  8-12mb/s with 20mb/s burst
+scsi-2 {32-bit/wide and fast}:     15-20mb/s with 40mb/s burst
+
+on the other interfac let dxb132@psuvm.psu.edu speak:
+>id rang from 0-8.3mb/s.                          
+ asynchron rang: 0-5mb/s {infer from byte 4/93:159}
+ synchron rang: 0-8.3mb/s.
+>esdi is alwai 1.25mb/s (although there ar some non-standard version)
+
+wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+>theoret perform figur ar not relev to thi group or thi
+>debat.  i'm sure that there ar some platform out there that can
+>handl the 40 meg/sec of scsi xyz wide'n'fast, but the pc isin't on of
+>them.
+note that i also give the averag through put for scsi-2 which hold true
+a mac or ibm/pc clone with the correct hardwar and softwar.
+and sinc pc adversiz ar us theoret perform figur why 
+cannot we?
+
+>>if we ar to continu thi thread state clearli which scsi you ar talk 
+>>about scsi-1 or scsi-2 or scsi over all {scsi-1 and scsi-2}
+>>it doe make a differ.
+
+>well mayb if the scsi design peopl had their act togeth than mayb
+>all pc's would have built in scsi port by now.
+with pc articl like the follow it is obviou that the problem is not with
+scsi but with the peopl who report it! {like you.}
+look at the inconsit us of scsi in the below quot: 
+(my comment in {})
+"although scsi is twice as fast as esdi,{thi is asynchron scsi-1 with
+a scsi-1 chip} 20% faster than id..." {thi is both asynchron scsi-1 with 
+a scsi-2 chip and 8-bit scsi-2} pc magazin april 27, 1993:29
+the articl is confus, not scsi.  the term is a mess from inconsit us
+not becaus the interfac itself is a mess.
+
+scsi mean "the set of scsi interfac compos of scsi-1 and scsi-2"
+not 'scsi-1' as some peopl want to us it.
+
+to read consitantli the quot should read:
+{asynchron scsi-1 with a scsi-1 chip}
+"although asynchron scsi-1 is twice as fast as esdi, on third the 
+speed of id..."
+or {asynchron scsi-1 with a scsi-2 chip or 8-bit scsi-2}
+"although scsi-1 with a scsi-2 chip and 8-bit scsi-2 ar eight time as fast as
+esdi, 20% faster than id..."
+
+note the nonus of 'scsi' by itself.  thi elimin ambagu.
+
+if we ar to continu thi thread state clearli which scsi you ar talk 
+about scsi-1 or scsi-2 or scsi over all {scsi-1 and scsi-2}.  lump
+everyth into scsi as scsi-1 is sloppi, wrong, and dumb.  inconsit
+scsi-1 and scsi-2 usag is also a problem.  clean it up now or have
+a mess like svga wa sever year ago becaus everybodi and hi uncl
+slap 'scsa' an their own monitor intefac {scsi is standar unlik
+svga wa year ago except in terminaolog.}

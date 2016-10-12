@@ -1,0 +1,66 @@
+from: lourai@sea.gwu.edu (michael panayiotaki)
+
+subject: re: leak memori resourc in 3.1
+
+organ: georg washington univers
+
+line: 28
+
+
+
+in articl <c6aw83.h7v@csn.org> richardf@teal.csn.org (iriemon) write:
+
+
+
+>dmittleman@bpavm.bpa.arizona.edu (daniel mittleman) write:
+
+>:     i am run win 3.1 with ndw 2.2 on a 486sx with 8 meg of memori and a
+
+>:     6 meg perm swap file and am get exceedingli frustrat that my
+
+>:     applic ar not give back system resourc when i close them.
+
+>:
+
+>i've notic thi also.  the wai it wa explain to me is that window
+
+>doe not clear the upper memori block after a program is done.  anyon
+
+>out there know if thi is why?
+
+> 
+
+
+
+there wa a post about someth similar a while back.  it seem window
+
+doe *not* take it upon itself to free up ani sy. resourc an
+
+applllic is us when that applic is done.  that job is left
+
+entir to the applic.  that is, the applic ha to clean up
+
+after itself when it quit.
+
+
+
+anyon out there know if there is a util for window which  will
+
+clean up sy. resourc when an applic quit (mother.zip???).
+
+
+
+peac,
+
+mickei
+
+-- 
+
+pe-|| ||  michael panayiotaki: lourai@sea.gwu.edu 
+
+ac|| ||                                   ...!uunet!sea.gwu.edu!lourai
+
+|||| \/|  *how do make a ms-window .grp file reflect a hd directori??*
+
+\\\\   |  "well i ain't alwai right, but i've never been wrong.."(gd)
+

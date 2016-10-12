@@ -1,0 +1,40 @@
+from: brennan@hal.hahnemann.edu
+
+subject: .gif on a tek401x ??
+
+organ: hahnemann univers
+
+line: 14
+
+nntp-post-host: hal.hahnemann.edu
+
+
+
+
+
+      i wa skim through a few gopher and bump into on at nih
+
+   with a databas that includ imag in .gif format.  while i have
+
+   not yet work out the kink of get the gopher client to call
+
+   an x viewer, i figur that the major of the user here ar not
+
+   in an x11 environ - instead us do and ms-kermit.
+
+
+
+      with kermit support tek4010 emul for graphic displai,
+
+   doe anyon know of a packag that would allow a tek to displai a
+
+   .gif imag?  it would be of more us to the local popul to
+
+   plug someth of thi sort in as the 'pictur' command instead of
+
+   xview or xloadimag ...
+
+
+
+      andrew.  (brennan@hal.hahnemann.edu)
+

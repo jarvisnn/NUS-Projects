@@ -1,0 +1,41 @@
+from: welch@xcf.berkelei.edu (sean n. welch)
+subject: re: troubl compil x11r5 on suno_4.1.3
+organ: experiment comput facil, u.c. berkelei
+line: 35
+nntp-post-host: xcf.berkelei.edu
+
+in articl <schneck.735153129@physik.tu-muenchen.de> schneck@physik.tu-muenchen.de (bernhard schneck) write:
+>nemo@aguirr.dia.fi.upm.es (francisco j. ballestero) write:
+>
+>>>   	   the problem occur dure the initi "make world".  when
+>>>      it get up to compil the standard x client, it can't seem to find
+>>>      some of the librari.  right now we highli suspect the program "ld"
+>>>      which wa updat for 4_1_3.
+>>>   
+>
+>>    yip, we had the same problem; the onli fix we found wa to link static
+>>some of the client, ( btw, we us cc). :-(.
+>
+>or us a suno 4.1.1 ld.
+
+or read fix 9, 10, and 11 to the mit distribut.  thi is a known 
+problem - just appli those fix and set sunpost411fcsld to ye and 
+osteenyvers in mit/config/sun.cf to 3.
+
+in fix-09:
+|if you ar run suno 4.1.1 and you appli sun's ld patch 100170-6,
+|then you will need to edit your site.def and add thi line to the
+|aftervendorcf section:
+|
+|#defin sunpost411fcsld   ye
+
+in fix-10:
+|if you ar run suno 4.1.2, chang osteenyvers in mit/config/sun.cf to
+|have a valu of 2.
+
+in fix-11:
+|brief note on what thi patch fix:
+|
+|config: make on suno 4.1.2 fail unless tree previous built in
+
+sean welch

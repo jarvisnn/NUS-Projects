@@ -1,0 +1,17 @@
+from: lei@rtsg.mot.com (peter p. lei)
+subject: do 6 vfintd.386 and window sy.ini
+nntp-post-host: accord4
+organ: motorola inc., cellular infrastructur group
+line: 11
+
+
+doe anyon know what the vfintd.386 devic is us for in window 3.1?
+it's under the [386enh] section as
+	devic=c:\do\vfintd.386
+
+after upgrad to do 6 on sever machin (differ type), some includ
+it, some don't.
+
+ani idea?
+
+pl

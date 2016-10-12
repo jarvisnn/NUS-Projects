@@ -1,0 +1,35 @@
+from: dave@einstein.andi.org (david scheck)
+subject: imak (x11r4) cpp problem on aix
+keyword: imak x11r4 aix
+nntp-post-host: einstein.andi.org
+organ: associ of nextstep develop intern
+line: 28
+
+i am try to build and us imak (x11r4) on an ibm rs/6000 run aix v3.2.
+i am have the follow 2 problem.
+
+(1) mani of my imakefil's have contruct like
+                /**/#thi is a makefil
+        at the start of line to pass makefil comment thru the c
+        preprocessor and into the makefil.  most of the c preprocessor that
+        i have us will not treat such a # as appear at the start of the
+        line.  thu the c preprocessor doe not treat the hash symbol as the
+        start of a direct. 
+
+        howev the ibm cpp strip the comment and treat the hash symbol
+        as the start of a direct.  the cpp fail when it determin
+        that "thi" is not a known direct.  i have temporarili hack my
+        imak to handl thi situat but would like to come up with a better
+        fix.
+
+(2) sever imakefil us /**/ as a paramet to a macro when a particular
+        us of the macro doe not need a valu for the paramet.  the aix cpp
+        give warn about these situat but continu to work ok.
+
+if you ar familiar with these problem and have solut, i would appreci
+inform about on your solut.  (perhap, thi is solv in a later
+version of imak that i have not review.)  also, do you know of other cpp's
+that behav similarli?
+
+sinc i do not have easi access to new, a respons to
+'white_billi@po.gi.prc.com' would be appreci.

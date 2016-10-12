@@ -1,0 +1,97 @@
+from: davewood@bruno.cs.colorado.edu (david rex wood)
+subject: call a librari which creat widget (multipl time)
+nntp-post-host: bruno.cs.colorado.edu
+organ: univers of colorado, boulder
+line: 91
+
+a few dai ago i post a question about try to call a function which set
+up an x app multipl time.  it wa point out that xtappiniti() should
+never be call more than onc.  thi help.  howev, i am still have
+some problem.  below is a new littl test program that more close model
+my real program.  in the actual program, i am write a librari, callabl
+from ani other program.  thi mean that the first time the lib function is
+call, it must initi thing, and after that, it should just us the
+old stuff (still around becaus of static variabl).  in the demo below,
+main() repres the main program call my librari and doit() repres
+the interfac to the librari function.
+
+#includ <x11/xlib.h>
+#includ <xm/xm.h>
+#includ <xm/pushb.h>
+#includ <stdio.h>
+#includ <stdlib.h>
+
+void bla(xtappcontext app, widget top)
+{
+        widget topon = top;		// in real prog, these ar member var
+        xtappcontext theapp = app;	// of a class
+        int junk = 0;
+        displai *di = xtopendisplai(theapp, null, null, null, null, 0, &junk,
+                                        null);
+
+        widget box = xtvacreatemanagedwidget("blaaa", xmpushbuttonwidgetclass,
+                        topon,
+                        xmnheight, 50,
+                        xmnwidth, 50,
+                        null);
+
+        xtrealizewidget(topon);
+        for (int i=0;i<=25;i++)	// real prog return when "exit" button click
+        {
+                xevent event;
+                xtappnextev(theapp, &event);
+                xtdispatchev(&event);
+        }
+        xtdestroywidget(box);
+        xtclosedisplai(di);
+}
+
+// setitup - should be call onc onli
+void setitup(xtappcontext *app, widget *top)
+{
+        int junk = 0;
+        (*top)=xtappiniti (app, "test", null, 0, &junk, null,
+                null, null, 0);
+}
+
+// doit - some librari function callabl from the outsid
+void doit()
+{
+        static xtappcontext app;	// us these everi time call
+        static widget top;
+
+        static int setup = 0;
+
+        if (!setup)
+        {
+                setitup(&app, &top);
+                setup = 1;
+        }
+        bla(app, top);
+}
+
+// main - program which link to my librari
+main()
+{
+        for (int i=0;i<=20;i++)
+        {
+                doit();
+                printf("sleep...\n");//widget still on screen at thi point
+                sleep(5);
+        }
+}
+
+
+the problem is that the widget doe not go awai until the new on is creat.
+(it is still on the screen -- unusu -- dure the "sleep" in the main prog,
+despit the xtdestroywidget call).
+
+anyon see someth i'm miss?
+
+thank veri much.
+
+(pleas respond via email)
+-- 
+-------------------------------------------------------------------------------
+david rex wood -- davewood@cs.colorado.edu -- univers of colorado at boulder
+-------------------------------------------------------------------------------

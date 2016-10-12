@@ -1,0 +1,25 @@
+from: herzog@dogwalk.eng.sun.com (brian herzog - sunsoft product engin)
+subject: re: xsun not run on sparcclass
+organ: sun
+line: 18
+distribut: world
+nntp-post-host: dogwalk
+
+in articl <1r3th9inndtp@tom.rz.uni-passau.de> rank@winf.uni-passau.de (christian rank) write:
+>i've instal x11r5 with patch for solari 2.1 on our sparcstat lx /
+>sparcclass pool. on the lx, x11r5 run fine, but on the classic,
+>after give the command startx, xsun print the follow messag:
+>	warn: cg3_mmap: can't map dummi space!
+>	map cg3c: no such devic or address
+>and exit.
+>
+>doe anybodi know how to fix thi problem?
+
+i'm just guess here, but i'd guess that x11r5 expect the cg3 to have
+1152x900 resolut, and the version of the cg3 in the sparcclass is 
+1024x768.
+
+-- 
+--------------------------------------------------------------------------------
+disclaim: i do not repres sunsoft, inc., sun microsystem, inc., etc., etc.
+brian herzog, sunsoft          herzog@eng.sun.com             ...!sun!eng!herzog

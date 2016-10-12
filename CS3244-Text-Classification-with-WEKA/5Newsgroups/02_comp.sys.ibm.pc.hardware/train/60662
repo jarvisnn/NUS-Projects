@@ -1,0 +1,17 @@
+from: saeid@ug.cs.dal.ca (saeid 'the last frontier')
+subject: send a null charact across ethernet
+nntp-post-host: ug.cs.dal.ca
+organ: math, stat & cs, dalhousi univers, halifax, ns, canada
+x-newsread: tin [version 1.1 pl6]
+line: 10
+
+i have a question regard send a null charact across ethernet
+connect. the actual problem is that emac (unix editior) need
+the null charact for set a mark and unfortun we don't know
+how to sent that from ibm pc across ethernet. i am wonder if anyboi
+know the keyboard combin for send the null charact. 
+btw control,shift 2 which ctrl @ doe not work.
+
+thank
+
+saeid

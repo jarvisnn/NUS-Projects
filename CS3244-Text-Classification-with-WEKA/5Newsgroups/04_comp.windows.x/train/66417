@@ -1,0 +1,20 @@
+from: ware@obo.ci.ohio-state.edu (peter ware)
+subject: re: privat colormap & widget creation
+organ: ohio state comput scienc
+line: 13
+nntp-post-host: obo.ci.ohio-state.edu
+in-repli-to: nanci@neko.css.gov's messag of 2 apr 1993 14:55:09 -0500
+
+you ar right in suppos that the problem is with the xmncolormap
+(xtncolormap for truli liter be) not be set.  what you want
+to do is start your applic with your new colormap.  thi can be a
+chicken and egg sort of problem, howev.  if you look at the xt faq
+there is an exampl that should show how it can be done.  if not, let
+me know and mayb i can improv the exampl.
+
+--pete
+--
+pete ware					ware@ci.ohio-state.edu
+ci dept, ohio state univers			w/ (614) 292-7318
+228 bolz hall, 2036 neil av.			h/ (614) 538-0965
+columbu, oh 43210

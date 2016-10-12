@@ -1,0 +1,36 @@
+from: jdhuse@sedona.intel.com (jon dhuse~)
+subject: a strang problem with text
+organ: intel corpor
+line: 28
+distribut: world
+nntp-post-host: tasmania.intel.com
+origin: jdhuse@sedona
+
+
+hello,
+
+i am test a port of x11r5 to coher, a unix clone os for intel architectur
+machin.  i am see a strang problem with text in client like xvt (a simpl
+termin emul program).
+
+the problem manifest it self when the shell echo type charact back to the
+server for displai, on at a time.  the charact appear to be too close
+space, with the result be that the 2nd charact echo destroi the 
+rightmost edg of the first charact, then the 3rd charact destroi the 
+rightmost edg of the second charact, and so on.  it look like there is an
+invis boundari around a charact which obscur a portion of the previou
+charact.  there is no problem between the charact when the shell return
+a complet line of text... onli when the output is a seri of individu
+charact.
+
+if anyon ha ani idea what the problem might be, or where i should look to
+find it, it would be much appreci.
+
+regard and thank, jon dhuse.
+
+-- 
+ jon dhuse              |     internet: jdhuse@sedona.intel.com
+ intel  corp.  ch3-69   |     phone: (602)-554-2685
+ 5000 w. chandler blvd. | ani opinion express ar my own,
+ chandler, az  85226    | not my employ's.
+

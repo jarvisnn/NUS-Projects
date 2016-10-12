@@ -1,0 +1,64 @@
+from: hade@coo.dartmouth.edu (brian v. hugh)
+subject: re: why doe appl give us a confus messag?
+repli-to: hade@dartmouth.edu
+organ: dartmouth colleg, hanov, nh
+disclaim: person, i realli don't care who you think i speak for.
+moder: rec.art.comic.info
+line: 56
+
+ub@carson.u.washington.edu (univers bookstor) write:
+>bunt0003@student.tc.umn.edu (monthian buntan-1) write:
+>>
+>>
+>>doe anyon know why appl ha an ambigu messag for c650 regard
+>>fpu?  in all mac price list i've seen, everi c650 ha the messag "fpu:
+>>option".  i know from what we've discuss in thi newsgroup that all
+>>c650 have the fpu built in except the 4/80 configur.  why would
+>>thei be so unclear about thi issu in their price list?
+
+    i think thi is mostli the fault of the peopl who write up the
+literatur and price list be confus themselv. sinc there ar
+two possibl processor configur and on of the them doesn't have
+an fpu it doe seem to be an option, even though it realli isn't.
+
+>>i'm plan to bui the c650 8/230/cd pretti soon, but i'm now get
+>>confus with whether it come with fpu or not.
+
+    well, then allow me to end your confus. the c650 onli come with
+an lc040 in the base 4/80 configur. if you ar not get thi
+configur then you ar get an fpu.
+
+>>why sai "option" if it's built in?
+
+    good question. i have been wonder that sinc feb. 10th.
+
+>if you get the centri 650 with cd configur, you ar get a mac with
+>a 68rc040 processor that ha built-in math coprocessor support.  my 
+>understand is that the "option fpu" refer to your option of purchas
+>the centri 650 4/80 without fpu or on of the other configur with fpu.
+ 
+    thi is possibl, but an option is someth that you ar suppos
+to be abl to request when you want it. what appl ha done is given the
+buyer a choic between configur and not an option.
+
+>appl doe not offer an upgrad from the non-fpu system to becom an fpu
+>system.  and, it is unclear whether the '040 processor on the non-fpu system
+>(a 68lc040) can be replac with a 68rc040 suppli by anoth vendor.
+
+    thi is not unclear at all. in fact appl ha includ in the rom
+of those machin with lc040s code to recogn the presenc of the full
+040's fpu and us it. therebi make the upgrad as easi as switch
+chip. you pop the lc040 out and pop in a full '040.
+
+>appl did send a memo out at on point sate that the centri 610, which onli
+>come with a non-fpu 68lc040 processor cannot be upgrad to support an fpu -
+>the pin configur of the two chip appar do not match so you cannot
+>swap on for anoth (again, accord to appl's memo).
+
+    thei did? i think i would doubl-check thi. it ha been state
+countless time in thi newsgroup by two of the centri hardwar
+design that the lc040 and the full '040 ar pin compat and that
+the c610 can be upgrad to a full '040.
+
+-hade
+

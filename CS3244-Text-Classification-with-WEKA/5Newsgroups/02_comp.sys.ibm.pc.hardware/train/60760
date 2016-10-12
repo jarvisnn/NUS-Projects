@@ -1,0 +1,33 @@
+from: gelldav@elof.iit.edu (david a. geller)
+subject: pariti error - system halt /anyon have ani idea?
+organ: illinoi institut of technolog, chicago
+line: 28
+
+i recent bought an amd 386/40.  the motherboard booklet sai
+the board is a "391 wb/h."  i have 4 1x3 simm on board.  the machin
+also us a super id i/o card (model pt-604). (of cours niether
+the motherboard or the i/o card booklet clearli state who the manufacur
+ar) i'm also us a trident 8900c svga card.
+
+	anywai, that's all of the pertin info i can think of.
+my problem is that the comput often freez or displai "pariti error --
+system halt" messag depend on whether i set the memori pariti error
+check to "disabl" or "enabl" in the setup of the bio (make sens).
+it ami bio (so it must be an ami board?).
+
+	i just took it back to the dealer and thei replac all of the
+simm but i keep get the same error (more frequent now).  it all
+work at the dealer and didn't start screw up 'till i got home (figur).
+
+	i've tri to take out all of the simm and even re-insert them
+in revers order, make sure that the connect were solid.
+
+	my suspicion jump to thi damn all in on hd control/serial/
+parallel/game-port i/o card, or to the motherboard (god forbid).
+
+	can anyon help?
+
+thank, peac,
+david geller
+gelldav@elof.acc.iit.edu
+

@@ -1,0 +1,45 @@
+from: steinark@edb.tih.no (steinar kleven)
+subject: re: window help
+nntp-post-host: beta.edb.tih.no
+organ: trondheim colleg of engin
+x-newsread: tin [version 1.1 pl9]
+line: 38
+
+mario veraart (mveraart@fel.tno.nl) wrote:
+: umyin@ccu.umanitoba.ca (qing yin) write:
+
+: >hi, it's an *easi* question for you window guru.  i'd appreci ani help.
+
+: >we need to write an on-line help for our applic.  we don't have
+: >window softwar develop's toolkit (yet :-) ). sinc we just want to build
+: >a .hlp file around window' help engin, i hope it won't be that complic?
+: >anywai, could someon kindli give me some hint of how to build such an
+: >on-line help, if it doe not take 100 page to explain? or if it is complic,
+: >would you help to point out what i would need to do it?
+: >-- 
+
+
+: >vincent q. yin
+: >umyin@ccu.umanitoba.ca
+
+: hi,
+
+: if you have develop your own window applic you must have a 
+: sdk of some sort that contain the hc.ex or hc31.ex file to 
+: compil and gener .hlp file out of .rtf file.
+
+****------->  no, u can download what??.zip from ftp.cica.indiana.edu
+              thi packag from ms is all u need to buid (simpl?) .hlp
+              file from rich text format file (.rtf). thi packag
+              also contain .dot tamplat for ms word4win.
+ 
+: rtf file ar gener by a wordprocessor like word for do or w4w.
+
+: if thi is not the solut be more specif about your applic.
+
+: mario
+: -- 
+: mario veraart                  tno physic and electron laboratori
+: email: rioj7@fel.tno.nl        the hagu       the netherland
+: "if all els fail, show pretti pictur and anim video, 
+:  and don't talk about perform",  david bailei

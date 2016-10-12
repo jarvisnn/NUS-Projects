@@ -1,0 +1,56 @@
+from: d3e758@bucki.pnl.gov (je pelkei)
+subject: multi-screen app and window manag
+origin: d3e758@bucki.pnl.gov
+organ: battel pacif n.w. lab
+line: 50
+
+
+
+i am work on a project to provid an emerg manag
+inform system.  in keep with more classic command and
+control type system, we ar consid develop a dual screen monitor
+system in order to provid a statu board on it's own monitor.  
+i have a number of x level question regard thi:
+
+(we ar devlop on unix system us x/motif. platform will be 
+predominantli sun's, probabl with port to rs/6000 as well).
+
+i am assum the standard dual monitor system ar configur
+such that we ar talk about on x displai and multipl screen,
+and not multipl x displai.   given thi:
+
+	- is chang input focu from on screen to the other as simpl
+	as track your mous from on screen to the other?  there's
+	noth special that need to be done to shift focu between
+	screen?
+
+	- do i have to run separ window manag on the separ
+	screen or ar there multiscreen window manag out there?
+	what ar thei; who sell them...
+
+	- is a multi-screen window manag the onli wai i can grab a
+	window frame and move a window from on screen to the next?
+
+	- is there ani wai for the applic to transpar see
+	multipl screen as on logic x-y plane, or doe the hardwar
+	onli provid for each screen to start at 0,0?
+
+	- ani thought on the difficulti involv with design a
+	system capabl of us either multipl screen or a singl
+	screen (perhap run a virtual window manag to simul
+	multipl screen instead)?  
+	i am assum that thi is not a major issu - that i can reli
+	on provid config file which will specifi for each
+	configur the screen placement of each window in the
+	applic.  ani thought or suggest from past experi
+	ar more than welcom.
+
+
+========================================================================
+jo pelkei                                   phone: (509)375-6947
+battel pacif northwest lab             fax:   (509)375-3641
+mail stop k7-22                             email: je_pelkei@pnl.gov
+p.o. box 999
+richland, wa  99352
+========================================================================
+

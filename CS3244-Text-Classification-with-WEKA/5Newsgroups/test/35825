@@ -1,0 +1,60 @@
+from: tmc@spartan.ac.brocku.ca (tim ciceran)
+
+subject: re: trident 8800cs driver for win 3.1?
+
+organ: brock univers, st. catharin ontario
+
+x-newsread: tin [version 1.1 pl9]
+
+line: 24
+
+
+
+fast-eddi felson (jmarttila@finabo.abo.fi) wrote:
+
+: hello
+
+
+
+: i've got an old trident 8800cs svga card, but lack suitabl driver
+
+: for window 3.1. the driver for the 8900 seri seem to be incompat.
+
+: doe anyon have an idea of where to get these driver? address for an
+
+: ftp-site would be nice. 
+
+
+
+: thank in advanc
+
+
+
+: jouni
+
+
+
+: _______________________________________________________________________________
+
+: jouni marttila - yo-kyl{ 11 b 25,  20540 turku,  finland - +358 21 374624____
+
+: jmarttila@abo.fi - jmarttila@finabo - abovax::jmarttila - jjmartti@utu.fi__
+
+: pgp-kei avail via finger jmarttila@abo.fi ___________________________
+
+
+
+you can find the driver at wuarchiv.wustl.edu in the /msdo/window3 sub-
+
+directori.  i think the file ar call "tvgawin31a.zip" and "tvgawin31b.zip."
+
+those ar the latest driver avail as far as i know.
+
+
+
+tmc.
+
+(tmc@spartan.ac.brocku.ca)
+
+
+

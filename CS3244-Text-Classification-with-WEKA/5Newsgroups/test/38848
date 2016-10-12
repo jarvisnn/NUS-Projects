@@ -1,0 +1,282 @@
+from: glang@slee01.srl.ford.com (gordon lang)
+
+subject: re: how is a null modem cabl?
+
+organ: ford motor compani research laboratori
+
+line: 134
+
+nntp-post-host: slee01.srl.ford.com
+
+x-newsread: tin 1.1 pl5
+
+
+
+kevin kimmel - comput scienc/german undergrad (ke_kimmel@vax.cn.muskingum.edu) wrote:
+
+: 
+
+: 	i am interrest in the extrodinarili simpl concept of the null modem
+
+: cabl. (actual i have no idea, so don't count that last statement.)  what i'm
+
+: ask is what pin doe it us (or what ar it's specif?)  i just want
+
+: to solder on myself instead of bui on.  i don't even know what port is
+
+: us.
+
+: 
+
+: help me pleas (at ke_kimmel@vax.cn.muskingum.edu)
+
+: 
+
+: kevin
+
+: 
+
+: p.s.  i'm intend to us the cabl for pc-to-pc transfer (via lap-link or
+
+: telix.  idea and info gladli accept.)
+
+
+
+i do not have specif knowledg of lap-link or telix, but my recommend
+
+for ani packag is to follow each on's instruct for make the null-
+
+modem cabl.  the reason is that each on mai be differ sinc there isn't
+
+realli a standard for pc to pc commun.  the follow is a tutori
+
+i wrote up that will give you an understand about rs-232 and null modem,
+
+but you should still check your softwar!
+
+
+
+i will eplain a coupl of detail of rs-232.  rs-232 is
+
+a commum specif for commun between a comput and a
+
+modem.  actual it can be between ani end system and ani commun
+
+hardwar.  the terminolog us is data termin equip (dte) and data
+
+commun equip (dce).  rs-232 spell out the voltag level, the
+
+connector type, the pinout, and the signal protocol.  the connector is
+
+a "db-25" but ibm ha set an altern "standard" of db-9.  the primari
+
+signal ar transmit data (td), reciev data (rd), and signal ground (sg).
+
+there ar other signal that provid control between the dte and the dce.
+
+for exampl, the dte announc that it is power up and readi to particip
+
+in commun via the data termin readi (dtr) signal.  dtr is an
+
+output on the dte and an input on the dce.  similarli, the dce announc that
+
+it is readi to particip in commun via the data set readi (dsr)
+
+signal.  dsr is an input on the dte and an output on the dce.  ok that's
+
+five signal; there ar onli four more of interest.  the request to send (rt)
+
+signal is an output from the dte (and an input to the dce) that is us
+
+to ask the dce permiss to send data.  if the dce agre, it send an ok
+
+via the clear to send (ct) signal.  (for complet, the ct is an input
+
+to the dte and an output from the dce).  the other two signal (of interest)
+
+ar ring indic (ri) and data carrier detect (dcd).  these ar both input
+
+to the dte and output from the dce.  ri is just what you would expect -
+
+a signal to the dte sai that someon is attempt to establish a connect
+
+to the dce.  thi is rather specif to the modem / telephon line setup.
+
+dcd is a wai for the dce to announc that the "connect" ha been establish
+
+i.e. the local dce is talk to some remot dce.  there - that's it.  oh
+
+there ar mani other rs-232 signal defin, but thei ar obsolet.  i have
+
+explain the nine signal that ar on a pc.  the pinout ar as follow:
+
+
+
+name    db-9     db-25
+
+ sg       5        7
+
+ td       3        2
+
+ rd       2        3
+
+dtr       4       20
+
+dsr       6        6
+
+dcd       1        8
+
+rt       7        4
+
+ct       8        5
+
+ ri       9       22
+
+
+
+now to address your problem at hand.  when you connect a pc to a pc (a dte
+
+to a dte), there is no dce pair in the middl and therefor the rs-232
+
+signal definit don't work out quit right.  there is no dce to assert
+
+the ct, dsr, dcd, or ri.  so the common thing to do is to not us these
+
+signal at all - and also forget about the dtr and rt output as well.  if
+
+thi is done you simpli make a null modem (a cabl) that pass through sg,
+
+and cross td and rd (i.e. pin 2 of on end connect to pin 3 at the other
+
+end, etc).  the problem with thi solut is that a pc that want to send
+
+data ha no wai of know if the other pc is readi.  it would have to just
+
+send the data and hope it got through.  therefor a better null modem would
+
+includ the dtr/dsr pair cross.  a particular point a confus is in the
+
+softwar area.  just becaus you run the wire doe not mean that the soft-
+
+ware will us them.  if you ar us the built-in bio to control the
+
+serial port, then the bio dictat what wire you need and how thei ar to
+
+be us.  but if you have a comm. packag such as brooklyn bridg, or lap-
+
+link or telix, then those packag dictat the cabl requir.  the
+
+onli thing you can guess reliabl is the sg, td, and rd.  the dtr/dsr is also
+
+fairli common.  there is on more issu that need to be address here.  and
+
+that is flow control.  in the rs-232 scenerio, the dce's ar respons for
+
+flow control and it is assum that the dce couldn't possibl over-run the
+
+dte.  by thi i mean that as long as the dte ha it dtr line assert, the
+
+dce will send data - without request permiss first.  note the contrast
+
+to the other direct of data flow: the dte must request permiss by
+
+assert the rt line and it must wait for the ct signal befor it can
+
+send.  and now in the dte to dte scenerio, the question is do you need flow
+
+control?  the answser is usual.  but how?  for non-binari commun,
+
+on common techniqu is xon - xoff which is implement in softwar - no
+
+wire ar dedic to flow control; the td and rd carri the xon and xoff
+
+command.  thi type of flow control can be us in addit to hardwar
+
+flow control, but the problem is that you can't send binari data becaus
+
+your data might includ the xon or xoff code and caus erron conrol
+
+signal.  (a work around is to have the softwar insert and extract "escap"
+
+code, but the hardwar flow control is prefer).  the problem with hard-
+
+ware flow control is that there is no standard.  there ar lot of wai to
+
+do it and i bet thei have all been tri.  on cornerston of all the method
+
+is to us the rt/ct for on direct.  but beyond that anyth is fair
+
+game.  again, you must look to you comm packag for cabl requir.
+
+but i bet you'll find that on cabl (if wire properli) could work with
+
+all of the packag as long as thei ar of the same vintag.  by the wai,
+
+i am familiar with on packag that us rt/ct and dtr/dsr for flow control
+
+the rt is request to send and the dtr is readi to reciev, the ct is the
+
+clear to send and the dsr is the request to reciev.  thi doe not mean a
+
+differnt cabl - it is just softwar.  the clincher to all of thi cabl
+
+stuff is that it is common to have the uart directli control by the ct
+
+signal which mean that the ct must be present even if you ar not support-
+
+ing it in softwar.  for these case you will find cabl that short the
+
+rt to the ct at the same end (or perhap the dtr to the ct).  other
+
+possibl short might be done just becaus the softwar expect certain
+
+signal that you don't have (or don't feel like provid becaus it would
+
+mean addit wire).  specif i am talk about the dsr.  short
+
+the dtr to the dsr is not a good idea in gener but you mai find cabl like
+
+thi.  it is a bad idea becaus it defeat the whole purpos.  on more
+
+"gotcha" signal is the dcd.  some softwar (includ the pc bio) expect to
+
+see the dcd befor it will work.  thi signal sometim get short with the
+
+dtr.  but my favorit null modem ha the rt and ct short at each end, but
+
+the rt is also connect through to the other end and connect to dcd.  and
+
+of cours the dtr/dsr ar cross as ar the td/rd and of cours the sg must
+
+pass through.  thi null modem work with most softwar.  the flow control,
+
+if ani, can us the rt/dcd with the dtr/dsr.  if your comm. packag doe not
+
+specifi the cabl requir for pc to pc connect, then i suggest you us
+
+thi on.
+
+
+
+    td  ------  rd
+
+    rd  ------  td
+
+    dtr ------ dsr
+
+    dsr ------ dtr
+
+    dcd ------ rt-\
+
+  /-rt ------ dcd |
+
+  \-ct        ct-/
+
+
+
+
+
+gordon lang
+
+
+

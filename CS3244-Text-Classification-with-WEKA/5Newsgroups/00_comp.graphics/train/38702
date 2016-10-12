@@ -1,0 +1,66 @@
+from: beck@irzr17.inf.tu-dresden.de (andr beck)
+subject: re: font in pov??
+organ: dept. of comput scienc, tu dresden, germani.
+line: 57
+distribut: world
+repli-to: andr_beck@ir.inf.tu-dresden.de
+nntp-post-host: irzr17.inf.tu-dresden.de
+keyword: font, raytrac
+
+
+in articl <1qg9fc$et9@wampyr.cc.uow.edu.au>, g9134255@wampyr.cc.uow.edu.au (coronado emmanuel abad) write:
+|> 
+|> 
+|> 	i have seen sever rai-trace scene (from mtv or wa it 
+|> rayshad??) with stroke font appear as object in the imag.
+|> the font/char had color, depth and even textur associ with
+|> them.  now i wa wonder, is it possibl to do the same in pov??
+|> 
+
+hi noel,
+
+i've made some attempt to write a convert that read adob type 1 font,
+triangul them, bevel them and extrud them to result in a gener
+3d object which could be us with pov f.i.
+
+the problem i'm current stuck on is that there no algorithm which
+triangul ani arbitrari polygon shape. delaunai seem to be limit
+to convex hull. constrain delaunai mai be okai, but i have no code
+exampl of how to do it.
+
+anoth wai to do the bartman mai be
+
+- tga2pov
+- a selfmad variat of thi, us heightfield.
+
+  creat a b/w pictur (big) of the text you need, f.i. us a postscript
+  preview. then, us thi as a heightfield. if it is white on black,
+  the heightfield is exactli the imag white part (it's still open
+  on the backsid). to close it, mirror it and compound it with the origin.
+
+exampl:
+
+object {
+   union {
+      height_field { gif "abp2.gif" }
+      height_field { gif "abp2.gif" scale <1 -1 1>}
+   }
+   textur {
+      glass
+   }
+   translat <-0.5 0 -0.5>      //center
+   rotat <-90 0 0>             // rotat upward
+   scale  <10 5 100>            // scale bigger and thicker
+   translat <0 2 0>            // final placement
+}
+
+
+abp2.gif is a gif of arbitrari size contain "abp" black on white in
+time-roman 256 point.
+
+--
++-o-+--------------------------------------------------------------+-o-+
+| o |                \\\-  brain insid -///                       | o |
+| o |                    ^^^^^^^^^^^^^^^                           | o |
+| o | andr' beck (abpsoft) mehl: andr_beck@ir.inf.tu-dresden.de | o |
++-o-+--------------------------------------------------------------+-o-+

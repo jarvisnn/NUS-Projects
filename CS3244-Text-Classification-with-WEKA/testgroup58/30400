@@ -1,0 +1,44 @@
+from: ardi@ux1.cso.uiuc.edu (ardi mack)
+
+subject: re: emm386 and window
+
+organ: depart of plant patholog
+
+line: 17
+
+
+
+>on my pc i almost exclus run window. the onli do base applic  
+
+>i have is procommplu.  in my config.sy i have emm386 load with the  
+
+>option noem (no expand memori). follow a thread in on of the comp  
+
+>newsgroup, i read that it wa no necessari to have emm386 load. inde,  
+
+>in the manual, it sai that emm386 is us to get expand memori out of  
+
+>extend memori. sinc i have the noem option, it seem to me that the  
+
+>emm386 devic is useless in my case. 
+
+>
+
+>should i us emm386 or should i remov it from my config.sy?
+
+>
+
+>thank for your help,
+
+>
+
+>-eric
+
+
+
+emm386 noem enabl the system to us the "upper memori" between 640 and 
+
+1024.  that's a good place for devic driver, do kernal, etc.
+
+(keep it in!)
+

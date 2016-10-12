@@ -1,0 +1,39 @@
+from: ls116@cunixa.cc.columbia.edu (lei  shao)
+subject: re: truetyp font that displai but do not print.
+nntp-post-host: cunixa.cc.columbia.edu
+repli-to: ls116@cunixa.cc.columbia.edu (lei  shao)
+organ: columbia univers
+distribut: na
+line: 31
+
+in articl <1993apr17.134725.15882@mintaka.lc.mit.edu> avinash@silver.lc.mit.edu (avinash chopd) write:
+>i just instal a new truetyp font under ms-window 3.1
+>but though all the applic displai the font correctli on the
+>screen, quit a few of them fail to print out the document correctli
+>(on a laserjet 4 - non-postscript printer).
+>
+>when i us the font in coreldraw, the document print correctli, so i assum
+>coreldraw know that the font ha to be download to the printer.
+>
+>but when i us the window accessori write, the printer print squar
+>box in place of the charact of the new font. yet, write doe
+>displai the font correctli on the screen.
+>
+>i look through all the window and laserjet manual, but got nowher.
+>all of them just make the statement that truetyp font will print
+>exactli as you see them on the screen---so i assum window know that a font
+>ha to be download automat---but, how to make it do that????
+>
+>appreci ani help....
+
+	i assum you're us the driver avail from cica (hp4-v108.zip).
+bring up the setup screen of the printer through control panel. click on the
+"option" button bring up anoth screen of choic. chang the "graphic
+mode" from "hp-gl/2" to "raster" and check the box "print truetyp as graphic
+(thi is onli avail when you choos "raster"). now you should be abl to
+print all your truetyp font correctli. good luck.
+
+
+lei shao
+ls116@cunixa.cc.columbia.edu
+

@@ -1,0 +1,767 @@
+from: ph12hucg@sbusol.rz.uni-sb.de (carsten gramm)
+subject: list of id harddisk spec (21/04/93)
+organ: universitaet de saarland,rechenzentrum
+line: 761
+nntp-post-host: sbusol.rz.uni-sb.de
+
+		    configur of id harddisk
+		    ==============================
+
+
+last updat:	14.4.1993
+
+collect by carsten gramm (ph12hucg@rz.uni-sb.de)
+and publish regularli on comp.sy.ibm.pc.hardwar.
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+there is explicitli no warranti
+that the given set ar correct or harmless. (i onli collect, i do
+not check for myself!!!). there is alwai the possibl that the
+set mai destroi your hardwar!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+sinc i hope howev that onli well-mind peopl undergo the effort of
+post their set the chanc of applic exist. if you should
+agre or disagre with some set, let me know immedi in order
+to updat the list.
+
+if you possess a hd not mention here of which you know bio and/or
+jumper set, pleas mail them to me for the next updat of the list!
+
+onli id (at-bu) harddisk will be account for.
+if not specifi the land zone should be set equal to the number of
+cylind. if not specifi the 'write precompens' should be set
+65535. (there ar bios that don't even ask for it).
+
+anoth statement (mayb right):
+id harddisk don't have precomp and lzone. the precomp is a built-in paramet
+and lzone isn't us becaus most if not everi id disk ha autopark.
+
+the jumper' name ar given as print on the hd's board, often onli a
+jumper number (jp12 mean the jumper '12'). a zero mean that the jumper
+is left open, a on mean that the jumper is close.
+
+
+
+***************************   c o n n e r   ***************************
+
+
+		conner peripher drive geometri
+
+id/at
+
+conner drive ar low level format at the factori. it is onli necessari
+to run setup, fdisk, and do format.
+
+model   head  cylind  sector   pcomp   l-zone  type  tabl    led
+
+cp2034     2     823         38      0       823    *ut     3      n/a
+cp2064     4     823         38      0       823    *ut     3      n/a
+cp2084     8     548         38      0       548    *ut     3      n/a
+cp3184     6     832         33      0       832    *ut     1       a
+cp3104     8     776         33      0       776    *ut     1       a
+cp3111     8     833         33      0       833    *ut     1       a(?)
+cp3204    16     683         38      0       683    *ut     2       b
+cp30064    4     762         39      0       762    *ut     2       b
+cp30084    8     526         39      0       526    *ut     2       b
+cp30104    8     762         39      0       762    *ut     2       b
+cp30084e   4     903         46      0       903    *ut     3       c
+cp30174e   8     903         46      0       903    *ut     3       c
+cp30204   16     683         38      0       683    *ut     3       c
+cp3304    16     659         63      0       659    *ut     3       d
+cp3364    16     702         63      0       702    *ut     3       d
+cp3504    16     987         63      0       987    *ut     3       d
+cp3554    16    1054         63      0      1054    *ut     3       b
+
+tabl 1                                  tabl 2
+
+       jumper set                          jumper set
+
+singl drive = jumper act and c/d        singl drive = jumper c/d
+master drive = jumper act, c/d and dsp   master drive = jumper c/d & dsp
+slave drive = no jumper instal       slave drive = no jumper instal
+
+
+tabl 3
+                                     all conner 20 mbyte drive us
+        jumper set              drive type 2.  all conner 40
+                                     mbyte drive us drive type 17.
+singl & master drive = jumper c/d
+slave drive = no jumper instal   *ut = univers translat.
+                                     select a drive type that is
+                                     close to but doe not exce
+                                     the megabyt capac of the
+                                     drive.  the drive will
+                                     translat to the megabyt
+                                     capac that you have
+                                     select.
+
+  led
+
+  a:           b:                       c:         d:
+  j-4          j-5                      j-5        j-3
+  pin 1 = +    pin 3 = +                pin 3 = -  pin 3 = +
+  pin 2 = -    pin 4 = -                pin 4 = -  pin 4 = -
+
+
+> when i instal a conner cp3204f (203 mb) as master and a wd caviar 2200
+> (203 mb) as slave, both with and without the "cp" jumper, the caviar had
+> seemingli normal behaviour. howev, when do write to the caviar, onc
+> in a while it would overwrit directori etc. us fastback wa almost
+> imposs.
+> 
+> the workaround is to instal the caviar as the master, and the conner
+> as the slave.
+
+
+
+***************************    f u j i t s u      ***************************
+
+detail of fujitsu drive m261xt (standard)
+
+                   m2614et     m2613et     m2612et     m2611t
+
+head (physic)       8           6           4           2
+cyl (physic)      1334        1334        1334        1334
+sec/trk               33          33          33          33
+speed (rpm)         3490        3490        3490        3490
+capac           180mb       135mb        90mb        45mb
+
+
+              +-----------------------------------------------+
+              |                                               |
+              +--+                                            |
+        psu   |  |      cnh-2                                 |
+              +--+          1                                 |
+            1 |  |          .                    led          |
+              |  | cnh-1    9      cnh-3      connector       |
+              |  |   1           6..1            o o          |
+      40-wai  |  |   .                           | |          |
+        id   |  |   .                                        |
+              |  |   .                                        |
+              |  |  12                                        |
+              +--+                                            |
+              +-----------------------------------------------+
+
+
+
+                 pin        function
+                 posit
+
+                 *  1- 2    activ mode
+                    2- 3    slave present mode
+                    4- 5    pin 27=iochrdi
+cnh-1 jumper    *  5- 6    pin 27=reserv
+                    7- 8    2 drive system
+                 *  8- 9    1 drive system
+                   10-11    pin 29=irq14 : pin 31=reserv
+                 * 11-12    pin 31=irq14 : pin 29=reserv
+
+
+                 pin        function
+                 posit
+
+                    1- 2    slave drive mode
+cnh-2 jumper    *  4- 5    master drive mode
+                    7- 8    ecc 4 byte
+                 *  8- 9    ecc 7 byte
+
+
+                 pin        function
+                 posit
+
+                    1- 2    write protect enabl
+cnh-3 jumper    *  2- 3    write protect disabl
+                    4- 5 -6 reserv
+
+kei:  * (i guess!) mark factori default set for jumper
+
+
+bio set
+
+bio set for the m2614et in my system is 667 cylind, 33 sector
+and 16 head.
+
+> i wa try to set my id drive in the subject abov to a slave drive for
+> a conner 170mb drive and contact the support compani gave me thi answer (which work). the factori default on sw2 is on off off off off off (1-6). thi set the drive to be a singl drive. set sw2 to off on on off off off make it a slave drive. sw1 ha been set to on off off on (1-4) all along.
+
+
+
+model      cylind   head    sector   capac (million byte)
+
+m2622t      1013        10        63         326.75
+m2623t      1002        13        63         420.16
+m2624t      995         16        63         513.51
+
+
+there ar 6 switch on the switch block on these drive.  onli 4 of 
+them have a us that i am awar of (from my m2624t manual):
+
+master/slave        master (*)      sw1-5 off
+                    slave           sw1-5 on
+ecc byte           4 byte (*)     sw1-4 off
+                    7 byte         sw1-4 on
+write protect       disabl (*)    sw1-3 off
+                    enabl         sw1-3 on
+io channel readi    disabl (*)    sw1-1 off
+                    enabl         sw1-1 on
+
+i have no idea about the function of sw1-2 and sw1-6.  the valu 
+list with a (*) ar the factori default set.
+
+
+***************************   k a l o k     ***************************
+
+kalok	kl3100	  105 mb
+bio:	cyl 979     head 6	sector 35
+
+kalok   kl3120    120 mb
+bio:	 cyl 981     head 6     sector 40
+
+the follow jumper set have been report for kl3100 but ar probabl
+also valid for other kalok drive.
+
+singl hd:
+o o o o o
+
+o o o o-o    <-- same row as pin 1 of the id connector.
+
+master (disk 1):
+o o o o o
+    |
+o o o o o
+
+slave:
+o o o o o
+      |
+o o o o o
+
+these 5 pair of pin ar at the righthand side of the disk.
+
+
+
+***************************   m a x t o r   ***************************
+
+model           cyl    head   sector precomp land zone
+----------	-----	-----	-------	-------	------------
+lxt-200a	816	15	32	0	816
+lxt-213a	683	16	38	0	683
+lxt-340a	654	16	63	0	654
+lxt437a		842	16	63	0	842
+lxt535a		1036	16	63	0	1024
+
+jumper ar as follow:
+
+the bottom of the drive look like thi (well, sort of):
+
+|        o o 1-2             |
+|        o o 3-4             |
+|        o o 5-6             |
+|        o o 7-8             |
+|        o o 9-10            |
+|                            |
++[power] [id connector]-----+
+
+				singl drive	  dual drive system
+pin number	jumper		system		master		slave
+-----------	------		------------	------		-----
+1-2		slave drive	remov		remov		instal
+3-4		activ led	option	option	option
+5-6		slave present	remov		remov		option
+7-8		master drive	remov		instal		remov
+9-10		sync spindl	remov (n/a)	option*	remov
+
+* onli on drive (the master) in an arrai should have thi jumper instal.
+
+
+
+maxtor 7060a    16    467   17     62,0 j14 close, j13 close
+maxtor 7060a     7   1024   17     59,5 j14 open,   j13 open
+maxtor 7060a     4    762   39     58,0 j14 close, j13 open
+maxtor 7060a     8    925   17     57,9 j14 open,   j13 close
+
+maxtor 7120a    16    936   17    124,3 j14 close, j13 close
+maxtor 7120a    14   1024   17    119,0 j14 open,   j13 open
+maxtor 7120a     8    762   39    116,0 j14 close, j13 open
+maxtor 7120a    15    900   17    112,0 j14 open,   j13 close
+maxtor 7120a     8    824   33    106,2 j14
+
+jumper for the abov 2 drive:
+
+                  j11  i/o-channel readi ( open: disabl; close: enabl )
+                  j13  see abov
+                  j14  see abov
+                  j15  oper-statu ( open: normal; close: factori )
+       j j j j j            
+       2 1 1 1 1
+       0 9 8 7 6
+
+power  data-cabl
+
+j16: idl mode latch ( open: disabl; close: enabl )
+j17: drive model ( open: 7060a; close 7120a )
+j18: ecc byte ( open: 7 byte; close: 4 byte )
+
+master/slave: drive is master and alon    : j20 close, j19 close
+              drive is master of two drive: j20 close, j19 open
+              drive is slave of two drive : j20 open  , j19 close
+
+
+maxtor 7213a
+
+default (power-up) at bio translat paramet (other possibl)
+cyl   hd  spt  mbyte
+683   16   38   212
+
+there ar two set of jumper. a set of 5 and a set of
+4. with the power and id connector toward you, the set of 5 is
+number (left to right) j16 - j20  , and the set of 4 is number
+(bottom to top) j22-j25. 
+
+the onli jumper of normal interest is j20. jumper it for onli
+drive in a singl drive system, or master drive in a dual drive
+system.
+ 
+remov the jumper j20 for slave drive in a dual drive system. 
+
+j19 is a dummi and mai be us to store the spare shunt if the 
+drive is configur for a slave mode.
+
+jumper j17, j18, j24, j25 ar factori reserv. abnorm oper
+mai occur if jumper.
+
+jumper 22 is sync spindl enabl/disabl  (open=disabl)
+jumper 23 is sync slave/master              (open=slave)
+jumper 16 is i/o channel readi              (open=disabl)
+
+
+maxtor 7245a (245mb id; self-park; univers translat):
+drive type : user defin
+cyl    hd    wpc    lz     s/t
+967    16     0      0      31      (wpc and lz option)
+
+master(2):  j20 close
+slave(2):   j20 open (us j19 for shunt storag)
+singl:     j20 close
+
+
+**********************   m i c r o p o l i s   ****************************
+
+
+drive		2105a		2112a
+----------------------------------------
+unformat mb	647		1220
+format mb	560		1050
+platter	5		8
+head		8		15
+cylind	1760		1760
+----------------------------------------
+
+perform (both):
+
+	track to track (read)		1.5 msec
+	track to track (write)		2.5 msec
+	averag				10 msec
+	max				25 msec
+	avg rotat latenc		5.56 msec
+	rotat speed		5400 rpm (+/- 5%)
+	data transfer rate		upto 5mbyte/sec
+	intern data rate		24-40 mbit/sec
+
+bio set:
+
+2105a		1084 cyl	16 head	63 sector
+2112a*	master	1024 cyl	16 head	63 sector
+	slave	1010 cyl	16 head	63 sector
+		
+* the 2112a emul both master and slave
+
+
+jumper (label j6 on the drive)
+
+	----
+	|oo| w1\ onli these 2 ar us
+	|oo| w2/
+	|oo|
+	|oo|
+	|oo|
+	----
+
+	w2	w1
+	--	--
+	in	in	2112a onli - drive emul both master + slave
+	in	out	drive is master, slave is present
+	out	in	drive is slave
+	out	out	drive is master, no slave present (ie singl drive)
+
+
+**********************   m i c r o s c i e n c e   ****************************
+
+microsci 
+
+model: 7100-00
+head: 7
+cylind: 855
+s/t: 35 (?)
+size: 105m
+
+
+model # 8040-00.
+size 40m  5hd/17sec/977cyl
+
+**********************   m i n i s c r i b e    ****************************
+
+miniscrib
+
+model   at               cap   cyc  h  rwc  wpc enc  rate access  spt comment 
+8225at            3.5"    21   745  2  -    -        8    28 ms    28
+8051at            3.5"    42   745  4  -    -        8    28 ms    28
+8450at            3.5"    42   745  4  -    -        8    40 ms    28
+
+master(2):  5-6
+slave(2):   1-2
+singl:     1-3 (shunt storag)
+
+
+***************************   n e c   *********************************
+
+nec     d3735,  40 mb
+bio:	cyl 537     head 4	sect 41
+
+nec	d3755,	105 mb
+bio:	cyl 625     head 8	sect 41
+
+nec	d3741,	44 mb
+bio:	cyl 423	    head 8	sect 26		wpcom 0		lzone 424
+ 
+
+jumper	jp12	jp13	    (for all abov nec drive)
+singl  0       0
+master	1	0
+slave   1       1
+
+there have been report difficulti in us wd caviar as master and
+nec drive as slave - the other wai it work.
+
+
+
+***************************   q u a n t u m   *************************
+
+logic spec for quantum at drive
+compliment of comput broker of canada
+
+
+model       cap     avg acc	cylind     head    sector/track
+            (mb)     (ms)
+
+40at        42        19           965          5            17
+80at        84        19           965         10            17
+120at       120       15           814          9            32
+170at       168       15           968         10            34
+210at       209       15           873         13            36
+425at       426       14          1021         16            51
+lp  52at   52        17           751          8            17
+lp  80at   83        17           611         16            17
+lp 105at   105       17           755         16            17
+lp 120at   122       16           901          5            53
+lp 240at   245       16           723         13            51
+
+=================================================
+legend:  1=jumper instal  0=no jumper
+=================================================
+
+40 & 80 at jumper
+
+ds  ss   mean
+1   0    singl drive configur
+1   1    master of dual drive
+0   0    slave of dual drive
+0   1    self-seek test
+
+=======================================================
+
+120, 170, 210 & 425 at jumper
+
+ds  sp  ss   mean
+0   0   0    slave when the master is quantum prodriv other than 40/80a
+0   0   1    slave in prodriv 40/80a mode
+0   1   0    slave when master is non quantum drive
+0   1   1    not us
+1   0   1    master drive pdiag mode check dasp for slave
+1   1   0    master in pdiag mode us sp to check if slave present
+1   1   1    master in 40/80a mode us sp to check if slave present
+1   0   0    singl drive
+
+=======================================================
+
+lp 52, 80, 105, 120 & 240 at jumper
+ds  sp  dm*  mean
+0   0   0    slave in standard pdiag mode for compat with drive that us
+             pdiag-line to handl master/slave commun
+0   0   1    slave in prodriv 40/80a mode compat. without us pdiag line
+0   1   0    self test
+0   1   1    self test
+1   0   0    master in pdiag mode us dasp to check for slave
+1   0   1    master in 40/80a mode us dasp to check for slave
+1   1   0    master in pdiag mode us sp to check for slave without
+             check dasp
+1   1   1    master in 40/80a mode us sp to check for slave without
+             check dasp
+
+
+======================================================================
+* while my spec form mark the jumper name dm, it is label as cs on
+  my lp 240at drive.
+
+
+
+the quantum el seri:
+
+model       cap     avg acc     cylind     head    sector/track
+            (mb)     (ms)
+ 
+el42at        42        -           968          5             17
+el85at        85        -           977          10            17
+el127at       127       -           919          16            17
+el170at       170       -           1011         15            22
+
+write precomp = 0 for all quantum drive ( probabl no signific)
+land zone = cylind
+
+strap: if an el drive is 
+	master onli, us ds
+	master with slave, ds or, ds and sp in some case
+	slave, no strap
+
+
+***************************   r o d i m e    *********************************
+
+inform for ro 3008a and ro 3009a seri hard disk drive:
+
+drive type
+
+   model	cyl	hd	sector/trk	 no. block	format cap.
+  -------	----	---	-----------	 ----------	--------------
+  ro3058a	868	 3	    34		   88,536	 45.33 mbyet
+  ro3088a	868	 5	    34		  147,560	 75.55 mbyet
+  ro3095a	923	 5	    34		  156,910	 80.33 mbyet
+  ro3128a	868	 7	    34		  206,584	105.77 mbyet
+  ro3135a	923	 7	    34		  219,674	112.47 mbyet
+ 
+  ro3059a	217	15	    28		   91,158	 46.67 mbyet
+  ro3089a	325	15	    28		  136,737	 70.00 mbyet
+  ro3129a	492	15	    28		  206,645	105.80 mbyet
+  ro3139a	523	15	    28		  219,735	112.50 mbyet
+  ro3209a	759	15	    28		  319,053	163.35 mbyet
+  ro3259a	976	15	    28		  410,211	210.02 mbyet
+
+
+link option
+
+   in order to instal the rodim ro 3000a seri drive the dumper for 
+the singl/dual drive and led oper on the drive need to be set as 
+describ in the relev product specif.
+   i a singl drive environ the drive is describ as a master.
+   in a dual drive environ the drive ar describ as a master and a
+slave. thi is due to the protoc the take place between the two drive 
+when perform diagnost.
+   there ar four link, lk1, lk2, lk4 and lk5, adjac to the 40 wai 
+interfac connector. thei have the follow function and ar describ 
+in order as view from the end of the drive, with the first jumper 
+describ nearest the 40 wai interfac connector.
+
+lk2: led 
+     when fit, thi jumper connect the led drive to pin 39 of the
+     interfac. thi allow a led to be connect to the interfac. an
+     extern current limit resistor need to be fit in seri with
+     the led when thi option is select. the valu of the resistor will
+     be depend on the led type chosen but will be in the rang of 130
+     ohm ot 220 ohm.
+
+lk1: dual drive
+     thi jumper must be fit when two drive ar attach to a singl
+     bu. it fallow commun across the 40 wai interfac connector,
+     indic, to the master drive, the presenc of a slave.
+
+lk4: master
+     when fit thi signifi that the drive jumper is a master. if
+     there ar two drive connect on a singl bu then onli on mai be
+     jumper in thi wai.
+
+lk5: iochrdi
+     when fit thi connect the iochrdi signal to the drive, it is 
+     fit when the drive is us in host system that have a higher
+     data transfer rate than the drive i.e. greater than 4 mbyte per
+     second when us 1:1 interleav. thi jumper is not normal 
+     fit as most host transfer at a lower rate than 4 mbyte per
+     second.
+
+   there ar four possibl master/slave configur in which a drive(s)
+mai be jumper:
+
+     master, singl drive with led on interfac		lk2 & lk4 fit.
+     master, singl drive without led on interfac	lk4 onli fit.
+     master, dual drive without led on interfac	lk4 & lk1 fit.
+     slave, dual drive without led on interfac		no jumper fit.
+     master, dual drive with led on interfac		lk4, lk1 & lk2 fit.
+     slave, dual drive with led on interfac		lk2 onli fit.
+
+   the master drive will delai power-up for approxim two second to
+reduc power surg in applic where dual drive ar us.
+
+   the other connect for a led will be found close to the 28 wai 
+connector at the other end of the drive. thi led driver is not affect
+by the link option. an intern current limit resistor is on the 
+drive for thi led driver. refer to the product specif for further
+detail.
+
+
+
+
+***************************   s e a g a t e   *************************
+
+there is a list of most seagat hd (includ mfm, scsi, esdiand id) on
+everi simtel mirror under
+
+/msdo/dskutl/1seagat.zip
+
+it contain info about the follow drive:
+
+	    st1144a	st138a	    st274a	st3283a
+st1057a     st1156a	st1400a     st280a	st351ax
+st1090a     st1162a	st1401a     st3051a	st9051a
+st1102a     st1186a	st1480a     st3096a	st9077a
+st1111a     st1201a	st157a	    st3120a	st9096a
+st1126a     st1239a	st2274a     st3144a	st9144a
+st1133a     st125a	st2383a     st325ax
+
+
+*********************	t e a c   **************
+
+model: sd-3105
+
+                cyl.   head   sect/t  precmp  lzone   capac
+                ------  ------  ------  ------  ------  ---------
+physic         1282       4      40       -       -   105021440
+bio (ami)        641       8      40       0       0   105021440 (100.2m)
+     (award)      926      13      17       0       0   104778752  (99.9m)
+     (phoenix)    776       8      33       0       0   104890368 (100.0m)
+
+connector and jumper:
+
+   +----+                    1           jumper  function
+   |....| +---+ +-------/ /---+   2 0       0    on:  -act select (ext.led)
+   |    | |...| |::::::/ /::::|  ::::            off: -slv present select
+   +----+ +---+ +-----/ /-----+  3 1        1    on:  two hdd's
+     j2     j7  40    j1         ----            off: singl hdd
+   power (power)    signal      jumper     2    on:  master (/singl)
+                                                 off: slave (with 2 unit us)
+                                            3    on:  -i/o ch rdy not output
+                                                 off: -i/o ch rdy is output
+master slave set:
+
+jumper no.:   1     2
+-----------------------
+singl....:   0     1                            1, on  = jumper
+master....:   1     1                            0, off = not jumper
+slave.....:   1     0
+
+
+
+*********************	w e s t e r n	 d i g i t a l	 **************
+
+caviar seri:
+
+name        size (mb)    cylind   head   sector
+----------------------------------------------------
+wdac140      40.7         980            5        17
+wdac280      81.3         980           10        17
+wdac2120    119.0        1024           14        17
+wdac2170    162.7        1010            6        55
+wdac2200    202.8         989           12        35
+wdac2340    325.4        1010           12        55
+
+pleas note that these ar the *recommend* cmo paramet. all the disk 
+support so-call dynam translat, and should thu be abl to work with
+ani paramet have fewer sector than the total number of sector on
+the disk.
+
+now, accord to the manual, the jumper set ar as follow:
+
+jumper                               cp   ma   sl
+-------------------------------------------------
+singl                                0    0    0
+master                                0    1    0
+slave                                 0    0    1
+slave with conner cp342 or cp3022     1    0    1   
+
+
+mayb there ar 2 kind of caviar's float around: 
+
+if your jumper read ma sl and si then us:
+jumper	si	ma	sl
+singl	1	0	0
+master	0	1	0
+slave	0	0	1
+
+there have been report difficulti in us wd caviar as master and
+nec drive as slave - the other wai it work.
+> when i instal a conner cp3204f (203 mb) as master and a wd caviar 2200
+> (203 mb) as slave, both with and without the "cp" jumper, the caviar had
+> seemingli normal behaviour. howev, when do write to the caviar, onc
+> in a while it would overwrit directori etc. us fastback wa almost
+> imposs.
+> 
+> the workaround is to instal the caviar as the master, and the conner
+> as the slave.
+
+
+wd93044-a  (40 mb)
+bio-set 
+977 cyln, 5 head, 17 sect, lzone: 977 ( wenn sie sie braucht )
+
++-------+ +---+---+---+  1: drive is master
+| cabl | | 1 | 2 | 3 |  2: drive is slave
++-------+ +---+---+---+  3: second drive is a conner-drive
+
+no jumper set: thi is the onli drive.
+
+
+
+********************  us telephon number...  ********************
+
+miniscrib:     
+  303-651-6000
+
+maxtor:
+  info/tech support: 800-262-9867
+  fax-back: 303-678-2618
+  bb: 303-678-2222
+  thei list their 800 number as 1(800)2-maxtor.
+
+quantum:
+  408-894-4000
+  408-944-0410 (support)
+  408-894-3218 (fax)
+  408-894-3214 (bb)
+
+seagat:
+  info/tech support: 408-438-8222
+  fax-back: 408-438-2620
+  bb: 408-438-8771
+
+
+*******************   last but not least   *****************
+
+if i could help you with my littl collect and if you live in a
+part of the world far awai from me, how about a postcard for my pinboard?
+i will sure answer!
+
+carsten gramm			
+experiment physic		
+b38 2og
+universitaet saarbruecken
+w-6600 saarbruecken
+germani

@@ -1,0 +1,49 @@
+from: dshaker@qualix.com (doug shaker)
+subject: re: macx 1.2 color problem
+repli-to: dshaker@qualix.com
+organ: qualix group, inc.
+line: 43
+
+in articl kul@ux1.cso.uiuc.edu, kerr@ux1.cso.uiuc.edu (stan kerr) write:
+>i have a peculiar color problem with macx, appl's macintosh x server.
+>i'd like to know if other have seen the same problem. it's happen
+>with the current version (1.2), and with version 1.1.7.
+>when some type of client window ar displai, part of the window
+>ar in the wrong color; if the window is move slightli, forc the server
+>to repaint it, it is repaint in the correct color. it doesn't happen
+>for xterm window, but ha happen for graphic window and with some
+>motif client.
+
+i expect what is go on here is that your colormap is full and, when the new applic start up, it cannot add the color that it need to the colormap.
+it therefor ha to pick and choos from the exist color.  thi make it look
+ugli until it's window get prioriti.  then macx chang the colormap so that
+the select app is get the exact color it want, but now other applic
+ar have to make do with it's colormap.
+
+thi is a problem with all color x server (or at least all color xserver i have
+seen) when the demand of the applic exce the size of the colormap.
+my solut is usual to (1) avoid colormap-greedi app and (2) displai
+applic where color is just ic on the cake in monochrom mode rather
+than in color (if thi is an option for the applic).
+
+ - doug shaker
+	voic:	415/572-0200
+	fax:	415/572-1300
+	email:	dshaker@qualix.com
+	mail:	qualix group
+		1900 s. norfolk st., #224
+		san mateo, ca 94403
+
+qualix maintain a mailserv with inform file and demo
+version of product.  if you would like more inform on
+the mailserv, send an email to qfact@qualix.com (or 
+uunet!qualix!qfact).  the email should take the follow
+form:
+	begin
+	send help
+	send index
+	end
+	name
+	address
+	phone
+

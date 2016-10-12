@@ -1,0 +1,114 @@
+organ: univers of illinoi at chicago, academ comput center
+
+from: pankaj saxena <u09416@uicvm.uic.edu>
+
+subject: tcp/ip through window 3.1
+
+line: 52
+
+
+
+i don't know much about comput, so pleas bear with me. here's my question:
+
+
+
+context: i us a packag call slip on my home comput to connect to the
+
+         univers mainfram (an ibm 3090 run vm/mv), and log on to my
+
+         account. when i instal slip on my comput, i had to configur it
+
+         for my modem (14.4 kb etron intern) and had to suppli the phone
+
+         number to dial to reach the mainfram. the wai it work now is that
+
+         i type "telnet uicvm" or "tn3270 uicvm" (either will work) at the do
+
+         prompt. uicvm is the node name of the mainfram. the program then
+
+         dial the mainfram, establish a protocol, and give me the logon
+
+         screen. "telnet" and "tn3270" ar the name of batch file in my slip
+
+         directori. i have been told that a kermit protocol is us for the
+
+         session.
+
+
+
+problem: i would like to be abl to do all thi under window 3.1 becaus i
+
+         hardli ever us do directli. slip will not run under window. i
+
+         talk to the peopl at our comput center, and thei suggest that
+
+         i us a packet driver call winpkt.com with slip. thei gave me
+
+         instruct on how to load it befor i start window, and how to
+
+         modifi the tcpstart and tcpstop batch file (in the slip directori)
+
+         to ensur that it would work. i did all that and i could run slip
+
+         from window, but there were other problem. for on thing, slip
+
+         would not hang up the phone when i exit. i had to run my communi-
+
+         cation program to hang up the phone or reboot the comput when
+
+         that didn't work. for anoth, there were too mani error. it often
+
+         took me 3-4 tri to connect to the mainfram. our comput center
+
+         doe not support slip under window, so i can't keep go back to
+
+         them with more question.
+
+
+
+question: is there some other sharewar packag that will run under window
+
+         and do what slip is suppos to do? i need a packag that is not too
+
+         expens, which is why i am look for sharewar. i have heard that
+
+         there ar regular commerci packag that do all thi, but thei cost
+
+         hundr of dollar. these ar the main requir:
+
+
+
+         1. must be abl to run under window 3.1
+
+         2. must allow vt100 and ibm tn3270 termin emul
+
+         3. must allow ftp file transfer, sinc that's the onli kind the
+
+            mainfram allow. no y-modem or z-modem etc. i believ the ftp
+
+            transfer ar made through a kermit protocol, but i'm hazi about
+
+            that.
+
+
+
+         a subsidiari featur (that would be nice to have) if it's a true
+
+         window program (rather than a do program modifi to run under
+
+         window) is the abil to run the session in a window concurr
+
+         with other applic and to cut and past between the telnet
+
+         session and other applic.
+
+
+
+ani inform receiv is appreci.
+
+
+
+pankaj saxena
+
+u09416@uicvm.uic.edu
+

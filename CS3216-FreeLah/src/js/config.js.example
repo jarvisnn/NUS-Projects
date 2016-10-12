@@ -1,0 +1,5 @@
+export default {
+  api: {
+    serverUrl: "http://localhost:3000"
+  }
+}

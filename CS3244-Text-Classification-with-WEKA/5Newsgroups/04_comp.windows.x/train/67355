@@ -1,0 +1,65 @@
+from: rei@tsl.cl.nec.co.jp (rei hamakawa)
+subject: xavier (av extens to interview)
+articl-i.d.: tsl.1993apr27.043112.25052
+organ: c&c system research lab, nec corpor, kawasaki, japan
+line: 58
+nntp-post-host: hyperion.tsl.cl.nec.co.jp
+
+dear folk:
+
+it's a pleasur to be abl to announc the releas of a new freewar program, 
+xavier, an audio and video  extens to interview.
+
+xavier(extens av class for interview) is a c++ class librari
+that add multimedia capabl to interview. it allow composit
+multimedia object to be built from media object.
+
+specif, it add audio and video object to the class avail
+in interview 3.0.1/3.1, and it doe so without chang the
+sourc code for the origin class (though sever configur
+file for interview need to be chang via a patch file). 
+ 
+current, the xavier audio class ar onli support on sun
+workstat with an audio interfac, such as the sparcstat2.
+
+xavier ha been test in the follow environ:
+
+sun:
+  machin : sparcserv470 sparcstat-ipc
+  os      : sun-os4.1.1 or later
+  c++     : sun c++ ver2.1
+
+nec(ew):
+  machin : ew4800/210,230
+  os      : ew-ux/v(rel4.0) wso41 releas5.1,releas5.2
+  c++     : c++ releas3.1
+
+it can be obtain via anonym ftp from 
+
+         interview.stanford.edu in /pub/contrib/
+          (xavier.larg-demo.tar, and xavier.tar)
+
+we ar prepar a mail-list for inform regard xavier.
+if you ar interest, pleas contact
+               
+                   xavier@tsl.cl.nec.co.jp. 
+
+i will add your e-mail address to our list.
+
+[refer]
+o rei hamakawa, hizekazu sakagami, jun rekimoto:
+  audio and video extens to graphic interfac toolkit,
+  the third intern workshop on network and oper
+  system support for digit audio and video, san diego, 1992
+
+***********************************************************************
+* _                                                                   *
+*  \ \      rei hamakawa (e-mail: rei@tsl.cl.nec.co.jp)               *
+*   |o|                                                               *
+*   |o|     c & c system research laboratori                       *
+*   |o| __  nec corpor                                           *
+*  o| || /  1-1, miyazaki 4-chome,      tel : +81-44-856-2271         *
+*  o| || |  miyama-ku, kawasaki,       fax : +81-44-856-2232         *
+*  o| \/ |  kanagawa 216 japan                                        *
+*    \__/                                                             *
+***********************************************************************

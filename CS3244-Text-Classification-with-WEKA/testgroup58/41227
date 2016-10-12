@@ -1,0 +1,58 @@
+from: tan@lynx.msc.cornel.edu.uucp (david tan,box 219 baker lab,54810,2720402)
+
+subject: ignor imak/xfig question
+
+origin: tan@msc2.msc.cornel.edu
+
+organ: cornel-materi-scienc-center
+
+line: 23
+
+
+
+hi folk,
+
+
+
+i'm try to compil xfig 2.1.7 on a ss1+ run suno 4.1.1 and ow 2.0,
+
+and i'm have a littl troubl with make/imak.  specif, make bomb
+
+when it need to us ani xaw file.  thi isn't surpris sinc x11 file
+
+on sun with the standard ow 2.0 distribut ar in variou place under
+
+/usr/openwin (xaw file ar in /usr/openwin/share/includ/x11/xaw !!)
+
+actual, the real problem is that i know squat about imak, and i don't
+
+know how to tell imak where the x11 file ar.  i can see from the 
+
+makefil that it's look in the wrong place, but the first line of the 
+
+makefil read 
+
+
+
+   # makefil gener by imak - do not edit!
+
+
+
+help!  is there some wai i can edit the imakefil to tell it where to
+
+look?  (i have set defin = -dopenwin_bug, as it said to in the readm
+
+file.)
+
+
+
+email and post ar both fine.
+
+
+
+thank in advanc,
+
+
+
+dave
+

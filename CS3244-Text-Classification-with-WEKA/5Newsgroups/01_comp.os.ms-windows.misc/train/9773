@@ -1,0 +1,24 @@
+from: bca@ec.cmu.edu (brian c. anderson)
+subject: trnasfer binari file from termin to unix
+origin: bca@packard.ec.cmu.edu
+keyword: termin, kermit, unix
+line: 15
+repli-to: bca@ec.cmu.edu (brian c. anderson)
+organ: electr and comput engin, carnegi mellon
+distribut: cmu
+
+
+	i'm attempt to transfer file from my home comput run
+window 3.1 termin to a workstat at school.  the file transfer protocol
+at home is kermit for binari file.  i'm run kermit on the workstat at school and
+set the file transfer protocol to binari.  i am unabl to upload file
+to school but can download file from school to home.  dure download,
+termin displai ther retri messag sever time then the messag '
+verifi you're us the correct protocol'.  
+	anyon have ani idea on how to fix?  either e-mail or post to thi
+group. 
+
+thank, in advanc,
+
+brian anderson    ///  go pen - make it 14 in a row ///
+

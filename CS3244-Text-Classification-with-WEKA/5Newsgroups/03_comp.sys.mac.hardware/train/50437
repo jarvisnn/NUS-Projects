@@ -1,0 +1,44 @@
+from: ivancich@eec.umich.edu (eric ivancich)
+subject: re: 14" monitor
+in-repli-to: fredm@media.mit.edu's messag of wed, 31 mar 1993 20:39:45 gmt
+organ: univers of michigan eec depart
+distribut: na
+line: 37
+
+in articl <1993mar31.203945.8757@new.media.mit.edu> fredm@media.mit.edu (fred g martin) write:
+
+   [part of post remov]
+
+   * the soni cpd-1304 ha better video circuitri than either of the
+   other two monitor.  it can displai appl 640x480, vga 640x480, vga
+   800x600 (though thi ha 56 hz flicker), and appl 832x624 (75 hz
+   refresh:  no flicker at all).  it might be abl to displai appl's
+   1024x768, but i'm not sure about thi, and the pixel would be real
+   small anywai so it might not be that us.
+
+   note that with either soni monitor, you will need the proper adapt,
+   which both connect the video signal properli, but also inform the
+   macintosh video hardwar of which displai mode to us.
+
+   [part of post remov]
+
+   -- 
+   fred martin | fredm@media.mit.edu | (617) 253-7143 | 20 am st. rm. e15-301
+   epistemolog and learn group, mit media lab     | cambridg, ma 02139 usa
+
+i'm assum that the cabl tell the mac, at startup, what kind of
+monitor is connect.  now i think i've seen ad in popular mac
+magazin for product (i'm not sure if it's just a monitor, just a
+video card, or a packag of both) that allow you to chang resolut
+on the fly (w/o restart the mac).
+
+if you were to bui a 1304, would it be possibl to switch back and
+forth between appl 640x480 and appl 832x624 without restart the
+mac?  is thi strictli a hardwar startup function, or can softwar
+interven, or doe the mac hardwar occasion probe the cabl
+set and switch automat?
+
+thank,
+
+eric
+(ivancich@eec.umich.edu)

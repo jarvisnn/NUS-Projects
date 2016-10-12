@@ -1,0 +1,58 @@
+from: hamish@cloud.apana.org.au (hamish moffatt)
+subject: re: mous on com3om3 or com4 in window
+organ: cloud nine bb, melbourn, australia.
+line: 53
+
+jpaparel@cs.ulowel.edu (joseph paparella) write:
+
+> i am have a problem configur the mous in window to us com3
+> with irq5.
+
+i don't believ irq5 is the problem. i tri a mous on com3, irq4 (the
+usual place) and it still did not like it. simpli, window seem to onli
+support mice on com1 or com2. the funni part is, though, that
+microsoft's own mous driver (8.xx) wa quit happi with my mous
+sit on com3. why can't window us the mous driver, or at least
+support com3? :-)
+
+> com2irq=3
+> com3irq=5
+> com4irq=7
+> maxcomport=4
+
+i've tri thi too. actual, i want to be abl to us my second
+modem (com3/irq5) from window. it still will not talk to that modem. i
+creat two profil, amstrad (for my amstrad modem on com1/irq4) and
+maestro (for my maestro on com3/irq5). it will not talk to the maestro
+at all.
+
+> (1,5106830617) that their driver doe not support com3 and com4 in window.
+> their suggest wa that the 'microsoft or ps/2' set in window
+> setup would work. it doe not.
+
+nor here. (window 3.0).
+
+> i can not believ that it is not possibl. at worst, you would need a special
+> version of 'a' mous driver that look at com3 and com4 instead of com1
+> and com2. i know that irq5 and irq7 ar normal printer port irq, but i
+
+i've seen noth like that. i've experi with logitech's mous
+driver too, with no sucess.
+
+> have no printer attach. a side note is that i would realli like to assign
+> com4 to some higher irq, becaus my soundblast board us irq7 (right now,
+> i'm not us com4), but no modem that i know of allow set other than
+> irq 2,3,4,5, and 7.
+
+if you have a soundblast pro, it should support irq10 as well.
+final, a board that support irq >9. the onli on i have (except my
+id control).
+
+hamish
+
+
+hamish moffatt,      hamish@cloud.apana.org.au  apana: the australian public
+cloud nine bb,      3:635/552@fidonet          access network associ.
+melbourn australia  58:4100/43@intlnet         mail info@apana.org.au
+titan softwar.    voic: +61-3-803-1326      for inform.
+

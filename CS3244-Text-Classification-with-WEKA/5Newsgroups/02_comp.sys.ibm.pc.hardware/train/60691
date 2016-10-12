@@ -1,0 +1,43 @@
+from: jcl@bdrc.bd.com (john c. lusth)
+subject: kentucki fri cmo beat harde!
+organ: becton dickinson research center; rtp, n.c.
+line: 37
+nntp-post-host: oti.bdrc.bd.com
+
+hei folk.
+
+is it possibl to short out your cmo chip?  i think mine is fri.
+these ar the symptom...
+
+i have to do the follow to get my comput (a gatewai 486dx33)
+to boot...
+
+    turn the power off
+
+    disconnect the batteri to the cmo chip
+
+    turn the power on
+
+    get into setup upon get the cmo configur error
+
+    set up the cmo
+
+    exit the setup with [f10]  (phoenix bio)
+
+    ignor the diskett 0 seek error and press [f1]
+
+the comput then boot normal.  both hard drive ar access
+but the floppi drive ar not.
+
+i can back up over the network and such, but if i need to reboot,
+i have to turn off the comput and repeat the step abov.  if i
+simpli <ctl>-<alt>-<del>, the comput hang after the memori test.
+
+doe thi sound like the cmo chip is fri?  can i bui anoth on?
+where?
+
+thank you for your kind attent.
+
+john
+-- 
+john c. lusth, becton dickinson research center, rtp, nc, usa  jcl@bdrc.bd.com

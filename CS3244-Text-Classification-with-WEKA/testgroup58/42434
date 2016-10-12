@@ -1,0 +1,30 @@
+from: rgb@roadnet.up.com (rudi bonefa)
+
+subject: need x win popup menu packag
+
+repli-to: rgb@roadnet.up.com
+
+organ: roadnet technolog, inc.
+
+line: 9
+
+
+
+
+
+rather than write my own, can anyon direct me to a packag that will let me creat
+
+cascad popup menu in x window.  for reason of portabl, the packag should 
+
+not reli on ani x toolkit other than xlib and the xt intrins.  someth written
+
+in c++ would be nice, too.
+
+
+
+thank
+
+
+
+
+

@@ -1,0 +1,54 @@
+from: skip@eco.twg.com (skip koppenhav)
+subject: pulldown menu period hang applic on openwindow 3.0
+nntp-post-host: eco.twg.com
+repli-to: skip@eco.twg.com
+organ: the wollongong group (east coast oper)
+line: 47
+
+
+ha anyon found a fix for the follow problem?
+
+client softwar:	suno 4.1.1, x11r5
+server hardwar:	sun ipc
+server softwar:	suno 4.1.1, open window 3.0 (w/ patch 100444-37)
+
+a motif 1.2.2 applic will period hang when run against the
+openwindow 3.0 server (xnew). the pulldown is displai but then no
+button action have ani effect. sometim press <return> will
+unstick the applic but not usual. it look like the pulldown is
+grab the focu and never let go. other window on the displai
+continu to get updat so the server isn't hang. if i log in from
+anoth termin and kill the motif applic then everyth get
+back to normal. the same applic when run against other x server
+(includ mit x11r5 xsun, decwindow, tektronix x termin) ha no
+problem. thi is obvious a openwindow problem but i need a
+work-around sinc most of our custom ar openwindow user.
+
+i have tri the follow thing:
+
+    1. instal the latest version of the openwindow server patch
+       (100444-37).
+
+    2. us mwm (version 1.2.2) instead of olwm.
+
+    3. appli the patch specifi in the motif faq (question 110).
+       thi had the effect of disabl the point-and-click method of
+       menu interact (as oppos to the click-and-drag method), and
+       screw up the menu mnemon kei. it did seem to help, but i
+       wa still abl to get the applic to hang.
+
+repeat by:
+
+thi is an intermitt problem so you'll have to try sever time.
+
+click and releas on a menu head (pulldown menu will pop up)
+
+click and releas on a menu item
+
+repeat until applic hang
+
+
+ani help would be appreci. thank in advanc.
+--
+skip koppenhav
+skip@eco.twg.com

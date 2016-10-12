@@ -1,0 +1,23 @@
+from: rp@arbortext.com (ralph seguin)
+subject: numlock mask? interfer with meta/compos/extendchar, ...
+organ: the internet
+line: 17
+to: xpert@expo.lc.mit.edu
+
+> my question is thi:  is there a mean of determin what the state
+> of capslock and/or numlock is?
+
+alright.  ignor thi.  i have delv a bit deeper (xkeyev) and
+found what i wa look for.
+
+ev->state   ha a bunch of mask to check against (lockmask is the on
+for capslock).  unfortun, it appear that the numlock mask vari
+from server to server.  how doe on tell what mask is numlock and
+which ar for meta (mod1mask, mod2mask, mod3mask, mod4mask, mod5mask).
+eg, sgi's vendor server ha mod2mask be numlock, wherea solari
+1.0.1 openwindow 3.0 ha mod3mask for numlock.  is there an
+unambigu mean of determin numlock's mask at runtim for ani
+given server?  sorri for the wast bandwidth and my appal ignor.
+
+			thank, ralph
+

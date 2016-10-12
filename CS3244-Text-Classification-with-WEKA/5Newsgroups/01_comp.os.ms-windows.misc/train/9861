@@ -1,0 +1,44 @@
+from: kuehnel@rv.uni-hannov.de (stefan kuehnel, swl)
+subject: re: nt question
+repli-to: kuehnel@rv.uni-hannov.de
+organ: rv, universitaet hannov, germani
+line: 38
+
+in articl 5802@new.yale.edu, adrien_nazaretian@qm.yale.edu (adrien nazaretian) write:
+> in articl <1993mar26.020427.29119@samba.oit.unc.edu>, tclark@med.unc.edu (thoma b. clark) sai
+
+[...]
+
+> >2.  is the driver support as seamless as program support?
+> >e.g., will my soundblast, scanner, cd-rom, tape backup
+> >continu to work even if there ar no specif nt driver?
+> >
+> there is a hardwar compat guid to answer these question.
+> there ar mani driver for cd rom and there ar midi and other
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> sound driver instal, i dont do a lot with sound digit on thi
+> platform, but recal see item for their configur in the control
+> panel applet.  there is built in support for tape backup system as well.
+
+[...]
+
+my problem: i wasn't awar of the fact that i would need an *scsi*-cd-rom for
+window nt when order the beta-sdk-packag. so my question: is there ani driver
+avail that will allow me to us my mitsumi (non-scsi) cd-rom for instal ?
+if there is on, from which place (ftp-site) can i get it ?
+
+mani thank in advanc
+
+	stefan kuehnel
+---
+
+----------------------------------------------------------------------
+   /\  stefan k"uhnel
+  |   
+  |/   kuehnel@rv.uni-hannov.de   
+  |\   kuehnel@swl.uni-hannov.de (neu ab. 17.04.1993)
+  |  
+\/     die oben wiedergegeben meinung ist mein privat und nicht die         
+       de rrzn, de lg rv der uh oder einer anderen institut.             
+----------------------------------------------------------------------
+

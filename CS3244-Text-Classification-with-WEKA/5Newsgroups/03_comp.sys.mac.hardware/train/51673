@@ -1,0 +1,22 @@
+from: guykuo@carson.u.washington.edu (gui kuo)
+subject: re: ad int. hard disk drive to iicx
+organ: univers of washington
+line: 15
+nntp-post-host: carson.u.washington.edu
+keyword: mac iicx, intern, hard disk drive, scsi
+
+ye, it is possibl to add a second hard drive to a mac iicx intern. thi
+is definit not a recommend procedur by appl but i have done the equival to my cx after upgrad it to a quadra 700. the power suppli is still the
+stock cx's and it wa abl to power two quantum lp drive, a pli scsi 
+acceler, a micron technolog 24 bit video board, daystar quickcach,
+new technolog overdr and 20 meg of ram simultan.
+
+i ad a new mount for the drive by attach angl bracket to the drive
+tower. the intern scsi cabl wa chang to a longer flat ribbon cabl onto
+which i ad an extra connector about midwai. the final hd wa intern
+termin and the drive between the motherboard and final hd had it termin resistor pack remov. cool ha not been a problem and no scsi problem
+occur with either the pli scsi chain or motherboard scsi hook into the two
+intern hard drive.
+
+it work veri well for me, but proce cautious if you wish to do the same.
+

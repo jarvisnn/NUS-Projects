@@ -1,0 +1,80 @@
+from: kerr@ux1.cso.uiuc.edu (stan kerr)
+
+subject: re: mac x and sun openwindow 3
+
+organ: univers of illinoi at urbana
+
+line: 33
+
+nntp-post-host: ux1.cso.uiuc.edu
+
+keyword: mac x openwindow 3 x
+
+
+
+benj@ossa.hq.nasa.gov (benjamin jone) write:
+
+
+
+>i've run into a bit of a snag while try to get mac x up and run and would appreci
+
+>ani respons from anyon who mai have seen thi problem.
+
+
+
+>on my local network, i have a number of mac, sun and sgi machin.
+
+
+
+>i have instal macx/mactcp on all of the macintosh and can run xclient on the sgi machin
+
+>all the live-long dai.  the problem is when i try to run an xclient on ani sun, i setup
+
+>the command in macx, then execut it.  noth happen, i don't even get ani command output.
+
+
+
+>now, i thought it might be a rout issu, but i can run remot xclient on the sun from my sgi
+
+>machin, as well as vice-versa.  i can also run remot xclient on sgi machin that
+
+>ar not on my local net here, but the abov problem hold true for non-local sun as well.
+
+
+
+i tri to send thi as privat mail, but mail to benj@ossa.hq.nasa.gov wa
+
+reject, so here it is:
+
+
+
+here is an extract from the readm file that come with macx:
+
+
+
+user of remot command with sun machin mai find that their remot command 
+
+appear to do noth and there is no output from the sun machin.  thi is due 
+
+to a featur of the sun rexecd network daemon which quietli disconnect from 
+
+request machin that ar not known to the sun|s network address (/etc/host
+
+or ni host) databas.  to successfulli us remot command with a suno-base
+
+machin, there must be an entri in the network address databas for the 
+
+macintosh which is run macx.
+
+
+
+-- 
+
+
+
+stan kerr    
+
+comput & commun servic offic, u of illinoi/urbana
+
+phone: 217-333-5217  email: stankerr@uiuc.edu   
+

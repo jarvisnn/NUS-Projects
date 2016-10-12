@@ -1,0 +1,39 @@
+organ: penn state univers
+from: <fwr100@psuvm.psu.edu>
+subject: re: 80386 and 80486: what's the differ?
+line: 34
+
+in articl <joedal.735221221@dfi.aau.dk>, joedal@dfi.aau.dk (lar joedal) sai:
+>
+>except from clock frequenc, what ar the differ between the
+>variou type of 386 and 486 processor?
+>the follow is a list with what i know (or perhap onli what i
+>think i know!). can anybodi extend & correct?
+>
+>
+>80386:  true 32 bit processor.
+>        (cach?)
+         no cach, also call 386dx.
+
+>80386sx:  emul 80386 with a 16 bit bu.
+     it ha the same intern as the 386, is a real 32-bit processor, just ha
+     16 bit hookup to the outsid world.
+
+>80486:  true 32 bit processor.
+>        intern mathemat coprocessor (correct?)
+            ye, optim 387 intern.
+>        intern cach (correct? how big?)
+            ye, 8k.
+>        (extend instruct set in ani wai?)
+            ye, but onli a few instruct, noth noteworthi.
+
+>80486sx:  probabl sorta like 80486...
+            486 with no coprocessor.
+
+>80486dx:  probabl sorta like 80386...
+            nope.  just anoth name for the 486.
+-------------------------------------------------------------------------
+frank raci - fwr100@psuvm.psu.edu - fwr@eclu.psu.edu
+comput ar useless; thei can onli give answer.
+-------------------------------------------------------------------------
+"i will not rais tax on the middl class to pai for my program" -wjbc

@@ -1,0 +1,62 @@
+from: cui@macc.mcmaster.ca (jun cui)
+
+subject: how to respond to wm_lbuttondblclk?
+
+keyword: ms-window, sdk
+
+nntp-post-host: macc.dcss.mcmaster.ca
+
+organ: depart of comput scienc, mcmaster univers
+
+distribut: comp.window.ms
+
+line: 23
+
+
+
+i'm us bc++'s objectwindow (3.1), try to resond to the left button
+
+doubl click messag wm_lbuttondblclk in a combo box. my code look like:
+
+
+
+class mycombobox : public tcombobox
+
+{
+
+public:
+
+	mycombobox(ptwindowsobject apar, int resourceid, word atextlen) :
+
+		tcombobox(apar, resourceid, atextlen) {};
+
+	virtual void wmlbuttondblclk(rtmessag msg) = [wm_first + wm_lbuttondblclk];
+
+};
+
+
+
+void mycombobox::wmlbuttondblclk(rtmessag msg)
+
+{
+
+	...	// respond to the messag (select the item in the list box)
+
+}
+
+
+
+anyth wrong with my program? ani help would be appreci.
+
+
+
+-- jun
+
+to talk to the lord with ps/2 through ms-window
+
+
+
+
+
+
+

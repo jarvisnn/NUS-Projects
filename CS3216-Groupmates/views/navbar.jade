@@ -1,0 +1,19 @@
+nav.navbar.navbar-default.navbar-fixed-top
+  .navbar-header
+    a.navbar-brand(href='/') Groupmates
+
+  .collapse.navbar-collapse
+    ul.nav.navbar-nav.navbar-right
+      if currentUser
+        li.dropdown
+          a.text-uppercase.dropdown-toggle(href="#" data-toggle="dropdown")
+            | #{currentUser.name}&nbsp;
+            span.glyphicon.glyphicon-chevron-down
+            ul.dropdown-menu
+              li
+                a(href="/user/profile") Profile
+              li
+                a(href="/account/logout") Logout
+      else
+        li
+          a(href="/") Sign In

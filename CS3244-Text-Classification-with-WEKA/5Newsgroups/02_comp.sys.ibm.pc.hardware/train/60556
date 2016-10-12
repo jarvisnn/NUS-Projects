@@ -1,0 +1,35 @@
+from: gt3635a@prism.gatech.edu (greg 'spike' bishop)
+subject: help!!!  my esdi is posess by demon!
+distribut: usa
+organ: nation associ for the free exchang of inform
+line: 29
+
+
+help!  i realli got rip off and i need some help unrip myself.
+
+i bought a maxtor 4380 300mb esdi hdd from hi-tech for $300, then paid to
+get it repair, for about anoth $300.  here's the deal:  the thing work
+fine!  it low level format, etc without ani bad spot at all!  and then...
+(jaw music) sector start go bad!  eek!!!  on at a time.  norton disk
+doctor keep mark some u and some c.  that fix it.  for about 5 minut.
+
+then next dai when i run ndd on it again: no dice more uncorrect and
+correct sector.  ahhhhhuuuurrrrrrggggghhhhh!!!!!  so i fugur: "ok, ndd's
+just not be thurough enough, i'll us spinrit, i heard that work well."
+what happen?  spinrit goe and return the cluster to activ us!!!  
+ahhhuuuurrrrrrggggghhhh!!!!  ndd undo it of cours.  the problem seam to
+be get wors and wors.  howev when the hdd is low level format
+again the problem goe awai for a while, onli to return in a dai or so.
+
+i'm so piss off right now i'm consid bui anoth hdd, and i realli
+can't afford it.
+
+i'm us smartdriv, and window 3.1 (i'm not us the 32 bit disk access
+though, i know that can creat problem).  the disk is us the second
+option to trick the control into think it's got less then 1024 cyl,
+and everyth els select is standard, mayb i need to us a differ
+head skew or someth?  i don't know.
+
+anyon who know how to fix thi problem pleas tell me how!!!! help!!!!
+-- 
+gt: "design tommorow the night befor with yesterdai's technolog."

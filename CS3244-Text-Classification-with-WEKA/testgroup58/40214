@@ -1,0 +1,90 @@
+from: smark@trantor.eng.sun.com (stuart mark)
+
+subject: re: xt intrins: slow popup
+
+organ: sun microsystem, inc.
+
+line: 37
+
+distribut: world
+
+repli-to: smark@eng.sun.com
+
+nntp-post-host: trantor
+
+
+
+in articl <1993apr20.114824.9110@alex.com>, bryan@alex.com (bryan boreham) write:
+
+|> 
+
+|> the shell is wait for the window-manag to respond to it
+
+|> posit request.  the window-manag is not respond becaus
+
+|> it think the window is alreadi in the right place.
+
+|> 
+
+|> exactli *why* the two compon get into thi sulk is unclear to
+
+|> me; all inform greatli receiv.
+
+
+
+thi problem is caus by a bad interact between the wai olwm repar
+
+window, a misfeatur of the x protocol, and a bug in the xt intrins.  
+
+
+
+the intrins bug is that it ignor the (x,y) posit given in
+
+reparentnotifi event.  olwm is structur in such a wai that, when a window
+
+is pop down, the last event the client receiv is a reparentnotifi event. 
+
+at thi point, the intrins' notion of the shell's locat is out of date.
+
+
+
+if a setvalu is done us the same (x,y) posit, the intrins think it
+
+need to move the shell, so it issu a configurewindow request to move it
+
+there.  howev, a (mi)featur of the x protocol is that a configurewindow
+
+request that ha no effect will gener no configurenotifi event.  the
+
+intrins thu wait for an event that will never arriv, and time out after
+
+wmtimeout ha expir.  (actual, thing ar somewhat more complex becaus
+
+the request is redirect to the window manag, but the net result is the
+
+same.)
+
+
+
+the solut is for the intrins to note the (x,y) posit inform
+
+in reparentnotifi event.  thi ha been implement and is avail in x11r5
+
+public fix 20.  thi is xbug 5513 for those of you who ar interest in
+
+gorier detail.
+
+
+
+s'mark
+
+
+
+-- 
+
+stuart w. mark				stuart.mark@eng.sun.com
+
+window system technolog		2550 garcia av. m/s 21-228
+
+sunsoft, inc.				mountain view, ca 94043
+

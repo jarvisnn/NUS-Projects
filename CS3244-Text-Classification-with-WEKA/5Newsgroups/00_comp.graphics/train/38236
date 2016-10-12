@@ -1,0 +1,44 @@
+from: lm001@rrz.uni-koeln.de (erwin h. keev)
+subject: polygon reduct for march cube
+organ: region comput center, univers of cologn
+line: 36
+distribut: world
+nntp-post-host: rs1.rrz.uni-koeln.de
+keyword: polygon reduct, march cube, surfac, midic visualis
+
+
+dear reader,
+
+
+i'am search for an implement of a polygon reduct algorithm
+for march cube surfac. i think the best on is the reduct algorithm
+from schroeder et al., siggraph '92. so, is there ani implement of thi 
+algorithm, it would be veri nice if you could leav it to me.
+
+also i'am look for a fast !!! connect
+test for march cube surfac.
+
+ani help or hint will be veri us.
+thank a lot
+
+
+                                                 ,,,
+                                                (o o)
+ ___________________________________________ooo__(-)__ooo_____________
+|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|_|
+|_|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+|                               |                                     |
+| erwin keev                   | adress:  peter-welter-platz 2       |
+|                               |          w-5000 cologn 1, germani  |
+|                               |                                     |
+| dept. of computergraph &   | phone:   +49-221-20189-132 (-192)   |
+|          computeranim    | fax:     +49-221-20189-17           |
+|                               |                                     |
+| academi of media art cologn | email:   keev@khm.uni-koeln.de     |
+|_______________________________|_____________________________________|
+
+
+
+
+
+

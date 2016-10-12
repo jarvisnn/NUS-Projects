@@ -1,0 +1,34 @@
+from: toml@boulder.parcplac.com (tom lastrang)
+subject: re: forc a window manag to accept specif coordin for a window
+organ: parcplac boulder
+line: 29
+
+in articl <c5xxq0.18m@cs.columbia.edu> ethan@cs.columbia.edu (ethan solomita) write:
+>in articl <bade.93apr23105229@athen.cs.tu-berlin.de> bade@cs.tu-berlin.de (tobia 'dope' bade) write:
+>>
+>>i know that the mwm ha an resourc to specifi if posit ar to be us for
+>>the border of a window or for the "user" window. mayb other window manag
+>>have similar option.
+>>anoth wai to figur out the differ between the "user" window posit
+>>and the window manag decor window posit is to subtract their
+>>posit. you just have to us xquerytre and rememb that the window manag
+>>decor window is the parent of your window. unfortun, you can onli
+>>figur out the decor width and height after the window ha been map
+>>thi wai.
+>>
+>	anoth wai would be to us getgeometri to find out where
+>you ar rel to the frame, and translatecoordin to find
+>out where your window's upperleft corner realli is.
+
+
+as i've said befor, there's no reliabl wai to find out the size of
+the window manag decor.  if your window ha been repar, you
+can't assum that the window you're parent to is the window that
+hold all of the window manag decor.  there mai be sever
+layer of window.  do multipl xquerytre's until you get to the
+root will work in most case, but there's no guarante that the outsid
+decor window is parent to the root window of the displai (tvtwm).
+
+--
+tom lastrang        toml@boulder.parcplac.com
+

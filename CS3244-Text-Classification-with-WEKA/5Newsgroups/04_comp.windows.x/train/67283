@@ -1,0 +1,17 @@
+from: clai@cs.scarolina.edu (f rodnei clai)
+subject: slider posit of vertic scrollbar
+summari: slider posit of a list widget's vertic scrollbar
+organ: usc  depart of comput scienc
+distribut: comp
+line: 10
+
+i need help posit the slider of a list widget's horizont scrollbar.  i am displai the full
+path of a select file in a list widget.  the horizont's slider default to the left side of the
+list widget; howev, i need the slider on the right side.  thi is so the user can see the file name
+thei select.  i know it's possibl, becaus when file ar displai in a file select dialog box,
+the slider is on the right side.
+
+thank ani and all who can help in advanc,
+rodnei f. clai
+
+clai@cs.scarolina.edu

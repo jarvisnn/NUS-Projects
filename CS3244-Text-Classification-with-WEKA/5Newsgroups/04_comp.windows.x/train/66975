@@ -1,0 +1,66 @@
+from: rg@megatek.com (rusti sander)
+subject: re: x-server multi screen
+organ: megatek corpor, san diego, california
+line: 61
+
+from articl <1993apr17.010256.14372@eaf000.ca.boe.com>, by ten0772@eaf000.ca.boe.com (timothi e. neto):
+> rainer@sun3.eeam.elin.co.at (rainer hochreit) write:
+>>
+>>i've seen a lot of differ term, which seem to mean the same thing.
+>>who can give an exact definit what these term mean:
+>>
+>>	-) multi-screen
+>>	-) multi-head
+>>	-) multi-displai
+>>	-) x-server zaphod mode
+>>
+>>is there a limit how mani screen/displai a singl server can handl
+>>(in an articel a read someth about an upper limit of 12) ?
+>>
+>>how is the capabl call, if i want to move the cursor from on
+>>screen/displai to anoth.
+> 
+> as to how mani client mai be displai on a server, i believ the limit
+> would be how much memori is avail to your server or alloc by the
+> server.
+> 
+
+thi all sound suspici like my compani might have someth to
+do with thi.
+
+background first: megatek ha a seri of framebuff design as
+x acceler. for the most part these ar design for sun sbu
+and sun (and other vendor's) vme system.
+
+that said, megatek product support multi-screen and/or multi-displai
+on a sigl workstat. most of our card have a keyboard/mous port
+which can be us to provid addit displai. for exampl, sai
+you hade a sparcstat with an sbu expans chassi. you could
+put in six frambuff, allow a total of six screen in the system.
+you could then attach from 1 to 6 keyboard/mice, allow you to
+mix and match ani combin of screen and displai. you could
+have 1 6-screen displai, 3 2-screen displai, 6 1-screen displai,
+or 1 2-screen displai and 1 4-screen displai. basic ani
+combin.
+
+becaus of thi, we at megatek try to be veri care about the us
+of the word multi-screen and multi-displai. thei ar quit differ
+in mean, and (at least in x) have exact definit.
+
+the reason i rambl like thi is the mention of an upper limit if 12
+screen in a displai. as it so happen, there's a defin in the server
+that determin the most screen support (server/includ/misc.h,
+maxscreen). as releas my mit, thi is 3. as releas by megatek,
+thi is 12.
+
+as such, the most screen support by a singl megatek displai (i.e.
+x server) is 12. if someon constru thi to be a limit of x
+i'm sorri, but clearli (as point out so well by mr. neto) thi is
+not the case.
+
+we just did it here becaus nobodi ha ever ask us for more. of
+cours, i could sai "bui all you want, we'll support more."
+-- 
+----
+rusti sander, megatek corp. --> rg@megatek.com or...
+         ...ucsd!    ...hplab!hp-sdd!    ...am!scube!   ...uunet!

@@ -1,0 +1,30 @@
+from: watson@madvax.uwa.oz.au (david watson)
+subject: re: sphere from 4 point?
+organ: math dept uwa
+line: 23
+distribut: world
+nntp-post-host: xanthorrhoea.math.uwa.edu.au
+
+in articl <1qkgbuinn9n@shellei.u.washington.edu>, 
+bolson@carson.u.washington.edu (edward bolson) write:
+ 
+|> given 4 point (non coplanar), how doe on find the sphere, that is,
+|> center and radiu, exactli fit those point?  
+
+find the circumcent of a tetrahedron is discuss on page 33 in
+
+contour: a guid to the analysi and displai of spatial data,
+by dave watson, pergamon press,  1992, isbn 0 08 040286 0, 321p.
+
+each pair of tetrahedr vertic defin a plane which is a 
+perpendicular bisector of the line between that pair.  express each
+plane in the form ax + by + cz = d
+and solv the set of simultan equat from ani three of those
+plane that have a vertex in common (all vertic ar us).  
+the solut is the circumcent.
+
+-- 
+dave watson                          internet: watson@math.uwa.edu.au
+depart of mathemat            
+the univers of western australia               tel: (61 9) 380 3359
+nedland, wa 6009  australia.                     fax: (61 9) 380 1028

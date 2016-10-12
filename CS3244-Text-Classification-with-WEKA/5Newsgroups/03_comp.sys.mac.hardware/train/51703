@@ -1,0 +1,59 @@
+from: fredm@media.mit.edu (fred g martin)
+subject: re: put ex. syquest in centri 610?
+organ: mit media laboratori
+line: 54
+
+i've just instal a 5.25" tape backup in my c610; lot of the issu
+ar the same.  so, to answer your question...
+
+in articl <1993apr16.141820.1@cstp.umkc.edu> kmoffatt@cstp.umkc.edu write:
+
+> my pli 80m syquest drive ha a wire from the
+> drive to an id# switch on the outsid of the case.  where do i connect
+> thi switch??  can the comput just "tell" with intern drive?
+
+you probabl want to hard-wire the scsi id with short jumper.  put
+it at a conveni number like "1".  you *could* cut a hole in the
+back of the machin to rout the id switch, but why go through the
+hassl?  you probabl won't be need to frequent chang the id of
+your intern drive.
+
+>	i notic that the drive will lai over part of the motherboard (i
+>didn't look close, but i seem to recal it lai over the ram that's
+>solder onto the motherboard?  would that caus problem?
+
+yeah, when i first instal the tape drive i wa a littl concern
+too.  but it's no problem, the devic is design to fit just fine
+with the overhang.  it shouldn't reach back beyond the rom/ram/vram
+simm, though.
+
+>	on last question!  is there anywher to order a facepl cover?  
+>the drive's front panel is smaller than the space left in the case (the
+>drive's panel is the same size as the spotsbm clone's case).  should i just
+>cut a hole in the plastic panel that is current hold tmpty place?
+
+you can special-order part to mount the devic from your local appl
+dealer.  the relev part ar:
+
+  922-0358  blank bezel facepl
+  922-0850  cd-rom carrier [i.e., gener 5.25" devic mount bracket]
+
+note appl's unfortun choic of name for the slide-in bracket to
+mount a 5.25" devic.  the servic tech i talk to said, "oh sure,
+we stock those."  of cours thei were think of the cd caddi to
+hold a cd disk when you stick it in the drive.
+
+as far as i can tell, appl doe not sell a bezel facepl alreadi
+cut out for a standard 5.25" devic.  (why not?  thei advertis
+these machin as be abl to accept ani standard devic in the
+5.25" bai, why not provid the facepl?)   thei do sell a cutout for
+their cd-rom drive (of cours), but that's of no us.
+
+i'm go to hack up the extra bezel i order to make a cutout for my
+tape drive, which is a standard 5.25" devic.
+
+good luck with your syquest.
+
+	-fred
+
+

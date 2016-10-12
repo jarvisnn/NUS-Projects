@@ -1,0 +1,53 @@
+from: dbarker@spang.camosun.bc.ca (deryk barker)
+subject: re: wp-pcf, linux, risc?
+organ: camosun colleg, victoria b.c, canada
+x-newsread: tin 1.1 pl4
+line: 47
+
+leebr@ecf.toronto.edu (lee brian) write:
+: in articl <1qu8ud$2hd@sunb.oc.mq.edu.au> eugen@mpce.mq.edu.au write:
+: >in articl <c5o1yq.m34@csie.nctu.edu.tw> ghhwang@csie.nctu.edu.tw (ghhwang) write:
+: >>
+: >>dear friend,
+: >>  the risc mean "reduc instruct set comput". the risc usual ha 
+: >>small instruct set so as to reduc the circuit complex and can increas 
+: >>the clock rate to have a high perform. you can read some book about
+: >>comput architectur for more inform about risc.
+: >
+: >hmm... not that i am an author on risc ;-) but i clearli rememb
+: >read that the instruct set on risc cpu is rather larg.
+: >the differ is in address mode - risc instruct set ar not
+: >as orthogon is cisc.
+
+the origin risc had small instruct set, and simpl on. the
+idea wa that a) everi instruct should be complet in a singl
+clock cycl and b) to have no microcod and c) extens pipelin.
+
+a few comparison (from patterson: reduc instruct set comput.
+cacm v28. 1, 1985):
+
+cpu		year	instruct	microcod
+---		----	------------	---------
+ibm 370/168	1973	208		420kb
+dec vax 11/780	1978	303		480kb
+ibm 801		1980	120		0
+ucb risc 1	1982	39		0
+stanford mip	1983	55		0
+
+while research for the vlsi vax, dec discov that 60% of the vax
+microcod is there to support 20% of the instruct set which
+account for a mere 0.2% of all instruct execut. the uvax 32
+subset the architectur onto a singl chip and us a softwar
+emul for these veri complex instruct, the full vlsi uvax
+includ the entir instruct set, wa 5-10 time more copmlex but
+onli ranm 20% faster.
+
+cpu		chip	microcod	transistor
+---		-----	---------	-----------
+uvax 32		2	64k		101k
+vlsi uvax	9	480k		1250k
+
+--
+real:  deryk barker, comput scienc dept., camosun colleg, victoria b.c.
+email: (dbarker@camosun.bc.ca)
+phone: +1 604 370 4452

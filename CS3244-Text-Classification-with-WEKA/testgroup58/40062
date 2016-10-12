@@ -1,0 +1,86 @@
+from: gui@x.co.uk (gui singh)
+
+subject: re: x and motif config-file for hp-ux 8.0 ??
+
+in-repli-to: raistlin@uni-paderborn.de's messag of 12 mai 93 12:46:17
+
+x-disclaim: thi is not the view of ixi ltd unless explicitli state.
+
+line: 29
+
+nntp-post-host: york.x.co.uk
+
+organ: not a lot
+
+x-copyright: the author assert the right of patern in thi messag.
+
+
+
+>>>>> on 12 mai 93 12:46:17, raistlin@uni-paderborn.de (marku koch) said:
+
+marku> nntp-post-host: samo.uni-paderborn.de
+
+
+
+
+
+marku> hello everybodi out there !
+
+
+
+marku> i'm try to compil x11r5pl23 and motif 1.2.1 on a hp run
+
+marku> hp-ux 8.05. but it' seem to be not veri succes, becaus 
+
+marku> i have onli hp.cf config-file for hp-ux 7.0. 
+
+
+
+marku> i tri standard cc and x wa compil with a lot of warn.
+
+marku> the motif applic ar compil quit well, but thei won't run.
+
+marku> i receiv the xkeysymdb error which is report in faq, but
+
+marku> i cannot fix it. the xkeysymdb-file is at the right locat and it
+
+marku> work fine under suno.
+
+marku> probabl i have start the compil prozess onli with a wrong
+
+marku> config-file.
+
+
+
+marku> pleas help me !
+
+marku>   
+
+marku> thanx in advanc 
+
+marku>   marku
+
+
+
+if you instal x lib xt by redefin projectroot, you will find that
+
+ dure the instal it recompil on of the file in x lib that doe the
+
+search for xkeysmdb and emb the search path for the file base on whatev
+
+projectroot wa defin. to confirm thi what happen, becaus i'm 
+
+guess, go to mit/lib/x and do
+
+string xstrkeysym.o | egrep xkeysymdb
+
+--
+
+-gui singh,                 ixi            internet: gui@x.co.uk
+
+                            vision park    uucp:     gui@ixi.uucp
+
+                            cambridg      bang:     ...!uunet!ixi!gui
+
+                            cb4 4zr, uk    tel:      +44 223 236 555
+

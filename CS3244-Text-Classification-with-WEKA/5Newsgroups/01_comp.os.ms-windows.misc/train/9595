@@ -1,0 +1,16 @@
+from: yuan@wiliki.eng.hawaii.edu (maw ying yuan)
+subject: win3.1 config.sy queri
+organ: univers of hawaii, colleg of engin
+line: 11
+
+hi there,
+
+with a 16meg of ram, is there a need to run/load smartdrv for
+window 3.1?  if ye, can i run/load ramdriv without smartdrv?
+if i need both ramdriv & smartdrv, is the follow config.sy
+set ok:  ...smartdrv.sy 2048 2048
+              ...ramdriv.sy 2048 /e
+
+thank in advanc for e-mail repli.
+
+yuan@wiliki.eng.hawaii.edu

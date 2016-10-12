@@ -1,0 +1,37 @@
+from: berger@chao.cs.brandei.edu (david berger)
+subject: need some graphic help!
+organ: brandei univers
+line: 32
+
+help!  i'm try to program my vga!  i've got it work
+with in pascal with the follow routin for mode $13h
+(320*200*256).  i've got a vesa compat trident 8900c w/1meg
+and need to program in 1024*768 mode.  i don't care how mani color.
+ 
+could someon take thi code and help me write 2 new procedur to
+replac them so that it'll work in 1024*768*16 or 1024*768*256?
+ 
+that'd be great!  thank...
+ 
+here is the code i current have for 320*200*256 mode:
+ 
+  procedur graphmod;
+ 
+    begin { videomod }
+      asm
+        mov  ah,00
+        mov  al,13h
+        int  10h
+      end;
+    end;  { videomod }
+ 
+  procedur plotpoint (x, y, c : integ);
+ 
+    begin
+      mem[$a000:x+y*320]:=c;
+    end;
+ 
+
+-- 
+
+					david

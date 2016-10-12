@@ -1,0 +1,18 @@
+from: buzz@bear.com (buzz moschetti)
+subject: re: xcopyplan question
+	<buzz.93apr19101538@lion.bear.com> <whalei.93apr19171228@sigma.kpc.com>
+repli-to: buzz@bear.com (buzz moschetti)
+organ: bear, stearn & co. - fast
+line: 10
+in-repli-to: whalei@sigma.kpc.com's messag of 20 apr 93 01:12:28 gmt
+
+in articl <whalei.93apr19171228@sigma.kpc.com> whalei@sigma.kpc.com (ken whalei) write:
+>   as per your question: why not have the button handler add the object, and
+>   then call the "window_redraw()" (or whatev) directli?  although, depend
+
+thi design will work but i don't think it can take easili take advantag
+of expos event redraw optim; that is, the whole window will be
+redrawn, not just the area with the new item.
+
+p.s.  i'm repli here becaus my/your mailer didn't agre with the
+      return address whalei@sigma.kpc.com.

@@ -1,0 +1,36 @@
+from: zyeh@caspian.usc.edu (zhenghao yeh)
+subject: re: point within a polygon
+organ: univers of southern california, lo angel, ca
+line: 28
+distribut: world
+nntp-post-host: caspian.usc.edu
+keyword: point, polygon
+
+
+in articl <1993apr14.102007.20664@uk03.bull.co.uk>, scrow@hemel.bull.co.uk (simon crow) write:
+|> i am look for an algorithm to determin if a given point is bound by a 
+|> polygon. doe anyon have ani such code or a refer to book contain
+|> inform on the subject ?
+|> 
+|> 		regard
+|> 
+|> 			simon
+
+basic, there ar two algorithm determin whether a point is insid,
+outsid or on the polygon. the first on is rai (or half line) method. in
+thi method, you can draw ani rai, if the number of the intersect point
+of the rai and the polygon is even, then it is outsid. if the number is odd,
+then it is insid. of caus, you have to deal with the special case which
+mai make you headach.
+
+the second method is pi algorithm. draw the line between the point and
+all the vertic on the polygon. calcul and sum the angl of the
+success line. if the result is 2*pi, then it is insid. if pi, then
+it is on the polygon. otherwis it is outsid.
+
+my experi tell the second method is relibl.
+
+hope thi help.
+
+yeh
+usc

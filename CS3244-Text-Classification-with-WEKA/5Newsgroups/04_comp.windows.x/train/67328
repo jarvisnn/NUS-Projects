@@ -1,0 +1,50 @@
+from: lehor@koala.inria.fr (arnaud le_hor)
+subject: ** xpm 3.2g is avail **
+keyword: xpm
+organ: koala project, bull research franc
+line: 44
+
+on export.lc.mit.edu directori contrib, and avahi.inria.fr directori pub/xpm:
+xpm-3.2f-to-3.2g.patch.z
+xpm-3.2g.tar.z
+
+/* copyright 1990-93 group bull -- see licens condit in file copyright */
+/**************************************************************************\
+* 									   *
+*  			histori of user-visibl chang			   *
+* 									   *
+\**************************************************************************/
+
+3.2g	(93/04/26)
+
+    enhanc:
+	- much faster close color
+	- pipe from/to compress file now handl gnu's gzip (.z)  format
+	- ad xpmcolorkei attribut - abil to specifi which visual's
+	  color to us (ie: now it's possibl to read in a pixmap in a
+	  color visual, but us the color specifi for monochrom).
+	- ad -mono, -grei4, -grei and -color option to sxpm to demonstr
+	  the xpmcolorkei attribut.
+		- jason patterson <jasonp@fitmail.qut.edu.au>
+
+    bug correct:
+	- fix bug where redefin "none" as a pixel stop mask gener
+	- minor svr4 defin for <string.h>
+	- fix annoi closecolor bug relat to read/write color cell
+	- fix minor bug in color valu -> pixel overload
+	- manual updat to includ new red/green/blue close attribut
+		- jason patterson <jasonp@fitmail.qut.edu.au>
+
+	- the top imakefil wa miss the depend target
+	- sxpm/imakefil fix so that -l../lib is set befor the standard
+	  librari locat.
+		- vivek khera <khera@cs.duke.edu>
+
+	- lib/xpmp.h now defin bcopi as memcpi for vm (requir by recent
+	  version of vm)
+		- j. daniel smith <dsmith@ann-arbor.applicon.slb.com>
+
+	- the lib/imakefil didn't work with x11r4.
+
+-- 
+ arnaud le hor - lehor@sophia.inria.fr - bull research franc, koala project

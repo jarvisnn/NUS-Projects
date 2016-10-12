@@ -1,0 +1,46 @@
+from: bgrubb@dant.nmsu.edu (grubb)
+subject: re: id vs scsi
+organ: new mexico state univers, la cruce, nm
+line: 39
+distribut: world
+nntp-post-host: dant.nmsu.edu
+
+richk@grebyn.com (richard krehbiel) write:
+[stuff about the connect between id and ida deleat]
+>8mhz clock, 16 bit width, 5mb/sec.
+if id speed come from ida where doe the 8.3mb/s sight for id come from?
+
+scsi is not complex. it is just the wai the industri us and talk about it.
+there ar three kei differ in scsi; the control chip, the port, and
+the softwar.  that is it.
+let us look as scsi in from thi stand point.
+
+scsi-1: asynchron and synchron mode {softwar scsi driver onli}
+ asynchron is slower then synchron mode {onli 0-3mb/s vs. 0-5mb/s}
+ synchron speed can be reach by most scsi-1 divic with a
+ rewrit of the softwar driver {as is the case for the mac quadra.}
+
+scsi-2 {8-bit}: thi is the main sourc for the confus. thi differ from
+ scsi-1 onli in the control chip in most machin.  in the mac and some pc
+ thi is call 'fast scsi-1' becaus it us scsi-1 port and softwar driver
+ and can produc scsi-2 speed through scsi-1 inspit of thi even in the 
+ slower asynchron mode.  averag speed in asynchron scsi-1 mode 
+ 4-6mb/s with 8mb/s{see in both quadra and higher end pc} synchron
+ mode just allow a higher burst rate {10/mb/s}
+
+scsi-2 {16-bit}: two version-wide/fast.  wide scsi-2 requir two thing
+ over 8-bit scsi-2:  a scsi-2 softwar driver and a wide scsi port on the
+ machin and the extern devic.
+ fast scsi-2 also requir two thing over 8-bit scsi-2: scsi-2 driver
+ softwar and that the reciev devis support 16-bit fast scsi-2.
+ speed of both is the same: 8-12mb/s with 20mb/s burst.
+
+scsi-2 {32-bit}:  also know as wide and fast scsi.  over 8-bit scsi-2 thi
+ requir: scsi-2 driver softwar, wide scsi-2 port, and that the reciev
+ devic also have a 32-bit mode scsi-2 chip.  as expect thi is veri
+ expenc.  speed: 15-20mb/s with 40mb/s burst
+ 
+
+as i said simpl.  seven version of scsi seper by softwar, the 
+control chip, and the port. standar the softwar and it drop to
+onli five version of scsi seper by onli hardwar {the chip and the port}

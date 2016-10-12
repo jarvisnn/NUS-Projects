@@ -1,0 +1,36 @@
+from: paladin@world.std.com (thoma g schlatter)
+subject: re: ?order of file written when exit window?
+organ: the world public access unix, brooklin, ma
+line: 31
+
+in articl <1993apr22.001934.14921@ucsu.colorado.edu> hayesj@rintintin.colorado.edu (hay jame michael jr) write:
+>
+>try to pin point a hardwar problem with my disk, maxtor
+>7213at.  group file get corrupt on a regular basi.
+>onli happen on thi drive, d had onli on corrupt file
+>in over a year and it wa under the control of winword on c.
+>32-bit disk access and smartdriv ar off.  sinc instal
+>of dblspace problem ha turn from an annoy to a reason for
+>murder.
+
+ar you us fastopen?  if you ar, disabl it.  we had a lot
+of problem with fastopen corrupt weird thing (includ
+the window perman swap file) when we were us it.
+
+>
+>sinc the most frequent file corrupt ar the *.grp file,
+>ar these the last thing written to when exit window?
+
+inde thei ar.  advanc person measur tell me thei ar access
+just befor shell.dll
+
+>
+>also, ar there ani pd/sharewar util avail that do
+>a more thorough job than do 6, ndd 4.5, etc?  do 6 and 
+>win 3.1 compat.
+
+i realli like spinrit and qa plu
+
+tom
+paladin@world.std.com
+

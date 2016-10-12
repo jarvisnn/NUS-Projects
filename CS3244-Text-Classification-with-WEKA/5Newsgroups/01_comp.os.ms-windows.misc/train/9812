@@ -1,0 +1,49 @@
+from: 55526@brahm.udel.edu (oliv p weatherbe)
+subject: new window driver for cirru gd5426 graphic card!
+articl-i.d.: new.c5x27u.d4f
+organ: univers of delawar
+line: 42
+nntp-post-host: brahm.udel.edu
+
+
+i have upload the most recent window driver for the cirru gd5426 
+chip base displai card to the upload directori at ftp.cica.indiana.edu
+ (file is 5426dr13.zip). thei're veri recent, i download them from the 
+cirru bb (570-226-2365) last night. if you ar unabl to get them there, 
+email me and mayb i can upload them to some other site as well.  
+i have a local bu base card (vl24 bitblast from micron) but i think 
+the driver work with isa card (or at least includ driver for them).
+
+i found the new driver to be a signific improv over the 1.2 version, 
+improv my graphic winmark (v3.11) by about 2 million (7.77 to 9.88) 
+although thi could be the result of intent benchmark cheat on 
+cirru's part but i don't think so.
+
+from steve gibson's (columnist for info world) graphic card comparison 
+(also found at the cica ftp site under the name winadv.zip) i extract the 
+follow for the sake of comparison:
+
+							wintach
+             		winbn3.11	word	sprsht	cad	paint	overal
+steve's system:
+486/33 vlb:
+ati graphic ultra pro	  9.33		10.34	 20.78	8.28	14.90	 13.58
+
+my system -
+486sx/33 vlb:
+vl24 bitblast		  9.88		 8.65	 11.71	18.84	15.40	 13.65
+
+
+it no viper, but i think it a hell of a deal at about a third of the cost of 
+the ati card and when compar to the other card includ in gibson's review.
+
+micron system owner's, i would be interest to hear your opinion on the 
+dtc 2270vl local bu disk control. my system came with a maxtor 7120 
+drive (120 mb) and at first wa onli give me disk winmark of about 16 kb/s, 
+i am now at 22 kb/s. is thi about as good as it get? i can't get a norton's
+sysinfo disk read becaus the contol intercept the call, at 
+least that wa what the program said.
+
+
+oliv weatherbe
+oliv@earthview

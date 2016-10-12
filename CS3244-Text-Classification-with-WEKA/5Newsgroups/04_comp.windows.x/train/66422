@@ -1,0 +1,977 @@
+from: dbl@visual.com (david b. lewi)
+subject: comp.window.x frequent ask question (faq) 4/5
+summari: us inform about the x window system
+articl-i.d.: visual.c52ep6.97p
+expir: sun, 2 mai 1993 00:00:00 gmt
+repli-to: faq%craft@uunet.uu.net (x faq mainten address)
+organ: visual, inc.
+line: 968
+
+archiv-name: x-faq/part4
+last-modifi: 1993/04/04
+
+----------------------------------------------------------------------
+subject:  80)! where can i get an x-base plot program?
+
+these usual ar avail from uucp site such as uunet or other site as
+mark; pleas consult the archi server to find more recent version.
+
+ gnuplot	x (xplot), postscript and a bunch of other driver.
+	export.lc.mit.edu [and elsewher]:contrib/gnuplot3.1.tar.z
+
+ gl_plot	x output onli [?]
+	comp.sourc.unix/volum18
+
+ graph+
+	yallara.cs.rmit.oz.au:/pub/graph+.tar.z [131.170.24.42]
+	comp.sourc.unix/volum8
+
+ pdraw,drawplot		2d and 3d x,ps
+	scam.berkelei.edu:/src/local/3dplot.tar.z [128.32.138.1]
+	scam.berkelei.edu:/src/local/contour.tar.z [128.32.138.1]
+	scam.berkelei.edu:/src/local/drawplot.tar.z [128.32.138.1]
+	uunet:~ftp/contrib/drawplot.tar.z
+
+ xgraph		plot, zoom. output ps or hpgl.
+	shambhala.berkelei.edu:/pub/xgraph-11.tar.z [128.32.132.54]
+	sun1.ruf.uni-freiburg.de:x11/contrib/xgraph-11.tar.z [132.230.1.1]
+	nisc.jvnc.net:pub/xgraph-11.tar.z [128.121.50.7]
+	comp.sourc.x/volum3
+	or mani other site 
+
+ ac/gr (formerli xvgr and xmgr) xy plot tool
+	ftp.ccalmr.ogi.edu [129.95.72.34]
+	xview version: /ccalmr/pub/acegr/xvgr-2.09.tar.z
+	motif version: /ccalmr/pub/acegr/xmgr-2.09.tar.z
+	[mirror on export in /contrib/acegr]
+
+ xgobi		an interact dynam scatter-plot tool from bellcor
+	lib.stat.cmu.edu: gener/xgobi* [log in as statlib with your email
+	as the password; or send email to statlib@lib.stat.cmu.edu contain
+	the on-line messag "send xgobi from gener"]
+	inform from: debbi swayn, df@bellcor.com.
+
+ robot		a scientif xview-base graph plot and data analysi tool
+	ftp.astro.psu.edu:pub/astrod/robotx0.46.tar.z [128.118.147.28]
+
+ plotmtv	a multi-purpos 2d/3d plotter
+	tanquerai.berkelei.edu:/pub/plotmtv1.3.1.tar.z
+	
+
+[2/91. thank in part to: emv@ox.com (ed vielmetti); geoff@verita.com 
+(geoffrei leach); paul a. scowen (uk1@spacsun.rice.edu); black@beno.css.gov 
+(mike black)]
+
+----------------------------------------------------------------------
+subject:  81)  where can i get an x-base spreadsheet?
+
+a version of "sc" for x and which support lotu file is avail from
+vernam.cs.uwm.edu in xspread2.0.tar.z. it also includ graph function.
+inform: soft-eng@cs.uwm.edu.
+
+the gnu packag oleo is avail in prep.ai.mit.edu:pub/gnu/oleo-1.2.2.tar.z;
+it can gener postscript rendit of spreadsheet.
+
+also:
+
+sever of the below ar part of integr offic-product tool which mai
+also includ word-process, email, conferenc, imag process, and 
+draw/paint, among other featur.
+
+vendor                        product    contact inform 
+------                        -------    -------------------
+access technolog             20/20      508-655-9191
+informix                      wingz      800-331-1763
+qualiti softwar product     q-calc/exclaim    800-628-3999 (ca:213-410-0303) 
+unipress                      q-calc     201-985-8000
+uniplex                       uniplex    214-717-0068, 800-356-8063
+digit			      decdecis   1-800-digit
+applix			      aster*x	 508-870-0300, 1-800-8applix.
+ai			      xess	 919-942-7801, info@ai.com
+bbn softwar product         bbn/slate  617-873-5000 slate-offer@bbn.com
+elsid softwar system	      ripcam	 613-228-9468
+
+sa by the sa institut now ha a spreadsheet modul; the x version is
+avail on the current popular risc platform.
+
+----------------------------------------------------------------------
+subject:  82)  where can i get x-base project-manag softwar?
+
+vendor                        	product		contact inform 
+------				-------		-------------------
+product solut		ultra planner	617-237-1600
+qualiti softwar product 	masterplan version, 310-410-0303 sale@qsp.com
+digit tool, inc.		autoplan	408-366-6920, 800-755-0065
+nasa				compass		404-542-3265,
+						servic@cossack.cosmic.uga.edu
+gec-marconi softwar system	gecomo plu	703-648-1551
+gec-marconi softwar system	size plu	703-648-1551
+tei, inc			vue		408-985-7100
+mantix				cascad		703-506-8833
+advanc manag solut	schedul publish	800-397-6829
+auburn univers		??		??
+
+[thank to pete phillip (pete@egh-qc.co.uk); 7/92]
+[thank to atul chhabra (atul@nynexst.com); 10/92]
+
+----------------------------------------------------------------------
+subject:  83)  where can i get an x-base postscript preview?
+
+	ghostscript is distribut by the free softwar foundat 
+(617-876-3296) and includ a postscript interpret and a librari of graphic
+primit. version 2.5.2 is now avail; the major site is prep.ai.mit.edu. 
+[11/92] 
+
+	gspreview (by the comput laboratori of the univers of kent at 
+canterburi) is an x user interfac (wcl-base) to the ghostscript 2.4[.1]
+interpret [5/92].  the sourc is avail for anonym ftp from 
+export.lc.mit.edu as gspreview.2.0.tar.z.
+
+	ghostview (by tim theisen, tim@cs.wisc.edu) is full-function user 
+interfac for ghostscript. check ftp.cs.wisc.edu or prep.ai.mit.edu for 
+/pub/ghostview-1.4.1.tar.z [1/93]. there ar also sever execut avail
+on ftp.cs.wisc.edu:/pub/x/ghostview-ex for variou architectur.
+
+also:
+
+	scriptwork is harlequin's softwar packag for preview and print
+postscript(r) descript of text and graphic imag; preview for x ar 
+avail. for inform call +44-223-872522 or send email to 
+scriptwork-request@harlqn.co.uk.
+
+	imag network's xp support the full postscript languag and render
+in color, grayscal, or monochrom. font displai ar anti-alias. info:
+imag network, +1 415 967 0542.
+
+	digit's dxpsview run on uw 2.1 and 2.2.
+
+	sun's pageview run with the x11/new server. 
+
+----------------------------------------------------------------------
+subject:  84)  where can i get an x-base gk packag?
+
+	the latest freeli-avail xgk can be obtain from 
+xgk-request@unidata.ucar.edu; thi is a 2c implement deriv from the 
+x11r4 contrib xgk from ibm and the univers of illinoi. the releas
+is on unidata.ucar.edu [128.117.140.3] as pub/xgk.tar.z. [12/90]
+	in addit, grafpak-gk is avail from advanc technolog center
+(714-583-9119).
+	gksul is avail from gk@ulowel.edu (ulowel cs depart). it is
+a 2b implement which includ driver for a varieti of devic. it can be 
+pass an x window id to us. the packag includ both c and fortran bind.
+
+[11/90; from dsrand@mitr.org and from stew@hanauma.stanford.edu]
+
+	an xgkswidget is produc by neil bower (neilb@leed.dc; 
+neilb@dc.leed.ac.uk); the latest [10/91] conform with the new version of 
+xgk (2.4). it is avail on export in contrib/xgk-widget.tar.z. 
+
+----------------------------------------------------------------------
+subject:  85)  where can i get an x-base pex packag?
+
+	the first offici releas of pex is with x11r5; fix-22 bring the
+sampl implement server to version 5.1.
+
+	the final pex 5.1 protocol specif is now avail via anonym
+ftp to export.lc.mit.edu (18.24.0.12), in the directori /pub/doc/pex/. 
+chang made from the public review draft ar list in the file "5.1p_chang"
+in that directori. [9/92]
+
+	the final pexlib 5.1 document is on export in pub/doc/pexlib. [11/92]
+
+	there is now avail from the univers of illinoi an 
+implement of the pex 4.0 specif call uipex. it contain a "near-
+complet" implement of phig and phig plu. the file 
+pub/uipex/uipex.tar.z is on a.cs.uiuc.edu (128.174.252.1); the port platform
+wa an rt run 4.3.  question and comment can to go uipex@cs.uiuc.edu. 
+
+	in addit, the pext toolkit by rich thomson (rthomson@dsd.es.com) is 
+avail on export as pext.tar.z; it includ a pex widget make it easier to
+includ pex in xt-base program.
+
+----------------------------------------------------------------------
+subject:  86)  where can i get an x-base tex or dvi preview?
+
+	the xtex preview for tex file is avail from a number of archiv 
+site, includ uunet; the current version is usual on ftp.cs.colorado.edu
+(128.138.204.31) in seetex-2.18.5.tar.z; pre-convert font ar also on that 
+machin. the distribut all includ "mftobdf" which convert pk, gf, and pxl
+font to bdf format, where thei can then be compil for us by your local x
+server. 
+	the xdvi dvi-preview is fairli comprehens and easi to us. it is 
+also avail from a number of site, includ uunet and export.lc.mit.edu;
+current version is patchlevel 16 [12/92].
+
+----------------------------------------------------------------------
+subject:  87)  where can i get an x-base troff preview?
+
+	x11r4 ha two preview for devic-independ troff: the support 
+client xditview, and the contribut-but-well-maintain xtroff. an earlier 
+version of xtroff also appear on the r3 contribut sourc. xditview is also
+in the r5 distribut.
+	in addit, the xman client can be us to preview troff document
+which us the -man macro (i.e. man page).
+	if psroff is us it output can be view with a postscript preview.
+
+in addit:
+
+	xproof, an x preview for ditroff ha been contribut by marvin 
+solomon (solomon@cs.wisc.edu); version 3.5 is avail on export in 
+contrib/xproof*. 	[8/90]
+
+	elan comput group (ca: 415-964-2200) produc eroff, a modifi 
+troff implement, and elan/express, an x11 eroff preview.
+
+	softquad (416-963-8337; usa onli 800-387-2777, mail@sq.uu.net or
+mail@sq.com) offer softquad publish softwar, includ a substanti-
+rewritten troff formatt, a better intermedi languag with backward 
+compat, and an x11[r3,r4] preview. (thi is the packag adopt by 
+at&t's own mi depart, and us in and re-sold by mani part of at&t). 
+[inform from ian darwin, softquad (ian@sq.com) 3/90]
+
+	imag network (1-800-toxroff; ca: 415-967-0542) offer the xroff 
+packag, which includ a fine modifi troff implement and a set of 
+x11-base page preview. (thi is the packag oem'ed by sever hardwar 
+vendor.)
+
+[mostli courtesi mora@cs.toronto.edu (mark mora)] [2/90]
+
+----------------------------------------------------------------------
+subject:  88)! where can i get a wysiwyg interfac builder?
+
+	a new releas of the dirt interfac builder by richard hesketh work 
+with x11r5 and includ some support for the motif widget set. from the readm:
+  thi builder allow the interact creation and rapid prototyp of x user
+  interfac us the x toolkit and a number of widget set.  dirt gener
+  "wc - widget creation" resourc file and thi distribut also includ the
+  widget creation librari (version 1.06, with the except of the demo and
+  mri/ari sourc code) with the kind permiss of it author david e. smyth.
+check dirt.readm, dirt.a2.0.tar.z, and dirt.ps.z on export.lc.mit.edu.
+
+	the interview 3.0.1 c++ toolkit contain a wysiwig interfac builder 
+call ibuild. ibuild gener code for an interview applic complet 
+with imakefil and an x-resourc file. document is /pub/paper/ibuild.ps 
+on interview.stanford.edu (36.22.0.175).
+	quest window's (408-496-1900) objectview c++ packag includ an
+interact build tool. 
+
+	druid (demonstr rapid user interfac develop) run on sparc 
+machin us osf/motif 1.0; it is intend eventu to be a full uim but 
+appar now ha onli support for creat the present compon, for 
+which it gener c/uil code. info: singh g, kok ch, ngan ty, "druid: a system
+for demonstr rapid user interfac develop". proc. acm siggraph symp 
+on user interfac softwar and technolog (uist'90). acm, ny, 1990, pp:167-177.
+
+	the byo interfac builder is implement in tcl.
+
+also:
+	in addit, these commerci product (unsort) ar avail in 
+final or prereleas form [the * follow the product name indic that the 
+product is known to allow the design to specifi for each widget whether a 
+particular resourc is hard-code or written to an applic default file,
+for at least on form of output]. some ar much more than user-interfac tool;
+some ar full user interfac manag system; inform on most is not
+up-to-date:
+
+product name		look/feel	code output		vendor
+
+hp interfac		motif 1.1	c(xm)			hp/visual edg
+ architect/ uimx	
+open look express	open look	c(xol+ helper lib)	at&t /
+								visual edg
+uimx 2.0 *		motif 1.1	c(xm + helper code)	visual edg
+								514-332-6430
+								& distributor
+vuit 2.0		motif 1.1	c/uil[r/w]		dec 
+								(1-800-digit)
+x-design 1.1 *	motif 1.1	c(xm); c/uil		imperi
+								softwar
+								technolog, ltd
+							      (+44 734 587055)
+								sale@ist.co.uk
+xfacemak2 (xfm2) * 	motif 1.0	c;c/script (c-like procedur 
+					languag);c/uil
+					 			nsl 
+							(33 1 43 36 77 50)
+							request@nsl.fr
+builder xcessori 2.0 *	motif 1.1	c(xm); c/uil[r/w]	ic 
+					ada			(617-621-0060)
+								info@ic.com
+xbuild 1.1 *		motif 1.0	c(xm); c/uil 		nixdorf	
+								(617-864-0066)
+							xbuild@nixdorf.com
+ixbuild			motif 1.1	c(xm); c/uil		ixo softwar
+								karl@ixo.uucp
+								089/461005-69
+teleus 2.1 *		motif 1.1.5	c(xm); c/uil[r/w]
+								telesoft
+								(619-457-2700)
+							gui_info@telesoft.com
+ezx 3.2			motif 1.1	c(xm +helper lib);c/uil;ada
+								sunris
+								(401-847-7868)
+							       info@sunris.com
+snapix			motif		c/xm			adnt
+								+33 1 3956 5333
+openwindow develop	open look 	gil [-> c/xview]	sun
+guid 3.0				gil [-> c++/xview]
+					gil [-> c/olit]
+					gil [-> c/postscript for tnt]
+exocod/sxm		motif		c(xm)			expert object
+exocod/plu		open look	xview			708-676-5555
+tae+			xw;motif	c(xw,xm); c/tcl (tae control languag,
+					like uil[need helper librari]);
+					vax fortran; ada; c++
+								nasa goddard
+								(301) 286-6034
+mob, xsculptor			motif; openlook	c/xm,uil; c/xol		kovi
+								408-982-3840
+psm			pm, msw 3.0,	c/uil			lancorp
+			motif 1.1.2,mac				pty ltd.
+								+61 3 629 4833
+								fax:  629 1296
+								(australia)
+motif		motif 1.0|1.1.2	c(xm)			aka edv
+						       +49 (0) 234/33397-0
+						       +49 (0) 234/33397-40 fax
+uib			open look/motif	c++(oi)			parcplac 
+								+1 303-678-4626
+								
+look for magazin review for more complet comparison of meta-file format,
+document, real eas-of-us, etc; unix world and unix review often carri
+articl.
+
+	in addit, neuron data (1 415 321-4488) make open interfac, a 
+window-system-independ object toolkit which support interfac which ar 
+or resembl (superset of) mac, window, and motif and open look; the packag 
+includ an interfac builder.
+
+       in addit, the grammi builder support the develop of ada/x 
+applic us it own set of object which ar plan to have a motif 
+look.  grammi is written in ada and gener ada spec and stub bodi. 
+(1-800-grammi-1).
+
+	in addit, these non-wysiwyg but relat product mai help for goal 
+of rapid prototyp of the applic interfac:
+
+	wcl: the widget creation librari. basic describ the widget
+hierarchi and action in a resourc file; avail from fine archiv server
+everywher, includ devvax.jpl.nasa.gov (128.149.1.143) in pub/. wcl provid
+a veri thin layer over xt without ani intern tweak. version 2.5 is current
+[3/93].
+	winterp: an xlisp-base motif toolkit allow for interpret 
+program. the copi on the r4 tape is outdat; get a copi off export or 
+email to winterp-sourc%hplnpm@hplab.hp.com. 
+	the serpent uim permit the build of user-interfac without 
+specif knowledg of code but with an understand of attribut be set
+on a particular [motif] widget.  beta releas 1.2 is avail from 
+ftp.sei.cmu.edu (128.237.1.13) and can be found in /pub/serpent.  serpent is 
+also avail on export.lc.mit.edu (18.24.0.11) in /contrib/serpent. email
+question can go to serpent@sei.cmu.edu. a commerci version of serpent is
+avail as "agora" from aset, 221 woodhaven drive, pittsburgh, pa 15228.
+	garnet is a common lisp-base gui toolkit. inform is avail 
+from garnet@cs.cmu.edu.
+	metacard is a hypertext/rapid applic develop environ
+similar to appl/clari corpor's hypercard (info@metacard.com). metacard 
+is avail via anonym ftp from ftp.metacard.com, csn.org, or 
+128.138.213.21.
+
+----------------------------------------------------------------------
+subject:  89)  where can i find x tool callabl from shell script?
+i want to have a shell script pop up menu and ye/no dialog box if the user 
+is run x.
+
+	sever tool in the r3 contrib/ area were develop to satisfi these
+need: yorn pop up a ye/no box, xmessag displai a string, etc. there ar
+sever version of these tool; few, if ani, have made it to the r4 contrib/ 
+area, though thei mai still be avail on variou archiv site.
+	in addit, richard hesketh (rlh2@ukc.ac.uk) ha post the xmenu
+packag to comp.sourc.x ("v08i008: xmenu") for 1-of-n choic.  [7/90]
+	two version of xprompt have been post to comp.sourc.x, the latter
+be an unauthor rewrit. [r. forsman (thoth@reef.ci.ufl.edu), 1/91]
+	there is a version of xmenu avail from comp.sourc.x; it is
+be work on and will like be re-releas.
+	xp-1.1.tar.z, xpick-1.0.tar.z and xzap-1.0.tar.z on export's contrib/
+ar tool by gerri.tomlinson@newcastl.ac.uk which act as x version of the 
+simpl displai and choic-make tool in k&p. [4/92]
+	xtpanel let the user build a panel contain interact object such
+as button, slider, text field, etc., either from the command line or us a
+simpl script languag. it is avail for anonym ftp from 
+hanauma.stanford.edu (36.51.0.16) as pub/x/xtpanel.tar.z and mai also be found 
+in the alt.sourc archiv.
+
+----------------------------------------------------------------------
+subject:  90)  where can i get an x-base debugg?
+
+	xdbx, an x interfac to the dbx debugg, is avail via ftp from 
+export. the current [1/91] version is 2.1 patchlevel 2.
+	an x interfac to gdb call xxgdb is more like xdbx 2.1.2. it is part 
+of comp.sourc.x volum 11 [2/91]; xxgdb-1.06.tar.z is on export.
+	mxgdb is a motif interfac to gdb by jim tsilla 
+(jtsilla@bubba.ma30.bull.com); version 1.1.5 wa releas 1/93.
+	up is a sourc-level debugg which run under the x11 and sunview
+window system on sun and dec platform. it is avail from export 
+(18.24.0.11) as contrib/up-2.45.tar.z (also up-2.45-to-2.45.2.patch.z)
+and unix.hensa.ac.uk (129.12.21.7) in /pub/misc/unix/up (or try mail to 
+archiv@unix.hensa.ac.uk). [10/92] unoffici fix by rod armstrong 
+(rod@sj.at.slb.com) ar on unix.hensa.ac.uk in 
+/misc/unix/up/contrib/rod@sj.at.slb.com.
+
+also:
+	mip produc a highli-customiz (wcl-base) visual debugg.
+	you should be abl to us sun's dbxtool with it x11/new server.
+	the codecent (617-498-3000) sourc-level debugg, avail on most
+major platform, includ an x-base interfac.
+	at&t offer the examin graphic interfac, an x11 interfac to dbx
+and c++ dbx for sun3 and sun4 and sdb and sdb++ for 386 and 3b2 platform. call
+1-508-960-1997 or contact examin@mvuxi.att.com for more inform.
+        solbourn (+1 303-678-4626) offer pdb, it x-base debugg for c, c++
+and fortran.  pdb us the oi toolkit and run in either open look or motif 
+mode. 
+	sco (info@sco.com) offer dbxtra as part of sever develop 
+system.
+        lucid's energ program system, a tightli integr develop
+environ for c and c++ program, incorpor a graphic user interfac on
+top of an extend version of gdb. info:  lucid-info@lucid.com, or
+(800) 223-9322.
+
+----------------------------------------------------------------------
+subject:  91)! how can i "tee" an x program ident to sever displai?
+
+	there ar sever protocol multiplex tool which provid for the 
+simultan displai of x client on ani number of machin.
+	xmx (an x protocol multiplexor) is avail from wilma.cs.brown.edu 
+(128.148.33.66) as pub/xmx.tar.z it work independ of the server and doe
+not affect the applic be share; it wa develop for us in the
+electron classroom.
+	xtv is a confer program which can be us to duplic the
+"chalkboard" on sever displai. releas 1 is avail on the x11r5 contrib
+tape; a more recent version is on ftp.cs.odu.edu as pub/wahab/xtv.r2.tar.z.
+	shx from michael altenhofen of digit equip gmbh cec karlsruh 
+also doe thi; it is a "wysiwi" (what you see is what i see) packag in the 
+context of a comput-base learn/train tool to provid onlin help from
+remot tutor but is also us for gener window share. inform: 
+shx@nestvx.enet.dec.com.  shx can be found on export and 
+		gatekeep.dec.com:/pub/x11/contrib/shx.tar.z, 
+		crl.dec.com:/pub/x11/contrib/shx.tar.z 
+modif to shx for color map and privat color alloc by
+mark j. handlei (m.handlei@cs.ucl.ac.uk) ar on cs.ucl.ac.uk in 
+car/shx.car.tar.z.
+	xtrap is implement as a server/librari extens and can be us
+to record and then replai an x session. it is avail as:
+		gatekeep.dec.com      pub/x11/contrib/xtrap_v31.tar.z
+		export.lc.mit.edu      contrib/xtrap_v31.tar.z
+	wscrawl can be us as a "multi-person paint program". it's avail
+on sax.stanford.edu as wscrawl.shar.z.
+	shdr implement a simpl share whiteboard, without a chalk-pass
+mechan. it's avail on parcftp.xerox.com as pub/europarc/shdr.tar.z.
+	sketchpad 1.0 (3/93) is a distribut interact graphic editor 
+particularli design for sketch. sourc have been post to alt.sourc
+and ar avail from ftp.igd.fhg.de (192.44.32.1) in ~ftp/incom/sketchpad.
+	the nestor project is describ in "upgrad a window system for 
+tutor function", michael altenhofen et al., the proceed of the exug
+confer 11/90.
+
+also of us:
+        hewlett-packard co. ha a commerci product, "hp sharedx" which work
+under hp-ux current on their 300, 400, and 700 seri workstat and their
+hp 700/rx x station.  machin receiv share window can be ani x server.
+hp sharedx consist of a server extens and a motif base user interfac
+process.  contact your local hp sale rep. for more inform.
+	ibm offer a commerci product.
+	sun offer multi-user confer softwar call showm.
+	insoft (mechanicsburg, pa, usa) offer multi-user confer softwar 
+call communiqu.
+
+[thank in part to scott@spectra.com (tim scott), 5/91, and to peter cigehn 
+(peter@lulea.trab.se), 8/92 ]
+
+----------------------------------------------------------------------
+subject:  92)  topic: build the x distribut [topic need updat to r5]
+----------------------------------------------------------------------
+subject:  93)  what's a good sourc of inform on configur the x build?
+
+	thi faq includ inform on a number of "gotcha" that can bite 
+you on particular system. howev, the best sourc of gener inform on 
+build the x11 releas is found in the releas note. the file is bundl 
+separ from the rest of the releas, so if it's becom separ from your 
+sourc you can ftp anoth copi separ: the file relnot.[ms,ps,txt] at 
+the top of the distribut. the file relnot is also avail from the 
+xstuff mail server.
+	in addit, o'reilli & associ's volum 8 on x administr
+includ inform on configur and build x.
+
+----------------------------------------------------------------------
+subject:  94)  why doesn't my sun with a cg6 work with r5?
+
+	appar gcc is the problem; it seem to produc fine code for all
+sun displai except for the cgsix. the new sungx.o distribut with fix-07 
+mai fix the problem (note: not known to work on solari).
+
+----------------------------------------------------------------------
+subject:  95)  why doesn't my sun with suno 4.1 know about _dlsym, etc.?
+
+	if you get error with _dlsym _dlopen _dlclose undefin, link with 
+libdl.a.  add "-ldl" to your and eventu your site.def.  you mai want to 
+surround it with "-bstatic -ldl -bdynam" if you add it to the extra_librari
+variabl, sinc "syslib" get ad after extra_librari on the eventu 
+compil command; otherwis you mai not have a share libdl.  (or compil 
+the stub share.)
+
+[thank to joe backo (joe.backo@east.sun.com), 12/91]
+
+----------------------------------------------------------------------
+subject:  96)  what is thi strang problem build x client on suno 4.1.2?
+
+	in suno 4.1.2 sun fix a share-librari bug in ld which conflict
+with the wai x11r4 build the share xmu librari, caus these symbol to be
+undefin when build some x11 client: 
+	_get_wmshellwidgetclass
+	_get_applicationshellwidgetclass
+compil "-bstatic -lxmu -bdynam" appear to work. 
+
+to solv the problem if you ar us openwindow 3.0 (x11r4-base xt), pleas 
+contact your local sun offic and request the follow patch:
+
+patch i.d.      descript
+100512-02       4.1.x openwindow 3.0 libxt jumbo patch
+100573-03       4.1.x openwindow 3.0 undefin symbol when us
+                        share libxmu
+
+[greg earl, earl@sun.com; 7/92] 
+
+a sourc patch for us with the mit x11r4 librari wa develop by conrad 
+kimbal (cek@sdc.boe.com); it retrofit into r4 some fix made in r5 to
+get around thi problem. the patch is on export in [1/93]
+	contrib/x11r4_suno4.1.2_patch_version3.z
+
+----------------------------------------------------------------------
+subject:  97)  why can't gcc compil x11r4 on my sparc?
+i us gcc to compil the whole distribut, but i get sever segment
+fault when run x.
+
+	note first that gcc on risc machin doe not necessarili result in
+ani perform increas; it certainli is not as notic as it is on the
+680x0 or vax platform.
+
+	here is the problem: gcc and cc us incompat method of pass 
+structur as argument and return them as function valu, so when 
+gcc-compil part of x ar link with sun-suppli function that pass or 
+return struct, run-time error occur.  affect program includ rgb and 
+the server.
+
+	thi is from the gcc manual:
+
+	on the sparc, gnu cc us an incompat call convent for 
+	structur.  it pass them by includ their content in the argument
+	list, wherea the standard compil pass them effect by 
+	refer.
+
+	thi realli ought to be fix, but such call convent ar not yet
+	support in gnu cc, so it isn't straightforward to fix it.
+
+	the convent for structur return is also incompat, and
+	`-fpcc-struct-return' doe not help.
+
+you can duck the problem either by us cc throughout or by us it for just
+the routin which caus incompat; the problem cannot be solv with 
+compil flag.  
+
+	file which need to be compil us cc includ:
+		server/os/4.2bsd/oscolor.c 
+		rgb/rgb.c
+
+	in addit, sever of the "inet_" function us struct as arg or
+return valu:  
+		client/xhost/xhost.c 
+		client/xauth/gethost.c. 
+call to inet_addr in /lib/clx/socket.c and lib/x/xconndi.c ar possibl 
+harmless as thei don't involv struct.
+
+[collect by bashford@scripp.edu (don bashford); 8/90]
+
+----------------------------------------------------------------------
+subject:  98)  what ar these i/o error run x built with gcc?
+when i try to run xinit or the xsun server i get the error 
+	"get interfac configur: oper not support on socket. 
+	fatal server bug! no screen found."
+
+	run the gcc fixinclud script appar didn't work. you can do 
+thi simpl test:
+
+	#includ <sy/ioctl.h>
+	siocgifconf
+
+run that through cc -e and gcc -e.  the last line of output is the piec of 
+interest; it should be ident (modulo irrelev differ like 
+whitespac).  if the gcc version ha 'x' where the cc version ha 'i', your 
+fixinclud run didn't work for some reason or other; go back to your gcc
+sourc and run `fixinclud`; then rebuild the x distribut. if thei ar 
+ident, try run a make clean in mit/server and rebuild, just to make 
+sure everyth get compil with the proper includ file.  
+
+[courtesi der mous, mous@larri.mcrcim.mcgill.edu; 9/90]
+
+----------------------------------------------------------------------
+subject:  99)  what ar these problem compil x11r4 on the older sun3?
+in mit/server/ddx/sun/suncg3c.c, we have found "miss" defin for 
+cg3ac_monolen, cg3bc_monolen, cg3ac_enblen, cg3bc_enblen. what should these be?
+
+	the r4 errata list distribut after x11r4 mention that you can add
+these line to the file on older suno version (e.g. 3.5) to compil:
+        #defin cg3ac_monolen (128*1024)
+        #defin cg3ac_enblen  cg3ac_monolen
+        #defin cg3bc_monolen cg3ac_monolen
+        #defin cg3bc_enblen  cg3ac_monolen
+
+	howev, the sun3 should not actual ever have the cg3 devic, and so 
+refer to it can be remov from mit/server/ddx/sun/suninit.c and the 
+imakefil.  [11/90]
+
+----------------------------------------------------------------------
+subject: 100)  what ar these problem compil the x server on suno 4.1.1?
+the file <sundev/cg6reg.h> isn't be found.
+
+	sun omit <sundev/cg6reg.h> from suno 4.1.1. remov the #includ 
+from suncg6c.c and replac it with the line 
+	#defin cg6_vaddr_color   0x70016000
+the file ha chang from earlier version of suno and should not be copi 
+from anoth distribut.
+
+----------------------------------------------------------------------
+subject: 101)  what ar these problem us r4 share librari on suno 4?
+all of the execut that i try to run have the follow result:
+	ld.so: libxmu.so.4: not found
+or even:
+	ld.so: call to undefin procedur __gethostnam from 0xf776a96c
+
+	if you ar build with share librari on a sun, rememb that you 
+need to run "ldconfig" as root after instal the share librari (if you've
+instal x on a file-server, run it on the server's client, too).  while 
+build and instal the distribut, you need to be care to avoid 
+link against ani exist x share librari you might have (e.g. those 
+distribut with openwindow).  you should make sure you do not have 
+ld_librari_path set in your environ dure the build or the instal.  
+if you ar go to keep xterm and xload as setuid program, pleas note that 
+the share librari must be instal in /usr/lib, /usr/local/lib, or 
+/usr/5lib for these program to work (or els those program must be link 
+static). [courtesi mit x consortium]
+	note also that the program mkfontdir is run as part of the build; it
+attempt, howev, to us the share librari befor thei have been instal.
+you can avoid the error by build mkfontdir static (pass -bstatic to
+most c compil).
+
+----------------------------------------------------------------------
+subject: 102)  can olit program run with r5 xt? (_xtqstring undefin)
+
+thi is a bug in the olit.  _xtqstring wa an extern symbol that exist in 
+x11r4 (upon which ow 3.0's libxt is base).  it wasn't document and wa 
+remov in x11r5 (mit's guarante of upward compat between the r4 and r5
+librari onli appli to the document interfac).  
+
+a workaround is to temporarili set your ld_librari_path to point to the x11r4
+or openwindow xt librari that you link the program against.
+
+[10/92; from barri margolin (barmar@think.com); 3/93 from jeff franci 
+(jpf@heliocentr.com)]
+
+----------------------------------------------------------------------
+subject: 103)  how do i get around the suno 4.1 secur hole?
+
+	there is a secur problem with certain r4 client (xterm and xload)
+run under suno 4.1 that have been instal setuid root and ar us 
+share librari; to avoid the problem, do on of these:
+	1) make the program non-setuid. you should consult your system
+administr concern protect of resourc (e.g. pty and /dev/kmem) us
+by these program, to make sure that you do not creat addit secur 
+problem at your site.
+	2) relink the program static (us -bstatic).
+	3) instal the librari befor link and link with absolut path
+to the librari.
+
+[from rw@expo.lc.mit.edu (bob scheifler), 12/90]
+
+the r5 version of xterm doe thi automat by rebuild xterm against the
+newli-instal librari when xterm is be instal; thi prevent an suid
+program from be built with librari specifi rel. note that thi 
+mai caus an inconveni when do the instal from nf-mount disk. 
+xload ha been rewritten to avoid the problem.
+
+----------------------------------------------------------------------
+subject: 104)  how do i get around the frame-buffer secur hole?
+
+	on mani system the frame-buffer is unsecur by default; thi permit 
+anyon who can log into your workstat to peek at your window session by 
+access the frame-buffer directli, or, as less of a privaci issu but perhap
+more annoi, to [accident] start up a second x session on your consol 
+displai. check the man page for fbtab(5).
+
+[thank to art mulder (art@cs.ualberta.ca); 2/93.]
+
+----------------------------------------------------------------------
+subject: 105)  topic: build x program 
+----------------------------------------------------------------------
+subject: 106)  what is imak?
+
+	imak is not a replac for the make program; instead, it is a
+makefil-gener that take advantag of the includ-file and macro-
+process capabl of the c preprocessor cpp to gener makefil 
+suitabl for build softwar on a particular system. although it is not 
+specif to x, the x releas us it to help solv a number of the 
+configur issu that aris in make such a larg system wide portabl.
+	imak ha a fairli steep learn curv, in part becaus the process by
+which the system-specif configur file, system-independ configur
+file, and individu imakefil ar meld to produc a makefil is not 
+obviou.
+	there have been sever differ version of imak; the r3, r4, and
+r5 version ar differ.
+
+	you can obtain inform on imak from these sourc:
+	- the r4 and r5 releas note and imak man page includ inform on
+us imak to build x
+	- the r4 and r5 file mit/config/readm also contain us inform
+	- on the r4 tape, contrib/doc/imak/imak.tex is mark mora' r3/r4
+guid to imak.
+	- the r5 mit/doc/config/usenixw/paper.ms contain a paper by jim
+fulton on an earli version of imak
+	- paul duboi (duboi@primat.wisc.edu) ha written a us 
+explan of how imak work and how to us it in configur x for non-
+support system; the document is avail from ftp.primat.wisc.edu
+in the directori ~ftp/pub/imak-stuff; look for config-x11r4.ms (troff) and 
+config-x11r4.ps (postscript). some supplement appendic ar nearbi. 
+[7/91: document version is now 1.06] these imak paper ar avail by email;
+mail a messag bodi of "send imak-stuff help" to almanac@primat.wisc.edu.
+	- see "system administr - imak: friend of foe?" by dinah mcnutt
+in the novemb 1991 issu of sunexpert.
+	- german reader should expect in june 1992 an articl "da meta-make 
+/ i make, you make / schwerelo" by rainer klute in "ix 
+multius-multitask-magazin", direct at applic programm need to
+write imakefil. an english-languag deriv of thi articl is in the
+x journal, issu 2:1.
+	- the o'reilli x resourc issu #2 contain paul davei's articl on
+demystifi imak.
+	- alain brossard's work document full of tip on imak is in 
+sasun1.epfl.ch:pub/imakefil.1.z.
+
+[1/91;12/91;5/92;8/92]
+
+----------------------------------------------------------------------
+subject: 107)  where can i get imak?
+
+	version ar distribut with the r4 and r5 releas. an earlier 
+version is distribut with the x11r3 releas; some third-parti toolkit 
+redistribut version of imak along with their own implement of the 
+templat and configur file. there ar no real standard for such 
+configur file, although most *current* contribut softwar expect the 
+templat distribut with x11r5.
+	export contain the r5 distribut unpack, so you can pick up imak
+without pick up the entir distribut.
+	a stand-alon version of imak, but on stem from x11r5, is in
+ftp.germani.eu.net:pub/x11/misc/imak/imak-pure.tar.z (192.76.144.75).
+
+----------------------------------------------------------------------
+subject: 108)  i have a program with an imakefil but no makefil. what to do?
+
+	if you have r4 or r5 instal on your system, run "xmkmf". thi is a 
+script which run imak for you with the correct argument. the output is a 
+makefil configur for your system and base on the imakefil. then run make, 
+which will us that new makefil to compil the program.
+
+----------------------------------------------------------------------
+subject: 109)  why can't i link to the xlib shape routin?
+when i try to compil certain program, i get the follow link error:
+	undefin:
+	_xshapequeryextens
+	_xshapecombinemask
+
+	these routin ar actual part of the shape extens to x (shape)
+which wa introduc in the mit x11r4 distribut and allow non-rectangular
+window.  like the other sampl server extens, the shape extens will 
+onli run on a server which support it.  pre-x11r4 server, as well as mani 
+vendor-suppli server, do not support the shape extens, in which case 
+thei will displai rectangular window anywai.
+
+	in order to us the shape extens, you must link to the librari 
+libxext.a.  in the x11r4 distribut, thi librari and the associ includ
+will be in the mit/extens directori.  if you do not have these file, do 
+not despair:  mani freewar program which us the shape extens can also be 
+compil without it by remov the -dshape defin from the makefil; you can
+probabl do thi and compil successfulli against your older vendor-suppli x 
+librari.
+
+[from john b. melbi, melbi%yk.fujitsu.co.jp@uunet.uu.net, 3/91]
+
+----------------------------------------------------------------------
+subject: 110)  what ar these problem with "_xtinherit not found" on the sun?
+when i run a x program that i wrote on a suno 4.0.3 or 4.1 machin i get the 
+error "ld.so: symbol not found _xtinherit".
+
+	what you ar see is a side-effect of a kludg in the r4 libxt.a to 
+get sun share librari work.  appar, you can't share a function that 
+is both call and compar, as _xtinherit is. thi wa handl by put 
+_xtinherit in the same file as a function that is alwai us, therebi 
+guarante that it would be load -- that is, in initi.c, where 
+xttoolkitiniti() and xtiniti() resid. these routin would normal
+be call.
+
+	you ar probabl see thi error becaus your program is not a normal
+xt-base program and doe not call xttoolkitiniti() anywher. 
+	1) it mai be a program that us xt function but never open a 
+connect to the x server.  [osf/motif's 1.1.0 uil had thi problem; it call
+xtmalloc() and other xt function.] the solut is to add the call to your 
+program; the function doe not have to be execut, just link in.
+	2) altern, your program doesn't need ani xt function and is
+correct in not call xttoolkitiniti() -- it mai be an xlib or xview 
+program. in thi case, you can remov -lxt from your link command. 
+
+	it should not be necessari to link the share librari static,
+although thi will certainli solv the problem.
+	
+[from jordan hay (now jordan@moorenet.com) and danni backx (db@sunbim.be); 
+11/90]
+
+----------------------------------------------------------------------
+subject: 111)  why can't i compil my r3 xaw contrib program under the new x?
+i have a program that work well under x11r3. when i try to link it under 
+the current version of x, i get thi messag:
+	undefin:
+	_xtscrollbarsetthumb
+	_xttextsetinsertionpoint
+	_xttextreplac
+
+	there were sever name chang in the athena widget set (in addit
+to the header file move into <x11/xaw/>); these ar mention in the r4
+releas note. in thi case, these function ar not realli xt function but
+ar part of the xaw text widget and so have been renam from xt* to xaw*.
+[10/90]
+
+----------------------------------------------------------------------
+subject: 112)  topic: program problem and puzzl
+----------------------------------------------------------------------
+subject: 113)  why doesn't my program get the keystrok i select for (sic)?
+
+	the window manag control how the input focu is transfer from on
+window to anoth.  in order to get keystrok, your program must ask the
+window manag for the input focu.  to do thi, you must set up what ar
+call "hint" for the window manag.  if your applic is xlib-base, you
+can us someth like the follow:
+
+        xwmhint wmhint;
+        ...
+        wmhint.flag = inputhint;
+        wmhint.input = true;
+        xsetwmhint(dpy, window, &wmhint)
+
+if your applic is base on the xt intrins, you can set the xtninput 
+resourc to be true (as you probabl want to in ani case); if you don't have
+sourc, you can start up the applic with the resourc '*input:true'.
+
+certain window manag, notabl dxwm and olwm, ar veri picki about have 
+thi done. 
+
+	if you ar us sun's openwindow olwm, you can also add thi resourc
+to your default file to us client that aren't icccm-compliant.
+	openwindow.focusleni:       true
+
+[mostli courtesi dave lemk of ncd and stuart mark of sun]
+
+----------------------------------------------------------------------
+subject: 114)  how do i figur out what window manag is run?
+
+	you can't reliabl tell; whatev mechan you could us could be
+spoof in ani case. 
+	for most case, you shouldn't care which window manag is run, so 
+long as you do thing in an icccm-conform manner. there ar some case in 
+which particular window manag ar known to do thing wrong; check for
+particular hint place on the window by the window manag so that you can 
+sidestep the problem mai be appropri in these case. altern, it mai 
+be appropri to determin which window manag is run in order to take
+advantag of specif *ad* featur (such as olwm's push-pin menu) in order
+to give your program *ad* function. bewar of usurp the window 
+manag's function by provid that function even when it is miss;
+thi sure lead to futur compat problem.
+
+----------------------------------------------------------------------
+subject: 115)  is there a skeleton x program avail?
+	
+	there is no gener framework such as the transskel program for the 
+macintosh which handl lot of the odd and end and overhead of develop 
+under a window system and which can be us as a platform for addit 
+develop. in x, the problem is typic solv by us an interact 
+applic builder tool or by us cut&past on exist x applic. good
+applic which you might look to manipul when you want to "test just 
+thi on littl thing" includ contrib/client/xskel, a simpl r4 program that 
+put up a window and allow sketch in it and offer a start point for
+quick hack, the xaw exampl in the exampl/ directori in the r3 and r4 
+distribut, and the xlib "hello world" exampl in the r3 doc/helloworld and 
+r4 doc/tutori/helloworld; an updat version of thi program which us r4 
+xlib call and current icccm convent wa post in 2/90 to comp.window.x  
+by glenn widen of tektronix. 	[3/90]
+
+	in addit, a sampl xt program (for xaw or xm) by rainer klute 
+show how to open multipl displai and how to catch a broken displai 
+connect is avail on export.lc.mit.edu in contrib/mdisp.tar.z. [4/92]
+
+----------------------------------------------------------------------
+subject: 116)  why doe xtgetvalu not work for me (sic)?
+
+	the xtgetvalu interfac for retriev resourc from a widget is
+sensit to the type of variabl. your code mai be do someth like thi:
+	{
+	arg arg[3];
+	int i;
+	int sensit;		/* oop; wrong data type */
+	i=0;
+	xtsetarg (arg[i], xtnsensit, &sensit); i++;
+	xtgetvalu(widget, arg, i );
+	...
+	}
+
+but xtnsensit is a boolean, which on most machin is a singl byte; 
+declar the variabl "sensit" as boolean work properli. thi problem 
+come up often when us particular toolkit that redefin the xt type 
+dimens and posit; code that assum thei ar int will have similar 
+problem if those type ar actual short. in gener: you ar safe if you
+us the actual type of the resourc, as it appear in the widget's man page.
+[11/90]
+
+----------------------------------------------------------------------
+subject: 117)  why don't xtconfigurewidget/xtresizewidget/xtmovewidget work?
+
+	you're probabl try to us these function from applic code.
+thei should be us onli intern to widget; these function ar for a 
+parent widget to chang the geometri of it children. other promis 
+function, xtmakegeometryrequest() and xtmakeresizerequest(), ar also for us 
+onli by widget, in thi case by a child to request a chang from it parent.
+	the onli wai for your applic to request a geometri chang for a
+widget is to issu an xtsetvalu call set some of the geometri resourc.
+although thi will result in the widget-intern function' be call, your
+applic code must us the standard xtsetvalu interfac or risk the 
+widget' data becom corrupt.
+	[the xlib call xmovewindow() and xresizewindow() should similarli be 
+avoid; thei shouldn't be us to chang xtnx, xtny, xtnwidth, or xtnheight.]
+
+----------------------------------------------------------------------
+subject: 118)  why isn't there an xtreparentwidget call like xreparentwindow?
+
+	although there ar variou detail of the current implement of
+the xt intern which make repar difficult, the major reason that no
+such call exist is that it remain undefin what the set of resourc for
+the "new" widget should be. resourc ar typic set base on the locat
+in the instanc hierarchi; what resourc should chang if the instanc move?
+what should happen to the widget's children? and by the time such semant ar
+defin, there would probabl be littl advantag over destroi the old 
+widget and creat a new widget in the correct locat with the desir 
+resourc, as set the resourc correctli is the major of work in 
+creat a new widget.
+
+	note that repar is possibl in the oi toolkit.
+
+----------------------------------------------------------------------
+
+david b. lewi 					faq%craft@uunet.uu.net
+
+		"just the faq, ma'am." -- joe fridai 
+-- 
+david b. lewi		temporarili at but not speak for visual, inc.
+dai: dbl@visual.com	even: david%craft@uunet.uu.net

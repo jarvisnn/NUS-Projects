@@ -1,0 +1,49 @@
+from: hade@coo.dartmouth.edu (brian v. hugh)
+subject: re: centri 650 math coprocessor option
+repli-to: hade@dartmouth.edu
+organ: dartmouth colleg, hanov, nh
+disclaim: person, i realli don't care who you think i speak for.
+distribut: usa
+moder: rec.art.comic.info
+line: 40
+
+david_anthoni_guevara@cup.portal.com write:
+
+>sorri if thi is a faq.  i don't normal read comp.sy.mac.hardwar.
+>i am purchas a coupl of centri 650's.  i configur the system
+>as follow:
+
+>	eight (8) mb ram
+>	ethernet
+>	1 mb vram
+>	math coprocessor option
+
+>my purchas agent told me about the math coprocessor option and sent
+>me the appl summari document to prove it.  i order the coprocessor
+>option, but i'm realli not sure that we need it.  i thought the '040 chip
+>had a math coprocessor built into it.  ha appl had a math coprocessor chip
+>architectur to keep up with the speed of the '040 chip in the centri 650?
+>i am concern that i mai have set up a hardwar bottleneck.
+
+    appl ha realli confus peopl with thi whole thing. i think
+we'll be answer thi question for about the next year or so. there is
+no "option" to get an fpu on a c650. what you have is a choic of cpu:
+there is the 68lc040 that doe not have an integr fpu like the full
+'040 and is onli present in the base 4/80 model of the c650 (appleusa).
+and there is the full '040 which you get when you order anyth other
+than the base 4/80 configur. therefor, sinc you have order on
+of the 8mb version with on-board ethernet model you will not be
+get the lc040. but even if you want to have the lc040 you wouldn't
+be abl to order a c650 with 8mb ram, on-board ethernet and an lc040.
+it's not an "option."
+    also, a note to peopl out there that have 4/80 c650s and c610s
+think that there is an option fpu, the '040 class chip cannot
+recogn an extern fpu, so there is no socket on the motherboard for
+a fpu chip and you cannot go out and purchas an fpu on a pd card or
+someth like that. the onli wai to get an fpu in these machin is to
+replac the lc040 with a full '040. and if you have a c610, you will not
+need to worri about a heat sink if you do replac the lc040 with the
+full '040, but if you have a 4/80 c650 you do need to have a heat sink.
+
+-hade
+

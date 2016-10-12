@@ -1,0 +1,15 @@
+from: tso@cephalo.neusc.bcm.tmc.edu (dan ts'o)
+subject: re: how much memori for wp for window?
+organ: baylor colleg of medicin, houston,tx
+line: 8
+distribut: world
+nntp-post-host: cephalo.neusc.bcm.tmc.edu
+
+in articl <1ps6pjinndua@rave.larc.nasa.gov> jka@air77.larc.nasa.gov write:
+)  the document sai that wordperfect for window, requir 4 m of ram, but
+)when i try to instal it on my laptop i get a not enough memori error messag.
+)i've unload everyth that i possibl could but still, not enough memori.
+)anyon have ani idea as to why thi might be happen. 
+
+	ar you sure you're not run window in real mode ? is it window
+3.1 ? do you have a perman swapfil built ?

@@ -1,0 +1,112 @@
+body {
+  background-color: #eff3fa;
+  font-family: "Open Sans", sans-serif;
+
+  /* to compensate for fixed top*/
+  padding-top: 70px;
+}
+
+.navbar {
+  background-color: #337AB7;
+  height: 25px;
+}
+
+.navbar .navbar-brand {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: white;
+  padding-left: 30px;
+  padding-top: 12px;
+}
+
+.navbar .navbar-brand:hover {
+  color: white;
+}
+
+.navbar .navbar-right {
+  margin-right: 20px;
+}
+
+.navbar .navbar-nav li a {
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.navbar .navbar-nav li a:hover {
+  color: #CCCCCC;
+}
+
+.navbar .navbar-nav .dropdown-menu li a {
+  color: black;
+  font-size: 14px;
+}
+
+/* Additional col 1/5 */
+.col-xs-15, .col-sm-15, .col-md-15, .col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.refresh-ring {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid #38e;
+  border-right-color: transparent;
+  box-sizing: border-box;
+  animation: refresh-ring-animation 2s infinite linear;
+}
+
+.refresh-ring.disable {
+  cursor: pointer;
+  font-family: 'Glyphicons Halflings';
+  border: 0px;
+  color: #38e;
+  animation: none;
+}
+
+.refresh-ring.disable::before {
+  display: block;
+  content: '\e114';
+  font-size: 20px;
+}
+
+@keyframes refresh-ring-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

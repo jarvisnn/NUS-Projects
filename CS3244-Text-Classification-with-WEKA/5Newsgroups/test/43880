@@ -1,0 +1,86 @@
+from: mark@taylor.uucp (mark a. davi)
+
+subject: re: blink cursor in xterm???
+
+organ: lake taylor hospit comput servic
+
+line: 38
+
+
+
+me@dude.pc.com (michael elbel) write:
+
+
+
+>in <1993mai16.213936.6904@wariat.org> allberi@wariat.org (allberi) write:
+
+
+
+>>as quot from <1993mai13.212321.2563@moepi.do.open.de> by bernward@moepi.do.open.de (bernward averwald):
+
+>>+---------------
+
+>>> back in the dai of x11.1 i did analys the xterm code. the cursor 
+
+>>> wa implement by draw a rectangl around the charact. i doesn't
+
+>>> seem to be chang 'til now.
+
+>>> but if you have the sourc you could add a blink cursor via
+
+>>> xtappaddtimeout or similar :-|.
+
+
+
+>>the server overhead for thi is mildli ridicul, though (see also desqview/x,
+
+>>which doe thi in it do window).  do you realli want xterm to wake up everi
+
+>>half second and whack the server into do a bitblt?
+
+
+
+>so what? i'm run emu on a 25 mhz 68020 box. i cannot make out ani
+
+>differ in perform whether the cursor is set to blink or
+
+>not (if you think about it a bit, a cycl of 400 ms is a hell a lot of
+
+>time for even the slowest pc). sinc you would of cours onli enabl
+
+>the blink text cursor when your xterm ha the input focu, thi 
+
+>applic is activ anywai. to repeat it, a blink text cursor
+
+>cost almost noth in perform, it just need some thought when
+
+>design the xterm softwar.
+
+
+
+you ar stuck in a distribut system feedback loop!  what if you ar on an
+
+xtermin or run xterm over the net to anoth machin?  that is when the
+
+load problem occur.  if you had a machin with 20 xtermin attach and
+
+thei all had blink cursor in xterm's, thi could repres a consider
+
+ethernet bandwidth wast.
+
+
+
+i'm not pick on you, just peopl keep forget that there is a lot of life
+
+out there besid distribut or singleus "workstat"!
+
+-- 
+
+  /--------------------------------------------------------------------------\
+
+  | mark a. davi    | lake taylor hospit | norfolk, va (804)-461-5001x431 |
+
+  | sy.administr|  comput servic   | mark@taylor / mark@taylor.uucp |
+
+  \--------------------------------------------------------------------------/
+

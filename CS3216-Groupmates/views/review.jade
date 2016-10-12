@@ -1,0 +1,24 @@
+extends base
+
+block append head
+  link(rel='stylesheet', href='/stylesheets/reviews.css')
+
+block ogMeta
+  meta(property='og:url', content="http://52.76.48.36/reviews/"+review.id)
+  meta(property='og:type', content='website')
+  meta(property='og:title', content='Groupmates')
+  meta(property='og:description', content=review.reviewer.name + ' reviewed on ' + review.reviewee.name + ': ' + review.description)
+  meta(property='og:image', content='http://ec2-52-76-48-36.ap-southeast-1.compute.amazonaws.com/images/background-logo.png')
+
+block header
+  include ./navbar.jade
+
+block content
+  .container
+    if currentUser
+      .user-info-container.col-md-3.col-sm-0
+        mixin profile_sidebar(currentUser)
+      .col-md-9.col-sm-12
+        mixin review(review)
+    else
+      mixin review(review)

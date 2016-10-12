@@ -1,0 +1,26 @@
+from: klee@synopt.com (ken lee)
+subject: re: xalloccolor fail to return nearest match
+repli-to: klee@synopt.com
+organ: synopt commun, santa clara ca
+line: 19
+nntp-post-host: bugsbunni.synopt.com
+
+in articl 54297@slate.mine.colorado.edu, agallagh@slate.mine.colorado.edu (gallagh andrea j ) write:
+>[post for a friend]
+>
+>okai, i look through the faq and didn't see thi, but i know it
+>come up befor...
+>
+>xalloccolor is suppos to do the follow in order:
+>    try to find an exact match read-onli color cell. (within hardwar limit)
+>    try to alloc a read-onli colorcel and set it to match.
+>	and when all els fail, 
+>    return the colorcel with the best match from the read-onli color 
+>    alreadi alloc in the colormap.
+
+where did you hear thi?  if it is print in a book somewher,
+throw awai the book.  accord to the mit spec, onli the first
+2 ar true.
+
+---
+ken lee, klee@synopt.com

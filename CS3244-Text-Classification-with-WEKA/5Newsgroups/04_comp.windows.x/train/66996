@@ -1,0 +1,65 @@
+from: gerard@dp.co.uk (gerard o'driscol)
+subject: re: creat 8 bit window on 24 bit displai.. how?
+organ: the internet
+line: 58
+nntp-post-host: enterpoop.mit.edu
+to: xpert@expo.lc.mit.edu
+
+
+stolk@fwi.uva.nl write:
+
+>> 
+>> a problem occur when i try to creat a window with a visual that is differ
+>> from the visual of the parent (which us the default visual which is tc24).
+>> 
+
+you've got to set border_pixel in your window attribut. the default
+is copyfrompar which give the badmatch. do thi:
+
+   ...
+   unsign long valuemask;
+   ...
+   /*
+    * if border_width is non-zero you'd better alloc a colour from cmap
+    * rather than us ani old pixel valu. also, us valuemask, it make
+    * the code more obviou.
+    */
+   attr.colormap = cmap;
+   attr.border_pixel = 0;
+   valuemask = cwcolormap | cwborderpixel;
+   win = xcreatewindow(
+           dpy,
+           defaultrootwindow(dpy),
+           10,10,
+           width,height,
+           0,		         /* border width. see comment below */
+           8,                    /* depth */
+           inputoutput,          /* class */
+           vinfo.visual,         /* visual */
+           valuemask,
+           &attr
+         );
+
+a note on border_width: your code look like thi:
+
+>>   win = xcreatewindow(
+>>           dpy,
+>>           defaultrootwindow(dpy),
+>>           10,10,
+>>           width,height,
+>>           copyfrompar,       /* border width */
+>>           8,                    /* depth */
+>>           inputoutput,          /* class */
+>>           vinfo.visual,         /* visual */
+>>           cwcolormap,
+>>           &attr
+>>         );
+
+border_width set to copyfrompar work but doesn't make sens.
+border_width should be an unsign int. you get awai with it becaus
+copyfrompar is #defin'ed to be zero in x.h. if it happen to be
+defin as -1 you'd get a veri interest look window!
+
+ 	gerard o'driscol (gerard.odriscol@dp.co.uk)
+ 	du pont pixel system ltd.
+ 

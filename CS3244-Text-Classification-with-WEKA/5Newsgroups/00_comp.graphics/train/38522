@@ -1,0 +1,18 @@
+from: tristant@syma.sussex.ac.uk (tristan tarrant)
+subject: paradis vga
+organ: univers of sussex
+line: 13
+
+i have a paradis svga with 1mb, the 90c030 chip (1d). the doc sai that
+i can displai the follow mode : 640x480x32k colour and 800x600x32k col
+if i have the ramdac hicolor chip. i have check the board and i do have
+such a chip. now, the problem is that i can't get thi mode to work !
+graphic workshop 6.1 claim that it can displai 24 bit imag dither
+down to 15 bit colour with my board, but it doesn't work. i have tri
+write some assembl code to get the mode work and i have found out
+that each pixel is address by a word ( 16 bit ), but onli the lower 8 bit
+ar consid ( thi happen in 800x600 mode, the 640x480 mode refus to
+work i.e. remain in text mode ).
+could someon pleas help me.
+
+tristan

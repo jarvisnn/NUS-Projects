@@ -1,0 +1,35 @@
+from: matt@centerlin.com (matt landau)
+subject: look for updat xview textedit sourc (w/d-n-d support)
+articl-i.d.: armori.1ri2o2$3hm
+organ: centerlin softwar, inc.
+line: 28
+nntp-post-host: 140.239.1.32
+
+the xview version 3 sourc distribut includ in the contrib section 
+of x11r5 includ the sourc to the textedit program.  i'd like to take 
+the sourc and modifi them to add support for a tooltalk-like messag 
+server, and mayb for tooltalk while i'm at it, sinc the sun-suppli
+textedit binari doesn't seem to speak tooltalk.
+
+howev, the sourc in the r5 contrib area seem to be for an older
+version of textedit than the version ship with openwindow 3.  for
+exampl, the own 3.0 textedit includ drag and drop support and a 
+dropsit in the main control area, while the sourc in contrib/xview
+know noth about drag and drop.
+
+the textedit.c includ in the xview sourc sai it's version 15.50,
+date 5/22/90, while do a 'what textedit' on the own 3.0 binari sai:
+
+        textedit.c 2.62 91/09/14 copyr 1990 sun micro
+        dragdrop.c 1.26 91/09/14 copyr 1990 sun micro
+        tooltalk.c 2.16 91/09/14 copyr 1990 sun micro
+        ds_relnam.c    1.7 91/09/14 copyr 1990 sun micro
+
+so, doe anyon know if the 9/14/91 sourc to textedit ar avail?
+i'd realli like to work from the latest sourc if possibl.
+
+pleas repli by email, and i'll post a summari if there's enough 
+interest.
+--
+ matt landau			wait for a flash of enlighten
+ matt@centerlin.com			  in all thi blood and thunder

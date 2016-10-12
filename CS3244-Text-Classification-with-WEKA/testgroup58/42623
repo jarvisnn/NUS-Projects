@@ -1,0 +1,40 @@
+from: kobla@netcom.com (david kobla)
+
+subject: button 3 popup menu with athena widget
+
+organ: netcom on-line commun servic (408 241-9760 guest)
+
+line: 15
+
+
+
+ok, i'm be driven batti.
+
+
+
+
+
+try to creat popup-menu (ie. button3 press, and a menu
+
+appear).  i would realli like to us the standard athena
+
+class to achiev thi goal, but for my best attempt
+
+i cannot get the menu to come up without us a menubutton
+
+as the parent of the widget tree.  i know thi should be
+
+possibl to to with an xtpopupspringload() and a
+
+littl twiddl, but someth is escap me.
+
+
+
+-- 
+
+name       : david kobla                 domain: kobla@netcom.com
+
+affili: extra mile consult	   phone: +47 (83) 38663
+
+quot: "time ha littl to do with infin and jelli donut."
+

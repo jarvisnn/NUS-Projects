@@ -1,0 +1,36 @@
+from: rai@netcom.com (rai fischer)
+subject: re: x86 ~= 680x0 ?? (how do thei compar?)
+organ: netcom. san jose, california
+distribut: usa
+line: 30
+
+rvenkat@ux4.cso.uiuc.edu (ravikuma venkateswar) write ...
+>rai@netcom.com (rai fischer) write:
+>>040 486 030 386 020 286
+>
+>how about some number here? some kind of benchmark?
+
+benchmark ar for market dweeb and cpu envi.  ok, if it will make
+you happi, the 486 is faster than the 040.  bfd.  both architectur
+ar near then end of their lifetim.  and especi with the x86
+architectur: good riddanc.
+
+>besid, for 0 wait state perform, you'd need a cach anywai. i mean,
+>who us a processor that run at the speed of 80ns simm? note that thi
+>memori speed correspond to a clock speed of 12.5 mhz.
+
+the point be the processor speed is onli on of mani aspect of a
+comput perform.  clock speed, processor, memori speed, cpu
+architectur, i/o system, even the applic program all contribut 
+to the overal system perform.
+
+>>and roughli, the 68040 is twice as fast at a given clock
+>>speed as is the 68030.
+>
+>number?
+
+look them up yourself.
+
+-- 
+rai fischer                   "convict ar more danger enemi of truth
+rai@netcom.com                 than li."  -- friedrich nietzsch

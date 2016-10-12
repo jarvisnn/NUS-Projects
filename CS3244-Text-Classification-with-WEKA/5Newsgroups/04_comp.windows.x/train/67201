@@ -1,0 +1,19 @@
+from: reznik@robio.me.wisc.edu (dan s reznik)
+subject: correct on my last post (glx & lack of cou on dialog widget)
+organ: u. wisconsin-madison, robot laboratori
+in-repli-to: reznik@robio5.me.wisc.edu's messag of 22 apr 93 18:22:55 cdt
+line: 13
+
+on the code i sent, pleas replac the line:
+
+   xtaddcallback(popupshel, xtncallback, mypopup, (xtpointer)popupshel);
+
+by
+
+   xtaddcallback(button, xtncallback, mypopup, (xtpointer)popupshel);
+
+--- 
+
+the rest (and my question) remain the same...
+
+dan

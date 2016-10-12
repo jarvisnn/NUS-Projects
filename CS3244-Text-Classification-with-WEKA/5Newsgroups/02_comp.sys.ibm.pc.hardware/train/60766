@@ -1,0 +1,27 @@
+from: shenx@helium.ga.uug.arizona.edu (xiangxin shen  )
+subject: re: what is at bu clk speed?
+organ: univers of arizona, tucson
+line: 22
+
+in articl <1993apr14.160915.22866@debbi.cc.nctu.edu.tw> is81056@cc.nctu.edu.tw (wei-shi hwu) write:
+>robert desonia (robert.desonia@hal9k.ann-arbor.mi.us) wrote:
+>
+>: s >there is on param in the bio setup that sai at bu clk.  i have
+>: s >it set to the default of 4, but wa abl to get it to work with 3.
+>: s >the si at 3 wa 142.someth.  i didnt want to mess anyth up
+>: s >so i set it back to 4.  also, the pc didnt boot with it set at 2.
+>: s >
+>: s >what exactlt dow thi do, and should i leav it at 4?
+>
+>i think it's imposs to let at-bu oper too much more than
+>8mhz.  i have a c & t neat 286-20 mother board, and i set the at-bu
+>clock to 10 mhz, but the hd stop when it boot.  so it's correct
+>that clk/n mean how mani wait state.
+>
+>   sm. 
+
+i think it all depend on your motherboard and the card you have in your system.  your hd stop boot probabl becaus your hd control can't handl the faster bu speed.  i have a 486-33dx, i set my bu divid to clk/2.5, that is close to 13mhz.  i can gain singific performac increas on my video card and harddisk transfer rate when i boost the bu speed.  and my system work flawlessli under thi set.  and you know what, when i go to clk/2(17mhz bu), my hd refus to boot.  
+
+just my 2 cent.
+
+jim

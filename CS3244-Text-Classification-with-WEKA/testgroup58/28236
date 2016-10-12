@@ -1,0 +1,56 @@
+from: gt2617c@prism.gatech.edu (brad small)
+
+subject: re: help with chang startup logo
+
+organ: georgia institut of technolog
+
+line: 23
+
+
+
+in articl <735952415.aa01739@f-454.fidonet.org> (c. doell) write:
+
+>brad,
+
+>    what is the procedur us to 'special' compress the bmp file?  i would
+
+>love to us some of my bmp file i have creat as a logo screen.  thank
+
+>
+
+>chri
+
+> * origin: chri.doell.@f3333.n106.z1.fidonet.org (1:106/3333.26)
+
+
+
+i don't know the specif of the compress algorithm, but i've us the
+
+sharewar program, paintshop, to convert between the two.  you can download
+
+it from ftp.cica.indiana.edu, but i don't know what the file is call
+
+or what directori it is in (you can start by look in pub/pc/win3 or try
+
+scan the index file).
+
+
+
+to convert a .bmp file to a .rle file, you just load the .bmp file and do a
+
+"save as..."  select "window bitmap" and "compress" (or is it "rle"?)
+
+whatev it is, it's fairli intuit...
+
+
+
+sorri i don't have all the detail, but i'm current on an ibm3151 dumb
+
+termin and can't do much research...good luck!
+
+ 
+
+-- 
+
+brad small :: jr.ee :: ga tech :: atlanta, ga :: gt2617c@prism.gatech.edu
+

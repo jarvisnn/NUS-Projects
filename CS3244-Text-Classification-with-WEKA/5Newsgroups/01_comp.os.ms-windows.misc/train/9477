@@ -1,0 +1,68 @@
+from: bharper@cimlinc.uucp (brett harper)
+subject: gui applic framework for window ??
+organ: cimlinc, inc. - engin
+line: 63
+
+hello,
+  
+  i'm investig the purchas of an object orient applic framework.  i have
+come across a few that look good:
+
+  zapp 1.1 from inmark
+  zinc 3.5 from zinc softwar
+  c++/view from liant
+  win++ from blais
+
+some consider i'm us:
+
+  be new to window program (i'm from the unix/x world), the qualiti and
+intuitiv of the abstract that these class librari provid is veri 
+import.  howev, sinc i'm not advers to learn the intern of window
+program, the new program methodolog should be close align with
+the nativ on.  i don't believ arbitrari level of abstract, just for the
+sake of chang the api, ar valuabl.
+
+  sinc we will be develop for the 32bit window nt system the
+memori manag issu and issu particular to the window 3.1 api ar less
+import. 
+
+  we will probabl bui anoth c++ class librari (someth like tool.h++ or booch
+compon from ration) to handl data structur and other miscellan stuff
+ (alloc etc...).  so those featur ar not that import for thi toolkit to have.
+
+the two that i have narrow it down to ar zapp and zinc, thei seem to be the two
+toolkit that have receiv the most attent from the media.  i wa wonder if
+anyon had ani first-hand experi with ani of these toolkit (especi zapp and zinc).
+
+a coupl of observ about these toolkit that seem particularli noteworthi ar:
+
+zapp
+----
+  seem to have the most extens coverag of window function and
+    also includ some other miscellan us class.
+  ha new fanci 3d-style control avail, and support for custom control.
+  ha a window nt version (essenti)
+  redirect graphic displai/output architectur (us for print)
+  sizer class for automat manag control layout after resiz.
+  seem to be the newcom, thi could be an advantag in design a better system.
+ 
+zinc
+----
+  ha a platform independ resourc strategi.  (not too import for me right now)
+  come with a interfac builder tool
+  ha a window nt version (essenti)
+  seem to have been around longer (more matur), but grew up out of a do version.  
+  had a better demo :-)
+
+both have sourc code avail option
+both ar lack ol support
+neither seem to have ani particular support for multimedia type stuff
+
+
+ani thought anyon ha on thi would be much appreci,
+
+thank,
+  brett harper
+
+
+brett.harper@cimlinc.com

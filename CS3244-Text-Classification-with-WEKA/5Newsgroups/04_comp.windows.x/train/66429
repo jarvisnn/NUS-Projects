@@ -1,0 +1,946 @@
+from: dbl@visual.com (david b. lewi)
+subject: comp.window.x frequent ask question (faq) 1/5
+summari: us inform about the x window system
+repli-to: faq%craft@uunet.uu.net (x faq mainten address)
+organ: visual, inc.
+expir: sun, 2 mai 1993 00:00:00 gmt
+line: 938
+
+archiv-name: x-faq/part1
+last-modifi: 1993/04/04
+
+thi articl and sever follow contain the answer to some frequent ask 
+question (faq) often seen in comp.window.x. it is post to help reduc 
+volum in thi newsgroup and to provid hard-to-find inform of gener 
+interest.
+
+		pleas redistribut thi articl!
+
+thi articl includ answer to the follow question, which ar loos
+group into categori. question mark with a + indic question new to 
+thi issu; those with signific chang of content sinc the last issu ar 
+mark by !:
+
+  0)  topic: basic inform sourc and definit
+  1)! what book and articl on x ar good for beginn?
+  2)! what cours on x and variou x toolkit ar avail?
+  3)! what confer on x ar come up?
+  4)  what x-relat public mail list ar avail?
+  5)  how can i meet other x develop? 
+  6)  what relat faq ar avail?
+  7)  how do i ask a net-question so as to maxim help respons?
+  8)  what public discuss x ar avail?
+  9)  what ar these common abbrevi/acronym?
+ 10)  what is the icccm? (how do i write x-friendli applic?)
+ 11)  what is the x consortium, and how do i join?
+ 12)  just what ar open look and motif?
+ 13)  just what is openwindow?
+ 14)  just what is decwindow?
+ 15)  what is pex?
+ 16)  what is "low-bandwidth x" (lbx)? xremot? ppp? slip? cslip?
+ 17)  topic: us x in dai-to-dai life
+ 18)! what ar all these differ window manag?
+ 19)  why doe my x session exit when i kill my window manag (sic)?
+ 20)  can i save the state of my x session, like toolplac doe?
+ 21)  how do i us anoth window manag with dec's session manag?
+ 22)  how do i chang the keyboard auto-repeat rate?
+ 23)  how do i remap the kei on my keyboard to produc a string?
+ 24)! how do i make a screendump or print my applic?
+ 25)  how do i make a color postscript screendump of the x displai?
+ 26)  how do i make a screendump includ the x cursor?
+ 27)  how do i convert/view mac/tiff/gif/sun/pict/img/fax imag in x?
+ 28)  how can i chang the titlebar of my xterm window?
+ 29)  where can i find the xterm control sequenc?
+ 30)- why doe the r3 xterm, et al, fail against the r4 server?
+ 31)  how can i us charact abov ascii 127 in xterm ?
+ 32)  why ar my xterm menu so small?
+ 33)  how can i print the current select?
+ 34)  how doe xt us environ variabl in load resourc?
+ 35)  how to i have the r4 xdm put a pictur behind the log-in window?
+ 36)  why isn't my path set when xdm run my .xsession file?
+ 37)  how do i keep my $displai when i rlogin to anoth machin?
+ 38)  how can i design my own font?
+ 39)  why doe ad a font to the server not work (sic)?
+ 40)  how do i convert a ".snf" font back to ".bdf" font?
+ 41)  what is a gener method of get a font in usabl format?
+ 42)  how do i us decwindow font on my non-decwindow server?
+ 43)  how do i add ".bdf" font to my decwindow server?
+ 44)! how can i set backgroundpixmap in a default file? (what is xpm?)
+ 45)  why can't i overrid translat? onli the first item work.
+ 46)  how can i have xclock or oclock show differ timezon?
+ 47)  i have xmh, but it doesn't work. where can i get mh?
+ 48)  why am i suddenli unabl to connect to my sun x server?
+ 49)  why don't the r5 pex demo work on my mono screen?
+ 50)! how do i get my sun type-[45] keyboard fulli support by xsun?
+ 51)  how do i report bug in x?
+ 52)  why do i get "warn: widget class version mismatch"?
+ 53)  where can i find a dictionari server for xwebster?
+ 54)  topic: obtain x and relat softwar and hardwar
+ 55)  is x public-domain softwar?
+ 56)  how compat ar x11r3, r4, and r5? what chang ar there?
+ 57)! where can i get x11r5 (sourc and/or binari)?
+ 58)! where can i get patch to x11r5?
+ 59)  what is the xstuff mail-archiv?
+ 60)! where can i get x11r4 (sourc and binari)?
+ 61)  where can i get osf/motif?
+ 62)  doe motif work with x11r4? x11r5?
+ 63)  where can i get toolkit implement open look?
+ 64)! where can i get other x sourc? (includ r5 modif)
+ 65)! where can i get interest widget?
+ 66)  where can i get a good file-selector widget?
+ 67)  what widget is appropri to us as a draw canva?
+ 68)  what is the current state of the world in x termin?
+ 69)  where can i get an x server with a touchscreen or lightpen?
+ 70)  where can i get an x server on a pc (do or unix)?
+ 71)  where can i get an x server on a macintosh run maco?
+ 72)  where can i get x for the amiga?
+ 73)  where can i get a fast x server for a workstat?
+ 74)! where can i get a server for my high-end sun graphic board?
+ 75)  where can i get an "x termin" server for my low-end sun 3/50?
+ 76)  what termin emul other than xterm ar avail?
+ 77)! where can i get an x-base editor or word-processor?
+ 78)  where can i get an x-base mailer?
+ 79)! where can i get an x-base paint/draw program?
+ 80)! where can i get an x-base plot program?
+ 81)  where can i get an x-base spreadsheet?
+ 82)  where can i get x-base project-manag softwar?
+ 83)  where can i get an x-base postscript preview?
+ 84)  where can i get an x-base gk packag?
+ 85)  where can i get an x-base pex packag?
+ 86)  where can i get an x-base tex or dvi preview?
+ 87)  where can i get an x-base troff preview?
+ 88)! where can i get a wysiwyg interfac builder?
+ 89)  where can i find x tool callabl from shell script?
+ 90)  where can i get an x-base debugg?
+ 91)! how can i "tee" an x program ident to sever displai?
+ 92)  topic: build the x distribut [topic need updat to r5]
+ 93)  what's a good sourc of inform on configur the x build?
+ 94)  why doesn't my sun with a cg6 work with r5?
+ 95)  why doesn't my sun with suno 4.1 know about _dlsym, etc.?
+ 96)  what is thi strang problem build x client on suno 4.1.2?
+ 97)  why can't gcc compil x11r4 on my sparc?
+ 98)  what ar these i/o error run x built with gcc?
+ 99)  what ar these problem compil x11r4 on the older sun3?
+100)  what ar these problem compil the x server on suno 4.1.1?
+101)  what ar these problem us r4 share librari on suno 4?
+102)  can olit program run with r5 xt? (_xtqstring undefin)
+103)  how do i get around the suno 4.1 secur hole?
+104)  how do i get around the frame-buffer secur hole?
+105)  topic: build x program 
+106)  what is imak?
+107)  where can i get imak?
+108)  i have a program with an imakefil but no makefil. what to do?
+109)  why can't i link to the xlib shape routin?
+110)  what ar these problem with "_xtinherit not found" on the sun?
+111)  why can't i compil my r3 xaw contrib program under the new x?
+112)  topic: program problem and puzzl
+113)  why doesn't my program get the keystrok i select for (sic)?
+114)  how do i figur out what window manag is run?
+115)  is there a skeleton x program avail?
+116)  why doe xtgetvalu not work for me (sic)?
+117)  why don't xtconfigurewidget/xtresizewidget/xtmovewidget work?
+118)  why isn't there an xtreparentwidget call like xreparentwindow?
+119)  i'm write a widget and can't us a float as a resourc valu.
+120)  is thi a memori leak in the x11r4 xtdestroywidget()?!
+121)  ar callback guarante to be call in the order regist?
+122)  why doesn't xtdestroywidget() actual destroi the widget?
+123)  how do i queri the user synchron us xt?
+124)  how do i determin the name of an exist widget?
+125)  why do i get a baddraw error draw to xtwindow(widget)?
+126)  why do i get a badmatch error when call xgetimag?
+127)  how can my applic tell if it is be run under x?
+128)  how do i make a "busi cursor" while my applic is comput?
+129)  how do i fork without hang my parent x program?
+130)  can i make xt or xlib call from a signal handler?
+131)  what ar these "xlib sequenc lost" error?
+132)  how can my xt program handl socket, pipe, or file input?
+133)  how do i simul a button press/releas event for a widget?
+134)  why doesn't anyth appear when i run thi simpl program?
+135)  what is the differ between a screen and a screen?
+136)  can i us c++ with x11? motif? xview?
+137)  where can i obtain altern languag bind to x?
+138)  can xgetwindowattribut get a window's background pixel/pixmap?
+139)  how do i creat a transpar window?
+140)  why doesn't gxxor produc mathemat-correct color valu?
+141)  why doe everi color i alloc show up as black?
+142)  why can't my program get a standard colormap?
+143)  why doe the pixmap i copi to the screen show up as garbag? 
+144)  how do i check whether a window id is valid?
+145)  can i have two applic draw to the same window?
+146)  why can't my program work with tvtwm or swm?
+147)  how do i keep a window from be resiz by the user?
+148)  how do i keep a window in the foreground at all time?
+149)  how do i make text and bitmap blink in x?
+150)+ how do i get a doubl-click in xlib?
+151)! how do i render rotat text?
+152)  what is the x registri? (how do i reserv name?)
+
+if you have suggest or correct for ani of these answer or ani 
+addit inform, pleas send them directli to uunet!craft!faq;
+the inform will be includ in the next revis (or possibl the on 
+after that; thank for the mani suggest which haven't been incorpor 
+yet). 
+
+thi version of the faq is in the process of have r3 inform replac
+by r5 inform.
+
+thi post is intend to be distribut at approxim the begin of 
+each month. new version ar archiv on export.lc.mit.edu and ar also 
+avail from mail-server@pit-manag.mit.edu and archiv-server@nic.switch.ch
+(send "help").
+
+the inform contain herein ha been gather from a varieti of sourc. 
+in mani case attribut ha been lost; if you would like to claim 
+respons for a particular item, pleas let me know. 
+
+convent us below: telephon number tend to be bell-system unless 
+otherwis note; price on item ar not includ; email address ar those
+that work from the us.
+
+x window system is a trademark of the massachusett institut of technolog. 
+other trademark ar the properti of their respect owner.
+
+(note: a script by georg ferguson (ferguson@cs.rochest.edu) to pretti-print
+thi faq is avail from ugl.unit.no:/pub/x11/contrib/xfaq2texinfo.)
+
+----------------------------------------------------------------------
+subject:   0)  topic: basic inform sourc and definit
+----------------------------------------------------------------------
+subject:   1)! what book and articl on x ar good for beginn?
+
+	ken lee of synopt (klee@synopt.com) regularli post to 
+comp.window.x and ba.window.x a bibliographi contain cite of all known 
+refer book and how-to manual and also cite of select technic 
+articl on x and x program; it is ftp-abl as 
+	export.lc.mit.edu:/contrib/xbibliographi and 
+	gatekeep.dec.com:/pub/x11/contrib/xbibliographi
+
+here is an unord set of the refer book and tutori most us for
+beginn; most appear on that list [comment ar gather from a varieti of 
+place and ar unattribut]:
+
+asent, paul j., and swick, ralph r., "x window system toolkit, the complet
+programm's guid and specif", digit press, 1990.  the bibl on xt. a
+treasuri of inform, excel and invalu.  distribut by digit 
+press, isbn 1-55558-051-3, order number ey-e757e-dp; and by prentic-hall, 
+isbn 0-13-972191-6. also avail through dec direct at 1-800-digit. 
+[the exampl ar on export.lc.mit.edu in contrib/ and on gatekeep.dec.com 
+(16.1.0.2) in pub/x11/contrib as asent-swick.exampl.tar.z.  thei were also 
+post to comp.sourc.x as xt-exampl/part0[1-5].]
+
+jone, oliv, introduct to the x window system, prentic-hall, 1988, 1989.
+isbn 0-13-499997-5. an excel introduct to program with xlib.  
+written with the programm in mind, thi book includ mani practic tip 
+that ar not found anywher els. thi book is not as broad as the o'reilli 
+xlib tutori, but jone is an experienc x programm and thi show in the 
+qualiti and depth of the materi in the book. origin written for x11r1, 
+recent print have includ correct and addit and current materi.
+ 
+young, doug. "the x window system: applic and program with xt (motif 
+version)," prentic hall, 1989 (isbn 0-13-497074-8). the excel tutori 
+"x window system program and applic with xt," (isbn 0-13-972167-3) 
+updat for motif. [the exampl ar avail on export; the on from the 
+motif version ar in ~ftp/contrib/young.motif.tar.z.]
+
+young, doug and john pew, "the x window system: program and applic 
+with xt, open look edit" (isbn 0-13-982992-x). the tutori rewritten for 
+olit, with new exampl and drag/drop inform. [exampl ar on export in
+youg.olit.tar.z and in you openwindow 3 distribut in 
+$openwinhom/share/src/olit/olitbook.]
+
+heller, dan. "motif programm manual". the 6th volum in the o'reilli seri
+cover motif applic program; it's full of good exampl. with motif
+refer page. (isbn 0-9937175-70-6.)  [the exampl ar avail on uunet
+in comp.sourc.x and nutshel archiv.] [a motif 1.2 will be out soon.]
+ 
+scheifler, robert, and jame getti, with jim flower and david rosenth, "x 
+window system: the complet refer to xlib, x protocol, icccm, xlfd, x 
+version 11, releas 5, third edit," digit press, 1992. "the bibl" in it 
+latest revis, an enhanc version of x document by the author of the 
+xlib document. thi is the most complet publish descript of the x 
+program interfac and x protocol. it is the primari refer work and is 
+not introductori tutori document; addit tutori work will usual
+be need by most new x programm.  digit press order ey-j802e-dp, isbn 
+0-13-971201-1.
+ 	
+nye, adrian, "xlib program manual, volum 1" and "xlib refer manual, 
+volum 2," o'reilli and associ. a superset of the mit x document; the 
+first volum is a tutori with broad coverag of xlib, and the second 
+contain refer page for xlib function and mani us refer 
+appendic.  both cover x11r5 (and r4). isbn 0-937175-26-9 (volum 1) and isbn 
+0-937175-27-7 (volum 2). 
+
+nye, adrian, and tim o'reilli, "x toolkit program manual, volum 4,"
+o'reilli and associ, 1989. the folk at o'reilli give their comprehens
+treatment to program with the mit intrins; r4 version ar now
+avail, as is a motif 1.1 version (volum 4m).
+
+o'reilli, tim, ed.,  "x toolkit refer manual, volum 5," o'reilli and 
+associ. a profession refer manual for the mit x11r4 and x11r5 xt.
+
+mansfield, niall. "the x window system: a user's guid," addison-weslei, 1989.
+a tutori introduct to us x, now upgrad for r4. isbn 0-201-51341-2.
+
+quercia, valeri and tim o'reilli. "x window system user's guid," o'reilli and
+associ. a tutori introduct to us x. isbn 0-937175-36-6.
+also avail in r4 and motif flavor.
+
+mui, linda and eric pearc. "x window system administr's guid for x11 r4 
+and r5" [ora volum 8]. help for x user and administr. 
+isbn 0-937175-83-8.
+
+(prentic-hall order is 201-767-5937. o'reilli order is 800-998-9938.)
+
+in addit, check the x11r4 and x11r5 core distribut in doc/tutori for 
+some us paper and tutori, particularli the file answer.txt.  "late 
+night's top ten x11 question" by dave lemk (lemk@ncd.com) and stuart mark 
+(smark@sun.com) answer other common question and some of these here in more
+detail.
+
+new r5 version of the o'reilli refer (not yet volum 6) ar now avail
+[8/92].  a singl volum, "programm's supplement for r5" by david flanagan, 
+provid an overview of new r5 featur; it includ man page for xlib, xt, 
+and xmu. [isbn  0-937175-86-2]
+
+----------------------------------------------------------------------
+subject:   2)! what cours on x and variou x toolkit ar avail?
+
+	advanc comput environ period offer at least a two-dai
+introduct cours. contact susi karlson at 415-941-3399 for inform.
+
+	at&t offer train in xlib and in the xol set. contact at&t corpor
+educ & train for more info; 1-800-trainer in the usa.
+
+	bim educ servic offer train in x administr and in
+program with xt/motif and open window; the cours ar given near 
+brussel. info: edu@sunbim.be, voic +32-(0)2-7595925, fax +32-(0)2-7599209.
+
+	communica softwar consult offer three-dai hand-on cours in x 
+design for the x window system develop and programm. contact chri 
+clarkson, telephon 61 8 3732523, e-mail communica@communica.oz.au. [12/92]
+
+	cora comput technolog (516-485-7343) offer sever cours.
+
+	ghct offer a on week lectur/lab cours for programmm design by
+dougla young base on hi book "the x window system: program and applica-
+tion with xt, osf/motif edit". inform: brian stell (415-966-8805 or
+ghct!brian@sgi.com).
+
+	ghg offer a rang of cours on x and motif. inform: 713-488-8806
+or train-info@ghg.hou.tx.us.
+
+	hand on learn ha live train and self-pace video workshop on 
+topic such as us and/or program x, xlib, xm, xt, and widget-write. 
+inform: 617-272-0088, 800-248-9133.
+
+	hewlett-packard (1-800-hpclass; or contact your local hp center) offer
+a 2-dai "introduct to x", a 5-dai xlib cours, a 1-dai xt and motif 1.1 
+seminar, and a 5-dai motif lab cours.
+
+	integr comput solut, inc., offer sever multi-dai, hand-on
+cours on x, xt, and the xaw and motif widget set, in particular. inform
+is avail at 617-621-0060 and info@ic.com.
+
+	intellig visual comput teach sever lab cours on-site for
+motif and xview. ivc is at 1-800-776-2810 or +1 919-481-1353 or at 
+info@ivc.com.
+
+	iri comput laboratori offer five-dai xlib and xt cours.
+info: +1-505-988-2670 or info@spectro.com.
+
+	ixi limit (+44 223 462 131) offer regular x train cours for 
+both programm and non-technic manag. see also: unipalm, below.
+
+	learn tree intern offer a four-dai cours in x window system
+applic develop, includ xlib and some inform on motif.  for 
+more info call 800-824-9155 (213-417-3484); 613-748-7741 in canada. cours ar
+offer in major north american citi; also in london, stockholm, tokyo, and 
+elsewher.
+
+	lurnix offer 4-dai "type-along cours" on xt; the cours is be
+port from xaw to xm. inform is avail at 800-433-9337 (in ca: -9338).
+
+	mitch trachtenberg and associ offer regular 5-dai lab cours on
+program with osf/motif, usual in but not limit to cambridg, ma. 
+info: +1 617-225-0440, info@mta.com.
+
+	non standard logic (+33 (1) 43 36 77 50; request@nsl.fr) offer
+cours on program with xlib, motif, and creat motif widget.
+
+	osf educ servic (617-621-8778) offer on-dai seminar and 
+on-week motif lab cours.
+
+	john a. pew offer a 5-dai cours on olit, possibl base on hi book
+on that subject; 408-224-5739.
+
+	sco (+44 923 816344, scol-info@sco.com) offer train for it open 
+desktop (motif) environ in the uk and europ.
+
+	softwar pundit (617-270-0639) offer a rang of cours.
+
+	technolog exchang (617-944-3700) offer a 4-dai xlib/xt/motif cours.
+
+	telesoft is now offer a 1-dai plu 3-dai seminar on x and motif.
+inform: bruce sherman (619-457-2700, bd@telesoft.com).
+
+	unipalm xtech offer osf's 5-dai motif cours and a 1-dai overview on 
+x.  inform: unipalm train at +44 952  211797, xtech@unipalm.co.uk.
+
+	the univers of edinburgh is develop a seri of cours on x and
+relat topic primarili for non-profit-make train in academia but also 
+for commerci us. inform: cliff booth, unipalm ltd, phone +44 223 
+420002, fax +44 223 426868.
+
+	variou other vendor ar also begin to offer x train, usual 
+specif to a proprietari toolkit or to xt and a proprietari widget set: dec 
+is offer xlib cours; sun offer an xview cours.
+
+	variou univers ar offer short x cours or overview: ucla,
+dartmouth, univers of lowel, univers of canberra (within australia: 
+062-522422) ... 
+	uc berkelei extens will have a on week x/motif class for 
+programm in san francisco start on juli 29.  the class will have a 
+hand-on lab. for more inform contact ucbx at 415 323 8141.
+
+	among the best place to find cours ar at the variou unix 
+confer -- uniforum, usenix, unix expo, xhibit, the mit x technic
+confer, the acm tutori week, &c.
+
+	in addit, the x consortium post approxim quarterli a list of
+unendors speaker and consult who can provid talk on a varieti of x 
+topic.
+
+----------------------------------------------------------------------
+subject:   3)! what confer on x ar come up?
+
+	the xhibit 93 x trade show and confer, with tutori, panel, 
+present, and vendor exhibit, will be held at the san jose convent
+center june 7-11, 1993.  inform: +1 617 621 0060, xhibit@ic.com.
+
+	the tcl/tk workshop will be held at ucal berkelei june 10-11, 1993.
+inform: tcl93@cs.berkelei.edu.
+
+	the 1993 andrew technic confer and consortium annual meet will
+be held june 24-25, 1993, in pittsburgh. inform: 
+wilfr.hansen@cs.cmu.edu.
+
+	the european x user group hold an annual confer which typic 
+includ includ paper present and a vendor exhibit. exug'93, "x in the
+real world and multimedia" will be held 9/16-9/17 at the imperi colleg of
+scienc and technolog, london. inform: exug@demon.co.uk, niall@uit.co.uk 
+or p.whitehead@cc.ic.ac.uk, +44 (0) 223 426534, fax +44 (0) 223 420251.
+
+	the motif show is held in washington to coincid with the fedunix and 
+the feder open system confer (usual decemb). inform: 
+motif@fedunix.org or paller@fedunix.org, 301-229-1062, fax 301-229-1063.
+
+	the mit x technic confer is typic held in januari in boston.
+registr inform is avail from registr@expo.lc.mit.edu.
+
+	the xworld confer and exhibit includ tutori, panel, 
+present and vendor exhibit. it is typic held in march in new york 
+citi.  inform: sig public group at 212-274-9135.
+
+
+	other trade show -- unixexpo, uniforum, siggraph -- show an increas
+presenc of x, includ tutori and exhibit.
+
+----------------------------------------------------------------------
+subject:   4)  what x-relat public mail list ar avail?
+
+	the xpert mail list is the gener, public mail list on x
+maintain by the x consortium. the mail ar gatewai, so xpert is almost 
+ident to the comp.window.x usenet newsgroup. 
+
+	***	if you get comp.window.x, you don't need to 	***
+	***	be ad to the xpert mail list. 		***
+
+	otherwis, you can join the list to receiv x inform 
+electron. it is best to find a local distribut; perhap someon within
+your compani is alreadi receiv the mail. as a last resort, send mail to 
+xpert-request@expo.lc.mit.edu with a valid return electron address. 
+
+	the xannounc mail list carri major x announc, such as new
+releas (includ public patch from mit), public review, adopt of 
+standard by the mit x consortium, and confer announc.  it doe not 
+carri advertis, sourc code, patch, or question.  if you alreadi 
+receiv the usenet new group comp.window.x.announc or the xpert mail 
+list, you don't need to be ad to the xannounc mail list.  otherwis, to 
+subscrib, send a request to xannounc-request@expo.lc.mit.edu. note: onli 
+redistribut address will be accept for thi list -- i.e. no person 
+address. if you wish to receiv xannounc yourself, pleas contact your mail 
+administr to set up a local redistribut list and to put you on it.  
+	comp.window.x.app is not gatewai to a mail list.
+
+	in addit, the x consortium sponsor these public list:
+		bug-clx         clx bug report and discuss
+		x-ada           x and ada
+		x11-3d          peopl interest in x and 3d graphic
+		ximag          peopl interest in imag process and x
+		xvideo          discuss of video extens for x
+	to subscrib to on of these list, assum no-on in your 
+organ alreadi receiv it, send mail to <list>-request@expo.lc.mit.edu
+with the subject line includ the name of the list in cap and the request
+"addit request".  in the bodi of the messag be sure to give an address for 
+your local distribut which is access from mit (eddi.mit.edu).
+
+	a mail list for topic relat to open look is sponsor by greg
+pasquariello of unifi corpor; send to openlook-request@unifi.com (or
+openlook-request%unifi@uunet.uu.net) for inform. 
+	a mail list for bug in the publicli-avail version of xview
+sourc, in particular, is sponsor by sun; send for inform to 
+xviewbug-tracker-request@sun.com. 
+	a mail list for topic relat to motif is sponsor by kee hincklei
+of alfalfa softwar, inc.; send to motif-request@alfalfa.com for inform. 
+(thi group is gatewai to comp.window.x.motif.)
+	a mail list for topic relat to the xpm pixmap-format is sponsor
+by arnaud le hor of group bull; send to xpm-talk-request@sa.inria.fr for
+inform. [1/91]
+	a mail list discuss interview can be subscrib to by send to
+interview-request@interview.stanford.edu.
+	a mail list (amiga-x11@nic.funet.fi) for topic relat to the port 
+of x11 to the amiga can be subscrib by send to mailserv@nic.funet.fi a 
+messag contain
+		subject: ad myself to amiga-x11
+		sub amiga-x11 your real name
+	a mail list discuss parcplac's (formerli solbourn's) oi (object
+interfac) toolkit can be subscrib to at oi-user-request@bbn.com.
+	a mail list discuss multi-thread xlib can be subscrib to at
+mt-xlib-request@xsoft.xerox.com.
+
+----------------------------------------------------------------------
+subject:   5)  how can i meet other x develop? 
+
+	o'reilli and associ sponsor a mail list for the us of x user 
+group organ; subscrib by send to listserv@ora.com the messag 
+"subscrib xgroup your@internet.address".
+
+	local area x user's group ar list in issu 4 of o'reilli's x 
+resourc journal; a list mai also be avail from xug@ic.com.
+
+	the french x user group is call afux and is base in sophia antipoli
+by ceric. inform can be obtain from miss vasseur or miss forest; bp 
+148; 157, rue albert einstein; 06561 valbonn cedex; phone: +33 93 95 45 00 / 
+45 01; fax: +33 93 95 48 57.  [10/90]
+
+	the european x user group wa form in 1989 to repres x user in 
+europ.  it hold technic confer at regular interv. the exug also 
+publish a regular newslett which is distribut free of charg to member. 
+the exug also run a email mail list for member which is frequent us to
+address issu of european interest in x. the exug can be contact at
+p.whitehead@cc.ic.ac.uk, +44 (071) 225 8754, fax +44 (071) 823 9497.
+
+	gxugiv is the german x user's group in vorbereitung ("in prepar")
+be form for x programm and user; it is associ with the exug. all
+interest should contact olaf heimburg (+49 30 7 79 54 64; and at
+mcvax!unido!tub!olaf).
+
+----------------------------------------------------------------------
+subject:   6)  what relat faq ar avail?
+
+	liam r. e. quin (lee@sq.sq.com) post a faq on open look to 
+comp.window.open-look.  
+	jan newmarch (jan@pandonia.canberra.edu.au) post a faq on motif to 
+comp.window.x.motif.
+	peter ware (ware@ci.ohio-state.edu) post a faq for
+comp.window.x.intrins; it is on export in contrib/faq-xt.
+	art mulder (art@cs.ualberta.ca) post to comp.window.x a faq on 
+maxim the perform of x.
+	steve kotsopoulo (steve@ecf.toronto.edu) post to comp.window.x a faq
+about us x on intel-base unix system.
+	the faq in alt.binari.pictur contain inform on view imag
+with x and on massag imag format.
+	the faq in comp.mail.mh (gatewai to mh-user@ic.uci.edu) includ a 
+section on xmh.
+	the faq in comp.lang.lisp contain inform on sever interfac
+tool and toolkit.
+	there exist a pex/phig faq.
+
+----------------------------------------------------------------------
+subject:   7)  how do i ask a net-question so as to maxim help respons?
+
+	when ask for help on the net or x mail list, be sure to includ 
+all inform about your setup and what you ar do.  the more specif you
+ar, the more like someon will spot an error in what you ar do.  without
+all the detail, peopl who want to help you often have to guess -- if thei ar
+abl to respond at all.
+
+	alwai mention what version of x you ar us and where you got it 
+from. if your server came from a differ sourc as the rest of your x system,
+give detail of that, too.  give the machin type, oper system, and o/s 
+version for both the client and server machin.  it mai also be appropri to 
+mention the window manag, compil, and displai hardwar type you ar us.
+
+	then tell exactli what you ar do, exactli what happen, and what
+you expect/want to happen.  if it is a command that fail, includ the 
+exact transcript of your session in the messag.  if a program you wrote 
+doesn't work the wai you expect, includ as littl of the sourc necessari 
+(just a small test case, pleas!) for reader to reproduc the problem.
+
+----------------------------------------------------------------------
+subject:   8)  what public discuss x ar avail?
+
+	the trade magazin (unix world, unix review, comput languag, etc.)
+ar publish more articl on x.  two x-specif public includ:
+
+	- o'reilli and associ publish "the x resourc: a practic 
+journal of the x window system" (103 morri st. #a, sebastapol, ca 95472).  
+editori inform: adrian nye, adrian@ora.com.
+
+	- the x journal is start bi-monthli public septemb 1991 on a 
+varieti of x topic. subscript inform: the x journal, subscrib 
+servic, dept xxx, p.o. box 3000, denvil, nj 07834, usa. editori 
+inform: editor%topgun@uunet.uu.net.
+
+----------------------------------------------------------------------
+subject:   9)  what ar these common abbrevi/acronym?
+
+	xt: the x toolkit intrins is a librari layer on xlib which 
+provid the function from which the widget set ar built. an "xt-base" 
+program is an applic which us on of those widget set and which us 
+intrins mechan to manipul the widget.
+	xmu: the xmu librari is a collect of miscellan util function
+us in build variou applic and widget.
+	xaw: the athena widget set is the mit-implement sampl widget set
+distribut with x11 sourc.
+	xm: the osf/motif widget set from the open softwar foundat; binari
+kit ar avail from mani hardwar vendor.
+	xhp (xw): the hewlett-packard widget set wa origin base on r2++, 
+but sever set of patch exist which bring it up to r3, as it is distribut
+on the x11r4 tape. supplement patch ar avail to us it with r4/r5.
+	clx: the common lisp x interfac is a common lisp equival to xlib.
+	xdmcp: the x displai manag protocol provid a uniform mechan for 
+a displai such as an x termin to request login servic from a remot host.
+	xlfd: the x logic font descript convent describ a standard
+logic font descript and convent to be us by client so that thei
+can queri and access those resourc.
+	rtfm: common expert-speak mean "pleas locat and consult the 
+relev document -- read the forgotten manual".
+	utsl: a common express mean "take advantag of the fact that you 
+aren't limit by a binari licens -- us the sourc, luke".
+	api: applic-programm interfac. the function call, etc., in
+a program librari.
+	bdf: bitmap distribut format; a human-readabl format for uncompil
+x font.
+	gui: graphic user interfac.
+	uil: the user interfac languag, part of osf/motif which let 
+programm specifi a widget hierarchi in a simpl "outlin" form
+	wcl: the widget creation languag, a packag which extend the 
+understand of the xt resourc format such that a widget hierarchi and 
+action on the widget can be specifi through the resourc file
+	gil: the file format put out by sun's openwindow develop guid 3.0
+	uim: user interfac manag system
+
+----------------------------------------------------------------------
+subject:  10)  what is the icccm? (how do i write x-friendli applic?)
+
+	the inter-client commun convent manual is on of the 
+offici x consortium standard document that defin the x environ. it 
+describ the convent that client must observ to coexist peacefulli with 
+other client share the same server.  if you ar write x client, you need 
+to read and understand the icccm,  in particular the section discuss the 
+select mechan and the interact between your client and the window 
+manag.  get it either:
+	- as part of the r4 distribut from mit
+	- in the later edit of the scheifler/getti "x window system" book
+	- as an appendix in the new version of o'reilli's volum 0, "x protocol
+refer manual." a version in old copi of their volum 1 is obsolet.
+	the version in the digit press book is much more readabl, thank to 
+the effort of digit press's editor to improv the english and the 
+present.
+
+[from david rosenth, 10/90]
+
+	- the icccm wa updat for r5; updat ar publish in o'reilli's
+"programm's supplement for releas 5". the complet document is on the r5
+tape.
+
+	altern definit: the icccm is gener the m in "rtfm" and is
+the most-import of the least-read x document.
+
+----------------------------------------------------------------------
+subject:  11)  what is the x consortium, and how do i join?
+
+	the mit x consortium wa form in januari of 1988 to further the
+develop of the x window system and ha as it major goal the promot of 
+cooper within the comput industri in the creation of standard softwar 
+interfac at all layer in the x window system environ.
+	mit's role is to provid the vendor-neutral architectur and 
+administr leadership requir to make thi work. membership in the 
+consortium open to ani organ.  there ar two categori of membership, 
+member (for larg organ) and affili (for smaller organ).
+	most of the consortium's activ take place via electron mail, 
+with meet when requir.  as design and specif take shape,
+interest group ar form from expert in the particip organ.  
+typic a small multi-organ architectur team lead the design, with 
+other act as close observ and review.  onc a complet specif
+is produc, it mai be submit for formal technic review by the consortium
+as a propos standard.  the standard process typic includ public 
+review (outsid the consortium) and a demonstr of proof of concept.
+	your involv in the public review process or as a member or 
+affili of the consortium is welcom.
+	write to: bob scheifler, mit x consortium, laboratori for comput 
+scienc, 545 technolog squar, cambridg, ma 02139.
+
+[for complet inform see the xconsortium man page from the x11r4
+distribut, from which thi inform is adapt.] [2/90]
+
+----------------------------------------------------------------------
+subject:  12)  just what ar open look and motif?
+
+	open look and motif ar two graphic user interfac (gui). open look
+wa develop by sun with help from at&t and mani industri review; motif wa
+develop by the open softwar foundat (osf) with input from mani osf 
+member. 
+
+	open look is primarili a user-interfac specif and style-guid; 
+there ar sever toolkit which can be us to produc open look applic.
+motif includ an api specif; the onli sanction motif toolkit is the 
+on from osf. howev, there ar other toolkit which can be us to produc 
+program which look and behav like osf/motif; on of these, parcplac's 
+(formerli solbourn's) oi, is a "virtual toolkit" which provid object in the
+style of open look and motif, at the user's choic.
+
+	open look gui is also the name of a product from at&t, compris 
+their open look intrins toolkit and a varieti of applic.
+
+[thank to ian darwin, ian@sq.com, 5/91]
+
+----------------------------------------------------------------------
+subject:  13)  just what is openwindow?
+
+	open window (3.0) is a sun product that encompass: a window system 
+that combin a new and x11-compliant server (x/new); a user-interfac 
+specif (open look) and a seri of toolkit that implement it (includ
+the sunview-like xview and the xt-base olit); xlib and xt implement; and
+a number of util (olwm window manag, filemgr, shelltool, etc.).
+
+[thank to frank greco (fgreco@govt.shearson.com), 8/90; 4/92] 
+
+----------------------------------------------------------------------
+subject:  14)  just what is decwindow?
+
+	decwindow is a dec product that encompass: an x11 server; the xui 
+toolkit, includ the dwt widget set and uil; xlib and xt implement; a 
+session manag; and a number of util (dxwm window manag, dxcalendar, 
+dxpsview, etc.).
+
+(at some point motif flavor of the toolkit and applic will be ship.)
+[8/90] 
+
+----------------------------------------------------------------------
+subject:  15)  what is pex?
+
+	pex is the "phig extens to x".
+	phig stand for "programm's hierarch interact graphic 
+system" and is essenti a librari of function that simplifi the creation 
+and manipul of 3d graphic. mani platform ar capabl of perform in 
+hardwar the comput involv in render 3d object; the extens 
+allow the client (phig in thi case) to take advantag of the special 
+hardwar for 3d graphic.
+	sun microsystem is current contract to develop a freeli 
+redistribut (copyright similar to the current x copyright) sampl
+implement.  sourc and document ar avail in the r5 releas.
+sever vendor ar current sell independ-develop pex server for 
+their workstat and x termin.
+
+[last modifi 10/91]
+
+----------------------------------------------------------------------
+subject:  16)  what is "low-bandwidth x" (lbx)? xremot? ppp? slip? cslip?
+
+there ar sever option for us x over serial line:
+
+slip - serial line ip; thi is both a mechan and a protocol for send ip
+packet over point-to-point serial link. it ha been around for sever year,
+and implement ar avail for mani of the major tcp/ip implement.
+most x termin vendor suppli thi as a checkoff item, although nobodi realli 
+ever us it sinc it is horribl slow.  the tcp/ip header add 40 byte per 
+packet and the tcp/ip encod of the x protocol is rather verbos (rightfulli 
+so; it is optim for pack and unpack over high-speed link). 
+
+cslip - compress header slip; thi is a variant of slip that compress the 
+40 byte of tcp/ip header down to about 5 or 6 byte.  it still doesn't do 
+anyth about reencod the x protocol.  modem that do compress can help,
+but thei increas packet latenc (it take time to dribbl the uncompress 
+data through typic serial interfac, plu the compress assembl time).
+
+ppp - point-to-point protocol; thi is an emerg standard for point-to-point
+link over serial line that ha a more complet set of option negoti than
+slip.  a grow number of peopl see the combin of ppp for the serial 
+line manag and cslip for the header compress as becom common for 
+run normal tcp/ip protocol over serial line.  run raw x over the wire
+still need compress somewher to make it usabl.
+
+xremot - thi is the name of both a protocol and set of product origin
+develop by ncd for squeez the x protocol over serial line.  in addit 
+to us a low level transport mechan similar to ppp/cslip, xremot remov 
+redund in the x protocol by send delta against previou packet and 
+us lzw to compress the entir data stream.  thi work is done by either a 
+pseudo-x server or "proxi" run on the host or in a termin server.  there 
+ar sever advantag to do compress outsid the modem:
+   (1)	you don't *have* to have compress modem in there if you wouldn't 
+	otherwis be us them (e.g. if you were go to be directli 
+	connect), and
+   (2)	it reduc the i/o overhead by cut down on the number of byte that
+	have to cross the serial interfac, and
+   (3)	in addit to the effect of #2, it reduc the latenc in deliv 
+	packet by not requir the modem to buffer up the data wait for 
+	block to compress.
+
+lbx - low bandwidth x; thi is an x consortium project that is work on a
+standard for thi area.  it is be chair by ncd and xerox and is us 
+ncd's xremot protocol as a step stone in develop the new protocol.  lbx
+will go beyond xremot by ad proxi cach of commonli-us inform 
+(e.g. connect setup data, larg window properti, font metric, keymap, 
+etc.) and a more effici encod of the x protocol. the hope is to have a 
+standard readi for public review in the first half of next year and a sampl 
+implement avail in r6.
+
+addit technic inform about how xremot work and a few note on how
+lbx might be differ ar avail via anonym ftp from export.lc.mit.edu
+in contrib/ in the follow file:
+        xremot-slide.ps               slide describ xremot
+        xremot-lbx-diff.ps            more slide describ some of lbx
+
+[inform provid by jim fulton, jim@ncd.com; 7/92]
+
+	there is also a set of slide on export from jim fulton's talk at
+the 7th mit x technic confer.
+
+----------------------------------------------------------------------
+subject:  17)  topic: us x in dai-to-dai life
+----------------------------------------------------------------------
+subject:  18)! what ar all these differ window manag?
+
+	the window manag in x is just anoth client -- it is not part of the
+x window system, although it enjoi special privileg -- and so there is
+no singl window manag; instead, there ar mani which support differ wai 
+for the user to interact with window and differ style of window layout,
+decor, and keyboard and colormap focu. in approxim chronolog order
+(gener, the more recent on ar more conform with the icccm):
+
+	wm: thi simpl titl-bar window manag wa phase out in r2 or r3
+	uwm: the univers window manag is still popular for it speed, 
+although it is veri outdat. move to contrib/ on the r4 tape.
+	twm (old): tom's window manag wa among the first non-mit window 
+manag and offer the user a great deal of custom option in a
+re-parent window manag. 
+	awm: the ardent window manag remain a hotb for hacker and offer
+some featur (dynam menu) not found on more current window manag
+	cwm: cwm is part of the andrew system. 
+	rtl: siemen's window manag tile window so that thei don't overlap
+and resiz the window with the focu to it prefer size.
+	dxwm: digit's dxwm is part of the decwindow offer
+	hpwm: hp's window manag offer a 3d look; it is a precursor of mwm
+	mwm: the motif window manag is part of the osf/motif toolkit
+	tekwm: tektronix's window manag offer 
+	olwm (sun): olwm implement the open look gui and some of the style
+guid function
+	olwm (at&t): ditto
+	gwm: bull's gener window manag emul other with a built-in
+lisp interpret. version 1.7h (10/91) is on the r5 contrib tape; 1.7n is on
+avahi.inria.fr and export.lc.mit.edu. [3/93]
+	m_swm: the sigma window manag is on the r4 tape
+	pswm: sun's postscript-base pswm is part of the openwindow releas
+	swm: solbourn's swm is base on the oi toolkit and offer multipl
+gui support and also a pan virtual window; configur inform come
+from the resourc file
+	twm (new): mit's new tab window manag from the r4 tape is a rework
+twm and is the basi for sever deriv, includ the on on the r5 tape
+	vtwm: vtwm offer some of the virtual-desktop featur of swm, with a
+singl-root window implement; it is base on the r4 twm and is avail
+on archiv server. a new version, vtwm-5.0, is base on r5.9 and is avail 
+from export. [3/92]
+	tvtwm: tom's virtual tab window manag is also base on the r4 twm
+and provid a virtual desktop model on the virtual-root window of swm. it is
+avail on archiv server
+	olvwm: the vtwm-style virtual-desktop ad to sun's olwm. it is 
+avail on archiv server; version 3.3 [1/93] is on export.
+	mvwm: the vtwm-style virtual-desktop ad to osf's mwm. a beta version
+is float around (most recent from suresh@unipalm.co.uk) but requir a 
+sourc licens to osf/motif 1.1.3 [3/92].
+	ncdwm: the window manag local to ncd termin offer an mwm look 
+	xdswm: the window manag local to visual technolog's termin 
+	ctwm: claud lecommandeur's (lecom@sic.epfl.ch) modif of the r5 
+twm offer 32 virtual screen in the fashion of hp vuewm; sourc is on export.
+version 2.2.2 [2/93] also offer the window overview us in vtwm and tvtwm.
+	vuewm: hp's mwm-base window manag offer configur workspac.
+	4dwm: sgi's enhanc mwm
+	piewm: thi version of tvtwm offer pie menu
+
+----------------------------------------------------------------------
+subject:  19)  why doe my x session exit when i kill my window manag (sic)?
+
+	it needn't.  what is probabl happen is that you ar run your 
+window manag as the last job in your .xsession or .xinitrc file; your x 
+session run onli as long as the last job is run, and so kill your 
+window manag is equival to log out. instead, run the window manag in
+the background, and as the last job instead invok someth safe like:
+		exec xterm -name login -rv -icon
+or ani special client of your devis which exit on some user action.
+your x session will continu until you explicitli logout of thi window, 
+whether or not you kill or restart your window manag.
+
+----------------------------------------------------------------------
+subject:  20)  can i save the state of my x session, like toolplac doe?
+
+	although no known window manag directli support such a featur --
+which mai be equival to write out a .xinitrc or .xsession file name the
+geometri and wm_command of each applic (but olvwm mai have someth 
+close) -- there is a contribut applic which doe much of what you ar 
+look for, although it is not as complet as the sunview program toolplac. 
+look for the applic "xplace" on an archiv-server near you. there ar 
+sever version of thi program float around; look for a recent vintag.
+[10/90]
+	some new pseudo session-manag such as hp's vuewm provid for the 
+save of session includ inform on the geometri of current-run
+applic and the resourc databas. 
+[bjxrn stabel (bjoern@staff.cs.uit.no); 3/93.]
+ 
+----------------------------------------------------------------------
+subject:  21)  how do i us anoth window manag with dec's session manag?
+
+	dec's session manag will start dxwm up by default. to overrid thi, 
+add to your .xdefault file someth like thi line, name the full pathnam:
+	sm.windowmanagernam:   /wherev/usr/bin/x11/your_favorit_wm
+
+----------------------------------------------------------------------
+subject:  22)  how do i chang the keyboard auto-repeat rate?
+
+	you can turn auto-repeat on or off by us "xset r on|off". the x
+protocol, howev, doesn't provid for vari the auto-repeat rate, which is
+a capabl not support by all system.
+	some server run on system that support thi, howev, mai provid
+command-line flag to set the rate at start-up time. if you have control over 
+server start-up (see the man page for xinit and xdm), you can invok the 
+server with the chosen set; for exampl, you can start the xsun server 
+from mit with the option "-ar1 350 -ar2 30" to reduc the sensit of the 
+keyboard.
+
+----------------------------------------------------------------------
+subject:  23)  how do i remap the kei on my keyboard to produc a string?
+
+	there is no method of arrang for a particular string to be
+produc when you press a particular kei. the xmodmap client, which is us 
+for move your ctrl and esc kei to us place, just rearrang kei and 
+doe not do "macro expans."
+	some (few) client, includ xterm and sever x-base editor, 
+accept a translat resourc such as:
+	xterm*vt100.translat: #overrid \
+		<kei>f1: string("setenv displai unix:0")
+which permit the shorthand f1 to be press to reset the displai local
+within an xterm; it take effect for new xterm client. to includ control
+charact in the string, us \nnn, where nnn is the octal encod of the
+control charact you want to includ.
+	window manag, which could provid thi facil, do not yet; nor
+ha a special "remapp" client been made avail.
+
+----------------------------------------------------------------------
+
+david b. lewi 					faq%craft@uunet.uu.net
+
+		"just the faq, ma'am." -- joe fridai 
+-- 
+david b. lewi		temporarili at but not speak for visual, inc.
+dai: dbl@visual.com	even: david%craft@uunet.uu.net

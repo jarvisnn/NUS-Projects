@@ -1,0 +1,26 @@
+from: cwikla@morrison.wri.com (john cwikla)
+subject: pixmap and colormap sent through select...
+summari: select and pixmap/colormap
+keyword: select
+nntp-post-host: morrison.wri.com
+organ: wolfram research, inc.
+line: 18
+
+
+	i want to be abl to send a pixmap from on client to the next.
+along with thi i want to send the colormap and foreground and
+background pixel valu.  so far not a problem, i can do
+thi with no problem.
+
+  howev, onc i have the pixmap id and the colormap id, how
+do i go about tell the server that the second (receiv)
+client now want to have associ with the two id's?
+
+	tia,
+
+	john
+--
+o  john l. cwikla                       o                            o
+o  x programm                         o  x wa never the first     o
+o  wolfram research, inc.               o   letter of the alphabet   o
+o  cwikla@wri.com  (217) 398-0700       o                            o

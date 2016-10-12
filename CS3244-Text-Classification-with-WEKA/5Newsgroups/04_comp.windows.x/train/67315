@@ -1,0 +1,78 @@
+from: rchui@nswc-wo.nswc.navi.mil (raymond chui)
+subject: re: a question i do not found in faq
+repli-to: rchui@opal.nswc.navi.mil
+organ: navswc dd white oak det.
+line: 72
+
+comp.window.x
+in articl <1993apr26.122007.25760@relai.nswc.navi.mil>, rchui@nswc-wo.nswc.navi.mil (raymond chui) write:
+
+	pleas igor my previous calcul mistak. pleas see the correct
+calcul. sorri!
+|> i creat a pixmap or drawabl window, then us xdrawlin() function 
+|> draw a line as below fingur:
+|> 
+|> 		width = 300
+|> 	================================
+|> 	|				|
+|> 	|				|
+|> 	|			p1	|
+|> 	|			\	|
+|> 	|			 \	| height = 300
+|> 	|			  \	|
+|> 	|			   \	|
+|> 	|			    \	|
+|> 	|			     \	|
+|> 	|			      \	|
+|> 	|			       \|p3
+|> 	|				| 
+|> 	|===============================| \
+|> 					    \
+|> 					     p2
+|> 
+|> 	i creat the pixmap or drawabl window onli with size 300x300.
+|> but i draw line from p1(x1=270,y1=100) to p2(x2=500,y2=800).
+|> my question is, dose the xdrawlin function can finger out that correct
+|> p3(x3 and y3) for me? if you calcul x3 and y3. 
+|> 
+ x3 = 300;
+ @ = art tan (500 - 270)/(800 - 100)) = 18.19 degre;
+ y3 = 100 + (300 - 270)/tan(@) = 191.29 ~= 191 integ
+
+|> 
+|> how do i prove xdrawlin() give me the right x3, y3 or not?
+|> pleas don't ask me why i don't creat a 900x900 pixmap. no, i don't
+|> wan to. 
+|> 
+|> thank in advanc!
+|> -- 
+|> raymond h. chui
+|> nswc n62
+|> 10901 new hampshir av.
+|> silver spring, md 20903-5000
+|> u.s.a.
+|> voic:1(301)394-3807 ext. 45
+|> fax:1(301)394-4483
+|> email:rchui@opal.nswc.navi.mil
+|>  _ __                                  _    ,    __
+|> ' )  )                           /    ' )  /    /  ) /
+|>  /--' __. , , ____   ______   __/      /--/    /    /_  . . o
+|> /  \_(_(_(_/_/) ) )_(_) /) )_(_(_     /  ( o  (__/ / /_(_/_(_
+|>           /
+|>          '
+
+-- 
+raymond h. chui
+nswc n62
+10901 new hampshir av.
+silver spring, md 20903-5000
+u.s.a.
+voic:1(301)394-3807 ext. 45
+fax:1(301)394-4483
+email:rchui@opal.nswc.navi.mil
+ _ __                                  _    ,    __
+' )  )                           /    ' )  /    /  ) /
+ /--' __. , , ____   ______   __/      /--/    /    /_  . . o
+/  \_(_(_(_/_/) ) )_(_) /) )_(_(_     /  ( o  (__/ / /_(_/_(_
+          /
+         '

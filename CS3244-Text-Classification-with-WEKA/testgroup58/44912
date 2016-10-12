@@ -1,0 +1,38 @@
+from: tfisher@ceri.purdu.edu (tom fisher)
+
+subject: re: cpu fan
+
+organ: center for environment and regulatori inform system, purdu univers
+
+line: 14
+
+
+
+>> the "attach" fan look slick and work well but i'm bother by the potenti
+
+>> loss of cool if the fan goe out. at least with the power suppli fan you
+
+>> can reach back there everi few dai and feel the fan blow.
+
+>> 
+
+> ye, thi is a valid concern imho.  with the directli attach fan unit i've
+
+> seen, it look like if the fan were to stop the chip cool would be 
+
+> a good bit wors than no heat sink at all.  in other word, if the fan stop
+
+> the unit turn into an insul and the chip might get hot enough to
+
+> suffer perman damag, not just stop work temporarili.
+
+> 
+
+ a suggest:  slave (hook in seri) a small pilot light off the fan
+
+circuit.  then, if the light goe out, you know your fan is not work.
+
+
+
+tom
+

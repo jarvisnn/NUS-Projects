@@ -1,0 +1,86 @@
+from: lhighlei@gozer.idbsu.edu (larri paul highlei)
+
+subject: more info on window help file
+
+nntp-post-host: gozer
+
+organ: bois state univers
+
+line: 37
+
+
+
+here is the latest on reloc your help file to a server.  
+
+the winhelp() function, as i am told by ms, doe search your path so 
+
+reloc ms window helpfil won't be a problem as long as you includ
+
+the path to where you move them to, howev, if an applic ha 
+
+hardcod the path into their code so that when winhelp is invok it
+
+search the given path (i.e. winhelp(hwnd, c:\amipro) for exampl) then
+
+winhelp doe not search your path and instead look onli to that directori
+
+where you have instal your softwar.
+
+
+
+i test thi out on a varieti of softwar packag.  i move all my 
+
+helpfil to the drive z:\ and includ thi in the path statement.
+
+here is the result for differ softwar packag:
+
+
+
+
+
+norton desktop			found helpfil
+
+window v3.1 for workgroup	found helpfil
+
+window v3.1			found helpfil
+
+ms powerpoint v3.0		found helpfil
+
+ms word				found helpfil
+
+ms excel v4.0a			did not find helpfil (strang)
+
+ms foxpro v2.5 for window	found helpfil
+
+lotu amipro v3.0		did not find helpfil
+
+procomm plu for window	did not find helpfil
+
+
+
+
+
+i guess thi is better than noth but it would make sens to be abl to 
+
+specifi a global path for helpfil.  
+
+
+
+if anyon ha ani comment or if i can help anyon or if i left someth
+
+out pleas let me know.
+
+
+
+		lhighlei@gozer.idbsu.edu
+
+
+
+thank for the help from everyon especi jagrant@emr1.emr.ca
+
+
+
+more info on thi topic as it develop
+
+
+

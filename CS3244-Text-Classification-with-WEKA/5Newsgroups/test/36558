@@ -1,0 +1,106 @@
+from: tomh@metric.com (tom haapanen)
+
+subject: re: hercul graphit?  (result!)
+
+organ: softwar metric inc.
+
+line: 48
+
+
+
+>> tomh@metric.com (tom haapanen) write:
+
+>>> ha anyon us a hercul graphit adapt?  it look good on paper, and
+
+>>> steve gibson gave it a veri good review in infoworld.  i'd love to get a
+
+>>> real-world impress, though -- how is the speed?  driver?  support?
+
+
+
+rda771v@monu6.cc.monash.edu.au (a.b. wuysang) write:
+
+> but the impress perform of the graphit wa
+
+> not it winmark, it wa it wintach result (esp. the paint
+
+> perform). judg from the wintach test, i can hardli
+
+> imagin that there is a cheat driver for it.
+
+
+
+i receiv my graphit vl on thursdai, and i've had a littl bit of 
+
+experi with it now.  in gener, it feel *fast*, although thi
+
+is the first vlb card that i have tri.  still, the result ar 
+
+impress.
+
+
+
+with my 486dx2/66 w/16 mb, run at 1024x768/256, i've had the follow
+
+wintach 1.0 result:
+
+
+
+
+
+card				wp	cad	spread	paint	overal
+
+-----------------------------------------------------------------------
+
+ati graphic ultra		13.5	14.5	19.1	25.0	18.0
+
+ati ultra+ (no apertur)	11.2	13.8	10.7	20.9	14.1
+
+hercul graphit vl		16.1	67.8	41.4	52.8	44.5
+
+
+
+unfortun i don't have the number here, but the ati ultra pro vlb
+
+had an overal wintach score of about 26.  the ultra pro wa nearli as
+
+fast in text handl, but wa blown awai in the cad and paint test.
+
+
+
+as an addit test, we hand-time a complex coreldraw! slide resiz/-
+
+redraw time.  there wa no swap, but i'd expect there is a fairli
+
+heavi load on the cpu.  the graphit redraw time averag about 10.2
+
+second, with ati ultra pro at 12.0.  thi jive with steve gibson's
+
+content that the isa graphit is faster than an ati up on hi complex
+
+micrografx draw document.
+
+
+
+so far, i'm *veri* impress.  the driver look solid, and the card fli.
+
+the instal and util ar differ, but compar to ati's.  and
+
+i didn't have to wait for build 59 for some reliabl...  with hercul'
+
+softwar develop special, you can get an evalu copi of the card for
+
+just $225 (or $200 for the isa version).  call 800-532-0600 if you want to
+
+give it a try -- i'm a happi custom now!
+
+
+
+-- 
+
+[ /tom haapanen -- tomh@metric.com -- softwar metric inc -- waterloo, ont ]
+
+[       "stick your index finger into both corner of your mouth.  now pull ]
+
+[          up.  that's how the corrado make you feel."  -- car, januari '93 ]
+

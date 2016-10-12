@@ -1,0 +1,42 @@
+from: anisko@usdtsg.daytonoh.ncr.com (anisko)
+subject: re: atari mono and vga
+repli-to: anisko@usdtsg.uucp ()
+distribut: world
+organ: ncr corpor, dayton
+line: 35
+
+in articl <19apr199322421085@oregon.uoregon.edu> arosborn@oregon.uoregon.edu (alan osborn) write:
+>in articl <1993apr19.090707.3686@tdb.uu.se>, m88max@tdb.uu.se (max brant) write...
+>>have anybodi succed in convert a atari monomchrom monitor into a
+>>mono vga monitor. if so pleas let me know exactli how you did and what
+>>graphic card you us.
+>i wish i could help!  i post a similar question about two week ago;
+>i got no respons at all.  i've ask local at my friendli atari store.
+>i wa told that it should be possibl, but that thei had no idea how
+>it might be done.  nor did thei particularli care to investig.
+>
+>pleas, if anyon ha _ani_ suggest, post them!
+
+
+   you might try ask on on of the comp.sy.ibm.* echo (the best on
+mai be comp.sy.ibm.pc.hardwar).  i sai thi becaus the convers
+seem more gear toward a pc user want to us that monitor, than
+an atari user who alreadi can us the monitor (unless mayb thei
+want to realli go wild - convert the monitor to vga, then
+us it as a vga monitor with a falcon :-)
+
+   as for graphic card, assum that the atari monitor can be
+modifi/adapt to handl vga signal, you should probabl be abl
+to us ani vga card (at least with a re around 640x400).  i haven't
+tri thi, but that would be my guess...
+
+				robert anisko
+				anisko@usdtsg.daytonoh.ncr.com
+
+
+...you might want to price mono vga monitor anywai - it mai be cheaper
+to go that rout than to do the convers; besid, with the falcon and
+beyond, vga/svga/multisync monitor will probabl be the wai to go...
+
+
+

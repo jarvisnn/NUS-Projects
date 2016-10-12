@@ -1,0 +1,34 @@
+from: dac@cbnewsf.cb.att.com (david.a.copperman)
+
+subject: click to focu vs. point to focu?
+
+organ: at&t
+
+line: 12
+
+
+
+i am have the problem of ensur point-to-focu when the mous
+
+cursor enter a window in my applic.  i'm us interview,
+
+but that mai not matter, thi seem to be a gener problem in x.
+
+for exampl, i us openwindow on a sparc2, with point-to-focu
+
+set, and that gener work, but not alwai, depend on what
+
+wa go on in some window when i move the cursor from on shell
+
+tool window to anoth.  or so it seem...
+
+
+
+my question, then, is what can i do within x to guarante point-to-
+
+focu within my applic?  thank for ani respons.
+
+
+
+dave
+

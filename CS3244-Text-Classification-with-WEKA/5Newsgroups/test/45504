@@ -1,0 +1,130 @@
+from: woodi@praxi.co.uk (paul woodman)
+
+subject: help: fdhd failur in iicx
+
+organ: praxi, bath, u.k.
+
+line: 60
+
+
+
+repost - due to net problem
+
+
+
+hi,
+
+   i have problem with the fdhd on a iicx that ekg report is rom
+
+revis 376. i had report that thi mac wa have troubl 
+
+format disk and by the time i got to it, the fdhd just would
+
+not respond although all other function were fine.
+
+
+
+i check the voltag on the db19 extern drive connector and pin
+
+6 show no volt with 7 and 8 give 25volt unload. the power 
+
+suppli is an astec and i sent it awai for repair.
+
+
+
+with the power suppli reinstal, i now get the follow error:
+
+
+
+with the intern fdhd connect, the mac boot fine but on complet
+
+of boot cycl an alert displai "the disk is unread - do you
+
+want to eject it?". for everi combin of respons, the alert 
+
+reappear within approx 2 second and thi error is continu. the
+
+fdhd doe spin but there is no head seek and the fdhd is incap
+
+of eject the disk. thi error sequenc occur regardless of whether
+
+there is a floppi in the drive or not. pin 6 on the db19 extern 
+
+connector show 1.2v, pin 7 and 8 show 10.75v.
+
+
+
+with the intern fdhd disconnect, the mac boot fine and work great 
+
+(macekg report no error). the db19 extern connector now show
+
+no voltag on pin 6 but pin 7 and 8 show 10.75v.
+
+
+
+now, the intern fdhd mai be fubar, but i have an appl 800k extern
+
+drive that give exactli the same symptom as the intern drive when
+
+connect to either the extern db19 or the intern connector at j16
+
+(after suitabl surgeri to the extern drive). the voltag at j16 
+
+(with the intern fdhd disconnect) ar as follow:
+
+
+
+	pin	volt	pin	volt
+
+	1	-	2	5
+
+	3	-	4	5
+
+	5	-	6	5
+
+	7	-	8	-
+
+	9	-	10	5
+
+	11	-	12	-
+
+	13	10.75	14	5
+
+	15	10.75	16	5
+
+	17	10.75	18	-
+
+	19	10.75	20	5
+
+
+
+thi machin ha a swim which i don't think ekg test. i have test all
+
+diod and pica fuse and can find no problem. doe anybodi have ani
+
+idea ?
+
+
+
+                        best wish,
+
+                          woodi.
+
+
+
+                               paul woodman  
+
+
+
+                               praxi plc,
+
+\          /           |       the softwar engin compani of touch ross, 
+
+ \        / ___  ___  _|       20 manver street, bath, ba1 1px, uk.
+
+  \  /\  / /  / /  / / | \  /  tel +44 225 444700 xt228
+
+   \/  \/ /__/ /__/ /__|  \/   fax +44 225 465205.
+
+ _________________________/    woodi@praxi.co.uk                       
+

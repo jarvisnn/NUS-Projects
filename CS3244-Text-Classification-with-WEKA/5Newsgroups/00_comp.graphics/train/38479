@@ -1,0 +1,33 @@
+from: ani@ms.uki.edu (aniruddha b. deglurkar)
+subject: help: split a trim region along a mesh 
+organ: univers of kentucki, dept. of math scienc
+line: 28
+
+
+
+	hi,
+
+	i have a problem, i hope some of the 'guru' can help me solv.
+
+	background of the problem:
+	i have a rectangular mesh in the uv domain, i.e  the mesh is a 
+	map of a 3d bezier patch into 2d. the area in thi domain
+	which is insid a trim loop had to be render. the trim
+	loop is a set of 2d bezier curv segment.
+	for the sake of notat: the mesh is made up of cell.
+
+	my problem is thi :
+	the trim area ha to be split up into individu smaller
+	cell bound by the trim curv segment. if a cell
+	is wholli insid the area...then it is output as a whole ,
+	els it is trivial reject. 
+
+	doe ani bodi know how thiss can be done, or is there ani algo. 
+	somewher for do thi.
+
+	ani help would be appreci.
+
+	thank, 
+	ani.
+-- 
+to get irrit is human, to stai cool, divin.

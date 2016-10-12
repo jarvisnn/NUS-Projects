@@ -1,0 +1,100 @@
+from: lanc@hartmann.austin.ibm.com (lanc hartmann)
+
+subject: re: diamond stealth: help!
+
+summari: address/irq conflict.
+
+repli-to: lanc%hartmann.austin.ibm.com@ibmpa.awdpa.ibm.com
+
+organ: ibm, austin
+
+keyword: video s3 diamond
+
+line: 42
+
+
+
+in articl <1r5ep8$67e@usenet.in.cwru.edu> ab245@cleveland.freenet.edu (sam latonia) write:
+
+>
+
+>
+
+>articl #61058 (61121 is last):
+
+>>newsgroup: comp.sy.ibm.pc.hardwar
+
+>from: redmond+@cs.cmu.edu (redmond english)
+
+>subject: diamond stealth: help!
+
+>date: wed apr 21 16:54:39 1993
+
+>
+
+>hello,
+
+>
+
+>   i have a diamond stealth vram card (the older version
+
+>with the dip switch on the back).  i have two problem:
+
+>
+
+>1 ) i've lost the manual!!!
+
+>
+
+>2 ) i have it in a machin with a network card, and
+
+>    everyth work fine until i run window, when
+
+>    the network connect di.
+
+>
+
+>    (in case it's import, the network card is an
+
+>     smc arcnet 8-bit compat card.  it's i/o
+
+>     address is 02e0 and it's ram base address is
+
+>     d000.  it's also us irq 2)
+
+
+
+[remaind delet]
+
+
+
+i don't have my copi of the manual with me right now, but i can offer the
+
+follow in the interim:
+
+
+
+   1)  the card us port address 0x2e0 and 0x2e8 (which ar not
+
+       configur).  these address, incident, were inadvertantli
+
+       omit from my version of the manual.
+
+
+
+   2)  i believ there is a dip that control whether or not to enabl
+
+       irq 2 (for cga or ega support??!?).
+
+
+
+lanc hartmann (lanc%hartmann.austin.ibm.com@ibmpa.awdpa.ibm.com)
+
+               ye, that is a '%' (percent sign) in my network address.
+
+------------------------------------------------------------------------------
+
+all statement, comment, opinion, etc. herein reflect those of the author
+
+and shall not be misconstru as those of ibm or anyon els for that matter.
+

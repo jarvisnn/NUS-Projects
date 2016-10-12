@@ -1,0 +1,23 @@
+from: ggw@wolv.durham.nc.us (gregori g. woodburi)
+subject: q900 fp error? (wa: quadra 900/950 differ
+repli-to: ggw@wolv.durham.nc.us
+organ: wolv den unix
+line: 16
+x-md4-signatur: 682f2f434b0ed4717bc807af66e9b5a4
+
+rdk2@cec2.wustl.edu (robert david klapper) write:
+>
+>	i also believ that the 950 fix a bug in the cpu which screw up
+>some float point calcul.
+
+	doe anyon have detail on thi?   what sort of fp error is
+the q900 sensit to?
+
+	(my q900 is have some strang problem with an fp intens
+program, get a lot of ds15 (segment loader) error.  thinkc5.0.4 and
+system 7.0.1+)
+-- 
+gregori g. woodburi @ the wolv den unix, durham nc  <standard disclaim>
+uucp: ...dukcd!wolv!ggw   ...duke!wolv!ggw           [us the map!]
+domain: ggw@wolv.durham.nc.us  ggw%wolv@duke.cs.duke.edu
+[thi site is *not* affili with duke univers.  (idiot!) ]

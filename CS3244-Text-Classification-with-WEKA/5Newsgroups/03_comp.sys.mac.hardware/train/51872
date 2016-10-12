@@ -1,0 +1,31 @@
+from: erik@cheshir.oxi.edu (erik adam)
+subject: can i remov the 68000 under my daughterboard upgrad?
+organ: occident colleg, lo angel, ca 90041 usa.
+line: 26
+
+the subject sai what i would like to do, here ar the detail:
+
+i have a 512ke with the macrescu upgrad board that make it the
+equival of a plu (system 7 and macenvi both identifi it as such).
+
+the macrescu board clip onto the 68000 on the mb.  it also ha
+a 68000 itself.  period i have to remov the clip (not an
+entir easi thing to do) and clean the "leg" of the 68000.
+larri pina's book assert that thi is occasion a problem with
+snap on upgrad:  the 68000's "leg" will oxid, caus 
+unusu system error.
+
+well, that's me.
+
+so, i would like to do someth perman, and i think it would be
+fairli easi to put a socket in where the 68000 current is, and
+modifi the macrescu board to plug in.  what i'm not 100% sure of
+is whether it will work.  it seem to me that the two 68000s aren't
+act independ; so remov on shouldn't have ani effect on
+the perform of my mac.  i'm about 97% sure.
+
+will someon provid the extra 3%?
+
+erik
+erik@cheshir.oxi.edu
+

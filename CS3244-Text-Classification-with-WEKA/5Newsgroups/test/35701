@@ -1,0 +1,52 @@
+from: da188@cs.citi.ac.uk (a. khattri)
+
+subject: re: blink cursor in xterm???
+
+organ: comput scienc dept, citi univers, london
+
+line: 19
+
+distribut: world
+
+nntp-post-host: fred.cs.citi.ac.uk
+
+
+
+>> back in the dai of x11.1 i did analys the xterm code. the cursor 
+
+>> wa implement by draw a rectangl around the charact. i doesn't
+
+>> seem to be chang 'til now.
+
+>> but if you have the sourc you could add a blink cursor via
+
+>> xtappaddtimeout or similar :-|.
+
+>
+
+>the server overhead for thi is mildli ridicul, though (see also desqview/x,
+
+>which doe thi in it do window).  do you realli want xterm to wake up everi
+
+>half second and whack the server into do a bitblt?
+
+
+
+most do x server ar terribl slow to us in my experi - and no, i guess 
+
+perform would be pretti bad. i believ the discuss is valid for an x 
+
+server on a decent workstat.
+
+
+
+-- 
+
+.-------------------------[ the eno ]-------------------------------------.
+
+| "the troubl with new ag    | janet : da188@uk.ac.citi                 |
+
+|  music is that there's no    |         eno@uk.ac.citi.cs                |
+
+|  evil in it.." - brian eno   | us :    da188%citi.ac.uk@cunyvm.cuni.edu |
+

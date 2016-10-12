@@ -1,0 +1,68 @@
+from: barnettj@pooki.crd.ge.com (janet a barnett)
+
+subject: re: help. badmatch make 24bit win on 8bit server !!
+
+nntp-post-host: pooki.crd.ge.com
+
+organ: ge corp. research & develop, schenectadi, ny
+
+line: 28
+
+
+
+in articl <1993apr30.120234.15637@cci.dk> hwn@cci.dk (henrik w. nielsen) write:
+
+>
+
+>
+
+>i'm try to make a 24 bit window us xcreatewindow on a 8 bit
+
+>pseudocolor server. as far as i know thi should be possibl if you
+
+[stuff delet]
+
+>   xio.gswin = xcreatewindow(xio.dspptr, rootwindow(xio.dspptr, xio.scr),
+
+>			     x, y, w, h, 0, 24, inputoutput,
+
+>			     xtern.colorinfo, 0, &setwinattrib);
+
+>}
+
+>
+
+>
+
+>thi result in a badmatch error. can anyon pleas tell me why ?
+
+>
+
+>
+
+
+
+the colormap element of setwinattrib must be a legitim truecolor
+
+colormap. so, us xcreatecolormap() with the proper visual and us it
+
+in setwinattrib (and don't forget the mask!).
+
+
+
+and the inevit caveat: i usual us widget, set the visual
+
+and colormap resourc rather than direct x routin, so i could be
+
+wrong. but, i think thi is the gener difficulti.
+
+
+
+allen barnett
+
+(whose wife gracious allow to us her account)
+
+
+
+
+

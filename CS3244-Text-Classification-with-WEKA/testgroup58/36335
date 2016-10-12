@@ -1,0 +1,126 @@
+from: ccastco@prism.gatech.edu (costa malama)
+
+subject: re: help with chang startup logo
+
+organ: georgia institut of technolog
+
+line: 58
+
+
+
+in articl <1993apr28.161910.17062@sea.gwu.edu> lourai@sea.gwu.edu (michael panayiotaki) write:
+
+>in articl <735952415.aa01739@f-454.fidonet.org> c..doell@p26.f3333.n106.z1.fidonet.org (c. doell) write:
+
+>>hello brad!
+
+>>
+
+>>mondai april 26 1993 17:24, brad small wrote to (crosspost 1) all:
+
+>> bs> copi /b win.cnf+vgalogo.lgo+vgalogo.rle win.com
+
+*** unecessari ...
+
+>>
+
+>> bs> (i grab thi from _supercharg window_ by judd robbin--great book)
+
+>> bs> thi is also how you can put your own logo into the window startup
+
+>>
+
+might do it, too much troubl :)
+
+>>brad,
+
+
+
+>.bmp *will* convert to .rle.  i know for a fact that paintshop
+
+>(sharewar from cica; /desktop, i think, filenam psvvv.zip (i think,
+
+>where vvv is the ver. number.  if that's not true, let me know and i"ll
+
+>thi, howev, will write your .rle file with a .bmp extens, so you
+
+>have to renam it.
+
+>your file ha to be less than 64 k
+
+>( at least that's what the faq sai, but mine wont work for more than
+
+>about 30...mayb thei mend 32k, i don't know).
+
+
+
+*** agre mixali...
+
+
+
+>your file ha to fit vga size (480 * 860, or whatev standard vga size
+
+>is.)  if you us a non-vga screen (e.g. cga, ega, svga, there is also a
+
+>wai to do it, but i thing instead of vgalogo.lgo you us anoth file,
+
+
+
+*** not entir true..>
+
+
+
+>also....your .bmp ha to be 16 colour or less.
+
+
+
+true ***
+
+
+
+>final, rememb to save your current win.com befor, and put your
+
+>new win.com in the window directori.  also, don't start window from a
+
+>
+
+unecessari ...
+
+>mickei
+
+
+
+	path of least resist (tm) :) :
+
+get wingif 1.4 from cica (ftp.cica.indiana.edu pub/pc/win3/(desktop?) )
+
+it will save to nativ .rle format unlik psp (an otherwis fine, fine prog)
+
+make a file us anyth that ha to be less than 30k, as michael said,
+
+and less than 16 color... import it to wingif as gif, pcx or bmp and
+
+save it in you window/system subdir as vgalogo.rle (not .lgo). exit win,
+
+and run setup in the window subdir. reselect your _current_ config. run
+
+win. voila'
+
+(minor correct: the .rle file ha to be <30k. that mean ~15k gif ?)
+
+hope it help... (and pleas, pleas someon put thi in the group's faq)
+
+
+
+
+
+-- 
+
+costa malama ____________________________________________________________
+
+georgia institut of technolog 
+
+oit ua -- oit doesn't pai me enough to share it opinion... 
+
+internet: ccastco@prism.gatech.edu
+

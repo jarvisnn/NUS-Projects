@@ -1,0 +1,23 @@
+from: mancu@sweetpea.jsc.nasa.gov (keith mancu)
+subject: can't get 1280x1024 to work w/2m ati ultra pro
+organ: mdssc
+line: 18
+
+  i am unabl to get my gatewai 486dx2/66 to run window
+in 1280x1024.  i order a 2m ati ultra pro, and i'm pretti
+sure the 2m is realli there becaus i *can* select
+1024x768x65536.   but no matter what i do with the flex program
+in the ati's program group, 1280x1024 remain ghost out.
+i have window 3.1, build 59 of the driver, do 5.0.  the
+driver were instal by gatewai, not by me, so perhap there's
+a file miss from the hard drive.  it run 1024x768 just fine.
+  i did go into the desktop window and select 1280x1024.  sometim
+it refus (ghost out), other time it accept it, but when i hit
+ok and re-enter desktop, it's back to 1024x768.  at no time doe
+it unghost 1280x1024 in the main flex window.  help!
+
+-- 
+| keith mancu    <mancu@butch.jsc.nasa.gov>                           |
+| n5wvr           <mancu@sweetpea.jsc.nasa.gov>                        |
+| "black powder and alcohol, when your state and citi fall,          |
+|  when your back's against the wall...." -lesli fish                  |

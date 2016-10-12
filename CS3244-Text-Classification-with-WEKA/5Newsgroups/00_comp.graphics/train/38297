@@ -1,0 +1,47 @@
+from: georg@ccmail.larc.nasa.gov (georg m. brown)
+subject: re: pcx
+organ: client specif system, inc.
+line: 41
+nntp-post-host: thrasher.larc.nasa.gov
+
+in articl <1993apr14.220100.17867@freenet.carleton.ca> ad994@freenet.carleton.ca (jason wiggl) write:
+>from: ad994@freenet.carleton.ca (jason wiggl)
+>subject: pcx
+>date: wed, 14 apr 1993 22:01:00 gmt
+>
+>hello
+>	help!!! pleas
+>		i am a student of turbo c++ and graphic program
+>	and i am have some problem find algorithm and code
+>	to teach me how to do some stuff..
+>
+>	1) where is there a book or code that will teach me how
+>	to read and write pcx,dbf,and gif file?
+>
+>	2) how do i access the extra ram on my paradis video board
+>	so i can do page in the higher vga mode ie: 320x200x256
+>	800x600x256
+>	3) anybodi got a line on a good book to help answer these question?
+>
+>thank veri much !
+>
+>send repli's to : palm@snycanva.bitnet
+>
+>peac be
+>bless be
+>stephen palm
+
+a book that i can somewhat recommend is :
+                     
+                     pratic imag process in c
+                     by craig a. lindlei
+                     publish by wilei
+
+it address read/write to/from pcx/tiff file; imag acquisit, 
+manipul and storag; and ha sourc code in the book. the sourc is 
+primarili written in turbo c and natur ha convers possibl. i 
+have convert some of it to quick c. natur, the code ha some problem 
+in the book - as usual. typo, syntax, etc. ar problem. it can be a good 
+learn experi for someon who is studi c. there is also a companion 
+disk with sourc avail for order and $50.00. overal, the book is not 
+bad. i acquir the book at waldensoftwar.

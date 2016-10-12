@@ -1,0 +1,23 @@
+from: pest@konech.uucp (wolfgang pest)
+subject: speedstar 24 - how to program the truecolor mode ?
+distribut: world
+organ: kontron elektronik gmbh ech, germani
+line: 17
+
+hello,
+i purchas my new 486 with a nonam graphic card instal which is obvious 
+speedstar 24 compat. it name is "vga 4000 truecolor".
+it is accompani with some driver and the util vmode, xmode and
+at least on more mode, as well as some driver for lotu, window, etc.
+onli on of the driver is told to provid the truecolor mode, name
+the window 3.1 driver.
+nowher els, except in the ad, is ani pointer to the truecolor mode.
+some articl in thi group about the speedstar 24 and some other fact
+made me believ that my card is compat to that on.
+
+doe anybodi out there know how thi mode can be adjust? how can i write
+a driver which allow me to have 16.7 million of color with a resolut
+of 640 x 480 with 45 hz interlac ?
+
+greet,
+    wolfgang

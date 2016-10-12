@@ -1,0 +1,29 @@
+from: rgasch@nl.oracl.com (robert gasch)
+subject: overrid default behaviour
+organ: oracl europ
+line: 23
+x-newsread: tin [version 1.1 pl8]
+
+usual when i start up an applic, i first get the window outlin
+on my displai. i then have to click on the mous button to actual
+place the window on the screen. yet when i specifi the -geometri 
+option the window appear right awai, the properti specifi by
+the -geometri argument. the question now is:
+
+how can i overrid the intermediari step of the user have to specifi
+window posit with a mouseclick? i've tri explicitli set window
+size and posit, but that did alter the normal program behaviour.
+
+thank for ani hint
+---> robert
+
+ps: i'm work in plain x.
+
+
+
+******************************************************************************
+* robert gasch	       * der erst mai ist der tag an dem die stadt in      *
+* oracl engin   * freih tritt und den staatlichen monopolanspruch    *
+* de meern, nl	       * auf gewalt in frage stellt                          *
+* rgasch@nl.oracl.com *                           - einstuerzend neubauten *
+******************************************************************************

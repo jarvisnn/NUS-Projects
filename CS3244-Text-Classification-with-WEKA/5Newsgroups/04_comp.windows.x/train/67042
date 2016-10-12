@@ -1,0 +1,37 @@
+from: janzen@lichen.mpr.ca (martin janzen)
+subject: re: how to put rpc in hp x/motif environ?
+nntp-post-host: lichen
+repli-to: janzen@mprgate.mpr.ca
+organ: mpr teltech ltd.
+line: 30
+
+in articl <c5r03j.gu3@new2.ci.umn.edu>, ianhogg@milli.cs.umn.edu (ian j. hogg) write:
+>in articl <1993apr19.200740.17615@sol.ctr.columbia.edu> nchan@nova.ctr.columbia.edu (nui chan) write:
+>>ha anybodi implement an rpc server in the hp xwindow? in sun xview, there
+>>is a notifi_enabl_rpc_svc() call that automat execut the rpc process
+>>when it detect an incom request. i wonder if there is a similar function in
+>>hp x/motif that perform the same function.
+>
+>i've been us the xrpc packag for about a year now.  i believ i got it from
+>export.  
+
+glad to hear that it's work for you!
+
+i couldn't find it on "export".  howev, simon leinen
+<simon@liasun6.epfl.ch> ha ad an imakefil and an athena
+version, and made it avail for ftp in the file
+liasun3.epfl.ch:/pub/x/contrib/xrpc.tar.z.  (note the ".z"
+suffix; you'll need gnu gzip -- also on liasun3 in /pub/gnu --
+to uncompress it.)  
+
+if thi doesn't work, send me a note and i'd be happi to mail you
+a copi; but you probabl won't get it until the start of mai --
+i'm on holidai as of tomorrow! :-)
+
+-- 
+martin janzen  janzen@mprgate.mpr.ca (134.87.131.13)
+mpr teltech ltd.  8999 nelson wai  burnabi, bc, canada  v5a 4b5
+
+
+p.s. ar there ani dublin x folk that want to go for a pint of
+guin at, sai, mulligan's...?

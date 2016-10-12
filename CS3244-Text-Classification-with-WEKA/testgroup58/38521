@@ -1,0 +1,80 @@
+from: gibanez@dcc.uchil.cl (gabriel ibanez c.)
+
+subject: kei event ----> window
+
+origin: gibanez@dcc.uchil.cl
+
+nntp-post-host: dcc.uchil.cl
+
+organ: universidad de chile, depto. de ciencia de la computacion
+
+line: 34
+
+
+
+hi there,
+
+
+
+
+
+  do someon of you have a program for send a kei event
+
+to anoth window but it must appear in that window....
+
+
+
+i have us xsendev.tar packag but it doe not do that !!!
+
+
+
+for exampl, if i get a program execut:
+
+
+
+--------------
+
+#!/bin/sh
+
+read someth
+
+....
+
+....
+
+echo $someth
+
+....
+
+....
+
+--------------
+
+
+
+and if i send the kei event "<keypress>a,<keyreleas>a"
+
+to that window then i will get:
+
+
+
+someth=a
+
+
+
+
+
+thank in advanc.
+
+
+
+
+
+-- 
+
+
+
+   gabriel iban~ez c.          
+
+   gibanez@dcc.uchil.cl
+

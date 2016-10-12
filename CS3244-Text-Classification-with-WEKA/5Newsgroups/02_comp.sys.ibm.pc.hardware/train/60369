@@ -1,0 +1,64 @@
+from: ivan@iro.umontr.ca (catalin ivan)
+subject: id/esdi coexist
+summari: how to make id and esdi control live togeth???
+keyword: hd, control, id, esdi, disk
+organ: universit de montreal
+line: 57
+
+hello all,
+
+you, the net, ar my last resort, or i'll just chang my job :-)
+thi might be a faq (e.g. mix control) but haven't seen ani.
+
+sy: 486/33, ami bio, and your run-of-the mill multi-i/o card with
+serial/paral/floppi and 
+	- id control "clone" gw2760-ex
+		there ar no jumper affect the hd or ctrller :-( 
+	- quantum prodriv lp (3" 105m type 47: 755cyl, 16hd, 17spt).
+
+pb: i want to bring in thi (2nd hand, neat price):
+	- maxtor xt-b380e (~330m, <15ms, bio type 1, ctrller manag
+		the real geom: 1630cyl, 8hd, 52spt)
+	- western digit wd1007v-se1 esdi ctrller: no floppi.
+		(jumper set irq 14/15, hw port addr 1f0/170,
+		and bio addr cc00/c800, and other floppi/format stuff)
+
+goal: have the wd esdi as a secondari/control and have both disk 
+simultan work. be abl to boot from the esdi too would be 
+a nice bonu but is not expect.
+
+ultim goal: have room for linux et al.
+ex of scheme i have in mind: boot from id (hd or floppi) and mount
+the esdi as root. not boot from esdi, or even from hd, is accept.
+
+i have tri numer (all!!) combin to no avail. thei work alon,
+or can coexist witout hang-up but can't access the esdi or the id, 
+depend on setup/jumper.
+
+us suggest might be:
+- how do i tell the bio setup about two ctrller (i guess the 2nd hd
+is expect to hang off the same ctrller as the 1st).
+- do i need some driver to make it work?
+- --- " --- some new bio/chip for ani of these card?
+- do i have to bui anoth control to make them hd happi? id
+is cheaper; esdi is hard to find and rather costli. i'm not 
+rich or i wouldnt' try to scaveng around, so soft sln ar prefer.
+- adapt of some sort; i can hold a solder iron, and can chang
+a chip or put a jumper!
+
+also us:
+- bb or hot-line of western digit.
+- ftp archiv with relev info.
+- expert store in toronto, ontario area (that would be a miracl! haven't
+seen ani realli knowledg ppl in a while)
+- ani hint into inner work of the system ... 
+- anyth els that help you in similar situat (prayer :-) )
+
+direct or post repli ar ok.
+	mani thank,
+			cat.
+--
+////// /// // / /  /  /   /   /    /     /      /      /        / 
+catalin ivan - email: ivan@iro.umontr.ca - tel:(416) 324.8704
+         human-comput   interact   humain-machin 
+universit de montreal - informatiqu et recherch operationel

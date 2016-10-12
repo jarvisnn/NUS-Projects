@@ -1,0 +1,35 @@
+from: andrew zelenetz <azelenet@bigmac.mskcc.org>
+subject: centri 610 video problem-help
+organ: memori sloan-ketter cancer center
+line: 25
+distribut: world
+nntp-post-host: zelenetz.ski.mskcc.org
+x-userag: nuntiu v1.1.1d20
+x-xxmessag-id: <a7f2f208cf0260ca@zelenetz.ski.mskcc.org>
+x-xxdate: thu, 15 apr 93 16:05:44 gmt
+
+we have recent obtain a centri 610 and it ha develop an unusu
+video problem. 
+
+model:	610 with 8 mb/230 hd, 512k vram, no card
+monitor:	appl 16"
+
+when the comput is set for 256 color and certain oper ar done,
+particularli vertic scroll through a window, horizont white line
+appear on the monitor (which gener but not alwai spare open
+window).  these line accummul as the oper is continu.  if a
+window is move over the involv area of the screen and then move awai
+the line disappear from that area of the screen.  thi problem is not
+observ if the monitor is configur for 16 color or a 14 inch appl
+monitor with 256 color is us. 
+
+i suspect a bad video ram chip but cannot be certain.  the problem ha
+been appar sinc dai 1 but ha gotten wors.
+
+we were wonder if anyon ha seen anyth like thi, and if so, how
+to fix it.  pleas also respond to azelenet@bigmac.mskcc.org.  thank you
+for your help.
+
+andrew zelenetz
+molecular biologi program
+memori sloan-ketter cancer center

@@ -1,0 +1,27 @@
+from: jzawodn@bgsu.edu (jeremi d. zawodni)
+subject: help need in set up ncsa telnet w/ appletalk or phonenet...
+summari: help me....
+organ: bowl green state univ.
+line: 21
+
+
+okai, i'm try to instal ncsa telnet on a coupl (okai, a whole bunch)
+of machin.  thei're all true blue ibm with either fallon phonenet card
+or dastar card.  (i beliv those name ar correct.)  well, the doc for
+telnet sai that it'll run over an appletalk driver, but i've had littl
+success.
+
+if anyon ha succesfulli instal telnet w/ appletalk, i'd like some
+help with the config file for telnet...
+
+btw, pleas repli via e-mail if possibl...
+
+thank,
+
+jeremi
+
+-- 
+jeremi zawodni | comput scienc undergrad | bowl green state univers
+------------------------------------------------------------------------------
+jzawodn@andi.bgsu.edu | student comput consult | *thrill* os/2 2.0 user
+

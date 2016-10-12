@@ -1,0 +1,31 @@
+from: charl p. cox, jr. <cox@snowhit.eeap.cwru.edu>
+subject: call all mac guru
+organ: case western reserv univers
+line: 21
+distribut: world
+nntp-post-host: b61506.student.cwru.edu
+x-userag: nuntiu v1.1.1d17
+x-xxmessag-id: <a7f8ecc4a901f042@b61506.student.cwru.edu>
+x-xxdate: mon, 19 apr 93 04:56:52 gmt
+
+question for those familiar with quadra vram:
+
+i put 2 256k vram simm in my quadra 700 (in the 2 slot closest to the
+ram simm slot) and i got no result whatsoev.  i have been told that
+the built-in video should support at least 16bit and mayb 24bit color on
+a macintosh color displai.  howev, the monitor control panel still
+list 8bit (256 color) as the highest possibl.
+
+doe it make ani differ which slot you put the simm in?
+do you have to do someth to activ them?
+do you have to do someth to the monitor control panel?
+
+btw, i am run system 7.1 with 8 meg of ram.
+
+
+---
+charl p. cox, jr.
+comput engin
+case western reserv univers
+cpc3@po.cwru.edu
+cox@snowhit.eeap.cwru.edu

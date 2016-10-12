@@ -1,0 +1,61 @@
+from: robert.desonia@hal9k.ann-arbor.mi.us (robert desonia) 
+subject: re: i don't understand si
+distribut: world
+organ: hal 9000 bb, w-net hq, ann arbor, michigan, usa
+repli-to: robert.desonia@hal9k.ann-arbor.mi.us (robert desonia) 
+line: 54
+
+mg>joohwe student (neural@iss.nu.sg) wrote:
+mg>> 	i went bui simm recent, and the sale person told me that 
+the
+mg>> ar 9-chip simm and 3-chip simm, and on cannot us them interchan
+mg>> if you us on, you have to us all of the same type.
+
+don't believ everyth you ar told.  i can tell you that mix them 
+between 'bank' ok, and i can't see why mix in on bank is not unless 
+thei ar of differ speed ( e.g. mix of 60ns and 100ns simm in on 
+bank ).  the two onli differ in the type of chip it us.  assum that 
+the simm ar 1mx9 ( 9 bit wide ), here is the two equival 
+configur.  the 3-chip simm us two 4-bit wide 4mbit (1m of 4-bit 
+nibbl ) and on 1-bit wide 1mbit chip ( for a total of 9-bit wide 1mbyte 
+).  the 9-bit simm us nine 1-bit wide 1mbit chip.  these ar equival 
+becaus of the wai that it is 'pin' on the simm board.  at the simm 
+interfac, thei both act as 9-bit wide 1mbyte simm ( 2*4+1=9*1 ).  [sorri 
+if too techi for ya].
+
+
+mg>> 	similarli, on cannot plug in two 1mb simm and on 4mb simm to 
+gi
+mg>> the system a total of 6 meg. why is that so ?? if my system support
+mg>> of 8 meg (it ha 8 simm slot), can i plug in 4 4mb simm to give my
+mg>> 16mb ??
+
+that sound correct.  the problem is that if your comput take 9-bit 
+wide simm, you can not mix differ size in on bank.  why you ask?  
+simpl,  if you understand why there is bank.  assum you have a 32-bit 
+cpu ( 386dx or 486 ), the data bu (e.g. the mechan to retriev data 
+from memori ) is 32-bit wide, so the comput expect to see 32 bit when 
+it ask for data.  to get that bandwidth ( 32-bit wide ), the motherboard 
+link 4 1mx9 ( on bit is not data, but pariti, so i will ignor that in 
+thi simpl explain ) to get 32bit [ (9-1)*4=32 bit ].  that mean 
+that a simm in a bank store onli 1/4 of the 32 bit wide data.  if you 
+have a 16-bit bu, two 1mx9 simm ar link togeth to get 16-bit wide 
+data, which is the reason why 286 bank ar 2 simm wide, and 32-bit bank 
+ar 4 simm wide.  if your comput requir 1mx36 ( e.g. 32-bit wide data 
+with 4 pariti bit, us in some ps/2s and ast ), you could upgrad by 
+on simm at a time.
+
+hope that thi messag is not over your head, but the answer to your 
+question wa not simpl.  i could of just said, 'becaus i said so.'
+
+-rdd    
+
+---
+ . winqwk 2.0b#0 . unregist evalu copi
+ * kmail 2.95d w-net hq, hal9k.ann-arbor.mi.us, +1 313 663 4173 or 3959
+                                                  
+----
+| hal 9000 bb:  qwk-to-usenet gatewai  | four 14400 v.32bi dial-in    |
+| free usenet mail and 200 newsgroup!  | pcboard 14.5am * uupcb * kmail |
+| call +1 313 663 4173 or 663 3959      +--------------------------------+
+| member of eff, asp, asad  * 1500mb disk * serv ann arbor sinc 1988 |

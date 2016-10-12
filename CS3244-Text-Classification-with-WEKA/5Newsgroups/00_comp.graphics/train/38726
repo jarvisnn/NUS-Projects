@@ -1,0 +1,144 @@
+from:  club@spektr.msk.su (koltovoi nikolai alexeevich)
+subject: [new]re:list or imag process system?
+distribut: eunet
+repli-to: club@spektr.msk.su
+organ: moscow scientif industri ass. spectrum
+line: 137
+
+
+       moscow scientif inductri associ "spectrum" offer
+       videoscan vision system for pc/at,wich includ softwar and set of
+       control.
+
+                     softwar
+
+            for support videoscan famili program kit wa develop. kit
+       includ more then 200 differ function for imag process.
+            kit work in the interact regim, and ha includ help for
+       non profession user.
+            there ar next possibl:
+       - input frame by ani board of videoscan famili;
+       - read - white imag to - from disk;
+       - print imag on the printer;
+       - make arithmet with 2 frame;
+       - filter imag;
+       - work with gistogramm;
+       - edit imag.
+       - includ user ex modul.
+
+                     control vs9
+
+       the function of vs-9 control is to load tv-imag into  pc/at.
+       vs-9 control allow on to load a fragment of the tv-frame from
+       a field of 724x600 pixel.
+       the clock rate is 14,7 mhz when load an imag with 512 pixel in
+       the line and 7,4 mhz when load a 256 pixel imag. thi
+       provid the equal pixel size of input imag in both horizont
+       and vertic direct.
+       the number of grai level in ani input mode is 256.
+       video signal captur time - 2.5s.
+
+                     control vs52
+
+       the purpos of the control is to enter the tv imag into a ibm
+       pc at or ani other machin of that type. the control wa
+       creat on the base of modern element, includ user
+       programm gate arrai.
+       the control allow to digit a input signal with differ
+       resolut. it flexibl architectur make possibl to chang
+       technic paramet. instead of tv signal on can process ani
+       other analog signal (includ signal from slow-speed scan
+       devic).
+       the control ha the follow technic characterist:
+       - memori volum - from 256 k to 2 mb ;
+       - resolut when work with standard video signal - from 64x64
+       to 1024x512 pixel ;
+       - resolut when work in slow input regim - up to 2048x1024
+       pixel;
+       - video signal captur time - 40 ms.
+       - maximum size of a screen when memori volum is 2mb - 2048x1024
+       pixel ;
+       - number of grai level - 256 ;
+       - clock rate for input - up to 30 mhz ;
+       - 4 input video multiplex ;
+       - input/output lookup tabl (lut);
+       - possibl to realiz "scroll" and "zoom";
+
+
+
+
+
+
+
+
+
+
+
+
+
+       - 8 line for extern synchron (an input us extern
+       control signal) ;
+       - electron adjust of black and white refer for analog -
+       digit convert;
+       - possibl output imag to the color rgb monitor.
+       on can chang all list abov function and paramet of the
+       control by reprogram it.
+
+
+              imag processor vs100
+
+
+            imag processor vs100 allow to digit and process tv
+       signal in real time. it is possibl digit tv signal with
+       512*512*8 resolut and realiz arithmet and logic oper
+       with two imag.
+            processor wa creat on the base of modern element
+       includ user programm gate arrai and design as a board
+       for pc.
+            memori volum allow write to the 256 frame with 512*512*8
+       format. it is possibl to accumul until 16 imag.
+            the processor ha the follow technic characterist:
+       - memori volum to 64 mb;
+       - number of the grai level - 256;
+       - 4 input video multiplex;
+       - input/output lookup tabl;
+       - electron adjust for black and white adc refer;
+       - imag size from 256*256 to 8192*8192;
+       - possibl color and black / white output;
+       - possibl input from slow-scan video sourc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+from: mar@carrol1.cc.edu (sean tyler mar)
+subject: help: blow the stack
+expir: 29 apr 93 23:00:00 gmt
+organ: carrol colleg-waukesha, wi
+line: 25
+
+
+	hi everyon,
+	i have a question regard my stack on my pc.  i am program 
+in turbo c 3.0 and my program is rather larg (model larg too).  i keep 
+get error that i am run out of memori after a while of run the 
+program. when i compil the program, it sai i have 4.45 meg of ram so 
+i can't seem to explain why it crash.
+
+all it is do is run in a loop while the oper is idl and
+after a while of sit, it will screw up all the variabl. thi lead
+me to believ that my stack is fill up and overflow.  
+
+doe the program take memori up when it is call void function
+that do not return anyth??
+
+	i have been work on thi problem for dai and i would realli
+appreci ani responc.  if thi is not the correct newsgroup, i will
+gladli re-post, but thi is the onli i could find.
+
+thank in advanc,
+sean mar
+email mar@carrol1.cc.edu
+carrol colleg 
+waukesha, wi
+

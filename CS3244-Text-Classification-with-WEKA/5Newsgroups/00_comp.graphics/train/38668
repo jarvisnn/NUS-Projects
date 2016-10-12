@@ -1,0 +1,39 @@
+from: ferdinan@oeinck.waterland.wlink.nl (ferdinand oeinck)
+subject: re: detect doubl point in bezier curv
+organ: my own node in groningen, nl.
+line: 34
+
+renner@adob.com (john renner) write:
+
+> in articl <19930420.090030.915@almaden.ibm.com> capelli@vnet.ibm.com (ron ca
+> >in <ia522b1w165w@oeinck.waterland.wlink.nl> ferdinand oeinck write:
+> >>i'm look for ani inform on detect and/or calcul a doubl
+> >>point and/or cusp in a bezier curv.
+> >
+> >see:
+> >   maureen stone and toni deros,
+> >   "a geometr character of parametr cubic curv",
+> >   acm tog, vol 8, no 3, juli 1989, pp. 147-163.
+> 
+> i've us that refer, and found that i need to go to their
+> origin tech report:
+> 
+> 	maureen stone and toni deros,
+> 	"character cubic bezier curv"
+> 	xerox  edl-88-8, decemb 1988
+> 
+
+first, thank to all who repli to my origin question.
+
+i've implement the idea from the articl abov and i'm veri satisfi
+with the result. i need it for my bezier curv approxim routin.
+in some case (gener offset curv) loop can occur. i now have a
+fast method of detect the gener of a curv with a loop. although
+i did not follow the articl abov strictli. the check if the fourth control
+point li in the the loop area, which is bound by two parabola and
+on ellip is too complic. instead i enlarg the loop-area and
+surround it by for straight line. the check is now simpl and fast and
+my approxim routin never ever output self-intersect bezier curv
+again!
+ferdinand.
+

@@ -1,0 +1,27 @@
+from: dsc3jf@imc10 (john f skoda)
+subject: how do i chang the text cursor in xterm
+organ: {not speak for the } nation naval medic center
+line: 20
+nntp-post-host: imc10.med.navi.mil
+x-newsread: tin [version 1.1 pl8]
+
+
+ i have just finish build x11r5 on a 386 run interact unix (sysvr3)
+and i am have a problem with xterm.  on ani font larger that 5x7 it mess up
+charact that ar type, the cursor seem to be "too" larg, or split into
+a 1/2 revers video, 1/2 outlin block (which chang when the pointer is move
+into the window).  i am try to us monospac font (not -p- font).  is
+there ani wai of chang the appear of the block cursor is an xterm?
+
+ thank
+    
+
+--
+------------------------------------------------------------------------------
+-- john f skoda                            | window nt, os/2 for the 90's. 
+-- electron learn facilit, inc.  | c++, cobol for the 21st centuri.
+-- bethesda, md                            | us ada, unix, and other social
+-- dsc3jf@imc10.med.navi.mil		   | unaccept system. 
+-- dsc3jf@imc30.med.navi.mil              | (and befor you flame, i'm an
+-------------------------------------------| expo fan... ...need i sai more?)
+with disclaim_packag;

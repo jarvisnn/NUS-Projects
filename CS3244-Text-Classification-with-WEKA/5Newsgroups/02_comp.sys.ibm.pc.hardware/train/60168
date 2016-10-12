@@ -1,0 +1,15 @@
+from: phill@dnbf01.bram.cdx.mot.com (phil longstaff)
+subject: want: chipset info
+nntp-post-host: ws13.bram.cdx.mot.com
+repli-to: phill@dnbf01.bram.cdx.mot.com (phil longstaff)
+organ: motorola codex, mississauga, ontario
+line: 8
+
+i have a 286 with an m205 motherboard.  the last byte memori manag (which
+i download for a trial) report the chipset is an addtech pcchip1 chipset,
+and it is abl to activ the ram behind segment a000-ffff, which can then be
+us for umb (except for video/bio).  i would like to write my own driver to
+activ the memori.  doe anyon know where i can get program inform
+on thi chip?
+
+phil

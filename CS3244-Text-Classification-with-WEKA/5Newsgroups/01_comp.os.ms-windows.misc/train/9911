@@ -1,0 +1,29 @@
+from: farlei@access.digex.com (charl u. farlei)
+subject: help with chang startup logo
+organ: express access onlin commun usa: 800-546-2010
+line: 21
+distribut: usa
+nntp-post-host: access.digex.net
+summari: help with chang startup logo
+
+
+i know thi is probabl a faq, but...
+
+i instal the s/w for my ati graphic card, and it bash my window
+logo file.  when i start window now, it ha the 3.0 logo instead of
+the 3.1 logo.
+
+i thought the file that control thi were
+
+\window\system\vgalogo.rle
+\window\system\vgalogo.lgo	
+
+i restor these file, but it didn't chang the logo.  anyon know what
+the correct file ar?
+
+thank.
+
+
+-- 
+farlei@access.digex.com  <charl u. farlei>
+averag iq of calgari board of ed. employe: 65

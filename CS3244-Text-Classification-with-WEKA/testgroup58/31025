@@ -1,0 +1,68 @@
+from: relova@unixg.ubc.ca (michael a relova)
+
+subject: re: winfax file in ascii format?
+
+organ: the univers of british columbia
+
+line: 28
+
+nntp-post-host: unixg.ubc.ca
+
+
+
+in <zhao.93mai14123957@sparta.nmsu.edu> zhao@nmsu.edu (z. zhao) write:
+
+
+
+
+
+>current, we ar us winfax softwar to receiv/send fax on our
+
+>pc. it work pretti well. the problem is that all receiv file ar
+
+>in bit map format, which take lot of hd space. i have been told there
+
+>is some program that can do pattern recognit of the raster
+
+>                             ^^^^^^^^^^^^^^^^^^^
+
+>charact in fax-in file and translat them into ascii code, then
+
+>store the file in ascii format.
+
+
+
+>would you like to tell me
+
+>	(1) whether or not there is such softwar packag to do such
+
+> 	    translat? 
+
+>	(2) if there is on, where can i find it?
+
+>	(3) is ani such softwar packag on public domain?
+
+
+
+what version of winfax do you have?  the newest version (3.0) ha an ocr
+
+(optic charact recognit) built in... what thi mean is that it can
+
+take a fax (ie, a letter) and convert it into ascii so that on can edit
+
+the document w/o re-type it... howev, i found that the ocr that come
+
+packag with winfax doe not work as well as omnipag profession (also
+
+by delrina softwar)... so, onc again, winfax ver. 3.0 ha what you ar
+
+look for... good luck!
+
+
+
+>regard,
+
+
+
+>zizi
+

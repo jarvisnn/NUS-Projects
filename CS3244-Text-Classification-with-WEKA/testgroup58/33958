@@ -1,0 +1,66 @@
+from: ashok@biochemistri.cwru.edu (ashok aiyar)
+
+subject: re: telnet termin for window ???
+
+organ: cwru school of medicin
+
+line: 26
+
+nntp-post-host: axa12-slip.dialin.cwru.edu
+
+keyword: tcp ip telnet ftp
+
+
+
+in articl <1993apr30.211839.21296@leland.stanford.edu> kock@chemistri.stanford.edu (peter kock) write:
+
+
+
+>i'm look for a good termin program that will connect to
+
+>tcp/ip us window. some basic ms-window that is connect to
+
+>a unix host would be great.
+
+
+
+>ani suggest?
+
+
+
+take a look at winqvt/net -- the latest version is qvt/net 3.4
+
+it come in version that ar direct to packet driver, as well as a pc nf 
+
+version.
+
+
+
+it is price quit low; registr = $40, student registr = $20, and is 
+
+a nice packag -- come complet with vt220 termin emul, ftp, pop3 
+
+client, lpr, and nntp client.
+
+
+
+you can ftp it from "biochemistri.bioc.cwru.edu" /pub/qvtnet/qvtnet34.zip
+
+
+
+it wa also upload to ftp.cica.indiana.edu recent.
+
+
+
+ashok
+
+
+
+--
+
+ashok aiyar                        mail: ashok@biochemistri.cwru.edu
+
+depart of biochemistri                       tel: (216) 368-3300
+
+cwru school of medicin, cleveland, ohio         fax: (216) 368-4544
+

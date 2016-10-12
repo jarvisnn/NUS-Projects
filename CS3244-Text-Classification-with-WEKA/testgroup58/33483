@@ -1,0 +1,56 @@
+from: envbv@epb11.lbl.gov (brian v. smith)
+
+subject: re: xfig 2.1pl7 on hp-ux 9.01?
+
+organ: lbl
+
+line: 21
+
+distribut: world
+
+nntp-post-host: 128.3.12.123
+
+
+
+in articl <1sp51c$8t3@elroi.jpl.nasa.gov>, urban@sideshow (michael p urban) write:
+
+|> i have compil xfig 2.1 patchlevel 7 with hp's x11r5 from hp-ux 9.01,
+
+|> augment by the athena and mu librari from an x11r5 distribut
+
+|> from iwork.ecn.uiowa.edu.  it compil nice (although for on file
+
+|> the preprocessor macro definit tabl size need to be increas).
+
+|> but when execut, noth happen at all except for ever-grow
+
+|> memori requir (eventu climax in a core dump).  the binari
+
+|> of the ident program, compil on 8.07 with x11r4, ha no
+
+|> problem.  other program like xtpanel compil, link, and run just
+
+|> fine with the same librari.
+
+|> 
+
+|> doe thi sound familiar, or am i go to have to figur thi on out
+
+|> on my own...?
+
+
+
+pleas see the post i made yesterdai (mai 10) which fix the problem.
+
+thi wa post to comp.window.x.app.
+
+
+
+-- 
+
+brian v. smith    (bvsmith@lbl.gov)
+
+lawrenc berkelei laboratori
+
+i don't speak for lbl; thei don't pai me enough for that.
+

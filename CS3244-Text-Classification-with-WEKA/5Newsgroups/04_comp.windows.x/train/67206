@@ -1,0 +1,46 @@
+from: drand@spinner.osf.org (dougla s. rand)
+subject: re: write a motif widget
+in-repli-to: nichola@ibmpcug.co.uk's messag of thu, 22 apr 1993 17:17:40 gmt
+organ: open softwar foundat
+line: 40
+
+in articl <c5wapj.dd7@ibmpcug.co.uk> nichola@ibmpcug.co.uk (nichola young) write:
+
+   i need (probabl) to write on or more new motif widget on the hp-ux
+   platform. do i need the motif privat header file and sourc,
+   or can i make do with the public header that ar provid?
+   "motif" includ xt in thi context.
+
+ye.  you'll find it almost imposs without the sourc
+at thi point.  it doe depend on how ambiti you ar and
+how concern you ar about complianc with the gener
+interfac and item like travers.
+
+   on widget is a multi-column list (which lot of peopl have
+   alreadi written, i am sure), and would therefor be probabl be
+   a subclass of list rather than someth simpl like an xt class.
+   is thi more difficult (in principl, not line of code)?
+
+i'm not sure what you're ask.  you could creat someth
+which is veri much like a true multi-column list by place
+sever list within a geometri manag,  and put that
+manag within an automat scroll window.  thi wouldn't
+be good for veri larg list,  but you might consid thi
+as an altern.
+
+   altern, if anyon ha a multi-column list widget thei
+   could sell me, thi might save me from have to write on!
+   doe it by ani chanc exist in motif 1.2 alreadi (i do not
+   yet have the spec)?
+
+motif 1.2 doe not have a multi-column list in it.  have you
+look at commerci set?  there ar also some pd 
+widget set,  on of these might have a multi-column list
+you could port.
+
+
+--
+dougla s. rand <drand@osf.org>		osf/motif dev.
+snail:         11 cambridg center,  cambridg,  ma  02142
+disclaim:    i don't know if osf agre with me... let's vote on it.
+amateur radio: kc1kj

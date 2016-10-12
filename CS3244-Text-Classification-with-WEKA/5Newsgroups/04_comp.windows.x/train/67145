@@ -1,0 +1,22 @@
+from: rank@winf.uni-passau.de (christian rank)
+subject: xsun not run on sparcclass
+organ: lehrstuhl fuer wirtschaftsinformatik - universitaet passau
+line: 15
+distribut: world
+nntp-post-host: jupit.winf.uni-passau.de
+
+i've instal x11r5 with patch for solari 2.1 on our sparcstat lx /
+sparcclass pool. on the lx, x11r5 run fine, but on the classic,
+after give the command startx, xsun print the follow messag:
+	warn: cg3_mmap: can't map dummi space!
+	map cg3c: no such devic or address
+and exit.
+
+doe anybodi know how to fix thi problem?
+
+thank in advanc.
+
+---
+christian rank
+lehrstuhl fuer wirtschaftsinformatik * universitaet passau *
+innstr. 29 * d-8390 passau

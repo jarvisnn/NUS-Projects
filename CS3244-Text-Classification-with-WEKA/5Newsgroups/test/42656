@@ -1,0 +1,146 @@
+from: buzz@appl.com (steve bolling)
+
+subject: re: stereo sound problem (?) on mac game
+
+organ: appl comput, inc.
+
+line: 68
+
+
+
+in articl <ingemar.735296165@isi> ingemar ragnemalm, ingemar@isi.liu.se
+
+write:
+
+>>enter game develop. the sound driver and current sound manag ar
+
+>>inconveni lame for make game.
+
+>
+
+>the sound driver is pretti ok, sinc it's fast. sound manag us by the
+
+>book is *useless*. dispos of sound channel as soon as sound ha
+
+complet
+
+>is out of the question for game with smooth anim. (it's too slow.)
+
+
+
+why would you dispos a channel if you ar go to plai more
+
+sound soon? if you ar try to write a game, you shouldn't
+
+be us sndplai. instead, make a channel and us buffercmd
+
+to plai sound on it. it work great. you can add callback to
+
+the channel also to let you know when the channel is get
+
+empti. befor it get empti.
+
+
+
+>
+
+>the sound driver is so much snappier than sound manag. unfortun,
+
+>system 7 support it poorli, make program crash occasion.
+
+>
+
+>>the moral of the stori is to develop: don't cheat!
+
+>
+
+>well, i want my code to work on old system too. i don't know about sy
+
+7.1,
+
+>but at least on 6.0.7, there ar bug in the sound manag that caus
+
+>channel to hang (with no error messag). thi happend when i keep a
+
+>channel open for long period - necessari for perform - and plai mani
+
+>sound, stop sound halfwai. callback seem not to be reliabl.
+
+>then onli wai i can safe tell if a sound ha stop plai is to
+
+>inspect privat variabl in the channel (qhead, i think it wa), and the
+
+>onli wai i have found to tell if a channel is hung is to inspect an
+
+>*undocu* flag and modifi it.
+
+
+
+callback ar veri reliabl, i found them 100% reliabl, even
+
+under system 4.1. i wa do continu background sound with
+
+interrupt sound effect on system 6.0 with the im-v
+
+document.
+
+
+
+you probabl were cancel your callback command out of
+
+your channel, of cours you didn't get call. in gener, if
+
+you have problem with sound work when you plai on per
+
+channel and then close the channel (with the relat
+
+slowdown), but then when you plai more than on you don't
+
+work, then you ar ad more than on synthes to a
+
+channel, possibl the same on multipl time. thi might be
+
+becaus you ar call sndplai on a preexist channel with
+
+a sound resourc which add the sampl sound synthes to
+
+the channel first thing befor it plai. most sampl sound
+
+have thi command at the start of them. you need to resedit
+
+the sound and remov that command, then when you creat your
+
+channel, specifi the sampl sound synthes to be the
+
+channel's synth. then you can us asynch sndplai's all you
+
+want. you'll probabl want to switch to buffercmd's, sinc you
+
+ar go to have to us snddocommand anywai to add callback.
+
+
+
+now befor you go ahead and tell me i am full of it, and the
+
+sound manag doesn't work for game, rememb, spectr us
+
+it. and it work great. if spectr can spare the cpu time, you
+
+can too.
+
+
+
+on littl disclaim: there ar some out there who sai the
+
+sound manag in the iisi can't be made to work right. i'm not
+
+sure either wai, but i know for sure that you can make your
+
+sound work 100% correctli on everi other machin us the
+
+sound manag.
+
+
+
+-steve
+

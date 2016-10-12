@@ -1,0 +1,26 @@
+from: jbulf@balsa.berkelei.edu (jeff bulf)
+subject: re: detect doubl point in bezier curv
+repli-to: jbulf@balsa.berkelei.edu (jeff bulf)
+organ: kubota pacif comput inc.
+line: 20
+
+in articl <ia522b1w165w@oeinck.waterland.wlink.nl>, ferdinan@oeinck.waterland.wlink.nl (ferdinand oeinck) write:
+|> i'm look for ani inform on detect and/or calcul a doubl
+|> point and/or cusp in a bezier curv.
+|> 
+|> an algorithm, literatur refer or mail about thi is veri appreci,
+
+there wa a veri us articl in on of the 1989 issu of
+transact on graphic. i believ maureen stone wa on of
+the author. sorri not to be more specif. i don't have the
+refer here with me.
+
+the articl actual wa more gener than thi, give a wai to decid
+whether a given (cubic) bezier curv contain cusp, intersect point
+or whatev wierd. the same treatment is also avail in siggraph 89
+cours note for the cours call "math for siggraph" or someth like
+that.
+
+-- 
+	dr memori
+	jbulf@kpc.com

@@ -1,0 +1,34 @@
+from: rlee@ssdc.ssdc.sterl.com (richard lee)
+subject: re: pulldown menu period hang applic on openwindow 3.0
+organ: sterl softwar imd. (vienna,va)
+line: 26
+distribut: inet
+nntp-post-host: ssdc.ssdc.sterl.com
+x-newsread: tin [version 1.1 pl6]
+
+skip koppenhav (skip@eco.twg.com) wrote:
+: 
+: ha anyon found a fix for the follow problem?
+: 
+: client softwar:	suno 4.1.1, x11r5
+: server hardwar:	sun ipc
+: server softwar:	suno 4.1.1, open window 3.0 (w/ patch 100444-37)
+: 
+: a motif 1.2.2 applic will period hang when run against the
+: openwindow 3.0 server (xnew). the pulldown is displai but then no
+: button action have ani effect. sometim press <return> will
+: unstick the applic but not usual. it look like the pulldown is
+: grab the focu and never let go. other window on the displai
+: continu to get updat so the server isn't hang. if i log in from
+: anoth termin and kill the motif applic then everyth get
+: back to normal. the same applic when run against other x server
+: (includ mit x11r5 xsun, decwindow, tektronix x termin) ha no
+: problem. thi is obvious a openwindow problem but i need a
+: work-around sinc most of our custom ar openwindow user.
+
+i have seen the same problem us a sparcstat 10, solari 2.1, ow 3.1.
+in my case, it happen far more often than "period".
+
+help?
+
+

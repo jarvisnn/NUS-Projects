@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+ 
+{% load bscttags %}
+
+{% block BSCT_CONTENT %}
+<h2> Create Product </h2>
+
+<form 
+    action  = ''
+    method  = 'post' 
+    class   = 'form-inline' 
+    enctype = 'multipart/form-data' 
+>
+
+    {% csrf_token %}
+
+<div class="well">
+        <p><label for="id_name">Name:</label> <input id="id_name" maxlength="200" name="name" type="text"></p>
+        <p><label for="id_category">Category:</label>
+            <select id="id_category" name="category">
+                {% for category in categories %}
+                    <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <p><label for="id_description">Description:</label> <textarea cols="40" id="id_description" name="description" rows="10"></textarea></p>
+        <p><label for="id_company">Company:</label> <input id="id_company" maxlength="200" name="company" type="text"></p>
+        <p><label for="id_quality">Condition:</label> <input id="id_quality" maxlength="200" name="quality" type="text"></p>
+        <p><label for="id_country">Country:</label> <input id="id_country" maxlength="200" name="country" type="text"></p>
+        <p><label for="id_price">Price:</label> <input id="id_price" name="price" type="number"></p>
+    </div>
+    <div class='actions'>
+        {% block BSCT_FORM_ACTIONS %}
+        <input
+            value = 'Save'
+            type  = 'submit' 
+            class = 'btn btn-success' 
+        />
+
+        {% if form.instance.get_list_url %}
+            <a 
+                class = 'btn'
+                href  = '{{form.instance.get_list_url}}'
+            >
+                Back
+            </a>
+        {% endif %}
+        {% endblock %}
+    </div>
+
+</form>
+
+{% endblock %}

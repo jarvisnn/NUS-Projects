@@ -1,0 +1,51 @@
+from: ebosco@us.oracl.com (eric bosco)
+subject: window 3.1 keep crash: pleas help
+nntp-post-host: monica.us.oracl.com
+repli-to: ebosco@us.oracl.com
+organ: oracl corp., redwood shore ca
+x-disclaim: thi messag wa written by an unauthent user
+              at oracl corpor.  the opinion express ar those
+              of the user and not necessarili those of oracl.
+line: 41
+
+
+as the subject sai, window 3.1 keep crash (givinh me gpf) on me of  
+late.  it wa never a veri stabl packag, but now it seem to crash everi  
+dai.  the worst part about it is that it doe not crash consist: ie i  
+can't reproduc crash, and thei ar not alwai gpf's in the same  
+applic. sometim i can recov by simpli close the applic  
+that caus an error, but other time, window act veri strang, and i  
+need to re-boot.
+
+some background:  i have a lead edg 486sx25 with phoenix bio.  when i  
+first got it it had 4mg of memori.  it ran window fine (not too mani  
+gpf's).  then, a coupl of weekend ago, i instal lotu 123 for window  
+(with atm), a game card and an addit 4  1mg simm.  the lead edg  
+machin is kind of strang, in that it ha the id control built into  
+the motherboard, the cpu is actual on a sparat board that plug into  
+the motherboard and the simm it us ar macintosh simm! appar i  
+wa told that the lead edg had the pariti bit built into the mother  
+board.  the origin 4mg 80ns simm where of the 2 chip varieti from  
+samsung, and the on i instal ar 8 chip simm. thei ar recogn  
+fine by the bio ram check. the game card is a gener $20 gamecard.
+
+the reason why i mention the hardwar like thi is that sometim  
+reboot the machin us the reset button or ctl-alt-del still leav  
+the machin kind of flaki, but turn it on and off doesn't. 
+
+i haven't tri take out the ram or the game card, becaus as i said  
+these gpf ar not reproduc at will.  i have gone through and entir  
+dai us the comput with no problem and then i might get 5 or so gpf's  
+in the sppace of 20 minut?
+
+what can i do.  thi situat is most annoi... ar there ani good  
+diagnost tool for hardwar? do you think that thi might be a softwar  
+problem (ie emm386 etc.)? if it help, i have manag to get gpf's on after  
+dark, quicken, paint shop pro. a lot of them have been in user.ex or  
+gdi.ex.
+
+ani help is truli appreci.....
+
+-eric
+
+ebosco@us.oracl.com

@@ -1,0 +1,19 @@
+from: klee@synopt.com (ken lee)
+subject: re: dec pixmap size
+repli-to: klee@synopt.com
+organ: synopt commun, santa clara ca
+line: 12
+nntp-post-host: bugsbunni.synopt.com
+
+in articl 1964@igd.fhg.de, haas@igd.fhg.de (helmut haas (goebel)) write:
+>if i try to creat a pixmap larger than the size of my screen the program
+>will termin displai the messag:
+>
+>x error:  badalloc - insuffici resourc
+
+mani x server support graphic acceler do not allow the creation
+of pixmap exeed the size of the screen.  on workaround is to creat
+sever smaller pixmap and add the result.
+
+---
+ken lee, klee@synopt.com

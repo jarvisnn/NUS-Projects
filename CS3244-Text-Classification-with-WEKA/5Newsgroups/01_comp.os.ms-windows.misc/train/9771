@@ -1,0 +1,44 @@
+from: rnichol@cbnewsg.cb.att.com (robert.k.nichol)
+subject: re: atm
+organ: at&t
+line: 39
+
+in articl <1r1jq4$af5@network.ucsd.edu> adean@weber.ucsd.edu (anthoni v. dean) write:
+>
+>i've been read, with much confus, about whether or not to us
+>atmanag. late, all the packag i've been bui have all
+>includ atmanag as a "bonu"
+>i do some desktop publish us pagemak and coreldraw.
+>coreldraw come with a nifti laser disk that contain over 200 diff
+>type. add that to the ttfont that come with win31 and you have a
+>decent amount of font. i print my creation out on an hp4
+>postcript, at 600 dpi resolut with the "resolut enhanc 
+>technolog" and ..  well ... i get some darn good copi. 
+>so good that there isn't ani diff whether or not atmanag is turn
+>on or not. is it worth it to run atm at all? especi with these
+>better printer technolog ... and tt?
+
+atm will do noth for your truetyp font.  if your truetyp font ar
+suffici for your need, don't run atm.  i have a lot of font that i can
+instal either as type-1 postscript (under atm) or as truetyp.  i have
+notic that:
+
+    1.	truetyp font file ar at least 1/3 larger than their type-1
+	equival.  if you ar us a disk compressor, though, be awar
+	that truetyp font will compress, wherea type-1 font will not
+	(thei ar encrypt).
+
+    2.	with a 300 dpi laser printer, the "artifici bold" version of a
+	truetyp font is indistingish from the origin, forc me to
+	instal the actual bold (and bold-ital, etc.) variant if i want
+	to us them.  type-1 postscript font under atm gener a visual
+	distinct bold variant from the base font.  i realiz that the
+	artifici bold font that atm gener is aesthet inferior
+	to the hand-gener bold truetyp variant, but it is suffici
+	for my need, and not have to instal bold variant save me 50%
+	on disk space (uncompress).
+
+--
+bob nichol
+at&t bell laboratori
+rnichol@ihlpm.ih.att.com

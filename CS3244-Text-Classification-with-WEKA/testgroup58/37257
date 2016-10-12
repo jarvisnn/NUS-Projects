@@ -1,0 +1,82 @@
+subject: re: povrai : tga -> rle
+
+from: craig.humphrei@comp.vuw.ac.nz (craig andrew humphrei)
+
+repli-to: chumphr@comp.vuw.ac.nz
+
+distribut: world
+
+organ: victoria univers of wellington. new zealand
+
+nntp-post-host: depot.comp.vuw.ac.nz
+
+line: 33
+
+
+
+
+
+in articl <ltqp28innpa7@pageboi.cs.utexa.edu>, jhpark@cs.utexa.edu (jihun park) write:
+
+>hello,
+
+>i have some problem in convert tga file(gener by povrai) to
+
+>rle file. when i convert, i do not get ani warn messag. but
+
+>if i us xloadimag/getx11, someth is wrong.
+
+
+
+[edit]
+
+
+
+>i know that i need to instal ppmtorl and tgatoppm, but i do not spend
+
+>time to instal them. even i do not want to gener .rgb from povrai
+
+>and then convert them to rle, if possibl.(.rgb to rle work, but
+
+>it will mess up my directori with so mani file, and it need 2 more
+
+>step to final convert to rle file. sai cat | rawtorl | rleflip )
+
+>doe ani bodi out there have same experi/problem ?
+
+
+
+
+
+well for starter, why us rle file?  you might have a specif program that
+
+need them, ok, but i tend to convert straight to jpeg format, thu a 2.4meg
+
+24bit targa file becom a ~80k or less 24bit jpeg.
+
+
+
+the latest version of xv (2.2.1 ?) and xloadimag (3.03) both handl jpeg file.
+
+and the best wai to convert to jpeg is with the c/djpeg suit.  even at 90%
+
+qualiti (you can't see the differ) the jpeg is wai smaller than anyth
+
+els even an 8bit gif!
+
+
+
+later'ish
+
+craig
+
+-- 
+
+    |\/\/\/\/\/| "i didn't do it, nobodi saw me do it, 
+
+    | ___  ___ |  you can't prove anyth."          
+
+    |/   \/   \|   craig.humphrei@stargat.actrix.gen.nz
+
+__ccc_c_#_|__#_ccc_c____chumphr@comp.vuw.ac.nz______________________________
+

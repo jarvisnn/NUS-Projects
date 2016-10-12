@@ -1,0 +1,59 @@
+from: ralph@spss.com (ralph brendler)
+subject: re: us microsoft foundat class with borland c++ 3.1
+organ: spss, inc.
+distribut: usa
+line: 53
+
+in articl <1qv1rc$fcp@new.cs.tu-berlin.de>, make@cs.tu-berlin.de (m. kerkhoff) write:
+> hi all,
+> 
+> ha anybodi tri to compil ctrltest from the mfc/sampl directori,
+> after compil the mfc-lib with bwc ?
+> 
+> seem to me, that bwc isn't abl to distinguish pointer to overload
+> function.
+> for exampl, imagin the follow 2 (overload) function:
+> void same_name ( void ) 
+> void same_name ( int )
+>  
+> after try the whole dai, i think, with bwc it imposs to take the
+> adress of on of the abov two function and assign it to a properli defin
+> function pointer. 
+> am i right ? ha anybodi els had thi problem ?
+> 
+> 	thanx
+
+i think you mai be chase the wrong problem.  i don't think it is the
+function overload at all-- i do that sort of thing all of the time
+in bc++ without a hitch.  the big problem i have encount in
+port mfc to bc++ is that fact that mfc _depend_ on a coupl of
+invalid c++ assumpt.
+
+i have never gotten the _entir_ ctrltest app to run under bc++, but
+the reason is that ms make some bad assumpt about the order in
+which static/global object ar initi (i.e. some object ar
+get access befor thei ar initi).  the problem is in the
+owner-draw menu code somewher-- if you comment out that section, all
+other piec of ctrltest work fine.
+
+two other major gotcha i have found us mfc under bc++:
+
+- the cfile::openflag enum us hard-code number for the open mode,
+  rather than the manifest constant defin in fcntrl.h (which differ
+  between msc and bc).
+
+- all of the mfc collect class depend on anoth bad c++
+  assumpt-- that a refer to a base object can us be in place
+  of a refer to a deriv object (true for pointer, not for
+  refer).
+
+i am sure there ar other problem along the same line, but i have
+not encount them (yet).  i have not seen mfc 2.0 yet, but i hope
+that some of these will be address.  if thei ar not, all of ms's
+hype about portabl to other vendor's compil will be just that.
+
+-- 
+      if these were my employ's opinion, i wouldn't be post them.
+###############################################################################
+  "whoever said noth last forev wa obvious  # r. brendler
+   not a cub fan..." - mike royko                   # spss, inc. - chicago il

@@ -1,0 +1,43 @@
+from: rajiev@cfmu.eurocontrol.be (rajiev gupta)
+subject: re: question about window nt.  help!
+nntp-post-host: shelduck
+organ: eurocontrol - central flow manag unit
+keyword: window nt, unix, sun sparc
+line: 36
+
+in articl <c562cq.fc7@ms.uki.edu> shan@ms.uki.edu (minghua shan) write:
+>
+>i don't know much about window nt, but i've alwai thought
+>that win nt would run onli on intel 386/486 compat system.
+>we ar set up a network which includ a sun sparc server 4/490
+>and about a dozen pc's. some peopl suggest that we run window nt
+>on the sun sparc server 4/490 replac the current os (suno).
+>i don't know whether thi is possibl and whether thi would do us ani
+>good. i would appreci ani help on answer a few question below.
+>
+>1. doe window nt run on sun sparc server 490?
+>2. if the answer to question 1 is ye, doe it run unix applic
+>   (such as sa for unix).
+>3. is window nt a multius os?
+>4. when will window nt be releas?
+>5. is there ani telephon number that i can call and get more
+>   info on win nt?
+>
+>thank you.
+>
+>minghua shan
+
+as far as i have read win nt will be support on intel, dec alpha and the mip r4000
+seri of processor onli. i do rememb though read a rumour about sparc support
+sometim in the futur. i am not sure what you mean by run "unix applic".
+you would have to have sa for win nt (or mayb sa for win16 etc). i have read 
+that ms will anounc avala of win nt by end of mai 93 (comdex spring). hope
+thi help.
+
+rajiev gupta
+
+-- 
+rajiev gupta			eurocontrol - cfmu	disclaim:
+rajiev@cfmu.eurocontrol.be	rue de la loi 72	these ar *my* view,
+tel: +32 2 729 33 12            b-1040 bruxel	not my compani.
+fax: +32 2 729 32 16            belgium

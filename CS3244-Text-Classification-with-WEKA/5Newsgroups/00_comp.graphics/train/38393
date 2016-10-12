@@ -1,0 +1,17 @@
+from: osprei@ux4.cso.uiuc.edu (luca adamski)
+subject: re: fast polygon routin need
+keyword: polygon, need
+organ: univers of illinoi at urbana-champaign
+line: 11
+
+in articl <1993apr17.192947.11230@sophia.smith.edu> orourk@sophia.smith.edu (joseph o'rourk) write:
+>in articl <c5n3x0.b5l@new.cso.uiuc.edu> osprei@ux4.cso.uiuc.edu (luca adamski) write:
+>>thi mai be a fairli routin request on here, but i'm look for a fast
+>>polygon routin to be us in a 3d game.
+>
+>	a fast polygon routin to do what?
+
+to draw polygon of cours.  it a vga mode 13h (320x200) game, done in c and
+asm.  i need a faster wai to draw concav polygon that the method i have right
+now, which is veri slow.
+	 //luca.

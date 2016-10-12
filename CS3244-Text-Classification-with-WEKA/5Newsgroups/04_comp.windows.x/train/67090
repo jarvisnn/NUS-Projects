@@ -1,0 +1,25 @@
+from: hgn@pmw1.nuclint.nl (han geurtsen)
+subject: cursor
+organ: the internet
+line: 19
+to: motif@alfalfa.com, xpert@expo.lc.mit.edu
+
+accord to the osf/motif style guid, on should us cursor shape to give
+the user a visual clue of what is happen or what is expect of him. so
+a "hourglass" cursor should be shown when the applic is busi, or a
+"caution" cursor should be shown over an area when input is expect in
+anoth. defin cursor for widget ha to be done at rather low level.
+so defin a cursor for all widget in an applic but not for a certain
+subpart of it, is a rather complic matter. when cursor have been defin
+for some window, e.g. a "crosswir" cursor for a drawingarea, thing get even
+more complic. my intuit sai that thing should be easier, but is thi
+so? if anyon ha a solid and complet solut to my problem, pleas let me
+know. the topic on "busi cursor" in the sever faq's ar not help, sinc
+thei onli work for applic where all window have the cursor window
+attribut set to 'none'.
+-----------------------------------------------------------------
+han geurtsen                       phone: (31) (0) 8385 - 33157
+nucletron research bv.             e-mail: hgn@nuclint.nl
+                                  surfac: waardgeld 1
+                                           nl-3905 th  veenenda
+

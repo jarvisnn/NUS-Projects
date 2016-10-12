@@ -1,0 +1,82 @@
+from: dmsilev@athena.mit.edu (daniel m silevitch)
+
+subject: re: word for window problem
+
+organ: massachusett institut of technolog
+
+line: 34
+
+distribut: world
+
+nntp-post-host: w20-575-40.mit.edu
+
+
+
+in articl <1993mai16.043242.1973@lugb.latrob.edu.au>, cleev@lucif.latrob.edu.au (jason cleev) write:
+
+|> in try to us the equat editor in word for window 2.0 i get
+
+|> a coupl of error messag along the line of:
+
+|> 
+
+|> >can't find font mt extra for default printer. some charact my not be
+
+|> >displai or print.try instal equat editor again or reinstal a 
+
+|> >new printer.
+
+|> 
+
+|> similar for the font fenc.
+
+|> 
+
+|> i know i have these font on my system but ar unabl to us them.
+
+|> i have tri both of these solut to no avail.
+
+|> 
+
+|> if anyon ha had similar problem and ha found a wai to fix thi, could 
+
+|> thei let me know. it is urgent requir !!
+
+|> 
+
+|> thank ,
+
+|> 
+
+
+
+it's back!!!!!!
+
+
+
+congratul, you've just discov a veri nasti, and veri frequent
+
+ecount, bug in the word setup program. onc you know what is wrong, it
+
+is quit easi to fix. go into the font dialog under control panel, and select
+
+the two font mt extra and fenc. delet them, but onli delet the list
+
+entri, not the disk file. now select add, and add the font mt extra plain
+
+and fenc plain. close the font box, close control panel, and restart word.
+
+everyth should be alright now.
+
+
+
+doe anyon know if microsoft ha fix thi thing yet? thei have to know
+
+about it by now, it's been so frequent report.
+
+
+
+daniel silevitch                                dmsilev@athena.mit.edu
+
+massachusett institut of technolog
+

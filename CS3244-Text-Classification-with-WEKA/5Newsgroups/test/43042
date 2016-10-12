@@ -1,0 +1,208 @@
+from: wilfr.hansen@cs.cmu.edu
+
+subject: aix3.2 version of andrew 5.1
+
+organ: carnegi mellon, pittsburgh, pa
+
+line: 97
+
+nntp-post-host: enterpoop.mit.edu
+
+to: xannounc@expo.lc.mit.edu
+
+
+
+                          the andrew consortium
+
+          of the school of comput scienc at carnegi mellon 
+
+                         is pleas to announc
+
+
+
+                          aui 5.1.1 for aix3.2
+
+                                 4/26/93
+
+
+
+the andrew user interfac system version 5.1 (our cdrom version) wa
+
+develop for aix  version 3.1 on the ibm rs/6000 and mani other
+
+platform.  to accomod aix version 3.2, we have creat a patch to
+
+the sourc.  the patch and accompani instruct for it
+
+applic can be retriev at no charg via anonym-ftp from the
+
+internet host emsworth.andrew.cmu.edu (128.2.45.40) in the directori
+
+./aixpatch.  for those without internet access, a 3.5" diskett can be
+
+order for $10 by send, or fax, a purchas order to the address
+
+below. 
+
+
+
+the base 5.1 system can be order from us as a cdrom or ftp'ed from the
+
+same host.
+
+
+
+note that thi patch add no addit function but simpli allow
+
+aui to compil under aix3.2.
+
+
+
+-----------
+
+
+
+the andrew user interfac system (aui) is a comprehens environ
+
+on top of x11 window in which you can creat, us, and mail multi-media
+
+applic and document.   a major advantag of aui is the
+
+capabl to recurs emb object.  thu, on can edit text that
+
+not onli contain multipl font, indent, and other typographi, but
+
+also  contain embed raster imag, spreadsheet, draw editor,
+
+equat, simpl anim, and so on. these embed object can
+
+themselv contain other object, includ text.
+
+
+
+aui ha three compon:
+
+
+
+    the andrew user environ is an integr and extens set
+
+    of applic begin with the ez text editor, a help
+
+    system, a system monitor tool, an editor-base shell
+
+    interfac, and other editor correspond to the variou
+
+    avail type of object. 
+
+
+
+    the andrew toolkit (atk) is a portabl, object-orient
+
+    user-interfac toolkit that provid the architectur wherein
+
+    object can be embed in on-anoth.  with the toolkit,
+
+    programm can creat new object that can be embed as
+
+    easili as those that come with the system. 
+
+
+
+    the andrew messag system (am) provid a multi-media interfac
+
+    to mail and bulletin-board.  am support sever mail
+
+    manag strategi and implement mani advanc  featur
+
+    includ authent, return receipt, automat sort of
+
+    mail, vote collect and tabul, enclosur, audit trail
+
+    of relat messag, and subscript manag. it also
+
+    provid a varieti of interfac that support tty and
+
+    low-function person comput in addit to high-function
+
+    workstat. 
+
+
+
+the current public releas of andrew, version 5.1,  includ support for
+
+the new internet mime (multipurpos internet mail extens) standard
+
+for multipart, multimedia mail.  a newer releas, 5.2, for member of
+
+the andrew consortium ha numer addit featur includ new
+
+editor for draw, imag, font, and user prefer.
+
+
+
+
+
+remot andrew demo servic
+
+
+
+you can try out andrew from your own work station via the remot andrew
+
+demo servic.  you need a host machin on the internet run the x11
+
+window system.  you'll be abl to compos multimedia document, navig
+
+through the interact andrew tour, and us the andrew messag system
+
+to brows through a few of cmu's four thousand bulletin board and
+
+newsgroup.
+
+
+
+to get start with the remot andrew demo servic, simpli run the
+
+follow command on your machin:
+
+
+
+	finger help@atk.itc.cmu.edu
+
+
+
+the servic will give you further instruct.   
+
+
+
+
+
+more inform about andrew is avail from:
+
+
+
+    inform request
+
+    andrew consortium
+
+    carnegi mellon univers
+
+    smith hall 106
+
+    5000 forb avenu
+
+    pittsburgh, pa 15213-3890
+
+    usa
+
+    phone: +1-412-268-6710
+
+    fax: +1-412-682-6938
+
+    info-andrew-request@andrew.cmu.edu
+
+
+
+contact info-andrew-request@andrew.cmu.edu for addit inform.  
+
+
+

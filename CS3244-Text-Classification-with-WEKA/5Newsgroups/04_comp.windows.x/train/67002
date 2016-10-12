@@ -1,0 +1,37 @@
+from: christi@cs.concordia.ca (christi)
+subject: x386 server problem
+organ: comput scienc, concordia univers, montreal, quebec
+line: 32
+
+hello,
+
+i'm try to get x11r5 run on my pc and ran into the 
+follow error messag when try to start the xserver.
+
+------
+set tcp so_dontling: option not support by protocol
+
+x386 version 1.2 / x window system
+(protocol version 11, revis 0, vendor releas 5000)
+
+fatal server error
+no screen found
+give up
+
+xinit: softwar case connect abort (errno 130): unabl to connect
+       to x xserver.
+
+------
+
+
+doe anyon know what thi error mean ?
+ha anyon experienc thi problem ?
+
+help will be much appreci
+
+thank in advanc.
+
+
+pleas send repli to <christi@alex.qc.ca>
+
+christi

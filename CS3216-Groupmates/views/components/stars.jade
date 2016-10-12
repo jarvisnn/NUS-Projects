@@ -1,0 +1,37 @@
+link(rel='stylesheet', href='/stylesheets/stars.css')
+.input-group
+  span.input-group-addon Stars
+  .form-control
+    .star
+    .star
+    .star
+    .star
+    .star
+  input(type='hidden', name='stars')
+  span.input-group-btn
+    button.btn.btn-primary Clear
+script(type='application/javascript').
+  +function(){
+    var parent = document.currentScript.previousSibling;
+    function set_star(star) {
+      $('input[name=stars]', parent).val(star);
+    }
+    $(parent).on('click', '.star', function() {
+      var star = this;
+      var star_value = $(this).index() + 1;
+      set_star(star_value);
+      $('.star', parent).each(function (index, star) {
+        if (index + 1 <= star_value)
+          star.classList.add('selected');
+        else
+          star.classList.remove('selected');
+      });
+    });
+    $('button', parent).on('click', function(event) {
+      event.preventDefault();
+      set_star(0);
+      $('.star', parent).each(function (index, star) {
+        star.classList.remove('selected');
+      });
+    });
+  }();

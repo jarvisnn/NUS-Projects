@@ -1,0 +1,70 @@
+from: gloster@infer.com (vanc m. gloster)
+
+subject: re: composit pictur on pc?
+
+organ: infer corpor
+
+line: 28
+
+nntp-post-host: fourier.infer.com
+
+in-repli-to: chu@torreypinesca.ncr.com's messag of sat, 15 mai 93 00:16:31 gmt
+
+
+
+in articl <1993mai15.001631.7051@torreypinesca.ncr.com> chu@torreypinesca.ncr.com (patrick chu 3605) write:
+
+
+
+   i wa wonder if anyon know of a graphic packag for the pc that
+
+   will do composit of a seri of pictur?
+
+
+
+   what i mean by "composit" is, sai i have a live video clip
+
+   (digit) pan around a live room, and a comput-gener
+
+   bird fly around the screen.  i want to combin these two seri of
+
+   pictur so that everywher where the bird frame ar black, i want
+
+   the live room pictur to show through.  ye, i realiz i can do thi
+
+   with a genlock, and i do own a genlock, but i want to be abl to do
+
+   manual composit also.  it's ok if i have to composit on frame at
+
+   a time; i assum i'd have to do that anywai.  but be abl to
+
+   composit a seri of frame would be even better.
+
+
+
+   i've look around and i haven't found a pc packag that will perform
+
+   thi.  help, pleas!
+
+
+
+if you can get the live anim and the comput-gener anim
+
+into autodesk anim .fli or .flc format, autodesk anim will do
+
+thi for you.  it can take on anim, make a certain color
+
+"clear", and overlai it over anoth anim.  i do not have a wai
+
+right now to convert .avi or .mpg file to anim file.  anim
+
+will also import a seri of .gif file to creat an anim, so if
+
+your video captur stuff can creat thi is might work.
+
+
+
+-vanc gloster
+
+ gloster@infer.com
+

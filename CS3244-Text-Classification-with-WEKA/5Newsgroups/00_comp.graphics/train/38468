@@ -1,0 +1,18 @@
+from: arowatt@massei.ac.nz (a.j. rowatt)
+subject: page flip in vga 320x200x256 mode.
+organ: massei univers, palmerston north, new zealand
+x-reader: netnew/pc version 2c
+line: 12
+
+help!
+how do you write to the second bank/page of memori when in vga
+320x200x256 colour mode?. ie: to perform page flip anim
+and buffer of the screen.
+     i have tri us the map mask regist, but thi doe not
+perform the requir task (although it doe do someth).
+
+note: it *must* be abl to work on a standard vga (ie: not
+necessarili a svga card).
+
+mani thanx in advanc...
+andrew

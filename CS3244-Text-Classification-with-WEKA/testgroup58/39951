@@ -1,0 +1,68 @@
+from: ballou@martigni.ai.mit.edu (kenneth robert ballou)
+
+subject: re: cpu temperatur vs cpu activ ?
+
+organ: oberon softwar, inc.
+
+line: 28
+
+nntp-post-host: altdorf.ai.mit.edu
+
+
+
+in articl <1993apr21.152632.709@nessi.mcc.ac.uk> victor@comm.ee.man.ac.uk (victor buttigieg) write:
+
+>lino montuno (montuno@physic.su.oz.au) wrote:
+
+>>thi mai be a veri naiv question but is there ani basi for the
+
+>>claim that a cpu will get hotter when a computation intens 
+
+>>job is run?
+
+>
+
+>i total agre with your friend, sinc when the cpu is appar idl
+
+>it is still in fact churn awai million of instruct per second
+
+>(check for keyboard input for instanc).  
+
+>
+
+>the except to thi is for cpu's us in laptop, where the cpu can
+
+>enter an idl state where it is just preserv it current statu but
+
+>do absolut noth.  in thi case it need a hardwar interrupt
+
+>to get it go again.
+
+
+
+actual, the iapx86 famili ha a halt instruct that caus the cpu to
+
+ceas process instruct.  the cpu resum process either by be
+
+reset or by receiv an extern (hardwar) interrupt.  thi is differ
+
+from the power manag facil victor mention.  of cours, whether an
+
+oper system's idl loop us the halt instruct is anoth matter
+
+entir.
+
+-- 
+
+kenneth r. ballou				voic:		 (617) 494-0990
+
+oberon softwar, inc.				fax:		 (617) 494-0414
+
+on memori drive, cambridg, ma  02142	internet:     ballou@oberon.com
+
+
+
+the view and opinion express abov ar my own and do not necessarili
+
+reflect those of my employ.
+

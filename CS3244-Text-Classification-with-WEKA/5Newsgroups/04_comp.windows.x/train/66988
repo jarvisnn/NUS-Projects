@@ -1,0 +1,234 @@
+from: kaiser@informatik.uni-koblenz.de (siegfri kaiser)
+subject: r5 tabl widget caus troubl with xtquerygeometri
+organ: universitaet koblenz
+line: 227
+distribut: world
+nntp-post-host: glass.uni-koblenz.de
+
+content:problem with tabl widget in r5
+
+	the follow part of a program (an user interfac for a simul
+	system) did work in r4, but refus to in r5. of caus, the r4-version
+	did not know about the xptablewidgetclass (we us tablewidgetclass 			instead - caught from the net in time of r3) and xptablechildposit 			(formerli xttblposit).
+	sinc compil with r5, the program caus a zero width or height error
+	(on sparc-station). the troubl-shooter is the (re)comput of the
+	model_init_tabl - tabl widget: though it child (label and asciitext 
+	widget) exist, xtquerygeometri return a prefer width and height of 			zero. 
+	thu the follow asign cannot perform anyth els but set the 			width and height of the newli creat widget to zero. no wonder xtpopup 		or xtmanag- child creat zero width or height error (depend on 			whether width and height of the shell widget ar set in the resourc 			file or not).
+	
+	question: doe anyon know, why xtquerygeometri return so low prefer
+			valu when work on tabl widget or perhap what
+			to do about?
+
+	i'll be happi, if someon is abl to help me. 
+	german ar request to answer in german.
+	
+	siegfri kaiser
+	email: kaiser@uniko.uni-koblenz.de
+
+	
+	the part of interest:
+
+
+	/* graphisch neuaufbau de model-init-formular */
+		/* store the old width and height of the viewport-	*/
+		/* widget, which is the parent of the troubl tabl	*/
+		/* widget, befor the viewport widget is destroi	*/
+		/* the destroi of widget befor resiz them is a	*/
+		/* relict from r3-ag					*/
+	
+	if (model_init_pop_up) 
+		xtunmapwidget(model_init_form_view);
+	xtdestroywidget(model_init_form_view);
+	
+		/* creat the subtre within the shell, of which the	*/
+		/* root is the viewport widget				*/
+	
+	n = 0;
+	xtsetarg(arg[n],xtnfromvert,model_init_titl); n++;
+	xtsetarg(arg[n],xtnfromhoriz,model_init_button_view); n++;
+	xtsetarg(arg[n],xtnallowvert,true); n++;
+	xtsetarg(arg[n],xtnforcebar,true); n++;
+	model_init_form_view = xtcreatewidget("form_view",viewportwidgetclass,
+					      model_init_form,arg,n);
+
+	n = 0;
+	model_init_tabl = xtcreatewidget("tabl",xptablewidgetclass,
+					  model_init_form_view,arg,n);
+
+		/* creat_form_widget doe creat and posit tabl	*/
+		/* widget's child. to posit them it us xptabl-	*/
+		/* childposit in r5 and xttblposit in r4		*/
+					 
+	creat_form_widget(ptr_model_init_obj,model_init_tabl);
+
+		/* 							*/
+		/* the crucial function call:				*/
+		/* intend to return the maximum height possibl: if	*/
+		/* there isn't suffici space to show the whole tabl	*/
+		/* widget, then the viewport shall grow as larg as 	*/
+		/* possibl, but not beyond the border of screen.	*/
+		/* if there is enough space, the window is intend to	*/
+		/* shrienk to the smallest possibl height.		*/
+		/*							*/
+
+	xtquerygeometri(model_init_tabl,null,&pref);
+
+		/* accord to the algorithm idea, the new valu of	*/
+		/* viewport widget's height is select. unfortun	*/
+		/* pref.height = 0 lead to new_height = 0.		*/
+		
+	if (form_view_height > pref.height) new_height = pref.height;
+	els new_height = form_view_height;
+
+		/* set the new valu to viewport widget ancestor	*/
+
+	w = xtnametowidget(model_init_form,"form_view");
+	xtresizewidget(w,width,new_height,pref.border_width);
+	xtresizewidget(model_init_form_view,width,new_height,
+		       pref.border_width);
+
+	if (model_init_pop_up)
+	{
+		/* in case the shell, which contain model_init_form_-	*/
+		/* view and model_init_tabl, allreadi exist, is ha	*/
+		/* to be resiz, too.					*/
+		
+	 n = 0;
+	 xtsetarg(arg[n],xtnwidth,&shell_width); n++;
+	 xtsetarg(arg[n],xtnheight,&shell_height); n++;
+	 xtsetarg(arg[n],xtnborderwidth,&shell_bw); n++;
+	 xtgetvalu(model_init_shell,arg,n);
+	 xtresizewidget(model_init_shell,shell_width,
+			shell_height - height + new_height,shell_bw);
+	}; /* end of if */
+
+	n = 0;
+	xtsetarg(arg[n],xtnwidth,&width); n++;
+	xtsetarg(arg[n],xtnborderwidth,&bw); n++;
+	xtgetvalu(model_init_button_view,arg,n);
+	xtresizewidget(model_init_button_view,width,new_height,bw);
+
+	xtresizewidget(vert_bar,sbar_width,1,sbar_bw);
+	
+	resiz_init();
+
+		/* if there is the shell's height set within the 	*/
+		/* resourc file, the program termin within the	*/
+		/* first xtmanagechild on it second pass through the	*/
+		/* observ function. the first pass succe.		*/
+
+	xtmanagechild(model_init_form_view);
+	xtmanagechild(model_init_tabl);
+
+
+	if (!model_init_pop_up)
+	{
+		/* in case the shell isn't pop up it ha to be done.	*/
+		/* if there is no valu set to the shell's height within*/
+		/* the resourc file, the program termin here.	*/
+		
+	 xtpopup(model_init_shell,xtgrabnon);
+	 model_init_pop_flag = true;
+	 set_model_init_attribut();
+	}; /* end of if */
+
+	get_actual_init(&ptr_actual);
+	load_form(ptr_actual);
+	
+	
+	
+	/*								*/
+	/* if someon suspect the creation of tabl widget's content	*/
+	/* caus all the troubl, there ar the sourc of creat_form */
+	/*								*/
+	
+		
+	creat_form_widget(ptr,tabl)
+	t_obj              *ptr;
+	widget             tabl;
+		
+		/* ptr is a linear list contain attribut and para-	*/
+		/* meter of the model and addition the correspon-	*/
+		/* ding widget						*/
+		
+	{
+	 arg               arg[10];
+	 int               n,
+			   row,
+			   col;
+	 t_obj             *ptr_obj;
+	 t_ident           *ptr_ident;
+
+		/* initi of the local variabl		*/
+		
+	 ptr_obj = ptr;
+	 col = 0;
+	 row = 0;
+ 
+	 /* schleif ueber die objekt bzw. da pseudo-objekt (fuer die 				paramet) */
+		/* loop through the list of object and pseudo-object:	*/
+		/* everi object occur in the model ha zero or more	*/
+		/* attribut and some paramet, which can be share	*/
+		/* by sever object. 					*/
+		/* becaus of local the attribut of on object ar	*/
+		/* list in a second linear list (of type t_ident),	*/
+		/* wherea the paramet, which can belong to ani ob-	*/
+		/* ject ar put togeth in a pseudo-object 		*/
+		/* thu the program loop through the list of object	*/
+		/* and pseudo-object and for each object through the	*/
+		/* list of it attribut resp. paramet.		*/
+		
+	 while (ptr_obj != (t_obj*)null)
+	 {
+	 	/* each object and pseudo-object is repres in a	*/
+	 	/* label widget						*/
+	  
+	  n = 0;
+	  xtsetarg(arg[n],xtnlabel,ptr_obj->name); n++;
+	  ptr_obj->label_w = xtcreatemanagedwidget("object",labelwidgetclass,
+					   tabl,arg,n);
+	  xptablechildposit(ptr_obj->label_w,col,row);
+	  col++;
+	  row++;
+	  ptr_ident = ptr_obj->ident;
+
+	  /* schleif ueber die objekt-attribut bzw. paramet */
+	  while (ptr_ident != (t_ident*)null)
+	  {
+	  	/* each attribut and paramet is repres in a	*/
+	  	/* label and ha a correspond asciitext widget, in 	*/
+	  	/* which it is to be initi.			*/
+	  	
+	   n = 0;
+	   xtsetarg(arg[n],xtnlabel,ptr_ident->name); n++;
+	   ptr_ident->label_w = xtcreatemanagedwidget("ident",labelwidgetclass,
+					      tabl,arg,n);
+	   xptablechildposit(ptr_ident->label_w,col,row);
+	   col++;
+    
+	   n = 0;
+	   xtsetarg(arg[n],xtnlength,row_length); n++;
+	   xtsetarg(arg[n],xtnstring,ptr_ident->text); n++;
+	   xtsetarg(arg[n],xtnedittyp,xawtextedit); n++;
+	   xtsetarg(arg[n],xtnwrap,xawtextwrapword); n++;
+	   xtsetarg(arg[n],xtnresiz,xawtextresizeheight); n++;
+	   xtsetarg(arg[n],xtnusestringinplac,true); n++;
+	   ptr_ident->text_w = xtcreatemanagedwidget("text",
+					asciitextwidgetclass,
+					     tabl,arg,n);
+	   xptablechildposit(ptr_ident->text_w,col,row);
+	   col--;
+	   row++;
+	   get_next_ident(&ptr_ident);
+	  }; /* end of while */
+	  col--;
+	  get_next_obj(&ptr_obj);
+	 }; /* end of while */
+	} /* end of creat_form_widget */
+
+
+	
+
+so far the problem in detail.
+

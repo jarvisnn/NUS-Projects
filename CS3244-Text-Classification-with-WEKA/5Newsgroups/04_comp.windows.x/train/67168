@@ -1,0 +1,45 @@
+from: rcb5@wsinfo03.win.tue.nl (richard verhoeven)
+subject: re: forc a window manag to accept specif coordin for a window
+organ: eindhoven univers of technolog, the netherland
+line: 38
+distribut: world
+nntp-post-host: wsinfo03.win.tue.nl
+
+bade@cs.tu-berlin.de (tobia 'dope' bade) write:
+> 
+> try thi after xcreatewindow:
+> -----------------------------
+> ...
+>
+>   xsizehint->flag = usposit | ussiz;	/* or = pposit | psize */
+>   ...
+>   xsetwmnormalhint (displai, window, xsizehint);
+>   ...
+>
+> these hint tell the window manag that the posit and size of the window
+> ar specifi by the user and that the window manag should accept these
+> valu. if you us xsizehint->flag = pposit | psize, thi tell the window
+> manag that the valu ar prefer valu of the program, not the user.
+> i don't know a window manag that doesn't place the window like you prefer
+> if you specifi the posit and size like abov.
+
+sorri, but olwm and tvtwm don't do it. thei place the titl at that posit
+and the window at a posit below it.
+
+thi becom a problem when you want a program to be abl to save it current
+configur and restor is later.
+
+current, my solut is:
+
+	xcreatewindow(...);
+	xsetwmproperti(..);
+	xmapwindow(...);
+	xflush(...);
+	xmovewindow(...);
+
+
+it work with olwm, but is less than eleg. all thi leav me wonder
+if i'm overlook someth obviou.
+
+richard.
+

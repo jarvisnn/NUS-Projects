@@ -1,0 +1,34 @@
+from: rj@rainbow.in-berlin.de (robert joop)
+subject: re: tvtwm & xsetroot, x11r5 and sparc 10 keyboard
+line: 26
+nntp-post-host: rainbow.in-berlin.de
+mime-version: 1.0
+content-type: text/plain; charset=iso-8859-1
+content-transfer-encod: 8bit
+
+barr@pop.psu.edu (david barr) write:
+
+>did you instal the sunkbd patch?  it's in the contrib directori on export.
+>all the kei on my keyboard send event properli, except the follow:
+>the end, pageup, pagedown on the 6-kei cluster aren't recogn.
+>even the compos kei work.  (though i can't seem to get the compos
+>charact in an xterm to get pass.)
+
+>anyon have a fix for the last two?
+
+fix the tabl in .../x11r5/mit/server/ddx/sun/ or
+us xmodmap(1).
+
+put
+  stty pass8; setenv lc_ctype iso_8859_1; setenv lesscharset latin1
+in your .login. the first prevent the strip of bit 7.
+the second set the local. the third make less(1) show the charact
+instead of the octal represent.
+
+rj
+
+-- 
+__________________________________________________
+robert joop
+  rj@{rainbow.in-berlin,foku.gmd,cs.tu-berlin}.de
+  s=joop;ou=foku;ou=berlin;p=gmd;a=dbp;c=de

@@ -1,0 +1,35 @@
+from: jemartin@nyx.cs.du.edu (john martin)
+subject: set up three-user account system with wfwg
+organ: nyx, public access unix at u. of denver math/cs dept.
+line: 30
+
+i am a novic (at best) in work with pc network, and am in the
+process of plan a small account system for a small busi.
+
+the particular need in thi case is for three machin, each in a
+differ offic of the same build, each have access to a
+window-base account system.
+
+my first thought is to set up ms window for workgroup on each of the
+machin (like a 486 and two 386's) along with the appropri ethernet
+card and cabl that come with the window for workgroup starter kit (on
+addit user kit will be necessari).  it then seem logic to purchas
+a simpl multi-user account system, along the line of daceasi or
+m.y.o.b., and fire it all up!  the 486 will more or less act as server with
+a report/check printer attach to it.
+cabl run of 30-40 feet will be necessari for thi setup.
+
+well, thi all seem too easi to me.  would ani of you network guru out
+there tell me if i am out of my mind here?  ani and all suggest, howev
+trivial, will be immens appreci.  my apolog if thi ha been
+brought up befor.
+
+thank!
+
+john
+--
+ john e. martin    jemartin@nyx.cs.du.edu      univers of puget sound '92
+    kent, wa     (formerli martin@up.edu)   seinfeldsupersonicsrushbelafleck
+--
+ john e. martin    jemartin@nyx.cs.du.edu      univers of puget sound '92
+    kent, wa     (formerli martin@up.edu)   seinfeldsupersonicsbc++rushdweckl

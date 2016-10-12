@@ -1,0 +1,62 @@
+from: ferch@uc.ubc.ca (le ferch)
+
+subject: re: mac disk in window?
+
+organ: the univers of british columbia
+
+line: 25
+
+nntp-post-host: swiss.uc.ubc.ca
+
+
+
+in <1t7529$agf@agat.berkelei.edu> miyamoto@ucse.berkelei.edu (carleton
+
+a. y. miyamoto) write: 
+
+
+
+>>>in articl <1t6efv$1pj@binklei.cs.mcgill.ca> gel@binklei.cs.mcgill.ca
+
+>>>(gill khouzam) write:
+
+>>>macse.zip on ftp.cica.indiana.edu is suppos to read and write mac
+
+>>>disk.  i've never tri it, though.  good luck
+
+
+
+>>i just tri it, but i can't sai that it work, 'caus it doesn't read 800k
+
+>>disk, it onli read 1.44mb. if there a program that doe read 800k disk,
+
+>>pleas let me know.
+
+
+
+>i'm not sure that thi is possibl due to the wai the mac write the 800k
+
+>disk.  i think the wai the sector ar set up ar differ enough that a
+
+>pc 3.5" can't read it.  thi is a hardwar problem which softwar cannot
+
+>correct.  hope thi help and correct me if i'm wrong.
+
+
+
+you're right.
+
+
+
+you cannot read or write a mac or appl ii 800k 3.5" disk or appl ii
+
+5.25" disk without extra hardwar. howev, mac 1.44mb disk can be read
+
+and written in a pc 3.5" hd drive with softwar onli. 
+
+
+
+thi should probabl be ad to everi pc and mac faq file. it sure get
+
+ask enough.
+

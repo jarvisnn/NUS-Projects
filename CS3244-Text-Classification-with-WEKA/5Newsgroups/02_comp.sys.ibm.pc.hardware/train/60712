@@ -1,0 +1,34 @@
+from: sundbo@bgibm1.nho.hydro.com (terj thoegersen)
+subject: re: problem with toshiba 3401 cdrom
+organ: norsk hydro a.s
+line: 26
+distribut: world
+repli-to: hktth@nho.hydro.com
+nntp-post-host: bgibm1.nho.hydro.com
+
+in articl <1993apr20.191255.10115@new.columbia.edu>, imj1@cunixa.cc.columbia.edu (imad m jureidini) write:
+|> hi!
+|> 	i recent purchas the toshiba 3401 cdrom.  i own an adaptec 1542b
+|> scsi card, and i have so far fail to get the cdrom to work under do.  it
+|> work veri well under os/2, so i know that the drive is not faulti.
+|> in my config.sy, i have aspi3do.sy, aspidisk.sy, aspicd.sy.  in my 
+|> autoexec.bat, i have mscdex, which came with do 6.0.  mscdex seem to find
+|> and instal the drive as drive f:, but when i switch to that drive and try a
+|> dir, i get an error messag tell me the drive is not readi or someth
+|> like that.  the cdrom is lock too, and the adaptec util don't seem to
+|> recogn that i have a cdrom at that point.
+|> 	ha anyon ever had thi problem?  is there someth abviou that i
+|> am miss?  and final, i wa wonder if anyon us thi setup could 
+|> kindli post hi/her config.sy and autoexec.bat.
+|> 
+
+hi!
+
+on of the aspi-driver (i think it's the aspicd) support a /norst
+paramt, which mean to not reset the scsi bu when it load. thi
+fix the problem a friend of mine wa have with hi adaptec+tosh 
+3401.
+
+regard,
+
+  -terj

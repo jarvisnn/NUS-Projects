@@ -1,0 +1,20 @@
+from: klee@synopt.com (ken lee)
+subject: re: xcopyplan question
+repli-to: klee@synopt.com
+organ: synopt commun, santa clara ca
+line: 13
+nntp-post-host: bugsbunni.synopt.com
+
+in articl aa04287@neko.css.gov, nanci@neko.css.gov (nanci p. marin) write:
+>i am try to us xcopyplan to copi a singl plane 
+>from a depth-8 pixmap to a depth-1 pixmap.  everytim i
+>try thi, i see absolut noth displai.  i know there
+>is data in the depth-8 pixmap becuas i have check by do
+>an xcopyarea to the screen.
+
+the code fragment look reason, but is your logic valid?
+just becaus someth appear in an 8 bit deep pixmap doesn't
+mean everi bit plane contain data.  did you try each plane?
+
+---
+ken lee, klee@synopt.com

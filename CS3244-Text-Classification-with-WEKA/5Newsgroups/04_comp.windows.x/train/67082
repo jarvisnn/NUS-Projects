@@ -1,0 +1,58 @@
+from: whalei@sigma.kpc.com (ken whalei)
+subject: re: xcopyplan question
+in-repli-to: nanci@neko.css.gov's messag of 19 apr 1993 19:48:30 -0400
+organ: kubota pacif comput inc.
+line: 52
+
+| 
+| in articl <buzz.93apr19101538@lion.bear.com> buzz@bear.com (buzz moschetti) write
+| >in articl <whalei.93apr15103931@sigma.kpc.com> whalei@sigma.kpc.com (ken whalei) write:
+| >>   actual, i must also ask the faq's #1 most popular reason why graphic
+| >>   don't show up: do you wait for an expos event befor draw your
+| >>   rectangl?
+| >
+| >suppos you have an idl app with a realiz and map window that contain
+| >xlib graphic.  a button widget, when press, will caus a new item
+| >to be drawn in the window.  thi action clearli should not call xcopyarea() 
+| >(or equiv) directli; instead, it should regist the exist of the new
+| >item in a memori structur and let the expos event handler take care
+| >of render the imag becaus at that time it is guarante that the
+| >window is map.
+| >
+| >the problem, of cours, is that no expos event is gener if the window
+| >is visibl and map.  do you know the best wai to "tickl" a window so
+| >that the expos event handler will be invok to draw thi new item?
+| >
+| 
+| what doe thi have to do with my origin question???  i previous
+| state that i did an xcopyarea of the depth-8 pixmap to the screen
+| just to make sure that my imag had data, and it did.  thi is not
+| a problem with expos event, it ha to do with xcopyplan not
+| work!!!
+| 
+| doe anyon have a code fragment thei could send demonstr that
+| xcopyplan work???  thi would be veri help!
+| 
+| thank!
+
+what it ha to do with your origin question is thi: mani time 
+begin x user (heck, experienc x user too!) write small test
+program.  mani time thei forget to draw onli in respons to expos
+event, and thu see unpredit result wherebi sometim the applic's
+graphic show up, and sometim thei don't.  we're just try to
+elimin all the "easi" explan  for why you're not see your
+graphic. 
+
+that be said, why don't you try copi differ plane to your
+window other than 16 (== 1 << 4).  try 1, 1<<1, 1<<2, ..., 1<<7
+to see it you get ani output.  sinc you're dipslai onli a singl 
+plane of your data, it's possibl that all the pixel valu in your
+pixmap have the same valu for that color plane.
+
+	ken
+
+--
+kenneth whalei			 (408) 748-6347
+kubota pacif comput, inc.	 email: whalei@kpc.com
+2630 walsh avenu
+santa clara, ca.  95051

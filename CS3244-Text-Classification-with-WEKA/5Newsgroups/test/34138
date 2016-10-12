@@ -1,0 +1,62 @@
+from: lillei@v5.cgu.mcc.ac.uk (chri lillei)
+
+subject: re: help: need 24 bit viewer
+
+keyword: 24 bit
+
+line: 24
+
+repli-to: c.c.lillei@mcc.ac.uk
+
+organ: comput graphic unit, mcc
+
+
+
+
+
+in articl <5713@seti.inria.fr>, deniaud@cartoon.inria.fr (gill deniaud) write:
+
+
+
+>i'm look for a program which is abl to displai 24 bit
+
+>imag. we ar us a sun sparc equip with parallax
+
+>graphic board run x11.
+
+
+
+utah raster toolkit us getx11. convert your sun raster file (presum) to 
+
+ppm with the pbm+ toolkit then convert ppm to utah rle format with ppmtorl which
+
+is provid in the toolkit.
+
+
+
+i seem to rememb that xloadimag can do 24 bit server too.
+
+
+
+possibl xwud the x window un-dump program can displai 24 bit imag; certainli
+
+xwd can grab them.
+
+
+
+--
+
+chri lillei
+
+----------------------------------------------------------------------------
+
+technic author, itti comput graphic and visualis train project
+
+comput graphic unit, manchest comput centr, oxford road, 
+
+manchest, uk.  m13 9pl                        internet: c.c.lillei@mcc.ac.uk  
+
+voic: +44 (0)61 275 6045  fax: +44 (0)61 275 6040 janet: c.c.lillei@uk.ac.mcc
+
+------------------------------------------------------------------------------
+

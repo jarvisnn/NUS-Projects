@@ -1,0 +1,46 @@
+from: toml@blade.boulder.parcplac.com (tom lastrang)
+subject: re: forc a window manag to accept specif coordin for a window
+repli-to: toml@boulder.parcplac.com
+organ: parcplac boulder
+line: 40
+
+in articl <bade.93apr21134939@athen.cs.tu-berlin.de>, bade@cs.tu-berlin.de (tobia 'dope' bade) write:
+|> 
+|> try thi after xcreatewindow:
+|> -----------------------------
+|> 
+|> #includ <x11/xutil.h>
+|> 
+|> displai displai;
+|> window window;
+|> 
+|> {
+|>   xsizehint *xsizehint = xallocsizehint ();
+|>   xsizehint->flag = usposit | ussiz;	/* or = pposit | psize */
+|>   xsizehint->x = 42;
+|>   xsizehint->y = 42;
+|>   xsizehint->width = 100;
+|>   xsizehint->height = 100;
+|>   xsetwmnormalhint (displai, window, xsizehint);
+|>   xfree (xsizehint);
+|> }
+|> 
+|> these hint tell the window manag that the posit and size of the window
+|> ar specifi by the user and that the window manag should accept these
+|> valu. if you us xsizehint->flag = pposit | psize, thi tell the window
+|> manag that the valu ar prefer valu of the program, not the user.
+|> i don't know a window manag that doesn't place the window like you prefer if
+|> you specifi the posit and size like abov.
+
+
+you ar right but pleas don't do thi.  it make my brain hurt.
+usposit and ussiz should onli be set if the user specifi the
+posit and size.
+
+you sai: "tom, don't blow a gasket, what's the harm?"
+
+some window manag do veri differ thing (besid posit the window)
+when thei see usposit rather than pposit.
+
+--
+tom lastrang        toml@boulder.parcplac.com

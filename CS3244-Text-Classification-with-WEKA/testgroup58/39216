@@ -1,0 +1,136 @@
+from: probert@ucsb.edu (dave probert)
+
+subject: imag data format question
+
+organ: univers of california, santa barbara
+
+line: 63
+
+
+
+** i am post thi for a friend **
+
+** pleas respond to vaughn%sonatech@hub.ucsb.edu **
+
+
+
+i'm work on an applic where we ar creat a dither pattern 
+
+and render it in a window by appli it to the stippl pattern 
+
+of the gc.  the follow code segment almost work if the window width 
+
+is an even multipl of 8.  if it is not an even multipl it skew the 
+
+pattern toward the right.  anoth problem, whether it is an even 
+
+multipl of 8 or not, is a seri of vertic line space 8 pixel 
+
+apart.
+
+
+
+
+
+extern	displai	       *dpy;
+
+extern	window		xid;
+
+extern	gc		gc;
+
+
+
+extern	int	max_x, max_y;		/* set in resiz handler	*/
+
+
+
+dither(pixel)
+
+
+
+	char	*pixel;		/* dither pattern data		*/
+
+
+
+	{
+
+	char	*bm;			/* bitmap data			*/
+
+	char    *bmp;
+
+	long	 i, arraymax;
+
+
+
+
+
+	arraymax = max_x*max_y;
+
+
+
+	bm  = (char *)malloc(arraymax);
+
+	bmp = bm;
+
+
+
+	for (i=j=0; i<arraymax; i++)
+
+		{
+
+		if (pixel[i] & dither_bit)
+
+			*bmp |=   2<<j;		/* pixel on		*/
+
+		els
+
+			*bmp &= ~(2<<j);	/* pixel off		*/
+
+
+
+		if (++j > 7)
+
+			{
+
+			bmp++;
+
+			j = 0;
+
+			}
+
+		}
+
+
+
+	stippl = xcreatebitmapfromdata(dpy, xid, bm, max_x, max_y);
+
+	free(bm);
+
+
+
+	xclearwindow(dpy, xid);
+
+
+
+	xsetstippl(dpy, gc, stippl);
+
+	xsetfillstyl(dpy, gc, fillstippl);
+
+	xfillrectangl(dpy, xid, gc, 0, 0, max_x, max_y);
+
+	xsetfillstyl(dpy, gc, fillsolid);
+
+	}
+
+
+
+i suspect the answer is to pad the data.
+
+
+
+--
+
+mike vaughn
+
+sonatech
+

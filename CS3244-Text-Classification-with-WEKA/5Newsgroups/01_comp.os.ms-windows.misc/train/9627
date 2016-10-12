@@ -1,0 +1,25 @@
+from: ffritz@hpwad.wad.hp.com (fromut fritz)
+subject: re: need help write ms excel macro
+organ: hewlett-packard waldbronn, germani
+line: 20
+
+>    for each_student do
+>       begin
+>          lowest_score_found := max_possibl_valu
+>          for i := 1 to number_of_assign do
+>             begin
+>                  if score[i] < lowest_score_found then
+>                     lowest_score_found := score[i] 
+>             end
+>          total_score := sum(all score) - lowest_score_found
+>       end
+
+couldn't you simpli us min() as you us sum() and than subtract it
+from sum() ??
+
+------------------------------------------------------------------------------
+internet: ffritz@hpwbe007.wad.hp.com
+phone:    germani 7243 602296
+address:  fromut fritz, waldbronn analyt divis r&d,
+	  hewlett packard str, d 7517 waldbronn 2, germani
+------------------------------------------------------------------------------

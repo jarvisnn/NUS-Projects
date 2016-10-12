@@ -1,0 +1,88 @@
+from: digdug@iastat.edu (doug v tran)
+
+subject: re: leak memori resourc in 3.1
+
+organ: iowa state univers, am ia
+
+line: 39
+
+
+
+here's an interest tabl show how much resourc an applic
+
+us and how much it give back on shut down.  thi is take from
+
+window user mai 1993 issu:
+
+
+
+
+
+applic		min. resourc us	resourc not return
+
+			gdi	user		gdi	user
+
+
+
+winsleuth gold v3.03	10	6		2	14
+
+word for window v2.0b	10	0		5	0
+
+lotu 123 v1.1		13	3		3	2
+
+art and leter v3.12	7	7		3	1
+
+powerpoint v3.0		9	1		3	0
+
+corel draw v3.0		10	6		3	0
+
+micro. design v3.1	10	2		2	0
+
+crosstalk v2.0		0	0		0	0
+
+excel v4.0a		11	8		0	0
+
+hijacck v1.0		2	2		0	0
+
+imag-in color pro	3	2		0	0
+
+pictur publish v3.1	21	8		0	0	
+
+powerlead!-
+
+  execut ed. v1.03	0	5		0	0
+
+adob type manag v2.5	1	0		na	na
+
+skylight v2.0		1	0		0	0
+
+
+
+*the number ar in percentag and ar in a decreas order.
+
+
+
+what doe thi tabl tell you, if you frequent start and exit a
+
+program that doesn't give back all of it's resourc, then you
+
+continu lose these resouc.  therefor, onli open these program
+
+up onc and leav them open.
+
+
+
+
+
+btw:  mayb peopl can add to thi list so we know what applic to
+
+watch out for.
+
+ 
+
+later,
+
+doug
+
+
+

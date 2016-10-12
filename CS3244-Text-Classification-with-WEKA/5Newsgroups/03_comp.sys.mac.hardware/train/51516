@@ -1,0 +1,38 @@
+from: sukenick@sci.ccny.cuni.edu (syg)
+subject: re: ad convers
+organ: citi colleg of new york - scienc comput facil
+line: 33
+
+>> i am work a  data acquisit and analysi program to collect data
+>> from insect sensori organ.
+>> anoth altern is the us of the sound input port.
+>
+>can you realli make due with the non-exist dynam rang of an 8-bit
+>convert, of probabl dubiou linear and monoton, and perhap
+>ac-coupl as well?
+
+it would depend on the requir of the poster's data, for some
+purpos 1/256 resolut (with or without calibr curv).
+
+
+otherwis the other possibl would be:
+
+1) get a digit voltamet with serial output & connect to serial
+port on mac, collect data with some commun program.
+
+2) bui an a/d chip from analog devic, burr-brown, etc, connect to
+a parallel to serial convert, us serial port for acquisit
+(nah. too much solder and troubl shoot :-)
+
+3) get a board from nation instrument, data translat, omega,
+etal.  the finest solut, but possibl the most costli.
+
+
+
+to the origin poster:  if the signal is too larg, why not
+us a voltag divid? two resistor, cost veri cheap...
+-- 
+
+					-georg
+					sukenick@sci.ccny.cuni.edu
+					212-650-6028

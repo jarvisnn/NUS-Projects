@@ -1,0 +1,148 @@
+from: jl@atglab.atg.com (jerom schneider)
+
+repli-to: jl@atg.com
+
+distribut: world
+
+subject: re: question about do extern join command...
+
+organ: aspen technolog group
+
+x-mailer: uupc/bsnew 2.1 modifi
+
+line: 66
+
+
+
+
+
+in articl <1srg8c$i54@spud.hyperion.com>, the author write:
+
+>    i am set up my do/unix box on a 116m id and a 412m scsi drive
+
+> and wa wonder about the us of the (ms-do 5.0) join command.  i
+
+> like the wai it set thing up sinc i won't have to stick with the c:
+
+> d: & e: (crap) that do enforc.  i like how it would mimic mount
+
+> point of unix filesystem.  i have heard that there were problem
+
+> with us it, or at least under older version of do.  pleas tell!
+
+
+
+i have been us the join command for mani year now, mostli with good
+
+success in duplic unix-style file mount.  you will hear lot of
+
+peopl curs join becaus thei confus it with the do append command
+
+(a trueli gnarli hack), but don't believ them.  you also will hear
+
+peopl sai that microsoft recommend that you not us join.  but, in
+
+microsoft's window 4 workgroup resourc toolkit, the follow appear:
+
+
+
+  "join, an ms-do util, work fine with window for workgroup 3.1 if
+
+  you do not chang the state of the join drive dure a window for
+
+  workgroup 3.1 session. thi includ ad or remov join drive
+
+  from within window for workgroup. we recommend that you do not us
+
+  join when run window setup or window for workgroup 3.1."
+
+
+
+within thi caveat, join appear to be valid under window.  howev, i
+
+have found a coupl of applic that don't deal well with filesystem
+
+that have been "mount" us join.
+
+
+
+in particular, the worst offend is word for window 2.0x.  it get veri
+
+confus when you edit and then try to save a file on a join drive. it
+
+want to creat the save file as ~nnnnn.tmp in the current dir, then
+
+delet the old file and renam the ~nnnnn.tmp file to the *.doc file.
+
+
+
+unfortun, wfw usual write the ~nnnnn.tmp file in some idiot
+
+place other than the current directori (often in the root dir of the
+
+join filesystem, but not alwai).  then, after delet the origin
+
+*.doc file, it can't find the ~nnnnn.tmp file to renam it.  unless you
+
+search your disk system, the document is gone.
+
+
+
+i have also found subtl problem us the mk toolkit from a do box
+
+when join filesystem ar present.  i us to join c:\temp with a 4meg
+
+ramdisk, but mk sometim get confus when do an "ls" on the c:\temp
+
+dir, and miss some file in the temp dir.  (thi is difficult to 
+
+reproduc, but it goe awai total when join is not us.)  i think
+
+thi is a window problem, rather than mk's, sinc it work ok under raw
+
+do.
+
+
+
+so, i would suggest that you can us join, but be awar that it mai not
+
+be as robust you would like.
+
+
+
+wouldn't it be real great to "mount" network drive (i.e. z:) under the main
+
+file tree, rather than have all those darn drive letter? unfortun,
+
+join won't let you do it.  there wa talk on the net about a simpl patch
+
+to let join work on network drive, but i don't rememb the sourc.
+
+
+
+it's too bad the join command is not better implement, sinc it would
+
+avoid us all those stupid drive letter.  i realiz that messdo wa
+
+meant for casual, even ignor user, so "mount" all the drive in
+
+on file tree might be confus. but, it look like ms is go to carri
+
+thi over into window nt (anoth os meant for casual, even igor 
+
+user -- not!).  with all it's old famili system baggag, mayb ms need
+
+a recoveri group so thei can get on with life :-(.
+
+
+
+--
+
+jerom (jerri) schneider             domain: jl@atg.com 
+
+aspen technolog group               uucp:   {uunet}!csn!atglab!jl
+
+po box 673, ft. collin, co 80522    voic:  (303) 484-1488
+
+
+

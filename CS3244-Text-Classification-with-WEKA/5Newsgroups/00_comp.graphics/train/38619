@@ -1,0 +1,26 @@
+from: han@cs.kuleuven.ac.be (han bael)
+subject: convers of pic format file to hpgl file
+nntp-post-host: glasnost.cs.kuleuven.ac.be
+organ: dept. computerwetenschappen
+line: 20
+
+hello,
+
+can anybodi help me with the convers of pic format file
+to hpgl file. the question is as follow:
+
+is it possibl to convert file that have been gener in the
+pic preprocessor format into hpgl format, suitabl for send
+to a plotter. the hardwar involv is ibm risc/6000 run aix
+3.2.3. how should thi be done and what softwar is involv,
+where is it avail, what doe it cost, what ar the problem?
+
+regard,
+
+dani
+
+--------------------------------
+cimad consult
+antwerp, belgium
+dani@cimad.be
+--------------------------------

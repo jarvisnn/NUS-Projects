@@ -1,0 +1,18 @@
+from: egg@dsto3.dsto.gov.au
+subject: chose optim color for colormap ?
+organ: defenc scienc and technolog organis
+line: 12
+nntp-post-host: dsto3.dsto.gov.au
+
+hi,
+
+  i'm look for an algorithm that would gener a good cross-section of
+rgb colour given a limit colour map size. 
+
+the problem: i'm write an applic for the pc that mai have at most 256
+color. i want to us on colormap (palett) for the applic but i'd like
+it to contain an even spread of colour of the visibl spectrum. i could us 
+a 6x6x6 rgb cube but the problem is that a lot of those colour ar almost
+ident to the human ey. 
+
+doe anyon know how i can optim my choic of color ?

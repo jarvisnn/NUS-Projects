@@ -1,0 +1,49 @@
+from: jcox@x102a.harri-atd.com (jami cox)
+subject: re: serial port problem
+nntp-post-host: x102a.ess.harri.com
+repli-to: jcox@x102a.ess.harri.com (jami cox)    
+organ: harri govt. aerospac system divis
+keyword: serial port, powerbook
+line: 41
+
+in articl <1qcq4ginn2q7@calvin.usc.edu> wl@calvin.usc.edu write:
+>
+>
+>a friend ask me to build a cabl to connect an hp fetal heart monitor
+>to a maciontosh (se/30).  no problem, sez i.
+>
+>...
+>i want to demo it on my pb 170, it won't work!
+>
+>the pb ha been us run zterm and kermit us both intern and extern
+>modem; so i don't think it's the powerbook per se.
+>
+>when i send a "^51" to the hp it respond with "^55^aa" -- a test of the serial
+>port.  it work on the se/30; but not on the pb170.
+>
+>i thought that the se/30 is connect to earth ground and so is the hp. so i
+>connect from the chassi of the hp to the pw audio (ground) connector; still
+>ng.
+>
+>ani thought?
+
+batteri power devic like the powerbook ar sometim more sensit to 
+serial port weird.  i had troubl with connect my mac plu to an hp 95lx
+handheld.  everyth els work okai on that port, but not the hp. (it run
+on two penlit batteri).  it turn out that the plu (by accid or by 
+design flaw?) wa put a 4 volt bia on the serial port that wa do 
+weird thing to the hp (which ha onli 3v dc!).  the hp work fine when 
+connect to the printer port.  
+
+doe your pb screen get dim or anyth when connect to the devic?  have you 
+tri us the printer port?
+
+good luck. 
+
+--jami
+
+
+jami cox  jcox@ess.harri.com | phone:           1 407 633 5757 (work) 
+harri space system corp.     |                  1 407 723 7935 (home)
+ms rock-2, 295 barn blvd.    |the macintosh meet and drink societi
+rockledg, florida  usa        | "speak onli for myself."

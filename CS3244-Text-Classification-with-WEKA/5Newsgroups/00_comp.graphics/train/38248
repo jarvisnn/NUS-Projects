@@ -1,0 +1,135 @@
+from: jona-y@isi.liu.se (jona yngvesson)
+subject: re: point within a polygon
+keyword: point, polygon
+organ: dept of ee, univers of linkop
+line: 129
+
+scrow@hemel.bull.co.uk (simon crow) write:
+
+>i am look for an algorithm to determin if a given point is bound by a 
+>polygon. doe anyon have ani such code or a refer to book contain
+>inform on the subject ?
+
+well, it's been a while sinc thi wa discuss so i take the liberti of
+reprint (without permiss, so sue me) eric hain reprint of the veri
+interest discuss of thi topic...
+
+                /jona
+
+                         o /         \ o
+------------------------- x snip snip x ------------------------------
+                         o \         / o
+
+"give a man a fish, and he'll eat on dai.
+give a man a fish rod, and he'll laze around fish and never do anyth."
+
+with that in mind, i reprint (without permiss, so sue me) relev
+inform post some year ago on thi veri problem.  note the earli us of
+postscript technolog, predat mani of thi year's paper list in the
+april 1st siggraph program announc post here a few dai ago.
+
+-- eric
+
+
+intersect between a line and a polygon (undecid??),
+	by dave baraff, tom duff
+
+	from: deb@charisma.graphic.cornel.edu
+	newsgroup: comp.graphic
+	keyword: p, np, jordan curv separ, ursyhon metriz theorem
+	organ: program of comput graphic
+
+in articl [...] ncsmith@ndsuvax.uucp (timothi lyle smith) write:
+>
+>  i need to find a formula/algorithm to determin if a line intersect
+>  a polygon.  i would prefer a method that would do thi in as littl
+>  time as possibl.  i need thi for us in a forward raytrac
+>  program.
+
+i think that thi is a veri difficult problem.  to start with, line and
+polygon ar semi-algebra set which both contain uncount number of
+point.  here ar a few off-the-cuff idea.
+
+first, we need to check if the line and the polygon ar separ.  now, the
+jordan curv separ theorem sai that the polygon divid the plane into
+exactli two open (and thu non-compact) region.  thu, the line li
+complet insid the polygon, the line li complet outsid the polygon,
+or possibl (but thi will rare happen) the line intersect the polyon.
+
+now, the phrase of thi question sai "if a line intersect a polygon", so
+thi is a decis problem.  on possibl (the decis model approach) is
+to reduc the question to some other (well known) problem q, and then try to
+solv q.  an answer to q give an answer to the origin decis problem.
+
+in recent year, mani geometr problem have been successfulli model in a
+new languag call postscript.  (see "postscript languag", by adob system
+incorpor, isbn # 0-201-10179-3, co. 1985).
+
+so, given a line l and a polygon p, we can write a postscript program that
+draw the line l and the polygon p, and then "output" the answer.  by
+"output", we mean the program execut a command call "showpag", which
+actual print a page of paper contain the line and the polygon.  a quick
+examin of the paper provid an answer to the reduc problem q, and thu
+the origin problem.
+
+there ar two small problem with thi approach. 
+
+	(1) there is an infinit number of wai to encod l and p into the
+	reduc problem q.  so, we will be forc to invok the axiom of
+	choic (or equival, zorn's lemma).  but the us of the axiom of
+	choic is not regard in a veri seriou light these dai.
+
+	(2) more importantli, the question aris as to whether or not the
+	postscript program q will actual output a piec of paper; or in
+	other word, will it halt?
+
+	now, postscript is express enough to encod everyth that a
+	ture machin might do; thu the halt problem (for postscript) is
+	undecid.  it is quit possibl that the origin problem will turn
+	out to be undecid.
+
+
+i won't even begin to go into other difficulti, such as alias, finit
+precis and run out of ink, paper or both.
+
+a coupl of refer might be:
+
+1. principia mathematica.  newton, i.  cambridg univers press, cambridg,
+   england.  (sorri, i don't have an isbn# for thi).
+
+2. an introduct to automata theori, languag, and comput.  hopcroft, j
+   and ulman, j.
+
+3. the c program languag. kernighan, b and ritchi, d.
+
+4. a tale of two citi. dicken, c.
+
+--------
+
+from: td@alic.uucp (tom duff)
+summari: overkil.
+organ: at&t bell laboratori, murrai hill nj
+
+the situat is not nearli as bleak as baraff suggest (he should know
+better, he's hung around the lab for long enough).  by the well known
+dobbin-dullman reduct (see j. dullman & d. dobbin, j. comp. obfusc.
+37,ii:  pp. 33-947, lemma 17(a)) line-polygon intersect can be reduc to
+hamiltonian circuit, without(!) the us of grobner base, so lpi (to coin an
+acronym) is probabl onli np-complet.  besid, ture-complet will no
+longer be a problem onc our crai-3 is deliv, sinc it will be abl to
+complet an infinit loop in 4 millisecond (with scatter-gather.)
+
+--------
+
+from: deb@svax.cs.cornel.edu (david baraff)
+
+well, sure it no wors than np-complet, but that's onli if you restrict
+yourself to the case where the line satisfi a lipschitz condit on it
+second deriv.  (i think there's an '89 siggraph paper from caltech that
+deal with thi).
+
+--
+------------------------------------------------------------------------------
+ j o n a s   y n g v e s s o n          email: jona-y@isi.liu.se
+dept. of electr engin	        voic:  +46-(0)13-282162          
+univers of linkop, sweden         fax  :  +46-(0)13-139282

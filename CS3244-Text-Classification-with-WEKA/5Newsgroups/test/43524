@@ -1,0 +1,68 @@
+from: cjone@physci.ucla.edu (chad jone)
+
+subject: re: help identifi thi card
+
+x-userag: nuntiu v1.1
+
+nntp-post-host: 128.97.27.7
+
+organ: univers of california lo angel
+
+line: 27
+
+
+
+in articl <c5xpzk.f46@imag.fr> ibaa oueichek, oueichek@imag.fr write:
+
+>	i have an ethernet card that i took out off an old lc. the card
+
+>	is manufactur by asant. on it i can read:
+
+>	"asant tech, inc. copyright 1991. maccon + lc rev.b".
+
+>	the card ha an fpu socket on it. it provid thin ethernet connector
+
+>	and there's anoth connector on it which resembel to phone connector.
+
+>
+
+>	my question ar:
+
+>	- will thi card work on ani other model than lc-seri ?, given that
+
+>	it's a pd card, will it work with the iisi pd slot ?. i think there
+
+>	mai be a problem becaus the lc ha 16 bit wide slot.
+
+it probabl won't work with ani other lc.  the on i have for the lc ii
+
+ar rev. d.  no, it won't work in the iisi's pd slot sinc it's a 68030
+
+pd, while the lc ha the 68020 pd.  the iisi and se/30 share the same
+
+kind of card.
+
+
+
+>
+
+>	- what's that other conncetor on the card ?.
+
+that's the 10baset ethernet connector.
+
+
+
+------------------------------------------------------------------------
+
+chad e. jone              | these ar the dai you might fill with 
+
+network manag            | laughter until you break.  these dai you 
+
+ucla physiolog scienc | might feel a shaft of light make it wai 
+
+cjone@physci.ucla.edu     | across your face.  and when you do you'll 
+
+(310) 825-6528  voic  __  | know how it wa meant to be.  see the sign 
+
+(310) 206-9184  fax    \/  | and know their mean.   -- 10,000 maniac
+

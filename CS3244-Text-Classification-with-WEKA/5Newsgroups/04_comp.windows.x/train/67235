@@ -1,0 +1,41 @@
+from: ziegenf@moravian.edu (eric w. ziegenfu)
+subject: re: problem: run aix info from a sun rlogin shell.
+line: 36
+nntp-post-host: batman
+
+in <1r74bcinn6ei@om.sp.mot.com> wcl@risc.sp.mot.com (wayn long) write:
+
+
+>  when i run our rs6000's "info" util through a remot login
+>  shell (rlogin) from my sun sparc 1+, i can no longer type
+>  lower case in ani of info's window prompt's.
+
+>  i thought the prob. mai have been due to my sun window mgr. 
+>  (openlook) be incompat with the aix motif applic
+>  but i tri it under tvtwm also.  same result.
+>  
+>  so thi is presum an x11 kei definit problem between 
+>  workstat - but my system admin. feign ignor.
+>  
+>  what do i need to do the be abl to type lower case into 
+>  thi remot aix motif app. from within my local openlook
+>  window manag?
+>  
+>  
+>-- 
+>-------------------------------------------------------------------
+>wayn long - oe215              internet: wcl@risc.sp.mot.com
+>6501 william cannon drive west  uucp: cs.texa.edu!oakhil!risc!wcl
+>austin, texa 78735-8598        phone (512) 891-4649  fax: 891-3818
+
+i have had the exact same problem, but have not figur out a solut.
+i run a pc with linux (free-unix) with x11r5 and openwindow 3.0, i
+would appreci ani solut.
+
+ewz
+-- 
+
+               /---------------------------------------------\
+              | internet:  ziegenf@moravian.edu              |
+              | uucp:      ...!rutger!lafcol!batman!ziegenf |
+               \_____________________________________________/

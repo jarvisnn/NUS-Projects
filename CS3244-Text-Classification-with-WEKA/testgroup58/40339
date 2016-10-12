@@ -1,0 +1,84 @@
+from: casper@fwi.uva.nl (casper h.s. dik)
+
+subject: re: xsun not find default font (sol2.1)
+
+nntp-post-host: adam.fwi.uva.nl
+
+organ: fwi, univers of amsterdam
+
+line: 36
+
+
+
+joel@zodiac.z-code.com (joel reymont) write:
+
+
+
+>hi, netter!
+
+
+
+>i've just built x11r5 pl 21 under solari 2.1. i've us the multi-screen 
+
+>patch, as well as the r5.suno... patch and everyth build great, except 
+
+>for that error messag xsun give me upon startup. it sai: 
+
+>"cannot set default font path '[stuff delet]'" and "cannot set default font
+
+>'fix'". if i suppli the -fp option, it doesn't complain about the font path
+
+>but still complain about the font. i have symlink from /usr/lib/ to the 
+
+>place where my distribut live.
+
+
+
+try to run xsun under truss(1).
+
+
+
+	the best wai to do thi is by log in over the network
+
+	and type:
+
+
+
+	truss -t open xsun
+
+
+
+open("/opt/x11r5/lib/x11/font/misc/font.dir", o_rdonli, 0666) = 8
+
+open("/opt/x11r5/lib/x11/font/misc/font.alia", o_rdonli, 0666) = 8
+
+open("/opt/x11r5/lib/x11/font/speedo/font.dir", o_rdonli, 0666) = 8
+
+open("/opt/x11r5/lib/x11/font/speedo/font.alia", o_rdonli, 0666) err#2 enoent
+
+open("/opt/x11r5/lib/x11/font/75dpi/font.dir", o_rdonli, 0666) = 8
+
+open("/opt/x11r5/lib/x11/font/75dpi/font.alia", o_rdonli, 0666) = 8
+
+open("/opt/x11r5/lib/x11/font/100dpi/font.dir", o_rdonli, 0666) = 8
+
+open("/opt/x11r5/lib/x11/font/100dpi/font.alia", o_rdonli, 0666) = 8
+
+open("/opt/x11r5/lib/x11/font/misc/6x13.pcf", o_rdonli, 0666) = 8
+
+open("/opt/x11r5/lib/x11/font/misc/cursor.pcf", o_rdonli, 0666) = 8
+
+
+
+thi will give you and idea of where xsun thing the font should be.
+
+
+
+if you have defin  a project root and done a make instal, everyth
+
+should have gone right by default, even without symbol link.
+
+
+
+casper
+

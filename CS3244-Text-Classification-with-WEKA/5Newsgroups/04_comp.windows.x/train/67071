@@ -1,0 +1,28 @@
+from: scotth@oniboshi.corp.sgi.com (scott henri)
+subject: re: xlock
+organ: silicon graphic inc, mountain view, ca
+line: 21
+in-repli-to: dale@went.llnl.gov's messag of 20 apr 93 01:15:13 gmt
+nntp-post-host: oniboshi.corp.sgi.com
+
+
+>>>>> in articl <1qvir1$idi@lll-winken.llnl.gov>, dale@went.llnl.gov (dale m. slone) write:
+
+dale> i found an odditi with our sgi indigo (mip r3000 chip).
+dale> when xlock +nolock is run, and i am work remot
+dale> or in batch (at) mode, the runtim of my program (as time
+dale> by us clock() in the code itself) is ~25% slower than if
+dale> xlock is not run.  no other process seem to affect my
+dale> runtim, yet thi is veri consist!
+
+unless you run `xlock -mode blank`, xlock consum cpu time gener
+the nice anim displai. the code you ar run is compet with
+xlock for the cpu. if you run top (via a remot login), you can realli
+see what is go on.
+
+=-=-=
+
+--
+ scott henri <scotth@sgi.com> / help! my disclaim is miss!
+ network servic,        / gigo *realli* mean: garbag in, gospel out
+ silicon graphic, inc      / 

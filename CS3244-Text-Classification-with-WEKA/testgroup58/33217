@@ -1,0 +1,60 @@
+from: hade@coo.dartmouth.edu (brian v. hugh)
+
+subject: re: centri 610 to 25mhz or 33mhz ???
+
+keyword: centri
+
+repli-to: hade@dartmouth.edu
+
+organ: dartmouth colleg, hanov, nh
+
+disclaim: person, i realli don't care who you think i speak for.
+
+moder: rec.art.comic.info
+
+line: 21
+
+
+
+paryavi@matt.ksu.ksu.edu (saiid paryavi) write:
+
+
+
+>i just put a 33mhz 040 cpu into my centri 610.  now i have a math
+
+>coprocessor, but is it possibl to speed up the centri to run at either
+
+>25mhz or 33mhz??
+
+
+
+    not without replac most of the chip on the motherboard. the c610
+
+isn't like the iisi wa, mean that the motherboard of the c610 is 
+
+actual design to run at the speed of the cpu, and not design to
+
+run at a higher speed (like 25mhz) but be forc to run at the speed of
+
+a slower cpu (20mhz).
+
+
+
+>i didn't see ani oscil on the motherboard like the on on the iisi's
+
+>motherboard!  where is the oscil for the centri?
+
+
+
+    there is more than on oscil. if you ar talk about the cpu
+
+oscil chip, i think that it is locat under the socket for the
+
+'040. at least thi is what i have read in some other post in thi
+
+group.
+
+
+
+-hade
+

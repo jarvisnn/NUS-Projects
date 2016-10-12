@@ -1,0 +1,76 @@
+from: bernward@moepi.do.open.de (bernward averwald)
+
+subject: re: xdm and env. var
+
+organ: home
+
+line: 33
+
+
+
+in articl <9304292140.aa29951@haji.haji_sun> fwr8bv@fin.af.mil write:
+
+>hi,
+
+>
+
+>i am us xdm on x11r5 with ow3 and xview3 on sun3s and sparc run 
+
+>suno 4.1.1.  prior to us xdm, i us to set path and other environ
+
+>variabl (like manpath, helppath, arch, etc) in my .login file.  with xdm,
+
+>the .login file doesn't get execut and therefor neither the olwm
+
+>root-window nor my applic know about these variabl.
+
+
+
+i alwai us the follow in my .[t]cshrc:
+
+
+
+...
+
+f ( $?login == 0 ) then
+
+   sourc $home/.login
+
+endif
+
+...
+
+
+
+and in .login:
+
+
+
+...
+
+setenv login 1
+
+...
+
+
+
+so i don't need to set all environ variabl in my .cshrc, but thei get
+
+set if i login via xdm or xon | xrsh | rx and so on.
+
+
+
+hope thi help,
+
+
+
+bernward
+
+-- 
+
+bernward averwald, heinrichstr. 42, d-4600 dortmund 1, voic: +49 231 144048
+
+fax: +49 231 144047, e-mail: bernward@moepi.do.open.de            (b@rcc.de)
+
+                     i think i need a lear jet
+

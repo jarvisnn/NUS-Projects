@@ -1,0 +1,19 @@
+from: john@goshawk.mcc.ac.uk (john heaton)
+subject: pov reboot pc after memori upgrad
+repli-to: john@nessi.mcc.ac.uk
+organ: mcc network unit
+line: 13
+
+up until last week, i have been run povrai v1.0 on my 486/33 under do5
+without ani major problem.  over easter i increas the memori from 4meg to
+8meg, and found that povrai reboot the system everi time under do5.  i had
+a go at run povrai in a do window when run win3.1 on the same system
+and it now work fine, even if a lot slower.  i would like to go back to 
+us povrai directli under do, anyon ani idea???
+
+john
+-- 
+                 john heaton   -   nr central administr
+      mcc network unit, the univers, oxford road, manchest,  m13-9pl
+            phone: (+44) 61 275 6011   -   fax: (+44) 61 275 6040
+                   packet: g1yyh @ g1yyh.gb7pwy.#16.gbr.eu

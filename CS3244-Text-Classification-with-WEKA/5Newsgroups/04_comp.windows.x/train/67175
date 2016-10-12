@@ -1,0 +1,26 @@
+from: scornd4@technet.sg (hianleong ong)
+subject: re: ..imag process packag under x..
+nntp-post-host: solomon.technet.sg
+x-newsread: tin [version 1.1 pl9]
+line: 20
+
+prateek mishra (mishra@cs.sunysb.edu) wrote:
+
+: i am look for a packag that implement standard
+: imag process function (read/write from
+: standard format), clip, zoom, etc. implement
+: under x. both public domain and privat packag
+: ar of interest. the particular applic area i
+: have in mind is medic imag, but a packag meant
+: for a more gener context would be accept.
+
+: pleas repli to me; i will summar on the net if
+: there is gener interest.
+
+: - prateek mishra
+: mishra@sbc.sunysb.edu 
+
+
+keep tab with the faq in sci.imag.process. there is quit a
+comprehens compil of imag process s/w (x includ). i've
+ftp'ed imagemagick and it great. check out the faq it all there.

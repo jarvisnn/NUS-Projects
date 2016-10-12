@@ -1,0 +1,22 @@
+from: scott@hpcvccl.cv.hp.com (scott linn)
+subject: no 32-bit box on gatewai
+nntp-post-host: hpcvccl.cv.hp.com
+organ: hewlett-packard compani, corval, oregon usa
+line: 16
+
+while plai around with my gatewai 2000 local-bu machin last
+night, it becam appar that window 3.1 didn't give the option
+for 32-bit access for virtual memori.
+
+i am us a perman swap file, and the disk drive is on the local
+bu interfac.
+
+is thi expect, or should i be investig further why no 32-bit
+option appear?
+
+thank for ani help.
+
+--
+
+scott linn
+scott@hpcvccl.cv.hp.com

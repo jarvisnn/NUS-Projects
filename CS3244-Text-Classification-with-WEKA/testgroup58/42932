@@ -1,0 +1,106 @@
+from: beck@irzr17.inf.tu-dresden.de (andr beck)
+
+subject: re: postscript viewer, icon & xbackground
+
+organ: dept. of comput scienc, tu dresden, germani.
+
+line: 45
+
+distribut: world
+
+repli-to: andr_beck@ir.inf.tu-dresden.de
+
+nntp-post-host: irzr17.inf.tu-dresden.de
+
+
+
+
+
+in articl <c6rsjf.em0@ccu.umanitoba.ca>, roholdr@ccu.umanitoba.ca (r ross holder jr) write:
+
+|> 
+
+|> ever sinc i start to us xwindow (which is to sai recent) i've
+
+|> accumul a few question about x-applic.  three exampl follow:
+
+|> 
+
+|> 1) it wa recent mention on comp.os.linux that there exist a post-
+
+|>    script viewer.  i am interest in thi and ani x-editor that is an
+
+|>    improv on xedit (which i find annoi).
+
+
+
+try to get ax - it's a wonder x base editor and much simpler to us than
+
+emac what is a overkil. of cours, emac is no editor but a religion.
+
+
+
+|> 2) at on point i wa the proud owner of an amiga (and have sinc upgrad
+
+|>    to a '386-33).  workbench (the point-and click interfac) us ".info"
+
+|>    file to store the data for icon associ with applic on a given
+
+|>    volum.  i have notic no such architectur anywher under linux; how
+
+|>    doe xwindow associ icon with applic?  can on edit icon or
+
+|>    gener new on for applic somehow?  (if it make a differ
+
+|>    i'm run 'twm'.)
+
+
+
+1) don't call go from an amiga to a ibm 'upgrad'
+
+2) the amiga workbench did the job of a desktop manag, and there is no
+
+   realli amaz good x desktop manag in the public domain.
+
+   (i'm current write on... but it's in veri earli stage)
+
+3) xdtm mai be a medium good replac.
+
+4) x associ icon with noth. a number of x window manag associ
+
+   icon with window, in a wai to eas window manag.
+
+   but thi ha noth to do with icon of a desktop manag applic.
+
+5) the tool bitmap is there for simpl icon draw.
+
+
+
+|> 3) i've notic some peopl have somehow discov a wai to displai .gif
+
+|>    (or some kind of pictur file) in the background, either replac or
+
+|>    overlap some the usual grei background emploi by xwindow.  i heard
+
+|>    thi wa done us some applic, but i don't recal what it wa.
+
+
+
+xv -root -max -quit whatev-imag-file
+
+
+
+
+
+--
+
++-o-+--------------------------------------------------------------+-o-+
+
+| o |                \\\-  brain insid -///                       | o |
+
+| o |                    ^^^^^^^^^^^^^^^                           | o |
+
+| o | andr' beck (abpsoft) mehl: andr.beck@ir.inf.tu-dresden.de | o |
+
++-o-+--------------------------------------------------------------+-o-+
+

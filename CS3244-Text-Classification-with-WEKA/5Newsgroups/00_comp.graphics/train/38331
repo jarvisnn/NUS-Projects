@@ -1,0 +1,75 @@
+from: renew@blade.stack.urc.tue.nl (rene walter)
+subject: cview answer
+organ: mcgv stack, eindhoven univers of technolog, the netherland.
+line: 66
+nntp-post-host: blade.stack.urc.tue.nl
+summari: some cview problem explain
+keyword: stupid program
+x-newsread: tin [version 1.1 pl6]
+
+a veri kind soul ha mail me thi repli for the bug in cview.
+sinc he isn't in the posit to post thi himself, he ask me to post
+it for him, but to leav hi name out. so here it come:
+
+cview ha quit a number of bug.  the on you mention is perhap the most
+annoi, but not the most danger.  as far as i can determin, it ha to
+do with the temp file that cview creat.  cview give the user no control
+over where it place it temp file: it just place them in it
+"current directori".  the problem you mention occur (as far as i can tell)
+when it run out of disk space for it temp file. it seem as if cview
+doesn't check properli for thi situat.  as cview decod a jpeg, it seem 
+to write out a temp file with all the pixel data with 24 bit colour
+inform. then, for 8 bit displai, it doe the "dither", again write
+anoth file with the 8 bit colour inform.  while it is write thi
+second file, it also write the data to your colour card. then when it doe
+the last chunk of 8 bit data, it recopi all the data from the 8 bit file to
+your screen again.  (it doe thi last "recopi" oper for it
+"fit to screen" featur, even when thi featur is not enabl.)
+
+ the result of thi process is the follow:
+  
+     1) if it run out of disk space when write the first 24 bit file, all
+        you ever see is as much data as it ha room for, and the last bit of
+        data is simpli repeat over and over again becaus cview never
+        realiz the disk ha fill up and disk write/read aren't perform.
+
+     2) if it ha enough room for the 24 bit data, but run out of room for
+        the 8 bit data, you see almost all of the pictur as it doe the
+        dither and write to the screen card.
+        howev, then when it finish the dither and recopi the data
+        from the 8 bit file to screen (for whatev reason it doe thi)
+        on again just get a repetit of the last chunk of data for which
+        there wa room on the disk.
+
+thi is just a guess, but probabl fairli accur.  at least the gener
+idea is on track i think, although i have probabl made error in detail
+about file i/o etc.  the wai around thi is  of cours to clear up suffici
+disk space.  the temp file for larg jpeg's (1200x900 and bigger) can be
+veri larg (3 meg + 1 meg ).  on some of the largest i have need in excess
+of 6 meg free disk space.
+
+
+cview ha a much more seriou bug: if you ar try to displai a file from
+a floppi, and you chang floppi while cview ha some temp file open on the
+floppi, then cview in certain circumst will write the directori (and fat
+tabl? i can't rememb) for the remov floppi onto the newli insert
+floppi, thu corruptimg the new floppi in a veri seriou, possibl
+unrevcover wai.  so be care!  it is incred poor program for a
+program to do thi.  on the other hand, when choos file in the open file
+menu, cview insist on do a few disk read everi time on move the
+hi-lighter squar.  incred annoi when it could do them all at onc
+when it get the directori info.  and realli, how much effort doe it take to
+sort a directori list?
+
+
+with much thank to the origin of thi articl.
+ +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+
+ |        rene walter          |          renew@stack.urc.tue.nl           |
+ +-----------------------------+-------------------------------------------+
+ | "will i drown in tear of sorrow, is there hope for tomorrow,           |
+ |  will thi world ever get better, can't we all just live togeth       |
+ |  i don't wanna live in strife  , i just wanna live my life              |
+ |  i deserv to have a futur..."                                         |
+ |                                     -the good girl    "futur"         |
+ +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+
+

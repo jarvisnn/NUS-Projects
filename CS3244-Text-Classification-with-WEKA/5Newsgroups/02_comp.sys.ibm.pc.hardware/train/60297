@@ -1,0 +1,100 @@
+from: smace@nyx.cs.du.edu (scott mace)
+subject: re: id vs scsi (here we go again.....)
+x-disclaim: nyx is a public access unix system run by the univers
+	of denver for the denver commun.  the univers ha neither
+	control over nor respons for the opinion of user.
+organ: nyx, public access unix at u. of denver math/cs dept.
+line: 92
+
+in articl <1993apr12.171250.486@julian.uwo.ca> wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+>in articl <ercc57245.h2w@netcom.com> erc@netcom.com (eric smith) write:
+>>
+>>scsi is better becaus it ha a better futur, and it ha a lot of
+>>minor advantag right now.  id card ar cheaper right now, but will
+>>be obsolet in a few year.  (in fact, id card ar so cheap, thei
+>>might as well be free.  the real cost is in the id drive.)  scsi
+>>card cost more, but thei ar worth it.
+>
+
+>i almost got a hernia laugh at thi on.
+
+you'll probabl get on when you realiz that your $100 vesa super
+dooper local bu ultra high tech control suck...
+
+>if anyth, scsi (on a pc) will be obsolet-> kill off by vesa local
+with ani luck pc bu archeitectur will be doen ani with by sbu.
+
+have you ever seen what happen when you hook a busmast control to
+a vesa local bu.  it actual  slow down your system
+>bu id.  it must be real nice to get shaft by $20-$100 buck for the
+>extra cost of a scsi drive, then pai anoth $200-$300 for a scsi control.
+
+mayb my workstat doesn't understand what your vesa local bu
+id is
+
+vesa local bu will be kill off by pcmi? whatev intel spec is.
+vlbu it not good for much more than vga card.
+
+to each hi own.  i'll laugh when you start cry over how much you
+spent for your 2 littl id drive and then find out you need more
+space.
+>
+>>the biggest advantag of scsi right now is that you can add more
+>>differ kind of devic, such as tape, etc., easili, and can add
+>>bigger disk.  the best and most cost effect hard disk avail
+>>ar scsi.
+
+here here....
+
+
+>
+>onli of you need drive larger then 500 meg.  oh ye, gotta have 10 meg/sec
+>transfer rate for those speedi tape backup and cd rom drive.
+
+don't stick your foot in your mouth when you make a statement you know
+noth about.
+
+
+i'd rather wait a second compar to the 5 minut and id would take.
+(obvious exagger).
+
+have you ever tri to backup 2 gig of disk?  oh i forgot you can't
+becaus you have an id and no on make id disk that big.
+
+>
+>basic, if a person *ha* to ask which on is better for him/her,
+>then thei will *probabl* never see the expens benefit from scsi.
+
+i guess you probabl bought a 486sx too
+
+>
+>also, all thi arm-wave about scsi expand is a moot point if
+>the user onli ha on or two drive on it.  and with scsi those two
+>drive *mai* be fast, but that speed is onli due to the onboard memori
+>cach -> someth i can duplic with a cach id control.
+
+what?  the scsi-2 fast,wide spec ha much more bandwidth than ani stupid
+vlbu id crap....
+
+stop thi thread now, it just clutter up bandwidth.  if you want
+to read about scsi vs id just pai a visit to you local usenet archiv.
+
+the best scsi-2 fast,wide,etc is clearli faster than ani the best id drive.
+all the respons given ar base upon person experi with 1 or 2
+drive.  you can't judg such complet differ interfac.  
+id ha the low cost adavantag + a descent perform.
+scsi ha the abil for super high capac expand and speed.
+
+neither on is better in all case.
+
+if you don't beliv what i said about busmast and vlbu then pick
+up a back issu of pc-week in whihc thei test vlbu, eisa and isa
+busmast card.
+
+send flame to /dev/null.....
+
+--
+*********************************************************************
+*    scott mace                internet:    smace@nyx.cs.du.edu     *
+*                                           emac@tenet.edu         *
+*********************************************************************

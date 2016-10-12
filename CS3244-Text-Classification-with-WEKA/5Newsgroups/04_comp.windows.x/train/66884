@@ -1,0 +1,45 @@
+from: jbore@cosmo.shearson.com (joe bore)
+subject: re: icon a run applic?
+in-repli-to: doomer@teal.csn.org's messag of thu, 15 apr 1993 05:35:22 gmt
+organ: lehman brother
+line: 39
+
+it doesnt matter what window mgr you run under, you can us the x
+routin:
+	xiconfiywindow(displai, w, screen_number)
+		displai *displai;
+		window w;
+		int screen_number;
+
+as in
+
+	xiconifywindow( xtdisplai(w), xtwindow(w), 0);
+
+doe that perform what you want??
+
+
+in articl <c5ifj0.f2u@csn.org> doomer@teal.csn.org (john dumai) write:
+
+   newsgroup: comp.window.x
+   path: shearson.com!uupsi!psinntp!uunet!haven.umd.edu!darwin.sura.net!wupost!zaphod.mp.ohio-state.edu!magnu.ac.ohio-state.edu!csn!teal.csn.org!doomer
+   from: doomer@teal.csn.org (john dumai)
+   sender: new@csn.org (new)
+   nntp-post-host: teal.csn.org
+   organ: colorado supernet, inc.
+   x-newsread: tin 1.1 pl4
+   date: thu, 15 apr 1993 05:35:22 gmt
+   line: 8
+
+   i've been try to figur a wai to programmat icon 
+   an applic run under a motif window manag.  i have tri
+   sever approach includ send event to the applic's
+   border window, but to no avail?  anyon done thi befor?
+
+   thank,
+
+   doomer '85
+--
+-------------------------------------------------------------------------------
+joe bore					 | "life is short...code hard"
+jbore@shearson.com | ...!uunet!shearson.com!jbore| 
+(212)464-3431, beeper:  (212)396-4248		 |

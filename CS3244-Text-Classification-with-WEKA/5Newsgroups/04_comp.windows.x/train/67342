@@ -1,0 +1,62 @@
+from: gerard@dp.co.uk (gerard o'driscol)
+subject: re: asynchron x window?
+organ: the internet
+line: 55
+nntp-post-host: enterpoop.mit.edu
+to: xpert@expo.lc.mit.edu
+
+
+>> no, it isn't.  it is the "x window system", or "x11", or "x" or ani of
+>> a number of other design accept by the x consortium.  in fact,
+>> do "man x" on pretti much ani x11 machin will tell you:
+>> 
+>>      the x consortium request that the follow name  be  us
+>>      when refer to thi softwar:
+>> 
+>>                                   x
+>>                            x window system
+>>                              x version 11
+>>                      x window system, version 11
+>>                                  x11
+>> 
+>> there is no such thing as "x window" or "x window", despit the repeat
+>> misus of the form by the trade rag.  thi probabl tell you someth >> about how much to trust the trade rag -- if thei can't even get the name
+>> of the window system right, why should on trust anyth els thei have 
+>> to sai?
+
+i us to think thi wai, and not just about x. for exampl, incorrect
+english construct such as "it rain" or "it's window id" annoi me.
+howev, there come a time when popular usag start to dictat the wai
+thing realli ar in the world. inde, the fact that x won out over new
+wa realli down to popular opinion (i know, we all think it's(!) technic
+superior as well!).
+
+on a relat topic, who is to sai that "color" is more or less correct
+than "colour" - be irish, and henc us english english as oppos
+to american english, i alwai us the latter except, of cours, for api
+term such as "xalloccolor" and "colormap".
+
+in a world that us the term "window" to refer to microsoft window,
+perhap the time ha come to accept "x window" as a valid term for x.
+i think that thi is a more concis and unclutt term than, sai,
+"the x window system" and, let's face it, almost everyon us it.
+ultim, we all need product sale to more than just x-liter
+peopl. in thi respect, product recognit is import and a short,
+snappi, descript titl ("x" is posit obscur) will help
+when deal with the averag punter (it's sad - i thought i wa a
+softwar engin!). inde it is unfortun that x did not becom
+popularli known as window and let ms worri about whether it should
+be call "microsoft window" or "the microsoft window system" or
+how about just plain "microsoft"!
+
+to summaris (or should that be "summar") the point of thi messag:
+i think there ar far more press issu face the x commun than
+worri about subtl distinct in the name of the window system
+(or should that be "window system"). whatev get recognis is
+fine by me. i agre that on should be care in interpret what
+trade paper sai. howev, i would be reluct to come to thi
+conclus pure on the basi of how thei name the x window system.
+
+
+			gerard o'driscol (gerard.odriscol@dp.co.uk)
+			du pont pixel system ltd.

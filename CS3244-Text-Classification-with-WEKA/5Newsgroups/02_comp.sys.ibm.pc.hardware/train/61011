@@ -1,0 +1,18 @@
+from: brand@s1.gov (hal r. brand)
+subject: request for input: multispin cd-rom drive
+organ: llnl
+line: 9
+distribut: world
+repli-to: brand@s1.gov (hal r. brand)
+nntp-post-host: s1.gov
+keyword: cd-rom
+
+
+i'm look into get an extern, reason fast (<350 ms avg access time)
+multispin cd-rom drive that support "photo cd multi session", ha audio
+output, and scsi interfac for connect to the pa16 scsi port. doe anyon
+have ani comment/experi/warn/recommend thei'd like to share
+concern the texel dm-5024 and/or toshiba txm-3401e and/or other. thank!
+
+						hal r. brand
+						brand@s1.gov

@@ -1,0 +1,26 @@
+from: walli@auspex.com (walli bass)
+subject: re: id vs scsi
+organ: auspex system, santa clara
+line: 20
+nntp-post-host: alpha1-e5.auspex.com
+
+in articl <1993apr19.034517.12820@julian.uwo.ca> wlsmith@valv.heart.rri.uwo.ca
+ (wayn smith) write:
+  [stuff delet]
+>so the lowli low-densiti origin pc fdd card us dma and the pc-at
+>hdd control doesn't!?!?  that make real sens.
+
+actual, it doe make a reason amount of sens. fix disk
+sector ar buffer by the control, and transfer them to
+memori with a 'rep insw' (or whatev the instruct is call) is
+quit effici (singl instruct, goe as fast as the
+control/cpu know how to us the bu). sinc the 286 wasn't cach,
+the bu is like a critic resourc rel to cpu perform, and
+it's possibl that dma bu interfer would caus as much or more
+loss of cpu cycl (for 'comput') as doe the 'rep insw' sequenc.
+
+the floppi, on the other hand, is not buffer, so that us the cpu
+for floppi data transfer (as wa done on the pc jr, by the wai) realli
+doe stink.
+
+walli bass

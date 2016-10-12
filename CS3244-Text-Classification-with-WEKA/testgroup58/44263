@@ -1,0 +1,46 @@
+from: averi@gestalt.stanford.edu (averi wang)
+
+subject: re: can mac superdr read unix disk?
+
+organ: dso, stanford univers
+
+line: 18
+
+
+
+in articl <1993apr24.153158.13756@new.yale.edu> warren delano  
+
+<warren@laplac.biologi.yale.edu> write:
+
+> 
+
+> doe anyon know of a program or util that will
+
+> enabl the mac to read unix (i.e. next) 3.5 in. disk?
+
+> 
+
+> thank,
+
+> warren
+
+> warren@laplac.biologi.yale.edu
+
+
+
+i don't know the answer to your direct question, but if the mac superdr can  
+
+read ms-do disk (can it??) then you can transfer file between the next and  
+
+a mac by us ms-do format disk sinc the next *can* read/write that  
+
+format.  and if you're interest in transfer file, you can also do it  
+
+over the serial port us kermit.
+
+
+
+cheer,
+
+-averi
+

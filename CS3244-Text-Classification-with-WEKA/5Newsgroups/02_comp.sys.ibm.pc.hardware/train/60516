@@ -1,0 +1,38 @@
+from: dingbat@diku.dk (niel skov olsen)
+subject: re: rockwel chipset for 14.4's ... ani good?
+organ: depart of comput scienc, u of copenhagen
+line: 33
+
+tdbear@dvorak.amd.com (thoma d. barrett) write:
+
+>in articl <im14u2c.735176900@camelot> im14u2c@camelot.bradlei.edu (joe zbiciak) write:
+>>what's the word on the chipset?  is thi a rom bug specif 
+>>to a specif brand us the rockwel, or is it the rockwel
+>>chipset itself?
+
+>there were an assort of firmwar problem, but that is pretti much
+>expect with ani fax/modem talk with a differ fax or modem
+>which mai have also been revis or is new.  i'm pretti much
+>oblivi to ani current firmwar problem, so you'll have to get it
+>from someon els.
+
+someon els, could you pleas comment on that. i have just bought
+a twincom 14.4dfi, which ha a rockwel chipset. it wasn't cheap
+so i would like to hear of problem i'm like to run into.
+
+>howev, i can tell you to stai clear of ani board which us the
+>rockwel mpu (as oppos to the dpu) for an intern implement.
+>thi is becaus the mpu us "speed buffer" instead of have a
+>16550 interfac.  without the 550 interfac, the number of interrupt
+>ar still the same and thu mai get drop under multitask
+>condit (like in window).  as far as i know, the "speed buffer"
+>work ok for extern modem if a 550 is us on the intern serial
+>port board.
+
+phew, i wa lucki! the twincom intern version ha a 550a and on
+of the rockwel chip is mark rc144dp.
+
+but still i would like to hear more of the abov mention firmwar
+problem.
+
+niel

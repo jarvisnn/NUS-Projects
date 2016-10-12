@@ -1,0 +1,389 @@
+from: oecjtb@oec4.orbit.dialix.oz.au (john bongiovanni)
+subject: summari: borland/microsoft databas c librari
+organ: orbit engin compani
+line: 384
+
+well, i'm amaz at how success thi exercis wa. i receiv 20
+respons and 4 request for summari. thank to everyon who made it
+possibl.
+
+on my own i wa abl to find out about codebas, accsi, and q+e. codebas
+and accsi ar c librari without sql. q+e is a window applic
+that can be commun through window dde call, where you send a sql
+string and receiv the result.
+
+most peopl wrote to tell me about the paradox engin from borland. other 
+product mention were: microsoft's odbc, accsi, quadbas, codebas,
+rbase, and q+e. onli odbc, quadbas, rbase, and q+e have sql.
+
+for myself, i decid on codebas, mostli becaus it ha an ansi c
+portabl version that run under do, unix, etc, and includ the
+sourc code, and portabl is import in my applic. it work
+with dbase, foxpro, or clipper file.
+
+howev, i feel that microsoft's odbc look veri promis.
+it's mostli a formalis of build and submit sql queri, and
+format queri result. as the respons sai, it's avail via ftp,
+except it's effect unusu without two manual:
+the "odbc programm's refer" and the "odbc sdk guid". moreov,
+odbc doesn't actual interpret sql and lias with databas, that's 
+up to driver that should be provid by databas manufactur. also,
+it's window onli (it's actual an extens to the window sdk). 
+nevertheless, it's a start at a sql interfac standard, and should
+make life interest in the futur.
+
+here's my origin post, follow by the respons, separ by 
+a line of asterisk (*).
+
+> doe anyon know if borland or microsoft have librari for access
+> their respect databas (paradox, foxpro) from within c program?
+> i'd realli like to be abl to build a sql queri string and pass it
+> to a function which return the queri result in some format. fail
+> that, ani other access would still be better than noth.
+> 
+> i'd also like to hear of third parti librari for do the same thing.
+> 
+> if other peopl ar interest, i'll prepar a summari of what i'm
+> told and post it.
+> 
+> thank to all.
+
+****************************************************************************
+
+borland ha a product call paradox engin that doe just what you want. 
+the current version is 3.0, which is fulli compat with (ack) paradox
+4.0.  (why the version ar differ, i don't know. pd engin 2.0 wa
+compat with pdox 3.0 and 3.5...).  it consist of a rather broad
+librari of function for acces databas file from both pascal (i think
+turbo pascal 5.5 and up) and c (i think either microsoft or borland).
+
+now.. read the box... it's "borland paradox engin & databas
+framework".  work with ani borland c/c++, mocrosoft c 6.01 or later,
+turbo c++ for window, turbo pascal 6.0 or later, tp for window 1.0 or
+later.  for framework applic, bc++ 3.0 or later or ms c/c++ 7.0. it
+doe have support for object useag...
+
+i haven't had a real chanc to realli us it myself... but it look fairli
+complet... i'm plan to us it thi summer.
+-rick
+-- 
++--------------------------------------------------------------------------+
+|  rick osterberg   osterb@husc.harvard.edu  617-493-7784  617-493-3892  |
+|     2032 harvard yard mail center   cambridg, ma   02138-7510   usa     |
++--------------------------------------------------------------------------+
+
+****************************************************************************
+
+borland ha a product which is call paradox engin. 
+i do not know about ms.
+
+the paradox engin i know veri well, and it definiti
+not a replac for sql, but it will enabl you to
+save and restor record, ha lock, et al. supposedli
+the paradox for window wa impement on top of it.
+
+
+---------------------------------------------------------
+
+charl parker			  phone.(800) 669 9165
+technic support			(617) 498 3321
+centerlin softwar, inc.	    fax.(617) 868 6655
+
+cparker@centerlin.com
+                                       cyberspac
+momma, don't let yer children grow up to be ^ cowboi ...
+---------------------------------------------------------
+
+
+****************************************************************************
+
+i know borland ha a librari of routin for access paradox from within
+a c program. thei recent came out with version 3.0. thi work with both
+borland and microsoft's c compil.
+
+				shailesh bhobe
+				(708) 979-7101
+				att!psp!smb2
+
+
+****************************************************************************
+
+  ms ha put their odbc sdk into the public domain; it's
+ _big_ (i believ 1.8 mb), but worth download over a
+ fast link. look at ftp.uu.net in vendor/microsoft/odbc-sdk.
+
+ also some compani ar start to provid sql engin; i
+ just got on for rbase, not exactli cheap at $450, but it
+ allow program in c or vbasic (under do or window) to talk
+ to data base us sql function in your code.
+
+ hth
+
+ walter knopf
+ fermilab
+
+ knopf@fnal.fnal.gov
+
+
+****************************************************************************
+
+   check out the odbc toolikt from microsoft.  it is avail on
+ftp.uu.net:vendor/microsoft/odbc-sdk.  thi is the wai that we've
+chosen to access databas from all of our app.
+mj
+-- 
++----------------------------------------------------------------------------+
+| ppppp  sssssiiiiii   specialist in ms-window and window-nt develop  |
+| pp  ppss      ii     call for inform about our ooa/ood tool:  ooaid.  |
+| ppppp  ssss   ii     michaeljon miller                   mikem@apertu.com |
+| pp        ss  ii     profici solut, inc.               612-860-2181 |
+| pp    sssss iiiiii   2877 holm av so. #5          minneapoli, mn 55408 |
++----------------------------------------------------------------------------+
+
+
+****************************************************************************
+
+borland sell the "paradox engin" which is a c languag interfac to
+paradox, dbase, btriev, an asci file.  thei also sell "databas framework"
+which includ the engin plu a collect (with sourc) of c++ class
+for us the engin.
+
+-- 
+earl roethk
+eroethk@em.cdc.com
+
+
+****************************************************************************
+
+i actuali have paradox engin.  it is a librari of function (larg model)
+for access the paradox's databas.  it seem to be work fine,
+but i never did try it thouroughli.  it cost ~200$.
+
+hope it will help you...
+
+
+from: david lefebvr <david@hp817.speedwar.com>
+
+****************************************************************************
+
+borland provid a databas lib call paradox engin which can access
+and us the databas file aswel as mani other thing.
+
+gari.
+
+-- 
+``````````` bell@nellad.cc.monash.edu.au `````````````````````````````````````
+| gari bell                                                                   |
+| depart of robot and digit technolog                               |
+|faculti of comput, caulfield campu, monash univers, australia         |
+
+****************************************************************************
+
+paradox engin is the librari  for paradox .
+
+
+artur babecki
+artur@ii.uj.edu.pl
+
+****************************************************************************
+
+borland sell the paradox engin -- which ha all the paradox call in it.
+it hardli sql though.  you can do search on kei field and on 
+indivu field, but no comparison oper like <, >=....
+
+so it pretti pain (in my opinion) do do anyth besid simpl
+retriev and insert/updat.
+
+i'm current us it (i have an eval copi..) and i've link it in to
+some entri screen i've written.
+
+the engin librari add about 100k to the size of the program, but you can
+load it as an overlai us borland's vroom manag.
+
+now borland claim that later version of the engin will have sql support
+but thei don't realli expect it till late in the year... or even next year
+thei ar try to get thrid parti to help out..
+
+if you have ani other question -- let me know...
+
+mike kamlet
+mike@vpnet.chi.il.us
+
+
+****************************************************************************
+
+ye, borland sell their paradox engin separ.  it ha c, c++, and
+pascal interfac, although the underli interfac is in 'c'. well at
+least for version 2.0 of the engin which i have (cost $99 at egghead).
+thei now have version 3.0 of the engin, and a separ c++ class packag
+for it.
+
+
+-- 
+michael d. kersenbrock
+adc kentrox - portland, oregon
+michaelk@kentrox.com
+uunet!kentrox!michaelk
+
+
+****************************************************************************
+
+i've us accsi for paradox (new version is almost readi for paradox
+4.0) to access paradox file from c.  it pretti good.  not sql
+though.  have heard of borland paradox engin or some such which is
+suppos to do likewis, but not sure of what it is exactli.
+
+hope thi help, good luck!
+chri
+
+from: fernand@slinki.cs.nyu.edu (christoph fernand)
+
+****************************************************************************
+
+borland sell their "paradox engin (3.0)".  it's a librari of function
+for access paradox db file.  it come with librari for:
+ms c 7.0
+bcc 3.1
+turbo pascal (v??)
+and i believ it come with turbo pascal/win librari as well.
+the c librari come in both do and window flavor (the win stuff 
+be dll's).  
+
+when i got it, it also came with crystal report which
+is a graphic report gener.  it allow you to creat a gener
+form and us it within a compil program us pdox engin.  i don't
+know if thei still offer it or what the current price is, i paid 
+someth like $50-$60 for an upgrad from the earlier version though...
+
+hope thi help...
+
+-david taylor
+---
+|      ->> the command <<--	   | it is easier to chang the 	|
+|internet: gt2847c@prism.gatech.edu| specif to fit the program	|
+|    also: dtaylor@cfd.gatech.edu  | than vice-versa.			|
+|     and: root@cfd.gatech.edu	   | -author unknown (but veri wise :-) |
+
+
+****************************************************************************
+
+
+if you want to do sql from within your program, check out quadbas. i don't
+have their address oop -- ye i do!    :
+quadbas system, inc.
+790 lucern dr #51
+sunnyval, ca 94086 (usa)
+
+phone: 408-738-6989 (voic)  408-738-6980 (fax)
+
+ask for the sql/win demo disk.
+
+it look good to me (i have a background in embed sql in ingr -- thi
+look real similar). it's a littl expens, but if you order the demo
+and then just wait thei will probabl send you a special offer that'll
+probabl run about $500 us. good luck!
+
+best,
+                             tom delosh
+
+from: delosh@emunix.emich.edu (tom delosh)
+
+
+****************************************************************************
+
+borland ha the paradox engin librari.  it ha librari for
+both c and pascal to access paradox file under do/window.  
+but for paradox, i believ you'd have bui have the sql link 
+sinc pdox itself isn't sql compliant.  i've us the engin 
+for over a year now and have been pretti satisfi with it.  
+under do, it's a real pig.  it tack on about 120k to the size of 
+your program.
+
+tim ma
+associ programm
+univers of utah
+email:  tim@src.cppa.utah.edu
+
+****************************************************************************
+
+i don't know about microsoft, but borland sell the paradox engin for c/c++ &
+pascal (in on packag).  and if you want dbase compat file there is a 
+librari call codebas from sequit softwar that work with c/c++.
+
+from: davidr@rincon.ema.rockwel.com (david j. rai)
+
+
+****************************************************************************
+
+
+we're us q+e databas librari to do what you describ.
+it's a set of dll's access through a common api to talk to most of the
+major databas format. we're us it to build an applic that
+queri sever databas us sql queri. _all_ access us q+e is
+done us sql. the packag is avail through microwai in melbourn. i
+believ it is produc by pioneer system in the us. we have no
+associ with microwai or pioneer system other than be satisfi
+custom.  feel free to mail me for further inform.
+
+chri 
+(program for nsw nation park and wildlif servic)
+-- 
+-------------------------------------------------------------------------------
+chri hutchinson                       box u302
+research programm                    univers of new england
+chri@sulaw.law.su.oz.au               armidal nsw 2351
+(067) 727 014
+
+
+****************************************************************************
+
+paradox engin 3.0 provid a complet set of c librari for 
+access paradox tabl. howev, it seem that it support 
+onli borland/turbo c and microsoft c. when i tri to compil 
+the engin's sampl applic with the waterloo watcom c/c++
+(32-bit) compil, it complain that the librari file llibc.lib 
+is miss even though i am quit certain that the file is not
+part of watcom c or the engin. anybodi have ani success with 
+other c compil?
+
+ron.k.ng@hydro.on.ca
+--------------------
+
+
+****************************************************************************
+
+i'm current develop an app. with borland's "paradox engin
+for c" (it also come in pascal), which ha recent gone to version 3.0
+(i.e., px engin 3.0 is compat with paradox 4.0, and downward compat.
+w/3.5).  there ar inde c lib for fox access, but i can't think of the
+name offhand - i'm sure someon ha alreadi written you in that regard -
+(i think i just saw an add for a fox lib in the "c user journal", which
+is a good place to look for thi type of packag in gener, by the wai).
+i've been pai my due to learn a lot of the quirk of px eng. over the
+past year - wouldn't recommend it for a complex multius app.--but i'm
+stai with it for now--it's like a bad marriag: i've got too much time
+invest in learn and work-around!  but if your interest is limit
+to a simpl singl-user interfac (you want to build your own sql engin,
+i take it), px engin will do the job easili - it doesn't sound like
+you'll be bump into ani of the gotcha.  if you do, write me; i mai
+be abl to point you in the right direct.
+
+from: raymond@cruzio.santa-cruz.ca.us (raymond)
+
+****************************************************************************
+
+borland ha a "paradox engin and databas framework 3.0" which give you
+a "c" (and assembl?) api to paradox databas.  thi is part of "boca"
+-- borland's object compon architectur.  thei have technic brief
+on boca, pdoxeng, and other product of their.
+
+from: jdm@jumbo.read.tasc.com (jame d. mcnamara)
+-------------------  jame d. mcnamara | tasc  --------------------
+55 walker brook drive | read, ma 01867-3238 | 617-942-2000x2948
+
+****************************************************************************
+
+-- 
+john bongiovanni, system analyst, orbit engin compani, perth, australia
+oecjtb@oec4.orbit.dialix.oz.au, bongo@alumni.caltech.edu
+opinion express ar my own and not those of my organis.

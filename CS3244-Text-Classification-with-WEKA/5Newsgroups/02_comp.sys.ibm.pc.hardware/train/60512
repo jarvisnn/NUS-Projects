@@ -1,0 +1,28 @@
+from: wlsmith@valv.heart.rri.uwo.ca (wayn smith)
+subject: re: scsi on do
+organ: the john p. robart research institut, london, ontario
+keyword: scsi, do, streamer
+nntp-post-host: valv.heart.rri.uwo.ca
+line: 21
+
+in articl <1993apr19.072253.14522@dde.dk> ibh@dde.dk (ib hojm) write:
+>	i have a question concern scsi on do.
+>
+>	i have a st01 scsi control and two hard-disk conect
+>	(id's 0 and 1). i'd like to connect a scsi streamer, but i
+>	don't have softwar to access it. doe such a beast exist
+>	as sharewar or pd ?
+>	also what if i want a third disk ? i know that do onli can
+>	"see" two two physic and four logic disk. will it be
+>	possibl to us extra disk ?
+
+contrari to what other might have thought, i actual did have a scsi drive
+onc.  it wa the seagat 296n and the st-02 control.  i found that the
+control couldn't keep up with a 1:1 interleav, so the best i could do
+with the drive wa a 2:1 interleav and a data transfer of about 450 k/sec.
+
+i have had that drive/control coexist with mfm, rll, and id drive
+becaus the st-02 bio will kinda muscl itself in there with no help
+need from the comput's bio.  do will see mani logic drive, much more
+than 4 (i've had up to 10).  i've often wonder how mani scsi drive you
+could hang off a st-01/02.

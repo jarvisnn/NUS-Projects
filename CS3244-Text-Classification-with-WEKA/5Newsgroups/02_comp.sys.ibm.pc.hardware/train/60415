@@ -1,0 +1,36 @@
+from: venaa@flipper.pvv.unit.no (stig venaa)
+subject: re: can't write to 720 floppi
+organ: programvareverkstedet - unit
+line: 31
+
+in articl <1qndvd$jhn@usenet.in.cwru.edu> da416@cleveland.freenet.edu (andi nicola) write:
+>
+>in a previou articl, limagen@hpwala.wal.hp.com () sai:
+>
+>>ok all you expert!
+>>need answer quick.386 machin ,1.44 floppi ; unabl to write to a format
+>>720 disk.machin claim that disk is write protect,but it is not.
+>>
+>>note: it 'll read 720's with no problem.
+>>
+>>pleas e_mail or post.
+>>
+>>
+>>
+>>
+>if the disk is not an hd-type disk, i.e. with the extra hole in the case
+>opposit the normal write protect hole, the drive will not write to the
+>disk. you can punch a similar hole with whatev is handi or bui a small
+>devic, a squar hole puncher, for about $19.95...see the back page of
+>comput shopper magazin for it.
+>
+>to be brief, make the hole ani wai you can or no write!
+>
+>-- 
+>andi nicola
+>
+
+of cours you should be abl to write a dd 720kb disk without
+make ani hole.
+
+stig

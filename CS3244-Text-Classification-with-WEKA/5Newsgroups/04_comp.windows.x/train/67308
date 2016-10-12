@@ -1,0 +1,44 @@
+from: yuri@physic.heriot-watt.ac.uk (yuri rzhanov)
+subject: repost: xview slider
+organ: the internet
+line: 37
+nntp-post-host: enterpoop.mit.edu
+to: xpert <xpert@expo.lc.mit.edu>
+
+hi xpert,
+
+thi is a repost (no on respond to my desper yell 8-(
+i can't believ there is no xview wizard ani more 8-)...
+
+i'm us slider in my xview app, usual with edit numer
+field. but i seem to have no control over the length of thi field.
+in some app it appear long enough to keep sever charact,
+in some - it cannot keep even the maximum valu set by 
+panel_max_valu! 
+
+as i understand, panel_valu_displai_length, which control
+number of charact to be displai in text item, doesn't
+work in the case of slider, despit the fact that <panel.h>
+contain the follow bit:
+
+	/* panel_multilin_text_item, panel_numer_text_item,
+	 * panel_slider_item and panel_text_item attribut
+	 */
+	panel_notifi_level	= panel_attr(attr_enum,			 152),
+	panel_valu_displai_length	= panel_attr(attr_int,		 182),
+
+which give a hint that thi attribut can be us for slider.
+but 1) set thi attribut give noth, and 2) xv_get'ting
+thi attribut give warn: bad attribut, and return valu 0.
+
+strang thing is that dec's port of xview give plenti of space
+in a text field, but not sun's xview...
+
+can someon share hi experi in manag slider in xview with me,
+and clear thi problem? 
+
+ani help is veri much appreci.
+
+yuri
+
+yuri@uk.ac.hw.phy

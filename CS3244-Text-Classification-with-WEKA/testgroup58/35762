@@ -1,0 +1,80 @@
+subject: re: fractal terrain gener?
+
+from: pdbourk@ccu1.aukuni.ac.nz (paul david bourk)
+
+organ: univers of auckland, new zealand.
+
+keyword: fractal terrain mac
+
+line: 34
+
+
+
+deb47099@uxa.cso.uiuc.edu (daniel e. bradlei) write:
+
+
+
+>	doe anyon know of a fractal terrain gener for mac, someth
+
+>	i could hopefulli import into a 3d program like swivel or stratavis?
+
+>	i know infini-d ha built in capabl, but i don't have access to
+
+>	infini-d. i download two program from umich, in graphic/fractal,
+
+>	but both were from 1990-91 and crash under system 7. i think thei
+
+>	were black and white anywai. pleas, email me if you know of anyth,
+
+>	as i don't check the newsgroup veri often.
+
+>		thank in advanc.
+
+>			dan bradlei deb47099@uxa.cso.uiuc.edu
+
+
+
+ye i have written someth that creat mesh fractal terrain
+
+surfac for exactli the purpos you requir, import into 3d
+
+model packag. be warn, the data content is high and bring
+
+mani packag to their knee. we us it primarili for microst
+
+but it export dxf, as well as other format, so you should be ok.
+
+you can get it from my ftp mirror site in the us.
+
+it is
+
+   wuarchiv.wustl.edu
+
+my stuff is locat in the
+
+   mirror/architec
+
+directori. pleas ftp the readm file first.
+
+
+
+-- 
+
+paul d bourk                       school of architectur, properti, plan
+
+pdbourk@ccu1.auckland.ac.nz        the univers of auckland
+
+ph:   +64 -9 373 7999 x7367         privat bag 92019
+
+fax:  +64 -9 373 7410               auckland, new zealand
+
+-- 
+
+paul d bourk                       school of architectur, properti, plan
+
+pdbourk@ccu1.auckland.ac.nz        the univers of auckland
+
+ph:   +64 -9 373 7999 x7367         privat bag 92019
+
+fax:  +64 -9 373 7410               auckland, new zealand
+

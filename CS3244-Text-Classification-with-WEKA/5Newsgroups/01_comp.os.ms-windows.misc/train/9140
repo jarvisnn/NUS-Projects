@@ -1,0 +1,26 @@
+from: al@col.hp.com (al devilbiss)
+subject: re: winbench
+articl-i.d.: hp-col.1pqp3rinng85
+distribut: world
+organ: hp colorado spring divis
+line: 18
+nntp-post-host: reptil4.col.hp.com
+
+jorg@erex.east.sun.com (jorg lach - sun bo hardwar) write:
+> is there ani ftp site that carri winbench result for differ graphic
+> card? in excel (xl) format? what is the latest version of winbench and
+> how do thei differ? is the sourc avail, and ha anybodi try to port it to
+> x-window, at least in a wai that will make comparison possibl?
+> 
+on ftp.cica.indiana.edu in pub/pc/win3/misc/winadv.zip is a writeup by
+steve gibson of infoworld with winbench 3.11 and a number of other 
+benchmark result for nine isa and four vlb video card.  thi is a 
+veri current upload and is like to have ani card you're current 
+give seriou consider.  not in xl format.  latest version of
+winbench that i know of is ver 3.11.  i believ thei try to maintain
+the same rate scale between version, and new version ar releas
+to defeat the lastest code trick put in by driver programm to
+beat the benchmark.  don't know on the last on.
+-- 
+al devilbiss
+al@col.hp.com

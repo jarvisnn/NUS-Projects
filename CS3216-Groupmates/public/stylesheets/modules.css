@@ -1,0 +1,103 @@
+.user-type-nav {
+  margin-bottom: 20px;
+}
+
+.lead {
+  padding: 8px;
+  text-align: center;
+}
+
+.class-roster {
+  border: 1px #D3E0E9 solid;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.classmate-box {
+  height: 191px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.classmate-name {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.classmate-avatar {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  .classmate-avatar img {
+    width: 100%;
+  }
+
+.button {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 55%;
+}
+
+/*--- animations ---*/
+.classmate-front {
+  z-index:10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.classmate-back {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(26,76,110,0.5);
+  text-align:center;
+  backface-visibility:hidden;
+}
+
+.classmate-box:hover .classmate-front, .classmate-box.hover .classmate-front {
+    z-index: 1;
+}
+.classmate-box:hover .classmate-name, .classmate-box.hover .classmate-name {
+    z-index: -1;
+}
+
+.user-type {
+  text-align: center;
+}
+
+.module-name {
+  color: #337AB7;
+  padding: 10px;
+  font-weight: bold;
+  float: right;
+  width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

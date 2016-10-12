@@ -1,0 +1,50 @@
+from: ted@isgtec.com (ted richard)
+subject: re: pc-x
+distribut: usa
+organ: isg technolog inc. mississauga ont. canada
+line: 43
+x-newsread: tin [version 1.1 pl9]
+
+to follow up my own note:
+ted richard (ted@isgtec.com) wrote:
+: al devilbiss (al@col.hp.com) wrote:
+: :
+: : it look like everyth work as advertis but i am disappoint
+: : with the speed.  i'm us an intel 400 intern 14.4k modem in the pc
+: : with telebit 14.4k on the unix end, which ar current limit to
+: : 19.2kbit by the unix com link. to get a quantit comparison, i
+: : did 'cat file' where "file" is 20 kbyte uncompress ascii text, and
+: : it took 75 second to scroll through an x window over the modem link,
+: : 270 char/sec.  us the ident hardwar and procomm+fw the same
+: : "cat file' take 11 second, 1820 char/sec.  btw, i us ncd pc xview
+: : on my pc at work (hp) everi dai for the same unix access from a pc over
+: : a lan and like that just fine.  the same 'cat file' scroll by in
+: : ~2 second on the lan connect.
+
+i just tri a few experi. i cat'd a 20261-byte file (471 line)
+under variou scenario:
+
+pc-xview for do in a full-screen os/2 window (1024x768x16):    18 sec
+telix (do) in an os/2 window (1024xs768x256):                  107 sec!
+telix (do) is a full-screen os/2 window (standard vga):        11 sec
+telix (do) in a window 3.1 window (1024x768x256):             30 sec
+uw/win in a seamless os/2 window (1024x768x256):        gave up after 4 min!
+uw/win in window 3.1 (1024x768x256):           faster, but gave up after 2 min
+uw/win in a seamless os/2 window us pg       30 sec, could have been a
+                                                littl faster (i had to keep
+                                                hit the space bar)
+
+i wa us an ati wonder xl video card, by the wai.
+
+so pc-xview for do look pretti good (and the line-by-line scroll
+in os/2 desktop look pathet, although full-page redraw ar pretti
+good).
+
+i tri it under pc-xview us my normal (9x15bold or 10x20) font,
+and with a veri small font, and there wa no differ in the time.
+the modem receiv light wa on pretti solidli, so it look like the
+bottleneck wa the 9600-baud modem, not the screen draw.
+
+--
+ted richard            ted@isgtec.com             [...!uunet.ca!isgtec!ted]
+isg technolog inc.   6509 airport rd., mississauga  ont.  canada   l4v 1s7

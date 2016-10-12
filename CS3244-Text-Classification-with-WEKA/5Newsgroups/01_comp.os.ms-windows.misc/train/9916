@@ -1,0 +1,31 @@
+from: bilan@cp.msu.edu (thoma j bilan)
+subject: w4wg & novel
+organ: dept. of comput scienc, michigan state univers
+line: 23
+distribut: world
+nntp-post-host: walnut.cp.msu.edu
+origin: bilan@walnut.cp.msu.edu
+
+i instal window for workgroup on my network and i'm have problem 
+map drive in the file-manag.
+
+situat:
+if i put lastdriv = z in my config.sy, netx will run but i can't access
+drive f: to log in to novel.  
+if i don't put lastdriv = z in my config.sy i can't access other w4wg 
+drive from the file-manag.
+
+it seem that there should be a wai to make netx work with the lastdriv = 
+statement in my config.sy.
+
+i would appreci ani help.  it's probabl an easi problem that all you 
+window guru's solv mani mani moon ago...
+
+thank,
+tom bilan
+
+-- 
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ depart of death by engin   ^   surgeon gener's warn:        $
+$ michigan state univers            ^   graduat school mai caus brain   $
+$ bilan@cp.msu.edu                    ^   damag and sporad loss of hair  $

@@ -1,0 +1,52 @@
+select town, count(*), max(round(resale_price/floor_area_sqm)) as max_psm, round(avg(round(resale_price/floor_area_sqm))) as avg_psm, min(round(resale_price/floor_area_sqm)) as min_psm from resales group by town order by avg_psm DESC;
+                   town                   | count | max_psm | avg_psm | min_psm 
+------------------------------------------+-------+---------+---------+---------
+ CENTRAL AREA                             |   480 |   10645 |    7184 |    3759
+ QUEENSTOWN                               |  1834 |    9810 |    6556 |    4394
+ BUKIT MERAH                              |  2605 |   10217 |    6457 |    4276
+ MARINE PARADE                            |   485 |    8017 |    6426 |    4769
+ BUKIT TIMAH                              |   127 |    7744 |    6283 |    4658
+ KALLANG/WHAMPOA                          |  1895 |   10410 |    5709 |    3689
+ BISHAN                                   |  1149 |    7781 |    5577 |    3576
+ TOA PAYOH                                |  2122 |    9333 |    5543 |    3544
+ CLEMENTI                                 |  1649 |    8367 |    5465 |    3750
+ GEYLANG                                  |  1916 |    8250 |    5313 |    3390
+ ANG MO KIO                               |  3238 |    7802 |    5126 |    3421
+ SERANGOON                                |  1435 |    7391 |    5092 |    3518
+ BEDOK                                    |  4332 |    7586 |    4937 |    3415
+ PUNGGOL                                  |  1880 |    6250 |    4826 |    3170
+ SENGKANG                                 |  3964 |    7222 |    4777 |    3227
+ TAMPINES                                 |  4782 |    6898 |    4633 |    3280
+ JURONG EAST                              |  1546 |    6084 |    4602 |    3117
+ BUKIT BATOK                              |  2689 |    7867 |    4576 |    3204
+ HOUGANG                                  |  3372 |    6216 |    4573 |    3000
+ YISHUN                                   |  4407 |    6033 |    4308 |    2375
+ JURONG WEST                              |  5446 |    6217 |    4307 |    2932
+ BUKIT PANJANG                            |  2217 |    6222 |    4287 |    2802
+ SEMBAWANG                                |  1585 |    6000 |    4207 |    2993
+ PASIR RIS                                |  2226 |    5541 |    4175 |    3047
+ WOODLANDS                                |  5396 |    6000 |    4023 |    2687
+ CHOA CHU KANG                            |  2622 |    5780 |    4003 |    2807
+(26 rows)
+
+select flat_type, block, street_name, storey_range, floor_area_sqm, flat_model, lease_commence_date, resale_price, rank() over(partition by lease_commence_date order by resale_price DESC) as rank from resales where town like '%BUKIT TIMAH%' and month like '%2012-05%' order by resale_price DESC;
+    flat_type     | block |           street_name            | storey_range | floor_area_sqm |           flat_model           | lease_commence_date | resale_price | rank 
+------------------+-------+----------------------------------+--------------+----------------+--------------------------------+---------------------+--------------+------
+ 5 ROOM           | 1     | QUEEN'S RD                       | 21 TO 25     |         123.00 | Standard                       |                1974 |       890000 |    1
+ 5 ROOM           | 14    | TOH YI DR                        | 06 TO 10     |         122.00 | Improved                       |                1988 |       731000 |    1
+ 5 ROOM           | 16    | TOH YI DR                        | 06 TO 10     |         122.00 | Improved                       |                1988 |       695000 |    2
+ 4 ROOM           | 14    | TOH YI DR                        | 06 TO 10     |         104.00 | Model A                        |                1988 |       608800 |    3
+ 4 ROOM           | 16    | TOH YI DR                        | 01 TO 05     |         104.00 | Model A                        |                1988 |       605000 |    4
+ 4 ROOM           | 6     | FARRER RD                        | 06 TO 10     |          91.00 | Improved                       |                1974 |       585000 |    2
+ 3 ROOM           | 4     | QUEEN'S RD                       | 06 TO 10     |          74.00 | Improved                       |                1974 |       433000 |    3
+(7 rows)
+
+select * from (select substring(month,1,4) as year, substring(month,6,2) as min_month, count(*) as min_month_total from resales group by month) AS foo WHERE min_month_total = (SELECT min(min_month_total2) FROM (select substring(month,1,4) as year2, substring(month,6,2) as min_month2, count(*) as min_month_total2 from resales group by month) AS foo where year2=year) ORDER BY year;
+ year | min_month | min_month_total 
+------+-----------+-----------------
+ 2012 | 12        |            1493
+ 2013 | 02        |             886
+ 2014 | 02        |             959
+ 2015 | 02        |            1152
+(4 rows)
+

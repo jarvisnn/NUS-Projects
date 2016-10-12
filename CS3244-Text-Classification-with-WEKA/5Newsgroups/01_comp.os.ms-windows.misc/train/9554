@@ -1,0 +1,24 @@
+from: avinash@silver.lc.mit.edu (avinash chopd)
+subject: truetyp font that displai but do not print.
+organ: mit laboratori for comput scienc
+distribut: na
+line: 18
+
+i just instal a new truetyp font under ms-window 3.1
+but though all the applic displai the font correctli on the
+screen, quit a few of them fail to print out the document correctli
+(on a laserjet 4 - non-postscript printer).
+
+when i us the font in coreldraw, the document print correctli, so i assum
+coreldraw know that the font ha to be download to the printer.
+
+but when i us the window accessori write, the printer print squar
+box in place of the charact of the new font. yet, write doe
+displai the font correctli on the screen.
+
+i look through all the window and laserjet manual, but got nowher.
+all of them just make the statement that truetyp font will print
+exactli as you see them on the screen---so i assum window know that a font
+ha to be download automat---but, how to make it do that????
+
+appreci ani help....

@@ -1,0 +1,74 @@
+from: dale_adam@gatewai.qm.appl.com (dale adam)
+
+subject: re: quadra 950 margin video?
+
+organ: appl comput, inc.,  cupertino, ca
+
+line: 32
+
+
+
+in articl <1993apr23.055934.1967@galileo.cc.rochest.edu> 
+
+carlo@merlin.cv.rochest.edu (carlo tiana) write:
+
+> we ar have a problem with a quadra 950 that ha stump a coupl of
+
+> tech sent to us by the vendor, as well as us :-)
+
+> thi quadra is 'stuf' with 64mb ram, 2mb vram and some larg disk (400mb
+
+> i think). what happen is that after a certain variabl interv of time
+
+> the video circuitri 'lose' vertic sync. it is quit appar that the
+
+> mac cpu is still ok, and the problem realli seem to lie with the video
+
+> circuitri, sinc you can still save your document, quit your aplpic,
+
+> even pull down menu etc. (onli the displai is scroll lik crazi, so it's
+
+> pretti hard to hit menu item ;-)
+
+
+
+[... other info delet ...]
+
+
+
+> ha anyon ani idea? pleas? pleas email as well as post caus i seem
+
+> to be spend a lot of time reboot my mac late and have a lot less
+
+> time avail to read new! :-)
+
+
+
+ar you sure it's not a problem caus by softwar?  i've seen thi sort 
+
+of effect when a runawai program (which could be caus by an init 
+
+conflict, for instanc) accident wack on a regist in the video 
+
+hardwar.  have you tri boot with no extens and then let the 
+
+q950 just sit there in the finder?  you might also want to try chang to 
+
+24-bit address (ye, i know you can't access your full 64 mb of ram - 
+
+it's just an experi) as the video hardwar regist can't be access 
+
+then.
+
+
+
+anoth thing to try as a 'recoveri' measur is to us someth like 
+
+quickkei to chang the pixel depth of the displai.  thi reprogram (some 
+
+of) the video hardwar regist and mai allow sync to be restor.
+
+
+
+- dale adam
+

@@ -1,0 +1,54 @@
+from: gperez@cec.uchil.cl (gonzalo perez c.)
+
+subject: re: compil mh-6.8 (and xmh) on sco 3.2.4.
+
+nntp-post-host: cipr.cec.uchil.cl
+
+organ: centro de computacion (cec), universidad de chile
+
+x-newsread: tin [version 1.1 pl9]
+
+line: 21
+
+
+
+jess w. asher (jessea@u013.me.vp.com) wrote:
+
+>i'm try to get mh compil (and then xmh) and i'm have some problem.
+
+>i've got mh-6.8, us gcc on sco 3.2.4.  my mh file is list below.  doe
+
+>anyon have ani suggest on what i can add to get it to compil??
+
+
+
+>===========
+
+
+
+>bin             /usr/local/bin
+
+..
+
+>cc              gcc
+
+>ccoption       -o -ansi -d__stdc__=0 -dsysv -dsysv386 -dsco -d_svid
+
+
+
+	i think the -tradit option to gcc would help.
+
+	person i us -tradit -o2 -funrol-loop to compil it
+
+	on sun4.1.1.
+
+
+
+	hope thi help...
+
+
+
+gonzalo
+
+gperez@dcc.uchil.cl
+

@@ -1,0 +1,29 @@
+from: dla@se05.wg2.waii.com (doug acker)
+subject: re: xterm build problem in solari2.1
+organ: western geophys explor product
+line: 22
+nntp-post-host: se05.wg2.waii.com
+in-repli-to: dla@se05.wg2.waii.com's messag of 16 apr 1993 23:58:27 gmt
+
+>>>>> on 16 apr 1993 23:58:27 gmt, dla@se05.wg2.waii.com (doug acker) said:
+	doug> nntp-post-host: se05.wg2.waii.com
+
+	doug> ..continu on my build problem, i got stuck here build xterm...
+
+
+	doug> undefin                       first referenc
+	doug>  symbol                             in file
+	doug> index                               /usr/ucblib/libtermcap.a(termcap.o)
+	doug> rindex                              /usr/ucblib/libtermcap.a(termcap.o)
+	doug> ld: fatal: symbol referenc error. no output written to xterm
+
+
+actual .. the problem is that you have to build with ld_librari_path
+unset as well as ld_run_path.
+--
+dougla l.acker                western geophys explor product
+____    ____     ____          a divis of western atla intern inc.
+\   \  /   /\   /   /\         a litton / dresser compani
+ \   \/   /  \ /   /  \        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  \  /   / \  /   /\   \       internet  :  acker@wg2.waii.com
+   \/___/   \/___/  \___\      voic     :  (713) 964-6128

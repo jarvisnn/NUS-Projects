@@ -1,0 +1,33 @@
+from: wlsmith@valv.heart.rri.uwo.ca (wayn smith)
+subject: re: id vs scsi
+organ: the john p. robart research institut, london, ontario
+nntp-post-host: valv.heart.rri.uwo.ca
+line: 27
+
+in articl <1qpu0uinnbt1@dn1.nmsu.edu> bgrubb@dant.nmsu.edu (grubb) write:
+>wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+>sinc the mac us onli scsi-1 for hard drive ye the "figur includ a
+>hundr $$$ for scsi driver"  thi is sloppi peopl and dumb.
+
+what group is thi?  thi is not a mac group.
+
+>ok onc again with the scsi spec list:
+
+why the spec list again?  we ar talk scsi on a pc, not on a mac or
+a unix box.  and we ar talk isa bu, or possibl eisa or vlb.
+
+thi isin't comp.periph.scsi.
+tell me what the perform figur ar with a singl scsi drive on a pc
+with an isa (or eisa or vlb) bu.
+
+theoret perform figur ar not relev to thi group or thi
+debat.  i'm sure that there ar some platform out there that can
+handl the 40 meg/sec of scsi xyz wide'n'fast, but the pc isin't on of
+them.
+
+>if we ar to continu thi thread state clearli which scsi you ar talk 
+>about scsi-1 or scsi-2 or scsi over all {scsi-1 and scsi-2}
+>it doe make a differ.
+
+well mayb if the scsi design peopl had their act togeth than mayb
+all pc's would have built in scsi port by now.

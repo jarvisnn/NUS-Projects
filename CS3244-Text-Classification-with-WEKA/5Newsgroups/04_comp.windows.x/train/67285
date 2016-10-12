@@ -1,0 +1,52 @@
+from: matt@centerlin.com (matt landau)
+subject: re: asynchron x window?
+organ: centerlin softwar, inc.
+line: 45
+distribut: inet
+nntp-post-host: 140.239.1.32
+
+in <elli.735675321@nova> elli@nova.gmi.edu (r. stewart elli) write:
+>>is there anywai to us x window over an async line?  clearli you could us
+>                                x
+>it is x window.
+
+no, it isn't.  it is the "x window system", or "x11", or "x" or ani of
+a number of other design accept by the x consortium.  in fact,
+do "man x" on pretti much ani x11 machin will tell you:
+
+     the x consortium request that the follow name  be  us
+     when refer to thi softwar:
+
+                                  x
+                           x window system
+                             x version 11
+                     x window system, version 11
+                                 x11
+
+there is no such thing as "x window" or "x window", despit the repeat
+misus of the form by the trade rag.  thi probabl tell you someth
+about how much to trust the trade rag -- if thei can't even get the name
+of the window system right, why should on trust anyth els thei have 
+to sai?
+
+with regard to dialup x11 implement, there ar sever.  you can
+bui serial x11 termin from a coupl of compani, includ both 
+graphon and ncd.  (in fact, i'm compos thi from an ncd run x11
+over serial line across 14.4 kbaud connect.)  
+
+ncd also sell a softwar-onli packag that provid xremot (which is
+ncd's implement of serial x11) for pc's.  there mai be other such 
+softwar packag avail.
+
+x11r6 is suppos to includ a standard compress scheme for run
+x11 over low-speed connect.  it's call low bandwidth x (lbx), and 
+is base on improv version of the techniqu us in ncd's xremot. 
+
+it seem like that onc lbx is releas as a consortium standard, there
+will be sever vendor will to suppli implement for variou 
+sort of hardwar.
+
+followup direct to comp.window.x
+--
+ matt landau			wait for a flash of enlighten
+ matt@centerlin.com			  in all thi blood and thunder

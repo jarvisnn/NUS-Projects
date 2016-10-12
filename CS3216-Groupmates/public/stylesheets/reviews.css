@@ -1,0 +1,36 @@
+@import url(stars.css);
+.form-table td {
+  padding: 20px 0;
+}
+
+.form-table {
+  width: 80%;
+}
+
+.form-table-container {
+  display: flex;
+  flex-flow: row;
+}
+
+.form-table-container::before, .form-table-container::after {
+  content: '';
+  flex: auto;
+}
+
+.form-table textarea {
+  resize: vertical;
+}
+
+.review-user-image, .review-relationship-arrow {
+  float: right;
+}
+
+.review-relationship-arrow {
+  margin-top: 18px;
+}
+
+.review-user-image img {
+  margin: 5px;
+  margin-top: 0px;
+  width: 50px;
+}

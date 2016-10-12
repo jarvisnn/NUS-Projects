@@ -1,0 +1,30 @@
+from: koberg@spot.colorado.edu (allen koberg)
+subject: re: what is at bu clk speed?
+nntp-post-host: spot.colorado.edu
+organ: univers of colorado, boulder
+line: 24
+
+in articl <12934.73.uupcb@hal9k.ann-arbor.mi.us> robert.desonia@hal9k.ann-arbor.mi.us (robert desonia)  write:
+>
+>s >there is on param in the bio setup that sai at bu clk.  i have
+>clock, which is beyond isa spec, but mai be ok if all of the card can 
+>run that fast.  i would set it to 3 ( in fact i did ) and set it back if 
+>anyth act weird ( e.g. you get unexplain floppi drive error, your 
+>modem lock up, you have video problem, etc. ).  if you overdr the at 
+>bu, then that should be the first thing to check if you get an error on 
+>your system.  
+>
+>it is pretti safe to overdr your at bu, as long as your isa card 
+>still work flawlessli.  i suggest back up your hd befor plai with 
+>it though.
+
+on my 486dx-50 (realli 50, not dx2), my at bu is set to clk/3.
+
+at 16.67 mhz, i have no problem.  soundblast pro, zoom 14.4 fxm, rll
+control, etc.  all work fine.
+
+if i set it to 2 (25 mhz), i simpli don't get past the post routin.
+
+i doubt you could actual damag much by plai with it.
+
+allen

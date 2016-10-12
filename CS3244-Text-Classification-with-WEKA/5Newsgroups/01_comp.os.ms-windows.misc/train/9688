@@ -1,0 +1,48 @@
+subject: re: gatewai microsoft mail/workgroup via 96
+from: wesj@extsparc.usu.edu (we jame)
+repli-to: wesj@extsparc.usu.edu
+distribut: world
+organ: sun microsystem, inc.
+nntp-post-host: extsparc.agsci.usu.edu
+line: 40
+
+
+we here at utah state univers cooper extens have been us
+w4wg for a while now.  we want to talk to the internet with the mail
+packag so we got the smtp gatewai.  you also need a tcp/ip transport
+packag on top of that which is utterli stupid but that's what thei
+requir to get the smtp gatewai to work.  you need a dedic pc
+for the gatewai and if you ar look at remot access you need anoth
+dedic pc for the remot mail stuff.  we do not have the remot mail
+go but you indic that that is what you want to do.  
+
+there is a glitch somewher in the system though.  i don't know if it
+is ms mail, the gatewai or the vax here on campu that is choke in the
+mail that is sent.  the scenario is thi.  the outgo mail goe to a
+unix system which then rout the mail where it need to go.  if that mail
+is rout to the vax, the vax ha problem some time receiv the mail.
+most messag do get through thi wai except if someon ha there mail
+on the vax forward to some other locat.  that is the main gotcha.
+where ever the mail is forward to that person get a messag header
+then a messag sai "boudari:= (error garbag code stuff)".  if you
+can stai awai from send to a vax you ar ok.  the system peopl
+of cours sai that the vax is not the problem, the gatewai is probabl
+the problem.  if anyon want to get help it is onli $175.00 for on
+support call. (until problem is work out)  phooei to that i sai.  i
+am look vigor for a better idea.  
+
+if you go forward on ani of thi and find out anyth knew,  pleas
+drop me a note - anyon.  the next itter is suppos to have tcp/ip
+built in thei sai........  the netxt itter of w4wg
+
+good luck!!!!!
+
+*******************************************************************
+  we jame                   email:  wesj@extsparc.agsci.usu.edu
+  utah state univers
+  cooper extens
+  system specialist
+  umc 4900                    voic:  (801)750-2229
+  logan, ut 84322-4900          fax:  (801)750-3268
+*******************************************************************
+

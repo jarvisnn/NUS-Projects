@@ -1,0 +1,53 @@
+from: anik@crhc.uiuc.edu (sadun anik)
+subject: re: win nt - what is it???
+organ: center for reliabl and high-perform comput
+line: 45
+	<rick.734972416@silver> <2bcf2664.3c6a@deneva.sdd.trw.com>
+nntp-post-host: lyra.crhc.uiuc.edu
+in-repli-to: reimert@.etdesg.trw.com's messag of fri, 16 apr 93 21:34:28 gmt
+
+in articl <2bcf2664.3c6a@deneva.sdd.trw.com> reimert@.etdesg.trw.com (scott p. reimert) write:
+
+>   somewher in thi thread, it ha been said that window nt (tm) is a 
+>   multi-user os, as well as multi-thread, etc.  i certainli haven't
+>   seen thi to be the case.  there ar seper account for each person,
+>   and even seper directori if that is desir.  i don't see an 
+>   implent of simultaneuo us though.
+>
+>		   scott
+
+it certainli is multi-user. what i have seen from the march beta is
+that it doesn't yet come with the stuff which exploit multi-user
+featur. i rememb somebodi from ms state that it doesn't allow
+two user share on gui. my interpret of thi wa that on user
+per consol but all the network and rpc base stuff you want. 
+
+i believ ftp and rlogin deamon for nt system will come from third
+parti. somebodi alreadi ha a beta version of an unsecur ftpd on the
+net. there is no reason why on cannot write a posix base shell like
+csh on unix for remot login. 
+
+in gener i like nt when i check it out. it slow compar to
+win3.1 (just like ani other real os). the beta version, although be
+slow, bott up much faster than my sun workstat. window subsystem
+also start up a lot faster than x window. i believ bill gate wa
+right when he state that nt wa not for everybodi. after plai
+around with it for a while i wa convinc. if i own a busin us
+a "busi comput" from ibm or some other establish vendor, i
+would consid move to nt platform becaus it would provid a much
+cheaper solut (if you ar run sql server etc.). it provid
+the robust such an applic requir. 
+
+on the other hand if you like your do game, more or less forget
+about nt. you can alwai boot to do  but in gener that defeat
+the purpos of us nt. most of nt's featur ar visibl in a
+network environ and in such an environ you can't reboot your
+machin at will. for person us, i would rather wait for the win32
+base window releas (whatev you name it) than jump to nt bandwagon.
+i expect most applic will keep on us win16 until win32
+becom wide avail. 
+
+--
+sadun anik, u of illinoi at urbana-champaign
+center for reliabl and high-perform comput
+e-mail: anik@crhc.uiuc.edu

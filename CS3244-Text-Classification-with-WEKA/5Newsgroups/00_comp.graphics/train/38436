@@ -1,0 +1,25 @@
+from: bryanw@rahul.net (bryan woodworth)
+subject: re: cview answer
+keyword: stupid program
+nntp-post-host: bolero
+organ: a2i network
+line: 18
+
+in <1qlobb$p5a@tuegat.tue.nl> renew@blade.stack.urc.tue.nl (rene walter) write:
+[most info regard danger of read from floppi disk omit]
+>unrevcover wai.  so be care!  it is incred poor program for a
+>program to do thi.  on the other hand, when choos file in the open file
+>menu, cview insist on do a few disk read everi time on move the
+>hi-lighter squar.  incred annoi when it could do them all at onc
+>when it get the directori info.  and realli, how much effort doe it take to
+>sort a directori list?
+
+in all fair, how mani peopl do you know person who read imag
+from floppi drive?  i haven't tri it with jpeg, but i do realiz how
+agonizingli slow it is with gif file.  
+
+nevertheless, it is an import bug that need to be squash.  i am
+mere point out that it wa probabl overlook.  while it is seriou,
+on must keep in mind that it will probabl affect at most 5% of the
+target user of cview.
+

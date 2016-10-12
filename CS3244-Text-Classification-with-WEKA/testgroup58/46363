@@ -1,0 +1,108 @@
+from: cek@sdc.boe.com (conrad kimbal)
+
+subject: re: problem with r4 releas
+
+organ: boe comput servic, seattl, wa
+
+line: 48
+
+nntp-post-host: zulu
+
+
+
+in articl <mcgari.93mai12172612@mojo.intellect.com>, mcgari@intellect.com (mike mcgari) write:
+
+|> in articl <1sr3klinnauq@new.u.washington.edu> pramod@stein.u.washington.edu (pramod mahadev) write:
+
+|> 
+
+|> >   ld: unidentifi extern symbol
+
+|> >      _get_wmshellwidgetclass
+
+|> >      _get_applicationshellwidgetclass
+
+|> >
+
+|> >     i us -lxaw -lxmu -lxext -lx11 -lxt not in thi order but in a proper order
+
+|> >
+
+|> >   i am wonder if there ha to be some chang in my link librari or should
+
+|> >   i includ some more librari.
+
+|> >
+
+|> >   ani help in thi matter will be veri us and highli appreci
+
+|> >
+
+|> 
+
+|> we get thi too.  if you put -bstatic into your option it goe awai. 
+
+|> thing seem to run ok without it...must not be call veri often.
+
+
+
+from the faq:
+
+
+
+subject:  96)! what is thi link problem with libxmu on suno 4.1.[23]?
+
+
+
+        in suno 4.1.2 sun fix a share-librari bug in ld which conflict
+
+with the wai x build the share xmu librari, caus these symbol, notabl,
+
+to be undefin when build some x11 client:
+
+        _get_wmshellwidgetclass
+
+        _get_applicationshellwidgetclass
+
+compil "-bstatic -lxmu -bdynam" appear to work.
+
+
+
+to solv the problem if you ar us openwindow 3.0 (x11r4-base xt), pleas
+
+contact your local sun offic and request the follow patch:
+
+
+
+patch i.d.      descript
+
+100512-02       4.1.x openwindow 3.0 libxt jumbo patch
+
+100573-03       4.1.x openwindow 3.0 undefin symbol when us
+
+                        share libxmu
+
+
+
+[greg earl, earl@sun.com; 7/92]
+
+
+
+a sourc patch for us with the mit x11r4 librari wa develop by conrad
+
+kimbal (cek@sdc.boe.com); it retrofit into r4 some fix made in r5 to
+
+get around thi problem. the patch is on export in [1/93]
+
+        contrib/x11r4_suno4.1.2_patch_version3.z
+
+
+
+--
+
+conrad kimbal        | client server tech servic, boe comput servic
+
+cek@sdc.cs.boe.com | p.o. box 24346, ms 7a-35
+
+(206) 865-6410        | seattl, wa  98124-0346
+

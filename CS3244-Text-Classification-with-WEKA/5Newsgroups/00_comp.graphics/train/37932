@@ -1,0 +1,28 @@
+from: jk87377@lehtori.cc.tut.fi (kouhia juhana)
+subject: re: more grai level out of the screen
+organ: tamper univers of technolog
+line: 21
+distribut: inet
+nntp-post-host: cc.tut.fi
+
+in articl <1993apr6.011605.909@ci.uab.edu> sloan@ci.uab.edu
+(kenneth sloan) write:
+>
+>why didn't you creat 8 grei-level imag, and displai them for
+>1,2,4,8,16,32,64,128... time slice?
+
+by '8 grei level imag' you mean 8 item of 1bit imag?
+it doe work(!), but it doesn't work if you have more than 1bit
+in your screen and if the screen intens is non-linear.
+
+with 2 bit per pixel; there could be 1*c_1 + 4*c_2 time,
+thi give 16 level, but thei ar linear if screen intens is
+linear.
+with 1*c_1 + 2*c_2 it work, but we have to find the best
+compin -- there's 10 level, but 16 chois; best 10 must be
+chosen. differ compin for the same level, vari a bit, but
+the level keep their order.
+
+reader should verifi what i wrote... :-)
+
+juhana kouhia

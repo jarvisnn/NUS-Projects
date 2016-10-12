@@ -1,0 +1,400 @@
+from: iop@server2.iie.ncku.edu.tw
+
+subject: program wm_protocol in open look toolkit.....
+
+organ: casd lab.
+
+line: 195
+
+
+
+hi, all:
+
+    i am studi the book --> "unix desktop guid to open look".
+
+there is an exampl --> winprop.c that demonstr how to program
+
+wm_protocol properti in chapter 8.  it can run, but onli show the
+
+static text messag, no notic pop_up. what is the problem?
+
+	    thank in advanc for help!!1	    iop
+
+/*-------------------------------------------------------------*/
+
+/*  file:  winprop.c
+
+ *
+
+ *  show how to set properti on a window.
+
+ *
+
+ */
+
+#includ <x11/xatom.h>	/* for definit of xa_atom */
+
+#includ <x11/intrins.h>
+
+#includ <x11/stringdef.h>
+
+#includ <xol/openlook.h>
+
+#includ <xol/statictext.h>
+
+#includ <xol/oblongbutt.h>
+
+#includ <xol/notic.h>
+
+/* thi file defin the atom with _ol_ prefix */
+
+/* id of the top-level and noticeshel widget */
+
+static widget top_level, notic_shell;
+
+static widget make_notic();
+
+static char messag[] = "client us properti to commun \
+
+with the window manag. thi exampl illustr how an open \
+
+look applic request notif from the window manag \
+
+when certain event occur. the commun is in the form of \
+
+a clientmessag event that the applic process in an \
+
+event-handler.";
+
+/* atom us for inter-client commun */
+
+atom atom_wm_protocol, atom_wm_delet_window,
+
+     atom_wm_save_yourself;
+
+static void handl_wm_messag();
+
+static void save_and_exit();
+
+static void save_yourself();
+
+static void pop_notic();
+
+static void do_exit();
+
+/* string to hold comand line (for us in respond to
+
+ * the wm_save_yourself protocol messag.
+
+ */
+
+char save_cmdline[128];
+
+/*-------------------------------------------------------------*/
+
+void main(argc, argv)
+
+int  argc;
+
+char **argv;
+
+{
+
+    widget w;
+
+    int i;
+
+/* save the command-line for us in respond to the
+
+ * wm_save_yourself protocol messag.
+
+ */
+
+    sprintf(save_cmdline, "%s ", argv[0]);
+
+    if(argc > 1)
+
+	for(i = 1; i < argc; i++)
+
+	{
+
+	    strcat(save_cmdline, argv[i]);
+
+	    strcat(save_cmdline, " ");
+
+	}
+
+/* creat and initi the top-level widget */
+
+    top_level = oliniti(argv[0], "ol_main", null,
+
+			       0, &argc, argv);
+
+/* creat a statictext widget */
+
+    w = xtvacreatemanagedwidget("stext",
+
+		      statictextwidgetclass, top_level,
+
+		      xtnstring,    messag,
+
+		      xtnwidth,     200,
+
+		      null);
+
+/* creat a noticeshel widget for later us */
+
+    make_notic(top_level);
+
+/* intern the atom */
+
+    atom_wm_protocol = xinternatom(xtdisplai(w),
+
+					"wm_protocol", fals);
+
+    atom_wm_delet_window = xinternatom(xtdisplai(w),
+
+				    "wm_delet_window", fals);
+
+    atom_wm_save_yourself = xinternatom(xtdisplai(w),
+
+				    "wm_save_yourself", fals);
+
+/* add an event-handler to process clientmessag event sent
+
+ * by the window manag
+
+ */
+
+    xtaddeventhandl(top_level, noeventmask, true,
+
+		      handl_wm_messag, null);
+
+/* realiz the widget and start process event */
+
+    xtrealizewidget(top_level);
+
+/* append the properti wm_delet_window and wm_save_yourself
+
+ * to the definit of the wm_protocol properti. thi step
+
+ * requir the window id of the top-level widget. the window
+
+ * id is valid onli after the widget is realiz.
+
+ */
+
+    xchangeproperti(xtdisplai(top_level), xtwindow(top_level),
+
+		    atom_wm_protocol, xa_atom, 32,
+
+		    propmodeappend,
+
+		    &atom_wm_delet_window, 1);
+
+    xchangeproperti(xtdisplai(top_level), xtwindow(top_level),
+
+		    atom_wm_protocol, xa_atom, 32,
+
+		    propmodeappend,
+
+		    &atom_wm_save_yourself, 1);
+
+    xtmainloop();
+
+}
+
+/*-------------------------------------------------------------*/
+
+static void handl_wm_messag(w, client_data, p_event)
+
+widget	  w;
+
+xtpointer client_data;
+
+xevent	  *p_event;
+
+{
+
+    if(p_event->type == clientmessag &&
+
+       p_event->xclient.messag_type == atom_wm_protocol)
+
+    {
+
+	if(p_event->xclient.data.l[0] == atom_wm_delet_window)
+
+	{
+
+		save_and_exit();
+
+	}
+
+	if(p_event->xclient.data.l[0] == atom_wm_save_yourself)
+
+	{
+
+		save_yourself();
+
+	}
+
+    }
+
+}
+
+/*-------------------------------------------------------------*/
+
+static void save_and_exit()
+
+{
+
+/* displai a notic give the user a chanc to respond */
+
+    pop_notic(top_level, notic_shell);
+
+}
+
+/*-------------------------------------------------------------*/
+
+static void save_yourself()
+
+{
+
+/* set the wm_command properti to the save command-line. */
+
+    xchangeproperti(xtdisplai(top_level), xtwindow(top_level),
+
+		    xa_wm_command, xa_string, 8,
+
+		    propmodereplac, save_cmdline,
+
+		    strlen(save_cmdline) + 1);
+
+}
+
+/*-------------------------------------------------------------*/
+
+static widget make_notic(parent)
+
+widget parent;
+
+{
+
+    widget w, n_text, n_control, n_exit, n_cancel;
+
+/* creat a button and provid a callback to pop up a notic */
+
+    w = xtvacreatemanagedwidget("quitbutton",
+
+		      oblongbuttonwidgetclass, parent,
+
+		      xtnlabel,    "exit...",
+
+		      null);
+
+    xtaddcallback(w, xtnselect, pop_notic, null);
+
+/* creat the noticeshel widget. note that you have to us
+
+ * xtvacreatepopupshel instead of the usual
+
+ * xtvacreatemanagedwidget.
+
+ */
+
+    notic_shell = xtvacreatepopupshel("quitnotic",
+
+		      noticeshellwidgetclass, w,
+
+		      null);
+
+/* get the id of the text and control area widget of the
+
+ * noticeshel.
+
+ */
+
+    xtvagetvalu(notic_shell,
+
+		  xtntextarea,	      &n_text,
+
+		  xtncontrolarea,     &n_control,
+
+		  null);
+
+/* place a messag in the text area of the noticeshel */
+
+    xtvasetvalu(n_text,
+
+	    xtnstring, "pleas confirm exit from program.",
+
+	    null);
+
+/* add button to the control area of the noticeshel.
+
+ * each button ha an appropri callback.
+
+ */
+
+    n_exit = xtvacreatemanagedwidget("noticeexit",
+
+		      oblongbuttonwidgetclass, n_control,
+
+		      xtnlabel,    "exit",
+
+		      null);
+
+    xtaddcallback(n_exit, xtnselect, do_exit, null);
+
+    n_cancel = xtvacreatemanagedwidget("noticecancel",
+
+		      oblongbuttonwidgetclass, n_control,
+
+		      xtnlabel,    "cancel",
+
+		      xtndefault,  true,
+
+		      null);
+
+    return w;
+
+}
+
+/*-------------------------------------------------------------*/
+
+static void pop_notic(w_eman, w_notic)
+
+widget	  w_eman, w_notic;
+
+{
+
+    xtvasetvalu(w_notic, xtnemanatewidget, w_eman, null);
+
+/* pop up the noticeshel widget. the noticeshel widget make
+
+ * sure that the aplic wait until the user select from
+
+ * on of the button in the noticeshel's control area.
+
+ */
+
+    xtpopup(w_notic, xtgrabexclus);
+
+}
+
+/*-------------------------------------------------------------*/
+
+static void do_exit(w, call_data, client_data)
+
+widget	  w;
+
+xtpointer call_data, client_data;
+
+{
+
+    xclosedisplai(xtdisplai(w));
+
+    exit(0);
+
+}
+

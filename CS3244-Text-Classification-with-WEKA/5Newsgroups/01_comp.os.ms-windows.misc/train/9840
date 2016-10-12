@@ -1,0 +1,24 @@
+from: qq43@liverpool.ac.uk (chri wooff)
+subject: tidi up after remov an ol server
+keyword: ol, spss
+nntp-post-host: chad3-22.liv.ac.uk
+organ: the univers of liverpool
+x-newsread: tin [version 1.1 pl8]
+line: 16
+
+a while ago i instal spss for window as part of an evalu. onc
+the evalu wa complet i duli delet the softwar from my pc.
+
+unfortun there is still a "ghost" of spss left: when i run
+someth like "write" and go to emb an object then "spss chart"
+appear on the list of object i'm offer. i look around all
+the obviou "ini" file without success. the next thing i tri
+wa look for the string "spss chart" in everi file in the 
+window directori. it turn up in a file call req.dat (or
+reg.dat). unfortun the file wa binari and so i didn't feel
+inclin to edit it.
+
+i'd welcom a solut for remov spss from the list of ol server.
+
+chri wooff
+(c.wooff@liverpool.ac.uk)

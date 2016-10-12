@@ -1,0 +1,13 @@
+from: kreyl@ld.loral.com (ed kreyl 6966)
+subject: sun-os and 8bit ascii graphic
+organ: loral data system
+distribut: comp.graphic
+line: 7
+
+i would like to know if anyon ha had ani luck us the upper 128 ascii
+charact on a sun station.  i am try to convert a fortran program to run
+on a sun.  when we write charact buffer to the sun which contain char(218)
+or char(196) or char(197) etc.  we get charact on the screen but thei ar
+not the charact in the standard ascii tabl.
+
+ani idea or help will be appreci.

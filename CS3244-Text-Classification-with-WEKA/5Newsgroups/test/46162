@@ -1,0 +1,36 @@
+from: slc@a2.cim.cdc.com (steve chesnei x4662)
+
+subject: internation of applic and muulti-byte charact
+
+keyword: i18n
+
+repli-to: slc@.cdc.com
+
+organ: metaphas technolog, inc.
+
+line: 11
+
+
+
+we ar research what support there is on variou platform for applic
+
+to us multi-byte charact (e.g., japanes kanji).  we know that unix
+
+and x window can contain support for the i18n standard (depend on level
+
+and platform).  what support for i18n or wide charact exist on the mac, 
+
+window 3.1 and window nt?
+
+
+
+-- 
+
+steve chesnei                                    slc@catherin.cim.cdc.com     
+
+metaphas technolog inc.                        612-482-4662 (voic)
+
+4233 north lexington avenu                      612-482-4001 (fax)
+
+arden hill, mn  55126
+

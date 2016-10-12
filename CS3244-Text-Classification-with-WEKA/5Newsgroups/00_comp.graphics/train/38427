@@ -1,0 +1,30 @@
+from: steve@hcrlgw (steven collin)
+subject: sphere from 4 point
+organ: central research lab. hitachi, ltd.
+line: 24
+nntp-post-host: hcrlgw
+
+>
+>anoth method is to first find the center of the circl defin by 2 set
+>of 3 point, and intersect the normal from there.  thi would also defin
+>the circl center.  howev, small numer imprecis would make the
+>line not intersect.  supposedli 3 plane have to intersect in a uniqu
+>point if thei ar not parallel.
+>
+
+have thought about thi, why don't you project the 2 line onto the 2d
+plane form by the line.  do an intersect calcul in the plane in
+2d, where you're guarante a uniqu solut (unless thei're parallel which
+won't happen in thi case), and then us parametr distanc along the line
+from the circl centr to determin the exact point of interest.  thi
+bypass the messi error propog requir to do the calcul in 3d.
+
+hope i haven't put my foot in it again!
+
+steve
+---
+-- 
++---------------------------------------+--------------------------------+
+| steven collin			| email: steve@crl.hitachi.co.jp |
+| visit comput graphic research	| phone: (0423)-23-1111 	 |
+| hitachi central research lab. tokyo.	| fax:   (0423)-27-7742		 |

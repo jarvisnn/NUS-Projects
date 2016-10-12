@@ -1,0 +1,72 @@
+from: brown@ftm.uucp (vidiot)
+
+subject: re: view postscript file under x window
+
+repli-to: brown@ftm.uucp (vidiot)
+
+organ: vidiot's other hangout
+
+line: 30
+
+
+
+in articl <gordon.737605006@mon.sp.mot.com> gordon@mon.sp.mot.com (gordon sasamori) write:
+
+<in <604@ftm.uucp> brown@ftm.uucp (vidiot) write:
+
+<
+
+<>ow 3.0 is the same.  but, the definit of broken is rel.  pageview
+
+<>requir dsc compliant postscript file, in order to stop at page break.
+
+<>i don't consid that broken.  i sai that ani program that put out a
+
+<>postscript file that isn't dsc compliant is broken.
+
+<
+
+<well that mai be true.  howev, the man page for pageview for ow 2.0
+
+<doe not mention about dsc complianc.  in ani event, the point here
+
+<is that if you try to displai some ps file us pageview you will
+
+<find out that it's not a practic tool.
+
+
+
+it is true that the man page for pageview doe not sai that the file need
+
+to be dsc compliant.  that is the fault of the left hand not know what the
+
+right hand is do at sun.  i wa inform by a sun employe that the pageview
+
+program doe requir dsc compliant postscript.  there wa the possibl that
+
+it wa go to be chang so that if the file wasn't dsc compliant that it
+
+would stop at each showpag.  i believ that thi method would preclud be
+
+abl to go backward and forward through the file, i.e., you could onli go
+
+forward to the next showpag.  thi isn't in ow3.0 pageview, but mayb it is
+
+in the solari 2.x version of ow (ow 3.1?).
+
+
+
+in ani event, i find pageview extrem us.  sinc all of the postscript
+
+that i produc is dsc compliant, i don't have ani problem.
+
+-- 
+
+harvard\
+
+  ucbvax!uwvax!astroatc!ftm!brown  or  uu2.psi.com!ftm!brown
+
+rutger/
+
+internet: brown@wi.extrel.com  or  ftm!brown%astroatc.uucp@cs.wisc.edu
+

@@ -1,0 +1,26 @@
+from: maynard@leah.msc.cornel.edu (maynard j. handlei)
+subject: quickdraw gx (wa re: when ar the rest of the insid mac's due?)
+organ: cornel-materi-scienc-center
+line: 21
+
+>>
+>>we'll be releas a whole new suit of quickdraw gx-relat doc. if
+>>you're go to be at the wwdc next month you'll get a preliminari
+>version
+>>of most of thi document on the cd. we're talk multipl
+>thousand
+>>of page, i'm afraid; gx (compris graphic, layout and print)
+>ha
+>>lot of new api call and other function, all of which need
+>document...
+>>
+>>dave opstad
+>>gx line layout weeni
+
+doe gx take the place of 32 bit qd or add to it? right now 32 bit is
+kinda aesthet a pain in a few place becaus of hack upon hack
+to maintain compat with origin qd---i think of thing like
+where you have to cast cgrafport to grafport and such. it would be a
+lot cleaner to ditch thi entir mess and start over---do we get that?
+
+maynard

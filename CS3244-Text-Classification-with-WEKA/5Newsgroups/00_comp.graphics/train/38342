@@ -1,0 +1,27 @@
+from: hugo@hydra.unm.edu (patric cum)
+subject: polygon orient in dxf?
+organ: univers of new mexico, albuquerqu
+line: 21
+nntp-post-host: hydra.unm.edu
+
+
+hi.  i'm write a program to convert .dxf file to a databas
+format us by a 3d graphic program i've written.  my program store
+the point of a polygon in ccw order.  i've us 3d concept a 
+littl and it seem that the point ar store in the order
+thei ar drawn.
+
+doe the dxf format have a wai of indic which order the 
+point ar store in, cw or ccw?  it easi enough to convert,
+but if i don't know which wai thei ar store, i dont know 
+which direct the polygon should be visibl from.
+
+if dxf doesn't handl thi, can anyon recommend a workaround?
+the best i can think of is to creat two polygon for each on
+in the dxf file, on store cw and the other ccw.  but that
+doubl the number of polygon and decreas speed...
+
+thank in advanc for ani help,
+
+patric
+hugo@hydra.unm.edu 

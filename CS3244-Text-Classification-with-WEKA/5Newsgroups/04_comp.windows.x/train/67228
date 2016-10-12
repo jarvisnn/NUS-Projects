@@ -1,0 +1,48 @@
+from: ccgwt@trentu.ca (grant totten)
+subject: re: postscript on x-termin
+line: 42
+repli-to: ccgwt@trentu.ca (grant totten)
+organ: trent univers
+
+
+i tri to e-mail you but it bounc so...
+
+hi there,
+
+in articl <4263@hi.uucp> you write:
+>from: sp1henhj@edit (henrik balthazar hjort)
+>subject: postscript on x-termin
+>
+>
+> i have a problem when i'm us postscript. when i am work local
+>on a sun sparcstaton ipc the postscript work good, but when i connect
+>to the sun from a x-termin i just get error messag that the
+>postscript cannot connect to the new-displai.
+>
+> why doesn't postscript work on an x-termin?
+>
+> is there ani wai to make it work?
+>
+
+it might be that the x termin doesn't support the "postscript
+extens to x" product.  i us the 'dxpsview' program on a 
+decstat 5000 to view postscript file but when i move to an
+ncd x termin, i couldn't us it ani more.  so i ftp'd and
+compil ghostscript (gnu softwar).  now we can view postscript
+file on our x termin.
+
+hope thi help.
+
+grant
+
+>
+> henrik "henrik hjort" hjort
+>
+>
+>
+>
+--
+grant totten, programm/analyst, trent univers, peterborough ontario
+gtotten@trentu.ca            phone: (705) 748-1653   fax: (705) 748-1246
+========================================================================
+take everyth in stride.  trampl anyon who get in your wai.

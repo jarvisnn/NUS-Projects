@@ -1,0 +1,27 @@
+from: ccw@lancelot.nosubdomain.nodomain (christoph wood)
+subject: re: how long do ram simm's last?
+organ: bellcor, livingston, nj
+distribut: usa
+line: 21
+
+in articl <noah-160493095418@noah.appl.com>, noah@appl.com (noah price) write:
+|> in articl <1993apr11.234818.1755@ultb.isc.rit.edu>,
+|> jek5036@ultb.isc.rit.edu (j.e. king) wrote:
+
+|> > doesn't a 1 mb simm have about 1024 * 1024 * 8 move flip-flop?
+
+|> thei don't move, to anybodi much bigger than an electron :-)
+
+dynam ram is not base on flip-flop; there's basic a singl
+transistor and capacitor to store each bit!  static ram is base on
+flip-flop, and is much more expens and much less dens.  and
+neither ha ani part that "move", if electron and thermal expans
+ar ignor...
+
+|> noah
+
+chri
+
+-- 
+chri wood     bellcor   ccw@ctt.bellcor.com
+

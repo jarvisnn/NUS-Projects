@@ -1,0 +1,30 @@
+from: bshaw@spdc.ti.com (bob shaw)
+subject: question on "xon" in x11r5
+articl-i.d.: bobasun.bshaw.735532995
+organ: ti semiconductor process and design center
+line: 23
+nntp-post-host: bobasun
+
+
+hi folk
+
+sai, i'm new to r5 and have on quick question.
+
+in us xon ( xon  <machin_name> )  , i notic that it
+alwai come up with a veri small window .  i'm pretti
+sure it the default font.  my xterm all work normal.
+is xon suppos to read your .xresourc for a font size ?
+
+xrdb -q appear to show the right stuff.
+
+i can us xon with argument such as  xterm -fn 10x20    etc
+and everyth is correct.  of cours you could alwai do a 
+simpl script to do thi , but i have a feel i'm miss
+someth simpl here.
+
+comment / suggest appreci.
+
+thank in advanc
+
+bob
+bshaw@spdc.ti.com    mm

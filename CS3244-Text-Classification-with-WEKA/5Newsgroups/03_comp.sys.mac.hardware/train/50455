@@ -1,0 +1,35 @@
+from: cmmiller@iastat.edu (c. m. miller)
+subject: re: lciii vs. centri 610?
+articl-i.d.: new.c51s6w.9nr
+organ: iowa state univers, am, ia
+line: 29
+
+in articl <1993apr5.221603.17245@nctam1.uucp> tomj@pnet16.ct.com (tom jenkin) write:
+>titl sai it all.  i'd be particularli interest in the perform
+>differ.  just how much faster (50%?) is the centri 610 over the lciii?
+>
+>--tom
+>
+>uucp: humu!nctam1!pnet16!tomj
+>arpa: humu!nctam1!pnet16!tomj@nosc.mil
+>inet: tomj@pnet16.ct.com
+
+when appl came with their demo to iowa state, i got a chanc to run
+speedomet3.1 on some of the new mac.  both machin were run
+system7.1, had a 14" rgb.  don't know what the cach were set to.
+neither machin had an fpu  it appear that the centri610 is quit a
+bit faster than the lc iii:
+
+		centri610		lciii
+
+cpu		13.01			6.92
+graf		15.67			7.69
+disk		2.22			2.44
+math		25.57			10.19
+
+p.r. rate	12.91			6.58
+
+so, there is a comparison.  there is definit a veri notic speed
+differ between these two machin accord to speedomet3.1.  
+
+chad

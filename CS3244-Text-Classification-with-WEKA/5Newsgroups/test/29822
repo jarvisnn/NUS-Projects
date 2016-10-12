@@ -1,0 +1,174 @@
+from: rmitch@iru.rri.uwo.ca (ross mitchel)
+
+subject: 66dx2 isa,vlb xor 50dx eisa ??  advic want...
+
+organ: univers of western ontario, london
+
+nntp-post-host: vega.iru.rri.uwo.ca
+
+line: 81
+
+
+
+
+
+hi:
+
+
+
+i need some advic (opinion?) regard which pc would best suit my need!
+
+i want to us thi (propos) beast for basic four thing:  
+
+
+
+     -	edit document us wordperfect 5.1 (under do)
+
+
+
+     -	creat graph/analyz data us sigmaplot v5.0 (under do)
+
+
+
+     -	edit/plai with imag us aldu photostyl, run under 
+
+	window 3.1 - these imag can be larg, sai 2k x 2k, 24bit/pixel
+
+
+
+     -	us the pc as an xtermin, run desqview/x 1.1 and sun pc-nf, 
+
+	talk to our network of sparcstat's - thi is where a lot of
+
+	the imag/data come from, and is the most demand of these task.
+
+
+
+i've read, read, read pc magazin, perform benchmark, read thi newsgroup,
+
+and decid that a "nice" system (price/perform) would be:
+
+
+
+	486dx-50 256k cach, isa, vlb, 16meg ram
+
+	ati graphic ultra pro, 2 meg ram, local bu
+
+	15" monitor, 1280x1024 ni
+
+	3com etherlink iii 16bit
+
+	maxtor 240mb id hard drive
+
+
+
+howev, the part don't fit!  our local retail appar put on of these
+
+togeth, onli to discov that the ati card wouldn't run at 50mhz - surpris
+
+surpris.  actual, after read thi group, i'm surpris that thei even
+
+have a 50mhz local bu run...
+
+
+
+i have a choic now between basic the abov system but with a
+
+486dx2-66 with isa and vlb,  or,   a 486dx-50 with eisa and no vlb (and thu
+
+the non-local bu version of the ati card).  which is better, keep in mind
+
+that i'm primarili interest in the last two task?  
+
+
+
+ani help would be greatli appreci!  (i need to decid quickli, so ani 
+
+speedi help would be appreci even more!!)
+
+
+
+
+
+
+
+btw: we have a system now to perform these task, it ha the follow 
+
+configur:
+
+
+
+	486dx-33 64k cach, isa, 8 meg ram
+
+	ati graphic ultra+, 2 meg ram
+
+	14" monitor, 1024x768 ni
+
+	smc ethercard 8 bit
+
+	maxtor 120mb id hard drive
+
+
+
+we're quit happi with the ati card - veri fast, onc the data get to it!!
+
+~slow~ repaint imag under photostyl that have move off screen, or
+
+been uncov!  
+
+
+
+there doesn't seem to be enough raw cpu when run desqview/x!  it sluggish
+
+run the local window manag.  also, mani function under photostyl take
+
+a long time (even when the imag fit entir in ram).
+
+
+
+there's not enough memori in the system - desqview/x and a 1 meg smartdriv
+
+don't leav much room for other app.  photostyl will page to disk with
+
+medium size imag.
+
+
+
+i have perform a number of benchmark on the ethernet transfer rate.  thi
+
+machin sustain onli 120k/sec over ethernet while our sparc sustain 600k/sec 
+
+on the same network.  go to the 16 bit version of the smc card increas
+
+transfer rate to 160k/sec - still veri slow (especi when move larg 
+
+imag).  is there such a thing as a local-bu ethernet card come??  will it
+
+make a differ?  i'm hope so, and lean toward the 486dx2-66 choic 
+
+(abov), for that reason.
+
+
+
+also, ar there dx2-100's on the horizon?  what about dx3-99's?  dx3-150's ???!
+
+
+
+ani inform is greatli appreci.
+
+
+
+-----
+
+ross mitchel, imag research lab, |   rmitch@iru.rri.uwo.ca
+
+john p. robart research institut   |
+
+p.o. box 5015, 100 perth drive       |   offic: (519) 663-3833
+
+london, ontario, canada  n6a 5k8     |   home: (519) 657-4437
+
+
+
+
+

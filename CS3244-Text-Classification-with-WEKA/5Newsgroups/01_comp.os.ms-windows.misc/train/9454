@@ -1,0 +1,36 @@
+from: ntaib@silver.uc.indiana.edu (iskandar taib)
+subject: re: window 3.1 gener question
+nntp-post-host: silver.uc.indiana.edu
+organ: indiana univers
+line: 30
+
+in articl <1495@heimdal.sdrc.com> crgruen@soni1.sdrc.com (robert gruen) write:
+>1.  i receiv amish util for window when i purchas turbo c++ for 
+>    window.  what is amish util?  what can it do for me?  all i
+>    receiv wa the disk, no doc.  
+
+mayb it milk the dogcow? 9-)
+
+
+>2.  i am run window in 1024x768x256 mode us a driver that wa suppli 
+>    with my svga card.  the card is a boca svga card with 1meg ram, and i think 
+>    it ha an et4000 chip in it (at least that what some program tell me). 
+>    the driver is an old driver that wa written for window 3.1, it seem to 
+>    work fine, but would i gain ani benefit by switch to a newer driver?  if
+>    so which on should i us and where could i find it? 
+
+lot of driver ar avail off ftp.cica.indiana.edu in pub/pc/win3/
+driver/video. i've tri two: et4cview.zip and et4turbo.zip. these
+give you a choic of turbo and non-turbo driver. the turbo driver
+were fast but caus mous problem with my machin (which ha a
+diamond speedstar card). i final got turbo driver (wndspeed by
+binar) from diamond. amaz. blazingli fast (for a non-acceler
+card) and best of all - no gpf's for a month or so...
+
+
+
+-- 
+-------------------------------------------------------------------------------
+iskandar taib                          | the onli thing wors than peach ala
+internet: ntaib@silver.uc.indiana.edu |    frog is frog ala peach
+bitnet:   ntaib@iubac                 !

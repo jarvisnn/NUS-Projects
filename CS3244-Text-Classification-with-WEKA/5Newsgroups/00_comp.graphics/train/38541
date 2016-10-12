@@ -1,0 +1,30 @@
+from: idr@rigel.cs.pdx.edu (ian d romanick)
+subject: re: fast polygon routin need
+keyword: polygon, need
+articl-i.d.: pdxgate.7306
+organ: portland state univers, comput scienc dept.
+line: 23
+
+in articl <c5nf8t.gsq@new.cso.uiuc.edu> osprei@ux4.cso.uiuc.edu (luca adamski) write:
+>in articl <1993apr17.192947.11230@sophia.smith.edu> orourk@sophia.smith.edu (joseph o'rourk) write:
+>>	a fast polygon routin to do what?
+>to draw polygon of cours.  it a vga mode 13h (320x200) game, done in c and
+>asm.  i need a faster wai to draw concav polygon that the method i have right
+>now, which is veri slow.
+
+what kind of polygon?  shade?  texturemap?  hm?  more come into plai with
+fast routin than just "polygon".  it would be nice to know exaclti what
+system (vga is a start, but what processor?) and a few of the specif of the
+implement.  you need to give  more info if you want to get ani answer! :p
+
+                                  - ian romanick
+                                    danc fool of epsilon
+
+[]--------------------------------------------------------------------[]
+ | were the contain thought 'opinion',     epn.ntsc.qualiti = best|
+ | psu would probabl not agre with them.                            |
+ |                                                                    |
+ | "look, i don't know anyth about                                 |
+ | douch, but i do know anti-freez                                  |
+ | when i see it!" - the dead milkmen                                 |
+[]--------------------------------------------------------------------[]

@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% load bscttags %}
+ 
+{% block BSCT_CONTENT %}
+
+<div class="page-header"><h1>Products</h1></div>
+
+<form method="post" action="/product/list">
+    <p>
+        <label for="search">Search</label>
+        <input id="search" type="text" name="search"/>
+    </p>
+    <p>
+        <label for="price">Price at most</label>
+        <input id="price" type="text" name="price"/>
+    </p>
+    <p>
+        <label for="company">company</label>
+        <input id="company" type="text" name="company"/>
+    </p>
+    <p>
+        <label for="country">country</label>
+        <input id="country" type="text" name="country"/>
+    </p>
+    <p>
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="0">Any</option>
+            {% for category in categories %}
+                <option value="{{ category.id }}">{{ category.name }}</option>
+            {% endfor %}
+        </select>
+    </p>
+    <p>
+        <label for="sort">Sort by</label>
+        <select id="sort" name="sort">
+            <option value="0">Date</option>
+            <option value="1">Price</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit"/>
+    </p>
+</form>
+{% block BSCT_LIST_ITEMS %}
+<table class = 'table table-striped'>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                Price
+            </td>
+            <td>
+                Country
+            </td>
+            <td>
+                Date
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        {% for object in object_list %}
+        <tr>
+            <td> 
+                {% block BSCT_LIST_ITEMS_ITEM %}
+                {{object}} 
+                {% endblock %}
+            </td>
+            <td>
+                ${{ object.price }}
+            </td>
+            <td>
+                {{ object.country }}
+            </td>
+            <td>
+                {{ object.date }}
+            </td>
+            <td>
+                {% block BSCT_LIST_ITEMS_ACTIONS %}
+                <a
+                    class = 'btn'
+                    href  = '{{object.get_absolute_url}}'
+                >
+                    View
+                </a>
+                {% endblock %}
+            </td>
+        </tr>
+        {% endfor %}
+
+</table>
+{% endblock %}
+
+<div class = 'row'>
+
+{% if request.session.user %}
+    {% block BSCT_LIST_CREATE_LINK %}
+    {% if object_list.model.get_create_url %}
+    <div class = 'span4'>
+    <a
+        class = 'btn btn-primary'
+        href  = '{{object_list.model.get_create_url }}'
+    >
+        Create a {% get_verbose_name object_list.model %}
+    </a>
+    </div>
+    {% endif %}
+    {% endblock %}
+{% endif %}
+
+</div>
+
+{% endblock %}

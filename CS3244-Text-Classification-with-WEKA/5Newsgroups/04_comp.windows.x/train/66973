@@ -1,0 +1,43 @@
+from: thoma@aeon.in-berlin.de (thoma wolfram)
+subject: re: titl for xterm
+keyword: xterm
+organ: citi in dust
+line: 37
+
+in <1993apr17.170907.25718@samba.oit.unc.edu> naoumov@physic.unc.edu (sergei naoumov) write:
+
+>hei gui!
+>i work on mani station and would like thi name and current lognam
+>to be in a titl of xterm when it's open and a machin name onli
+>when it's close. in other word, i want $host and $lognam to appear
+>as a titl of open xterm and $host when xterm is close.
+>how can i do it?
+
+>thnsk in advanc,
+>	serg
+>	serg@gluttoni.astro.unc.edu
+
+almost all window manag (twm, mwm, olwm and their deriv) support
+escap sequenc for it. for your purpos put follow into your
+.login (if you're us csh or tcsh), for sh you have to modifi it.
+
+if ( "$term" == "xterm" ) then
+	echo "^[]2;${lognam}@${host}^g^[]1;${host}^g"
+endif
+
+note, ^[ stand for <esc>, in vi you can enter it by press
+ctrl-v and the <esc>. same for ^g, it mean ctrl-g. in vi:
+press ctrl-v and then ctrl-g.
+the first sequenc put the string into the titl bar the second
+in the icon.
+
+btw, you can also put the current work directori in the
+titl bar if you make an alia for cd:
+
+alia cd 'cd \!* ; echo "^[]2;${lognam}@${host}: ${cwd}^g"'
+
+greet,
+thoma
+-- 
+thoma wolfram, thoma@aeon.in-berlin.de
+eantc, tu berlin, wolf@prz.tu-berlin.de, +49 030 31421294

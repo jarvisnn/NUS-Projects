@@ -1,0 +1,46 @@
+from: nagl@netcom.com (john nagl)
+
+subject: re: point in polygon routin need
+
+organ: netcom on-line commun servic (408 241-9760 guest)
+
+line: 18
+
+
+
+andrew lewi tepper <at15+@andrew.cmu.edu> write:
+
+>i don't know if thi routin is "standard", i just came up with it recent:
+
+>for a polygon of point p1...pn, and a point p, make a tabl as follow:
+
+>t(1)= angl from p1 to p to p2
+
+>t(2)= angl from p2 to p to p3
+
+>...
+
+>t(n)= angl from pn to p to p1
+
+>express all angl as: -pi < angl < pi.
+
+>add all entri in the tabl. if the sum = 0, the point is outsid. if
+
+>the sum is +/- pi, the point is insid. if the point is +/- xpi, you
+
+>have a strang polygon. if ani angl wa = +/-pi, the point is on the
+
+>border.
+
+
+
+     i think it's known, but it's neat.
+
+
+
+     can it be extend to 3d?
+
+
+
+						john nagl
+

@@ -1,0 +1,29 @@
+from: imj1@cunixa.cc.columbia.edu (imad m jureidini)
+subject: re: problem with toshiba 3401 cdrom
+nntp-post-host: cunixa.cc.columbia.edu
+repli-to: imj1@cunixa.cc.columbia.edu (imad m jureidini)
+organ: columbia univers
+line: 22
+
+in articl <1r25nt$oa5@ratatosk.uninett.no> hktth@nho.hydro.com write:
+>in articl <1993apr20.191255.10115@new.columbia.edu>, imj1@cunixa.cc.columbia.edu (imad m jureidini) write:
+>|> hi!
+>|> 	i recent purchas the toshiba 3401 cdrom.  i own an adaptec 1542b
+>|> scsi card, and i have so far fail to get the cdrom to work under do.  it
+>
+>on of the aspi-driver (i think it's the aspicd) support a /norst
+>paramt, which mean to not reset the scsi bu when it load. thi
+>fix the problem a friend of mine wa have with hi adaptec+tosh 
+>3401.
+>
+>regard,
+>
+>  -terj
+it work!!!
+thank you veri much!
+
+
+*******************************************************************************
+* imj1@cunixa.cc.columbia.edu			    imad "hexabyt" jureidini *
+*     the ultim knight, grand priest of the secret of the undefin.      *
+*******************************************************************************

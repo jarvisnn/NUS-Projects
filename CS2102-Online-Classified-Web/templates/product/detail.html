@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+ 
+{% load bscttags %}
+
+{% block BSCT_CONTENT %}
+<h2>
+    {{object}}
+</h2>
+
+{% block BSCT_DETAIL_FIELDS %}
+<table class = 'table table-condensed' >
+{% with object|model_to_dict as md %}
+    {% for name,value in md.items %}
+    <tr>
+        <td>
+            <b> {{ name }}</b>
+        </td>
+
+        <td>
+            {% if name == 'price' %}
+                ${{ value }}
+            {% else %}
+                {{ value }}
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+{% endwith %}
+</table>
+{% endblock %}
+
+{% block BSCT_DETAIL_ACTIONS %}
+{% if object.get_update_url %}
+    {% if request.session.user_id == object.owner_id %}
+        <a
+            class = 'btn btn-info'
+            href  = '{{object.get_update_url}}'
+        >
+            Edit
+        </a>
+    {% endif %}
+{% endif %}
+{% if object.get_delete_url %}
+    {% if request.session.user_id == object.owner_id %}
+        <a
+            class = 'btn btn-warning'
+            href  = '{{object.get_delete_url}}'
+        >
+            Delete
+        </a>
+    {% endif %}
+{% endif %}
+
+{% if object.get_list_url %}
+    <a 
+        class = 'btn'
+        href  = '{{object.get_list_url}}'
+    >
+        Listing
+    </a>
+{% endif %}
+{% endblock %}
+
+{% endblock %}

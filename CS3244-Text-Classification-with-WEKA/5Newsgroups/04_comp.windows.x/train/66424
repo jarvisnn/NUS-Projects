@@ -1,0 +1,899 @@
+from: dbl@visual.com (david b. lewi)
+subject: comp.window.x frequent ask question (faq) 5/5
+summari: us inform about the x window system
+articl-i.d.: visual.c52eqq.99a
+expir: sun, 2 mai 1993 00:00:00 gmt
+repli-to: faq%craft@uunet.uu.net (x faq mainten address)
+organ: visual, inc.
+line: 890
+
+archiv-name: x-faq/part5
+last-modifi: 1993/04/04
+
+----------------------------------------------------------------------
+subject: 119)  i'm write a widget and can't us a float as a resourc valu.
+
+float resourc ar not portabl; the size of the valu mai be larger than
+the size of an xtpointer. try us a pointer to a float instead; the xaw
+scrollbar float resourc ar handl in thi wai. 
+
+----------------------------------------------------------------------
+subject: 120)  is thi a memori leak in the x11r4 xtdestroywidget()?!
+
+ye. thi is the "unoffici" fix-19 for the x11r4 destroi.c:
+
+*** destroi.c.1.37	thu jul 11 15:41:25 1991
+--- lib/xt/destroi.c	thu jul 11 15:42:23 1991
+***************
+*** 1,4 ****
+--- 1,5 ----
+  /* $xconsortium: destroi.c,v 1.37 90/09/28 10:21:32 swick exp $ */
++ /* plu unoffici patch in revis 1.40 and 1.41 */
+  
+  /***********************************************************
+  copyright 1987, 1988 by digit equip corpor, maynard, massachusett,
+***************
+*** 221,239 ****
+       */
+  
+      int i = 0;
+!     destroyrec* dr = app->destroi_list;
+      while (i < app->destroi_count) {
+  	if (dr->dispatch_level >= dispatch_level)  {
+  	    widget w = dr->widget;
+  	    if (--app->destroi_count)
+  		bcopi( (char*)(dr+1), (char*)dr,
+! 		       app->destroi_count*sizeof(destroyrec)
+  		      );
+  	    xtphase2destroi(w);
+  	}
+  	els {
+  	    i++;
+- 	    dr++;
+  	}
+      }
+  }
+--- 222,245 ----
+       */
+  
+      int i = 0;
+!     destroyrec* dr;
+      while (i < app->destroi_count) {
++ 
++ 	/* xtphase2destroi can result in call to xtdestroywidget,
++ 	 * and these could caus app->destroi_list to be realloc.
++ 	 */
++ 
++ 	dr = app->destroi_list + i;
+  	if (dr->dispatch_level >= dispatch_level)  {
+  	    widget w = dr->widget;
+  	    if (--app->destroi_count)
+  		bcopi( (char*)(dr+1), (char*)dr,
+! 		       (app->destroi_count - i) * sizeof(destroyrec)
+  		      );
+  	    xtphase2destroi(w);
+  	}
+  	els {
+  	    i++;
+  	}
+      }
+  }
+
+[from donna convers, convers@expo.lc.mit.edu]
+
+----------------------------------------------------------------------
+subject: 121)  ar callback guarante to be call in the order regist?
+
+	although some book demonstr that the current implement of xt
+happen to call callback procedur in the order in which thei ar regist, 
+the specif doe not guarante such a sequenc, and supplement 
+authorit document (i.e. the asent/swick volum) do sai that the order is
+undefin.  becaus the callback list can be manipul by both the widget and
+the applic, xt cannot guarante the order of execut.
+	in gener, the callback procedur should be thought of as oper 
+independ of on anoth and should not depend on side-effect of other
+callback oper; if a seqenc is need, then the singl callback to be 
+regist can explicitli call other function necessari.
+
+[4/92; thank to convers@expo.lc.mit.edu]
+
+----------------------------------------------------------------------
+subject: 122)  why doesn't xtdestroywidget() actual destroi the widget?
+
+	xtdestroywidget() oper in two pass, in order to avoid leav
+dangl data structur; the function-call mark the widget, which is not 
+actual destroi until your program return to it event-loop. 
+
+----------------------------------------------------------------------
+subject: 123)  how do i queri the user synchron us xt?
+	
+	it is possibl to have code which look like thi trivial callback,
+which ha a clear flow of control. the call to askus() block until answer
+is set to on of the valid valu. if it is not a "ye" answer, the code drop
+out of the callback and back to an event-process loop: 
+
+	void quit(widget w, xtpointer client, xtpointer call)
+	{
+		int             answer;
+		answer = askus(w, "realli quit?");
+		if (ret_ye == answer)
+			{
+			answer = askus(w, "ar you realli posit?");
+			if (ret_ye == answer)
+				exit(0);
+                }
+	}
+
+	a more realist exampl might ask whether to creat a file or whether 
+to overwrit it.
+	thi is accomplish by enter a second event-process loop and
+wait until the user answer the question; the answer is return to the
+call function. that function askus() look someth like thi, where the 
+motif can be replac with widget-set-specif code to creat some sort of 
+dialog-box displai the question string and button for "ok", "cancel" and 
+"help" or equival:
+
+  int askus(w, string)
+        widget          w;
+        char           *string;
+  {
+        int             answer=ret_none;	/* some not-us marker */
+        widget          dialog;			/* could cach&carri, but ...*/
+        arg             arg[3];
+        int             n = 0;
+        xtappcontext    context;
+
+        n=0;
+        xtsetarg(arg[n], xmnmessagestr, xmstringcreateltor(string,
+                xmstring_default_charset)); n++;
+        xtsetarg(arg[n], xmndialogstyl, xmdialog_applic_modal); n++;
+        dialog = xmcreatequestiondialog(xtparent(w), string, arg, n);
+        xtaddcallback(dialog, xmnokcallback, respons, &answer);
+        xtaddcallback(dialog, xmncancelcallback, respons, &answer);
+        xtaddcallback(dialog, xmnhelpcallback, respons, &answer);
+        xtmanagechild(dialog);
+
+        context = xtwidgettoapplicationcontext (w);
+        while (answer == ret_none || xtapppend(context)) {
+                xtappprocessev (context, xtimal);
+        }
+        xtdestroywidget(dialog);  /* blow awai the dialog box and shell */
+        return answer;
+  }
+
+	the dialog support three button, which ar set to call the same 
+function when tickl by the user.  the variabl answer is set when the user 
+final select on of those choic:
+
+  void respons(w, client, call)
+        widget          w;
+        xtpointer client;
+        xtpointer call;
+  {
+  int *answer = (int *) client;
+  xmanycallbackstruct *reason = (xmanycallbackstruct *) call;
+        switch (reason->reason) {
+        case xmcr_ok:
+                *answer = ret_ye;	/* some #defin valu */
+                break;
+        case xmcr_cancel:
+                *answer = ret_no; 
+		break;
+        case xmcr_help:
+                *answer = ret_help;
+                break;
+        default:
+                return;
+        }
+}
+
+and the code unwrap back to the point at which an answer wa need and
+continu from there.
+
+[thank to dan heller (argv@sun.com); further code is in dan's r3/contrib
+widgetwrap librari. 2/91]
+
+----------------------------------------------------------------------
+subject: 124)  how do i determin the name of an exist widget?
+i have a widget id and need to know what the name of that widget is.
+
+	user of r4 and later ar best off us the xtname() function, which 
+will work on both widget and non-widget object.
+
+	if you ar still us r3, you can us thi simpl bit of code to do 
+what you want. note that it depend on the widget's intern data structur 
+and is not necessarili portabl to futur version of xt, includ r4.
+
+	#includ <x11/corep.h>
+	#includ <x11/xresourc.h>
+	string xtname (widget)
+	widget widget;	/* will work with non-widget object */
+	{
+	return xrmnametostr(widget->core.xrm_name);
+	}
+
+[7/90; modifi with suggest by larri roger (larri@bori.webo.dg.com) 9/91]
+
+----------------------------------------------------------------------
+subject: 125)  why do i get a baddraw error draw to xtwindow(widget)?
+i'm do thi in order to get a window into which i can do xlib graphic
+within my xt-base program:
+
+> canva = xtcreatemanagedwidget ( ...,widgetclass,...) /* draw area */
+> ...
+> window = xtwindow(canva);	/* get the window associ with the widget */
+> ...
+> xdrawlin (...,window,...);	/* produc error */
+
+	the window associ with the widget is creat as a part of the 
+realiz of the widget.  us a window id of null ("no window") could 
+creat the error that you describ.  it is necessari to call xtrealizewidget() 
+befor attempt to us the window associ with a widget. 
+	note that the window will be creat after the xtrealizewidget() call, 
+but that the server mai not have actual map it yet, so you should also 
+wait for an expos event on the window befor draw into it.
+
+----------------------------------------------------------------------
+subject: 126)  why do i get a badmatch error when call xgetimag?
+
+the badmatch error can occur if the specifi rectangl goe off the edg of 
+the screen. if you don't want to catch the error and deal with it, you can take
+the follow step to avoid the error:
+
+1) make a pixmap the same size as the rectangl you want to captur.
+2) clear the pixmap to background us xfillrectangl.
+3) us xcopyarea to copi the window to the pixmap.
+4) if you get a noexpos event, the copi wa clean. us xgetimag to grab the
+imag from the pixmap.
+5) if you get on or more graphicsexpos event, the copi wasn't clean, and 
+the x/y/width/height member of the graphicsexpos event structur tell you 
+the part of the pixmap which aren't good.
+6) get rid of the pixmap; it probabl take a lot of memori.
+
+[10/92; thank to oliv jone (oj@pictel.com)]
+
+----------------------------------------------------------------------
+subject: 127)  how can my applic tell if it is be run under x?
+
+	a number of program offer x mode but otherwis run in a straight
+charact-onli mode. the easiest wai for an applic to determin that it is
+run on an x displai is to attempt to open a connect to the x server:
+	
+	displai = xopendisplai(displai_name);
+	if (displai)
+		{ do x stuff }
+	els
+		{ do curs or someth els }
+where displai_name is either the string specifi on the command-line follow
+-displai, by convent, or otherwis is (char*)null [in which case 
+xopendisplai us the valu of $displai, if set].
+
+thi is superior to simpli check for the exist a -displai command-line 
+argument or check for $displai set in the environ, neither of which is 
+adequ. [5/91]
+
+----------------------------------------------------------------------
+subject: 128)  how do i make a "busi cursor" while my applic is comput?
+is it necessari to call xdefinecursor() for everi window in my applic?
+
+	the easiest thing to do is to creat a singl inputonli window that is 
+as larg as the largest possibl screen; make it a child of your toplevel 
+window and it will be clip to that window, so it won't affect ani other 
+applic. (it need to be as big as the largest possibl screen in case the 
+user enlarg the window while it is busi or move elsewher within a virtual 
+desktop.) substitut "toplevel" with your top-most widget here (similar code 
+should work for xlib-onli applic; just us your top window):
+
+     unsign long valuemask;
+     xsetwindowattribut attribut;
+
+     /* ignor devic event while the busi cursor is displai. */
+     valuemask = cwdontpropag | cwcursor;
+     attribut.do_not_propag_mask =  (keypressmask | keyreleasemask |
+         buttonpressmask | buttonreleasemask | pointermotionmask);
+     attribut.cursor = xcreatefontcursor(xtdisplai(toplevel), xc_watch);
+
+     /* the window will be as big as the displai screen, and clip by
+        it own parent window, so we never have to worri about resiz */
+     xcreatewindow(xtdisplai(toplevel), xtwindow(toplevel), 0, 0,
+         65535, 65535, (unsign int) 0, 0, inputonli,
+         copyfrompar, valuemask, &attribut);
+
+where the maximum size abov could be replac by the real size of the screen,
+particularli to avoid server which have problem with window larger than
+32767.
+
+when you want to us thi busi cursor, map and rais thi window; to go back to
+normal, unmap it. thi will automat keep you from get extra mous
+event; depend on precis how the window manag work, it mai or mai not
+have a similar effect on keystrok as well.
+
+in addit, note also that most of the xaw widget support an xtncursor 
+resourc which can be temporarili reset, should you mere wish to chang the
+cursor without block pointer event.
+
+[thank to andrew wason (aw@cellar.bae.bellcor.com), dan heller 
+(argv@sun.com), and mous@larri.mcrcim.mcgill.edu; 11/90,5/91]
+
+----------------------------------------------------------------------
+subject: 129)  how do i fork without hang my parent x program?
+
+	an x-base applic which spawn off other unix process which 
+continu to run after it is close typic doe not vanish until all of it 
+children ar termin; the children inherit from the parent the open x 
+connect to the displai. 
+	what you need to do is fork; then, immedi, in the child process, 
+		close (connectionnumb(xtdisplai(widget)));
+to close the file-descriptor in the displai inform. after thi do your 
+exec. you will then be abl to exit the parent.
+	altern, befor exec'ing make thi call, which caus the file 
+descriptor to be close on exec.
+		(void) fcntl(connectionnumb(xdisplai), f_setfd, 1);
+
+[thank to janet anstett (anstettj@tramp.colorado.edu), gordon freedman 
+(gjf00@dut.ccc.amdahl.com); 2/91. greg holmberg (holmberg@frame.com), 3/93.]
+
+----------------------------------------------------------------------
+subject: 130)  can i make xt or xlib call from a signal handler?
+
+	no. xlib and xt have no mutual exclus for protect critic 
+section. if your signal handler make such a call at the wrong time (which 
+might be while the function you ar call is alreadi execut), it can leav
+the librari in an inconsist state. note that the ansi c standard point
+out that behavior of a signal handler is undefin if the signal handler call
+ani function other than signal() itself, so thi is not a problem specif to
+xlib and xt; the posix specif mention other function which mai be
+call safe but it mai not be assum that these function ar call by 
+xlib or xt function.
+	you can work around the problem by set a flag in the interrupt
+handler and later check it with a work procedur or a timer event which
+ha previous been ad.
+
+	note: the articl in the x journal 1:4 and the exampl in o'reilli 
+volum 6 ar in error.
+
+[thank to pete ware (ware@ci.ohio-state.edu) and donna convers 
+(convers@expo.lc.mit.edu), 5/92]
+
+----------------------------------------------------------------------
+subject: 131)  what ar these "xlib sequenc lost" error?
+
+	you mai see these error if you issu xlib request from an xlib error 
+handler, or, more like, if you make call which gener x request to xt or 
+xlib from a signal handler, which you shouldn't be do in ani case. 
+
+----------------------------------------------------------------------
+subject: 132)  how can my xt program handl socket, pipe, or file input?
+
+	it's veri common to need to write an xt program that can accept input 
+both from a user via the x connect and from some other file descriptor, but 
+which oper effici and without block on either the x connect or 
+the other file descriptor.
+	a solut is us xtappaddinput(). after you open your file descriptor,
+us xtappaddinput() to regist an input handler. the input handler will be 
+call everi time there is someth on the file descriptor requir your 
+program's attent. write the input handler like you would ani other xt 
+callback, so it doe it work quickli and return.  it is import to us onli
+non-block i/o system call in your input handler.
+	most input handler read the file descriptor, although you can have an 
+input handler write or handl except condit if you wish.
+	be care when you regist an input handler to read from a disk file.
+you will find that the function is call even when there isn't input pend.
+xtappaddinput() is actual work as it is suppos to. the input handler is 
+call whenev the file descriptor is readi to be read, not onli when there is
+new data to be read. a disk file (unlik a pipe or socket) is almost alwai 
+readi to be read, howev, if onli becaus you can spin back to the begin
+and read data you've read befor.  the result is that your function will almost
+alwai be call everi time around xtappmainloop(). there is a wai to get the 
+type of interact you ar expect; add thi line to the begin of your 
+function to test whether there is new data:
+	     if (ioctl(fd, fionread, &n) == -1 || n == 0) return;
+but, becaus thi is call frequent, your applic is effect in a 
+busi-wait; you mai be better off not us xtappaddinput() and instead set 
+a timer and in the timer procedur check the file for input.
+
+[courtesi dan heller (argv@ora.com), 8/90; mous@larri.mcrcim.mcgill.edu 5/91;
+olli jone (oj@pictel.com) 6/92]
+
+----------------------------------------------------------------------
+subject: 133)  how do i simul a button press/releas event for a widget?
+
+	you can do thi us xsendev(); it's like that you're not set
+the window field in the event, which xt need in order to match to the widget
+which should receiv the event.
+	 if you're send event to your own applic, then you can us 
+xtdispatchev() instead. thi is more effici than xsendev() in that you
+avoid a round-trip to the server.
+	depend on how well the widget wa written, you mai be abl to call
+it action procedur in order to get the effect you want.
+
+[courtesi mark a. horstman (mh2620@sarek.sbc.com), 11/90]
+
+----------------------------------------------------------------------
+subject: 134)  why doesn't anyth appear when i run thi simpl program?
+
+> ...
+> the_window = xcreatesimplewindow(the_displai,
+>      root_window,size_hint.x,size_hint.y,
+>      size_hint.width,size_hint.height,border_width,
+>      blackpixel(the_displai,the_screen),
+>      whitepixel(the_displai,the_screen));
+> ...
+> xselectinput(the_displai,the_window,exposuremask|buttonpressmask|
+> 	buttonreleasemask);
+> xmapwindow(the_displai,the_window);
+> ...
+> xdrawlin(the_displai,the_window,the_gc,5,5,100,100);
+> ...
+
+	you ar right to map the window befor draw into it. howev, the 
+window is not readi to be drawn into until it actual appear on the screen --
+until your applic receiv an expos event. draw done befor that will 
+gener not appear. you'll see code like thi in mani program; thi code 
+would appear after window wa creat and map:
+  while (!done)
+    {
+      xnextev(the_displai,&the_event);
+      switch (the_event.type) {
+	case expos:	 /* on expos event, redraw */
+		xdrawlin(the_displai,the_window,the_gc,5,5,100,100);
+		break;
+	...
+	}
+    }
+
+	note that there is a second problem: some xlib implement don't 
+set up the default graphic context to have correct foreground/background 
+color, so thi program could previous includ thi code:
+  ...
+  the_gc_valu.foreground=blackpixel(the_displai,the_screen);	/* e.g. */
+  the_gc_valu.background=whitepixel(the_displai,the_screen);	/* e.g. */
+  the_gc = xcreategc(the_displai,the_window,
+                gcforeground|gcbackground,&the_gc_valu);
+  ...
+ 
+note: the code us blackpixel and whitepixel to avoid assum that 1 is 
+black and 0 is white or vice-versa.  the relationship between pixel 0 and 1 
+and the color black and white is implement-depend.  thei mai be 
+revers, or thei mai not even correspond to black and white at all.
+
+also note that actual us blackpixel and whitepixel is usual the wrong 
+thing to do in a finish program, as it ignor the user's prefer for 
+foreground and background.
+
+and also note that you can run into the same situat in an xt-base program
+if you draw into the xtwindow(w) right after it ha been realiz; it mai
+not yet have appear.
+
+----------------------------------------------------------------------
+subject: 135)  what is the differ between a screen and a screen?
+
+	the 'screen' is an xlib structur which includ the inform about
+on of the monitor or virtual monitor which a singl x displai support. a 
+server can support sever independ screen. thei ar number unix:0.0,
+unix:0.1, unix:0.2, etc; the 'screen' or 'screen_number' is the second digit --
+the 0, 1, 2 which can be thought of as an index into the arrai of avail 
+screen on thi particular displai connect.
+	the macro which you can us to obtain inform about the particular
+screen on which your applic is run typic have two form -- on
+which take a screen and on with take both the displai and the screen_number.
+	in xt-base program, you typic us xtscreen(widget) to determin 
+the screen on which your applic is run, if it us a singl screen.
+	(part of the confus mai aris from the fact that some of the macro
+which return characterist of the screen have "displai" in the name -- 
+xdisplaywidth, xdisplayheight, etc.)
+	
+----------------------------------------------------------------------
+subject: 136)  can i us c++ with x11? motif? xview?
+	
+	the x11r4/5 header file ar compat with c++. the motif 1.1 header 
+file ar usabl as is insid extern "c" {...}. howev, the definit of
+string in intrins.h can conflict with the libg++ or other string class and
+need to be work around.
+
+	some other project which can help:
+	wwl, a set of c++ class by jean-daniel feket to wrap x toolkit 
+widget, avail via anonym ftp from export.lc.mit.edu as 
+contrib/wwl-1.2.tar.z [7/92] or lri.lri.fr (129.175.15.1) as pub/wwl-1.2.tar.z.
+it work by build a set of c++ class in parallel to the class tree of the 
+widget.
+	the c++ interview toolkit is obtain via anonym ftp from 
+interview.stanford.edu. interview us a box/glue model similar to that of 
+tex for construct user interfac and support multipl look on the user 
+interfac. some of it sampl applic includ a wysiwig document editor 
+(doc), a macdraw-like draw program (idraw) and an interfac builder 
+(ibuild).
+	thing,  a class librari written at the rome air forc base by the 
+strateg air command, avail as freewar on archiv site.
+
+	motif++ is a public-domain librari that defin c++ class wrapper for
+motif 1.1; it add an "applic" class for, e.g., initi x, and also
+integr wcl and the xbae widget set. thi work wa develop by ronald van 
+loon <rvloon@cv.ruu.nl> base on x++, a set of bind done by the univers 
+of lowel graphic research laboratori. the current sourc ar avail from 
+decuac.dec.com (192.5.214.1) as /pub/x11/motif++.21.jul.92.tar.z.
+	
+	the sourc code exampl for doug young's "object-orient program 
+with c++ and osf/motif" [isbn 0-13-630252-1] do not includ "widget wrapper" 
+but do includ a set of class that encapsul higher-level facil 
+commonli need by motif- or other xt-base applic; check export in
+~ftp/contrib/young.c++.tar.z.
+	rogu wave offer "view.h++" for c++ programm us motif; info:
+1-800-487-3217 or +1 503 754 2311.
+	a product call "commonview" by glockenspiel ltd, ireland (??) 
+appar is a c++-base toolkit for multipl window system, includ pm,
+window, and x/motif.
+	xv++ is sold by qualix (415-572-0200; fax -1300); it implement an 
+interfac from the gil file that sun's openwindow develop guid 3.0 
+produc to xview wrapper class in c++.
+
+	uit is a set of c++ class embed the xview toolkit; it is intend
+for us with sun's openwindow develop guid 3.0 builder tool. sourc ar 
+on export.mit.edu.au as uit.tar.z. version 2 wa releas 5/28/92.
+	
+	also of like us is objectcent (saber-c++). and a reason
+altern to all of the abov is parcplac's (formerli solbourn's) object 
+interfac.
+
+[thank to dougla s. rand (dsrand@mitr.org) and georg wu (gwu@tc.com);2/91]
+
+----------------------------------------------------------------------
+subject: 137)  where can i obtain altern languag bind to x?
+
+	version of the clx lisp bind ar part of the x11 core sourc 
+distribut. a version of clx is on the r5 tape [10/91]; version 5.0.2 [9/92]
+is on export.lc.mit.edu in /contrib/clx.r5.02.tar.z.
+
+	the saic ada-x11 bind ar through anonym ftp in /pub from
+star.rosslyn.unisi.com (128.126.164.2). 
+	there is an x/ada studi team sponsor by nasa jsc, which appar is
+work out bind. inform: xada@ghg.hou.tx.us.
+	gnu smalltalk ha a beta nativ smalltalk bind to x call stix (by
+steven.byrn@eng.sun.com). it is still in it begin stage, and 
+document is spars outsid the smalltalk code itself. the sourc ar 
+avail as /pub/gnu/smalltalk-1.1.1.tar.z on prep.ai.mit.edu (18.71.0.38) or 
+ugl.unit.no (129.241.1.97).
+	prolog bind (call "xwip") written by ted kim at ucla while
+support in part by darpa ar avail by anonym ftp from
+export.lc.mit.edu:contrib/xwip.tar.z or ftp.cs.ucla.edu:pub/xwip.tar.z.
+these prolog languag bind depend on have a quintu-type foreign function
+interfac in your prolog. the develop ha gotten it to work with quintu and 
+sicstu prolog. inquiri should go to xwip@cs.ucla.edu. [3/90]
+	scheme bind to xlib, osf/motif, and xaw ar part of the elk
+distribut; version 1.5a on export obsolet the version on the r5 contrib
+tape. 
+	x-scm, a bolt-on accessori for aubrei jaffer's "scm" scheme interpret
+that provid an interfac to xlib, motif, and openlook, is now avail via 
+ftp from altdorf.ai.mit.edu:archiv/scm/xscm1.05.tar.z and 
+nexu.yorku.ca:pub/scheme/new/xscm1.05.tar.z.
+
+	ada bind to motif, explicitli, will eventu be made avail by
+the jet propuls laboratori, probabl through the normal electron
+mean.  advanc inform can be obtain from dsoulel@dsfvax.jpl.nasa.gov,
+who mai respond as time permit.
+	adamotif is a complet bind to x and motif for the ada languag, for
+mani common system; it is base in part upon the saic/unisi bind and also
+includ a uil to ada translat. info: system engin research 
+corpor, 1-800-ada-serc (well!serc@appl.com).
+
+	also: the mit consortium, although not involv in produc ada
+bind for x, maintain a partial list of peopl involv in x and ada;
+inform is avail from donna convers, convers@expo.lc.mit.edu.
+
+----------------------------------------------------------------------
+subject: 138)  can xgetwindowattribut get a window's background pixel/pixmap?
+
+	no.  onc set, the background pixel or pixmap of a window cannot be 
+re-read by client.  the reason for thi is that a client can creat a pixmap,
+set it to be the background pixmap of a window, and then free the pixmap. the 
+window keep thi background, but the pixmap itself is destroi.  if you're 
+sure a window ha a background pixel (not a pixmap), you can us xcleararea() 
+to clear a region to the background color and then us xgetimag() to read 
+back that pixel.  howev, thi action alter the content of the window, and 
+it suffer from race condit with exposur. [courtesi dave lemk of ncd 
+and stuart mark of sun]
+
+	note that the same appli to the border pixel/pixmap. thi is a 
+(mi)featur of the protocol which allow the server is free to manipul the
+pixel/pixmap howev it want.  by not requir the server to keep the 
+origin pixel or pixmap, some (potenti a lot of) space can be save. 
+[courtesi jim fulton, mit x consortium]
+
+----------------------------------------------------------------------
+subject: 139)  how do i creat a transpar window?
+	
+	a complet transpar window is easi to get -- us an inputonli
+window. in order to creat a window which is *mostli* transpar, you have
+sever choic:
+	- the shape extens first releas with x11r4 offer an easi wai to
+make non-rectangular window, so you can set the shape of the window to fit the
+area where the window should be nontranspar; howev, not all server 
+support the extens.
+	- a machin-specif method of implement transpar window for
+particular server is to us an overlai plane support by the hardwar.  note 
+that there is no x notion of a "transpar color index".
+	- a gener portabl solut is to us a larg number of tini 
+window, but thi make oper on the applic as a unit difficult.
+	- a final answer is to consid whether you realli need a transpar
+window or if you would be satisfi with be abl to overlai your applic
+window with inform; if so, you can draw into separ bitplan in color
+that will appear properli.
+
+[thank to der mous, mous@lightn.mcrcim.mcgill.edu, 3/92; see also
+the x journal 1:4 for a more complet answer, includ code sampl for thi
+last option]
+
+----------------------------------------------------------------------
+subject: 140)  why doesn't gxxor produc mathemat-correct color valu?
+
+	when us gxxor you mai expect that draw with a valu of black on a
+background of black, for exampl, should produc white. howev, the draw
+oper doe not work on rgb valu but on colormap indic. the color that
+the result colormap index actual point to is undefin and visual
+random unless you have actual fill it in yourself. [on mani x server black
+and white often 0/1 or 1/0; program take advantag of thi mathemat
+coincid will break.]
+	if you want to be combin color with gxxor, then you should be 
+alloc a number of your own color cell and fill them with your chosen
+pre-comput valu.
+	if you want to us gxxor simpli to switch between two color, then you 
+can take the shortcut of set the background color in the gc (graphic 
+context) to 0 and the foreground color to a valu such that when it draw over 
+red, sai, the result is blue, and when it draw over blue the result is red. 
+thi foreground valu is itself the xor of the colormap indic of red and 
+blue.
+
+[thank to chri flatter (cflatter@zia.aoc.nrao.edu) and ken whalei 
+(whalei@spectr.pa.dec.com), 2/91]
+
+----------------------------------------------------------------------
+subject: 141)  why doe everi color i alloc show up as black?
+
+	make sure you're us 16 bit and not 8.  the red, green, and blue 
+field of an xcolor structur ar scale so that 0 is noth and 65535 is 
+full-blast. if you forget to scale (us, for exampl, 0-255 for each color) 
+the xalloccolor function will perform correctli but the result color is 
+usual black. 
+
+[thank to paul asent, asent@adob.com, 7/91]
+
+----------------------------------------------------------------------
+subject: 142)  why can't my program get a standard colormap?
+i have an imag-process program which us xgetrgbcolormap() to get the 
+standard colormap, but it doesn't work. 
+
+	xgetrgbcolormap() when us with the properti xa_rgb_default_map doe 
+not creat a standard colormap -- it just return on if on alreadi exist.
+us xstdcmap or do what it doe in order to creat the standard colormap first.
+
+[1/91; from der mous (mous@larri.mcrcim.mcgill.edu)]
+
+----------------------------------------------------------------------
+subject: 143)  why doe the pixmap i copi to the screen show up as garbag? 
+
+	the initi content of pixmap ar undefin.  thi mean that most
+server will alloc the memori and leav around whatev happen to be there 
+-- which is usual garbag.  you probabl want to clear the pixmap first us
+xfillrectangl() with a function of gxcopi and a foreground pixel of whatev 
+color you want as your background (or 0l if you ar us the pixmap as a 
+mask). [courtesi dave lemk of ncd and stuart mark of sun]
+
+----------------------------------------------------------------------
+subject: 144)  how do i check whether a window id is valid?
+my program ha the id of a window on a remot displai. i want to check whether
+the window exist befor do anyth with it.
+
+	becaus x is asynchron, there isn't a guarante that the window 
+would still exist between the time that you got the id and the time you sent an
+event to the window or otherwis manipul it. what you should do is send the
+event without check, but instal an error handler to catch ani badwindow 
+error, which would indic that the window no longer exist. thi scheme will
+work except on the [rare] occas that the origin window ha been destroi 
+and it id realloc to anoth window.
+
+[courtesi ken lee (klee@synopt.com), 4/90]
+
+----------------------------------------------------------------------
+subject: 145)  can i have two applic draw to the same window?
+
+	ye. the x server assign id to window and other resourc (actual,
+the server assign some bit, the client other), and ani applic that 
+know the id can manipul the resourc [almost ani x server resourc, except
+for gc and privat color cell, can be share].
+	the problem you face is how to dissemin the window id to multipl 
+applic. a simpl wai to handl thi (and which solv the problem of the
+applic' run on differ machin) is in the first applic to 
+creat a special-name properti on the root-window and put the window id into
+it. the second applic then retriev the properti, whose name it also
+know, and then can draw whatev it want into the window.
+	[note: thi scheme work iff there is onli on instanc of the first
+applic run, and the scheme is subject to the limit mention
+in the question about us window id on remot displai.]
+	note also that you will still need to coordin ani higher-level 
+cooper among your applic. 
+	note also that two process can share a window but should not try to 
+us the same server connect. if on process is a child of the other, it 
+should close down the connect to the server and open it own connect.
+
+[mostli courtesi phil karlton (karlton@wpd.sgi.com) 6/90]
+
+----------------------------------------------------------------------
+subject: 146)  why can't my program work with tvtwm or swm?
+
+	a number of applic, includ xwd, xwininfo, and xsetroot, do not
+handl the virtual root window which tvtwm and swm us; thei typic return 
+the wrong child of root. a gener solut is to add thi code or to us it in
+your own applic where you would normal us rootwindow(dpy,screen):
+
+/* function name: getvroot
+ * descript: get the root window, even if it's a virtual root
+ * argument: the displai and the screen
+ * return: the root window for the client
+ */
+#includ <x11/xatom.h>
+window getvroot(dpy, scr)
+displai        *dpy;
+int             scr;
+{
+window          rootreturn, parentreturn, *children;
+unsign int    numchildren;
+window          root = rootwindow(dpy, scr);
+atom            __swm_vroot = none;
+int             i;
+
+  __swm_vroot = xinternatom(dpy, "__swm_vroot", fals);
+  xquerytre(dpy, root, &rootreturn, &parentreturn, &children, &numchildren);
+  for (i = 0; i < numchildren; i++) {
+	atom            actual_type;
+	int             actual_format;
+	long            nitem, bytesaft;
+	window         *newroot = null;
+
+	if (xgetwindowproperti(dpy, children[i], __swm_vroot, 0, 1,
+	    fals, xa_window, &actual_type, &actual_format, &nitem,
+            &bytesaft, (unsign char **) &newroot) == success && newroot) {
+			root = *newroot;
+			break;
+		}
+	}
+
+	return root;
+}
+
+[courtesi david elliott (dce@smsc.soni.com). similar code is in ssetroot, a
+version of xsetroot distribut with tvtwm. 2/91]
+
+a header file by andrea stolck of icsi on export.lc.mit.edu:contrib/vroot.h 
+function similarli by provid macro for rootwindow and defaultrootwindow;
+code can includ thi header file first to run properli in the presenc of a
+virtual desktop.
+	
+----------------------------------------------------------------------
+subject: 147)  how do i keep a window from be resiz by the user?
+
+	resiz the window is done through the window manag; window manag
+can pai attent to the size hint your applic place on the window, but 
+there is no guarante that the window manag will listen. you can try set 
+the minimum and maximum size hint to your target size and hope for the best. 
+[1/91]
+
+----------------------------------------------------------------------
+subject: 148)  how do i keep a window in the foreground at all time?
+
+	it's rather antisoci for an applic to constantli rais itself
+[e.g. by track visibilitynotifi event] so that it isn't overlap -- 
+imagin the conflict between two such program run.  
+	the onli sure wai to have your window appear on the top of the stack
+is to make the window overrid-redirect; thi mean that you ar temporarili
+assum window-manag duti while the window is up, so you want to do 
+thi infrequ and then onli for short period of time (e.g. for popup 
+menu or other short paramet-set window).
+
+[thank to der mous (mous@larri.mcrcim.mcgill.edu); 7/92]
+
+----------------------------------------------------------------------
+subject: 149)  how do i make text and bitmap blink in x?
+
+	there is no easi wai.  unless you're will to depend on some sort of
+extens (as yet non-exist), you have to arrang for the blink yourself,
+either by redraw the content period or, if possibl, by plai game
+with the colormap and chang the color of the content.
+
+[thank to mous@larri.mcrcim.mcgill.edu (der mous), 7/91]
+
+----------------------------------------------------------------------
+subject: 150)+ how do i get a doubl-click in xlib?
+
+	user of xt have the support of the translat manag to help 
+get notif of doubl-click.
+	there is no good wai to get onli a doubl-click in xlib, becaus the 
+protocol doe not provid enough support to do doubl-click.  you have to do 
+client-side timeout, unless the singl-click action is such that you can defer
+actual take it until you next see an event from the server.  thu, you 
+have to do timeout, which mean system-depend code.  on most unixish 
+implement, you can us xconnectionnumb to get the file descriptor of 
+the x connect and then us select() or someth similar on that.
+	note that mani user-interfac refer suggest that a doubl-click
+be us to extend the action indic by a singl-click; if thi is the case
+in your interfac then you can execut the first action and as a compromis
+check the timestamp on the second event to determin whether it, too, should
+be the singl-click action or the doubl-click action.
+
+[thank to mous@larri.mcrcim.mcgill.edu (der mous), 4/93]
+
+----------------------------------------------------------------------
+subject: 151)! how do i render rotat text?
+	
+	xlib intention doe not provid such sophist graphic 
+capabl, leav them up to server-extens or client-side graphic
+librari.
+	your onli choic, if you want to stai within the core x protocol, is to
+render the text into a pixmap, read it back via xgetimag(), rotat it "by 
+hand" with whatev matric you want, and put it back to the server via 
+xputimag(); more specif:
+	1) creat a bitmap b and write your text to it.
+	2) creat an xybitmap imag i from b (via xgetimag).
+	3) creat an xybitmap imag i2 big enough to handl the transform.
+	4) for each x,y in i2, i2(x,y) = i(a,b) where 
+		a = x * co(theta) - y * sin(theta)
+		b = x * sin(theta) + y * co(theta)
+	5) render i2
+	note that you should be care how you implement thi not to lose
+bit; an algorithm base on shear transform mai in fact be better.
+	the high-level server-extens and graphic packag avail for x 
+also permit render of rotat text: displai postscript, pex, phig, and gk,
+although most ar not capabl of arbitrari rotat and probabl do not us the
+same font that would be found on a printer.
+	in addit, if you have enough access to the server to instal a font
+on it, you can creat a font which consist of letter rotat at some
+predefin angl. your applic can then itself figur out placement of each
+glyph.
+
+[courtesi der mous (mous@larri.mcrcim.mcgill.edu), eric taylor 
+(etaylor@wilkin.bmc.tmc.edu), and ken lee (klee@synopt.com), 11/90;
+liam quin (lee@sq.com), 12/90]
+
+	interview (c++ ui toolkit, in the x contrib softwar) ha support for
+render rotat font in x.  it could be on sourc of exampl code.
+[brian r. smith (brsmith@cs.umn.edu), 3/91]
+	anoth possibl is to us the hershei font; thei ar 
+stroke-render and can be us by x by convert them into xdrawlin 
+request. [eric@pencom.com, 10/91]
+
+	the xrotfont program by alan richardson (mppa3@syma.sussex.ac.uk) 
+(post to comp.sourc.x juli 14 1992) paint a rotat font by implement 
+the method abov and by us an outlin (hershei) font.
+	the xvertext packag by alan richardson (mppa3@syma.sussex.ac.uk) is a 
+set of function to facilit the write of text at ani angl.  version 3.0 
+wa recent releas to alt.sourc and comp.sourc.misc [3/93]; it is also 
+on export as contrib/xvertext.3.0.shar.z. 
+
+	o'reilli's x resourc volum 3 includ inform from hp about
+modif to the x font server which provid for rotat and scale text.
+
+----------------------------------------------------------------------
+subject: 152)  what is the x registri? (how do i reserv name?)
+
+	there ar place in the x toolkit, in applic, and in the x
+protocol that defin and us string name. the context is such that conflict
+ar possibl if differ compon us the same name for differ thing.
+	the mit x consortium maintain a registri of name in these domain:
+orgain name, select name, select target, resourc type,
+applic class, and class extens record type; and sever other.
+	the list as of 7/91 is in the directori mit/doc/registri on the r5 
+tape; it is also avail by send "send doc registri" to the xstuff mail
+server.
+	to regist name (first come, first serv) or to ask question send 
+to xregistri@expo.lc.mit.edu; be sure to includ a postal address for
+confirm.
+
+[11/90; condens from asent/swick appendix h]
+----------------------------------------------------------------------
+
+
+david b. lewi 					faq%craft@uunet.uu.net
+
+		"just the faq, ma'am." -- joe fridai 
+-- 
+david b. lewi		temporarili at but not speak for visual, inc.
+dai: dbl@visual.com	even: david%craft@uunet.uu.net

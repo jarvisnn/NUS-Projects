@@ -1,0 +1,25 @@
+from: richk@grebyn.com (richard krehbiel)
+subject: re: vl-bu hdd/fdd control or id hdd/fdd control?
+in-repli-to: taybh@hpsgm2.sgp.hp.com's messag of 20 apr 93 13:30:17 gmt
+line: 16
+organ: grebyn timeshar, inc.
+
+in articl <62890018@hpsgm2.sgp.hp.com> taybh@hpsgm2.sgp.hp.com (beng hang tai) write:
+
+>   hi,
+>       i am bui a quantum lp240at 245 mb hardisk and is decid a
+>       hdd/fdd control. is 32-bit vl-bu hdd/fdd control faster 
+>       than 16 bit id hdd/fdd control card?
+
+no, vl-bu id is no faster than isa id.  the id interfac is
+fundament noth more than an extens of the isa bu, and if
+you hook it to vl-bu it'll work as fast as the slower of the two,
+mean isa speed.
+
+>       i hear that
+>       the vl bu control is slower than a id control?
+
+on the other hand, i wouldn't expect it to be *slower*...
+-- 
+richard krehbiel                                 richk@grebyn.com
+os/2 2.0 will do for me until amigado for the 386 come along...

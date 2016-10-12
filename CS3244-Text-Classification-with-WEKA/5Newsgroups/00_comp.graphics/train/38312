@@ -1,0 +1,24 @@
+from: spencer@med.umich.edu (spencer w. thoma)
+subject: re: cylind and rai
+organ: univers of michigan hsitn
+line: 17
+nntp-post-host: guraldi.itn.med.umich.edu
+in-repli-to: katker@krusti.eec.umich.edu's messag of thu, 15 apr 1993 04:04:23 gmt
+
+
+sketch:  rotat so cylind axi is || z axi.
+
+intersect x/y project of line with project cylind (similar to,
+but easier than, sphere intersect).  result: no intersect, on
+intersect, or two intersect, parameter along line by t0 and
+t1.  now look at z, and comput intersect of line with top and
+bottom plane of cylind.  thi give t0' and t1'.  the interv of
+intersect is then the bit of the line from [t0,t1] intersect [t0',t1'].
+
+detail left as an exercis for the reader.
+
+=s
+--
+=spencer w. thoma 		|  info tech and network, b1911 cfob, 0704
+   "genom informatician"	|  univ of michigan, ann arbor, mi 48109
+spencer.w.thoma@med.umich.edu	|  313-764-8065, fax 313-764-4133

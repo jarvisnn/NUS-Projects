@@ -1,0 +1,60 @@
+from: rabe@akela.informatik.rwth-aachen.de (ralf g. r. berg)
+
+subject: re: unix and do talk on qic-150 tape.
+
+organ: rechnerbetrieb informatik - rwth aachen
+
+line: 21
+
+nntp-post-host: akela.informatik.rwth-aachen.de
+
+mime-version: 1.0
+
+content-type: text/plain; charset=us-ascii
+
+content-transfer-encod: 7bit
+
+
+
+kdq@quest.uucp (kevin d. quitt) write:
+
+
+
+>i have a system with a scsi drive.  i want to get a qic-150 tape unit to
+
+>attach to it, and then run softwar that will read (and mayb even write)
+
+>unix tar tape.  (or at least just read a stream and dump it to file - i'll
+
+>take it from there).
+
+
+
+>why is thi imposs?
+
+
+
+it isn't.  ;-)
+
+
+
+us tar on the un*x box and gtak110.zip on the do box. need aspi driver.
+
+
+
+
+
+ralf
+
+
+
+-- 
+
+ralf g. r. berg, aachen univers of technolog ee (comp. eng.) student 
+
+snail: h"uckeswagen str. 42, d-w5270 gummersbach, fed. rep. of germani
+
+phone: (+49) 22 61-2 19 68 (answ. mach.) / note: new zip (51647) as of juli 1st
+
+email: rabe@pool.informatik.rwth-aachen.de
+

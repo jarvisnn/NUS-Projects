@@ -1,0 +1,22 @@
+from: hue@island.com (pond scum)
+subject: re: how to get 24bit color with xview frame ?
+organ: island graphic corp.
+line: 17
+
+amathur@ce.cwru.edu (alok mathur) write:
+>i would like to know how i can set the depth of the frame to be 24 bit.
+>i tri us the follow xlib code :
+
+>am i us a complet wrong approach here ? is it possibl to set the depth
+
+ye.
+
+>and colormap for a window creat by xview ? what am i do wrong ?
+
+look up xv_depth.  also, you might want to try us xview colormap segment
+instead of xlib for your colormap stuff.  thei will probabl be easier
+for you to us, and sinc you ar us a truecolor visual, you won't
+be lose anyth compar to straight xlib.
+
+
+-jonathan		hue@island.com

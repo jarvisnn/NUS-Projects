@@ -1,0 +1,85 @@
+from: sherwood@adob.com (geoffrei sherwood)
+subject: orchid p9000 vs fahrenheit (mini review)
+organ: adob system incorpor
+x-newsread: tin [version 1.1 pl9]
+line: 79
+
+
+i just purchas a viewson 17 and and orchid p9000.  in short, i am happi
+with the monitor and unhappi with the card.  i have spent a lot more time
+futz with the card, so that is what i am go to write about.  the monitor
+is pretti.  the moir i had under simciti on my 17" magnavox went awai.  it
+isn't as heavi as i thought it would be (45 lb, i think).  so much for the
+monitor.  on to the bitch session and test result.
+
+in go with the modern trend, the orchid p9000 card onli support 16 color
+in 640x480 mode without a driver.  of cours, thi break ani do program
+which us svga mode (like most of my cd-rom).  the compudyn whiplash vga,
+orchid fahrenheit 1280, and orchid f. vlb all share thi limit.  those
+ar all s3 card, which mean it is an s3 problem for them (the p9000 us
+a weitek vga chip which also doesn't support them).  the hercul graphit
+card doe seem to have these mode, but i didn't run the same test case as
+i did on the other board dure the brief time i had it.  it wa abl to
+print the splash screen for the grolier's encyclopedia, though, which the s3
+card just print as hash, which is why i suspect the svga mode ar support.
+
+the support resolut realli annoi me.  you can do 1280x1024 at 75hz if
+you tell the driver you have an nec 5fg (thei onli have about six monitor
+list plu 'gener', and if you choos gener you can't get ani high
+refresh at all).  but at 1024x768 you ar limit to 70hz.  seem to me
+that the hardwar should be abl to support the bandwidth (if it can do 75hz
+at 1280 it sure should be abl to do it at 1024!).  higher vertic resolut
+wa the main reason i bought the card over the orchid f. vlb i current have,
+and it will do 1024x768x70 hz as well.
+
+the higher graphic mode all crash hp dashboard.  i just got off the phone
+with orchid, and with the 1.1 driver (i don't know what i have) he wa unabl
+to recreat the problem.  on the plu side, their tech rep wa as help as
+he could be and boot up the program on hi comput to verifi he didn't have
+the problem.  he didn't know why thei limit the refresh to 70 hz either.
+
+the board is faster that the ofvlb for most thing accord to the hercul
+speedi program. thi program test variou oper and report the result
+in pixel/second.  i don't have the number for the graphit card, but thei
+were close to half of the ofvlb (ie, slower) but that wa run in a 20mhz
+386, isa, so the number aren't realli compar.  the follow number
+were all obtain us a 486, 33 mhz, air motherboard (umc chipset), with
+8 mb memori.  i give rang becaus the program report the number as it
+comput them, and these tend to jump around a bit.
+
+
+k mean thousand (not 1024), m mean million, pixel per second
+
+             orchid fahrenheit vlb                  orchid p9000
+chip                 s3 805                          weitek 9000
+dib to screen        182k - 190k                     228k - 240k
+memori to screen     5.9m - 6.2m                     8.4m - 8.9m
+screen to screen     14m - 14.8m                     29m - 30.8m
+vector, solid        2.4m                            2.8m - 2.9m
+vector, style       55k - 58k                       449k - 473k
+polygon, shade      1.8m - 2.1m                     1.6m - 1.9m
+polygon, hatch     6.9m - 7.9m                     1.3m - 1.7m
+ternari rop         1.9m - 2.4m                     477k - 520k
+font                 130k - 160k                     46k - 55k / 1.2m
+
+the dib to screen test take a devic independ bitmap of a face and transfer
+it to the screen.  i have no idea what is be done intern as far as
+convers go.  the memori to screen take the same face and copi it to
+the screen, my guess is after it ha been raster into a bitmap that can
+just be copi to the video displai.  the screen to screen test copi that
+face from place to place on the screen.  awesom!  interestingli, the solid
+vector and shade polygon show no improv, and hatch polygon (ie,
+fill with cross-hatch) and ternari rop (whatev thei ar.  graphic
+oper like xor mayb????) ar a dead loss on the 9000.  i give two
+number for the 9000 font, becaus i think thei ar cach.
+when the font ar first drawn on the screen thei ar done fairli slowli --
+1/3 the speed of the ofvlb.  then the speed increas dramat.  sound
+like program to a benchmark to me....
+
+i make no claim that these number mean anyth at all.  it just what
+i saw when i ran them on my comput.  i normal don't write disclaim,
+but thi time mayb i'd better.  my test is total unconnect with my
+work (i program under unix on decstat) is done complet without the
+knowledg, bless, or equip of my compani.
+
+geoff sherwood

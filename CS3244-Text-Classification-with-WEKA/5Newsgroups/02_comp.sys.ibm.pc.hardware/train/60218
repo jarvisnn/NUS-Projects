@@ -1,0 +1,20 @@
+from: erzberg@ifi.unizh.ch (martin erzberg)
+subject: re: monitor for xga
+new-softwar: ibm os/2 pm rn (nr/2) v0.16 by o. vishnepolski and r. roger
+line: 12
+nntp-post-host: sangria
+repli-to: erzberg@ifi.unizh.ch (martin erzberg)
+organ: univers of zurich, depart of comput scienc
+
+in <1993apr15.211053.35792@watson.ibm.com> kaul@vnet.ibm.com write:
+>my home viewson 6.  i like the multisync becaus it's easi to run them
+>in mode like 800x600x64k color noninterlac, or at higher mode like
+>1360x1024x16.
+oh yeah! i just got my new eizo flexscan yesterdai (to replac my old 8515), and
+i tri it with 1360x1024. thi mode is just great! i can get four perfectli readabl
+command window on the screen! and if i need more color, i can go back to 1024x768
+or even 800x600.
+on thing i am wonder though: why isn't there a monxxxx.dg file which contain
+all the resolut up to 1360x1024? now i have to chang the xgasetup.pro everi
+time i want to switch, instead of simpli go through the system set of os/2.
+regard, martin erzberg

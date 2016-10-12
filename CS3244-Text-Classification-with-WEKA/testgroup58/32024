@@ -1,0 +1,192 @@
+from: deali@narya.gsfc.nasa.gov (brian deali - csc)
+
+subject: re: how xcreateregion work ??
+
+organ: nasa/goddard space flight center
+
+line: 87
+
+distribut: world
+
+nntp-post-host: narya.gsfc.nasa.gov
+
+keyword: xlib, xregion
+
+origin: deali@narya.gsfc.nasa.gov
+
+
+
+
+
+in articl <1td5ininnl7m@finch.doc.ic.ac.uk>, ln@doc.ic.ac.uk (leonida nikidi) write:
+
+|> 
+
+|> hi,
+
+|> 
+
+|> 	
+
+|> 
+
+|>    could someon explain to me what exactli the xlib function 
+
+|> 
+
+|> xcreateregion, xpolygonregion, xpointinregion do, or to 
+
+|> 
+
+|> suggest a ftp site where i can find program us these function.
+
+|> 
+
+|> 
+
+|> ps: the man page doe not explain much ......
+
+|> 
+
+|> 	
+
+|> thank you,
+
+|> leo.
+
+|> 
+
+|> 
+
+|> 
+
+|> 
+
+|> 
+
+|> 
+
+|> -- 
+
+|> ---------------------------------------------------------------------
+
+|> leonida nikidi : ln@doc.ic.ac.uk	imperi colleg, london,uk
+
+|> 					dept. of comput
+
+|> ---------------------------------------------------------------------
+
+i us those routin in a widget which onli redraw expos area.
+
+here's a small piec of code that us those routin
+
+
+
+static void redisplai(pw, ev, region)
+
+xtpmanagerwidget pw;
+
+xexposeev *ev;
+
+region region;
+
+
+
+/* pp->exposur_region is an xregion */
+
+xtpmanagerpart *pp = &pw->plotter;
+
+pp->exposur_region = xcreateregion();
+
+   /* region is pass via an expos event */
+
+if(region == null)
+
+{
+
+if (ev->send_event)  /* synthet event sent by widget it want a full redraw*/
+
+        {
+
+        exporect.x = pw->core.x;
+
+        exporect.y = pw->core.y;
+
+        exporect.width = pw->core.width;
+
+        exporect.height = pw->core.height;
+
+        }
+
+     els
+
+        {
+
+        exporect.x = ev->x;
+
+        exporect.y = ev->y;
+
+        exporect.width = ev->width;
+
+        exporect.height = ev->height;
+
+        }
+
+
+
+stuff delet      
+
+
+
+/* region now contain the exposur region */
+
+        xunionrectwithregion(&exporect,pp->exposur_region,pp->exposur_region);
+
+}
+
+els
+
+        xunionregion ( region, pp->exposur_region, pp->exposur_region);
+
+stuff delet 
+
+/* we need to clip on expos region for redraw the grid */
+
+        xsetregion(xtdisplayofobject(pw), pp->plotarea_gc,pp->exposur_region);
+
+stuff delet 
+
+        /* check to see if child is expos */
+
+        if (xrectinregion (pw->plotter.exposur_region,
+
+                         child->core.x ,
+
+                         child->core.y ,
+
+                         child->core.width  ,
+
+                         child->core.height ))
+
+
+
+so, i build up a region of exposur so that when i servic my contain
+
+widget redraw of rectobj children, i onli redraw what need to be redrawn.
+
+
+
+it work for me, hope thi help you.
+
+brian
+
+
+
+-- 
+
+brian deali                |301-572-8267| it not know where it's at  
+
+deali@kong.gsfc.nasa.gov   |            | that's import,it's know
+
+!uunet!dftsrv!kong!deali   |            | where it's not at...  b.dylan
+

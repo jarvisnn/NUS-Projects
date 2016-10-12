@@ -1,0 +1,45 @@
+from: kavitski@hsi.com (jim kavitski)
+subject: comp.window.x.intrins
+summari: clip of charact's high order bit
+nntp-post-host: hsi86.hsi.com
+organ: 3m health inform system, wallingford ct
+line: 38
+
+i am have a problem with the high order bit of a charact be 
+clip when enter in an xterm window under motif. i have reprogram
+the f1 kei to transmit a <ff> <be> charact sequenc by us the
+follow line in .xdefault:
+
+~ctrl ~shift ~alt <kei> f1 : string(0xff) string(0xbe) \n\
+
+i merg in thi line with xrdb -merg and then creat the new xterm
+which ha the remap f1 kei. the problem that aris is that the 
+applic which is reciev input at the time onli see a <7f> <3e>
+sequenc, which is <ff> <be> with the high order bit of each
+charact be filter or ignor.
+
+when i run xev and press the f1 kei, i get the correct valu show 
+up in the follow two kei event:
+
+  keypress event, serial 14, synthet no, window 0x2800001,
+  root 0x28, subw 0x0, time 2067815294, (67,80), root:(74,104),
+  state 0x0, keycod 16 (keysym 0xffbe, f1), same_screen ye,
+  xlookupstr give 0 charact:  ""
+
+  keyreleas event, serial 16, synthet no, window 0x2800001,
+  root 0x28, subw 0x0, time 2067815406, (67,80), root:(74,104),
+  state 0x0, keycod 16 (keysym 0xffbe, f1), same_screen ye,
+  xlookupstr give 0 charact:  ""
+
+notic that the keysym be transmit is correct; 0xffbe.
+but when i us the f1 kei while in vi or in a program i wrote to 
+spit back the hex valu of keyboard input, i onli get <7f> <3e>.
+
+doe anyon know why the high order bit is be filter and what
+i can do to make sure that the entir 8bit make it through to
+the final applic? ani help is greatli appreci.
+
+pleas *email* ani respons.
+
+jim kavitski
+kavitski@hsi.com

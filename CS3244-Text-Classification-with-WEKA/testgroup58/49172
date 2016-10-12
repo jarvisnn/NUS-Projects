@@ -1,0 +1,226 @@
+from: darrylo@srgenprp.sr.hp.com (darryl okahata)
+
+subject: re: help ad a scsi drive (can it coexist with an id?)
+
+repli-to: darrylo@sr.hp.com
+
+organ: hewlett-packard / center for primal scream therapi
+
+x-newsread: tin [version 1.1 pl9.2]
+
+line: 106
+
+
+
+eric bosco (ebosco@us.oracl.com) wrote:
+
+
+
+[ first of all, pleas edit your post.  wade through 50 line of
+
+  quot crud, which peopl have alreadi read, make peopl much less
+
+  like to help you.  of cours, if you don't want to be help, that's
+
+  your problem.  ;-) ]
+
+
+
+> is thi true??? i wa under the impress that peopl on the net had both  
+
+> scsi and id work togeth.
+
+
+
+     no, it's not true.  you can get scsi and id to work togeth, but
+
+there ar restrict (at least with the adaptec 1542):
+
+
+
+* you must boot from the id drive.  there is no wai to boot from the
+
+  scsi drive if you have both id and scsi drive.
+
+
+
+* you must disabl the scsi rom bio (i'm not sure about thi, though),
+
+  and so you must also us some special driver to access the scsi
+
+  drive.  (hmm.  i know that you have to disabl someth relat to
+
+  the scsi bio, but i'm not sure if it is the rom itself.)
+
+
+
+     back in februari, someon ask about id and scsi (thi question
+
+get ask again and again).  at the end of thi messag, i've includ
+
+an edit copi of my repli.  you might find it interest.
+
+
+
+     -- darryl okahata
+
+	internet: darrylo@sr.hp.com
+
+
+
+disclaim: thi messag is the author's person opinion and doe not
+
+constitut the support, opinion or polici of hewlett-packard or of the
+
+littl green men that have been follow him all dai.
+
+
+
+===============================================================================
+
+> 1)  is it worth it to get scsi over id?   will there be a notic
+
+>     decreas in access time/increas in xfer rate?
+
+
+
+     for msdo applic, isa-base scsi and id control
+
+gener have compar throughput.  you might get slightli higher
+
+throughput with a scsi disk, but you'll also pai more for the disk
+
+($30-$100 and up, in some case).  you'll also pai much, much more for a
+
+good scsi control.
+
+
+
+     note that good scsi control realli show their power if thei're
+
+us with a good multitask oper system (like a pc unix).
+
+unfortun, neither msdo nor window 3.1 is a good multitask
+
+oper system.  the perform advantag of scsi control is
+
+mostli wast with these, which leav the advantag of be abl to
+
+connect multipl devic to the scsi bu as the onli advantag.
+
+howev, note that you can expect to pai a premium for scsi devic.
+
+
+
+     if you're onli go to be us msdo, stick with id.  it's
+
+cheaper, and you'll have less headach.
+
+
+
+> 4)  will virtual ani scsi devic chain into the control for my
+
+>     hard-drive (bernoulli box, cd-rom, tape drive, etc).
+
+
+
+[ note: the follow is true for msdo/window onli.  who know what
+
+  the futur hold for window nt and unix??? ]
+
+
+
+     no.  gener, you have to find driver for each scsi devic,
+
+which probabl don't exist unless you're us on of the "better"/"high
+
+perform" scsi control.  these ar typic bu-master scsi
+
+control that cost around $180-$400 (street price) and up, and
+
+driver that allow you to connect these control to popular
+
+name-brand scsi devic either come with the card, or can be purchas
+
+(for under $100 list price).  exampl of such driver kit ar:
+
+
+
+* adaptec's ez scsi kit (list: $75).  thi work onli with adaptec scsi
+
+  control.
+
+
+
+* corelscsi! (from the same peopl who make coreldraw!) (list: $99 (?)).
+
+  thi driver kit will supposedli work with ani scsi control card
+
+  that ha an aspi driver, like the adaptec.
+
+
+
+     central point's pc tool for do 8.0 support a number of scsi tape
+
+drive (the document list 40 tape drive).  unfortun, it
+
+work onli with adaptec control.
+
+
+
+> 5)  ar there like to be other problem/incompat with a
+
+>     scsi control and  sound card/video acceler/and similar
+
+>     equip.
+
+
+
+     ye, you will run into problem, if you're us a
+
+high-perform, bu-master scsi control.  thi doesn't sound
+
+right, doesn't it?  it's true, though.  with on of these control,
+
+you'll probabl have to tweak your system to get it to work with sound
+
+card, floppi-control-base tape drive (like the cm jumbo 250), and
+
+window 3.1.  i know.  i've been to h*ll and back get my scsi
+
+control to work with variou hardwar/softwar (thank god for tape
+
+backup).  if you want a copi of my "adaptec 1542 hint and tip" file,
+
+send email.
+
+
+
+     these problem aren't realli the fault of the scsi control card;
+
+the problem ar realli with the gener hardwar and softwar design of
+
+the pc (e.g., no standard).  howev, ad a bu-master scsi card
+
+is what bring these problem to the surfac and make them visibl.
+
+
+
+     scsi hold a lot of promis, but you can run into a lot of pc
+
+compat problem.  if you're plan on us onli msdo/window
+
+3.1, stick with id.  if you want to us window nt or a pc unix, you'll
+
+have to make some hard decis: a good scsi control and more than
+
+on scsi hard disk will probabl give you excel perform, at the
+
+possibl cost of msdo compat.  [ i sai, "probabl", becaus,
+
+while i know thi to be true with a pc unix, i don't know if thi realli
+
+will be true of window nt.  i suspect that it will, but i don't know
+
+for sure.  ]
+

@@ -1,0 +1,41 @@
+from: tiang@midwai.ecn.uoknor.edu (tiang)
+subject: re: a book i found... graphic
+nntp-post-host: midwai.ecn.uoknor.edu
+organ: engin comput network, univers of oklahoma, norman, ok, usa
+line: 35
+
+covlir@crockett1c.it.rpi.edu (lock) write:
+hello,
+
+>i happen to spot an excel book in a bookstor about 4 dai ago,
+>though!!!!!!  it is in c++ and assembl.  it teach you the assembl
+>as it goe along --so if you're like me and have no assembl experi,
+>don't worri.  it ha almost everyth that i want to know and ha
+>-----work----- code.
+
+>--rod covlin--
+
+	i just bought a copi.  i can't disagre that it is a veri good
+book.  but unfortun i wa look for the same graphic featur
+describ in thi book but _not_ in 640x480x16 or 320x200x256 mode. it
+is easi to accomod all the pixel "descriptor" (or color attribut)
+in those mode into a0000-afffff, but not in 640x480x256(which is what
+i am interest in).  i haven't finish the book but i affraid the
+author didn't talk much about thi mode(or other svga mode).  if
+anyon out there know ani good book deal with fast svga graphic
+manupul(scroll, repaint, all other good stuff..) pleas
+send me mail.  program guid to svga card is also welcom.
+
+	thank in advanc.
+
+
+ 
+************************************************************************
+*                         tiang   t.    foo                            *
+*		      tiang@uokmax.ecn.uoknor.edu 		       *
+************************************************************************    
+-- 
+************************************************************************
+*                         tiang   t.    foo                            *
+*		      tiang@uokmax.ecn.uoknor.edu 		       *
+************************************************************************    

@@ -1,0 +1,38 @@
+from: oberto@gene.icgeb.triest.it (jacqu oberto)
+subject: re: help!!! grasp
+organ: icgeb
+line: 33
+
+cbw790s@vma.smsu.edu.ext (corei webb) write:
+
+>in articl <1993apr19.160944.20236w@baron.edb.tih.no>
+>havardn@edb.tih.no (haavard ness,o92a) write:
+>>
+>>could anyon tell me if it's possibl to save each frame
+>>of a .gl (grasp) anim to .gif, .jpg, .iff or ani other
+>>pictur format.
+>>
+> 
+>     if you have the grasp anim system, then ye, it's quit easi.
+>you simpli us glib to extract the imag (each "frame" in a .gl is
+>actual a complet .pcx or .clp file), then us on of mani avail
+>util to convert it.  if you don't have the grasp packag, i'm afraid
+>i can't help you.  sorri.
+>     by the wai, befor you ask, grasp (graphic anim system for
+>profession) is a commerci product that sell for just over us$300
+>from most mail-order compani i've seen.  and no, i don't have it.  :)
+> 
+> 
+>                                               corei webb
+> 
+
+there ar sever public domain util avail at your usual
+archiv site that allow 'extract' of singl frame from a .gl
+file, check in the 'graphic' directori under *grasp.  the problem 
+is that the .clp file you gener cannot be decod by ani of 
+the mani pd format convert i have us. ani hint welcom!
+let me know if you have problem locat the util.
+hope it help.
+
+-- 
+jacqu oberto  <oberto@gene.icgeb.triest.it>

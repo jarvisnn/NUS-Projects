@@ -1,0 +1,61 @@
+link(href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css", rel="stylesheet")
+link(href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.min.css", rel="stylesheet")
+
+.modal.fade#add-review-widget-modal(
+  role='dialog')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button',data-dismiss='modal',aria-label='Close')
+          span(aria-hidden='true') &times;
+        h3.modal-title Add Review
+      .modal-body
+        form(method='POST',action='/reviews/new')
+          .form-group
+            h4
+              span Write a review for&nbsp;
+              span.reviewee-name
+            input.reviewee-id(name='idReviewee',type='hidden')
+            input.reviewee-name(name='name',type='hidden')
+          .form-group
+            label(for="moduleCode") Module Code
+            select.module-code.form-control(name='moduleCode')
+          .form-group
+            include ./stars.jade
+          .form-group
+            textarea.form-control(name='description',placeholder='Your review description',required)
+          .form-group
+            input.btn.btn-primary(
+              type='submit',data-dismissal='modal',value='Submit')
+
+script(src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js", type="text/javascript")
+script.
+  $('#add-review-widget-modal').on('show.bs.modal', function () {
+    $('.reviewee-id', this).val($(this).data('revieweeId'));
+    $('.reviewee-name', this).text($(this).data('revieweeName'));
+    var moduleCode = $(this).data('moduleCode');
+    $.getJSON('/misc/modules_processed.json', function(result) {
+      var $select = $('select').selectize({
+        maxOptions: 20,
+        maxItems: 1,
+        valueField: 'moduleCode',
+        labelField: 'moduleCode',
+        searchField: ['moduleCode', 'title'],
+        placeholder: 'Select a module...',
+        options: result,
+        create: false,
+        render: {
+          option: function(opt, escape) {
+            return '<div>' + opt.moduleCode + ': ' + opt.title + '</div>';
+          },
+          item: function(item, escape) {
+            return '<div>' + item.moduleCode + ': ' + item.title + '</div>';
+          }
+        }
+      });
+      $select[0].selectize.addItem(moduleCode);
+    });
+    $('.reviewee-id', this).val($(this).data('revieweeId'));
+    $('.reviewee-name', this).val($(this).data('revieweeName'));
+    $('.module-code', this).val($(this).data('moduleCode'));
+  });

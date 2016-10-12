@@ -1,0 +1,22 @@
+from: herlock@lclark.edu (jon herlock)
+subject: how to access 24-bit color on cg8?
+articl-i.d.: lclark.1993apr28.000956.12004
+organ: lewi & clark colleg, portland or
+line: 15
+x-newsread: tin [version 1.1 pl8]
+
+we have a sun 3/80 and we have just acquir a cg8 frame buffer card.
+
+the cg8 is suppos to support both a 24-bit color visual and a monochrom visual.
+the default visual for the xnew server is the monochrom, and we ar unabl to chang it to
+the 24-bit visual. we have tri us xgetvisualinfo to get a visual of depth 24, but had no
+success.  xdpyinfo give no inform about a 24-bit deep visual, onli monochrom. 
+
+there ar two possibl solut:
+	if someon ha patch for x11r5 xsun server, could thei forward them to us?
+
+	otherwis, could someon instruct us how to access the 24-bit color in openwindow?
+-- 
+jon herlock		email:  herlock@lclark.edu
+lewi & clark colleg
+portland, or 97219

@@ -1,0 +1,41 @@
+from: beck@irzr17.inf.tu-dresden.de (andr beck)
+subject: re: titl for xterm
+organ: dept. of comput scienc, tu dresden, germani.
+line: 32
+distribut: world
+repli-to: andr_beck@ir.inf.tu-dresden.de
+nntp-post-host: irzr17.inf.tu-dresden.de
+keyword: xterm
+
+
+in articl <c5ol74.3b1@aeon.in-berlin.de>, thoma@aeon.in-berlin.de (thoma wolfram) write:
+|> >hei gui!
+|> >i work on mani station and would like thi name and current lognam
+|> >to be in a titl of xterm when it's open and a machin name onli
+|> >when it's close. in other word, i want $host and $lognam to appear
+|> >as a titl of open xterm and $host when xterm is close.
+|> >how can i do it?
+|> 
+|> almost all window manag (twm, mwm, olwm and their deriv) support
+|> escap sequenc for it. for your purpos put follow into your
+|> .login (if you're us csh or tcsh), for sh you have to modifi it.
+|> 
+|> if ( "$term" == "xterm" ) then
+|> 	echo "^[]2;${lognam}@${host}^g^[]1;${host}^g"
+|> endif
+|> 
+
+1) thi is not a featur of the window manag but of xterm.
+2) thi sequenc ar not ansi compat, ar thei ?
+   doe anyon know if there ar compat sequenc for thi and what thei
+   ar ? i would think thei ar dc (devic control sequenc) introduc,
+   but mai be a csi sequenc exist, too ?
+   thi must work on a dxterm (vt and ansi compat), it mai not work
+   on xterm.
+
+--
++-o-+--------------------------------------------------------------+-o-+
+| o |                \\\-  brain insid -///                       | o |
+| o |                    ^^^^^^^^^^^^^^^                           | o |
+| o | andr' beck (abpsoft) mehl: andr_beck@ir.inf.tu-dresden.de | o |
++-o-+--------------------------------------------------------------+-o-+

@@ -1,0 +1,144 @@
+from: inou@crd.yokogawa.co.jp (inou takeshi)
+subject: how to see characterset from wchar_t
+nntp-post-host: emu
+distribut: comp
+organ: yokogawa electr corpor, tokyo, japan
+line: 137
+
+
+we develop a toolkit run on the x window system.
+the toolkit cope with ani languag base on x11r5's i18n
+facil. as you know, there ar 2 kind of i18n implement from mit's 
+x11r5 releas -- xsi and ximp. our origin implement of the toolkit
+us xsi.
+
+our toolkit manag each charact's size base on our own font manag system.
+in order to do that, the 'wchar_t' type charact string must be decompos
+to charact set. thi mean that if on wchar_t type compound string with 
+ascii and kanji mix, for exampl, is given, each element of the wchar_t
+arrai must be check it correspond charact set base on a bit layout
+and applic environ's local. in thi case if the local is 'japanes',
+each wchar_t charact will be classifi either to iso8859-1, jisx0208 or so.
+
+we need a function to do thi. the function must check how mani charact
+from the top ar the same charact set and what the charact set is.
+
+we could not find ani public x11r5 function to do that and inevit, us
+xsi's intern function to construct that function. the follow is the
+sourc code of that function 'decomposecharacterset()'.
+
+
+//i18n.h
+// thi mai look like c code, but it is realli -*- c++ -*-
+// $id: i18n.h,v 1.1 1992/01/21 12:05:24 iima exp iima $
+
+#ifndef _i18n_h
+#defin _i18n_h
+
+#includ <x11/xlib.h>
+
+extern int decomposecharacterset(const wchar_t *wc_str,	/* in */
+				 int wc_len,		/* in */
+				 char *buf,		/* out */
+				 int *buflen,		/* in/out */
+				 int *scan_len,	/* out */
+				 char **charset);	/* out */
+extern xmstring wchartoxmstr(const wchar_t *wc_str);
+extern xmstringcharset charsetofwchar(const wchar_t wc);
+
+#endif /* _i18n_h */
+
+//i18n.cc
+/* $id: i18n.cc,v 1.1 1992/01/21 12:05:05 iima exp $ */
+
+#includ <stdlib.h>
+#includ <x11/xlibint.h>
+#includ <xm/xm.h>
+#includ "i18n.h"
+
+extern "c" {
+#includ <x11/wchar.h>
+#defin _xwcdecomposeglyphcharset xxx_xwcdecomposeglyphcharset
+#defin _xmbfsc xxx_xmbfsc
+#defin _xmbctidtocsid xxx_xmbctidtocsid
+#includ "xlocaleint.h"
+#undef _xwcdecomposeglyphcharset
+#undef _xmbfsc
+#undef _xmbctidtocsid
+    extern int _xwcdecomposeglyphcharset(xlocal, const wchar_t*, int,
+					 char*, int*, int*, int*);
+    extern charset *_xmbfsc(xlocal, _csid);
+    extern _csid _xmbctidtocsid(xlocal, _csid);
+};
+
+int decomposecharacterset(const wchar_t *wc_str,/* in */
+			  int wc_len,		/* in */
+			  char *buf,		/* out */
+			  int *buf_len,		/* in/out */
+			  int *scan_len,	/* out */
+			  char **charset)	/* out */
+{
+    xlocal xlocal = _xfallbackconvert();
+    int ctid;
+    int statu;
+    charset *xcharset;
+    
+    statu = _xwcdecomposeglyphcharset(xlocal, wc_str, wc_len, buf,
+				       buf_len, scan_len, &ctid);
+    if (statu == success) {
+	xcharset = _xmbfsc(xlocal, _xmbctidtocsid(xlocal, ctid));
+	*charset = (xcharset) ? xcharset->cs_name : null;
+    }
+    els
+	*charset = null;
+    return statu;
+}
+----------------
+
+an includ file abov, "xlocaleint.h", is also xsi intern and we copi
+the file to the toolkit directori and compil.
+
+a seriou issu occur when we tri to compil a toolkit applic on
+our hp machin with it os version of hp-ux9.01.
+
+when we tri to link an applic base on our toolkit,
+link error occur sai that the follow function ar miss:
+    _xmbctidtocsid (code)
+    _xmbfsc (code)
+    _xwcdecomposeglyphcharset (code)
+    _xfallbackconvert (code)
+
+we had us mit releas version of x11r5 and it xsi implement until
+hp-up9.0 and ran applic successfulli. on of the reason to us xsi wa that
+becaus hp did not releas hp's x11r5 until the os 9.0 and we had no wai to 
+know how hp's r5 would be implement. we had hope xsi's popular and us 
+it intern function. 
+
+the hp's linker complain that there ar no xsi intern function implement.
+we observ from hp's libx11.a, thei us some ximp implement but we ar
+not sure if thei us mit's vanilla ximp version or their own version of ximp and
+therefor, find just counter part function in mit's ximp for xsi doe not
+seem to lead us a solut.
+
+my question and goal is to know how we can construct a function like
+'decomposecharacterset()' list abov. is there ani function to check
+charact set of each element of wchar_t type string depend on local?
+if it is a public function, that is perfect but even if it is not, we
+want to us ani intern function in hp's x11r5 as we did for mit's r5.
+
+in order to render a 'wchar_t' type string, there must be some machineri
+to judg charact set and that is how the proper font ar select for
+the string. we have no wai to find out that without ani hp's x11r5 sourc 
+file. we want to know how we can us that for our goal. 
+ani help or comment would be highli appreci.
+
+i also appreci if anyon tell me about ximp treat around thi area
+even if it is not hp's implement.
+
+thank you.
+
+--
+				takeshi inou
+				inou@crd.yokogawa.co.jp
+				yokogawa electr corpor
+				open system laboratori	0422(52)5557

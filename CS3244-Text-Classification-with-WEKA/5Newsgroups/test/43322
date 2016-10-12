@@ -1,0 +1,36 @@
+from: d3e855@calvin.pnl.gov (jv ramsdel)
+
+subject: re: ad a second id drive
+
+articl-i.d.: oracl.1993apr22.214158.11952
+
+organ: battel pacif northwest lab, richland, wa
+
+line: 11
+
+origin: d3e855@calvin.pnl.gov
+
+
+
+
+
+>i just bought a western digit/caviar 340mb id drive and i want to add it to
+
+>my system which alreadi ha a wd120 id drive.  the control sai it 
+
+>support 2 hard drive, but when i plug in the cabl, do the bio setup,
+
+>and try to start the system, it paus and then i get an invalid drive d:
+
+>error messag.  the system boot, but i cannot access the new hard drive.
+
+...
+
+
+
+there ar jumper on each drive that must be set for both to work.  the c: drivemust be set to be the master drive, and d: must be set to be the slave drive.
+
+the actual set should be in info with the drive or is avail from
+
+western digit.
+

@@ -1,0 +1,29 @@
+from: gw18@prism.gatech.edu (greg william)
+subject: re: mani peopl on on machin
+distribut: git
+organ: georgia institut of technolog
+line: 23
+
+in <93111.154952cda90038@ucf1vm.bitnet> cda90038@ucf1vm.bitnet (mark woodruff) write:
+
+>i have sever peopl share my machin and would like to set up separ
+>environ under window for each of them.  is there some wai of set
+>thing up separ desktop/directori for each of them?  ideal,
+>i'd like total separ virtual machin.  i'd be will to settl for
+>less, and mai end up have batch file that copi .ini file around
+>depend on who want to us the machin.
+
+you could us do 6 to do thi partli.  you can set up differ config.sy
+and autoexec.bat command for each user, and thei just have to select their
+menu option on bootup.  then you can have the autoexec.bat copi the win.ini
+and system.ini file and chang directori for them.  when thei exit window,
+it can copi back gener .ini file if you want.
+
+thi is the onli wai i can think of.  there mai be some program somewher
+that allow you to do thi better, though us do 6 allow each person to
+have a custom config.sy and autoexec.bat.
+-- 
+greg william
+georgia institut of technolog, atlanta georgia, 30332
+uucp:	  ...!{decvax,hplab,ncar,purdu,rutger}!gatech!prism!gw18
+internet: gw18@prism.gatech.edu

@@ -1,0 +1,52 @@
+nntp-post-host: hawaii.et.byu.edu
+
+line: 19
+
+from: haymore@alaska.et.byu.edu (ed haymor)
+
+subject: re: modem and noisi line.
+
+distribut: world
+
+x-newsread: tin [version 1.1 pl9]
+
+
+
+chri crayton (chri.crayton@ozonehol.com) wrote:
+
+|  jcl> thi garbag?, my modem doesn't have ani of these on hardwar, can a
+
+|  jcl> softwar implement protocol do the trick?
+
+
+
+| there is a softwar version of mnp-5 avail from mtez, and it will often
+
+| connect with other modem that ar mnp compat, but if the modem that you
+
+
+
+there's also a program call odyssei (modem directori on the simtel
+
+archiv) that emul mnp 4 and 5 (other, too, i think, but these were
+
+what i wa interest in).  i wa get a lot of garbag when i call
+
+on number, and mnp 4 clear it up complet on my ordinari 2400 modem.
+
+(fortun, the remot end had an mnp modem.)
+
+
+
+i tri mnp 5, too, but it seem to lock up the comput.  your mileag
+
+mai vari.
+
+
+
+--
+
+ed haymor
+
+ed@byu.edu
+

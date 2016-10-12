@@ -1,0 +1,94 @@
+from: penev@rockefel.edu (penio penev)
+
+subject: re: id vs scsi
+
+repli-to: penev@venezia.rockefel.edu
+
+organ: rockefel univers
+
+x-newsread: tin [version 1.1 pl8]
+
+x-post-from: venezia.rockefel.edu
+
+nntp-post-host: sol.ctr.columbia.edu
+
+line: 38
+
+
+
+on mon, 19 apr 1993 03:45:17 gmt wayn smith (wlsmith@valv.heart.rri.uwo.ca) wrote:
+
+| in articl <richk.93apr15075248@gozer.grebyn.com> richk@grebyn.com (richard krehbiel) write:
+
+
+
+| >so, when you've got multi-task, you want to increas perform by
+
+| >increas the amount of overlap you do.
+
+| >
+
+| >on wai is with dma or bu master.  either of these make it
+
+| >possibl for i/o devic to move their data into and out of memori
+
+| >without interrupt the cpu.  the altern is for the cpu to move
+
+| >the data.  there ar sever scsi interfac card that allow dma and
+
+| >bu master.
+
+|  ^^^^^^^^^^^^
+
+| how do you do bu-master on the isa bu?
+
+
+
+as an earlier post note - through dma.
+
+
+
+| >id, howev, is defin by the standard at interfac
+
+| >creat for the ibm pc at, which requir the cpu to move all the data
+
+| >byte, with no dma.
+
+
+
+| if we're talk isa (at) bu here, then you can onli have 1 dma channel
+
+| activ at ani on time, presum transfer data from a singl devic.
+
+| so even though you can have at least 7 devic on a scsi bu, explain how
+
+| all 7 of those devic can to dma transfer through a singl scsi card
+
+| to the isa-at bu at the same time.
+
+
+
+ani on time mean imho a singl byte xfer. if i have four sourc of
+
+dma request readi, the dma would servic the on after the other. if
+
+the bandwidth for the four togeth is lower than the isa/dma
+
+bandwidth, thi will work.
+
+
+
+note that the bu master here is the prioriti mechan in the dma
+
+control.
+
+
+
+--
+
+penio penev  x7423 (212)327-7423 (w) internet: penev@venezia.rockefel.edu
+
+
+
+disclaim: all oppinion ar mine.
+

@@ -1,0 +1,40 @@
+from: rgc3679@bcstec.ca.boe.com (robert g. carpent)
+subject: re: pleas recommend 3d graphic librari for mac.
+organ: boe
+line: 35
+
+in articl <1qnm6finn8tr@tamsun.tamu.edu> brentb@tamsun.tamu.edu (brent) write:
+>tsa@cellar.org (the silent assassin) write:
+>>rgc3679@bcstec.ca.boe.com (robert g. carpent) write:
+>>
+>>> can you pleas offer some recommend?
+>>
+>>it's realli not that hard to do.  there ar book out there which explain
+>>everyth, and the basic 3d function, translat, rotat, shade, and
+>>hidden line remov ar pretti easi.  i wrote a program in a few week witht
+>>he help of a book, and would be happi to give you my sourc.
+>
+>i think he want to avoid reinvent the wheel.
+
+ ye, i want to concentr on other develop issu - i've creat graphic
+ librari befor, it's too time consum... life's too short!
+
+>>	also, quickdraw ha a lot of 3d function built in, and think pascal
+>>can access them, and i would expect that think c could as well.  if you can
+>>find out how to us the quickdraw graphic librari, it would be an excel
+>>choic, sinc it ha a lot of stuff, and is built into the mac, so should be
+>>fast.
+>
+>just to clarifi, the 3d routin that ar mention in variou place
+>on the mac ar in a librai, not the rom of the mac.  a few year ago befor
+>i knew anyth about implement graphic, i came across a demo of the
+>appl grafsi3d librari and it actual did a lot.  howev, it is quit
+>limit in the sens that it's a low-level 3d librari; your code still ha
+>to plot individu point, draw each line, etc ad nauseum.  it ha noth
+>on gl, for exampl, where you can handl object.
+
+ thank for the clarif... befor post my origin request i had look
+ into the mac's 3d capabl and dismiss them as low grade.
+
+bobc
+

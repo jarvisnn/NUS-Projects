@@ -1,0 +1,25 @@
+from: montnaro@spyder.crd.ge.com (skip montanaro)
+subject: re: circular motif widget
+in-repli-to: dev@hollywood.acsc.com's messag of 16 apr 1993 17:16:02 gmt
+nntp-post-host: spyder.crd.ge.com
+repli-to: montanaro@ausabl.crd.ge.com (skip montanaro)
+organ: ge corpor research & develop, schenectadi, ny
+line: 17
+
+
+if you're will to do a littl work, you can make drawnbutton do what you
+want, more-or-less. on of my colleagu here at ge crd ha done just that
+in our intern lymb system.
+
+we have a matrix transform class that make it easi to comput a seri of
+dial posit from a singl set of vector. each set of vector is then
+drawn into a pixmap. click the button advanc the knob's state and
+chang to the next pixmap in the sequenc.
+
+us drawnbutton obvious still constrain you to take up a rectangular
+portion of the parent widget, but that's normal not a big shortcom. you
+can make thing look circular enough.
+
+--
+skip (montanaro@crd.ge.com)
+"why can't x be thi easi?" -- me, after learn about dlopen()

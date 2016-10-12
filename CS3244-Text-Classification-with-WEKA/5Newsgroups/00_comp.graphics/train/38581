@@ -1,0 +1,33 @@
+from: dstamp@psych.toronto.edu (dave stamp)
+subject: re: fast polygon routin need
+keyword: polygon, need
+organ: depart of psycholog, univers of toronto
+line: 27
+
+sol.surv.uta.edu.au (stephen quan) write:
+
+>>>>[...], but i'm look for a fast polygon routin to be us in a 3d game.
+>>>a fast polygon routin to do what?
+>>to draw polygon of cours.  it a vga mode 13h (320x200) game, [...]
+>
+>hi, i've come across a fast triangl fill-draw routin for mode 13h.  by
+>call thi routin enough time, you have a fast polygon draw routin.
+>
+>i think i ftp'ed from wuarchiv.wustl.edu:/pub/msdo_upload/program.
+>i have a copi of it so i reupload it there.  the triangl.txt file ha thi
+>to sai :
+>
+>>  c and inlin assembl sourc for a vga mode 13h triangl drawer.
+>
+anoth sourc:  there's a poli blitter for mode y (mode x in 320x200)
+at sune.uwaterloo.ca.  also there is rend386, an even faster 3d
+render with vr extens.
+
+
+--------------------------------------------------------------------------
+| my life is hardwar,                    |         dave stamp          | 
+| my destini is softwar,                 | dstamp@psych.toronto.edu    |
+| my cpu is wetwar...                    | dstamp@sune.uwaterloo.ca   | 
+| am i a techno-psychologist, or just a psycho-engin ??               |
+--------------------------------------------------------------------------
+

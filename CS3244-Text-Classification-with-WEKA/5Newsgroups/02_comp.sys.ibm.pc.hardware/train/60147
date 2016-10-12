@@ -1,0 +1,36 @@
+from: lmebold@sgcl1.unisg.ch
+subject: re: isa to eisa
+distribut: comp
+organ: univers of st.gallen, switzerland
+line: 30
+
+in articl <9apr199312315727@envmsa.ea.asu.edu>, firman@envmsa.ea.asu.edu (b b s) write:
+> in articl <casei.93apr9115458@grace.wharton.upenn.edu>, casei@grace.wharton.upenn.edu (shawn casei) write...
+>>hello,
+>> 
+>>i have a question for anyon that mai be familiar with isa and eisa sytem
+>>configur.
+>> 
+>>1)  after i switch the isa board into the eisa board (all of the card ar
+>>isa) the system seem to work with no problem what so ever.  but some of the 
+>>interupt problem that we had with the isa board continu with the eisa board.
+>>is it my understand that the eisa board should be abl to handl irq 
+>>confict when run window.
+>> 
+>>	problem:  when run our network via telnet (tcp/ip) with window
+>>	run the system kick us out of window (irq confict within window
+>>	i assum).
+>> 
+>>also, ar there ani memori address problem that will happen when the 
+>>board ar switch (base memori that is).
+> 
+> as far as i know, if you ar us eisa mother board, you have to us also
+> eisa card or els your comput system will be slower than when you're
+> us isa board with isa card.
+> 							-bill
+
+
+that's nonsens!!  you can us isa card in an eisa-system without problem
+and at the same speed as in an isa system!!
+
+-luke

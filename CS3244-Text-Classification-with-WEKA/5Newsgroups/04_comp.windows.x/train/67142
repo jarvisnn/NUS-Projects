@@ -1,0 +1,37 @@
+from: mahan@tgv.com (patrick l. mahan)
+subject: re: program argument: geometri
+organ: the internet
+line: 31
+to: xpert@expo.lc.mit.edu, rgasch@nl.oracl.com
+
+#
+#i have a question regard the process of program argument
+#such as the -geometri option. sinc thi is a standard x option, 
+#i'm wonder wether i have to pars it manual or whether there
+#is some predefin function that will do thi for me?
+#
+
+if you ar us the intrins, it is pars for you.  if you ar work
+at the xlib level, you can pars it yourself or you can us the follow
+bit of code.
+
+static xrmoptiondescrec option[] = {
+	{"-geometri",	".geometri",	xrmoptionseparg, (xpointer)null}
+};
+
+#defin number(x)	(sizeof(x)/sizeof(x[0]))
+xrmparsecommand(db, option, number(option), "myapplic", &argc, argv);
+
+then us xrmgetresourc() to retriev the valu and pars it us
+xparsegeometri().
+
+it is probabl quicker to pars it yourself from argv, howev, i much prefer
+us the x resourc manag routin to do thi.
+
+patrick l. mahan
+
+--- tgv window washer ------------------------------- mahan@tgv.com ---------
+
+wake a person unnecessarili should not be consid  - lazaru long
+a capit crime.  for a first offens, that is            from the notebook of
+							  lazaru long

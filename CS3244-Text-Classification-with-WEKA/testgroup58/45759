@@ -1,0 +1,38 @@
+from: nagl@netcom.com (john nagl)
+
+subject: orient bound box gener?
+
+summari: want bound box gener
+
+keyword: bound box orient 3d
+
+organ: netcom on-line commun servic (408 241-9760 guest)
+
+line: 12
+
+
+
+       i'm look for code that will gener a minimum-volum orient
+
+bound box for an arbitrari polyhedron.  anyon know of such code?
+
+
+
+       why?  i'm convert object from
+
+on model system into anoth, and the destin system is object
+
+orient.  so i want to repres each object in it own coordin system,
+
+that of it bound box, with the object then translat and rotat
+
+appropri, thi be the represent us in the destin
+
+system.
+
+
+
+					john nagl
+
+
+

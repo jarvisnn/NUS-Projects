@@ -1,0 +1,54 @@
+from: cmj@acsu.buffalo.edu (christoph m johnson)
+
+subject: re: how redirect print manag to file?
+
+nntp-post-host: lictor.acsu.buffalo.edu
+
+organ: ub
+
+line: 21
+
+
+
+in <70540011@hpcc01.corp.hp.com> reed@hpcc01.corp.hp.com (perri reed) write:
+
+
+
+>> / hpcc01:comp.os.ms-window.misc / u7911093@cc.nctu.edu.tw ("by swh ) /  9:58 am  apr 24, 1993 /
+
+>> hello,
+
+>> 
+
+>> 	who can tell me   where can i find the pd or sharewar   
+
+>> which can captur window 3.1's output of printer manang?
+
+
+
+if you ar plan on us thi on a regular basi, connct the printer
+
+to file can becom bothersom becaus window then ask you for the filenam
+
+that you want to creat. i've found that put a line in system.ini in the
+
+port section with just a path and filenam work. the onli problem is that
+
+if you send more than on job, the second on delet the first.
+
+
+
+
+
+chri
+
+-- 
+
+ -------=======  cmj@acsu.buffalo.edu is christoph johnson =======-------
+
+pgp: public kei encrypt for the mass      disclaim: i didn't sai that!
+
+pgp encrypt mail welcom! pgp public kei pgp-public-kei@toxicwast.mit.edu
+
+"orwel mai veri well have been correct... he just had the year wrong." - me
+

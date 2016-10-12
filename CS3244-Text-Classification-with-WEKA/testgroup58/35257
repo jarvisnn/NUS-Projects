@@ -1,0 +1,48 @@
+from: gowen@jade.tuft.edu (g. lee owen)
+
+subject: re: encapsul postscript and x
+
+in-repli-to: sirosh@cs.utexa.edu's messag of 30 apr 1993 03:26:21 -0500
+
+line: 18
+
+organ: tuft univers - medford, ma
+
+
+
+
+
+> how do i view .ep file on x? i have an imag in color encapsul
+
+> postscript, and need to view it on my screen.
+
+
+
+	sever wai ar avail -- pageview (which i think came
+
+with our system, so i can't point), ghostview (with ghostscript), and
+
+the new xv 3.00 packag all do so.  i recommend the latter two,
+
+especi xv if you want to do ani convers.
+
+
+
+> ar there ani util that will let me convert between encapsul
+
+> postscript and plain postscript?
+
+	i'm not sure offhand, but i will attempt to mail you the
+
+comp.lang.postscript faq, which ha a list of util.
+
+
+
+  greg owen  { gowen@fort.cs.tuft.edu, gowen@jade.tuft.edu }
+
+system programm and ta, tuft univers comput scienc dept.
+
+  person info: gc/go d++ -p+ c+++ m*/m- s++/- g+ w+/w-- x+
+
+  email for explan if interest...
+

@@ -1,0 +1,66 @@
+from: davidb@deimo.uc.umass.edu (david besonen)
+
+subject: h e l p !!!   how can i get my com3 port work?
+
+organ: univers of massachusett, amherst
+
+line: 25
+
+distribut: world
+
+nntp-post-host: deimo.uc.umass.edu
+
+new-softwar: vax/vm vnew 1.41    
+
+
+
+hello,
+
+
+
+for 2 month i've unsuccessfulli attempt to get either
+
+a 3rd or 4th serial port work on my system.
+
+
+
+variou system diagnost (e.g., msd, norton) tell me
+
+it's there, but anyth i hook up to it can't us it
+
+
+
+i have two serial port on the motherboard
+
+
+
+if i set my intern fax/modem for com4 the util
+
+program report a com3
+
+
+
+i've check to make sure all the irq and address ar
+
+correctli (as list in most manual) set
+
+
+
+am i miss someth veri basic?
+
+
+
+where should i go from here?
+
+
+
+ani help, even a point in the right direct, would be
+
+most appreci.
+
+
+
+david besonen
+
+"davidb@student.umass.edu"
+

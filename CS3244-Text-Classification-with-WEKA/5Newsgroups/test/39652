@@ -1,0 +1,28 @@
+from: tp924353@kari.canberra.edu.au (jason wolfgang hecker)
+
+subject: problem with parallel i/o.
+
+organ: info sci & eng, univers of canberra, australia
+
+line: 9
+
+
+
+i write a program that us the parallel port. my problem is that i need to
+
+gener an interrupt when the ack line is puls. i can get thi to occur  
+
+onc, but am unabl to gener succes interrupt.
+
+
+
+can someon suggest how i mai resolv thi problem.
+
+
+
+thank.
+
+
+
+
+

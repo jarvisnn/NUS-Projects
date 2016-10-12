@@ -1,0 +1,40 @@
+from: d88-jwa@hemul.nada.kth.se (jon wtte)
+subject: re: x86 ~= 680x0 ?? (how do thei compar?)
+organ: royal institut of technolog, stockholm, sweden
+line: 34
+nntp-post-host: hemul.nada.kth.se
+
+in <c5npy2.li3@new.cso.uiuc.edu> rvenkat@ux4.cso.uiuc.edu (ravikuma venkateswar) write:
+
+>not quit. 66mhz pentium - 65 specint92, 57 specfp92 .
+>	   66mhz mc98601 - 50 specint92, 80 specfp92 .
+
+but the interest comparis is how fast clock-cycl chip
+you can get - an alpha is wai slow at 66 mhz, but blaze at
+200 mhz.
+
+>>680040
+>>486
+
+>as far as the 486dx2-66 goe - 32 specint92, 16 specfp92 .
+
+but the 68040 is (or will soon be) avail in 40 mhz version,
+make it "compar" to a 486dx2-80
+
+>intel chip have tradition been faster than their motorola "equival"
+>although the signific of chip speed in real world applic perform
+>is someth that is highli debat.
+
+i think you have that on turn around; thei have faster clock
+cycl but less power behind each cycl. not to mention that the
+intel instruct stream is byte-orient (longest intel instruct
+is 15 byte; what an odd number :-) which make it hard to do ani
+intellig memori subsystem.
+
+cheer,
+
+					/ h+
+-- 
+ -- jon w{tte, h+@nada.kth.se, mac hacker delux --
+
+   thi articl print on 100% recycl electron.

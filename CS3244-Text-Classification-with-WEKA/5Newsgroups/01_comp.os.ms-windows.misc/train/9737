@@ -1,0 +1,142 @@
+from: cgordon@vpnet.chi.il.us (gordon hlavenka)
+subject: re: save my hard disk?!  (alloc error, cross-link)
+organ: vpnet public access
+line: 137
+
+
+
+ brad banko write:
+>while run the ms quick c compil in a do window under window 3.1 
+>thi even, i got a "program ha violat system integr... close all 
+>applic, exit window and restart your comput" error.
+
+gawd, i love window :-)
+
+>1)  is there an easi wai to restor everyth to work order?
+>what might be some better approach?
+
+you'll probabl want to delet ani damag execut and reload them
+fresh.  data file should be examin and repair.
+
+>2)  what might have caus thi?  doe the smartdrv cach make me more
+>vulner?  (i'm suspici of hard drive cach especi when thei
+>cach data write.)
+
+you're not stupid.  smartdriv cach thing, and window also run a
+swap file which mai contain data also.  all of thi is pretti riski
+stuff in a pc environ.
+
+>the straightforward approach would be to run chkdsk with the /f option to 
+>fix the disk and then it look like i would probabl have to reinstal window
+>and a few other thing.
+
+a reason accur predict...
+
+
+here's a brief descript of how do store file:
+
+there ar three piec to a file.  the directori entri, the fat chain,
+and the data area.  you can think of these as a sheet of line
+notebook paper, a sheet of graph paper, and a stack of 3x5 card.
+
+the directori entri (notebook paper) hold the file name, actual size,
+and first cluster number.  it also hold some other inform that's not
+import right now.
+
+the file alloc tabl (fat) chain (graph paper) tell where to find
+the actual data.  each squar of graph paper hold a number.  if the
+number is zero, the cluster associ with thi box is avail.  if it
+hold a "magic" number, it is either the last piec of a file or a bad
+(unus) spot on the disk.  ani other number tell which cluster
+contain the next section of the file.
+
+the data area (3x5 card) is where the actual inform is store.
+the data area is organ as cluster of a fix size; storag is
+dole out in "chunk" of on cluster each.  (in your case, on cluster
+is 2048 byte.)  as a cluster is fill, anoth is alloc.
+
+to read a file, you first look at the directori entri to get the
+start cluster number.  now you read the data from that cluster.
+next, look at the fat entri for the cluster you just read.  thi will
+tell you the cluster number for the next chunk of the file.
+natur, these number ar usual sequenti, but thei can jump
+around and even go backward.  continu read, on cluster at a
+time, as you walk thi chain through the fat, until you hit the marker
+which sai it's the last cluster in the file.
+
+chkdsk is the do util that check the saniti and coher of
+the directori and the fat and can bludgeon most flaw into
+submiss.  it doesn't have ani intellig, so you have to
+doubl-check anyth it "fix".
+
+now let's do a bit of a post-mortem:
+
+>c:\gfx\vpic46\cvpic.ex
+>c:\gfx\vpic46\vpic.txt
+>c:\gfx\vpic46\video7.cfg
+>c:\gfx\vpic46\orcpro2.cfg
+>c:\gfx\vpic46\vga.cfg
+>c:\game\goos\bird2.x
+>c:\winmisc\adv21\winadv.ex
+>   alloc error, size adjust
+
+all of these file have size (accord to the fat) which don't match
+the size report in their directori entri.  chkdsk /f will alter
+the directori entri to match the fat size.  (in other word,   the
+directori entri for cvpic.ex mai sai the file is 64,877 byte long.
+but chkdsk found a fat chain of 43 cluster attach to it.  (my number,
+obvious, ar made up.))
+
+>   316 lost alloc unit found in 224 chain.
+>    647168 byte disk space would be freed
+
+disk space wa found which is alloc in the fat, but is not attach
+to ani directori entri.  chkdsk /f give you the option of convert these
+"lost chain" to file.  you can then examin the file (file0000.chk
+through file0223.chk) and renam or discard them.  or, if you tell
+chkdsk _not_ to convert them to file, then those cluster will simpli
+be mark "avail" in the fat.
+
+
+>c:\gfx\vpic46\cvpic.ex
+>   is cross link on alloc unit 16133
+
+...
+
+>c:\386spart.par
+>   is cross link on alloc unit 16133
+
+these file ar both referenc the _same_ data cluster.  obvious,
+on of them (at least) must be wrong.  it's interest to note that
+c:\386spart.par is your window swap file...
+
+to fix thi, you should copi each cross-link file to a new name.
+thi will "fix" the cross-link by give the file uniqu data space.
+now delet the cross-link file.  examin the copi and try to
+assembl them properli.  good luck.  (hint:  "miss piec" ar
+like to be found in those "lost chain" at the top...)
+
+>  42366976 byte total disk space
+>   3958784 byte in 4 hidden file
+>    153600 byte in 67 directori
+>  36042752 byte in 1496 user file
+>   1564672 byte avail on disk
+
+your disk is pretti close to full.  thi mai be the actual caus of
+the problem; perhap window need to expand it swapfil by an
+amount which exceed avail disk space...
+
+in ani case, the short summari is that someth trash your fat.
+there ar util that can mirror your fat and help repair damag
+after someth like thi, but you have to run them _befor_ the
+problem occur.  sorri.
+
+
+-- 
+----------------------------------------------------
+gordon s. hlavenka           cgordon@vpnet.chi.il.us
+vote straight ticket procrastin parti dec. 3rd!
+-- 
+----------------------------------------------------
+gordon s. hlavenka           cgordon@vpnet.chi.il.us
+vote straight ticket procrastin parti dec. 3rd!

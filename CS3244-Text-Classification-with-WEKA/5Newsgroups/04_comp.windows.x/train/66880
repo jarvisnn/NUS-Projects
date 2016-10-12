@@ -1,0 +1,23 @@
+from: donaldlf@k9.rose-hulman.edu (lesli f. donaldson)
+subject: problem us graphic context with athena widget
+organ: rose-hulman institut of technolog
+line: 15
+distribut: world
+nntp-post-host: k9.cs.rose-hulman.edu
+keyword: athena,colormap,graphic contex
+
+i am creat a graphic program us the athena widget. i us
+xlib routin to instal a custom graphic contex by obtain the displai,
+and window variabl with the xtwindowofobject() and xtdisplayofobject().
+the object wa on of the sub widget.  
+  the problem occur that whenev a button is press or a menu is select
+the graphic contex revert to the orgin on. i tri move the alloc
+of the graphic context befor the alloc of the button but noth
+chang. i am preform all of thi manipul befor call 
+xtappmainloop().
+
+thank you for ani help.
+lesli donaldson
+
+donaldlf@cs.rose-hulman.edu
+donaldlf@nextwork.rose-hulman.edu

@@ -1,0 +1,38 @@
+.container {
+  // height: 100vh;
+  // width: 100vw;
+}
+
+.lead {
+  margin: 0 auto 30px;
+  font-size: 20px;
+}
+.fl-auth {
+  h1, .btn {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.center {
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .navbar-right {
+    position: relative;
+    float: right;
+    margin-top: -45px;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-family: 'billy' !important;
+  font-size: 48px !important;
+}

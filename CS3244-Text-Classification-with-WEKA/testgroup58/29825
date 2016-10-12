@@ -1,0 +1,66 @@
+from: wild@access.digex.net (wildstrom)
+
+subject: re: standard and enhanc question
+
+organ: express access onlin commun, greenbelt, md usa
+
+line: 27
+
+nntp-post-host: access.digex.net
+
+
+
+ak333@cleveland.freenet.edu (martin linsenbigl) write:
+
+
+
+
+
+>why is win 3.1 sometim so finicki?
+
+>i have a new dell 486dx2/66mhz  8 meg ram.
+
+>window wa work just great.  i had a bu mous and mother board problem.
+
+>dell replac the mous, gave me a newer mous driver for window
+
+>and replac the motherboard.  just prior to thi problem window would
+
+>]onli load up everi other time.  i would get the logo and either it would
+
+>go on into window or lock up.  thi wa veri consist everi other time.
+
+
+
+<much delet>
+
+>ani thought or comment 
+
+
+
+sound like a memori conflict problem, which can caus truli weird symptom 
+
+like these. call dell tech support (or better, post to them on cserv if you
+
+have an account) and get the memori rang(s) us by video ram on your
+
+machin. the block window from us those rang with an
+
+emmexclud= statement in the 386enh section of system.ini. you probabl
+
+should includ a statement exclud the same rang from emm386 or whatev
+
+memori manag you us in config.sy.
+
+
+
+dell "instal" window on the machin thei ship, but the instal doesn't
+
+consist of much more than  copi the file to a hard disk. you still have
+
+to do the work. and the fact that you have the problem in enhanc
+
+mode but not standard strongli suggest a high memori conflict.
+
+
+

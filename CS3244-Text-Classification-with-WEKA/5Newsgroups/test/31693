@@ -1,0 +1,104 @@
+from: sherwood@adob.com (geoffrei sherwood)
+
+subject: re: monitor - nanao?
+
+organ: adob system incorpor
+
+x-newsread: tin [version 1.1 pl9]
+
+line: 46
+
+
+
+adri koolen (adri@ica.philip.nl) wrote:
+
+: in articl <c5wkx1.frv@new.iastat.edu> schauf@iastat.edu (brian j schaufenbuel) write:
+
+: >what tube doe the viewson 17 us?  doe is support 1600x1280?  i've been
+
+: >look a a philip 1762dt which us a soni trinitron tube, ha digit
+
+: >control, support up to 1280x1024ni, and ha .25mm dot pitch - it can be
+
+: >found for under $1000.
+
+
+
+: the origin poster, john navitski, said that he might us the monitor on
+
+: a sparcstat lx. the lx is abl to gener a pictur at 1280*1024 at
+
+: 76 hz. not offici, but i tri to set thi resolut and refresh rate
+
+: and the lx came up with a non-sync screen. our tube obvious couldn't
+
+: handl thi speed. at 67 hz, it work perfectli.
+
+
+
+i don't know which tube the viewson 17 us, but it ha an 82khz horizont
+
+bandwidth so you can go pretti high.  i ran mine at 1280x1024x75 which wa as
+
+fast as the orchid p9000 could drive it.  also, the 17 doe claim to be abl
+
+to support 1600x1280, but i have no experi with that.
+
+
+
+sinc i have the spec sheet in front of me i'll type some in:
+
+
+
+crt:	17", 0.28 mm dot pitch, 90 deg deflect, rgb mediou short
+
+	persis, tint (tm=52%), anti-static, anti-glare, anti-reflect
+
+
+
+input signal:  rgb analog 0.7vp-p, 75 ohm (also ha set for 1vp-p)
+
+	sync: h/v separ(ttl), composit (+/-), sync on green (+/-)
+
+	horizont freq: 30-82khz, vertic freq: 50-90hz
+
+compat: pc from vga to 1600x1280 non-interlac, mac iici and abov
+
+control: contrast, bright, posit, size, degauss, p-p voltag, color
+
+	temp, sync select, color tune, moir on/off.
+
+video band witdth: 135 mhz
+
+max bright: 120 cd/m2 at white flat field
+
+misconverg: .35mm (max) at center, .45mm (max) at corner
+
+dimens: 16.3"x16.22"x17.64", weight 42.6 lb
+
+
+
+i don't know what some of those mean and don't verifi their accuraci, i just 
+
+type them in.  other thing thei hype on the sheet ar a 'doubl quadupl
+
+dynam astigmat focu'.  right.  thei mean thei us two lens.  advanc
+
+invar shadow mask.  viewmatch color control which thei claim is and easi-to-us
+
+system that adjust color to close match printer output.  as near as i have
+
+been abl to figur out, thi translat to separ control for red, green,
+
+and blue.  how thi make it easi to match for printer output is beyond me.
+
+
+
+but beyond the hype, the monitor is veri pleasant to look at.  sharp, clear,
+
+and isn't nearli as bad as the nec's for reflect.
+
+
+
+geoff sherwood
+

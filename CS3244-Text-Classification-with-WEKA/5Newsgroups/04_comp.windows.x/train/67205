@@ -1,0 +1,30 @@
+from: pyeatt@texaco.com (larri d. pyeatt)
+subject: re: mix gl with x (xlib,xt,mwm)
+nntp-post-host: 211.2.1.65
+organ: texaco
+line: 24
+
+in articl <27808.9304211039@scorpion.dp.co.uk>, gerard@dp.co.uk (gerard o'driscol) write:
+|> 
+|> pyeatt@texaco.com write:
+|> 
+|> >> there is a widget alreadi defin for gl.  it is the glxmdraw (motif) or
+|> >> glxdraw (athena) widget.  it is similar to a xmdrawingarea, except that it
+|> >> allow you to us gl call to render into the window.  look at glxlink,
+|> >> glxunlink, glxgetconfig, and glxwinset in the man page.
+|> 
+|> where do i get hold of these widget?
+|> 
+|>  	gerard o'driscol (gerard.odriscol@dp.co.uk)
+|>  	du pont pixel system ltd.
+
+thei come with everi iri now.  nth also ship it with their latest
+version of nth portabl gl.  i just got the updat a coupl of week
+ago.  i would assum that silicon graphic would licens the sourc
+to you so that you can includ it in your compani's gl offer.
+
+-- 
+larri d. pyeatt                 the view express here ar not
+internet : pyeatt@texaco.com    those of my employ or of anyon
+voic    : (713) 975-4056       that i know of with the possibl
+                                except of myself.

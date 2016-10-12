@@ -1,0 +1,47 @@
+from: sdenni@osf.org
+subject: repost: acceler/translat
+appar-to: motif-talk@osf.org
+origin: root@postman
+keyword: acceler, case
+line: 36
+repli-to: sdenni@osf.org
+organ: applicon, inc.; ann arbor, mi (usa)
+return-path: <sdenni@ann-arbor.applicon.slb.com>
+line: 36
+
+i post thi a while ago and didn't reciev on repli, and now we
+have anoth bug report on the same subject. can anybodi help me out?
+
+how can you ensur that acceler work the same independ of
+case?  what i want is ctrl+o and ctrl+o to both be acceler on on
+menu entri.
+
+in ora vol. 6, in the section on acceler it sai "for inform
+on how to specifi translat tabl see vol. 4...", thi is so you
+know what to put for the xmnacceler resourc.  if you go to
+vol. 4 it sai, "likewis, if a modifi is specifi, there is
+noth to prohibit other modifi from be present as well. for
+exampl, the translat:
+
+	shift<kei>q:	quit()
+
+will take effect even if the ctrl kei is held down at the same time as
+the shift kei (and the q kei).
+
+thi impli to me that set xmnacceler to ctrl<kei>o should do
+what i want, but it doesn't, it doesn't work if the user press the
+control kei, the shift kei, and the o kei.
+
+is it possibl to suppli > 1 acceler for a menu entri? keep in
+mind when answer thi question that when us motif you can't us
+xtinstallacceler().
+
+i am us motif 1.1.3 on a decstat 5000 but i have also tri it
+on an hp us motif 1.1.3 and 1.2.
+
+
+-- 
+**********************************************************************
+steve denni              internet: sdenni@ann-arbor.applicon.slb.com
+softwar engin         applicon inc.            ann arbor, michigan
+hail to the victor!!!

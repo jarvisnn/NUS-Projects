@@ -1,0 +1,62 @@
+from: mek@hydrox.enet.dec.com (mark klameru)
+
+subject: eventhandl on xmpushbutton
+
+x-receiv: by usenet.pa.dec.com; id aa29453; wed, 19 mai 93 06:20:27 -0700
+
+x-receiv: by enet-gw.pa.dec.com; id aa05560; wed, 19 mai 93 06:20:22 -0700
+
+x-receiv: from hydrox.enet; by decwrl.enet; wed, 19 mai 93 06:20:22 pdt
+
+x-to: comp.window.x.usenet
+
+x-appar-to: comp.window.x.usenet
+
+line: 22
+
+
+
+
+
+	help,
+
+
+
+	i've got an applic with a seri of pushbutton across
+
+	the top (a toolbar).  i want to add eventhandl to these
+
+	pushbutton on enterwindowmask and leavewindowmask so that
+
+	i can put up some descript text about the function of each
+
+	pushbutton as the pointer cross over it.
+
+
+
+	i've done thi fine, but i've turn up the follow problem:
+
+
+
+	when the pushbutton ar sensit i get callback on both of
+
+	the abov event, but when thei ar not sensit i onli get
+
+	callback on leavewindow event.  thi seem odd.  i would
+
+	expect thi to be an all-or-noth type of thing.
+
+
+
+	is thi a bug?  if not, can someon explain thi behavior?
+
+
+
+	thank,
+
+
+
+	mark
+
+
+

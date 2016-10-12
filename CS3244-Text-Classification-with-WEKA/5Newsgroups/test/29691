@@ -1,0 +1,112 @@
+from: rsc@altair.csustan.edu (steve cunningham)
+
+subject: re: siggraph onlin experiment public avail
+
+summari: it's all there...
+
+keyword: siggraph, electron onlin issu
+
+organ: csu stanislau
+
+line: 49
+
+
+
+rich brandwein write:
+
+
+
++in articl <1993mai7.211312.10403@bert.eec.uic.edu>, rsc@siggraph.org
+
++(steve cunningham) write:
+
++|>           comput graphic experiment special onlin issu
+
++|>                                mai 1993
+
++|> 
+
++|> the mai 1993 experiment special issu of comput graphic is onlin 
+
++|> as a set of file on the  siggraph.org  system in the directori 
+
++|>      ~ftp/public/mai_93_onlin 
+
++|> thi is made avail to the comput graphic commun by acm 
+
++|> siggraph.  the gener theme of thi issu is electron document, and 
+
++|> the tabl of content in the aboutthisissu file will tell you more 
+
++|> about thi public and it content.
+
++
+
++        i ftp'd here, but found noth.  ha thi been remov?
+
+
+
+nope, it's still there:
+
+
+
+ftp siggraph.org
+
+connect to siggraph.org.
+
+220 siggraph.org ftp server (version 6.12 tue apr 13 09:53:56 cdt 1993) readi.
+
+name (siggraph.org:rsc): anonym
+
+331 guest login ok, send e-mail address as password.
+
+password:
+
+230--------------------------------------------------------------
+
+230-    welcom to siggraph.org, a machin maintain for acm 
+
+230-    siggraph by volunt as a servic to the activ
+
+230-    comput graphic commun.
+
+230-    ...
+
+ftp> cd public/mai_93_onlin
+
+250 cwd command success.
+
+ftp> ls
+
+200 port command success.
+
+150 open ascii mode data connect for file list.
+
+aboutthisissu
+
+kapp.maurer
+
+skip.tappan.russel
+
+gonzalez
+
+rosenblum
+
+bossomai.green
+
+announc
+
+calendar
+
+contact
+
+index
+
+read_me
+
+226 transfer complet.
+
+141 byte receiv in 0.04 second (3.4 kbyte/s)
+
+ftp>
+

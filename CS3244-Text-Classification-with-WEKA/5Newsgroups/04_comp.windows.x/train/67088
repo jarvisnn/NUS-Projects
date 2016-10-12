@@ -1,0 +1,77 @@
+from: leec@cb-iri.stanford.edu (christoph lee)
+subject: help! set colormap on multi-top-level app
+keyword: glx mix-model,colormap
+organ: dsg, stanford univers, ca 94305, usa
+line: 71
+
+
+dear sgi and netter gl-x mix-model expert,
+i am write a mix model applic that creat a coupl differ
+color map for differ window, and i've been have troubl get
+the window manag to reliabl honor my request.  in some environ
+(entri level r3000 indigo w/ 4.0.5) all window ar get properli
+connect to their design color map, but on other (an iri 4d 240/gtx;
+also a differ entri level indigo) the color map is unreli
+and chang behavior when i compil at differ time.  the most common
+problem is that all non-top-level window fail to be displai accord
+to their colormap.  my applic start out by creat three top-level
+window; in some case all but the first of these also fail to be
+displai by their colormap.  thi is spectacularli aggrav.
+
+i would dearli appreci
+  1. an explan of the standard, right, correct wai to give a window
+  a colormap such that the window manag will honor and obei it;
+
+  2. ani advic about problem that could caus my failur to get my
+  desir colormap.
+
+by now i have exhaust my own attempt on thi, have tri everyth
+reason or imagin.
+
+below is exampl code give the schemat for how i have been *try*
+to do thi.  pleas, pleas, pleas somebodi tell me what i am do
+wrong/how to do it right!!!
+
+
+your,
+
+chri lee
+
+/***********************************************************************/
+displai* dpy;  /* declar some data... */
+colormap popup_cmap;
+xcolor mycolor;
+window win;
+xsetwindowattribut cwa;
+int nwlist;
+window *wlist;
+
+/* nb: for breviti, not show all code line--just a schemat */
+
+popup_cmap=xcreatecolormap(dpy,defaultrootwindow(dpy),vi->visual,allocal);
+
+/* here we store a bunch of color us
+   xstorecolor(dpy,popup_cmap,&mycolor); ... */
+
+cwa.colormap = popup_cmap;
+win = xcreatewindow(dpy, parent, x, y, w, h,
+                    borderwidth, vi->depth, inputoutput, vi->visual,
+                    cwcolormap|cwborderpixel, &cwa);
+
+
+/* list all sub window of my_topwin, parent of win, into wlist;
+   nwlist is counter of entri in wlist.
+
+   nb: wlist is static storag that can be reli on not to go awai
+       or be corrupt.  i thought of that!  doe anyon know if
+       set wm properti is by data copi, or by refer pointer?
+
+       ie. is it accept to pass data for a properti, then free
+       the data?   */
+xsetwmcolormapwindow(dpy,my_topwin,wlist,nwlist);
+
+xmaprais(displai0,win);
+
+/* later on we handl xevent normal... typic eventloop */
+
+

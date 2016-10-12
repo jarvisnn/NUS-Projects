@@ -1,0 +1,25 @@
+from: klute@tommi.informatik.uni-dortmund.de (rainer klute)
+subject: re: imak - help need
+organ: cs depart, dortmund univers, germani
+line: 18
+distribut: world
+nntp-post-host: tommi.informatik.uni-dortmund.de
+
+in articl <1993apr20.101306.21536@def.bae.co.uk>, paul@def.bae.co.uk (paul
+byrn) write:
+|> can someon pleas give me some pointer to set up imak in a sun
+|> openwindow
+|> enviorn ? i've check through all the document but can not
+|> find ani clue.
+
+sun's openwindow imak is broken. i suggest instal imak-pure, mit's
+x11r5 imak. you can get it from ftp.germani.eu.net in file
+/pub/x11/misc/imak/imak-pure.tar.z (117807 byte).
+
+-- 
+  dipl.-inform. rainer klute      i r b :  immer richtig beraten
+  univ. dortmund, irb
+  postfach 500500         |)|/    tel.: +49 231 755-4663
+d-w4600 dortmund 50       |\|\    fax : +49 231 755-2386
+
+  new address after june 30th: univ. dortmund, d-44221 dortmund

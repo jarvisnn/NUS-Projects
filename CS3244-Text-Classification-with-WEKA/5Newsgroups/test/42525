@@ -1,0 +1,140 @@
+from: mccall@mksol.dseg.ti.com (fred j mccall 575-3539)
+
+subject: re: leak memori resourc in 3.1
+
+organ: texa instrument inc
+
+line: 65
+
+
+
+in <29apr199309371113@bpavm.bpa.arizona.edu> dmittleman@bpavm.bpa.arizona.edu (daniel mittleman) write:
+
+
+
+>    thi mai be an faq (if so, pleas direct me to the known answer) but i
+
+>    am get frustrat and look for help.
+
+
+
+>    i am run win 3.1 with ndw 2.2 on a 486sx with 8 meg of memori and a
+
+>    6 meg perm swap file and am get exceedingli frustrat that my
+
+>    applic ar not give back system resourc when i close them.
+
+
+
+>    i am awar thi is a known problem; what i am look for ar some
+
+>    suggest of what i might do to mitig it.  
+
+
+
+>    1. what softwar is the culprit?  win 3.1, ndw, my applic?  ar
+
+>    some mode of win 3.1 (standard, real, enhanc) better than other at
+
+>    plug thi leak?
+
+
+
+it's the applic that do thi.  unfortun, even the applet
+
+that ship with win31 seem to have thi problem (i've seen it in
+
+solitair, for exampl).  
+
+
+
+>    2. ar their system.ini switch i can set to help plug thi leak?
+
+
+
+none that i know of.  if an applic doesn't give back the
+
+resourc, thei ar lost and gone forev, pend a restart of
+
+window. 
+
+
+
+>    3. do peopl know of patch or third parti softwar that help with
+
+>    thi?  seem like increas or better manag system resourc is a
+
+>    great market for a third parti memori compani like qemm.
+
+
+
+if the applic don't free up the memori (and a lot of them
+
+don't), there's bugger all that ani other piec of softwar can do
+
+about it.
+
+
+
+>    4. if i run progman instead of ndw will the leak subsid?  (i wa
+
+>    hope that ndw 2.2 would have plug thi, but it seem no differ
+
+>    than 2.0 in how it deal with memori and resourc.)
+
+
+
+no.  thi is a problem with the applic, usual.
+
+
+
+>    5. when i am write vb code ar there thing i can do to make it less
+
+>    like my code will eat resourc?
+
+
+
+there ar book written on thi on.  in gener, just be sure to free
+
+up everyth that you ask for befor you exit.  unfortun, i
+
+understand that vb will *intern* lose resourc for you, so
+
+there's no wai to avoid thi entir.
+
+
+
+>    6. ani other suggest that i don't know enough to ask for
+
+>    specif?
+
+
+
+>    thank for your help.  as thi is a common problem and i have seen onli
+
+>    a littl discuss of it on the net there ar probabl other who
+
+>    would like to read answer so pleas publish here rather than send
+
+>    me email.
+
+
+
+there's littl discuss becaus it's 'inevit' until ms manag
+
+to come up with an os that will do garbag collect or someth on
+
+the resourc pool.
+
+
+
+-- 
+
+"insist on perfect safeti is for peopl who don't have the ball to live
+
+ in the real world."   -- mari shafer, nasa am dryden
+
+------------------------------------------------------------------------------
+
+fred.mccall@dseg.ti.com - i don't speak for other and thei don't speak for me.
+

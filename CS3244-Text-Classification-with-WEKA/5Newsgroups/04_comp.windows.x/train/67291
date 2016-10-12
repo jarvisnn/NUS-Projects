@@ -1,0 +1,60 @@
+from: azn30@rut.ccc.amdahl.com
+subject: compil x program
+repli-to: azn30@rut.ccc.amdahl.com ()
+distribut: usa
+organ: amdahl corpor, sunnyval ca
+line: 53
+
+
+hi gui,
+
+	it ha been a long time sinc i wrote a program us x. i am try to 
+	get myself re-familiar with x. i would appreci your help regard
+	the follow problem.
+
+	i am try to compil a simpl x program on sun run suno 4.1.2. 
+	us
+	cc -o ex ex.c -lxaw -lxmu -lxt -lxext -lx11 -lm
+	i am get an error
+
+	ld: undefin symbol
+		_get_wmshellwidgetclass
+		_get_applicationshellwidgetclass
+
+
+ the simpl program i tri to compil is given below.
+
+#includ <stdio.h>
+#includ <x11/intrins.h>
+#includ <x11/stringdef.h>
+#includ <x11/xaw/form.h>
+
+main(argc,argv)
+int 	argc;
+char	**argv;
+{
+	widget	toplevel;
+	widget	frame;
+
+	toplevel = xtiniti("ex","ex",null,0, &argc,**argv);
+	frame = xtcreatemanagedwidget("form",formwidgetclass,toplevel,null,0);
+	xtrealizewidget(toplevel);
+	xtmainloop();
+}
+
+
+
+
+	i got the same error when i tri to build "xpostit" us the imakefil
+	provid with the softwar.
+
+	i have compil x program befor (not on thi machin, but on other 
+	machin run suno 4.0 and x11 r4). i did not get thi error messag
+	can anybodi tell me why i am get these messag.
+
+	i would appreci if you can email your respons to me at
+	azn30@rut.ccc.amdahl.com.
+
+	thank
+	anand
+

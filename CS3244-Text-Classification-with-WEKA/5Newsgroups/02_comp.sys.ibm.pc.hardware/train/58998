@@ -1,0 +1,44 @@
+from: guyd@austin.ibm.com (gui dawson)
+subject: re: 80486dx-50 vs 80586dx2-50
+origin: guyd@pal500.austin.ibm.com
+organ: ibm austin
+line: 38
+
+
+in articl <1993apr06.121342.25130@kub.nl>, volkert@kub.nl (volkert) write:
+> -------------------------------------------------------------------------
+> anonym,
+> 
+> i saw a post about the choic between 80486dx-50 and a 80486dx2-50.
+> i wa wonder: although a dx-50 is faster becaus of the path to it's
+> extern cach, shouldn't the choic be the dx2-50 as that on can be
+> made to work properli with a local-bu? i mean, cach speed is on thing,
+> but all your speed will be block dure video i/o, so just get that
+> faster... 
+> i'm will to specul that the dx2-50 with local-bu will be 2-4 time 
+> as fast as the dx-50 and probabl as expens (or cheap ;-)!
+> 
+technic there is no reason why a chip set cannot support a 486dx50 and
+a 25mhz local bu.
+
+i'm wait for the mezzianin (sp?) vl bu that will be decoupl from
+the main cpu clock and allow for mani more slot due to the user of buffer.
+
+thi will allow the us of ever faster cpu with the same standard i/o
+card. until the next buss spec...
+
+
+> regard, jv
+>                                                                 /////
+> name:    j-v meuldijk                                          [ o o ]
+> address: gildelaar 4                                            \_=_/
+>          4847 hw teteringen                                     _| |_ 
+>          holland                  e-mail:  volkert@kub.nl      / \_/ \
+> _____________________________________________________________oooo___oooo__
+
+gui
+-- 
+-- -----------------------------------------------------------------------------
+gui dawson - hoskyn group plc.
+        guyd@hoskyn.co.uk  tel hoskyn uk     -  71 251 2128
+        guyd@austin.ibm.com tel ibm austin usa - 512 838 3377

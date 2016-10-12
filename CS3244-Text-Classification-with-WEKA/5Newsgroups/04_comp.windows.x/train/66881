@@ -1,0 +1,46 @@
+from: daniel@neosoft.com (brad daniel)
+subject: re: c++ toolkit "direct" ?
+organ: neosoft commun servic -- (713) 684-5900
+line: 41
+
+in articl <533@imp.hellnet.org> devil@loki.hellnet.org (gil tene) write:
+>i am try to figur out the current c++ toolkit "direct".
+>more simpli, i'd like to know which c++ toolkit to "bet on" 
+>for us in a new long term project.
+
+i have the same problem.  i have look at motif++, wwl, interview, gina++,
+and a few variat on the abov.  i've also done a cursori examin
+of rogu wave's view.h++.  i like view.h++'s abstract best of all of the
+toolkit i mention, but the result code look littl like motif, and i
+have littl confid that thi softwar will catch on or otherwis result
+in signific longev for my code.  gina++ allow you to write code which
+look a great deal like motif and also make interest us of inherit,
+but the result code is almost too motif-like, and is certainli not
+significantli less verbos than equival c code.  interview look
+promis, but i haven't found a free version with motif support, and i'm
+not confid how wide interview with motif support will be adopt,
+and what (if ani) specif motif support will be avail over time.  the
+other librari produc code which is less motif-like, but which doe not make
+suffici us of the featur of c++ to simplifi my code task.
+
+at thi point, my inclin is to write my motif manipul routin in
+c, and invok those routin from my c++ code us simpl abstract suit
+to my specif task.  later, if osf or some credibl standard-set bodi
+come up with a c++ interfac to motif, i will chang to that.  it doe me
+no goo to write in c++ if my choic of interfac leav me with code which
+leav me ti to an abstract which is not consist with the industri
+direct.  it's better to take a standard if inferior solut for now
+than to go with a slgihtli superior approach which will leav me with both
+useless code and useless skill a few year from now.  view.h++ is the onli
+librari i'd consid right now, but in our environ, we'd end up spend
+nearli $5000 to us it, and i can't justifi it when it's like to caus
+short-term product decreas as we learn the new abstract, and is
+unlik to be a suffici long-live solut for us to reap the benefit
+at the high end of the j curv.
+
+- brad
+-- 
+brad daniel		`	|  "if monei can't bui happi,
+daniel@neosoft.com		|   i guess i'll have to rent it."
+i don't work for neosoft, and	|		- weird al yenkov
+don't speak for my employ.	|

@@ -1,0 +1,19 @@
+from: daniel@neosoft.com (brad daniel)
+subject: re: icon a run applic?
+organ: neosoft commun servic -- (713) 684-5900
+line: 14
+
+in articl <c5ifj0.f2u@csn.org> doomer@teal.csn.org (john dumai) write:
+>i've been try to figur a wai to programmat icon 
+>an applic run under a motif window manag.  i have tri
+>sever approach includ send event to the applic's
+>border window, but to no avail?  anyon done thi befor?
+
+i tend to us xiconifywindow to achiev thi effect...  have you tri that?
+
+- brad
+-- 
+brad daniel		`	|  "if monei can't bui happi,
+daniel@neosoft.com		|   i guess i'll have to rent it."
+i don't work for neosoft, and	|		- weird al yenkov
+don't speak for my employ.	|

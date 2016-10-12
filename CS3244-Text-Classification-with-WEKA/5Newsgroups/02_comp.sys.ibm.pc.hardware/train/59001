@@ -1,0 +1,68 @@
+from: while@nswc.navi.mil (william scott hile x1568)
+subject: re: tape drive problem
+repli-to: while@nswc.navi.mil
+organ: naval surfac warfar center, dahlgren divis
+line: 62
+
+in articl 489@ux1.cso.uiuc.edu, husak@ux1.cso.uiuc.edu (stephen r. husak ) write:
+>pleas repli via e-mail sinc thi is job relat: 
+>
+>i have a colorado jumbo back-up system at on of my place of 
+>employ and it ha eaten two tape by wind the tape off the spool.
+>
+>is there an easi fix or is the tape drive fri? doe it simpli need 
+>clean?
+>
+>ani and all comment will be appreci!
+>
+>stephen husak
+>
+>-- 
+>"what am i try to do, what am i try to sai, i'm not try to tell you 
+> anyth you didn't know when you woke up todai..."
+>				- depech mode "noth" music for the mass
+>-= stephen r. husak - husak@ux1.cso.uiuc.edu - univeris of illinoi
+
+doe it do it to all tape?  were the two tape that it unwound of the same
+type from the same batch?  the reason i ask is that i bought some gener tape
+that did thi and found that the tape marker were not fulli punch out and
+had close the littl marker hole.  it wa onli on a few tape of a set.
+
+did you open up the tape cartridg and put the tape back on the reel?
+
+if you have not yet, open it up by remov the two screw on the bottom of
+the tape cartridg and snap the plastic shell awai from the metal base.  
+as you ar pull the tape through the assembl try not to touch ani more 
+than you have to.  as you ar do it, look for a coupl of littl hole in 
+the tape.  these ar the marker hole which let the tape drive know when it is 
+at the end of the tape.  the hole ar space a coupl of inch apart.  my best
+guess is that the drive find the first marker and then stop on the second
+marker?  
+
+anyhow, if the tape ha the hole, then check to see if the mirror on the tape
+is clean.  the function of the mirror is to detect the marker hole.  the
+tape drive shine a light at the mirror and ha a pickup in the area where
+the reflect would come out.  when the hole goe by, the pickup detect the 
+light that wa allow to pass and it know when to stop.  if the mirror is dirti
+or out of aligh (unlik sinc it is made into the case) you might have
+a problem detect the end of the tape.
+
+if the tape drive doe it on all tape and the tape all look good, then either
+the pickup or the led of the sensor system ha fail or is dirti.  if you open
+the drive door you will see the sensor assembl to the left of the r/w head
+assembl.  if it look clean and noth is in it wai, then the drive mai
+need to be servic.  it is possibl that the led is burn out or the sensor
+is out. 
+
+if it is still in warranti, you might be abl to send it back to cm for
+repair.
+
+
+---
+scott hile
+while@relai.nswc.navi.mil
+
+standard disclaim:
+  the opinion express ar those of my own and do not necessarili 
+  reflect those of the dod or the navi.  i accept full respons.
+

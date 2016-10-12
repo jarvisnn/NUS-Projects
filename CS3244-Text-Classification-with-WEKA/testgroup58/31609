@@ -1,0 +1,36 @@
+from: pannon@bcsfse.ca.boe.com (joe pannon)
+
+subject: geometri in font unit in place of pixel
+
+organ: boecom project - boe comput servic, seattl, wa
+
+line: 13
+
+
+
+i am plan to convert my motif 1.2 app from pixel to font unit
+
+which would all be set in the app's resourc file instead of hard code
+
+in the program.
+
+
+
+howev, the word here is from peopl who tri thi alreadi that for
+
+some unknown reason xmform offset place in the resourc file ar still
+
+interpret in pixel unit forc peopl to code those offset font unit into the program.
+
+
+
+can somebodi confirm thi?
+
+
+
+thank,
+
+joe pannon
+
+pannon@bcsfse.ca.boe.com
+

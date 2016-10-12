@@ -1,0 +1,58 @@
+from: gdmr@dc.ed.ac.uk (georg ross)
+
+subject: re: xdm and env. var
+
+organ: depart of comput scienc, edinburgh univers
+
+line: 24
+
+
+
+in articl <9304292140.aa29951@haji.haji_sun>, fwr8bv@fin.af.mil write:
+
+> i am us xdm on x11r5 with ow3 and xview3 on sun3s and sparc run 
+
+> suno 4.1.1.  prior to us xdm, i us to set path and other environ
+
+> variabl (like manpath, helppath, arch, etc) in my .login file.  with xdm,
+
+> the .login file doesn't get execut and therefor neither the olwm
+
+> root-window nor my applic know about these variabl.
+
+
+
+on usual suggest is to put everyth into your everi-time shell rc-file
+
+instead of your login-onli on, which is fair enough if you onli have a few
+
+user who know what thei're do.  if you have sever hundr user who do
+
+what the book tell them, though, then it's confus at best.  anoth is to
+
+have your xterm run login shell, but that still leav the window manag
+
+and the thing that get start from it menu with the wrong environ.
+
+
+
+our altern is that instead of have xdm run the client startup script,
+
+it run the user's favourit shell as a login shell, and ha *it* then run the
+
+rest of the startup script.  that wai the user's usual environ get set
+
+up as normal and inherit by everyth.  you can find an almost-current copi
+
+of our script and thing in contrib/edinburgh-environ.tar.z, avail
+
+from the usual place. 
+
+-- 
+
+georg d m ross, depart of comput scienc, univers of edinburgh
+
+     king build, mayfield road, edinburgh, scotland, eh9 3jz
+
+mail: gdmr@dc.ed.ac.uk      voic: 031-650 5147      fax: 031-667 7209
+

@@ -1,0 +1,22 @@
+from: masc0442@ucsnew.sdsu.edu (todd green)
+subject: how do i find my appcontext?
+organ: san diego state univers, colleg of scienc
+line: 14
+nntp-post-host: ucssun1.sdsu.edu
+keyword: context, xt, motif, applic
+x-newsread: tin [version 1.1 pl8]
+
+
+
+is there an xt call to give me my applic context?
+i am fix up an x/motif program, and am try to us xtappaddtimeout,
+whose first argument is the app_context.  what call can i us
+to give me thi valu?
+
+
+thank,
+    todd green
+    masc0442@ucssun1.sdsu.edu
+
+~
+

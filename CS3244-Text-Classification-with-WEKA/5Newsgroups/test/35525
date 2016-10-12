@@ -1,0 +1,72 @@
+from: montnaro@spyder.crd.ge.com (skip montanaro)
+
+subject: re: ######### draw network, graph ? ###########
+
+in-repli-to: montnaro@spyder.crd.ge.com's messag of mon, 17 mai 1993 13:43:38 gmt
+
+nntp-post-host: spyder.crd.ge.com
+
+repli-to: montanaro@ausabl.crd.ge.com (skip montanaro)
+
+organ: ge corpor research & develop, schenectadi, ny
+
+	<montnaro.93mai17084338@spyder.crd.ge.com>
+
+line: 27
+
+
+
+
+
+in articl <1993mai17.085405.7807@eua.ericsson.se> tvtjet@eua.ericsson.se (jorgen eriksson) write:
+
+
+
+	   ar there ani widget, function 
+
+	   librari for draw network, 
+
+	   graph etc ? (not tree view) 
+
+	   freewar, sharewar, comerci...
+
+	   like thi, for instanc:
+
+
+
+	   [ pretti pictur delet ]
+
+
+
+	   * just by give the associ 
+
+	     between the node. automat
+
+	     layout gener.
+
+
+
+	   * it would be nice if ani node 
+
+	     symbol could be us. mayb 
+
+	     even to insert widget as node.
+
+
+
+	   * us differ line style etc.
+
+	     for describ associ.
+
+
+
+check out the xmgraph librari in the follow locat:
+
+
+
+	iwork.ecn.uiowa.edu:/comp.hp/gui_classic/xmgraph.tar.z.
+
+--
+
+skip (montanaro@crd.ge.com)
+

@@ -1,0 +1,80 @@
+from: goyal@utdalla.edu (mohit k goyal)
+
+subject: info. on the power pc by ibm, appl, & motorola!
+
+nntp-post-host: apach.utdalla.edu
+
+organ: univ. of texa at dalla
+
+line: 34
+
+
+
+==== begin repost ====
+
+
+
+ibm, appl, motorola readi to unwrap powerpc 601 processor
+
+
+
+
+
+the wrap will come off the powerpc 601 processor thi week, as motorola
+
+corp., ibm, and appl comput inc. detail the result of their yearlong
+
+effort. thi first in a seri of powerpc processor will be a 32-bit
+
+processor with a 64-bit memori interfac, much like intel corp.'s
+
+pentium, with the capabl of perform as mani as three instruct
+
+per clock cycl, accord to sourc familiar with the chip. motorola
+
+is expect to releas the chip in volum by year end in two
+
+configur, run at 50 and 66 mhz with perform of 40 and 50
+
+specint89 mark, respect, sourc said. float-point perform
+
+for the 3.6-volt processor will be even better, as their specfp89
+
+perform will be 60 and 80, respect. the 601, a scale-down
+
+version of the power 220 chip develop by ibm for it rs/6000
+
+workstat, will also includ a 32k singl buffer cach on the chip
+
+with protocol to support motorola's 64-bit multiprocessor 88110 bu
+
+built in. the chip, which is be design initi to support the
+
+micro channel architectur, is bu independ, so vendor could develop
+
+powerpc- base system us a number of differ architectur,
+
+includ isa, eisa, or sun microsystem inc.'s s-bu design, on sourc
+
+note.
+
+
+
+accord to sourc familiar with the develop effort, motorola ha
+
+been extrem success in develop the powerpc as an inexpens
+
+architectur, despit a complex design made up of more than 2.8 million
+
+transistor us a 0.6-micron technolog. initi chip ar expect to
+
+be price from $300 to $400 -- onli slightli higher than intel corp.'s
+
+486 processor -- but could be sold profit for less than $100, on
+
+sourc said.
+
+
+
+==== end repost ====
+

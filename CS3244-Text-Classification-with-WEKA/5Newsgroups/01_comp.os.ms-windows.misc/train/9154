@@ -1,0 +1,28 @@
+from: adrien_nazaretian@qm.yale.edu (adrien nazaretian)
+subject: re: win nt
+nntp-post-host: gorgon.ci.yale.edu
+organ: yale univers; new haven, connecticut   usa
+line: 22
+
+in articl <1pq66v$kkt@gazett.bcm.tmc.edu>, raymak@bcm.tmc.edu (mark raymak) sai:
+>
+>is anyon awar of exist ipx/netx softwar for windowsnt or
+>is attach to netwar a futur releas?
+>pleas respond to internet mail: raymak@bcm.tmc.edu
+>thank
+>
+
+i believ the beta version of the servic is avail via ftp on 
+ftp.cica.indiana.edu
+in pub/pc/win3/nt call someth like nwnt.zip
+
+there is an index ascii file there, which list the program in that directori
+and what thei do.
+
+unfortun thi beta will also disabl netbeui and tcp/ip over your
+primari nic, so if you realli want to run it, get yourself an extra nic and
+bind it to that.  
+
+otherwis wait for next releas, like i am.
+
+adrien

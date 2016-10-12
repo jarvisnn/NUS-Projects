@@ -1,0 +1,30 @@
+from: mcc@timessqr.gc.cuni.edu (georg mcclintock)
+subject: re: xdm & decnet ?
+in-repli-to: mahan@tgv.com's messag of 21 apr 1993 00:59:04 -0400
+organ: graduat school and univers center, c.u.n.y, new york
+line: 24
+
+while i cannot answer question about run xdm over a decnet, i can
+sai that the follow defin must be ad to the site.def befor
+build r5 befor ani x client will work over a decnet.
+
+from site.def
+
+#defin connectionflag -dtcpconn -dunixconn -ddnetconn
+#defin extralibrari -ldnet
+
+hope thi help,
+
+georg
+
+--
+/*******************************************************************
+* the opinion express ar those of the author and in no wai     *
+* repres the opinion of the cuni graduat school, it agenc *
+* or personnel.  mcc@timessqr.gc.cuni.edu  ||  cmcgc@cunyvm.bitnet *
+*******************************************************************/
+-- 
+/*******************************************************************
+* the opinion express ar those of the author and in no wai     *
+* repres the opinion of the cuni graduat school, it agenc *
+* or personnel.  mcc@timessqr.gc.cuni.edu  ||  cmcgc@cunyvm.bitnet *

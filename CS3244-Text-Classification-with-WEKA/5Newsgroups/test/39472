@@ -1,0 +1,50 @@
+from: beck@ir131.inf.tu-dresden.de (andr beck)
+
+subject: xdm & backgroundpixmap ?
+
+organ: dept. of comput scienc, tu dresden, germani.
+
+line: 17
+
+distribut: world
+
+repli-to: andr_beck@ir.inf.tu-dresden.de
+
+nntp-post-host: ir131.inf.tu-dresden.de
+
+
+
+
+
+hi,
+
+
+
+i've tri to get rid off xdm's ugli login window by give it a 'cool'
+
+backgroundpixmap ressourc. as login is deriv from core, thi should be
+
+possibl. anywai, set xlogin*backgroundpixmap:/a/b/c.xpm did not
+
+produc ani messag of the form 'cannot convert string to pixmap' and
+
+explicit regist such convert lead to noth, too.
+
+
+
+ani wai to do it ?
+
+
+
+--
+
++-o-+--------------------------------------------------------------+-o-+
+
+| o |                \\\-  brain insid -///                       | o |
+
+| o |                    ^^^^^^^^^^^^^^^                           | o |
+
+| o | andr' beck (abpsoft) mehl: andr_beck@ir.inf.tu-dresden.de | o |
+
++-o-+--------------------------------------------------------------+-o-+
+

@@ -1,0 +1,90 @@
+from: jbrandt@hn.com (jim brandt)
+
+subject: multipl head on sparc-2
+
+keyword: 2 head server for r5
+
+articl-i.d.: hn.1993apr30.160720.1563
+
+organ: hugh network system, inc.
+
+line: 38
+
+
+
+i have a sparc-2 with 2 cgsix card in it.  i'd like
+
+to have the r5 server recogn the second card.
+
+
+
+
+
+i mknod creat a /dev/cgsix1 devic, but when i brought up the
+
+server, the second devic wa ignor.  
+
+
+
+how do i setup the second card?
+
+
+
+
+
+note:  if i borrow a cgthree card, and put a cgthree and
+
+a cgsix card in the same sparc-2 box, the r5 server find
+
+the second card. i then set the displai to the
+
+second card, and start a second window manag.  
+
+
+
+wors case is i trade card with someon, but mayb someon
+
+out there ha seen thi problem alreadi...
+
+
+
+
+
+email is prefer... post if you must...
+
+
+
+thank in advanc....
+
+
+
+
+
+jim
+
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+jim brandt
+
+hugh lan system/hugh network system
+
+550 south winchest blvd         
+
+suit 406                          
+
+san jose, ca 95128                /-----------------------
+
+_________________________________/ email: jbrandt@hn.com
+
+                                   email: jbrandt@hl.com
+
+_________________________________  voic: (408) 246-5590
+
+                                 \ fax:   (408) 246-2306
+
+                                  \-----------------------
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+

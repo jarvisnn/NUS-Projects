@@ -1,0 +1,114 @@
+from: varkki@ux1.cso.uiuc.edu (varkki georg)
+
+subject: strang messag when start window
+
+organ: univers of illinoi at urbana-champaign
+
+line: 50
+
+distribut: usa
+
+nntp-post-host: ux1.cso.uiuc.edu
+
+
+
+
+
+on a recent acquir gatewai 2000 machin, when start window,
+
+three copyright statement flash on the screen right after the ms logo
+
+disappear and befor programmanag take over.  thi doe not happen
+
+on ani other of our machin, and i am wonder whether thi is a
+
+featur or whether thi is relat to sever problem we ar have
+
+with the machin.
+
+
+
+the system is a gatewai 2000, 4dx-33 machin.
+
+
+
+the messag that appear ar:
+
+
+
+	(c) copyright 1989-1992 western digit corpor
+
+		all right reserv
+
+	(c) copyright 1985-1992 congruent corpor
+
+		all right reserv
+
+	(c) copyright 1985-1992 microsoft corpor
+
+		all right reserv
+
+
+
+the autoexec.bat file look like thi:
+
+
+
+@echo off
+
+prompt $p$g
+
+set mous=c:\msmous
+
+c:\msmous\mous
+
+path=c:\;c:\do;c:\window;c:\123;c:\wp51;f:\app;f:\system;f:\winapp;f:\public
+
+set temp=c:\window\temp
+
+lh wd8003e -n 0x62 5 0x280 0xd000
+
+lh winpkt 0x60 0x62
+
+lh ipx
+
+lh netx
+
+f:\login\login
+
+win :
+
+
+
+the config.sy file look like thi:
+
+
+
+devic=c:\window\himem.sy
+
+do=high,umb
+
+devic=c:\window\emm386.ex noem x=d000-d1ff
+
+stack=9,256
+
+file=50
+
+buffer=30
+
+shell=c:\do\command.com /p /e:1024
+
+
+
+doe anyon know what is go on?  ani help would be much
+
+appreci.
+
+
+
+-- 
+
+depart of urban and region plan  | e-mail: varkki@uiuc.edu
+
+univers of illinoi at urbana-champaign | tel:    217.244.7059
+

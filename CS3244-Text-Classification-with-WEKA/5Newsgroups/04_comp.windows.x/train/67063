@@ -1,0 +1,36 @@
+from: wpwood@darkw.austin.ibm.com
+subject: gcc and build the hp widget set on linux
+repli-to: wpwood@austin.ibm.com (bill woodward)
+organ: the institut of knowledg on jinx
+line: 30
+
+
+i am current attempt to get a copi of the hp widget set compil
+under linux (sl releas with kernel 99.6) and am run into some
+problem.  actual, it seem that thi is more of a gcc question,
+becaus i got it to compil without troubl us cc on an rs/6000.
+	basic, there ar a number of function with prototyp
+set up in, let's sai, compositep.h, for instanc, the composit
+widget's insert_child procedur is set up with the type :
+
+	typedef void (*xtwidgetproc) (widget)
+
+but in sever place in the hp sourc code, thei refer the
+insert_child procedur and pass it multipl argument instead of just
+on, as the prototyp suggest.  for exampl:
+
+	(*superclass->composit_class.insert_child)(w, arg, p_num_arg)
+
+now, gcc choke on thi, give an error messag that too mani argument
+ar pass to the function.  so, doe anyon have ani suggest as to
+how to turn off thi check in gcc, or how i can go about chang the
+code to accomod thi call without chang /usr/includ/x11/compositep.h,
+or ha anyon successfulli built the hp widget set and have ani suggest.
+	mani thank in advanc for ani help.
+
+--
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+bill woodward        | wpwood@austin.ibm.com   <-- try thi first
+aix softwar support | billw@aixwiz.austin.ibm.com  
+graphic group       | 512-838-2834
+i am the terror that flap in the night.

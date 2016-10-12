@@ -1,0 +1,18 @@
+from: dale@went.llnl.gov (dale m. slone)
+subject: xlock
+organ: lawrenc livermor nation laboratori
+line: 11
+distribut: world
+nntp-post-host: morbid.llnl.gov
+
+i found an odditi with our sgi indigo (mip r3000 chip).
+when xlock +nolock is run, and i am work remot
+or in batch (at) mode, the runtim of my program (as time
+by us clock() in the code itself) is ~25% slower than if
+xlock is not run.  no other process seem to affect my
+runtim, yet thi is veri consist!
+
+ani explan, real or imagin :)
+
+thanx
+dale@frostedflak.llnl.gov

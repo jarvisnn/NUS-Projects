@@ -1,0 +1,52 @@
+from: vharten@prl.philip.nl (peter r. van harten)
+
+subject: ati graphic ultra pro problem!
+
+line: 21
+
+organ: philip research
+
+
+
+i have the follow problem on a dell 450se with the ati graphic ultra pro 
+
+eisa:
+
+
+
+when i start window, the first 5 time i try to run an applic, it doe
+
+not start. window will show the follow error messag:
+
+
+
+   error execut applic. there is not enough memori to run the    
+
+   applic.
+
+
+
+after the first 5 tri, the applic i want to run will start, and 
+
+afterward there ar no more problem. when i chang the video driver from 
+
+mach 32 to 8514/a, thi problem doe not occur, so i suspect the ati 
+
+driver (i tri both the build 55 and build 59 driver).
+
+
+
+doe anyon have a clue?
+
+
+
+------------------------------------------------------------------ 
+
+p.r. van harten                      philip research laboratori
+
+tel. +31 40 742209                   prof. holstlaan 4
+
+fax. +31 40 744810                   5656 aa  eindhoven
+
+email: vharten@prl.philip.nl        the netherland
+

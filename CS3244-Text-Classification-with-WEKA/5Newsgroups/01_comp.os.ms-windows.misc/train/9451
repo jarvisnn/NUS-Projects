@@ -1,0 +1,24 @@
+from: carol@ohsu.edu (carol suelzl)
+subject: re: help with winqvt
+articl-i.d.: ohsu.1993apr15.164424.465
+organ: oregon health scienc univers
+line: 17
+nntp-post-host: 137.53.130.7
+
+
+
+>thi is the qvthost.rc file.
+>137.112.5.2
+>137.112.199.50
+>
+>
+>
+
+the host file requir the name that you'll be us in addit to the ip address
+
+sucb as
+
+100.0.0.1 name.server.name
+100.2.2.1 name.router.name
+
+carol@ohsu.edu

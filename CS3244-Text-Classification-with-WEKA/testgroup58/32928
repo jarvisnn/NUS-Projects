@@ -1,0 +1,72 @@
+from: victor@comm.ee.man.ac.uk (victor buttigieg)
+
+subject: re: cpu temperatur vs cpu activ ?
+
+organ: manchest comput centr
+
+x-newsread: tin [version 1.1 pl9]
+
+line: 30
+
+
+
+lino montuno (montuno@physic.su.oz.au) wrote:
+
+>thi mai be a veri naiv question but is there ani basi for the
+
+>claim that a cpu will get hotter when a computation intens 
+
+>job is run? my friend claim that there will be littl differ
+
+>in the temperatur of an idl cpu and a cpu run a computation
+
+>intens job.
+
+
+
+
+
+>lino montuno
+
+
+
+i total agre with your friend, sinc when the cpu is appar idl
+
+it is still in fact churn awai million of instruct per second
+
+(check for keyboard input for instanc).  
+
+
+
+the except to thi is for cpu's us in laptop, where the cpu can
+
+enter an idl state where it is just preserv it current statu but
+
+do absolut noth.  in thi case it need a hardwar interrupt
+
+to get it go again.
+
+
+
+
+
+--
+
+_____________________________________________________________________
+
+
+
+victor buttigieg					e-mail:	victor@uk.ac.man.ee.comm
+
+
+
+commun research group
+
+
+
+univers of manchest
+
+
+
+---------------------------------------------------------------------
+

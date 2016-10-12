@@ -1,0 +1,44 @@
+subject: re: cirru logic 5426 graph card
+from: gardner_a@kosmo.wcc.govt.nz (andi gardner)
+repli-to: gardner_a@kosmo.wcc.govt.nz
+organ: wellington citi council (public access), wgtn, nz
+nntp-post-host: kosmo.wcc.govt.nz
+line: 37
+
+in articl <1qm3c$37t@new.cs.tu-berlin.de>, wong@cs.tu-berlin.de (wolfgang jung) write:
+>after set up window for us my cirru logic 5426 vlb graphicscard
+>it move a normal window from on place to anoth...
+
+>...what i wa wonder why is it not us the bitblt  engin which
+>is suupos to be on the chip.
+
+>how ar the experi here..
+>have i done someth wrong ?
+
+the 5426 ha it own set of driver. you mai be us the
+driver intend for the 5420 or 5422 by mistak.
+
+be sure you have the 5426 driver version 1.2
+
+>(i instal the mswin 3.1 multiresolut driver which where suppli 
+>with the card ?!)
+
+don't quot me on thi on, but i'd steer clear of the
+multi resolut driver that allow you to chang resolut
+without exit window.  i think it's buggi.
+
+>also if there ar new(hopefulli faster) drriver around i would love to 
+>how to get hold of them :-) (ftp or whatsoev :-) )
+
+version 1.3 driver ar due to be releas by cirru soon.
+unfortun, their not avail via ftp, you have to dial
+up their bb in the usa.  i do thi from nz us a 14.4k modem
+to cut down on phone bill.  it took me around 7 minut to 
+download the v1.2 driver.
+
+
+good luck,  
+
+andi gardner,
+wellington, new zealand
+te whanga-nui-a-tara, aotearoa

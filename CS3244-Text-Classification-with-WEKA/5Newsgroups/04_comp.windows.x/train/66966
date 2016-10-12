@@ -1,0 +1,28 @@
+from: wilson swee <ws8n+@andrew.cmu.edu>
+subject: compil on sun4_411
+organ: junior, math/comput scienc, carnegi mellon, pittsburgh, pa
+line: 22
+nntp-post-host: po5.andrew.cmu.edu
+
+hi,
+    i have a piec of x code that compil fine on pmax-ul4, pmax_mach, as
+well as sun4_mach, but whenev it compil on sun4_411, it give me 
+undefin ld error:
+_sin
+_co
+_pow
+_floor
+_get_wmshellwidgetclass
+_get_applicationshellwidgetclass
+
+the follow librari that i link it to ar:
+-lxaw -lxmu -lxt -lxext -lx11
+
+the makefil is gener off an imak templat.
+can anyon give me pointer as to what i'm miss out to compil on
+a sun4_411?
+
+thanx
+wilson
+
+

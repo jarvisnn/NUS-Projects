@@ -1,0 +1,62 @@
+from: amathur@ce.cwru.edu (alok mathur)
+subject: how to get 24bit color with xview frame ?
+organ: case western reserv univers
+line: 55
+distribut: world
+nntp-post-host: amethyst.ce.cwru.edu
+
+hi !
+
+i am us xview 3.0 on a sparc ipx under openwindow along with a xvideo board
+from parallax which enabl me to us 24 bit color. i am have some problem
+util the 24 bit color and would greatli appreci ani help in thi matter.
+
+i us xview to creat a frame and then creat a canva pane insid which i us
+to displai live video. my video input is 24 bit color.
+
+the problem is that my top level frame creat as
+	frame = (frame) xv_creat(null,frame,null);
+seem to have a depth of 8 which is propag to my canva.
+
+i would like to know how i can set the depth of the frame to be 24 bit.
+i tri us the follow xlib code :
+
+xvisualinfo visual_info;
+int depth = 24;
+colormap colormap;
+xsetwindowattribut attrib;
+unsign long valuemask = 0;
+window *win;
+xv_opaqu frame;
+
+win = xv_get(frame,xv_xid);
+xmatchvisualinfo(displai,screen,depth,truecolor,&visual_info);
+
+/* so far so good */
+
+colormap = xcreatecolormap(displai,win,visual_info,allocnon);
+
+/* it di here with a badmatch error :( */
+
+attrib.colormap = colormap;
+valuemask |= cwcolormap;
+xchangewindowattribut(displai,w,valuemask,&attrib);
+xsetwindowcolormap(displai,win,colormap);
+
+
+am i us a complet wrong approach here ? is it possibl to set the depth
+and colormap for a window creat by xview ? what am i do wrong ?
+
+thank in advanc for ani help that i can get. i would prefer a respons via
+email although a post on the newsgroup is also okai.
+
+thank again,
+
+
+alok.
+---
+alok mathur
+comput scienc & engg, case western reserv univ, cleveland, oh 44106
+11414 fairchild road, #2, cleveland, oh 44106
+off - (216) 368-8871 re - (216) 791-1261, email - amathur@alpha.ce.cwru.edu
+

@@ -1,0 +1,1966 @@
+from: sinclair@dc.glasgow.ac.uk (duncan sinclair)
+
+subject: glasgow rx - remot execut of x program, part01/01
+
+summari: nice program to do remot xterm.
+
+keyword: perl x remot execut
+
+organ: glasgow univers comput scienc dept.
+
+line: 976
+
+
+
+[[ i post thi a few week back, but all i got back wa an error
+
+   messag "pnew: /dev/null: permiss deni".  yep, /dev/null
+
+   had a mode of 600.  (arrghhh!!)  ]]
+
+
+
+with renew interest in "set the displai variabl", etc.. i
+
+thought i would post my contribut.
+
+
+
+thi perl script is my solut.  it try to be intellig about
+
+what it's do so that you should be abl to type "rx host.domain.etc",
+
+and get a xterm run on "host.domain.etc", with all the difficult
+
+stuff taken care of.
+
+
+
+in theori, thi program can do *everyth* you ever want to do
+
+when you want to run a remot command in the background - it
+
+doesn't even need to be an x program.  try a "rx big-machin make"
+
+for instanc, for a background make on the remot "big-machin".
+
+
+
+for more detail and a full list of featur read the readm file,
+
+about 20 line below...  all comment welcom.
+
+
+
+duncan.
+
+
+
+
+
+
+
+#! /bin/sh
+
+# thi is a shell archiv.  remov anyth befor thi line, then unpack
+
+# it by save it into a file and type "sh file".  to overwrit exist
+
+# file, type "sh file -c".  you can also feed thi as standard input via
+
+# unshar, or by type "sh <file", e.g..  if thi archiv is complet, you
+
+# will see the follow messag at the end:
+
+#		"end of archiv 1 (of 1)."
+
+# content:  readm imakefil manifest makefil rx.man rx.pl
+
+# wrap by sinclair@dc.gla.ac.uk on thu apr  8 18:47:48 1993
+
+path=/bin:/usr/bin:/usr/ucb ; export path
+
+if test -f 'readm' -a "${1}" != "-c" ; then 
+
+  echo shar: will not clobber exist file \"'readm'\"
+
+els
+
+echo shar: extract \"'readm'\" \(1442 charact\)
+
+sed "s/^x//" >'readm' <<'end_of_file'
+
+x
+
+x   glasgow rx - remot execut of x program.  version 3.1.7
+
+x
+
+xcopyright 1992 duncan sinclair <sinclair@dc.gla.ac.uk>
+
+x
+
+xtrivial to instal, but there's an imakefil to make it even more trivial.
+
+x
+
+xthe perl script need some customis befor it is instal, just
+
+xedit the "rx.pl" file, and read the comment.  onc you've done
+
+xthi you can "xmkmf", then "make instal instal.man".
+
+x
+
+xfeatur:
+
+x
+
+x*) doe the right thing for off-site remot execut.  includ
+
+x   set up $displai to includ domain name, and pass
+
+x   magic cooki, or do the "xhost" stuff.
+
+x
+
+x*) allow differ remot user name.  (rx -l user host ...)
+
+x
+
+x*) smart quot of argument - make pass wild-card easi.
+
+x
+
+x*) custom command execut - link it to "remac" to get a remot
+
+x   emac command.
+
+x
+
+x*) automat xterm option - name the xterm accord to hostnam,
+
+x   and turn on "login shell".
+
+x
+
+x*) default command is xterm.
+
+x
+
+x*) propag x-ish env. variabl to remot session - user mai
+
+x   extend the list of variabl to pass.
+
+x
+
+x*) special handl for bourn shell user.
+
+x
+
+x*) tri to do remot execut from same directori as local.
+
+x   that is, it propag $pwd, in an intellig manner.
+
+x
+
+x*) log error in a file.
+
+x
+
+x*) overal intellig (tm) - make reason decis about what
+
+x   you ar try to do, and tri to "do the right thing".
+
+x
+
+x*) written in perl, for portabl and hackabl.
+
+x
+
+xfor more info, read the man page or the sourc.
+
+x
+
+end_of_file
+
+if test 1442 -ne `wc -c <'readm'`; then
+
+    echo shar: \"'readm'\" unpack with wrong size!
+
+fi
+
+# end of 'readm'
+
+fi
+
+if test -f 'imakefil' -a "${1}" != "-c" ; then 
+
+  echo shar: will not clobber exist file \"'imakefil'\"
+
+els
+
+echo shar: extract \"'imakefil'\" \(370 charact\)
+
+sed "s/^x//" >'imakefil' <<'end_of_file'
+
+x# glasgow rx imakefil.
+
+x
+
+x         program = rx
+
+x
+
+xall:: $(program)
+
+x
+
+xinstal:: safe
+
+x
+
+xinstallnamedprog(rx.pl,rx,$(bindir))
+
+xinstallmanpag(rx,$(mandir))
+
+x
+
+xinstal::
+
+x	$(rm) $(bindir)/rxterm
+
+x	$(ln) $(bindir)/rx $(bindir)/rxterm
+
+x
+
+xsafe:
+
+x	@grep -s 'debug = 0' rx.pl || fals
+
+x
+
+xshar: safe
+
+x	makekit -m -p
+
+x	@-perl -pi -e "s/sinclair@dc.gla.ac.uk/sinclair@dc.gla.ac.uk/;" part*
+
+x
+
+end_of_file
+
+if test 370 -ne `wc -c <'imakefil'`; then
+
+    echo shar: \"'imakefil'\" unpack with wrong size!
+
+fi
+
+# end of 'imakefil'
+
+fi
+
+if test -f 'manifest' -a "${1}" != "-c" ; then 
+
+  echo shar: will not clobber exist file \"'manifest'\"
+
+els
+
+echo shar: extract \"'manifest'\" \(313 charact\)
+
+sed "s/^x//" >'manifest' <<'end_of_file'
+
+x   file name		archiv #	descript
+
+x-----------------------------------------------------------
+
+x readm                     1	read me first
+
+x imakefil                  1	
+
+x manifest                   1	thi ship list
+
+x makefil                   1	
+
+x rx.man                     1	
+
+x rx.pl                      1	
+
+end_of_file
+
+if test 313 -ne `wc -c <'manifest'`; then
+
+    echo shar: \"'manifest'\" unpack with wrong size!
+
+fi
+
+# end of 'manifest'
+
+fi
+
+if test -f 'makefil' -a "${1}" != "-c" ; then 
+
+  echo shar: will not clobber exist file \"'makefil'\"
+
+els
+
+echo shar: extract \"'makefil'\" \(10172 charact\)
+
+sed "s/^x//" >'makefil' <<'end_of_file'
+
+x# makefil gener by imak - do not edit!
+
+x# $xconsortium: imak.c,v 1.65 91/07/25 17:50:17 rw exp $
+
+x#
+
+x# the cpp us on thi machin replac all newlin and multipl tab and
+
+x# space in a macro expans with a singl space.  imak tri to compens
+
+x# for thi, but is not alwai success.
+
+x#
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# makefil gener from "imak.tmpl" and </tmp/iif.a04196>
+
+x# $xconsortium: imak.tmpl,v 1.139 91/09/16 08:52:48 rw exp $
+
+x#
+
+x# platform-specif paramet mai be set in the appropri <vendor>.cf
+
+x# configur file.  site-specif paramet should be set in the file
+
+x# site.def.  full rebuild ar recommend if ani paramet ar chang.
+
+x#
+
+x# if your c preprocessor doe not defin ani uniqu symbol, you will need
+
+x# to set bootstrapcflag when rebuild imak (usual when do
+
+x# "make world" the first time).
+
+x#
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# site-specif configur paramet that need to come befor
+
+x# the platform-specif paramet - edit site.def to chang
+
+x
+
+x# site:  $xconsortium: site.def,v 1.2 91/07/30 20:26:44 rw exp $
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# platform-specif configur paramet - edit sun.cf to chang
+
+x
+
+x# platform:  $xconsortium: sun.cf,v 1.72.1.1 92/03/18 13:13:37 rw exp $
+
+x
+
+x# oper system:  suno 4.1.3
+
+x
+
+x# $xconsortium: sunlib.rule,v 1.7 91/12/20 11:19:47 rw exp $
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# site-specif configur paramet that go after
+
+x# the platform-specif paramet - edit site.def to chang
+
+x
+
+x# site:  $xconsortium: site.def,v 1.2 91/07/30 20:26:44 rw exp $
+
+x
+
+x            shell = /bin/sh
+
+x
+
+x              top = .
+
+x      current_dir = .
+
+x
+
+x               ar = ar cq
+
+x  bootstrapcflag =
+
+x               cc = gcc -fpcc-struct-return
+
+x               as = as
+
+x
+
+x         compress = compress
+
+x              cpp = /lib/cpp $(std_cpp_defin)
+
+x    preprocesscmd = gcc -fpcc-struct-return -e $(std_cpp_defin)
+
+x          instal = instal
+
+x               ld = ld
+
+x             lint = lint
+
+x      lintlibflag = -c
+
+x         lintopt = -axz
+
+x               ln = ln -s
+
+x             make = make
+
+x               mv = mv
+
+x               cp = cp
+
+x
+
+x           ranlib = ranlib
+
+x  ranlibinstflag =
+
+x
+
+x               rm = rm -f
+
+x            troff = psroff
+
+x         msmacro = -ms
+
+x              tbl = tbl
+
+x              eqn = eqn
+
+x     std_includ =
+
+x  std_cpp_defin =
+
+x      std_defin =
+
+x extra_load_flag =
+
+x  extra_librari =
+
+x             tag = ctag
+
+x
+
+x    sharedcodedef = -dsharedcod
+
+x         shlibdef = -dsunshlib
+
+x
+
+x    proto_defin =
+
+x
+
+x     instpgmflag =
+
+x
+
+x     instbinflag = -m 0755
+
+x     instuidflag = -m 4755
+
+x     instlibflag = -m 0644
+
+x     instincflag = -m 0444
+
+x     instmanflag = -m 0444
+
+x     instdatflag = -m 0444
+
+x    instkmemflag = -g kmem -m 2755
+
+x
+
+x      projectroot = /usr/x11
+
+x
+
+x     top_includ = -i$(incroot)
+
+x
+
+x      cdebugflag = -o2
+
+x        ccoption =
+
+x
+
+x      allinclud = $(includ) $(extra_includ) $(top_includ) $(std_includ)
+
+x       alldefin = $(allinclud) $(std_defin) $(extra_defin) $(proto_defin) $(defin)
+
+x           cflag = $(cdebugflag) $(ccoption) $(alldefin)
+
+x        lintflag = $(lintopt) -dlint $(alldefin)
+
+x
+
+x           ldlib = $(sy_librari) $(extra_librari)
+
+x
+
+x        ldoption = $(cdebugflag) $(ccoption) $(local_ldflag) -l$(usrlibdir)
+
+x
+
+x   ldcombineflag = -x -r
+
+x      dependflag =
+
+x
+
+x        macrofil = sun.cf
+
+x           rm_cmd = $(rm) *.ckp *.ln *.bak *.bak *.o core err ,* *~ *.a .emac_* tag tag make.log makeout
+
+x
+
+x    imak_defin =
+
+x
+
+x         irulesrc = $(configdir)
+
+x        imak_cmd = $(imak) -duseinstal -i$(irulesrc) $(imak_defin)
+
+x
+
+x     iconfigfil = $(irulesrc)/imak.tmpl $(irulesrc)/imak.rule \
+
+x			$(irulesrc)/project.tmpl $(irulesrc)/site.def \
+
+x			$(irulesrc)/$(macrofil) $(extra_iconfigfil)
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# x window system build paramet
+
+x# $xconsortium: project.tmpl,v 1.138.1.1 92/11/11 09:49:19 rw exp $
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# x window system make variabl; thi need to be coordin with rule
+
+x
+
+x          pathsep = /
+
+x        usrlibdir = /usr/x11/lib
+
+x           bindir = /usr/x11/local/bin
+
+x          incroot = /usr/x11/includ
+
+x     buildincroot = $(top)
+
+x      buildincdir = $(buildincroot)/x11
+
+x      buildinctop = ..
+
+x           incdir = $(incroot)/x11
+
+x           admdir = /usr/adm
+
+x           libdir = $(usrlibdir)/x11
+
+x        configdir = $(libdir)/config
+
+x       lintlibdir = $(usrlibdir)/lint
+
+x
+
+x          fontdir = $(libdir)/font
+
+x         xinitdir = $(libdir)/xinit
+
+x           xdmdir = $(libdir)/xdm
+
+x           twmdir = $(libdir)/twm
+
+x          manpath = /usr/x11/man
+
+x    mansourcepath = $(manpath)/man
+
+x        mansuffix = n
+
+x     libmansuffix = 3
+
+x           mandir = $(mansourcepath)$(mansuffix)
+
+x        libmandir = $(mansourcepath)$(libmansuffix)
+
+x           nlsdir = $(libdir)/nl
+
+x        pexapidir = $(libdir)/pex
+
+x      xapploaddir = $(libdir)/app-default
+
+x       fontcflag = -t
+
+x
+
+x     instappflag = $(instdatflag)
+
+x
+
+x            imak = imak
+
+x           depend = makedepend
+
+x              rgb = rgb
+
+x
+
+x            fontc = bdftopcf
+
+x
+
+x        mkfontdir = mkfontdir
+
+x        mkdirhier = /bin/sh $(bindir)/mkdirhier
+
+x
+
+x        configsrc = $(top)/config
+
+x       docutilsrc = $(top)/doc/util
+
+x        clientsrc = $(top)/client
+
+x          demosrc = $(top)/demo
+
+x           libsrc = $(top)/lib
+
+x          fontsrc = $(top)/font
+
+x       includesrc = $(top)/x11
+
+x        serversrc = $(top)/server
+
+x          utilsrc = $(top)/util
+
+x        scriptsrc = $(utilsrc)/script
+
+x       examplesrc = $(top)/exampl
+
+x       contribsrc = $(top)/../contrib
+
+x           docsrc = $(top)/doc
+
+x           rgbsrc = $(top)/rgb
+
+x        dependsrc = $(utilsrc)/makedepend
+
+x         imakesrc = $(configsrc)
+
+x         xauthsrc = $(libsrc)/xau
+
+x          xlibsrc = $(libsrc)/x
+
+x           xmusrc = $(libsrc)/xmu
+
+x       toolkitsrc = $(libsrc)/xt
+
+x       awidgetsrc = $(libsrc)/xaw
+
+x       oldxlibsrc = $(libsrc)/oldx
+
+x      xdmcplibsrc = $(libsrc)/xdmcp
+
+x      bdftosnfsrc = $(fontsrc)/bdftosnf
+
+x      bdftosnfsrc = $(fontsrc)/client/bdftosnf
+
+x      bdftopcfsrc = $(fontsrc)/client/bdftopcf
+
+x     mkfontdirsrc = $(fontsrc)/client/mkfontdir
+
+x         fslibsrc = $(fontsrc)/lib/fs
+
+x    fontserversrc = $(fontsrc)/server
+
+x     extensionsrc = $(top)/extens
+
+x         xilibsrc = $(extensionsrc)/lib/xinput
+
+x        pexlibsrc = $(extensionsrc)/lib/pexlib
+
+x      phigslibsrc = $(extensionsrc)/lib/pex
+
+x
+
+x# $xconsortium: sunlib.tmpl,v 1.14.1.2 92/11/11 09:55:02 rw exp $
+
+x
+
+xshlibldflag = -assert pure-text
+
+xpicflag = -fpic
+
+x
+
+x  depextensionlib =
+
+x     extensionlib = -lxext
+
+x
+
+x          depxlib = $(depextensionlib)
+
+x             xlib = $(extensionlib) -lx11
+
+x
+
+x        depxmulib = $(usrlibdir)/libxmu.sa.$(soxmurev)
+
+x       xmulibonli = -lxmu
+
+x           xmulib = -lxmu
+
+x
+
+x       depoldxlib =
+
+x          oldxlib = -loldx
+
+x
+
+x      depxtoollib = $(usrlibdir)/libxt.sa.$(soxtrev)
+
+x         xtoollib = -lxt
+
+x
+
+x        depxawlib = $(usrlibdir)/libxaw.sa.$(soxawrev)
+
+x           xawlib = -lxaw
+
+x
+
+x        depxilib =
+
+x           xilib = -lxi
+
+x
+
+x        deppexlib =
+
+x           pexlib = -lpex5
+
+x
+
+x        soxlibrev = 4.10
+
+x          soxtrev = 4.10
+
+x         soxawrev = 5.0
+
+x        sooldxrev = 4.10
+
+x         soxmurev = 4.10
+
+x        soxextrev = 4.10
+
+x      soxinputrev = 4.10
+
+x         sopexrev = 1.0
+
+x
+
+x      depxauthlib = $(usrlibdir)/libxau.a
+
+x         xauthlib =  -lxau
+
+x      depxdmcplib = $(usrlibdir)/libxdmcp.a
+
+x         xdmcplib =  -lxdmcp
+
+x
+
+x        depphigslib = $(usrlibdir)/libphig.a
+
+x           phigslib =  -lphig
+
+x
+
+x       depxbsdlib = $(usrlibdir)/libxbsd.a
+
+x          xbsdlib =  -lxbsd
+
+x
+
+x lintextensionlib = $(lintlibdir)/llib-lxext.ln
+
+x         lintxlib = $(lintlibdir)/llib-lx11.ln
+
+x          lintxmu = $(lintlibdir)/llib-lxmu.ln
+
+x        lintxtool = $(lintlibdir)/llib-lxt.ln
+
+x          lintxaw = $(lintlibdir)/llib-lxaw.ln
+
+x           lintxi = $(lintlibdir)/llib-lxi.ln
+
+x          lintpex = $(lintlibdir)/llib-lpex5.ln
+
+x        lintphig = $(lintlibdir)/llib-lphig.ln
+
+x
+
+x          deplib = $(depxawlib) $(depxmulib) $(depxtoollib) $(depxlib)
+
+x
+
+x         deplib1 = $(deplib)
+
+x         deplib2 = $(deplib)
+
+x         deplib3 = $(deplib)
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# imak rule for build librari, program, script, and data file
+
+x# rule:  $xconsortium: imak.rule,v 1.123 91/09/16 20:12:16 rw exp $
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# start of imakefil
+
+x
+
+x# glasgow rx imakefil.
+
+x
+
+x         program = rx
+
+x
+
+xall:: $(program)
+
+x
+
+xinstal:: safe
+
+x
+
+xinstal:: rx.pl
+
+x	@if [ -d $(destdir)$(bindir) ]; then set +x; \
+
+x	els (set -x; $(mkdirhier) $(destdir)$(bindir)); fi
+
+x	$(instal) -c $(instbinflag) rx.pl $(destdir)$(bindir)/rx
+
+x
+
+xinstal.man:: rx.man
+
+x	@if [ -d $(destdir)$(mandir) ]; then set +x; \
+
+x	els (set -x; $(mkdirhier) $(destdir)$(mandir)); fi
+
+x	$(instal) -c $(instmanflag) rx.man $(destdir)$(mandir)/rx.$(mansuffix)
+
+x
+
+xinstal::
+
+x	$(rm) $(bindir)/rxterm
+
+x	$(ln) $(bindir)/rx $(bindir)/rxterm
+
+x
+
+xsafe:
+
+x	@grep -s 'debug = 0' rx.pl || fals
+
+x
+
+xshar: safe
+
+x	makekit -m -p
+
+x	@-perl -pi -e "s/sinclair@dc.gla.ac.uk/sinclair@dc.gla.ac.uk/;" part*
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# common rule for all makefil - do not edit
+
+x
+
+xemptyrul::
+
+x
+
+xclean::
+
+x	$(rm_cmd) "#"*
+
+x
+
+xmakefil::
+
+x	-@if [ -f makefil ]; then set -x; \
+
+x	$(rm) makefil.bak; $(mv) makefil makefil.bak; \
+
+x	els exit 0; fi
+
+x	$(imak_cmd) -dtopdir=$(top) -dcurdir=$(current_dir)
+
+x
+
+xtag::
+
+x	$(tag) -w *.[ch]
+
+x	$(tag) -xw *.[ch] > tag
+
+x
+
+xsaber:
+
+x	# load $(alldefin) $(src)
+
+x
+
+xosab:
+
+x	# load $(alldefin) $(obj)
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# empti rule for directori that do not have subdir - do not edit
+
+x
+
+xinstal::
+
+x	@echo "instal in $(current_dir) done"
+
+x
+
+xinstal.man::
+
+x	@echo "instal.man in $(current_dir) done"
+
+x
+
+xmakefil::
+
+x
+
+xinclud::
+
+x
+
+x# -------------------------------------------------------------------------
+
+x# depend gener by makedepend
+
+x
+
+end_of_file
+
+if test 10172 -ne `wc -c <'makefil'`; then
+
+    echo shar: \"'makefil'\" unpack with wrong size!
+
+fi
+
+# end of 'makefil'
+
+fi
+
+if test -f 'rx.man' -a "${1}" != "-c" ; then 
+
+  echo shar: will not clobber exist file \"'rx.man'\"
+
+els
+
+echo shar: extract \"'rx.man'\" \(3551 charact\)
+
+sed "s/^x//" >'rx.man' <<'end_of_file'
+
+x.th rx 1 "4 march 1993" "x version 11"
+
+x.sh name
+
+xrx,rxterm,r* - remot command, xterm, anyth execut
+
+x.sh synopsi
+
+x.b rx
+
+x[
+
+x.b \-l
+
+x.i usernam
+
+x]
+
+x.i host
+
+x[
+
+x.i command
+
+x]
+
+x.br
+
+x.b rxterm
+
+x[
+
+x.b \-l
+
+x.i usernam
+
+x]
+
+x.i host
+
+x[
+
+x.ir arg .\|.\|.
+
+x]
+
+x.sh descript
+
+xthe 
+
+x.b rx
+
+xprogram connect to the specifi
+
+x.i host
+
+xand execut the specifi
+
+x.i command
+
+xin the background, return immedi.  to allow the execut
+
+xof x program, it copi a number of environment variabl to
+
+xthe remot session.  if you omit
+
+x.ir command ,
+
+xthen rx will start an xterm on the remot host.  the
+
+x.b rxterm
+
+xvarient start a remot xterm on a host, and also pass
+
+x.i arg
+
+xto the remot xterm as argument.
+
+x.pp
+
+xshell metacharact which ar not quot ar interpret on the local
+
+xmachin, while quot metacharact ar interpret on the remot
+
+xmachin.
+
+x.pp
+
+xif the name of the file from which
+
+x.b rx
+
+xi execut is anyth other than ``rx,''
+
+x.b rx
+
+xtake thi name, strip on a lead ``r'' as the command
+
+xto run on the remot host, us ani
+
+x.i command
+
+xparamet as argument for the remot command.
+
+x.pp
+
+xif
+
+x.b rx
+
+xthink you ar us
+
+x.b xauth
+
+xbase x authoris, and you ar call to a off-site host, or
+
+xto a differ usernam, it will attempt to copi an author
+
+xkei to the remot account.  otherwis it will try to us
+
+x.b xhost(1)
+
+xto grant access to the remot host.
+
+x.sh option
+
+x.tp
+
+x.bi \-l " usernam"
+
+xuse
+
+x.i usernam
+
+xa the remot usernam instead of your local usernam.  in the absenc
+
+xof thi option, the remot usernam is the same as your local usernam.
+
+x
+
+x.sh environ
+
+xif set, the valu of path, displai, xenviron, xapplresdir,
+
+xxfilesearchpath, xuserfilesearchpath, openwinhom, ld_librari_path,
+
+xand xauthor ar export to the remot program, unless the
+
+xremot usernam is differ, or the remot host is off-site, in which
+
+xcase onli displai is export, with in all case ani variabl name in the
+
+xvariabl rxenv.
+
+x.pp
+
+xthe displai variabl is tweak as appropri, to contain as qualifi
+
+xa hostnam as is need.
+
+x.sh diagnost
+
+x.tp
+
+x.ib command ": don't recognis my name."
+
+x.b rx
+
+xcannot decod the name it ha been call under.  in thi case
+
+xit print a warn messag, and continu, as normal.
+
+x.tp
+
+x.b "rx: usag: rx [-l usernam] hostnam [arg...]"
+
+xthi mean it could not decod the argument given to it.
+
+x.sh author
+
+xduncan sinclair <sinclair@dc.glasgow.ac.uk>, juli 1992
+
+x.br
+
+xorigin base on a program with the same name from the
+
+x.b gwm
+
+xdistribut.  to distinguish thi "rx" from other program
+
+xwith similar name, you should refer to thi program as the
+
+x.b glasgow
+
+x.br rx .
+
+x.sh "see also"
+
+xx(1), rsh(1), xterm(1), xauth(1), xhost(1), gwm(1)
+
+x.sh bug
+
+x.b rx
+
+xmake a number of assumpt about the relationship between the
+
+xlocal user, and the remot on, depend on whether the remot
+
+xhost is onsit or not, and whether an altern usernam wa us
+
+xor not.
+
+x.pp
+
+xin particular, if either the local us shell, or the remot
+
+xuse shell is the standard bourn shell,
+
+x.b sh(1)
+
+xthen strang thing ar more like to happen.  especi when 
+
+xit's onli on of them.
+
+x.pp
+
+xsometim quot can get mess up.
+
+x.pp
+
+xit's too easi to fool the smart in
+
+x.b rx
+
+xto make it believ someth that is not true, and fail becaus of it.
+
+x.pp
+
+xwhen
+
+x.b rx
+
+xuse
+
+x.b xhost
+
+xto grant access, the
+
+x.b xhost
+
+xcommand mai fail silent.
+
+x.pp
+
+xif
+
+x.b rx
+
+xtri to send to larg a command to the remot machin, it will
+
+xlike fail with a pars error from csh.  if thi happen, you
+
+xwill probabl have to reduc the size of the export environ.
+
+end_of_file
+
+if test 3551 -ne `wc -c <'rx.man'`; then
+
+    echo shar: \"'rx.man'\" unpack with wrong size!
+
+fi
+
+# end of 'rx.man'
+
+fi
+
+if test -f 'rx.pl' -a "${1}" != "-c" ; then 
+
+  echo shar: will not clobber exist file \"'rx.pl'\"
+
+els
+
+echo shar: extract \"'rx.pl'\" \(9028 charact\)
+
+sed "s/^x//" >'rx.pl' <<'end_of_file'
+
+x#! /usr/local/bin/perl
+
+x# config: chang the line abov to point to your copi of perl.
+
+x##############################################################################
+
+x# glasgow rx  version 3.1.7
+
+x#
+
+x# copyright 1992 duncan sinclair <sinclair@dc.gla.ac.uk>
+
+x#
+
+x# last modifi:  earli april 1993.
+
+x#
+
+x# distribut limit, as per the usual mit copyright.
+
+x##############################################################################
+
+x# remot execut of x program.  base on a script in an old version of gwm.
+
+x#
+
+x# to instal, put rx in your bin and make rxterm a link to it.
+
+x#  some configur will be necessari, see "config" comment...
+
+x#
+
+x# more and more thi is less and less like the origin....
+
+x#
+
+x# major hack to work for our(my) set up, and also partli
+
+x#  re-written to work with sh, rather than ksh.
+
+x#
+
+x# mayb i'll turn thi into our first zsh script!
+
+x#
+
+x# look like it turn into a perl script at some point - big improv.
+
+x##############################################################################
+
+x# thi code tri to be intellig in the wai it work.  thi mean there
+
+x#  ar ton of implicit assumpt about the environ it is run in.
+
+x#  these assumpt ar all valid on the machin i us, and in my
+
+x#  environ.  at the same time, i try to make as few assumpt as possibl
+
+x#  about the remot machin.  here's a list of all the more tricki on...
+
+x# *) that the remot machin ha csh.  (linux?)
+
+x# *) that $rshell = /bin/(k)?sh ==> remot shell = /bin/(k)?sh.  (make same.)
+
+x# *) if remot shell = sh, that $path is compat.  (us csh, etc..)
+
+x# *) i pass a cooki to the remot machin if need be, but doe it
+
+x#    know what to do with a cooki. (eat it?)
+
+x# *) there must be other...
+
+x##############################################################################
+
+x# why am i us csh to run the remot command?  simpli becaus it doesn't
+
+x#  interact badli with rsh, and hang wait for a file descriptor to
+
+x#  be close.  i'd rather us zsh, or bash, or even perl, but thei ar not
+
+x#  as univers as csh.
+
+x##############################################################################
+
+x#
+
+xrequir "stat.pl";
+
+x#
+
+x# what we call?
+
+x#
+
+x$argv0 = $0 ;
+
+x$argv0 =~ s:.*/:: ;
+
+x#
+
+x# config:
+
+x# chang these variabl to be your domain name, and a pattern that
+
+x#  will match all variat on your domain name.  you must includ
+
+x#  those lead dot!!! if your hostnam includ your domain, see
+
+x#  the code further down, mark "xxx"
+
+x#
+
+x$dom  = ".dc.gla.ac.uk" ;
+
+x$dompat = "\.dc(\.gla(sgow)?(\.ac\.uk)?)?" ;
+
+x#
+
+x# config:
+
+x# chang thi to your valu of bindir, or set the variabl to "" if
+
+x#  you think your user ar smarter than that.
+
+x#
+
+x$xpath = "/usr/x11/bin" ;
+
+x#
+
+x# config:
+
+x# make thi the name of your "remot shell" command.
+
+x#
+
+x$rsh = "rsh" ;
+
+x#
+
+x# end of config
+
+x#
+
+x# some variabl we'll no doubt us sometim...
+
+x#
+
+x$usag = "$argv0: usag: $argv0 [-l usernam] hostnam [arg...]\n" ;
+
+x$rshell = (getpwuid($<))[8] || "/bin/sh" ;
+
+x$home = $env{"home"} || (getpwuid($<))[7] ;
+
+x$xauth = $env{"xauthor"} || $home . "/.xauthor" ;
+
+x$logf = "~/.rx.log" ;
+
+x@stuff = () ;
+
+x$debug = 0 ;
+
+x#
+
+x# befor anyth els, close stdin.  thi might stop rx hang
+
+x#  due to rsh weird.
+
+x#
+
+xclose(stdin);
+
+x#
+
+x# do a "-l" flag...
+
+x#
+
+xif ($argv[0] eq "-l") {
+
+x  shift ;
+
+x  $user = $argv[0] || die $usag ;
+
+x  @luser = ("-l",$user) ;
+
+x  shift ;
+
+x}
+
+x#
+
+x# pick a host, ani host...
+
+x#
+
+x$mach = $argv[0] || die $usag ;
+
+xshift ;
+
+x#
+
+x# thing to think about for the remot machin.
+
+x#
+
+x$mach =~ s/$dompat// ;
+
+x$offsit = $mach =~ /\./ ;
+
+x#
+
+x# where am i?  seem we can't trust the dumb user to set hostnam right!
+
+x#
+
+x#$hostnam=$env{hostnam} || `hostnam` ;		# current host
+
+x$hostnam=`hostnam` ;					# current host
+
+x$hostnam =~ s/\n// ;
+
+x#
+
+x#  if all your hostnam includ your domain, comment out the next line.
+
+x#
+
+xif ( $offsit ) { $hostnam = $hostnam . $dom ; }	# xxx
+
+x#
+
+x# now we know where we ar, and thei ar, ar thei differ?
+
+x#
+
+x$diff = $hostnam ne $mach ;
+
+x#
+
+x# what is the displai go to be?
+
+x# !! danger !! heavi regular express follow...
+
+x# thi need to be re-written to be modular and can so be extend to
+
+x#  support reset host:* to unix:*, as requir.
+
+x#
+
+x$displai = $env{"displai"} || ":0.0" ;
+
+x$displai =~ s/$dompat// ;
+
+x$displai =~ s/^(unix)?(:\d(\.\d)?)$/$hostnam$2/ if ($diff) ;
+
+x$displai =~ s/^([^.]*)(:\d(\.\d)?)$/$1$dom$2/ if ($offsit) ;
+
+x$env{"displai"} = $displai ;
+
+x#
+
+x# here come the hard bit in sh.  quot our arg.
+
+x# also have to quot quot.  to cope with csh braindamag,
+
+x#  quot ar quot thu; ' -> '\''
+
+x# so for an arg "foo'bar", we get "'foo'\''bar'".
+
+x#
+
+xforeach (@argv) {
+
+x  s#\'#\'\\\'\'#g ;
+
+x  s#(.*)#\'$1\'# ;
+
+x}
+
+x#
+
+x# so what we do?
+
+x#
+
+xprog: {
+
+x  if ($argv0 eq "rx") { last prog ; }
+
+x  if ($argv0 eq "rxterm") {
+
+x    #unshift(@argv,"-ls") if ($diff) ;
+
+x    unshift(@argv,"xterm","-ls","-n",$mach) ;
+
+x    last prog ;
+
+x  }
+
+x  if ($argv0 =~ /r(.*)/) { unshift(@argv,$1) ; last prog ; }
+
+x  warn "$argv0: don't recognis my name." ;
+
+x}
+
+x#
+
+x# if noth els, becom an rxterm.
+
+x#
+
+xif (@argv == 0) {
+
+x  #unshift(@argv,"-ls") if ($diff) ;
+
+x  unshift(@argv,"xterm","-ls","-n",$mach) ;
+
+x}
+
+x#
+
+x# some special consider if we ar not ourselv on the other side.
+
+x#
+
+xif ($offsit || $user) {
+
+x  #
+
+x  # we want to pass a cooki here.
+
+x  #
+
+x  if (-e $xauth) {
+
+x    #
+
+x    # thi is go to be unsecur, as the cooki will appear in a number
+
+x    #  of command line arg.  but at least it'll work.
+
+x    # thi will need enhanc if we ever fix the code abov to
+
+x    #  set displai to ":0.0", when we return to the server.
+
+x    #
+
+x    $cooki = `path=\$path:$xpath xauth list $displai` ;
+
+x    chop($cooki) ;
+
+x    @cook = split(' ',$cooki) ;
+
+x    shift(@cook) ;
+
+x    unshift(@stuff,"xauth","add",$displai,@cook,";") if (@cook == 2) ;
+
+x  } els {
+
+x    #
+
+x    # yuk.  what a crock.  i hate do thi.
+
+x    #
+
+x    system("xhost +$mach >/dev/null 2>/dev/null") if ($diff) ;
+
+x  }
+
+x  #
+
+x  # we realli onli want to pass a valu for $displai.
+
+x  #
+
+x  @var=("displai", split(' ',$env{"rxenv"})) ;
+
+x} els {
+
+x  #
+
+x  # some variabl we wish to export
+
+x  #
+
+x  @var=(
+
+x    "displai",
+
+x    "xenviron",
+
+x    "xfilesearchpath",
+
+x    "xuserfilesearchpath",
+
+x    "xapplresdir",
+
+x    "openwinhom",
+
+x    "ld_librari_path",
+
+x    # "manpath",		# for "rxman", and bourn shell user.
+
+x    "xauthor",
+
+x    split(' ',$env{"rxenv"}),
+
+x    ) ;
+
+x  #
+
+x  # braindead bourn shell, need to be given a $path...
+
+x  # we would rather not pass the current $path, becaus it might not work
+
+x  #  on the destin machin.  i'd rather it wa set by the user's
+
+x  #  remot shell dure the rsh.
+
+x  # fortun, all *my* x program ar in an arch independ place, and
+
+x  #  so it shouldn't co a problem, local.
+
+x  # we check against $rshell, becaus thei might be run anoth shell,
+
+x  #  differ from their login shell.  i know, sound weird, but it's too
+
+x  #  common round here.
+
+x  # i've also includ ksh in the brain-damag, co i can't see an easi wai
+
+x  #  to pass throught $env{"env"} without it be too late. (we onli have
+
+x  #  on person who ha ksh as a login shell anywai...)
+
+x  # oh, yeah.. we ar assum that if it's bourn shell here, then it's
+
+x  #  bourn shell there.  much more import than thi is that it it isnt
+
+x  #  bourn shell here, it better not be bourn shell there.
+
+x  #
+
+x  if ($rshell =~ m#/(k)?sh#) { push(@var,"path"); }
+
+x}
+
+x#
+
+x# valid $pwd routin...
+
+x#
+
+xsub valid_pwd {
+
+x  local(@pwdstat, @dotstat);
+
+x  local($pwd) = $_[0];
+
+x
+
+x  unless (defin($pwd))          { return undef; } ;
+
+x  unless (@dotstat = stat("."))  { return undef; } ;
+
+x  unless (@pwdstat = stat($pwd)) { return undef; } ;
+
+x  if (($pwdstat[$st_dev] != $dotstat[$st_dev]) ||
+
+x      ($pwdstat[$st_ino] != $dotstat[$st_ino])) { return undef; } ;
+
+x  $pwd;
+
+x}
+
+x#
+
+x# try and find a nice, valid, pwd.
+
+x#
+
+xpresent: {
+
+x  if ($pwd = $env{"pwd"}) {
+
+x    $foopwd = $pwd ;
+
+x    $foopwd =~ s#(/tmp_mnt|/export)?/(.*)#/$2# ;
+
+x    $pwd = &valid_pwd($foopwd) || &valid_pwd($pwd) ;
+
+x  }; 
+
+x  unless ($pwd) {
+
+x    chop($pwd = `pwd`) ;
+
+x    $foopwd = $pwd ;
+
+x    $foopwd =~ s#(/tmp_mnt|/export)?/(.*)#/$2# ;
+
+x    $pwd = &valid_pwd($foopwd) || &valid_pwd($pwd) || $home;
+
+x  }
+
+x}
+
+x$pwd =~ s#(.*)#\'$1\'# ;
+
+x#
+
+x# try to find somewher nice to live on the other side.
+
+x#
+
+xunless ($offsit) {
+
+x  unshift(@stuff,"test","-d",$pwd,"&&","cd",$pwd,";");
+
+x}
+
+x#
+
+x# start build the full command.
+
+x#
+
+xforeach $var (@var) {
+
+x  ($val = $env{$var}) &&
+
+x     unshift(@stuff,"setenv","$var","\'"."$val"."\'",";") ;
+
+x}
+
+x#
+
+x# some command to do on the other side...
+
+x#
+
+xunshift(@stuff,"set","nonomatch",";");	# onli if we ar us csh.
+
+x#
+
+x# build the remot command.
+
+x#
+
+x$remot=("(umask 077 ; ((".join(" ",@stuff,@argv).")</dev/null >&$logf &))") ;
+
+x$remot =~ s#\"#\\\"#g ;
+
+x$remot = "\"" . $remot . "\"" ;
+
+x#
+
+x# build the arg list for the exec.
+
+x#
+
+x@comm=($rsh,@luser,"$mach","csh","-fc",$remot) ;
+
+x#
+
+x# do it!
+
+x#
+
+xif ($debug) {
+
+x  print "@comm\n" ;
+
+x} els {
+
+x  exec @comm ;
+
+x}
+
+x#
+
+x# rsh doesn't return ani indic of how it went over
+
+x# on the other side, but that's ok, co we aint go to
+
+x# wait around to see what happen.
+
+x#
+
+xexit 0 ;
+
+x#
+
+x# the end
+
+end_of_file
+
+if test 9028 -ne `wc -c <'rx.pl'`; then
+
+    echo shar: \"'rx.pl'\" unpack with wrong size!
+
+fi
+
+chmod +x 'rx.pl'
+
+# end of 'rx.pl'
+
+fi
+
+echo shar: end of archiv 1 \(of 1\).
+
+cp /dev/null ark1isdon
+
+miss=""
+
+for i in 1 ; do
+
+    if test ! -f ark${i}isdon ; then
+
+	miss="${miss} ${i}"
+
+    fi
+
+done
+
+if test "${miss}" = "" ; then
+
+    echo you have the archiv.
+
+    rm -f ark[1-9]isdon
+
+els
+
+    echo you still need to unpack the follow archiv:
+
+    echo "        " ${miss}
+
+fi
+
+##  end of shell archiv.
+
+exit 0
+
+
+
+
+
+-- 
+
+    duncan sinclair  |  sinclair@dc.gla.ac.uk  |  sinclair@uk.ac.gla.dc
+
+      ---  would the *real* unix oper system pleas stand up.  ---
+

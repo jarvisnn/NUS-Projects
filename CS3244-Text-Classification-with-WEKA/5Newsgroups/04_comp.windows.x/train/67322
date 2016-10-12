@@ -1,0 +1,34 @@
+from: duijnda@wldelft.nl (arnoduijndam)
+subject: re: creat a gif file.
+line: 29
+organ: delft hydraul
+
+in articl <9304261216.aa04485@crnsu1.in2p3.fr> michel@crnsu1.in2p3.fr (6893) write:
+>path: wldelft.nl!sun4nl!mcsun!uunet!gatech!enterpoop.mit.edu!internet!new-mail-gatewai
+>from: michel@crnsu1.in2p3.fr (6893)
+>newsgroup: comp.window.x
+>subject: creat a gif file.
+>date: 26 apr 1993 10:43:28 -0400
+>organ: the internet
+>line: 12
+>sender: new@athena.mit.edu
+>messag-id: <9304261216.aa04485@crnsu1.in2p3.fr>
+>nntp-post-host: enterpoop.mit.edu
+>to: xpert@expo.lc.mit.edu
+>
+>	we ar look for a x client which can convert a xwd or a bitmap
+>file into a gif file for us on a macintosh.
+>
+>	thank
+>
+>		michel@crnsu1.in2p3.fr
+>		laurent michel
+>		crn - gti
+>		bp 20
+>		67037 strasbourg cedex (franc)
+>		phone (33) 88 28 62 76
+
+just look at the pbmplu packag; it doe everyth you could ever ask
+for in convert pbm to almost ani format (gif, tga, pcx etc...)
+
+arno duijndam

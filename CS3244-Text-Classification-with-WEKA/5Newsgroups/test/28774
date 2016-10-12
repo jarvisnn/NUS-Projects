@@ -1,0 +1,64 @@
+from: pablo@ing.puc.cl (pablo a. millan l.)
+
+subject: re: file share magneto optic?
+
+nntp-post-host: malloco.ing.puc.cl
+
+organ: pontificia universidad catolica de chile
+
+x-newsread: tin [version 1.1 pl8]
+
+line: 25
+
+
+
+jann vanov (vanov@bcsaic.boe.com) wrote:
+
+
+
+> my co-worker ha just attach a magneto-optic drive to hi mac.
+
+> work great for him.  howev, he tri to turn on file share, but it
+
+> wouldn't work.  had some messag about "not all volum ar shareabl"
+
+> ???
+
+
+
+> so - ha anyon had success in share mo?  if so, pleas tell me how!
+
+
+
+hi.
+
+
+
+he need insert the mo befor fileshar get turn on, and the onli on
+
+that can see the disk is the owner of the machin. (i'm not sure but seem
+
+that the check "allow owner to see entir disk" should be enabl too).
+
+
+
+a bad thing: you can't eject the disk until fs is turn off.
+
+
+
+hope that help.
+
+
+
+--
+
+pablo a. millan l.        |  mi opinion son mia (pero te la puedo vender)
+
+------------------------------------------------------------------------------
+
+email : pablo@ing.puc.cl  |  seed limitada, santiago, chile
+
+------------------------------------------------------------------------------
+
+"research is what i'm do when i don't know what i'm do" -- w. von braun
+

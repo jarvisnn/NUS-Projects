@@ -1,0 +1,192 @@
+from: j.k.wight@newcastl.ac.uk (jim wight)
+
+subject: ax 5.0 is avail
+
+organ: comput laboratori, u of newcastl upon tyne, uk ne17ru
+
+line: 89
+
+nntp-post-host: enterpoop.mit.edu
+
+to: xannounc@expo.lc.mit.edu
+
+
+
+i have place a new releas of my ax editor in ax-5.0.tar.z on
+
+export.lc.mit.edu (18.24.0.12) and arjuna.ncl.ac.uk (128.240.150.1).
+
+
+
+the signific chang thi time, and the justif for the hike
+
+in the major version number, is:
+
+
+
+  o undo ha been implement.
+
+
+
+    by default onli the last chang can be undon, but a resourc is
+
+    provid to allow the user to specifi how mani, includ unlimit,
+
+    level of undo inform should be kept. also, undo of undo is
+
+    support.
+
+
+
+there is no truth in the rumour that the next version will be emax 19 :-)
+
+
+
+                          -=-=-=-=-=-=-=-=-=-
+
+
+
+for those who have not encount ax befor here is a summari of
+
+what it is all about:
+
+
+
+ax is a simpl to us text editor for x that repres a signific
+
+improv over xedit. also built around the athena text widget it
+
+featur, amongst other thing,
+
+
+
+   o multipl window
+
+   o multipl buffer
+
+   o default menu interfac
+
+   o option button interfac, with choic and layout of button 
+
+     under user control
+
+   o minibuff for expert us and access to extern filter
+
+   o provis for defin a keyboard macro
+
+   o geometri specif and resiz in term of charact
+
+   o file select via a browser
+
+   o knowledg of line number
+
+   o parenthesi match
+
+   o regular express search
+
+   o restrict or unlimit undo
+
+   o abil to chang font
+
+   o easi entri of control code
+
+   o xterm-like keymap featur
+
+   o easi runtim set of select prefer (resourc)
+
+   o both brief and comprehens on-line help
+
+   o server mode with cooper client program
+
+   o option extens languag us tcl
+
+   o option xaw3d widget set compat
+
+   o collect of reusabl widget that embodi the function of ax
+
+
+
+i have person built and run core ax, i.e. without the tcl and
+
+xaw3d option, on the follow system:
+
+
+
+   sun sparc        suno 4.1.x     mit x11r5
+
+   sun sparc        suno 5.1       mit x11r5
+
+   encor multimax  umax 4.3        mit x11r5
+
+   dec 5000/120     ultrix 4.2      mit x11r5
+
+   hp 9000/710      hp-ux 8.07      mit x11r5
+
+   mac iici         au/x 3.0        mit x11r5
+
+   
+
+but not all have been subject to the same level of test. i have
+
+onli test the tcl and xaw3d option on the first.
+
+
+
+a number of '#ifdef sysv'-ism that have been fed back to me have been
+
+incorpor into the code and a possibl scandir replac is
+
+provid for those system that do not have on.
+
+
+
+although ax will probabl build under r4 run-time problem have been
+
+encount in the past. i have not bother to try thi version under
+
+r4, and have not put ani effort into solv previous known
+
+problem.  therefor, if you ar at r4 you veri much take pot luck. if
+
+it doesn't work the onli altern is to try the last releas,
+
+2.1.1, of version 2 which should still be around. it doesn't have as
+
+mani featur and us the widget creation librari (wcl). not onli
+
+that, it requir an old version of wcl, 1.06 or 1.05. version 3 of
+
+ax wa near complet when version 2 of wcl came out so ax 2
+
+never got convert to make us of it.
+
+
+
+ax is avail by anonym ftp from export.lc.mit.edu (18.24.0.12)
+
+and arjuna.ncl.ac.uk (128.240.150.1) initi, and probabl in due
+
+cours from sever other ftp site.  check your nearest us
+
+xarchi.
+
+
+
+if you can't ftp, try send email to ftpmail@decwrl.dec.com with the
+
+word "help" alon in your messag bodi.  you will receiv instruct
+
+on how to ftp via email.
+
+
+
+jim
+
+---
+
+j.k.wight@newcastl.ac.uk
+
+depart of comput scienc, univers of newcastl,  tel: +44 91 222 8238
+
+newcastl upon tyne, ne1 7ru, unit kingdom.              fax: +44 91 222 8232
+

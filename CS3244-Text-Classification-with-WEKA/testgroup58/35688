@@ -1,0 +1,194 @@
+from: abig@netcom.com (access bu industri gp)
+
+subject: access.bu (re: access.bu softwar creator's contest)
+
+organ: netcom on-line commun servic (408 241-9760 guest)
+
+line: 92
+
+
+
+	intro to access.bu (re: the access.bu softwar creator's 
+
+	contest announc)
+
+
+
+what is access.bu?
+
+
+
+access.bu is a new open industri standard for comput 
+
+peripher connect.  access.bu is a serial protocol that 
+
+us simpl, low-cost i2c technolog to link multipl devic to 
+
+a singl pc port.  peripher devic such as keyboard or 
+
+keypad, locat (mice, trackbal, joystick), printer, vr 
+
+glove, digit, sensor, actuat or data transmitt and 
+
+other can be easili daisi chain to the host pc.  applic 
+
+such as cad/cam, data acquisit, simul, virtual realiti, 
+
+multipl-player/singl pc game, educ and mani, mani more 
+
+can now take advantag of access.bu, the technolog that put 
+
+plug and plai on everi pc.
+
+
+
+the access.bu offer advantag to end-user and develop of 
+
+system and peripher.  multipl devic connect to the host 
+
+comput with onli on port.  common commun method for a 
+
+number of devic type lead to simplifi hardwar and softwar 
+
+develop.  as an open standard, access.bu enabl cross-
+
+platform us of the same devic.
+
+
+
+access.bu technolog descript:
+
+=====================================
+
+
+
+access.bu technolog is an open specif, enabl anyon 
+
+to implement it on host system or in peripher devic without 
+
+fee or royalti.
+
+access.bu ha a bu topolog architectur.  that is, a singl 
+
+host can accommod up to 125 peripher devic.  access.bu 
+
+data rate is 100 kbit/sec.
+
+
+
+access.bu physic layer
+
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+access.bu is a serial bu architectur, base on i2c hardwar 
+
+protocol, with on data line and on clock line.
+
+standard low-cost i2c microcontrol handl bit-level 
+
+handshak, includ automat arbitr and clock 
+
+synchron.  
+
+
+
+access.bu softwar protocol
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+the access.bu commun protocol is compos of three 
+
+level: i2c protocol, base protocol, and applic protocol.
+
+
+
+i2c protocol: thi simpl and effici protocol defin 
+
+arbitr among contend master without lose data.  i2c 
+
+provid for cooper synchron of bu partner with 
+
+differ clock rate.  bu transact includ address, 
+
+frame of bit into byte, and byte acknowledg by the 
+
+receiv.  
+
+
+
+base protocol: establish the asymmetr interconnect between 
+
+a host comput and multipl peripher.  the host becom the 
+
+access.bu manag.  the base protocol defin the format of an 
+
+access.bu messag envelop, which is an i2c bu transact with 
+
+addit semant, includ checksum.
+
+uniqu featur of the base protocol ar auto-address and hot 
+
+plug.  auto-address assign devic with uniqu bu 
+
+address, without the need for set jumper or switch.  hot 
+
+plug is the abil to attach and detach devic while the 
+
+system is run, without reboot.
+
+
+
+applic protocol: thi is the highest level of the access.bu 
+
+protocol which defin messag semant specif to particular 
+
+type of devic.  each type requir a differ applic 
+
+protocol.  three broad devic type have been identifi: 
+
+keyboard, locat, and text devic.
+
+
+
+access.bu support on the pc
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+all three level of the access.bu protocol ar support on the 
+
+pc.  an add-on card implement the physic layer and us the 
+
+base protocol to commun with physic access.bu devic.  
+
+an access.bu manag - tsr under do and a dll under window 3.1 
+
+- control the oper of the physic layer and interact with 
+
+the access.bu devic driver.  driver ar avail for 
+
+multipl access.bu keyboard, locat and printer for do and 
+
+window 3.1.  also avail ar c languag sourc code exampl 
+
+of the interfac from applic to the devic driver.
+
+
+
+
+
+to contact abig (the access.bu industri group):
+
+------------------------------------------------
+
+postal address:
+
+370 altair wai, suit 215, sunnyval, ca 94086
+
+internet email:  abig@netcom.com
+
+fax: (408) 991-3773
+
+voic: (408) 991-3517
+
+
+

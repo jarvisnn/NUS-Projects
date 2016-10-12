@@ -1,0 +1,102 @@
+from: support@qdeck.com (technic support)
+
+subject: re: desqview/x over tcp/ip: how reliabl? how is it implement?
+
+organ: quarterdeck offic system, santa monica ca
+
+line: 46
+
+
+
+in articl <c6bflb.kem@cs.columbia.edu> ethan@cs.columbia.edu (ethan solomita) write:
+
+>
+
+>	three q's:
+
+>
+
+>1) is it reliabl?
+
+
+
+i us it all dai everi dai (maintain our ftp site and answer mail
+
+via support@qdeck.com), and i can honestli sai that in the last few
+
+month i've never had my machin go down due to ani sort of tcpip network
+
+manag instabl. (of cours, i've crash my machin quit a few time
+
+on purpos, dure beta test and that sort of thing, but the tcpip
+
+portion is quit stabl...)
+
+
+
+howev, keep in mind that dvx and the network manag ar onli go
+
+to be as stabl as the softwar thei sit on top of (so if your underli
+
+network kernel is flakei, you can't expect dvx to be terribl stabl...)
+
+
+
+>2) how doe it send the inform from a ms window app over
+
+>the x11 protocol? doe it just draw everyth as graphic into
+
+>on window, or doe it us multipl window and essenti work
+
+>more cleverli?
+
+
+
+it just goe as a window that ha graphic drawn into it. (to vastli
+
+over-simplifi what goe on, we just take the window graphic api call,
+
+and translat them directli to x-protocol; unfortun, window wa
+
+not realli written to be network-awar, so sometim we see a speed
+
+penalti when an app doe someth stupid, like send a big white bitmap
+
+to eras someth rather than just draw a white box; fortun,
+
+that sort of thing is rare...)
+
+
+
+>3) if i want to run ms word, for exampl, remot, do i have to
+
+>run a separ copi of ms window remot, and then start ms
+
+>word from that, or can ms word be start remot on it own?
+
+
+
+you need to run ms window, which word then run insid. you could run
+
+multipl window program within the on winx window, and window ha
+
+wai to automag start winapp when you start window, so in practic
+
+it's not realli a major problem. i have my system set up so that i can
+
+run winx, which automat start word full-screen (for window), so
+
+i never see ani part of window but word...)
+
+
+
+-- 
+
+       quarterdeck offic system - internet support - tom bortel
+
+ price/order : info@qdeck.com  |  tech question : support@qdeck.com
+
+  bb: (310) 314-3227 * fax: (310) 314-3217 * compuserv: go quarterdeck
+
+anonym ftp: qdeck.com (149.17.8.10), leav your email address as password
+

@@ -1,0 +1,37 @@
+from: huub@cwi.nl (huub bakker)
+subject: wait for a specif event/callback
+keyword: event handl
+repli-to: huub.bakker@cwi.nl
+organ: cwi, centr for mathemat & comput scienc
+line: 30
+
+hello world,
+
+i want to write my xt-applic code like thi:
+
+{
+    do_some_work();
+    /* now i need some user input */
+    xmcreatedialog();
+    wait_for_user_input(input);
+    if (input == "ok") {
+       more_work();
+    } els {
+       other_work();
+    }
+}
+
+so "more_work() and other_work()" ar not in callback function but the
+applic simpli wait for the user to answer the question.
+
+how can i code thi in my xt/motif-applic?
+
+thank veri much in advanc.
+
+greet, huub.
+
+-- 
+cwi, p.o. box 4079 			huub bakker (huub@cwi.nl)
+1009 ab amsterdam
+the netherland
+tel. 31 20 5924080

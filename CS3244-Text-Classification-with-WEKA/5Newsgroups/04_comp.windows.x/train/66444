@@ -1,0 +1,63 @@
+from: rogerskm@eplrx7.es.dupont.com (karen roger)
+subject: remap <return> kei in a dialog
+organ: dupont central research & develop
+line: 58
+
+i am new to x program, so pleas bear with me....
+
+i am try to have a dialog box that return it's valu upon the
+user enter a new valu and hit the <return> kei. (don't want
+to have a "done" button).  the piec of code below will work if
+i exclud the xtnvalu argument but will not work as is. can someon
+shed some light on thi or suggest a better wai?  ultim i will
+have sever area activ at the same time to allow a user to modifi
+paramet in the program.  
+
+
+thank for your help,
+
+karen roger
+dupont
+rogerskm@pluto.es.dupont.com
+
+######### code start here ################
+void doit()
+{
+printf("enter the doit function\n");
+exit();
+}
+
+main(argc, argv)
+int argc;
+char **argv;
+{
+widget toplevel;
+widget outer;
+xtappcontext app_con;
+widget sampl;
+arg arg[3];
+static xtactionsrec kei_action[]= 
+    {
+    {"doit", doit},
+    };
+
+toplevel = xtvaappiniti(&app_con, "test", null, 0,
+	                       &argc, argv, null, null);
+
+outer = xtcreatemanagedwidget( "pane", panedwidgetclass, toplevel,
+					null, zero);
+
+xtappaddact(app_con, kei_action, xtnumber(kei_action));
+
+xtsetarg(arg[0], xtnlabel, "enter valu");
+xtsetarg(arg[1], xtnvalu, "0");
+
+sampl = xtcreatemanagedwidget("sampl", dialogwidgetclass,outer,arg,2);
+
+xtoverridetransl(sampl, 
+	  xtparsetranslationt("<kei>return: doit()"));
+   
+xtrealizewidget(toplevel);
+xtappmainloop(app_con);
+}
+

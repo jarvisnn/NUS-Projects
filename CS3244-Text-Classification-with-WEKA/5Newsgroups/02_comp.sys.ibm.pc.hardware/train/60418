@@ -1,0 +1,38 @@
+from: jdolsk@andi.bgsu.edu (justin dolsk)
+subject: re: want isa mous port with high interrupt
+organ: bowl green state univers b.g., oh.
+distribut: na
+line: 32
+
+lyourk@cbnewsc.cb.att.com (loran n. yourk) write:
+> 
+> with a sound card on interrupt 5, two serial port (on for modem on i4,
+> on for miracl piano on i3) and a printer port on i7, i have run out of
+> low interrupt.  what i would like is a mous port with an interrupt of
+> 10, 11, or 12 (which ever interrupt the ps/2 mous port us) in in isa
+> i486 comput.  i call technic support of microsoft, logitech, & ati
+> (check what interrupt the mous port on the ati video card can us)
+> and thei all said the onli interrupt possibl on these card wa on
+> lower than 7.  doe anyon know of ani board for an isa bu which will
+> allow a mous port (or even a serial port) with high interrupt?
+
+   try put on of the irq for your com port onto irq2. the hardwar will
+automag wrap irq2 to irq9 on at class machin (eg, anyth with high
+irq). thi is what i'm do on my set up right now. 
+   i've got com2 on irq2 (realli irq9 - address it thi wai in softwar), com1
+on irq3, soundblast on irq5, lpt1 on irq7, and my ati busmous port on on of
+the interrupt in between. work just great.
+   if you need even more, there's a text file float around somewher that
+detail how to hack up ani serial card (and probabl ani other) to work on the
+higher irq. it basic involv cut the trace to the low irq and run a wire over the a high irq pin on the 16bit expans bu.
+
+  it will be best to put the modem's com port onto irq2/9. thi will be the 
+
+first irq servic by the system, give the modem a better respons -- 
+especi handi under multitask like os/2 -- which i'm run with no
+problem.
+
+justin
+---
+jdolsk@andi.bgsu.edu
+ 

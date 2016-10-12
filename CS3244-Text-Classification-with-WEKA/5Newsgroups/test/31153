@@ -1,0 +1,60 @@
+from: mark@taylor.uucp (mark a. davi)
+
+subject: re: blink cursor in xterm???
+
+organ: lake taylor hospit comput servic
+
+line: 25
+
+
+
+barmar@think.com (barri margolin) write:
+
+
+
+>in articl <1993mai18.130845.6859@taylor.uucp> mark@taylor.uucp (mark a. davi) write:
+
+>>you ar stuck in a distribut system feedback loop!  what if you ar on an
+
+>>xtermin or run xterm over the net to anoth machin?  that is when the
+
+>>load problem occur.  if you had a machin with 20 xtermin attach and
+
+>>thei all had blink cursor in xterm's, thi could repres a consider
+
+>>ethernet bandwidth wast.
+
+
+
+>ethernet certainli ha enough bandwidth for a few blink cursor.  my
+
+>lisp machin blink the cursor twice a second and updat the time in the
+
+>statu line everi second.  thi us under 1k byte/second, or about .1% of
+
+>the bandwidth of ethernet.  a hundr of them on a singl ethernet might be
+
+>a problem, but a coupl dozen should be fine.
+
+
+
+grant it's noth to loos sleep over, but thi is ethernet's tragic flaw:
+
+the more activ (especi lot of tini activ), the more collis
+
+happen and the perform get exponenti wors...  i am just now
+
+oppos ani kind of wast of bandwidth under ethernet.  although in a poll
+
+system it would not be so bad.
+
+-- 
+
+  /--------------------------------------------------------------------------\
+
+  | mark a. davi    | lake taylor hospit | norfolk, va (804)-461-5001x431 |
+
+  | sy.administr|  comput servic   | mark@taylor / mark@taylor.uucp |
+
+  \--------------------------------------------------------------------------/
+

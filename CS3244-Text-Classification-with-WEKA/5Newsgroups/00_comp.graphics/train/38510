@@ -1,0 +1,90 @@
+from: cgcad@bart.inescn.pt (comp. graphic/cad)
+subject: rtrace 8.2.0
+keyword: rai trace
+nntp-post-host: bart
+organ: inesc-porto, portug
+line: 83
+
+there is a new version of the rtrace rai-trace packag (8.2.0) at
+asterix.inescn.pt [192.35.246.17] in directori pub/rtrace.
+check the readm file.
+
+rtrace now can us the suit toolkit to have a nice user interfac.
+compil it with -dsuit or modifi the makefil.
+suit is avail at suit@uvac.cs.virginia.edu
+i have binari of rtrace with suit for sun sparc, sgi indigo
+and do/go32.
+pleas contact me if interest.
+
+****************************************
+
+the mac rtrace 1.0 port is in directori pub/rtrace/macintosh
+thank to reid judd (reid.judd@east.sun.com) and
+greg ferrar (gregt@function.mp.ohio-state.edu).
+
+****************************************
+
+small chang were done sinc version 8.1.0, mainli:
+
+1. now it is possibl to discard backfac polygon and triangl
+   for fast preview...
+
+2. the support program scn2sff ha been rework to us temp file.
+
+****************************************
+
+here goe a short descript of current convert from
+cad/molecular/chemistri packag to the scn format.
+
+the packag program ar relat as below (those mark with * have been
+modifi)
+
+	       irit2scn
+     irit ----------------|
+                          |               nff (nffclean, nffp2pp)
+	        sol2scn   |                |
+    acad11 ---------------|                | nff2sff
+                          |                |
+	        mol2scn	  v    scn2sff*    v	rtrace*
+   alchemi  -----------> scn -----------> sff ----------> pic or ppm
+			  ^      cpp                           |
+	        pdb2scn   |                                 picmix
+     pdb -----------------|                                 picblend
+			  |                                 ppmmix*
+	       chem2scn   |                                 ppmblend*
+   chemic --------------|
+                          |
+                3ds2scn*  |
+  3d studio --------------|
+                          |
+                iv2scn*   |
+ iri inventor -----------|
+
+****************************************
+
+the do port of rtrace is in pub/rtrace/pc-386 (rtrac820.arj,
+util820.arj and imag820.arj). see the readm file there.
+requir djgpp go32 do extend (version 1.09 includ), which can be
+found in directori pub/pc/djgpp (and in mani site around netland).
+there ar also demo scene, manual and all the sourc code...
+
+****************************************
+
+pleas feel free to get it and us it.
+hope you like it.
+
+regard,
+antonio costa.
+.........................................................................
+     o     o
+    /     /                        i n e s c
+   | o   |        antonio costa        | e-mail   acc@asterix.inescn.pt
+   | |\  |   o                         |
+   | | \ |  /  o  comp. graphic & cad | decnet   porto::acosta
+   | |  \| /  /                        |
+   | |  /  | |    largo mompilh 22   | uucp     {mcvax,...}!...
+   o | |-o | |    4100 porto portug  | bell     +351+02+321006
+    /   \ /   \
+   o     o     o          "let the good time roll..."
+
+

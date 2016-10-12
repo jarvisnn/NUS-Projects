@@ -1,0 +1,10 @@
+from: root@c1.nkw.ac.uk (convex unix)
+subject: re: help with winqvt
+repli-to: tb@ua.nbu.ac.uk
+organ: natur environ research council
+line: 4
+
+
+i had a similar problem - try chang the netmask to 0.0.0.0 or 255.255.254.0
+
+tommi.

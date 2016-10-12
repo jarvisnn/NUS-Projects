@@ -1,0 +1,70 @@
+from: mark@taylor.uucp (mark a. davi)
+
+subject: re: look for x window on a pc
+
+organ: lake taylor hospit comput servic
+
+keyword: ibm pc, x window, window
+
+line: 29
+
+
+
+markw@pspmf3.gpsemi.com (mark wilkinson - ext 3443) write:
+
+
+
+>hi all,
+
+>       thi is the first time i've post to the net, so i hope thi is
+
+>go to the right peopl.
+
+>  i'm look for softwar packag that run on an ibm pc clone that
+
+>allow me to displai openlook and motif window on the pc. 
+
+>  the idea is to us the pc as a cheap x window termin for us by
+
+>process engin at work. 
+
+
+
+if you alreadi own all the "clone" equip then there ar lot of such
+
+program (see a current copi of unix world magazin).
+
+
+
+*but*  your perform will suck lemon run an xserver on a clone.
+
+(from experi).  you would be much better off with an xtermin if thi
+
+is a new instal.  the perform will be at least four time better.
+
+in addit it would be much easier to instal and us.  on top of that
+
+thei will cost about the same (price a clone with 4mb ram, ethernet card,
+
+veri high perform graphic card, good monitor, server softwar, tcp/ip
+
+for clone softwar, mous, keyboard, etc, etc, etc.... you spend a whole
+
+lot of $$$$).
+
+
+
+i can get 15" tektronix xp11 termin for under $900, and the perform
+
+is over 80000 xstone.....
+
+-- 
+
+  /--------------------------------------------------------------------------\
+
+  | mark a. davi    | lake taylor hospit | norfolk, va (804)-461-5001x431 |
+
+  | sy.administr|  comput servic   | mark@taylor / mark@taylor.uucp |
+
+  \--------------------------------------------------------------------------/
+

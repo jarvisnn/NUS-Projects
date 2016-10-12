@@ -1,0 +1,12 @@
+from: fkk@stasi.sta.sub.org (frank kaefer)
+subject: re: xterm build problem in solari2.1
+organ: stasi new server, starnberg, germani
+line: 22
+distribut: inet
+nntp-post-host: stasi.sta.sub.org
+
+dla@se05.wg2.waii.com (doug acker) write:
+
+|..continu on my build problem, i got stuck here build xterm...
+
+|gcc -fpcc-struct-return -o xterm main.o input.o charproc.o cursor.o util.o tab.o  screen.o scrollbar.o button.o tekproc.o misc.o  vtprstbl.o tekprstbl.o data.o menu.o -o2   -r/usr/wgep/x11r5.so5/lib${ld_run_path+\:$ld_run_path} -l../.././lib/xaw

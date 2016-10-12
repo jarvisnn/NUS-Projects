@@ -1,0 +1,70 @@
+from: spitz@ana.med.uni-muenchen.de (richard spitz)
+subject: re: help with winqvt
+repli-to: spitz@ana.med.uni-muenchen.de (richard spitz)
+organ: inst. f. anaesthesiologi der lmu, muenchen (germani)
+distribut: lrz
+line: 63
+
+swartzjh@nextwork.rose-hulman.edu (jeff h. swartz) write:
+
+>  	when i us a name such as rosevc.rose-hulman.edu
+>		initi nameserv queri for 'rosevc'
+>		nameserv queri time out
+>  	when i us the ip number
+>		local host or gatewai not respond
+
+>i know the nameserv is correct and the router is correct.  thei work  
+>fine us ncsa telnet/ftp.
+
+thei ar work ok, but your definit in qvtnet.ini and qvthost.rc ar
+incorrect (see below).
+
+>the doc said if you ar run concurr packet softwar you need to  
+>load pktmux???  doe thi appli to me???
+
+no, i don't think so. you ar us qvtnet and novel concurr, aren't
+you? thei us differ packet type, so qvtnet (tcp/ip) and novel (ipx/spx)
+should be abl to coexist just fine. pktmux is requir if you ar us
+differ tcp/ip-packag concurr.
+
+>thi is the qvthost.rc file.
+>137.112.5.2
+>137.112.199.50
+
+there is the first problem: you didn't specifi hostnam, just ip-address.
+your file should look like thi:
+
+137.112.5.2        <name of your nameserv>
+137.112.199.50     <name of your router>
+
+>thi is the begin of the winqvt.ini file.
+>[net]
+>name=swartzjh.test.rose-hulman.edu
+
+here you should onli specifi your hostnam, without the domain part.
+
+>router=137.112.199.50
+
+instead, us router=<name of your router>, as specifi in your qvthost.rc
+i know the releas note for 3.31 sai that ip address should work also,
+but  appar thei don't.
+
+>nameserv=137.112.5.2
+
+here, too, you should us the hostnam of the nameserv instead of the
+ip address.
+
+it work fine for me that wai, although i could not specifi more than
+on nameserv. the relnot sai it should be possibl to specifi up to
+three nameserv, separ by comma, but it didn't work.
+
+hope it help,
+richard
+
+-- 
++----------------------------+-------------------------------------------+
+| dr. richard spitz          | internet: spitz@ana.med.uni-muenchen.de   |
+| edv-grupp anaesthesi     | tel     : +49-89-7095-3421                |
+| klinikum grosshadern       | fax     : +49-89-7095-8886                |
+| munich, germani            |                                           |
++----------------------------+-------------------------------------------+

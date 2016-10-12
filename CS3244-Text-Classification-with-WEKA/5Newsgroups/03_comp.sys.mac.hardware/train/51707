@@ -1,0 +1,48 @@
+from: rai@netcom.com (rai fischer)
+subject: re: 68040 spec.
+organ: netcom. san jose, california
+line: 43
+
+patrickd@wpi.wpi.edu (lazer) write ...
+>i'd appreci it greatli if someon could e-mail me the follow:
+>(if you onli know on, that's fine)
+>1) spec for the 68040 (esp. how it compar to the pentium)
+
+spec for the 68040 can fill a 500 page book.  some highlight ar...
+32-bit address space w/ 32-bit data width.  18 32-bit integ regist 
+& 8 80-bit float point regist.  8k copyback capabl cach,
+4-wai set associ.  typic 1.2 clock/integ instruct.  5
+clock for a float point multipli.
+
+(interest asid: the 68040 can multipli two 80-bit float point
+number in less time than it can multipli two 32-bit integ)
+
+>2) spec for the 68060 with estim cost, releas date, etc...
+
+more of the same but with multipl instruct dispatch.  figur
+about 0.8 clock per instruct typic (my guess).  but the motorola
+gui ar pretti bright, it mai be less.
+
+>i'm interest in speed, system it can run (window nt, risc, or whatev),
+>cost, bu info, regist info.  all the technic info.
+
+call motorola.  i'm not type it all in.
+
+>i am hope that the 68040 can win yet anoth battl against the intel peopl.
+
+i'm predict that both the 680x0 and x86 line ar reach their
+end.  new experiment processor have 64-bit data pathwai and can
+schedul up to 8 out of 32 instruct each clock cycl.  that sort
+of trick can't realli be done with cisc architectur.
+
+i final saw some detail on the 586/pentium and wa not greatli
+impress.  thei've final done some work on the fpu to get it up to
+speed, but otherwis it's onli go to be a 2x speedup.  and to get
+that thei're us two integ unit, larger cach, and a branch
+target buffer.  ye, i know thei're talk about 100mhz processor.
+big whoop.  design a 100mhz board is difficult and realli
+expens.  price 15ns memori chip late?
+
+-- 
+rai fischer                   "convict ar more danger enemi of truth
+rai@netcom.com                 than li."  -- friedrich nietzsch

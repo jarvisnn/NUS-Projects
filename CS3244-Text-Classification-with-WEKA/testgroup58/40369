@@ -1,0 +1,78 @@
+from: stolk@fwi.uva.nl (bram)
+
+subject: re: 48-bit graphic...
+
+keyword: 48-bit alpha channel imag
+
+nntp-post-host: gene.fwi.uva.nl
+
+organ: fwi, univers of amsterdam
+
+line: 32
+
+
+
+howdi all,
+
+
+
+oehler@yar.cs.wisc.edu (wonko the sane) write:
+
+
+
+>	i wa recent talk to a possibl employ ( mine! :-) ) and he made a refer to a
+
+>48-bit graphic comput/imag process system.  i seem to rememb it be call imag or
+
+>someth akin to that.  anywai, he claim it had 48-bit color + a 12-bit alpha channel.  that's
+
+>60 bit of info--what could that possibl be for?  specif the 48-bit color?  that's 280
+
+>trillion color, mani more than the human ey can resolv.  is thi an anti-alias thing?  or
+
+>is thi just some magic number to make it work better with a certain processor.
+
+
+
+hmm... 48 bit ay?
+
+well, it beat a 32-bit design for thee sake of elleg.
+
+48 bit mean 16 bit per primari colour.
+
+the 2^48 nr of colour is a bit mislead. it make more sens to see it
+
+as 65536 possibl shade of pure red.
+
+thi might actual make some sens, sinc 256 shade of red (24 bit colour) 
+
+mai produc visibl 'jump' in intens.
+
+then again, a byte per primari colour for each pixel is the most eleg wai 
+
+of do colour graphic, becaus it leav ya such a tidi (and fast) program
+
+code.
+
+
+
+	take care,
+
+
+
+		bram
+
+
+
++-------------------------------------+------------------------------------+
+
+| "fly is a nack... the trick is   |  bram stolk (stolk@fwi.uva.nl)     |
+
+|  to throw yourself at the ground,   |  dept. of math. & comput scienc|
+
+|  and miss..."  - dougla adam      |  univers of amsterdam           |
+
++-------------------------------------+------------------------------------+
+
+                                  no, i dont us ms-windoz, i prefer linux!
+

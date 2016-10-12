@@ -1,0 +1,20 @@
+from: rnichol@cbnewsg.cb.att.com (robert.k.nichol)
+subject: re: simpl window question
+organ: at&t
+line: 15
+
+in articl <1993apr23.214110.15315@sarah.albani.edu> jr0930@ev.albani.edu (diamond) write:
+>when run do 5.0 under window 3.0, i lose the abil to do a
+>print-screen.
+>i have no problem with thi when i'm run do not under window.
+...
+
+open up the .pif file with the pif editor, click on the "advanc" button,
+and then reserv the prtsc kei for the applic.  ani kei that you
+select in thi section will be pass along to the applic rather than
+be process by window.
+
+--
+bob nichol
+at&t bell laboratori
+rnichol@ihlpm.ih.att.com

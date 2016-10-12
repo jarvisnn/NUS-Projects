@@ -1,0 +1,20 @@
+from: mike@hopper.virginia.edu (michael chapman)
+subject: re: compil help
+organ: itc/uva commun access unix/internet project
+line: 15
+
+here's what i (think) have figur out.  all i need to do is instal
+the r5 disitribut without the xserver like the soni.cf file defin,
+and all the new librari, util, etc., will be instal and my old
+server from r4 will still work.  thi will allow me to run xview 3.0,
+and have x11r5 up and run.  doe the server interfac remain the
+same with all chang made onli to the lib?
+
+anoth question: is it like that sinc sun is drop ow support
+that the desktop util (like the file manag) will be made public?
+it would be nice if compani would make old code public for the
+benefit of those of us with smaller budget. :)
+-- 
+mike@hopper.ac.virginia.edu 
+
+"i will not rais tax on the middl class." -unknown

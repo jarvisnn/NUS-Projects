@@ -1,0 +1,72 @@
+from: casper@fwi.uva.nl (casper h.s. dik)
+
+subject: re: imak.rule problem under solari 2
+
+organ: fwi, univers of amsterdam
+
+line: 29
+
+nntp-post-host: adam.fwi.uva.nl
+
+keyword: imak make solari2
+
+
+
+dple@lungta.infor.com (david levin) write:
+
+
+
+>hei folk,
+
+>i'm attempt to us imak to manag makefil for a develop effort and wa curiou
+
+>to find out if anybodi els is experienc problem with ani target that
+
+>ha subdir gener by imak on solari 2 platform. 
+
+
+
+>for exampl, 'make makefil' choke in the veri first subdirectori. 
+
+
+
+>	i.e. target: subdirmakefil not found 
+
+
+
+you don't give the precis error messag, but i assum that
+
+the make of the target fail, becaus make can't find the rule.
+
+
+
+we've seen thi happen with suno 5.x make as well and aat thi
+
+point i'm not sure why it happen. it seem to happen
+
+with larg makefil. the entri near the end get lost.
+
+small chang in the makefil will remedi thi problem,
+
+as it doe in your exampl.
+
+
+
+in the mit r5 distribut + r5.suno5.patch thi can happen with
+
+the target ``makefil'' in on of the doc directori.
+
+
+
+>at first i thought thi wa a bug with make on my sun, but i built and us gnumak with the
+
+>same result. attach you'll find the first makefil target rule from the gener makefil
+
+
+
+thi is realli weird. ar your *realli* sure that you were us gnu make?
+
+
+
+casper
+

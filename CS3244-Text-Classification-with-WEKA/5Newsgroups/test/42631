@@ -1,0 +1,54 @@
+from: barmar@think.com (barri margolin)
+
+subject: re: twm
+
+organ: think machin corpor, cambridg ma, usa
+
+line: 21
+
+nntp-post-host: telecast.think.com
+
+
+
+in articl <1993mai12.161857.29950@samba.oit.unc.edu> naoumov@physic.unc.edu (sergei naoumov) write:
+
+>i run twm and would like to execut some program befor leav twm. in other
+
+>word i would like to run some program befor i do f.quit. is it possibl
+
+>to make a menu section which would contain these two part?
+
+
+
+in your menu definit, put:
+
+
+
+    "quit twm" f.function "execut and quit"
+
+
+
+then defin:
+
+
+
+function "execut and quit" {
+
+    !"some_program"
+
+    f.quit
+
+}
+
+
+
+-- 
+
+barri margolin
+
+system manag, think machin corp.
+
+
+
+barmar@think.com          {uunet,harvard}!think!barmar
+

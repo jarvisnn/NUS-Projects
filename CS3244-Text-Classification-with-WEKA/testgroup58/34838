@@ -1,0 +1,70 @@
+from: jbayer@ispi.com (jonathan bayer)
+
+subject: re: problem with toshiba 3401 cdrom
+
+organ: intellig softwar product, inc.
+
+line: 30
+
+
+
+imj1@cunixa.cc.columbia.edu (imad m jureidini) write:
+
+
+
+>hi!
+
+>	i recent purchas the toshiba 3401 cdrom.  i own an adaptec 1542b
+
+>scsi card, and i have so far fail to get the cdrom to work under do.  it
+
+>work veri well under os/2, so i know that the drive is not faulti.
+
+>in my config.sy, i have aspi3do.sy, aspidisk.sy, aspicd.sy.  in my 
+
+>autoexec.bat, i have mscdex, which came with do 6.0.  mscdex seem to find
+
+>and instal the drive as drive f:, but when i switch to that drive and try a
+
+>dir, i get an error messag tell me the drive is not readi or someth
+
+>like that.  the cdrom is lock too, and the adaptec util don't seem to
+
+>recogn that i have a cdrom at that point.
+
+
+
+
+
+the current adaptec driver do not support the toshiba 3401.  you should
+
+get the corel scsi driver, which do support it.
+
+
+
+thi is the method that i us, and it work well.
+
+
+
+corel's phone number is 1(613) 728-3733
+
+
+
+just a satisfi user.
+
+
+
+
+
+
+
+jb
+
+-- 
+
+jonathan bayer		intellig softwar product, inc.
+
+(908) 248-1853		37 winthrop rd. 
+
+jbayer@ispi.com		edison, nj   08817
+

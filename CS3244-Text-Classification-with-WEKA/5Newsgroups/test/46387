@@ -1,0 +1,60 @@
+from: rsc@hao.ucar.edu (bob campbel)
+
+subject: motif 1.2 and ow 3.0 / compil xcoral
+
+repli-to: rsc@hao.ucar.edu
+
+organ: high altitud observatori/ncar, boulder co
+
+line: 24
+
+
+
+i've built xcoral on my system (suno 4.1.3, x11r5, motif 1.2, ow 3.0)
+
+and it build fine, but when i run it, ani child window that xcoral
+
+open,
+
+1) lock the mous into the window area
+
+2) doesn't accept ani input from the mous.
+
+
+
+needless to sai, thi is a pain in the ass, as i have to go find an
+
+empti termin to login and kill xcoral.
+
+
+
+is thi a problem with openwindow or motif?  is there a patch?
+
+---
+
+#######################################################################
+
+# bob campbel                 #  "crayon can take you where no      #
+
+# system manag               #   starship can go."                  #
+
+# hao, ncar                    #                    -guinan           #
+
+# rsc@hao.ucar.edu             #                     sttng            # 
+
+#######################################################################
+
+disclaim: my view ar in no wai connect to my employ.
+
+
+
+"a close mouth gather no feet."      - unknown
+
+"it onli requir a littl thought and a littl work."     - don hick
+
+                                                       manag editor
+
+                                                     amaz comput
+
+
+

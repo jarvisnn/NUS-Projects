@@ -1,0 +1,30 @@
+from: ja37876@uxa.cso.uiuc.edu (john a. slagel)
+subject: re: int15h for joystick is slow....
+organ: univers of illinoi at urbana
+line: 25
+
+lioness@oak.circa.ufl.edu write:
+
+
+>i'm us int15h to read my joystick, and it is hideous slow.  someth
+>like 90% of my cpu time is be spent read the joystick, and thi
+>is in a program that doe noth but printf() and joyread().
+
+>the problem is that a lot of program trap int15h ( like smartdrv ) and
+>so it is a slow as hell interfac.  can i read the joystick port in
+>a reason safe fashion via poll?  and that isn't platform or
+>clockspe specif?
+
+    the joystick read in anolog valu through a digit port. how?
+    you send a command to the port to read it, then you time how long
+    it take for the joystick port to set a certain bit.  thi time
+    is proport to the joystick posit.  obvious, sinc time
+    is us as a posit, you cannot get rid of thi ridiculu wast 
+    of time.  if you wrote your own routin instead of the bio, it
+    would speed it up some, but the time would still be there.
+
+-- 
+-----------------------------------------------------------------------------
+ john a. slagel              "my old man us to tell me, befor he left thi
+ j-slagel1@uiuc.edu           shitti world, never chase buse or women- you
+ (217) 337-7930               alwai get left behind." -the marlboro man

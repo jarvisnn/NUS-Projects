@@ -1,0 +1,37 @@
+from: mpalmer@encor.com (mike palmer)
+subject: re: window on a ramdriv??? help...
+organ: encor comput corpor
+nntp-post-host: sysgem1.encor.com
+line: 31
+
+f_langleyrh@ccsvax.sfasu.edu write:
+
+
+>[...] stuff del'd for bandwidth's sake.
+
+>why?  *sigh*  if you don't have more than 16mb of memori us a ramdriv
+>with window is a _wast_ of memori.  window will access upto 16mb ram better
+>as memori.  as to why what you did didn't work, it is becaus drivelett
+>and path ar store insid the group/pif/ini file.  all of the sudden thing
+>went from drive c: to drive e:!  howev, if you want to copi an applic
+>up to the ramdriv and re-setup it up, that should work normal, but as
+>previous state, thi will onli hurt thing unless you've got more than 16mb
+>of ram and ar us what abov 16 as the ramdriv.
+
+>i person have 20mb's of ram and run a ~4mb ramdriv with a great deal of
+>success.  howev, if you ar look to speed up window, the three thing
+>i've note that work the best ar:
+>	1) a graphic acceller card
+>	2) a co-processor (even an emul help!)
+>	3) some other disk-cach besid smartdriv (i've tri sever,
+>	   and lightn for window and norton cach give me major
+>	   headach as well.).
+
+i think the purpos the origin poster wa try to serv is to avoid the
+signific amount of disk access that window doe on startup.  it's like
+it's try to it's bit in wear the damn drive out.  i estim it's onli
+read a mb of program & data, but from the perform the drive give, it
+sound like thei ar scatter all over the drive (my drive is howev
+regularili compress).  what is it that take so much fuss.  perhap if ms 
+would take the troubl to optim thi startup process, less peopl would 
+be want to find a solut themselv.

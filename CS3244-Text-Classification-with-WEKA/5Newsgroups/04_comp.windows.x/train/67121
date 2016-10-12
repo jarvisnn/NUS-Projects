@@ -1,0 +1,58 @@
+from: mccoi@gothamc.jsc.nasa.gov (daniel mccoi)
+subject: re: titl for xterm
+repli-to: mccoi@gothamc.jsc.nasa.gov
+organ: i-net inc.
+line: 52
+
+in articl 1r3fe2inn10d@fbi-new.informatik.uni-dortmund.de, markhof@ls12r.informatik.uni-dortmund.de (ingolf markhof) write:
+|>in articl <1quh74$r71@irz401.inf.tu-dresden.de>, beck@irzr17.inf.tu-dresden.de (andr beck) write:
+|>|> 
+|>|> in articl <c5ol74.3b1@aeon.in-berlin.de>, thoma@aeon.in-berlin.de (thoma wolfram) write:
+|>|> |> >hei gui!
+|>|> |> >i work on mani station and would like thi name and current lognam
+|>|> |> >to be in a titl of xterm when it's open and a machin name onli
+|>|> |> >when it's close. in other word, i want $host and $lognam to appear
+|>|> |> >as a titl of open xterm and $host when xterm is close.
+|>|> |> >how can i do it?
+|>|> |> almost all window manag (twm, mwm, olwm and their deriv) support
+|>|> |> escap sequenc for it. for your purpos put follow into your
+|>|> |> .login (if you're us csh or tcsh), for sh you have to modifi it.
+|>|> |> 
+|>|> |> if ( "$term" == "xterm" ) then
+|>|> |> 	echo "^[]2;${lognam}@${host}^g^[]1;${host}^g"
+|>|> |> endif
+|>|> 1) thi is not a featur of the window manag but of xterm.
+|>|> 2) thi sequenc ar not ansi compat, ar thei ?
+|>|>    doe anyon know if there ar compat sequenc for thi and what thei
+|>|>    ar ? i would think thei ar dc (devic control sequenc) introduc,
+|>|>    but mai be a csi sequenc exist, too ?
+|>|>    thi must work on a dxterm (vt and ansi compat), it mai not work
+|>|>    on xterm.
+|>it work on xterm. at least i have no problem with it. - back to the origin
+|>question:
+|>
+|>i usual start new xterm by select the proper menu entri in my desktop
+|>menu. here is a sampl command:
+|>
+|>	xterm -sl 999 -n ls12i -titl ls12i -e rlogin ls12i &
+|>
+|>the -n and -titl option give the text for window and icon. as i us the
+|>tcsh (a wonder extens of the csh), i can do the follow:
+|>
+|>i have an
+|>
+|>	alia precmd echo -n '^[]2\;${host}:$cwd^g'
+|>
+|>in my ~/.tcshrc. thi is a special alia for tvtwm. it is execut each time
+|>befor print the prompt. so, i have the current host name and the current
+|>directori path in the titl bar of my xterm.
+
+have you gotten an answer yet?  us your variabl, thi is what i would do:
+	xterm -t "$host - $lognam" -n "$host"
+
+---
+daniel j. mccoi           |=> space  <=|                   i-net, inc.
+nasa mail code pt4        |=> is     <=|             tel: 713-483-0950
+nasa/johnson space center |=> our    <=|             fax: 713-244-5698
+houston, texa 77058      |=> futur <=| mccoi@gothamc.jsc.nasa.gov
+

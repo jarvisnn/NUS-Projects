@@ -1,0 +1,106 @@
+from: me@dude.pc.com (michael elbel)
+
+subject: re: blink cursor in xterm???
+
+organ: pc comput system gmbh
+
+line: 48
+
+
+
+in <1t0dndinnmsd@senat-bedfellow.mit.edu> steve.mcmahon@launchpad.unc.edu write:
+
+
+
+>>>>>> on fri, 14 mai 1993 07:15:25 gmt, me@dude.pc.com (michael
+
+>elbel) said:
+
+
+
+>me> as is, emu won't work on bsd deriv system (e.g. sun) with
+
+>me> anyth els than a csh. there is a fix to thi, which is veri
+
+>me> short (remov on line of code). i'll put thi on export todai.
+
+
+
+>it's more than that actual. in the version on export on cannot just
+
+>specifi a posix tty behaviour, the posix config file ar incomplet
+
+>without those of some specif platform like sun and dec. i look
+
+>twice at port emu to linux, but stop short becus of the tty
+
+>part. is there a `cleaner' version of emu that support posix tty
+
+>explicitli?
+
+
+
+hmm, depend on how you defin 'clean'. jordan implement the system
+
+depend stuff in a wai that you have basic implement for,
+
+call it, oper system type, then you go ahead and write a includ
+
+file for your specif machin or oper system us the basic
+
+implement. sinc both jordan and i haven't encount a 
+
+os flavor yet, that is fulli posix, we haven't gotten around to
+
+realli implement (and test) a top-level includ file specif
+
+for just posix. the posix routin ar us in the sun specif file
+
+tty_sun.i for exampl, but here we also us some bsd stuff. all in all
+
+it still is probabl better to implement a includ file for each and
+
+everi oper system than '#ifdef'ing in exist on. the type
+
+of mess that can result from that can clearli be seen in the xterm
+
+sourc. even if quit a bit of code get copi almost unchang a 
+
+coupl of time, thi onli us up some disk space, sinc onli the 
+
+"driver" actual includ from the toplevel includ file will be 
+
+compil into emu.
+
+
+
+it shouldn't be hard to come up with a tty_linux.i file that fulli
+
+reli on the posix stuff, but unfortun i don't have a linux
+
+system avail to me, so i can't do the port myself. i would suggest
+
+you read the readm in term/sysdep and if you have ani problem or
+
+question, contact me and we could try to sort thi out. unfortun
+
+we have to reli on help from the net on thi part of emu, sinc we 
+
+just don't have access to that mani differ system.
+
+
+
+michael
+
+
+
+
+
+--
+
+michael elbel, digit-pc gmbh, muenchen, germani - me@dude.pc.com
+
+intelligenz is sowieso nur wat fuer doof - mia
+
+ferment fault (coor dump)
+

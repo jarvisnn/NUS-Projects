@@ -1,0 +1,124 @@
+from: d.j.nettleton@newcastl.ac.uk (d j nettleton)
+
+subject: help: a rectangl and parallelogram
+
+nntp-post-host: tuda
+
+organ: univers of newcastl upon tyne, uk ne1 7ru
+
+line: 56
+
+
+
+i hope someon can help me with the follow problem - i'm sure there
+
+must be a known solut.
+
+
+
+given a rectangl defin by
+
+
+
+-x <= x <= x  and -y <= y <= y  where x and y ar constant
+
+
+
+and a parallelogram defin by
+
+
+
+-c1 <= a*x + b*y <= c1  and -c2 <= c*x + d*y <= c2
+
+
+
+where c1, c2, a, b, c, d ar constant and b/a != d/c (i.e. not
+
+parallel line)                                ^^
+
+                                          not equal to
+
+
+
+what is the area of their intersect?
+
+
+
+   what i'm after is some gener algorithm suitabl for all rectangl
+
+and parallelogram that can be describ by the abov equat.  at the 
+
+moment it look like i'm go to have to look at all possibl case 
+
+and examin each seper e.g.
+
+
+
+1) rectangl enclos parallelogram. 
+
+
+
+2) parallelogram enclos rectangl.
+
+
+
+3) two corner of parallelogram insid rectangl
+
+
+
+                          ^
+
+                         / \
+
+                        /   \
+
+                       /     \
+
+           y -------------------------------  y
+
+             |       /         \           |
+
+             |       \          \          |
+
+             |        \     .    \         |       . origin
+
+             |         \          \        |
+
+             |          \         /        |
+
+          -y ------------------------------- -y
+
+            -x            \     /           x
+
+                           \   /
+
+                            \ /
+
+                             "
+
+
+
+4) two corner of parallelogram outsid rectangl
+
+
+
+   i hope someon can help.
+
+
+
+mani thank in advanc,
+
+
+
+dave nettleton.
+
+
+
+e-mail:  d.j.nettleton@durham.ac.uk
+
+
+
+ps can you pleas cc me ani repli by e-mail.
+
+
+

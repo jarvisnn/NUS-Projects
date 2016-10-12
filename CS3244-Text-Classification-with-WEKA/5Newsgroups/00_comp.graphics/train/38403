@@ -1,0 +1,1038 @@
+from: tgl+@cs.cmu.edu (tom lane)
+subject: jpeg imag compress: frequent ask question
+summari: us info about jpeg (jpg) imag file and program
+keyword: jpeg, imag compress, faq
+supersed: <jpeg-faq_733898461@g.gp.cs.cmu.edu>
+nntp-post-host: g.gp.cs.cmu.edu
+repli-to: jpeg-info@uunet.uu.net
+organ: school of comput scienc, carnegi mellon
+expir: sun, 16 mai 1993 21:39:30 gmt
+line: 1027
+
+archiv-name: jpeg-faq
+last-modifi: 18 april 1993
+
+thi faq articl discuss jpeg imag compress.  suggest for
+addit and clarif ar welcom.
+
+new sinc version of 3 april 1993:
+  * new version of imag archiv and pmjpeg for os/2.
+
+
+thi articl includ the follow section:
+
+[1]  what is jpeg?
+[2]  why us jpeg?
+[3]  when should i us jpeg, and when should i stick with gif?
+[4]  how well doe jpeg compress imag?
+[5]  what ar good "qualiti" set for jpeg?
+[6]  where can i get jpeg softwar?
+    [6a] "can" softwar, viewer, etc.
+    [6b] sourc code
+[7]  what's all thi hoopla about color quantiz?
+[8]  how doe jpeg work?
+[9]  what about lossless jpeg?
+[10]  why all the argument about file format?
+[11]  how do i recogn which file format i have, and what do i do about it?
+[12]  what about arithmet code?
+[13]  doe loss accumul with repeat compress/decompress?
+[14]  what ar some rule of thumb for convert gif imag to jpeg?
+
+section 1-6 ar basic info that everi jpeg user need to know;
+section 7-14 ar advanc info for the curiou.
+
+thi articl is post everi 2 week.  you can alwai find the latest version
+in the new.answer archiv at rtfm.mit.edu (18.172.1.27).  by ftp, fetch
+/pub/usenet/new.answer/jpeg-faq; or if you don't have ftp, send e-mail to
+mail-server@rtfm.mit.edu with bodi "send usenet/new.answer/jpeg-faq".
+mani other faq articl ar also store in thi archiv.  for more
+instruct on us of the archiv, send e-mail to the same address with the
+word "help" and "index" (no quot) on separ line.  if you don't get a
+repli, the server mai be misread your return address; add a line such as
+"path mynam@mysit" to specifi your correct e-mail address to repli to.
+
+
+----------
+
+
+[1]  what is jpeg?
+
+jpeg (pronounc "jai-peg") is a standard imag compress mechan.
+jpeg stand for joint photograph expert group, the origin name of the
+committe that wrote the standard.  jpeg is design for compress either
+full-color or grai-scale digit imag of "natur", real-world scene.
+it doe not work so well on non-realist imag, such as cartoon or line
+draw.
+
+jpeg doe not handl black-and-white (1-bit-per-pixel) imag, nor doe it
+handl motion pictur compress.  standard for compress those type
+of imag ar be work on by other committe, name jbig and mpeg
+respect.
+
+jpeg is "lossi", mean that the imag you get out of decompress isn't
+quit ident to what you origin put in.  the algorithm achiev much
+of it compress by exploit known limit of the human ey, notabl
+the fact that small color detail aren't perceiv as well as small detail
+of light-and-dark.  thu, jpeg is intend for compress imag that will
+be look at by human.  if you plan to machin-analyz your imag, the
+small error introduc by jpeg mai be a problem for you, even if thei ar
+invis to the ey.
+
+a us properti of jpeg is that the degre of lossi can be vari by
+adjust compress paramet.  thi mean that the imag maker can trade
+off file size against output imag qualiti.  you can make *extrem* small
+file if you don't mind poor qualiti; thi is us for index imag
+archiv, make thumbnail view or icon, etc. etc.  convers, if you
+aren't happi with the output qualiti at the default compress set, you
+can jack up the qualiti until you ar satisfi, and accept lesser compress.
+
+
+[2]  why us jpeg?
+
+there ar two good reason: to make your imag file smaller, and to store
+24-bit-per-pixel color data instead of 8-bit-per-pixel data.
+
+make imag file smaller is a big win for transmit file across
+network and for archiv librari of imag.  be abl to compress a
+2 mbyte full-color file down to 100 kbyte or so make a big differ in
+disk space and transmiss time!  (if you ar compar gif and jpeg, the
+size ratio is more like four to on.  more detail below.)
+
+if your view softwar doesn't support jpeg directli, you'll have to
+convert jpeg to some other format for view or manipul imag.  even
+with a jpeg-capabl viewer, it take longer to decod and view a jpeg imag
+than to view an imag of a simpler format (gif, for instanc).  thu, us
+jpeg is essenti a time/space tradeoff: you give up some time in order to
+store or transmit an imag more cheapli.
+
+it's worth note that when network or phone transmiss is involv, the
+time save from transfer a shorter file can be much greater than the
+extra time to decompress the file.  i'll let you do the arithmet yourself.
+
+the other reason why jpeg will gradual replac gif as a standard usenet
+post format is that jpeg can store full color inform: 24 bit/pixel
+(16 million color) instead of 8 or less (256 or fewer color).  if you have
+onli 8-bit displai hardwar then thi mai not seem like much of an advantag
+to you.  within a coupl of year, though, 8-bit gif will look as obsolet as
+black-and-white macpaint format doe todai.  furthermor, for reason detail
+in section 7, jpeg is far more us than gif for exchang imag among
+peopl with wide vari color displai hardwar.  henc jpeg is consider
+more appropri than gif for us as a usenet post standard.
+
+
+[3]  when should i us jpeg, and when should i stick with gif?
+
+jpeg is *not* go to displac gif entir; for some type of imag,
+gif is superior in imag qualiti, file size, or both.  on of the first
+thing to learn about jpeg is which kind of imag to appli it to.
+
+as a rule of thumb, jpeg is superior to gif for store full-color or
+grai-scale imag of "realist" scene; that mean scan photograph and
+similar materi.  jpeg is superior even if you don't have 24-bit displai
+hardwar, and it is a lot superior if you do.  (see section 7 for detail.)
+
+gif doe significantli better on imag with onli a few distinct color,
+such as cartoon and line draw.  in particular, larg area of pixel
+that ar all *exactli* the same color ar compress veri effici inde
+by gif.  jpeg can't squeez these file as much as gif doe without
+introduc visibl defect.  thi sort of imag is best kept in gif form.
+(in particular, singl-color border ar quit cheap in gif file, but thei
+should be avoid in jpeg file.)
+
+jpeg also ha a hard time with veri sharp edg: a row of pure-black pixel
+adjac to a row of pure-white pixel, for exampl.  sharp edg tend to
+come out blur unless you us a veri high qualiti set.  again, thi
+sort of thing is not found in scan photograph, but it show up fairli
+often in gif file: border, overlaid text, etc.  the blurri is
+particularli objection with text that's onli a few pixel high.
+if you have a gif with a lot of small-size overlaid text, don't jpeg it.
+
+comput-drawn imag (rai-trace scene, for instanc) usual fall between
+scan imag and cartoon in term of complex.  the more complex and
+subtli render the imag, the more like that jpeg will do well on it.
+the same goe for semi-realist artwork (fantasi draw and such).
+
+plain black-and-white (two level) imag should never be convert to jpeg.
+you need at least about 16 grai level befor jpeg is us for grai-scale
+imag.  it should also be note that gif is lossless for grai-scale imag
+of up to 256 level, while jpeg is not.
+
+if you have an exist librari of gif imag, you mai wonder whether you
+should convert them to jpeg.  you will lose a littl imag qualiti if you do.
+(section 7, which argu that jpeg imag qualiti is superior to gif, onli
+appli if both format start from a full-color origin.  if you start from
+a gif, you've alreadi irretriev lost a great deal of inform; jpeg
+can onli make thing wors.)  howev, the disk space save mai justifi
+convert anywai.  thi is a decis you'll have to make for yourself.
+if you do convert a gif librari to jpeg, see section 14 for hint.  be
+prepar to leav some imag in gif format, sinc some gif will not
+convert well.
+
+
+[4]  how well doe jpeg compress imag?
+
+pretti darn well.  here ar some sampl file size for an imag i have
+handi, a 727x525 full-color imag of a ship in a harbor.  the first three
+file ar for comparison purpos; the rest were creat with the free jpeg
+softwar describ in section 6b.
+
+file	   size in byte		comment
+
+ship.ppm	1145040  origin file in ppm format (no compress; 24 bit
+			 or 3 byte per pixel, plu a few byte overhead)
+ship.ppm.z	 963829  ppm file pass through unix compress
+			 compress doesn't accomplish a lot, you'll note.
+			 other text-orient compressor give similar result.
+ship.gif	 240438  convert to gif with ppmquant -fs 256 | ppmtogif
+			 most of the save is the result of lose color
+			 info: gif save 8 bit/pixel, not 24.  (see sec. 7.)
+
+ship.jpg95	 155622  cjpeg -q 95    (highest us qualiti set)
+			 thi is indistinguish from the 24-bit origin,
+			 at least to my nonprofession eyebal.
+ship.jpg75	  58009  cjpeg -q 75    (default set)
+			 you have to look mighti darn close to distinguish thi
+			 from the origin, even with both on-screen at onc.
+ship.jpg50	  38406  cjpeg -q 50
+			 thi ha slight defect; if you know what to look
+			 for, you could tell it's been jpege without see
+			 the origin.  still as good imag qualiti as mani
+			 recent post in usenet pictur group.
+ship.jpg25	  25192  cjpeg -q 25
+			 jpeg's characterist "blocki" becom appar
+			 at thi set (djpeg -blocksmooth help some).
+			 still, i've seen plenti of usenet post that were
+			 of poorer imag qualiti than thi.
+ship.jpg5o	   6587  cjpeg -q 5 -optim  (-optim cut tabl overhead)
+			 blocki, but perfectli satisfactori for preview or
+			 index purpos.  note that thi file is tini:
+			 the compress ratio from the origin is 173:1 !
+
+in thi case jpeg can make a file that's a factor of four or five smaller
+than a gif of compar qualiti (the -q 75 file is everi bit as good as the
+gif, better if you have a full-color displai).  thi seem to be a typic
+ratio for real-world scene.
+
+
+[5]  what ar good "qualiti" set for jpeg?
+
+most jpeg compressor let you pick a file size vs. imag qualiti tradeoff by
+select a qualiti set.  there seem to be widespread confus about
+the mean of these set.  "qualiti 95" doe not mean "keep 95% of the
+inform", as some have claim.  the qualiti scale is pure arbitrari;
+it's not a percentag of anyth.
+
+the name of the game in us jpeg is to pick the lowest qualiti set
+(smallest file size) that decompress into an imag indistinguish from
+the origin.  thi set will vari from on imag to anoth and from on
+observ to anoth, but here ar some rule of thumb.
+
+the default qualiti set (-q 75) is veri often the best choic.  thi
+set is about the lowest you can go without expect to see defect in a
+typic imag.  try -q 75 first; if you see defect, then go up.  except for
+experiment purpos, never go abov -q 95; sai -q 100 will produc a
+file two or three time as larg as -q 95, but of hardli ani better qualiti.
+
+if the imag wa less than perfect qualiti to begin with, you might be abl to
+go down to -q 50 without objection degrad.  on the other hand, you
+might need to go to a higher qualiti set to avoid further degrad.
+the second case seem to appli much of the time when convert gif to jpeg.
+the default -q 75 is about right for compress 24-bit imag, but -q 85 to
+95 is usual better for convert gif (see section 14 for more info).
+
+if you want a veri small file (sai for preview or index purpos) and ar
+prepar to toler larg defect, a -q set in the rang of 5 to 10 is
+about right.  -q 2 or so mai be amus as "op art".
+
+(note: the qualiti set discuss in thi articl appli to the free jpeg
+softwar describ in section 6b, and to mani program base on it.  other
+jpeg implement, such as imag alchemi, mai us a complet differ
+qualiti scale.  some program don't even provid a numer scale, just
+"high"/"medium"/"low"-style choic.)
+
+
+[6]  where can i get jpeg softwar?
+
+most of the program describ in thi section ar avail by ftp.
+if you don't know how to us ftp, see the faq articl "how to find sourc".
+(if you don't have direct access to ftp, read about ftpmail server in the
+same articl.)  that articl appear regularli in new.answer, or you can
+get it by send e-mail to mail-server@rtfm.mit.edu with
+"send usenet/new.answer/find-sourc" in the bodi.  the "anonym ftp
+list faq" mai also be help --- it's usenet/new.answer/ftp-list/faq in
+the new.answer archiv.
+
+note: thi list chang constantli.  if you have a copi more than a coupl
+month old, get the latest jpeg faq from the new.answer archiv.
+
+
+[6a]  if you ar look for "can" softwar, viewer, etc:
+
+the first part of thi list is system-specif program that onli run on on
+kind of system.  if you don't see what you want for your machin, check out
+the portabl jpeg softwar describ at the end of the list.  note that thi
+list concentr on free and sharewar program that you can obtain over
+internet; but some commerci program ar list too.
+
+x window:
+
+john bradlei's free xv (version 2.00 and up) is an excel viewer for jpeg,
+gif, and other imag format.  it's avail for ftp from export.lc.mit.edu
+or ftp.ci.upenn.edu.  the file is call 'xv-???.tar.z' (where ??? is the
+version number, current 2.21); it is locat in the 'contrib' directori on
+export or the 'pub/xv' directori at upenn.  xv reduc all imag to 8 bit
+intern, which mean it's not a real good choic if you have a 24-bit
+displai (you'll still get onli 8-bit color).  also, you shouldn't us xv to
+convert full-color imag to jpeg, becaus thei'll get color-quantiz first.
+but xv is a fine tool for convert gif and other 8-bit imag to jpeg.
+caution: there is a glitch in version 2.21 and earlier: be sure to check
+the "save at normal size" checkbox when save a jpeg file, or the file will
+be blurri.
+
+anoth good choic for x window is john cristi's free imagemagick packag,
+also avail from export.lc.mit.edu, file contrib/imagemagick.tar.z.
+thi packag handl mani imag process and convers task.  the
+imagemagick viewer handl 24-bit displai correctli; for colormap
+displai, it doe better (though slower) color quantiz than xv or the
+basic free jpeg softwar.
+
+both of the abov ar larg, complex packag.  if you just want a simpl
+imag viewer, try xloadimag or xli.  xloadimag support jpeg in it latest
+releas, 3.03.  xloadimag is free and avail from export.lc.mit.edu,
+file contrib/xloadimag.3.03.tar.z.  xli is a variant version of xloadimag,
+said by it fan to be somewhat faster and more robust than the origin.
+(the current xli is inde faster and more robust than the current
+xloadimag, at least with respect to jpeg file, becaus it ha the ijg v4
+decod while xloadimag 3.03 is us a hack-over v1.  the next
+xloadimag releas will fix thi.)  xli is also free and avail from
+export.lc.mit.edu, file contrib/xli.1.14.tar.z.  both program ar said
+to do the right thing with 24-bit displai.
+
+
+ms-do:
+
+thi cover plain do; for window or os/2 program, see the next head.
+
+on good choic is eric praetzel's free dvpeg, which view jpeg and gif file.
+the current version, 2.4a, is avail by ftp from sune.uwaterloo.ca
+(129.97.50.50), file pub/jpeg/viewer/dvpeg24a.zip.  thi is a good basic
+viewer that work on either 286 or 386/486 machin.  the user interfac is
+not flashi, but it's function.
+
+anoth freewar jpeg/gif/tga viewer is mohammad rezaei's hiview.  the
+current version, 1.2, is avail from simtel20 and mirror site (see note
+below), file msdo/graphic/hv12.zip.  hiview requir a 386 or better cpu
+and a vcpi-compat memori manag (qemm386 and 386max work; window and
+os/2 do not).  hiview is current the fastest viewer for imag that ar no
+bigger than your screen.  for larger imag, it scale the imag down to fit
+on the screen (rather than us pan/scroll as most viewer do).
+you mai or mai not prefer thi approach, but there's no deni that it
+slow down load of larg imag consider.  note: instal is a
+bit tricki; read the direct carefulli!
+
+a sharewar altern is colorview for do ($30).  thi is easier to
+instal than either of the two freewar altern.  it user interfac is
+also much spiffier-look, although person i find it harder to us ---
+more keystrok, inconsist behavior.  it is faster than dvpeg but a
+littl slower than hiview, at least on my hardwar.  (for imag larger than
+screen size, dvpeg and colorview seem to be about the same speed, and both
+ar faster than hiview.)  the current version is 2.1, avail from
+simtel20 and mirror site (see note below), file msdo/graphic/dcview21.zip.
+requir a vesa graphic driver; if you don't have on, look in vesadrv2.zip
+or vesa-tsr.zip from the same directori.  (mani recent pc have a built-in
+vesa driver, so don't try to load a vesa driver unless colorview complain
+that the driver is miss.)
+
+a second sharewar altern is fullview, which ha been kick around
+the net for a while, but i don't know ani stabl archiv locat for it.
+the current (rather old) version is inferior to the abov viewer anywai.
+the author tell me that a new version of fullview will be out shortli
+and it will be submit to the simtel20 archiv at that time.
+
+the well-known gif viewer compushow (cshow) support jpeg in it latest
+revis, 8.60a.  howev, cshow's jpeg implement isn't veri good:
+it's slow (about half the speed of the abov viewer) and imag qualiti is
+poor except on hi-color displai.  too bad ... it'd have been nice to see a
+good jpeg capabl in cshow.  sharewar, $25.  avail from simtel20 and
+mirror site (see note below), file msdo/gif/cshw860a.zip.
+
+due to the remark varieti of pc graphic hardwar, ani on of these
+viewer might not work on your particular machin.  if you can't get *ani*
+of them to work, you'll need to us on of the follow convers program
+to convert jpeg to gif, then view with your favorit gif viewer.  (if you
+have hi-color hardwar, don't us gif as the intermedi format; try to
+find a targa-capabl viewer instead.  vpic5.0 is reput to do the right
+thing with hi-color displai.)
+
+the independ jpeg group's free jpeg convert ar ftpabl from simtel20
+and mirror site (see note below), file msdo/graphic/jpeg4.zip (or
+jpeg4386.zip if you have a 386 and extend memori).  these file ar do
+compil of the free sourc code describ in section 6b; thei will
+convert jpeg to and from gif, targa, and ppm format.
+
+handmad softwar offer free jpeg<=>gif convers tool, gif2jpg/jpg2gif.
+these ar slow and ar limit to convers to and from gif format; in
+particular, you can't get 24-bit color output from a jpeg.  the major
+advantag of these tool is that thei will read and write hsi's proprietari
+jpeg format as well as the usenet-standard jfif format.  sinc hsi-format
+file ar rather widespread on bbse, thi is a us capabl.  version
+2.0 of these tool is free (prior version were sharewar).  get it from
+simtel20 and mirror site (see note below), file msdo/graphic/gif2jpg2.zip.
+note: do not us hsi format for file to be post on internet, sinc it is
+not readabl on non-pc platform.
+
+handmad softwar also ha a sharewar imag convers and manipul
+packag, imag alchemi.  thi will translat jpeg file (both jfif and hsi
+format) to and from mani other imag format.  it can also displai imag.
+a demo version of imag alchemi version 1.6.1 is avail from simtel20 and
+mirror site (see note below), file msdo/graphic/alch161.zip.
+
+note about simtel20: the internet's kei archiv site for pc-relat program
+is simtel20, full name wsmr-simtel20.armi.mil (192.88.110.20).  simtel20
+run a non-unix system with weird directori name; where thi document
+refer to directori (eg) "msdo/graphic" at simtel20, that realli mean
+"pd1:<msdo.graphic>".  if you ar not physic on milnet, you should
+expect rather slow ftp transfer rate from simtel20.  there ar sever
+internet site that maintain copi (mirror) of the simtel20 archiv;
+most ftp user should go to on of the mirror site instead.  a popular usa
+mirror site is oak.oakland.edu (141.210.10.117), which keep simtel20 file
+in (eg) "/pub/msdo/graphic".  if you have no ftp capabl, you can
+retriev file from simtel20 by e-mail; see inform post in
+comp.archiv.msdo.announc to find out how.  if you ar outsid the usa,
+consult the same newsgroup to learn where your nearest simtel20 mirror is.
+
+microsoft window:
+
+there ar sever window program capabl of displai jpeg imag.
+(window viewer ar gener slower than do viewer on the same hardwar,
+due to window' system overhead.  note that you can run the do convers
+program describ abov insid a window do window.)
+
+the newest entri is winecj, which is free and extrem fast.  version 1.0
+is avail from ftp.rahul.net, file /pub/bryanw/pc/jpeg/wecj.zip.
+requir window 3.1 and 256-or-more-color mode.  thi is a no-frill
+viewer with the bad habit of hog the machin complet while it
+decod; and the imag qualiti is notic wors than other viewer.
+but it's so fast you'll us it anywai, at least for preview...
+
+jview is freewar, fairli fast, ha good on-line help, and can write out the
+decompress imag in window bmp format; but it can't creat new jpeg
+file, and it doesn't view gif.  jview also lack some other us
+featur of the sharewar viewer (such as bright adjust), but it's
+an excel basic viewer.  the current version, 0.9, is avail from
+ftp.cica.indiana.edu (129.79.20.84), file pub/pc/win3/desktop/jview090.zip.
+(mirror of thi archiv can be found at some other internet site,
+includ wuarchiv.wustl.edu.)
+
+winjpeg (sharewar, $20) displai jpeg,gif,targa,tiff, and bmp imag file;
+it can write all of these format too, so it can be us as a convert.
+it ha some other nifti featur includ color-balanc adjust and
+slideshow.  the current version is 2.1, avail from simtel20 and mirror
+site (see note abov), file msdo/window3/winjp210.zip.  (thi is a slow
+286-compat version; if you regist, you'll get the 386-onli version,
+which is roughli 25% faster.)
+
+colorview is anoth sharewar entri ($30).  thi wa an earli and promis
+contend, but it ha not been updat in some time, and at thi point it
+ha no real advantag over winjpeg.  if you want to try it anywai, the
+current version is 0.97, avail from ftp.cica.indiana.edu, file
+pub/pc/win3/desktop/cview097.zip.  (i understand that a new version will
+be appear onc the author ar finish with colorview for do.)
+
+dvpeg (see do head) also work under window, but onli in full-screen
+mode, not in a window.
+
+os/2:
+
+the follow file ar avail from hobb.nmsu.edu (128.123.35.151).
+note: check /pub/upload for more recent version --- the hobb moder
+is not veri fast about move upload into their perman directori.
+/pub/os2/2.x/graphic/jpegv4.zip
+    32-bit version of free ijg convers program, version 4.
+/pub/os2/all/graphic/jpeg4-16.zip
+    16-bit version of same, for os/2 1.x.
+/pub/os2/2.x/graphic/imgarc11.zip
+    imag archiv 1.01: imag convers/view with pm graphic interfac.
+    strong on convers function, view is a bit weaker.  sharewar, $15.
+/pub/os2/2.x/graphic/pmjpeg11.zip
+    pmjpeg 1.1: os/2 2.x port of winjpeg, a popular viewer for window
+    (see descript in window section).  sharewar, $20.
+/pub/os2/2.x/graphic/pmview84.zip
+    pmview 0.84: jpeg/gif/bmp viewer.  gif view veri fast, jpeg view
+    fast if you have huge amount of ram, otherwis about the same speed
+    as the abov program.  strong 24-bit displai support.  sharewar, $20.
+
+macintosh:
+
+most mac jpeg program reli on appl's jpeg implement, which is part of
+the quicktim system extens; so you need to have quicktim instal.
+to us quicktim, you need a 68020 or better cpu and you need to be run
+system 6.0.7 or later.  (if you're run system 6, you must also instal
+the 32-bit quickdraw extens; thi is built-in on system 7.)  you can get
+quicktim by ftp from ftp.appl.com, file dt/mac/quicktim/quicktim.hqx.
+(as of 11/92, thi file contain quicktim 1.5, which is better than qt 1.0
+in sever wai.  with respect to jpeg, it is margin faster and
+consider less prone to crash when fed a corrupt jpeg file.  howev,
+some applic seem to have compat problem with qt 1.5.)
+
+mac user should keep in mind that quicktim's jpeg format, pict/jpeg, is
+not the same as the usenet-standard jfif jpeg format.  (see section 10 for
+detail.)  if you post imag on usenet, make sure thei ar in jfif format.
+most of the program mention below can gener either format.
+
+the first choic is probabl jpegview, a free program for view imag
+that ar in jfif format, pict/jpeg format, or gif format.  it also can
+convert between the two jpeg format.  the current version, 2.0, is a big
+improv over prior version.  get it from sumex-aim.stanford.edu
+(36.44.0.6), file /info-mac/app/jpeg-view-20.hqx.  requir system 7 and
+quicktim.  on 8-bit displai, jpegview usual produc the best color
+imag qualiti of all the current avail mac jpeg viewer.  jpegview can
+view larg imag in much less memori than other mac viewer; in fact, it's
+the onli on that can deal with jpeg imag much over 640x480 pixel on a
+typic 4mb mac.  given a larg imag, jpegview automat scale it down
+to fit on the screen, rather than present scroll bar like most other
+viewer.  (you can zoom in on ani desir portion, though.)  some peopl
+like thi behavior, some don't.  overal, jpegview's user interfac is veri
+well thought out.
+
+gifconvert, a sharewar ($40) imag viewer/convert, support jfif and
+pict/jpeg, as well as gif and sever other imag format.  the latest
+version is 2.3.2.  get it from sumex-aim.stanford.edu, file
+/info-mac/art/gif/gif-convert-232.hqx.  requir system 6.0.5 or later.
+gifconvert is not better than jpegview as a plain jpeg/gif viewer, but
+it ha much more extens imag manipul and format convers
+capabl, so you mai find it worth it sharewar fee if you do a lot of
+plai around with imag.  also, the newest version of gifconvert can
+load and save jfif imag *without* quicktim, so it is your best bet if
+your machin is too old to run quicktim.  (but it's faster with quicktim.)
+note: if gifconvert run out of memori try to load a larg jpeg, try
+convert the file to gif with jpeg convert, then view the gif version.
+
+jpeg convert, a mac version of the free ijg jpeg convers util, is
+avail from sumex-aim.stanford.edu, file /info-mac/app/jpeg-convert-10.hqx.
+thi will run on ani mac, but it onli doe file convers, not view.
+you can us it in conjunct with ani gif viewer.
+
+previou version of thi faq recommend imageri jpeg v0.6, a jpeg<=>gif
+convert base on an old version of the ijg code.  if you ar us thi
+program, you definit should replac it with jpeg convert.
+
+appl's free program pictpixi can view imag in jfif, quicktim jpeg, and
+gif format, and can convert between these format.  you can get pictpixi
+from ftp.appl.com, file dt/mac/quicktim/qt.1.0.stuff/pictpixi.hqx.
+requir quicktim.  pictpixi wa intend as a develop's tool, and it's
+realli not the best choic unless you like to fool around with quicktim.
+some of it drawback ar that it requir lot of memori, it produc
+rel poor color imag qualiti on anyth less than a 24-bit displai,
+and it ha a rel unfriendli user interfac.  wors, pictpixi is an
+unsupport program, mean it ha some minor bug that appl doe not
+intend to fix.  (there is an old version of pictpixi, call
+pictcompressor, float around the net.  if you have thi you should trash
+it, as it's even buggier.  also, the quicktim starter kit includ a much
+clean-up descend of pictpixi call pictur compressor.  note that
+pictur compressor is not free and mai not be distribut on the net.)
+
+storm technolog's pictur decompress is a free jpeg viewer/convert.
+thi rather old program is inferior to the abov program in mani wai, but
+it will run without system 7 or quicktim, so you mai be forc to us it on
+older system.  (it doe need 32-bit quickdraw, so realli old machin can't
+us it.)  you can get it from sumex-aim.stanford.edu, file
+/info-mac/app/pictur-decompress-201.hqx.  you must set the file type of a
+download imag file to 'jpeg' to allow pictur decompress to open it.
+
+if your machin is too old to run 32-bit quickdraw (a mac plu for instanc),
+gifconvert is your onli choic for singl-program jpeg view.  if you
+don't want to pai for gifconvert, us jpeg convert and a free gif viewer.
+
+more and more commerci mac applic ar support jpeg, although not
+all can deal with the usenet-standard jfif format.  adob photoshop, version
+2.0.1 or later, can read and write jfif-format jpeg file (us the jpeg
+plug-in from the acquir menu).  you must set the file type of a download
+jpeg file to 'jpeg' to allow photoshop to recogn it.
+
+amiga:
+
+(most program list in thi section ar store in the aminet archiv at
+amiga.physik.unizh.ch (130.60.80.80).  there ar mani mirror site of thi
+archiv and you should try to us the closest on.  in the usa, a good
+choic is wuarchiv.wustl.edu; look under /mirror/amiga.physik.unizh.ch/...)
+
+hamlab plu is an excel jpeg viewer/convert, as well as be a
+gener imag manipul tool.  it's cheap (sharewar, $20) and can read
+sever format besid jpeg.  the current version is 2.0.8.  a demo version
+is avail from amiga.physik.unizh.ch (and mirror site), file
+amiga/gfx/edit/hamlab208d.lha.  the demo version will crop imag larger
+than 512x512, but it is otherwis fulli function.
+
+rend24 (sharewar, $30) is an imag render that can displai jpeg, ilbm,
+and gif imag.  the program can be us to creat anim, even
+captur frame on-the-fly from render packag like lightwav.  the
+current version is 1.05, avail from amiga.physik.unizh.ch (and mirror
+site), file amiga/os30/gfx/rend105.lha.  (note: although thi directori is
+supposedli for amigado 3.0 program, the program will also run under
+amigado 1.3, 2.04 or 2.1.)
+
+viewtek is a free jpeg/ilbm/gif/anim viewer.  the current version is 1.04,
+avail from amiga.physik.unizh.ch (and mirror site), file
+amiga/gfx/show/viewtek104.lha.
+
+if you're will to spend real monei, there ar sever commerci packag
+that support jpeg.  two ar written by thoma krehbiel, the author of rend24
+and viewtek.  these ar cinemorph, a standalon imag morph packag, and
+imagefx, an impress 24-bit imag captur, convers, edit, paint,
+effect and prepress packag that also includ cinemorph.  both ar
+distribut by great vallei product.  art depart profession (adpro),
+from asdg inc, is the most wide us commerci imag manipul
+softwar for amiga.  imagemast, from black belt system, is anoth
+well-regard commerci graphic packag with jpeg support.
+
+the free ijg jpeg softwar is avail compil for amiga from
+amiga.physik.unizh.ch (and mirror site) in directori amiga/gfx/conv, file
+amigajpegv4.lha.  these program convert jpeg to/from ppm,gif,targa format.
+
+the amiga world is heavili infest with quick-and-dirti jpeg program, mani
+base on an ancient beta-test version of the free ijg jpeg softwar (thank
+to a certain magazin that publish same on it disk-of-the-month, without
+so much as notifi the author).  among these ar "augjpeg", "newamyjpeg",
+"vjpeg", and probabl other i have not even heard of.  in my opinion,
+anyth older than ijg version 3 (march 1992) is not worth the disk space
+it's store on; if you have such a program, trash it and get someth newer.
+
+atari st:
+
+the free ijg jpeg softwar is avail compil for atari st, tt, etc,
+from atari.archiv.umich.edu, file /atari/graphic/jpeg4bin.zoo.
+these program convert jpeg to/from ppm, gif, targa format.
+
+i have not heard of ani free or sharewar jpeg-capabl viewer for atari,
+but sure there must be on by now?  pointer appreci.
+
+acorn archimed:
+
+!changefsi, suppli with risc os 3 version 3.10, can convert from and view
+jpeg jfif format.  provis is also made to convert imag to jpeg,
+although thi must be done from the cli rather than by doubl-click.
+
+recent version (sinc 7.11) of the sharewar program translat can handl
+jpeg, along with about 30 other imag format.  while older version can be
+found on some archimed bboard, the current version is onli avail by
+regist with the author, john kortink, nutterbrink 31, 7544 wj, ensched,
+the netherland.  price 35 dutch guilder (about $22 or 10 pound).
+
+there's also a commerci product call !jpeg which provid jpeg read/write
+function and direct jpeg view, as well as a host of other imag
+format convers and process option.  thi is more expens but not
+necessarili better than the abov program.  contact: dt softwar, freepost,
+cambridg, uk.  tel: 0223 841099.
+
+
+portabl softwar for almost ani system:
+
+if none of the abov fit your situat, you can obtain and compil the free
+jpeg convers softwar describ in 6b.  you'll also need a viewer program.
+if your displai is 8 bit or less, ani gif viewer will do fine; if you have a
+displai with more color capabl, try to find a viewer that can read targa
+or ppm 24-bit imag file.
+
+there ar numer commerci jpeg offer, with more pop up everi
+dai.  i recommend that you not spend monei on on of these unless you find
+the avail free or sharewar softwar vastli too slow.  in that case,
+purchas a hardwar-assist product.  ask point question about whether
+the product compli with the final jpeg standard and about whether it can
+handl the jfif file format; mani of the earliest commerci releas ar
+not and never will be compat with anyon els's file.
+
+
+[6b]  if you ar look for sourc code to work with:
+
+free, portabl c code for jpeg compress is avail from the independ
+jpeg group, which i lead.  a packag contain our sourc code,
+document, and some small test file is avail from sever place.
+the "offici" archiv site for thi sourc code is ftp.uu.net (137.39.1.9
+or 192.48.96.9).  look under directori /graphic/jpeg; the current releas
+is jpegsrc.v4.tar.z.  (thi is a compress tar file; don't forget to
+retriev in binari mode.)  you can retriev thi file by ftp or uucp.
+if you ar on a pc and don't know how to cope with .tar.z format, you mai
+prefer zip format, which you can find at simtel20 and mirror site (see note
+abov), file msdo/graphic/jpegsrc4.zip.  thi file will also be avail on
+compuserv, in the graphsupport forum (go pic), librari 15, as jpsrc4.zip.
+if you have no ftp access, you can retriev the sourc from your nearest
+comp.sourc.misc archiv; version 4 appear as issu 55-72 of volum 34.
+(if you don't know how to retriev comp.sourc.misc post, see the faq
+articl "how to find sourc", refer to at the top of section 6.)
+
+the free jpeg code provid convers between jpeg "jfif" format and imag
+file in gif, pbmplu ppm/pgm, utah rle, and truevis targa file format.
+the core compress and decompress modul can easili be reus in other
+program, such as imag viewer.  the packag is highli portabl; we have
+test it on mani machin rang from pc to crai.
+
+we have releas thi softwar for both noncommerci and commerci us.
+compani ar welcom to us it as the basi for jpeg-relat product.
+we do not ask a royalti, although we do ask for an acknowledg in
+product literatur (see the readm file in the distribut for detail).
+we hope to make thi softwar industri-qualiti --- although, as with
+anyth that's free, we offer no warranti and accept no liabil.
+
+the independ jpeg group is a volunt organ; if you'd like to
+contribut to improv our softwar, you ar welcom to join.
+
+
+[7]  what's all thi hoopla about color quantiz?
+
+most peopl don't have full-color (24 bit per pixel) displai hardwar.
+typic displai hardwar store 8 or fewer bit per pixel, so it can displai
+256 or fewer distinct color at a time.  to displai a full-color imag, the
+comput must map the imag into an appropri set of repres
+color.  thi process is call "color quantiz".  (thi is someth
+of a misnom, "color select" would be a better term.  we're stuck with
+the standard usag though.)
+
+clearli, color quantiz is a lossi process.  it turn out that for most
+imag, the detail of the color quantiz algorithm have much more impact
+on the final imag qualiti than do ani error introduc by jpeg (except at
+the veri lowest jpeg qualiti set).
+
+sinc jpeg is a full-color format, convert a color jpeg imag for displai
+on 8-bit-or-less hardwar requir color quantiz.  thi is true for
+*all* color jpeg: even if you feed a 256-or-less-color gif into jpeg, what
+come out of the decompressor is *not* 256 color, but thousand of color.
+thi happen becaus jpeg's lossi affect each pixel a littl
+differ, so two pixel that start with ident color will probabl
+come out with slightli differ color.  each origin color get "smear"
+into a group of nearbi color.  therefor quantiz is alwai requir to
+displai a color jpeg on a colormap displai, regardless of the imag
+sourc.  the onli wai to avoid quantiz is to ask for grai-scale output.
+
+(incident, becaus of thi effect it's nearli meaningless to talk about
+the number of color us by a jpeg imag.  even if you attempt to count
+the number of distinct pixel valu, differ jpeg decod would give you
+differ result becaus of roundoff error differ.  i occasion see
+post imag describ as "256-color jpeg".  thi tell me that the poster
+(a) hasn't read thi faq and (b) probabl convert the jpeg from a gif.
+jpeg can be classifi as color or grai-scale (just like photograph), but
+number of color just isn't a us concept for jpeg.)
+
+on the other hand, a gif imag by definit ha alreadi been quantiz to
+256 or fewer color.  (a gif *doe* have a definit number of color in it
+palett, and the format doesn't allow more than 256 palett entri.)
+for purpos of usenet pictur distribut, gif ha the advantag that the
+sender precomput the color quantiz, so recipi don't have to.
+thi is also the *disadvantag* of gif: you're stuck with the sender's
+quantiz.  if the sender quantiz to a differ number of color than
+what you can displai, you have to re-quantiz, result in much poorer
+imag qualiti than if you had quantiz onc from a full-color imag.
+furthermor, if the sender didn't us a high-qualiti color quantiz
+algorithm, you're out of luck.
+
+for thi reason, jpeg offer the promis of significantli better imag qualiti
+for all user whose machin don't match the sender's displai hardwar.
+jpeg's full color imag can be quantiz to precis match the user's displai
+hardwar.  furthermor, you will be abl to take advantag of futur
+improv in quantiz algorithm (there is a lot of activ research in
+thi area), or purchas better displai hardwar, to get a better view of jpeg
+imag you alreadi have.  with a gif, you're stuck forevermor with what wa
+sent.
+
+it's also worth mention that mani gif-view program includ rather
+shoddi quantiz routin.  if you view a 256-color gif on a 16-color ega
+displai, for exampl, you ar probabl get a much wors imag than you
+need to.  thi is partli an inevit consequ of do two color
+quantiz (on to creat the gif, on to displai it), but often it's
+also due to sloppi.  jpeg convers program will be forc to us
+high qualiti quantiz in order to get accept result at all, and in
+normal us thei will quantiz directli to the number of color to be
+displai.  thu, jpeg is like to provid better result than the averag
+gif program for low-color-resolut displai as well as high-resolut on!
+
+final, an ever-grow number of peopl have better-than-8-bit displai
+hardwar alreadi: 15-bit "hi-color" pc displai, true 24-bit displai on
+workstat and macintosh, etc.  for these peopl, gif is alreadi
+obsolet, as it cannot repres an imag to the full capabl of their
+displai.  jpeg imag can drive these displai much more effect.
+thu, jpeg is an all-around better choic than gif for repres imag
+in a machin-independ fashion.
+
+
+[8]  how doe jpeg work?
+
+the buzz-word to know ar chromin subsampl, discret cosin
+transform, coeffici quantiz, and huffman or arithmet entropi
+code.  thi articl's long enough alreadi, so i'm not go to sai more
+than that here.  for technic inform, see the comp.compress faq.
+thi is avail from the new.answer archiv at rtfm.mit.edu, in file
+/pub/usenet/new.answer/compress-faq/part[1-3].  if you need help in
+us the new.answer archiv, see the top of thi articl.
+
+
+[9]  what about lossless jpeg?
+
+there's a great deal of confus on thi subject.  the jpeg committe did
+defin a truli lossless compress algorithm, i.e., on that guarante the
+final output is bit-for-bit ident to the origin input.  howev, thi
+lossless mode ha almost noth in common with the regular, lossi jpeg
+algorithm, and it offer much less compress.  at present, veri few
+implement of lossless jpeg exist, and all of them ar commerci.
+
+sai "-q 100" to the free jpeg softwar doe not get you a lossless imag.
+what it doe get rid of is deliber inform loss in the coeffici
+quantiz step.  there is still a good deal of inform loss in the
+color subsampl step.  (with the v4 free jpeg code, you can also sai
+"-sampl 1x1" to turn off subsampl.  keep in mind that mani commerci
+jpeg implement cannot cope with the result file.)
+
+even with both quantiz and subsampl turn off, the regular jpeg
+algorithm is not lossless, becaus it is subject to roundoff error in
+variou calcul.  the maximum error is a few count in ani on pixel
+valu; it's highli unlik that thi could be perceiv by the human ey,
+but it might be a concern if you ar do machin process of an imag.
+
+at thi minimum-loss set, regular jpeg produc file that ar perhap
+half the size of an uncompress 24-bit-per-pixel imag.  true lossless jpeg
+provid roughli the same amount of compress, but it guarante
+bit-for-bit accuraci.
+
+if you have an applic requir lossless storag of imag with less
+than 6 bit per pixel (per color compon), you mai want to look into the
+jbig bilevel imag compress standard.  thi perform better than jpeg
+lossless on such imag.  jpeg lossless is superior to jbig on imag with
+6 or more bit per pixel; furthermor, jpeg is public domain (at least with a
+huffman back end), while the jbig techniqu ar heavili cover by patent.
+
+
+[10]  why all the argument about file format?
+
+strictli speak, jpeg refer onli to a famili of compress algorithm;
+it doe *not* refer to a specif imag file format.  the jpeg committe wa
+prevent from defin a file format by turf war within the intern
+standard organ.
+
+sinc we can't actual exchang imag with anyon els unless we agre on
+a common file format, thi leav us with a problem.  in the absenc of
+offici standard, a number of jpeg program writer have just gone off to
+"do their own thing", and as a result their program aren't compat with
+anybodi els's.
+
+the closest thing we have to a de-facto standard jpeg format is some work
+that's been coordin by peopl at c-cube microsystem.  thei have defin
+two jpeg-base file format:
+  * jfif (jpeg file interchang format), a "low-end" format that transport
+    pixel and not much els.
+  * tiff/jpeg, aka tiff 6.0, an extens of the aldu tiff format.  tiff is
+    a "high-end" format that will let you record just about everyth you
+    ever want to know about an imag, and a lot more besid :-).  tiff is
+    a lot more complex than jfif, and mai well prove less transport,
+    becaus differ vendor have histor implement slightli differ
+    and incompat subset of tiff.  it's not like that ad jpeg to the
+    mix will do anyth to improv thi situat.
+both of these format were develop with input from all the major vendor
+of jpeg-relat product; it's reason like that futur commerci
+product will adher to on or both standard.
+
+i believ that usenet should adopt jfif as the replac for gif in
+pictur post.  jfif is simpler than tiff and is avail now; the
+tiff 6.0 spec ha onli recent been offici adopt, and it is still
+unus vagu on some crucial detail.  even when tiff/jpeg is well
+defin, the jfif format is like to be a wide support "lowest common
+denomin"; tiff/jpeg file mai never be as transport.
+
+a particular case that peopl mai be interest in is appl's quicktim
+softwar for the macintosh.  quicktim us a jfif-compat format wrap
+insid the mac-specif pict structur.  convers between jfif and
+quicktim jpeg is pretti straightforward, and sever mac program ar
+avail to do it (see mac portion of section 6a).  if you have an editor
+that handl binari file, you can strip a quicktim jpeg pict down to jfif
+by hand; see section 11 for detail.
+
+anoth particular case is handmad softwar's program (gif2jpg/jpg2gif and
+imag alchemi).  these program ar capabl of read and write jfif
+format.  by default, though, thei write a proprietari format develop by
+hsi.  thi format is not readabl by ani non-hsi program and should not be
+us for usenet post.  us the -j switch to get jfif output.  (thi
+appli to old version of these program; the current releas emit jfif
+format by default.  you still should be care not to post hsi-format
+file, unless you want to get flame by peopl on non-pc platform.)
+
+
+[11]  how do i recogn which file format i have, and what do i do about it?
+
+if you have an alleg jpeg file that your softwar won't read, it's like
+to be hsi format or some other proprietari jpeg-base format.  you can tell
+what you have by inspect the first few byte of the file:
+
+1.  a jfif-standard file will start with the charact (hex) ff d8 ff e0,
+    follow by two variabl byte (often hex 00 10), follow by 'jfif'.
+
+2.  if you see ff d8 at the start, but not the rest of it, you mai have a
+    "raw jpeg" file.  thi is probabl decod as-is by jfif softwar ---
+    it's worth a try, anywai.
+
+3.  hsi file start with 'hsi1'.  you're out of luck unless you have hsi
+    softwar.  portion of the file mai look like plain jpeg data, but thei
+    won't decompress properli with non-hsi program.
+
+4.  a macintosh pict file, if jpeg-compress, will have a coupl hundr
+    byte of header follow by a jfif header (scan for 'jfif').  strip off
+    everyth befor the ff d8 and you should be abl to read it.
+
+5.  anyth els: it's a proprietari format, or not jpeg at all.  if you ar
+    lucki, the file mai consist of a header and a raw jpeg data stream.
+    if you can identifi the start of the jpeg data stream (look for ff d8),
+    try strip off everyth befor that.
+
+in uuencod usenet post, the characterist jfif pattern is
+
+	"begin" line
+	m_]c_x ...
+
+wherea uuencod hsi file will start with
+
+	"begin" line
+	m:'-i ...
+
+if you learn to check for the former, you can save yourself the troubl of
+download non-jfif file.
+
+
+[12]  what about arithmet code?
+
+the jpeg spec defin two differ "back end" modul for the final output
+of compress data: either huffman code or arithmet code is allow.
+the choic ha no impact on imag qualiti, but arithmet code usual
+produc a smaller compress file.  on typic imag, arithmet code
+produc a file 5 or 10 percent smaller than huffman code.  (all the
+file-size number previous cite ar for huffman code.)
+
+unfortun, the particular variant of arithmet code specifi by the
+jpeg standard is subject to patent own by ibm, at&t, and mitsubishi.
+thu *you cannot legal us arithmet code* unless you obtain licens
+from these compani.  (the "fair us" doctrin allow peopl to implement
+and test the algorithm, but actual store ani imag with it is dubiou
+at best.)
+
+at least in the short run, i recommend that peopl not worri about
+arithmet code; the space save isn't great enough to justifi the
+potenti legal hassl.  in particular, arithmet code *should not*
+be us for ani imag to be exchang on usenet.
+
+there is some small chanc that the legal situat mai chang in the
+futur.  stai tune for further detail.
+
+
+[13]  doe loss accumul with repeat compress/decompress?
+
+it would be nice if, have compress an imag with jpeg, you could
+decompress it, manipul it (crop off a border, sai), and recompress it
+without ani further imag degrad beyond what you lost initi.
+unfortun thi is not the case.  in gener, recompress an alter
+imag lose more inform, though usual not as much as wa lost the
+first time around.
+
+the next best thing would be that if you decompress an imag and recompress
+it *without chang it* then there is no further loss, i.e., you get an
+ident jpeg file.  even thi is not true; at least, not with the current
+free jpeg softwar.  it's essenti a problem of accumul of roundoff
+error.  if you repeatedli compress and decompress, the imag will eventu
+degrad to where you can see visibl chang from the first-gener
+output.  (it usual take mani such cycl to get visibl chang.)
+on of the thing on our to-do list is to see if accumul of error can
+be avoid or limit, but i am not optimist about it.
+
+in ani case, the most that could possibl be guarante would be that
+compress the unmodifi full-color output of djpeg, at the origin
+qualiti set, would introduc no further loss.  even such simpl chang
+as crop off a border could caus further roundoff-error degrad.
+(if you're wonder why, it's becaus the pixel-block boundari move.
+if you crop off onli multipl of 16 pixel, you might be safe, but
+that's a mighti limit capabl!)
+
+the bottom line is that jpeg is a us format for archiv storag and
+transmiss of imag, but you don't want to us it as an intermedi
+format for sequenc of imag manipul step.  us a lossless format
+(ppm, rle, tiff, etc) while work on the imag, then jpeg it when you ar
+readi to file it awai.  asid from avoid degrad, you will save a lot
+of compress/decompress time thi wai :-).
+
+
+[14]  what ar some rule of thumb for convert gif imag to jpeg?
+
+as state earlier, you *will* lose some amount of imag inform if you
+convert an exist gif imag to jpeg.  if you can obtain the origin
+full-color data the gif wa made from, it's far better to make a jpeg from
+that.  but if you need to save space and have onli the gif to work from,
+here ar some suggest for get maximum space save with minimum
+loss of qualiti.
+
+the first rule when convert a gif librari is to look at each jpeg, to
+make sure you ar happi with it, befor throw awai the correspond gif;
+that will give you a chanc to re-do the convers with a higher qualiti
+set if necessari.  some gif mai be better left as gif, as explain in
+section 3; in particular, cartoon-type gif with sixteen or fewer color
+don't convert well.  you mai find that a jpeg file of reason qualiti
+will be *larger* than the gif.  (so check the size too.)
+
+experi to date suggest that larg, high-visual-qualiti gif ar the best
+candid for convers to jpeg.  thei chew up the most storag so offer
+the most potenti save, and thei convert to jpeg with least degrad.
+don't wast your time convert ani gif much under 100 kbyte.  also, don't
+expect jpeg file convert from gif to be as small as those creat
+directli from full-color origin.  to maintain imag qualiti you mai have
+to let the convert file be as much as twice as big as straight-through
+jpeg file would be (i.e., shoot for 1/2 or 1/3rd the size of the gif file,
+not 1/4th as suggest in earlier comparison).
+
+mani peopl have develop an odd habit of put a larg constant-color
+border around a gif imag.  while useless, thi wa nearli free in term of
+storag cost in gif file.  it is not free in jpeg file, and the sharp
+border boundari can creat visibl artifact ("ghost" edg).  do yourself
+a favor and crop off ani border befor jpege.  (if you ar on an x window
+system, xv's manual and automat crop function ar a veri painless
+wai to do thi.)
+
+cjpeg's default q set of 75 is appropri for full-color input, but
+for gif input, q set of 85 to 95 often seem to be necessari to avoid
+imag degrad.  (if you appli smooth as suggest below, the higher
+q set mai not be necessari.)
+
+color gif of photograph or complex artwork ar usual "dither" to fool
+your ey into see more than the 256 color that gif can actual store.
+if you enlarg the imag, you will see that adjac pixel ar often of
+significantli differ color; at normal size the ey averag these pixel
+togeth to produc the illus of an intermedi color valu.  the
+troubl with dither is that, to jpeg, it look like high-spatial-frequenc
+color nois; and jpeg can't compress nois veri well.  the result jpeg
+file is both larger and of lower imag qualiti than what you would have
+gotten from jpege the origin full color imag (if you had it).
+to get around thi, you want to "smooth" the gif imag befor compress.
+smooth averag togeth nearbi pixel, thu approxim the color that
+you thought you saw anywai, and in the process get rid of the rapid
+color chang that give jpeg troubl.  appropri us of smooth will
+often let you avoid us a high q factor, thu further reduc the size of
+the compress file, while still obtain a better-look output imag
+than you'd get without smooth.
+
+with the v4 free jpeg softwar (or product base on it), a simpl smooth
+capabl is built in.  try "-smooth 10" or so when convert gif.
+valu of 10 to 25 seem to work well for high-qualiti gif.  heavi-hand
+dither mai requir larger smooth factor.  (if you can see regular
+fine-scale pattern on the gif imag even without enlarg, then strong
+smooth is definit call for.)  too larg a smooth factor will blur
+the output imag, which you don't want.  if you ar an imag process
+wizard, you can also do smooth with a separ filter program, such as
+pnmconvol from the pbmplu packag.  howev, cjpeg's built-in smoother is
+a lot faster than pnmconvol...
+
+the upshot of all thi is that "cjpeg -qualiti 85 -smooth 10" is probabl a
+good start point for convert gif.  but if you realli care about the
+imag, you'll want to check the result and mayb try a few other set.
+
+
+---------------------
+
+for more inform about jpeg in gener or the free jpeg softwar in
+particular, contact the independ jpeg group at jpeg-info@uunet.uu.net.
+
+-- 
+			tom lane
+			organ, independ jpeg group
+internet: tgl@cs.cmu.edu	bitnet: tgl%cs.cmu.edu@carnegi

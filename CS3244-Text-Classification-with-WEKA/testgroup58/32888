@@ -1,0 +1,280 @@
+from: rsrodger@wam.umd.edu (yamanari)
+
+subject: re: challeng to microsoft support.
+
+nntp-post-host: rac2.wam.umd.edu
+
+organ: univers of maryland, colleg park
+
+line: 134
+
+
+
+in articl <c6d616.25m@uceng.uc.edu> bferrel@ant.occ.uc.edu (brett ferrel) write:
+
+>in articl <1993mai1.154707.10177@hubcap.clemson.edu> lude@hubcap.clemson.edu (larri "lude" ludwig) write:
+
+
+
+
+
+	[munch]
+
+
+
+
+
+>>you must of read too mani os/2 advertis.  "crash protect" is such
+
+>>a market gimick, it isn't funni..  out of 4 month of us window on my 
+
+>>new machin i've onli had it crash onc, and i don't have a "run of the mill"
+
+>>configur.
+
+
+
+
+
+	[munch  follow is reformat]
+
+
+
+
+
+>it doe sound funni, i will admit.  but for me it is true.  window
+
+> crash on
+
+>all of the time (and from what i have read in pc mag, thi is not
+
+> the except)
+
+
+
+
+
+	i'd sai that the massiv crash problem ar exceedingli rare.
+
+	window _itself_ almost never crash, but it can be crash by
+
+	an errant applic (my person favorit?  ani on of the corel
+
+	3.0 program).  on the other hand, i have had os/2 crash randomli
+
+	a number of time, mostli just run it's own applic.
+
+
+
+	for instanc.  todai i discov a new on.  while i wa download
+
+	with procomm plu for window (run seamless with the standard
+
+	vga driver on a run-o' da mill vga card--640x480), i decid that
+
+	i want to edit a copi of a quot that i want to add to my 
+
+	.finger.  but sinc i've learn not to realli trust seamless, 
+
+	i fire up a full screen wino/23.1 session.  whoop, the download
+
+	finish while wino/2 wa load.  it had _just_ gotten
+
+	the pointer up, so i hit alt-escap to get back t the desktop
+
+	(i have a lot of font, so load take a good long while).
+
+	
+
+	blam.  screen trash, procomm hang up.  hm.  well, i can sorta
+
+	see the mous, so i click on the minim wino/2 session 
+
+	and got back my fullscreen window session (but the color were
+
+	off--red and green and yellow and brown instead of blue and grei).
+
+	so i close thi, and got back to the desktop (now fulli restor).
+
+
+
+	pp+ wa still sit, window open, but it wa no longer 
+
+	"connect" to the com port--so i exit it (the normal wai--
+
+	it told me i wa still onlin and it would hang up, though it
+
+	wa _alreadi_ hung up).  hm.  well, load anoth--no, bad idea. 
+
+	shutdown and reboot.
+
+
+
+	ok, refresh first.. now, shutdown.  ye, everyth is close...
+
+
+
+	hm.  noth seem to be happen.  let's see.. ah, the 
+
+	window list still come up.  ok, let's try shutdown again.
+
+
+
+	no go.  huh.
+
+
+
+	alright, wait 60 second to see if it's just run slow.
+
+
+
+	hmm.  still seem to be run os/2.  try shutdown again.
+
+	noth.  oh well.  reboot.  enjoi the checkdisk time.
+
+  
+
+	in thi case, a part of the os crash not onli itself, but
+
+	os/2 entir (which isn't even smart enough to tell when it;s
+
+	been compromis, i guess).  in everydai (specif _todai_)
+
+	us.
+
+
+
+
+
+> os/2 give each window app a vdm and thei can't touch each other or
+
+>(gener) anyth thei aren't suppos to have.
+
+
+
+
+
+	that's the idea, anywai.  in truth, when a program crash on 
+
+	os/2, it will bring the system down with it.  the program that
+
+	would just gpf under window do the same under os/2, but program
+
+	that ar fine under do and window bring os/2 scream to a halt,
+
+	task protect or no.  
+
+
+
+	for instanc, i'm still wonder why print preview in a window
+
+	wp 5.1 (do) lock up my system.  it work fine under do or even in
+
+	a do box under window 3.1.  (admittedli, it doesn't crash if i run
+
+	wp51 full screen, but the first time thi bug big me, it bit hard).
+
+
+
+
+
+
+
+>  if window work for you,
+
+>then great.  mayb thi is why some peopl don't see why os/2 is the os of 
+
+>choic.  if window doesn't crash on you, and you don't mind wait on each
+
+>task,
+
+
+
+
+
+	pleas explain.  the onli time i wait on anyth under window is
+
+	when i'm copi or format a floppi, or when print (and even
+
+	then, not long--i get 9 to 11 page dump to the printman per 
+
+	minut, and can _still_ go do thing--slowli--while it's do 
+
+	thi--i've download with pp+ @9600 while print).
+
+
+
+
+
+
+
+> and not be abl to adress your memori better than do,
+
+
+
+
+
+	not sure what you mean here.  os/2 see 16 meg, us 5 or six
+
+	of these for it's own us (more if you want to count wino/2). 
+
+	window see 16 meg, us 3 or 4 (more like 5 if you count the
+
+	disk cach as i am for os/2) for itself.  if memori effici 
+
+	were a big issu, pc geo would be the current king of the 
+
+	intel desktop.  
+
+
+
+
+
+> some of the
+
+>kei reason for us os/2 ar gone.  i probabl  would still us it, but it
+
+>would be more of an even fight.
+
+
+
+
+
+	on the other hand.. i am final abl to sai with some confid
+
+	that both os/2 and window have a bit of hardwar sensit to
+
+	them.  for instanc, the machin i am sit at run both fine, 
+
+	while the machin next to me constantli lock up under window. 
+
+	(but ran os/2 without a hitch onc i got it through a 5-crash 
+
+	instal).  on the whole, i'd sai os/2 is a whole lot more sensit
+
+	than window, but there ar (i suppos) machin that window
+
+	just doesn't like.  
+
+
+
+
+
+>wittism of th week: "i think that it's wrong to believ in an ism, you should
+
+>                     believ in yourself"  ferrish bueller 
+
+
+
+	
+
+	wasn't thi _ferri_ bueller?
+
+
+
+
+
+-- 
+
+there ar stupid law, and then there ar stupid than normal law.
+

@@ -1,0 +1,9 @@
+from: iri_-_smith@cup.portal.com
+subject: re: draw line (invers/xor)
+organ: the portal system (tm)
+  <1993apr21.111919.5281@alf.uib.no> <drand.93apr21114830@spinner.osf.org>
+line: 3
+
+you can also set the foreground to the xor of the foreground and background
+color:  xsetforeground(..., fg ^ bg);    thi work great for me (at least
+with truecolor visual).

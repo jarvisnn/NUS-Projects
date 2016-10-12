@@ -1,0 +1,36 @@
+from: casper@fwi.uva.nl (casper h.s. dik)
+
+subject: re: patch for x11r5 under solari 2.1
+
+organ: fwi, univers of amsterdam
+
+line: 11
+
+distribut: inet
+
+nntp-post-host: adam.fwi.uva.nl
+
+
+
+cfl@buc.edu.au (colin linahan) write:
+
+
+
+>hi,
+
+>	sorri if thi is a faq but : could someon pleas tell me where i 
+
+>can get the patch(es) for x11r5 so that i can compil it under solari2.1
+
+
+
+export.lc.mit.edu:/contrib/r5.suno5.patch.tar.z
+
+
+
+get xsun.multi-screen.tar.z while you're at it.
+
+
+
+casper
+

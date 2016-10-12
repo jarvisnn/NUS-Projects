@@ -1,0 +1,46 @@
+from: lourai@sea.gwu.edu (michael panayiotaki)
+subject: help: object appear thrice!
+summari: after edit win.ini [embed..], and leav onli 1 entri
+organ: georg washington univers
+line: 40
+
+
+hei all...i got an equat editor, and sinc it didn't automag
+appear in my "object" dialog box (i.e. insert-->object-->equat), i
+decid to manual place it there.  so i went into win.ini (is there
+anoth wai to do thi?), the [embed] section, and ad 
+
+equat=equat,equat,<path\filenam>,pictur.
+
+didn't work.
+quit window, go back.  aha: mistak. correct it.  it look fine.
+start window...doesn't work.  plai with it for a while, at on point
+have two entri to see if on work and th'other don't, and final i
+get it to work.  the onli thing i can see that's differ now is that
+it's now the first item on the list, and it us to be the last.  but
+now i end up with *three* "equat" entri, and *all* of them work.
+(and onli on entri in win.ini).
+
+so doe ani netian know what's wrong? or rather, how to correct thi?
+(i.e. make "equat"appear but onc?).
+
+also, all the entri in the [embed] appear as abov.
+it's obviou that <path\filenam> is the execut, or whatev, and
+"pictur" ha someth to do withth wai it appear
+(pictur/descript?)
+
+but what ar the other?
+i.e., in
+
+soundrec=sound,sound,
+whate's the differ between the 1st "sound" and the 2nd?  
+and what is "soundrec"?? (i don't think it's the name of the execut,
+as other entri (e.g. msworkschart=...) aren't)
+
+thank, i.a.
+mickei
+-- 
+pe-|| ||  michael panayiotaki: lourai@sea.gwu.edu 
+ac|| ||                                   ...!uunet!sea.gwu.edu!lourai
+|||| \/|  *how do make a ms-window .grp file reflect a hd directori??*
+\\\\   |  "well i ain't alwai right, but i've never been wrong.."(gd)

@@ -1,0 +1,80 @@
+from: 2545500@jeff-lab@queensu.ca (peter pundi)
+
+subject: re: x86 ~= 680x0 ??  (how do thei compar?)
+
+repli-to: 2545500@jeff-lab.queensu.ca
+
+organ: queen univers
+
+x-newsread: tin [version 1.1 pl8]
+
+line: 33
+
+
+
+i guess the real question is:
+
+
+
+who ask the origin question, and why wa it so _broad_.
+
+ar we talk pure process power (what kind of process btw)
+
+isol from everi other factor and influenc in the system?  
+
+or ar we shop for a home comput base on the cpu spec (yuck)!
+
+
+
+i just finish a project that involv real-time process of serial
+
+data and discov that the program interfac (assembl) ha
+
+_a lot_ to do with the "power" of a cpu in a particular applic.
+
+if what you want to do is easi to code with the instruct set given,
+
+then not onli is it easi, but it's cheap and quick.  if you have to
+
+fake thing (like resolv indirect without a lea instruct), then
+
+your cycl count goe through the roof!
+
+
+
+well, let's _not_ start a flame war about whose comput is better than whose.
+
+the orgin question wa about classifi micro-processor...
+
+have re-read the entir thread, i don't think much more can be said without
+
+get down into specif propos system with import detail given.
+
+
+
+
+
+that's it for anoth $0.02.
+
+
+
+cheer everyon.
+
+
+
+
+
+~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+
+  peter pundi
+
+
+
+  email: 2545500@jeff-lab.queensu.ca
+
+
+
+  "i've got no witti wisdom to share, but have a nice dai anywai."
+
+~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+

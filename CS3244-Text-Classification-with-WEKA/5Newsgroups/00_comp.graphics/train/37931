@@ -1,0 +1,45 @@
+from: wijkstra@fwi.uva.nl (marcel wijkstra (aio))
+subject: re: bw hardcopi of color window?
+keyword: color hardcopi print
+nntp-post-host: ic.fwi.uva.nl
+organ: fwi, univers of amsterdam
+line: 38
+
+mar@ixo.de (martin stein) write:
+
+#i us xwd/xpr (from the x11r5 dist.) and variou program of the
+#ppm-tool to print hardcopi of color x window. my problem is,
+
+i don't like xpr. it give (at least, the x11r4 version doe) louzi
+output: the hardcopi look veri graini to me.
+instead, i us pnmtop. thi take full advantag postscript, and
+let the printer do the dirti job of dither a (graylevel)
+imag to black and white dot.
+
+so: if you have a postscript printer, try:
+	xwdtopnm <xwdfile> |	# convert to ppm
+	[ppmtopgm |]		# .. to graylevel for smaller file to print
+	pnmtop -noturn |	# .. to postscript
+	lpr			# print
+
+pnmtop ha sever neat option, but us them with care:
+if you want your imag to be 4" wide, us:
+	pnmtop -noturn -scale 100 -width 4
+-noturn prevent the imag from be rotat (if it is wider than it
+	is high)
+-width 4 specifi the paper width (not the imag width - see below)
+-scale 100 is us becaus if the imag is small, it mai fit within a
+	width less than 4", and will thu be print smaller than 4" wide.
+	if you first scale it up a lot, it will certainli not fit in 4", and
+	will be scale down by pnmtop automat to fit the specifi
+	paper width. 
+	in short: pnmtop will scale an imag down to fit the paper size,
+	but it will not blow it up automat.
+
+hope thi help.
+marcel.
+-- 
+ x	   marcel wijkstra   aio   (wijkstra@fwi.uva.nl)
+|x|	     faculti of mathemat and comput scienc	
+ x	       univers of amsterdam   the netherland
+======life stink. fortun, i've got a cold.========

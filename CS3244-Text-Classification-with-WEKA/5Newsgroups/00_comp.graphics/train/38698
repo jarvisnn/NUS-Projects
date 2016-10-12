@@ -1,0 +1,46 @@
+from: leyfr@mcrcim.mcgill.edu (freder leymari)
+subject: re: develop surfac
+organ: mcgill research center for intellig machin, montreal, canada
+line: 38
+
+
+in articl <c5x9xs.khe@hkuxb.hku.hk>, h8902939@hkuxa.hku.hk (abel) write:
+|> hi netter,
+
+|> 	i am current do some investig on "develop surfac".
+|> can anyon familiar with thi topic give me some inform or sourc
+|> which can allow me to find some infom of develop surfac?
+|> 	thank for your help!
+
+|> abel
+|> h8902939@hkuxa.hku.hk
+
+a develop surfac is s.t. you can lai it (or roll it) flat on the
+plane (it mai requir you to give it a "cut" though...)
+
+e.g., a cylind, a cone, a plane (of cours!) or ani surfac or patch
+have vanish gaussian (intrins) curvatur (i.e., with singular
+hessian, the matrix of 2nd deriv for an adequ coordin patch)
+ar "develop". in more technic word, a develop surfac is
+"local isometr to a plane" at all point.
+
+
+think also of the sphere (or the earth) which in a non-develop:
+whatev wai(s) you cut it, you will not be abl to lai flat ani piec
+of it... (it intrins curvatur is nowher vanish).
+
+for more detail on thi look at ani book on differenti geometri
+which treat surfac (2d manifold); e.g., m. do carmo's book:
+
+@book{carmo76differenti,
+  author =      {do carmo, manfredo p.},
+  titl =       {differenti geometri of curv and surfac},
+  year =        1976,
+  publish =   {prentic-hall},
+  note =        {503 page.}}
+
+enjoi!
+-- 
+freder leymari -- leyfr@mcrcim.mcgill.edu
+mcgill univers, electr eng. dept., mcrcim,    |	tel.: (514) 398-8236
+3480 univers st., montreal, qc, canada, h3a 2a7.  |	fax:  (514) 398-7348

@@ -1,0 +1,24 @@
+from: zack@netcom.com (zack t. smith)
+subject: strang exposur problem
+organ: netcom on-line commun servic (408 241-9760 guest)
+line: 19
+
+hi, 
+
+i'm try to write a motif program on an interact unix machin, and i'm
+observ veri strang behavior when my program attempt to expos a
+drawingarea. name, some xlib oper work, and some do not. in
+particular, the expos consist of two xfillrectangl call follow by some
+xdrawpoint call, and for reason unknown to me the point call ar fail
+whenev a pulldown or popup up menu is (click on and) move in the
+rightward direct over the draw area, but after the move, is still on
+some part of the draw area. thi also happen less consist when the
+pulldown/popup is move in the leftward direct.
+
+assum that my code is not do anyth incred odd, is thi a server
+bug?
+
+thank,
+
+zack t. smith
+

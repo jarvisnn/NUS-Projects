@@ -1,0 +1,1126 @@
+from: chen@veda.cwru.edu (chih-keng chen)
+
+subject: control system analysi packag-cosi_pak v0.9(updat)-for mathematica
+
+organ: case western reserv univers, cleveland, ohio (usa)
+
+line: 555
+
+distribut: world
+
+nntp-post-host: mishna.esi.cwru.edu
+
+keyword: control system,  engin, mathematica, public domain (no fee releas)
+
+
+
+********************************************************************
+
+*                                                                  *
+
+*                            announc                            *
+
+*                                                                  *
+
+*                            cosi_pak                              * 
+
+*                                                                  *                           
+
+*              (a symbol control system analysi packag)       *            
+
+*                                                                  *
+
+*                           version 0.9                            * 
+
+*                            		                           *    
+
+*                      (no user fee releas)                       *             
+
+*                                                                  *
+
+*                               for                                *
+
+*                                                                  *
+
+*                      mathematica version 2.0 or higher           *
+
+*                                                                  *
+
+********************************************************************
+
+
+
+==> introduct
+
+
+
+  cosi_pak is set of packag and notebook for classic control and 
+
+(some) modern (state space) control analysi and design method. the
+
+notebook in cosi_pak follow a typic `control engin i' cours
+
+taught at mani univers around the world for the junior/senior 
+
+level undergradu. there is no fee to us cosi_pak but certain 
+
+respons ar expect of the user (see copyright notic in the 
+
+readm file includ below). for starter e-mail / fax / mail (post) 
+
+the registr form includ in the readm file.
+
+
+
+cosi_pak is avail via `anonym ftp' from
+
+
+
+          mishna.esi.cwru.edu (internet no : 129.22.40.23) 
+
+
+
+in the /pub directori. 
+
+
+
+p.s.: a typic ftp session in unix is given after the readm file. 
+
+
+
+
+
+==> futur releas
+
+
+
+   if you would like to receiv updat and newer version of
+
+cosi_pak pleas send e-mail/fax/mail to the address
+
+below. in addit, your  comment and suggest ar
+
+appreci and ar invalu to us. we will do our  best
+
+to  fix ani report bug. howev, we cannot fix those
+
+bug that  have not been  report to us and those we do not
+
+know of. we would  veri much appreci you take  a few
+
+minut to commun to us  via e-mail / us mail / 
+
+telephon / fax. thi will help us to releas  bug-free
+
+version in the futur. comment ar welcom. 
+
+
+
+n. sreenath
+
+system engin depart
+
+case school of engin
+
+case western reserv univers
+
+
+
+******************
+
+e-mail: sree@mishna.cwru.edu
+
+
+
+u.s. mail:
+
+
+
+prof. n. sreenath                    tel.: (216) 368-6219
+
+system engg., crawford hall         fax: (216) 368-3123
+
+case western reserv univ.
+
+cleveland oh 44106-7070
+
+  
+
+========================= begin readm file =========================
+
+
+
+
+
+
+
+
+
+                       (no user fee releas)
+
+
+
+			     cosi_pak 
+
+			     
+
+	       (a symbol control system analysi packag)
+
+			    
+
+			    version 0.9                
+
+		 
+
+	                        for
+
+				
+
+                  	mathematica version 2.0 or higher
+
+
+
+                                by
+
+
+
+               c.k.chen 		n. sreenath
+
+		
+
+	     	         system engin
+
+		     case school of engin
+
+	     	   case western reserv univers		
+
+	     	      cleveland, oh, 44106-7070		       
+
+		      e-mail: sree@mishna.cwru.edu
+
+			
+
+--> copyright
+
+    :copyright: copyright 1992 by c. k. chen and n. sreenath, case 
+
+western reserv univers. 
+
+        
+
+    permiss to us, copi, modifi and distribut thi softwar and 
+
+it document for ani purpos and without fee is herebi grant, 
+
+provid that the abov copyright notic appear in support 
+
+document, and the name of the case western reserv univers,
+
+case school of engin not be us in advertis or public 
+
+pertain to distribut of the softwar without specif, without 
+
+prior permiss. case western reserv univers make no 
+
+represent about the suitabl of thi softwar for ani 
+
+purpos. it is provid "as is" with out express or impli warranti.
+
+    		
+
+--> acknowledg
+
+
+
+    support from cwru inform and network servic - dr. rai neff,
+
+case alumni associ, the lilli foundat and the system 
+
+engin depart of case western reserv univers is 
+
+gratefulli acknowledg. special thank to brian evan of georgia tech  
+
+for all the help.  
+
+
+
+--> ftp
+
+
+
+     cosi_pak is avail by anonym `ftp' from 
+
+mishna.esi.cwru.edu (internet no. 129.22.40.23). a sampl ftp session 
+
+is given at the end of thi file.
+
+
+
+**********************************************************************
+
+
+
+--> chang in version 0.9 (updat from v0.81 to v0.9)
+
+
+
+	in thi version, we have revis cosi_pak to take advantag of 
+
+the more robust signal process function avail in mathematica v2.1.  
+
+sinc mathematica 2.1 provid a better  and  work 
+
+laplacetransform and inverselaplacetransform function than 
+
+mathematica v2.0 did, we adopt them. thi ha made cosi_pak 
+
+smaller. thu brian evan' signal process packag that support 
+
+the laplacetransform  and inverselaplacetransform function in the 
+
+cosi_pak v0.81 ar no longer need directli by cosi_pak v0.9. for 
+
+power user who  us signal process we still recommend the us of the veri  
+
+fine  brian evan packag on signal process (avail at 
+
+the anonym  ftp site gauss.eedsp.gatech.edu  or  ip # 130.207.226.24).  on  
+
+the  downsid, the disadvantag of thi updat 
+
+can be that mathematica 2.1 requir more runtim resourc than it 
+
+previou version. 
+
+
+
+
+
+***********************************************************************	
+
+--> for mathematica 2.0 user
+
+	
+
+	we have includ the laplacetransform packag from mathematica 2.1 in  
+
+the directori `for_2.0'. pleas move all file and directori under for_2.0 into  
+
+the calculu directori under mathematica packag directori. 
+
+
+
+**************************************************************************
+
+	    
+
+--> introduct
+
+   
+
+    thi is an unsupport releas of cosi_pak - a control system 
+
+analysi packag for symbol control system analysi us 
+
+mathematica 2.1. classic control system analysi and design method and some  
+
+modern control system method have been implement in thi packag. 
+
+    
+
+    thi packag and the attend notebook were develop on a 
+
+next (tm) comput (a unix base workstat). thei have been 
+
+us as a supplementari teach aid along with  standard control 
+
+engin text (ogata [1991], phillip and harbor [1991]) for 
+
+undergradu cours in `control engin i' taught at the system 
+
+engin depart of cwru. in addit to the next, thei have 
+
+also been test successfulli on appl macintosh comput (tm), and, 
+
+ibm pc's (tm) run ms window(tm). we would be veri much interest 
+
+to hear from you if you or anybodi you know us thi softwar on 
+
+platform not mention abov. ibm user howev will have to 
+
+evalu the notebook first to visual the graphic.
+
+
+
+    onc instal (see below for instruct), thi  collect  of  
+
+mathematica  packag  can be load by ani user. bundl with the 
+
+packag ar mani notebook ("cosi_note") which demonstr  
+
+the function of these packag. the notebook follow a plan of 
+
+mani fine, standard, undergradu control engin text book 
+
+list in the refer. exampl us in these notebook have 
+
+been collect from the variou refer given at the end of thi 
+
+file. the content of the notebook in the "cosi_note" directori ar 
+
+given below.
+
+   
+
+ ----------- begin "cosi_note" content -----------
+
+ 
+
+ notebook file name: 01_introduct.ma
+
+ chapter 1: introduct to control system
+
+	
+
+	section:  
+
+	     analyt
+
+	     pole and zero
+
+	     signal
+
+	     forward laplac transform
+
+	     invers laplac transform
+
+	     differenti equat with zero-valu initi condit
+
+	     differenti equat with initi condit
+
+	     	     
+
+ -----------
+
+ 
+
+ notebook file name: 02_math_model.ma
+
+ chapter 2: mathemat model of dynam system
+
+
+
+ 	 section:  
+
+	      od to state space  
+
+	      linear of a nonlinear system of equat  
+
+	      state space to transfer function
+
+		     
+
+ -----------
+
+ 
+
+ notebook file name: 03_*_transient_respons.ma
+
+ chapter 3: transient-respons analysi  
+
+            (chapter split into three sub notebook becaus of file
+
+	     size)
+
+
+
+	 notebook file name: 03_1_transient_respons.ma
+
+            
+
+	    section :       
+
+	      time respons analysi  
+
+	      first order system  
+
+	      second order system  
+
+	      third order and higher order system
+
+	      
+
+         notebook file name: 03_2_transient_respons.ma
+
+            
+
+	    section  :        	      
+
+	      first order system (step respons vs. time const)  
+
+	      
+
+	      
+
+         notebook file name: 03_3_transient_respons.ma
+
+            
+
+	    section  :
+
+	      second order system (step respons vs. damp ratio)  
+
+	      
+
+	            
+
+ -----------
+
+
+
+ notebook file name: 04_steadi_state_respons.ma
+
+ chapter 4: steadi-state respons
+
+ 
+
+         section:	      
+
+	      routh's stabil 
+
+ 	      steadi-state error analysi
+
+                
+
+ -----------
+
+		
+
+ notebook file name: 05_root_locu.ma
+
+ chapter 5: root-locu analysi
+
+
+
+ -----------
+
+ 
+
+ notebook file name: 06_freq_respons.ma
+
+ chapter 6: frequenc-respons analysi
+
+
+
+         section:
+
+	      bode plot analysi  
+
+	      magnitud vs. phase plot (nichol plot)
+
+	      polar plot  
+
+	      nyquist plot  
+
+	      combin exampl
+
+	      
+
+ -----------
+
+ 
+
+ notebook file name: 07_state_space.ma
+
+ chapter 7: state space method
+
+
+
+         section:
+
+	      introduct
+
+	      state transit matrix
+
+	      control
+
+	      observ
+
+	      output control
+
+	      pole placement design 
+
+	      observ design
+
+	      time respons us state space method
+
+
+
+ 
+
+ ----------- end notebook content -----------
+
+ 
+
+
+
+--> compress file
+
+
+
+        the file that contain  a  complet set of the cosi_pak v0.9
+
+packag and notebook for mathematica ar:
+
+
+
+ cosi_pak_09.tar.z     		compress tar file for unix system
+
+	
+
+ cosi_pak_09.sit.hqx     	compress sit file for macintosh 
+
+ 				system and encod by binhex 4.0 
+
+				format (requir the   sharewar
+
+				 stuffit file v 1.5.1 or higher). 
+
+	
+
+ cosi_pak_ibm_09.zip    	zip file for the ibm pc run ms-do
+
+    
+
+     onc expand the mathematica file can also be us on 
+
+macintosh / ibm pc / unix system also.
+
+
+
+
+
+--> instal of cosi_pak
+
+
+
+ o in unix command line type the follow command:
+
+
+
+      zcat cosi_pak_09.tar.z | tar xvf -
+
+
+
+ o in macintosh open the .sit.hqx file us the sharewar
+
+    stuffit v 1.5.1 or higher.
+
+  
+
+ o in ibm command line type the follow command:
+
+
+
+      pkunzip -o -d cosi_pak_ibm_09.zip
+
+
+
+note: thi .zip file wa zip by zip util v2.0. you must us 
+
+pkunzip version 2.0 or  higher to unzip it.  ibm pc's mai limit the 
+
+directori name charact to eight. in that event type "pkunzip -o -d 
+
+cosi_pak.zip.  you can also unzip the cosi_pak_ibm_09.zip file on ani 
+
+unix machin if you have unzip util on it.
+
+
+
+
+
+     uncompress and untar "cosi_pak_09.tar.z" or unzip 
+
+"cosi_pak_ibm_09.zip" will creat a directori call "cosi_pak".
+
+         	
+
+onc the file ar expand you should see a singl directori 
+
+"cosi_pak" contain the follow three file, four 
+
+sub-directori and their content:
+
+
+
+sub-directori in "cosi_pak":  
+
+  cosypak    - contain control tool box packag 
+
+  manual     - cosi_pak manual in .ps, .rtf, .txt, and .wn format. 
+
+  cosi_note - contain notebook 
+
+  for_2.0    - contain laplac transform packag from mathematica 2.1
+
+  		for mathematica 2.0 user.	 
+
+    		
+
+file in directori "cosypak":
+
+  chap1.m   chap2.m   chap3.m  chap4.m  chap5.m   chap6.m  chap7.m
+
+	
+
+file in directori "cosi_note":
+
+	01_introduct.ma	  
+
+	02_math_model.ma
+
+	03_1_transient_respons.ma   
+
+	03_2_transient_respons.ma   
+
+	03_3_transient_respons.ma   
+
+	04_steadi_state_respons.ma
+
+	05_root_locu.ma	  
+
+	06_freq_respons.ma 
+
+	07_state_space.ma         
+
+	
+
+file in directori "for_2.0":
+
+	laplacetransform.m     diracdelta.m	
+
+	sub-directori in "cosi_pak":	common
+
+	file in directori "common":  support.m
+
+
+
+********************* import ********************	
+
+
+
+	the notebook exampl file(.ma file) will be under the 
+
+"cosi_note" directori.  to us the notebook, move the directori `cosypak' to  
+
+a 
+
+directori that  mathematica can recogn :
+
+	
+
+        /locallibrari/mathematica/packag     	on a unix machin,
+
+        my_harddisk:mathematica:packag   	on an appl macintosh,
+
+        c:\winmath\packag                  	on an ibm pc.
+
+
+
+	at the begin of the "initi" cell of each notebook 
+
+in  "cosi_note" directori, we list the exampl about how to make 
+
+mathematica identifi the directori:
+
+
+
+	(* initi of path *)
+
+
+
+	(* exampl for a unix machin  (default) *) 
+
+	(*
+
+	$path=join[$path,
+
+	{"/locallibrari/mathematica/packag"}];
+
+	*)
+
+	
+
+	(* exampl for an appl macintosh  *) 
+
+	(*
+
+	$path=join[$path,
+
+	{"my_harddisk:mathematica:packag"}];
+
+	*)
+
+	
+
+	(* exampl for ibm pc 	
+
+	 *)
+
+	(*
+
+	$path=join[$path,	
+
+	 {"c:\winmath\packag"}];	
+
+	*)	
+
+
+
+chang the pathnam accord to your machin by remov the 
+
+mathematica comment sign `(*' and `)*' befor and after `$path' 
+
+set.
+
+
+
+	thi command make mathematica recogn the directori
+
+
+
+        /locallibrari/mathematica/packag     	on a unix machin
+
+        my_harddisk:mathematica:packag   	on a appl macintosh
+
+        c:\winmath\packag                	on an ibm pc
+
+
+
+
+
+--> mathematica 2.0 user
+
+	
+
+	we includ the laplacetransform packag from mathematica 2.1 in 
+
+the directori for_2.0. pleas move all file and directori under for_2.0 
+
+into the calculu directori under mathematica packag directori. 
+
+
+
+
+
+--> get start
+
+
+
+       after instal, start mathematica and open the notebook in 
+
+the "cosi_note" directori. all notebook load their own packag. 
+
+navig in the notebook and enjoi. ibm user howev will have to 
+
+evalu the notebook to visual the graphic.
+
+    
+
+*************************************************************** 
+
+
+
+--> user respons
+
+
+
+      we request you to take a few minut and fill out the 
+
+inform below and mail it to us by e-mail / fax / u.s. mail. thi 
+
+will help us to keep your abreast of the improv and releas new 
+
+version of cosi_pak. suggest for improv ar welcom.
+
+
+
+-------------------------------cut here-------------------------------
+
+  
+
+  your name:     ________________________________________
+
+ 
+
+  organ:  ________________________________________
+
+  
+
+  titl:         ________________________________________
+
+  
+
+  e-mail:        ________________________________________
+
+
+
+  postal address:________________________________________
+
+  
+
+                 ________________________________________
+
+		   
+
+  comment &     ________________________________________
+
+  
+
+  suggest:   ________________________________________
+
+		 
+
+                 ________________________________________
+
+		 
+
+
+
+
+
+
+
+-------------------------------cut here-------------------------------
+
+
+
+mail thi inform to (e-mail / fax / u.s. mail) :
+
+
+
+internet: sree@mishna.cwru.edu
+
+
+
+u.s. mail:
+
+
+
+prof. n. sreenath                    tel.: (216) 368-6219
+
+system engg., crawford hall         fax: (216) 368-3123
+
+case western reserv univ.
+
+cleveland oh 44106-7070
+
+  
+
+*************************************************************** 
+
+
+
+--> report bug
+
+
+
+     pleas report bug and leav comment to the address abov. 
+
+ani suggest for improv and critic ar welcom.
+
+
+
+     we will do our best to  fix ani report bug. howev, we cannot 
+
+fix those bug that have not been  report to us and those we do not 
+
+know of. we would veri much appreci you take  a few minut to 
+
+commun to us via e-mail / us mail /  telephon / fax. thi will 
+
+help us to releas bug-free version in the futur.
+
+	
+
+	
+
+***************************************************************
+
+
+
+--> disclaim and futur releas
+
+
+
+ 	thi softwar is the properti of the case western reserv 
+
+univers. us thi softwar at your own risk. we make no express or 
+
+impli  warranti.
+
+
+
+	the packag and the notebook can also be made to run under 
+
+mathematica version 2.0 or lower with modif. we do not 
+
+guarante the outcom.
+
+
+
+
+
+--> document
+
+
+
+        cosi_pak function ar index in the file in the 
+
+`manual' directori accord the chapter. usag is illustr in 
+
+notebook resid in `cosi_note' directori.  if your comput doe 
+
+not support notebook find a macintosh comput and acquir mathread 
+
+which is a public domain notebook reader. mathread will at least 
+
+allow you to perus notebook but you will not be abl to evalu 
+
+ani code fragment.
+
+	
+
+
+
+--> refer
+
+
+
+dorf, r. c., "modern control system", sixth edit, addison 
+
+weslei, new york, 1992.
+
+
+
+fortmann, t. e., and hitz, k. l., "an introduct to linear control 
+
+system", marcel dekker, 1977.
+
+
+
+franklin, g. f., powel, d. j., and emami-naeini, a., "feedback 
+
+control of dynam system", second edit, addison weslei, new 
+
+york, 1991.
+
+
+
+kuo, b. c., "automat control system", sixth edit, prentic hall, 
+
+new jersei, 1990.
+
+
+
+ogata, k., "modern control engin", second edit, prentic 
+
+
+
+hall, new jersei, 1991.
+
+
+
+phillip, c. l., and harbor, r. d., "feedback control system", 
+
+second edit, prentic hall, new jersei, 1991.
+
+
+
+
+
+========================= end readm file =========================
+
+
+
+typic `ftp' session :
+
+-----------------------
+
+
+
+%ftp mishna.esi.cwru.edu
+
+connect to mishna.
+
+220 mishna ftp server (version 5.20 (next 1.0) sun nov 11, 1990) readi.
+
+
+
+name (mishna.esi.cwru.edu:sree): anonym
+
+
+
+password:
+
+
+
+ftp> cd /pub
+
+
+
+ftp> binari
+
+
+
+ftp> ls
+
+200 port command success.
+
+150 open ascii mode data connect for file list.
+
+cosi_pak_09.tar.z
+
+cosi_pak_ibm_09.zip
+
+index
+
+readm
+
+place.wmd
+
+cosi_pak_untar
+
+226 transfer complet.
+
+78 byte receiv in 0 second (15.35 kbyte/s)
+
+
+
+ftp> get cosi_pak_09.tar.z
+
+200 port command success.
+
+150 open binari mode data connect for cosi_pak_09.tar.z (460822 byte).
+
+226 transfer complet.
+
+local: cosi_pak_09.tar.z remot: cosi_pak_09.tar.z
+
+460822 byte receiv in 1.33 second (3.38e+02 kbyte/s)
+
+
+
+ftp> quit
+
+221 goodby.
+
+
+
+
+
+--
+
+
+

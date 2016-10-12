@@ -1,0 +1,28 @@
+from: pdh@netcom.com (p d h)
+subject: re: where to find comm port with irq other than 3 and 4.
+organ: netcom on-line commun servic (408 241-9760 guest)
+line: 23
+
+hamilton@romulu.eh.uiuc.edu (wayn hamilton) write:
+
+>a friend of mine recent got such a serial card.  i'll have to
+>ask him to verifi the detail, but as i recal, he paid ~$50, it's
+>made by stb, it ha 2 (or wa it 4?) port, and it support the at
+>irq (8-15) in addit to the convent on.  i'm sure of the
+>last, becaus he had troubl find comm softwar that would allow
+>him to overrid the "standard" irq assign.
+
+unfortun there a *lot* of such softwar.  i also find it to be
+the case that the major of the softwar that is bad in thi regard
+is commerci softwar.  wai too mani commerci packag ar veri
+poorli written.  but then most of the program in ms-do ar crap, such
+as the print command tsr that lock up your system for long period of
+time when the printer is full instead of try everi clock tick.
+
+back to comm softwar... i find success with telix (my com3 at 3e8/5
+work ok on telix).
+-- 
+| phil howard,  pdh@netcom.com,  ka9wgn         spell protect?  "1(911)a1" |
+| right wing conserv capitalist ar out to separ you from your monei |
+| left wing liber do gooder ar out to separ you from everyth els!! |
++-----------------------------------------------------------------------------+

@@ -1,0 +1,24 @@
+from: neideck@nestvx.enet.dec.com (burkhard neideck-lutz)
+subject: re: rumour about 3do ???
+organ: cec karlsruh
+line: 17
+nntp-post-host: nestvx
+keyword: 3do arm qt compact video
+
+in articl <2bd07605.18974@new.servic.uci.edu> rbarri@orion.oac.uci.edu (robert c. barri) write:
+>i'm not sure how a centri/20mhz 040 stack up against the 25 mhz arm in
+>the 3do box. obvious the arm is faster, but how much?
+
+why would it have to be much faster (it probabl is) ? assum an arm
+is about as effici as a mip r3000 for integ calcul, do
+a compact-video-like digit video codec is an easi task. for softwar
+motion pictur (which is a lot like compact video, though it predat
+it), we get 48 frame/sec. at 320x240 on a decstat 5000/200. that
+machin ha a 25 mhz mip r3000. 
+
+		burkhard neideck-lutz
+
+distribut multimedia group, cec karlsruh          eerp portfolio manag
+softwar motion pictur & berkom ii project         multimedia base technolog
+digit equip corpor
+neideck@nestvx.enet.dec.com

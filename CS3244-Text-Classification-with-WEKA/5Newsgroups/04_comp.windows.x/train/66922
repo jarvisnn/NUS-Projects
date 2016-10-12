@@ -1,0 +1,26 @@
+from: klee@synopt.com (ken lee)
+subject: re: properti problem
+repli-to: klee@synopt.com
+organ: synopt commun, santa clara ca
+line: 19
+nntp-post-host: bugsbunni.synopt.com
+
+in articl ( ), wsmart@tai.mc.dunde.ac.uk (bill smart) write:
+> to get the number back, the other client doe:
+>
+>  appatom = xinternatom(displai,"applicationwindow",true);
+>  xgetwindowproperti(displai,defaultrootwindow(displai),appatom,0,8192,
+>                     fals,xa_window,&return_type,&return_format,
+>                     &nitem_return,&bar,&return_place);
+>
+> and appear to get back someth valid (just not the right number).
+> it alwai seem to return the same number, regardless of the window
+> number store in the properti.
+
+"return_place" is probabl incorrect.  it should be a pointer, not an
+integ.  xgetwindowproperti() alloc memori, copi the data there,
+and return a pointer to the memori.  you should free the memori when
+you're done.
+
+---
+ken lee, klee@synopt.com

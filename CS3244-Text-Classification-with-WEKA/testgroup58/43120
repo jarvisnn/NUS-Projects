@@ -1,0 +1,42 @@
+from: gordon@mon.sp.mot.com (gordon sasamori)
+
+subject: re: view postscript file under x window
+
+organ: nippon motorola ltd., tokyo, japan
+
+line: 16
+
+
+
+in <604@ftm.uucp> brown@ftm.uucp (vidiot) write:
+
+
+
+>ow 3.0 is the same.  but, the definit of broken is rel.  pageview
+
+>requir dsc compliant postscript file, in order to stop at page break.
+
+>i don't consid that broken.  i sai that ani program that put out a
+
+>postscript file that isn't dsc compliant is broken.
+
+
+
+well that mai be true.  howev, the man page for pageview for ow 2.0
+
+doe not mention about dsc complianc.  in ani event, the point here
+
+is that if you try to displai some ps file us pageview you will
+
+find out that it's not a practic tool.
+
+-- 
+
+...v....1....v....2....v....3....v....4....v....5....v....6....v....7..
+
+gordon t. sasamori
+
+hc05 csic mcu design       (email: gordon@ai.sp.mot.com,
+
+nippon motorola ltd.        voic: 81(3)3280-8339, fax: 81(3)3440-0033)
+

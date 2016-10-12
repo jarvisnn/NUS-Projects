@@ -1,0 +1,50 @@
+from: jbvb@vax.ftp.com  (jame b. vanbokkelen)
+
+subject: re: jumper set for ungermann-bass pcnic ethernet card
+
+nntp-softwar: pc/tcp nntp
+
+keyword: ub pcnic
+
+line: 14        
+
+nntp-post-host: whip-cream.ftp.com
+
+repli-to: jbvb@ftp.com
+
+organ: ftp softwar, inc., north andov, massachusett
+
+distribut: na
+
+
+
+in articl <1993apr21.215204.18373@ntg.com> dplatt@ntg.com (dave platt) write:
+
+    the irq and interfac-select jumper ar pretti straightforward, but i
+
+    don't grok the set of w10-w18 (also label a15 through a18).
+
+    could somebodi tell me which set of these four jumper correspond
+
+    to what i/o address?
+
+    
+
+the u-b pcnic (also oem by ibm for a while) is the onli ethernet card i
+
+know of that doesn't us i/o address.  it onli ha interrupt and share
+
+memori.  the jumper you see control bit 15-18 in the base address of the
+
+share memori.  i can't recal which is 1 and which 0, but that's easi
+
+to determin with debug.
+
+
+
+jame b. vanbokkelen		2 high st., north andov, ma  01845
+
+ftp softwar inc.		voic: (508) 685-4000  fax: (508) 794-4488
+
+
+

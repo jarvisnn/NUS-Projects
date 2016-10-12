@@ -1,0 +1,52 @@
+from: petrack@vnet.ibm.com
+subject: serial line connect between duo 210 and pc???
+repli-to: petrack@vnet.ibm.com
+disclaim: thi post mai contain no view at all
+new-softwar: usenet 3.1
+line: 45
+
+i have tri almost everyth under the sun to get a null modem connect
+between a mac duo 210 and a pc. i have us mackermit and versaterm on
+the mac side. i have us procomm, kermit, and softerm (on os/2) on
+the pc (or ps) side. i have us non-hardwar handshak and hardwar
+ahdshak cabl. and know my hand ar shake from the effort. noth
+ha allow file transfer from the mac to the ps.
+
+in gener, i can type back and forth with no troubl, but onli if both side
+ar set to speed over 9600 baud. i cannot send file from the mac to the
+ps at all, and file transfer from the duo to the ps ar not possibl.
+when i do a straight ascii send, i can send from the ps to the duo flawlessli.
+i can send binhex file thi wai quit fast, and i know that the
+transmiss is error free.
+but straight ascii sent from the mac to the ps is full of error.
+unless, of cours, i do text pace so slow that it is like human
+type. (well, like 2-3 time faster than human type).
+
+i would like to hear from anyon who ha been abl to transfer file
+from a duo 210 to a ps via modem or null modem. if you can do it, pleas
+tell me your exact combin of hardwar and softwar. obvious, i am
+talk of a true serial port modem, not the express modem. mayb some
+kind soul with access to a modem and a duo 210 can check thi out for me.
+
+right now, i am of the opinion that it won't work at high speed becaus
+of the power interrupt on the duo, and it won't work at low speed
+becaus of some crazi reason i don't understand.
+
+could i hear from someon attest that thei can realli pump inform
+out the serial port of a duo 210 fast? like via a modem or via a
+sy-ex dump?
+
+could anyon with a duo help me out?? i am go absolut insan.
+i wanna know if the problem is my duo, or all duo 210s, or all duo,
+or just me.
+
+ye, i have check the cabl 1,000,000 time. and not onli can i type
+back and forth, but zterm alert the user if s/he us hardwar handshak
+and ct is down. so i know that hardwar handshak is work. and also,
+accord to zterm port stat, the buffer never overflow.
+
+pleas help me figur out what's go on...
+
+scott petrack
+petrack@haifasc3.vnet.ibm.com
+

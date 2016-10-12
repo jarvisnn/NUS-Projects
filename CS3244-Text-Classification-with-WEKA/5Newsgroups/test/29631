@@ -1,0 +1,48 @@
+from: especkma@reed.edu (erik. a speckman)
+
+subject: re: why the drive speed differ??
+
+articl-i.d.: reed.1993apr23.063822.28946
+
+organ: reed colleg, portland, oregon
+
+line: 18
+
+
+
+in articl <1993apr22.210015.75624@mcontent.apana.org.au> thoma_n.a._kreb@mcontent.apana.org.au write:
+
+>the most like explan mai have someth to do with the fact that a
+
+>greater densiti of inform exist on the larger capac disk drive than
+
+>the smaller on. if your run the drive on a mac i would recommend a
+
+>sharewar util call timedr which test seek, scsi throughput and
+
+>rotat speed. thi util should let you know what the differ ar
+
+>between the drive.
+
+>***************************************************************************
+
+> the view express in thi post those of the individu author onli. 
+
+>[bb number:(613) 848-1346      maccont is victoriau first icon bb!]
+
+>***************************************************************************
+
+
+
+larger drive tend to have multipul platter which can allow adjac
+
+bit to be read in parallel result in higher throughput.  thei also
+
+have higher spindl speed which lead to both increas throughput and
+
+reduc seek time (due to reduct of rotat latenc.)
+
+
+
+_erik speckman
+

@@ -1,0 +1,195 @@
+from: robert@cpuserv.acsc.com (robert grant)
+subject: virtual realiti for x on the cheap!
+organ: uscacsc, lo angel
+line: 187
+distribut: world
+repli-to: robert@cpuserv.acsc.com (robert grant)
+nntp-post-host: cpuserv.acsc.com
+
+hi everyon,
+
+i thought that some peopl mai be interest in my vr
+softwar on these group:
+
+*******announc the releas of multivers-1.0.2*******
+
+multivers is a multi-user, non-immers, x-window base virtual realiti
+system, primarili focus on entertain/research.
+
+featur:
+
+   client-server base model, us berkelei socket.
+   no limit to the number of user (apart from perform).
+   gener client.
+   customiz server.
+   hierach object (allow attach of camera and light sourc).
+   multipl light sourc (ambient, point and spot).
+   object can have extens code, to handl uniqu function, easili
+        attach.
+
+function:
+
+  client:
+   the client is built around a 'fast' render loop. basic it chang thing
+   when told to by the server and then render an imag from the user's
+   viewpoint. it also provid the server with inform about the user's
+   action - which can then be commun to other client and therefor to
+   other user.
+
+   the client is design to be gener - in other word you don't need to
+   develop a new client when you want to enter a new world. thi mean that
+   resourc can be spent on enhanc the client softwar rather than adapt
+   it. the adapt, as will be explain in a moment, occur in the server.
+
+   thi releas of the client softwar support the follow function:
+
+    o hierarch object (with associ address)
+
+    o multipl light sourc and type (ambient, point and spot)
+
+    o user interfac panel
+
+    o colour polygon render with phong shade (option wirefram for
+	faster frame rate)
+
+    o mous and keyboard input
+
+   (some peopl mai be disappoint that thi softwar doesn't support the
+   powerglov as an input devic - thi is not becaus it can't, but becaus
+   i don't have on! thi will, howev, be on of the first enhanc!)
+
+  server(s):
+   thi is where custom can take place. the follow basic support is
+   provid in thi releas for potenti world server develop:
+
+    o transpar client manag
+
+    o client messag handl
+
+   thi mai not sound like much, but it take awai the headach of
+accept and
+   termin client and receiv messag from them - the
+applic writer
+   can work with the assumpt that thing ar happen local.
+
+   thing get more interest in the object extens function. thi is
+   what is provid to allow you to anim your object:
+
+    o server select extens instal:
+        what thi mean is that you can decid which object have extend
+        function in your world. basic you call the extens
+        initialis you want.
+
+    o event handler registr:
+        when you develop extens for an object you basic write callback
+        function for the event that you want the object to respond to.
+        (current event support: init, move, chang, collid & termin)
+
+    o collis detect registr:
+        if you want your object to respond to collis event just provid
+        some basic inform to the collis detect manag softwar.
+        your callback will be activ when a collis occur.
+
+    thi softwar is kept separ from the worldserv applic becaus
+    the applic develop want to build a librari of extend object
+    from which to choos.
+
+    the follow is all you need to make a world server applic:
+
+    o provid an initworld function:
+        thi is where you choos what object extens will be support, plu
+        ani initi you want to do.
+
+    o provid a positionobject function:
+        thi is where you determin where to place a new client.
+
+    o provid an installworldobject function:
+        thi is where you load the world (.wld) file for a new client.
+
+    o provid a getworldtyp function:
+        thi is where you tell a new client what persona thei should have.
+
+    o provid an animateworld function:
+        thi is where you can go wild! at a minimum you should let the object
+        move (by call a move function) and let the server sleep for a bit
+        (to avoid outrun the client).
+
+    that's all there is to it! and to prove it here ar the line count for the
+    three world server i've provid:
+
+        gener - 81 line
+        dactyl - 270 line (more complic collis detect due to the
+                           stair! will probabl be improv with futur
+                           version)
+        dogfight - 72 line
+
+locat:
+
+   thi softwar is locat at the follow site:
+   ftp.u.washington.edu
+
+   directori:
+   pub/virtual-world
+
+   file:
+   multivers-1.0.2.tar.z
+
+futur:
+
+   client:
+
+    o textur map.
+
+    o more realist render: i.e. z-buffer (or similar), gouraud shade
+
+    o hmd support.
+
+    o etc, etc....
+
+   server:
+
+    o physic model (graviti, friction etc).
+
+    o enhanc object manag/interact
+
+    o etc, etc....
+
+   both:
+
+    o improv comm!!!
+
+i hope thi provid peopl with a good understand of the multivers
+softwar,
+unfortun it come with practic zero document, and i'm not sure
+whether that will ever be abl to be rectifi! :-(
+
+i hope peopl enjoi thi softwar and that it is us in our explor of
+the virtual univers - i've certainli found fascin develop it, and i
+would *love* to add support for the powerglov...and an hmd :-)!!
+
+final on major disclaim:
+
+thi is total amateur code. by that i mean there is no support for thi code
+other than what i, out the kind of my heart, or you, out of pure
+desper, provid. i cannot be held respons for anyth good or bad
+that mai happen through the us of thi code - us it at your own risk!
+
+disclaim over!
+
+of cours if you love it, i would like to here from you. and anyon with
+posit contribut/critic is also encourag to contact me. anyon who
+hate it: > /dev/null!
+
+************************************************************************
+*********
+and if anyon want to let me do thi for a live: you know where to
+write :-)!
+************************************************************************
+*********
+
+thank,
+
+robert.
+
+robert@acsc.com
+^^^^^^^^^^^^^^^

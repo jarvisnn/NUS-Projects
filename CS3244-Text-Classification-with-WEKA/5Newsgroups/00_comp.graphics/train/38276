@@ -1,0 +1,25 @@
+from: katker@krusti.eec.umich.edu (arun katker)
+subject: re: cylind and rai
+repli-to: katker@engin.umich.edu
+organ: univers of michigan eec dept., ann arbor, mi
+line: 19
+
+in articl <1qc1fginnbv4@darkstar.ucsc.edu>, koehler@sec.ucsc.edu write:
+|> i would be most thrill if some kind person could help me with the follow
+|> given a cylind in 3d -defin as a line segment between two point and
+|> a radiu (e.g. sx,sy,sz to ex,ey,ez and r), what is the easiest (and not
+|> too expens) wai to find if a rai -defin as anoth line through two
+|> point -cut through thi cylind and if so where? 
+
+|> i think the test for touch is rather simpl: if the closest approach
+|> of the two line is less than r, then the rai doe penetr the cylind.
+
+nope, thi won't work for a cylind. you can have a line arbitrarili close
+to the the cylind backbon, and yet not intersect it. the test work for a
+pillbox, though. (a cylind with two hemispher attach at the end.)
+
+|> thank,
+|> 	ryan 	(koehler@sec.ucsc.edu)
+
+-arun
+-- 

@@ -1,0 +1,27 @@
+from: billh@greed.sbil.co.uk (bill hodgson)
+subject: re: wait for a specif event/callback
+repli-to: billh@greed.sbil.co.uk
+organ: salomon brother, ltd.
+line: 20
+nntp-post-host: greed
+
+in articl 9610@charon.cwi.nl, huub@cwi.nl (huub bakker) write:
+..delet...
+
+in plain motifi us a dialog 'in-line' like thi simpli isn't done. you need
+to set callback from the button/widget in your dialog and let the callback routin
+do the work. in the callback you can then carri on the flow of logic. 
+
+xview from sun actual support thi veri neatli with a 'notifi' box, which can
+return a statu in-line, it doe actuali eas code but goe against the event
+driven style of an applic.
+
+summari: redesign requir.
+
+
+---
+    _/       _/  _/ _/     "delta hedg a long option posit also
+   _/           _/ _/	    gener a short gamma exposur and ani return
+  _/_/_/_/ _/  _/ _/	    gener from delta hedg option can be thought
+ _/    _/ _/  _/ _/	    of as compens for assum gamma risk"
+_/_/_/_/ _/  _/ _/	    -- radioact invest manag... whew!

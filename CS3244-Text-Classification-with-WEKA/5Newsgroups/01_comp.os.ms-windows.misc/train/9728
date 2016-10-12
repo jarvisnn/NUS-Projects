@@ -1,0 +1,19 @@
+from: cca20@keel.ac.uk (j. atherton)
+subject: serial print in window
+line: 12
+distribut: world
+nntp-post-host: seq1.cc.keel.ac.uk
+x-newsread: tin [version 1.1 pl6]
+
+i am get garbl output when serial print thru window & work
+etc.  thi ha occur on sever system and goe if a laserjet 4 is
+us.  i suspect that there is no need for handshak in thi case due
+to the capac (memori/speed) of it.  there is no problem print from
+do.  ar there ani obviou tweak i'm miss.  i'm sure it not just
+me with thi problem.  thank for read....  john atherton
+
+
+
+
+
+

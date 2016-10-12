@@ -1,0 +1,33 @@
+from: hsteve@carina.unm.edu ()
+subject: re: interfac to access separ appl.
+organ: univers of new mexico, albuquerqu
+line: 27
+nntp-post-host: carina.unm.edu
+
+in articl <9304121644.aa27256@expo.lc.mit.edu> dbohdal@jaguar.ess.harri.com write:
+<dear xpert:
+<
+<   here's my problem:  i am design sever relat x 
+<applic (each on is a separ execut) and  i'd like 
+<to build a singl control window that would allow the user to 
+<access each applic (instead of have to locat the correct
+<icon). the control window would contain a button for each 
+<applic and by press it, the applic's main window
+<would appear.  i would also like to us the applic's button
+<as a color statu indic.  ha anyon done thi or have ani
+<good idea??  becaus these ar all separ execut thi
+<seem like a commun nightmar to me, but mayb i'm
+<wrong.  i'd appreci ani idea! i'm us x11r5 and motif 1.2.1.
+<
+<thank,
+<dbohdal@jaguar.ess.harri.com
+
+i can think of two differ method that you could try. 1) us fork and 
+execv 2) us the "system" call in your program.  i'm assum that you're
+run under the unix os of cours.
+
+-- 
+    _---_     steve  
+   / o o \    hsteve@hydra.unm.edu, hsteve@carina.unm.edu
+  | \___/ |   
+              just sai no to vm!!

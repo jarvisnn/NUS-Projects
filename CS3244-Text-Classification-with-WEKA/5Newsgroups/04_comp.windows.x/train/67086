@@ -1,0 +1,38 @@
+from: barr@pop.psu.edu (david barr)
+subject: re: tvtwm & xsetroot, x11r5 and sparc 10 keyboard
+organ: penn state popul research institut
+line: 32
+nntp-post-host: darwin.pop.psu.edu
+
+in articl <mailqueu-101.930420145015.384@oak.shu.ac.uk> d.haywood@sheffield-hallam.ac.uk write:
+>hi,
+>  environ: sun sparc 10, suno 4.1.3.  x11r5 path level 23.  my x process
+>is start by xdm.
+
+okai, that's good.  i'm type thi from exactli the same setup.
+(us-unix layout keyboard)  i did instal the sunkbd patch, though.
+
+>  i) i want to setup the backgroud (root window?) of the tvtwm displai to
+>     displai the escherknot etc (grei is a veri bore colour to work on)!
+
+make sure you're us "ssetroot", which come with tvtwm.  when tvtwm
+start up, it nuke the exist root window.  us an "ssetroot" after
+tvtwm start up.   (you could spawn off a "(sleep 10; ssetroot ...)&")
+you can also us "virtualdesktopbackgroundpixmap filenam" or just
+virtualdesktopbackground if you just want anoth color besid grei.
+
+> ii) when i open an xterm on the sparc 10, not all of the kei ar recognis
+>     and some kei on the keyboard ar not send the correct charact.
+
+did you instal the sunkbd patch?  it's in the contrib directori on export.
+all the kei on my keyboard send event properli, except the follow:
+the end, pageup, pagedown on the 6-kei cluster aren't recogn.
+even the compos kei work.  (though i can't seem to get the compos
+charact in an xterm to get pass.)
+
+anyon have a fix for the last two?
+
+--dave
+-- 
+system administr, penn state popul research institut
+* dog dianet ("woof woof woof?  page 725.") - kibo

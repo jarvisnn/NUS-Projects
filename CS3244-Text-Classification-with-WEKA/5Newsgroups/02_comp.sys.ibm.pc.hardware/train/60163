@@ -1,0 +1,24 @@
+from: rbspencer@vm.macc.wisc.edu
+subject: ftp problem on gatewai 486dx50
+organ:  univers of wisconsin chemistri comput center
+distribut:  usa
+line: 18
+
+we have a gatewai 486dx50 with a smc elit16 seri ethercard plu.
+
+when we us ncsa ftp to send from the gatewai with hash turn on, we see
+4 hash mark immedi.  then the comput  r e a l l y  drag.  if we turn 
+off the intern cach of the 486, the speed is better, but doesn't match
+the speed when we receiv to the gatewai.
+
+it doesn't matter if we send from the gatewai or get to it: 4 hash mark and 
+then extrem slow if the cach is not disabl.
+
+doe anyon know ani more about thi?  is there a fix?
+
+the gatewai wa purchas in june, 1992.
+
+pleas respond directli.  you wouldn't believ how slow the new is on thi 
+system.   
+
+thank. 

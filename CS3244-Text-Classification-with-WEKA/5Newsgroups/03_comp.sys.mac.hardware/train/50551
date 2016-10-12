@@ -1,0 +1,52 @@
+from: durtralp@ux1.isu.edu (ralph durtschi)
+subject: re: iisi clock upgrad
+organ: idaho state univers, pocatello
+line: 47
+
+hi, i have been get a lot of request for thi inform so i thought
+i would post it for those interest parti. (sorri for length).
+
+to increas the maciisi speed to 25mhz or 33mhz the clock must be chang
+from 40mhz to 50mhz or 64mhz respect.
+thi is done by go to a static-free work station or put some
+aluminum foil down to work on.
+	1. open up the si by lift the tab at the back of the case.
+	2. remov the hard disk by disconnect the power and scsi cabl,
+		spread the tab, and lift the drive out.
+	3. remov the flopi drive.
+	4. remov the power suppli by spread the tab in front and lift
+		the suppli straight up and out.
+	5. remov the fan by press the ear togeth at the back, bottom
+		side of the fan and lift straight up and out.
+	6. remov the mother board by spread the tab on the left and
+		right side of the board and slide the board forward then
+		lift the board out. (all connector on the back of the
+		board must be remov first)
+	7. desold the 40mhz clock (the on closest to the memori modul).
+		thi is not easi even for a skill solder.
+	8. get an ic socket with the round pin and remov four of the pin
+		by push them up from the bottom with long nose plier.
+	9. put the four pin in the hole vacat by the clock and solder 
+		them in.
+	10.insert a 50mhz or 64mhz clock.
+	11.put larg power transistor heat sink's on the processor chip and 
+		the other larg chip just to the right of the processor and
+		figur some wai to hold the heat sync's in place. i made a
+		simpl clamp by put a four inch screw up through the hole
+		in the board between the two chip. mount the screw us
+		insul washer. screw a cross member down over the heat
+		sync's to hold them in place. don't us too much pressur.
+
+	12. put it all back togeth and go-for-it.
+
+disclaim: thi is onli the procedur i us and is not author by anyon.
+	    you ar on your own for thi procedur. i'm quit sure it will
+	    void your warente.
+
+bye for now,
+************************************************
+ralph durtschi    (208) 236-3256
+idaho state univers
+email:  durtralp@ux1.isu.edu
+************************************************ 
+

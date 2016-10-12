@@ -1,0 +1,27 @@
+from: dla@se05.wg2.waii.com (doug acker)
+subject: xterm build problem in solari2.1
+repli-to: acker@se01.wg2.waii.com
+organ: western geophys explor product
+line: 20
+nntp-post-host: se05.wg2.waii.com
+
+..continu on my build problem, i got stuck here build xterm...
+
+gcc -fpcc-struct-return -o xterm main.o input.o charproc.o cursor.o util.o tab.o  screen.o scrollbar.o button.o tekproc.o misc.o  vtprstbl.o tekprstbl.o data.o menu.o -o2   -r/usr/wgep/x11r5.so5/lib${ld_run_path+\:$ld_run_path} -l../.././lib/xaw -lxaw -l../.././lib/xmu -lxmu -l../.././lib/xt -lxt -l../.././extens/lib -lxext -l../.././lib/x -lx11 -l/usr/wgep/x11r5.so5/lib  -lsocket -lnsl -ltermcap
+undefin                       first referenc
+ symbol                             in file
+index                               /usr/ucblib/libtermcap.a(termcap.o)
+rindex                              /usr/ucblib/libtermcap.a(termcap.o)
+ld: fatal: symbol referenc error. no output written to xterm
+*** error code 1
+make: fatal error: command fail for target `xterm'
+
+ani clue for help?
+
+--
+dougla l.acker                western geophys explor product
+____    ____     ____          a divis of western atla intern inc.
+\   \  /   /\   /   /\         a litton / dresser compani
+ \   \/   /  \ /   /  \        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  \  /   / \  /   /\   \       internet  :  acker@wg2.waii.com
+   \/___/   \/___/  \___\      voic     :  (713) 964-6128

@@ -1,0 +1,26 @@
+from: glb@uvac.cs.virginia.edu (gina bull)
+
+subject: need patch to us /dev/cgtwelv0
+
+organ: univers of virginia comput scienc depart
+
+line: 8
+
+
+
+the good new is we just got two sparc10's. the bad new is
+
+that /dev/cgtwelv0 is appar not support in x11r4 or
+
+x11r5. doe anyon know of a patch (and how i can obtain it)
+
+to either x version that will enabl us to us x11 on our
+
+sparc10's? 
+
+
+
+adthanksv
+
+gina
+

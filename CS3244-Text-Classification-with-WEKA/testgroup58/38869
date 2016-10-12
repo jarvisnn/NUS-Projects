@@ -1,0 +1,74 @@
+from: kbw@helio.ath.epa.gov (kevin b. weinrich)
+
+subject: summari: how to make a window's input be all cap
+
+organ: comput scienc corp.
+
+line: 30
+
+distribut: world
+
+nntp-post-host: helio.ath.epa.gov
+
+
+
+thank to bruce barnett, who recommend xvttool, and bernward averwald and
+
+liam quin, who recommend modifi .xdefault to get the desir behavior
+
+for a *class* of xterm.
+
+
+
+in xvttool, simpli creat a kei file that look like:
+
+"a"	"a"
+
+"b"	"b"
+
+"c"	"c"
+
+...
+
+and specifi said kei file on the command line.  thi will translat
+
+ani input into ani other (in my case, lo-case to up-case).  work great, and
+
+you get a customiz button-pad on the right or left side.
+
+
+
+to us an xterm solut, add to your .xdefault:
+
+capxterm*vt100.translat: #overrid \
+
+   <kei>a: string("a")\n\
+
+   ...
+
+
+
+or:
+
+capxterm.vt100.translat: #overrid \n\
+
+        <kei>a: insert-string(a) \n\
+
+        <kei>b: insert-string(b) \n\
+
+        ...
+
+
+
+and invok as: xterm -name capxterm
+
+
+
+thank load!
+
+-- 
+
+kevin weinrich     comput scienc corp.
+
+kbw@helio.ath.epa.gov
+

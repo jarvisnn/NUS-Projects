@@ -1,0 +1,45 @@
+from: beck@irzr17.inf.tu-dresden.de (andr beck)
+subject: re: 24-bit static color: will client like it?
+organ: dept. of comput scienc, tu dresden, germani.
+line: 37
+distribut: world
+repli-to: andr_beck@ir.inf.tu-dresden.de
+nntp-post-host: irzr17.inf.tu-dresden.de
+
+
+in articl <1993apr26.123918.1@vxcrna.cern.ch>, roeber@vxcrna.cern.ch (frederick roeber) write:
+|> 
+|> i'm write an x server for some video-gener equip.  the
+|> hardwar is "truecolor" in yuv space; in x term it ha a 24-bit
+|> static color visual.  i would realli like to have the server just
+|> present thi static visual, but i'm not sure if thi will be 
+|> accept to "most" x client.  the three problem i see ar:
+|> 
+|>   1) the colormap, though huge, is static.
+|>   2) all pixel would be 3 byte wide.
+|>   3) becaus the hardwar actual live in yuv space, the
+|>      translat rgb->yuv will introduc some round error.
+|> 
+|> be more of a server gui than a client gui, i ask: will these
+|> limit thwart mani x client?  or will most of the x stuff
+|> float around blith accept what thei're given?  i could write
+|> the server to also present a pseudocolor visual of, e.g., 8 bit, 
+|> but i'd rather avoid thi if not necessari.
+|> 
+
+even 24bit truecolor machin ar in most case run an emul
+8 bit pseudocolor visual, onli to get standard x client, motif app and
+thelik to run. i strongli suppos you to emul at least:
+
+> 24 bit truecolor. should be no problem, onli some translat. round
+  should not make big misfit
+> 8 bit pseudocolor. more of a problem, you have to emul a colormap,
+  pixel indic, convers stuff. furthermor, you should run your default
+  screen on thi visual.
+
+--
++-o-+--------------------------------------------------------------+-o-+
+| o |                \\\-  brain insid -///                       | o |
+| o |                    ^^^^^^^^^^^^^^^                           | o |
+| o | andr' beck (abpsoft) mehl: andr_beck@ir.inf.tu-dresden.de | o |
++-o-+--------------------------------------------------------------+-o-+

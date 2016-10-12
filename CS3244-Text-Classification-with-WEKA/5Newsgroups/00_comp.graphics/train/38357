@@ -1,0 +1,52 @@
+from: schultz@schultz.kgn.ibm.com (karl schultz)
+subject: re: vesa standard vga/svga program???
+repli-to: schultz@vnet.ibm.com
+organ: ibm aw graphic system
+keyword: vga
+line: 45
+
+|> 1. how vesa standard work?  ani document for vesa standard?
+
+	the vesa standard can be request from vesa:
+	vesa
+	2150 north first street, suit 440
+	san jose, ca 95131-2029
+
+	ask for the vesa vbe and super vga program starndard.  vesa
+	also defin local bu and other standard.
+
+	the vesa standard onli address wai in which an applic
+	can find out info and capabl of a specif super vga
+	implement and to control the video mode select
+	and video memori access.
+
+	you still have to set your own pixel.
+
+|> 2. at a higher resolut than 320x200x256 or 640x480x16 vga mode,
+|>    where the video memori a0000-affff is no longer suffici to hold
+|>    all info, what is the trick to do fast imag manipul?  i
+|>    heard about memori map or video memori bank switch but know
+|>    noth on how it is implement.   ani advic, anyon?  
+
+	vesa defin a "window" that is us to access video memori.
+	thi window is anchor at the spot where you want to write,
+	and then you can write as far as the window take you (usual
+	64k).  window have granular, so you can't just anchor 
+	them anywher.  also, some implement allow two window.
+
+|> 3. my interest is in 640x480x256 mode.  should thi mode be call
+|>    svga mode?  what is the techniqu for fast imag scroll for the
+|>    abov mode?  how to deal with differ svga card?
+
+	thi is vesa mode 101h.  there is a set displai start function
+	that might be us for scroll.
+
+|>   your guidanc to book or ani other sourc to the abov question
+|> would be greatli appreci.  pleas send me mail.
+
+	your best bet is to write vesa for the info.  there have also
+	been announc on thi group of vesa softwar.
+
+-- 
+karl schultz                             schultz@vnet.ibm.com
+these statement or opinion ar not necessarili those of ibm

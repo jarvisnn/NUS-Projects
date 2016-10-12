@@ -1,0 +1,32 @@
+organ: arizona state univers
+
+from: eric davi <icend@asuacad.bitnet>
+
+subject: re: help - 3ds
+
+line: 11
+
+
+
+in articl <c70zv4.9hq@ddtopper.dunde.ncr.com>, stephenc sai:
+
+>
+
+>in 3d studio, is there ani wai to creat refract, diffract etc ?
+
+>
+
+>i want to simul such thing as glass lens, bottl etc.
+
+
+
+there might be an ipa routin that doe that,but i can'r be sure.  anoth
+
+wai to do it is to render the scene without the glass object and save the
+
+imag.  then assign that imag to your glass object as a reflect.  it will
+
+take a lot of adjust for posit and size of the reflect, but that's
+
+the onli thing i can think of.
+

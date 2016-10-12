@@ -1,0 +1,18 @@
+from: bkline%occ.nlm.nih.gov (bob kline)
+subject: x11 load on the network
+organ: nation librari of medicin
+x-newsread: tin [version 1.1 pl8]
+line: 12
+
+can someon point me in the direct of ani paper (not necessarili
+formal conduct studi) discuss how much traffic x app gener
+for the network, particularli in comparison with curs-base app 
+over telnet?  also, doe an x server typic buffer up user keyboard
+input a line at a time?  can the x client control thi, ask for
+keystrok immedi?  thank in advanc for ani feedback!
+
+--
+/*----------------------------------------------------------------------*/
+/* bob kline                                      phoenix system, inc. */
+/* bkline@occ.nlm.nih.gov                        voic: (703) 522-0820 */
+/*----------------------------------------------------------------------*/

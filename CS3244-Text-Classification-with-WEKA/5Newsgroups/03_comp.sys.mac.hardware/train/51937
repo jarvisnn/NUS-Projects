@@ -1,0 +1,24 @@
+from: hade@coo.dartmouth.edu (brian v. hugh)
+subject: re: ad vram to quadra 800 ?
+keyword: vram quadra 800
+repli-to: hade@dartmouth.edu
+organ: dartmouth colleg, hanov, nh
+disclaim: person, i realli don't care who you think i speak for.
+moder: rec.art.comic.info
+line: 15
+
+wstuartj@lucki.ecn.purdu.edu (w stuart jone) write:
+
+>i want to go from 512k to 1m vram on my quadra 800.  how mani 512k simm do i
+>need to bui?
+
+    none. you need to bui 2 80ns 256k vram simm. thei cost about $30
+each from your favorit memori distributor.
+
+>is the current 512k solder on the board or do i need to take out the
+>current vram befor i add more?
+
+    the 512k is solder to the logic board. there ar 2 simm slot for
+expans.
+
+-hade

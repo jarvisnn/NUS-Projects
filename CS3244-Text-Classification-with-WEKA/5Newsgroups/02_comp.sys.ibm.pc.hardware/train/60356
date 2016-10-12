@@ -1,0 +1,54 @@
+from: jim@n5ial.mythic.com (jim graham)
+subject: re: possibl faq question about a uart
+keyword: 16550
+organ: what, me???  you must be joke.
+line: 48
+
+thought i'd post thi as well as e-mail it, just in case anyon els is
+interest in thi info.....
+
+in articl <1993apr15.054552.14548@henson.cc.wwu.edu>
+n9110338@henson.cc.wwu.edu (dan jordan) write:
+
+>   hello, my question is could someon e-mail me the name of manufactur
+>of the 16550 and predecsor uart.   i have onli seen them refer to by
+>number, howev i would like to find a technic manual for these ic.
+
+>  ani where i can find out the technic spec for these uart would be
+>appreci: prefer the 16450 as well as the 16550 howev on will do.
+
+i suggest that you go direct to the origin (and prefer...best qualiti)
+sourc for all of thi, just as you would (at least, should) for the chip
+themselv:  nation semiconductor.  you can reach them at 1-800-272-9959.
+thei no longer packag the data sheet in a book, as thei did when i got
+mine, but you can get them as individu set of data sheet.  you want, as
+a minimum, the follow:
+
+   *) 2 set of data sheet:
+      *) ns16450/in8250a/ns16c450/in82c50a
+      *) ns16550af
+
+   *) 2 applic note (ye, get these!):
+      *) an-491 the ns16550a: uart design and applic consider
+      *) an-493 a comparison of the in8250, ns16450 and ns16550af seri
+         of uart
+
+both of the applic note i list have proven to be at least as
+valuabl as the data sheet themselv (more, actual).  an-491, in
+particular, is an exception well-written applic note that goe
+into detail about how and why the 16550 doe what it doe, and how best
+to take advantag of it.
+
+btw, thei send these out free, as long as you don't abus it.
+
+later,
+   --jim
+
+--
+#includ <std_disclaim.h>                                 73 de n5ial (/4)
+------------------------------------------------------------------------------
+internet: jim@n5ial.mythic.com  |  j.graham@ieee.org     icbm: 30.23n 86.32w
+amateur radio: n5ial@w4zbb (ft. walton beach, fl)          amtor selcal: nial
+------------------------------------------------------------------------------
+e-mail me for inform about kamterm (host mode for kantron tnc).
+

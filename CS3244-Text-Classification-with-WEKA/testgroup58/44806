@@ -1,0 +1,58 @@
+from: ajaff@oddjob.uchicago.edu (andrew jaff)
+
+subject: xarchi 2.0.1 icon problem
+
+organ: univers of chicago, astronomi and astrophys
+
+line: 24
+
+
+
+
+
+hi! i've just instal the new xarchi 2.0.1 and it all work
+
+fine, except:
+
+
+
+on our grayscal xterm the custom icon compil into the
+
+program don't work at all, but on the bw termin it work fine.
+
+i can set the icon to an xbm file with .twmrc, but that doesn't
+
+give the neat-o chang when busi action. (other program with
+
+similar action, e.g. xmail, xbiff, work fine.)
+
+
+
+the x-interfac author, georg ferguson, suggest it might be a
+
+problem with the x intrins, but isn't will to hack around
+
+to fix it himself. but i know zero about x program, so i
+
+don't think i can find it. 
+
+
+
+doe anyon out there know an obviou fix for the problem?
+
+
+
+andrew
+
+
+
+-- 
+
+andrew jaff                                     ajaff@oddjob.uchicago.edu
+
+dep't of astronomi and astrophys, u. chicago
+
+5640 s. elli av                                (312) 702-6041
+
+chicago, il 60637-1433                           (312) 702-8212 fax
+

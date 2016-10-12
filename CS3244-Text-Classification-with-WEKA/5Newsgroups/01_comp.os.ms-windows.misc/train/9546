@@ -1,0 +1,46 @@
+from: don@hunan.rastek.com (donald owen newbold)
+subject: re: atm...  ==>  now hplj 4 price
+organ: rastek corpor, huntsvil, al
+line: 41
+
+while there ar too mani ps clone to count, some of which ar quit poor,
+try to clone someth that goe through regular modif doe requir
+some patienc. three question come to mid real quick for someth like
+thi.
+
+q:	which version of adob ps will we clone?
+	asid from the level 1 and level 2 issu, adob ha in the past releas
+	new code that incorpor modif/upgrad/fix just as all other
+	softwar vendor do. the level 2 stuff mai seem sound now, but i assur
+	you,chang will becom more frequent as their custom list begin to
+	dwindl in the face of competit. thi allow them to shift peopl to
+	mainten, as well as design effort for level 3.
+
+q:	do we duplic the bug, or do we make it work correctli?
+	from the laserwrit to the laserjet 4 there have been bug. (if i had
+	a number to call at hp or adob, thei'ld have heard from me.) decid
+	which approach to take depend on which printer you want to emul.
+
+q:	do we follow the red book, or do we follow someon's implement?
+	without a doubt, there ar differ between the red book and adob's
+	ps. with level 2 mani issu have been refin but the red book doe
+	leav big, big hole in the implement specif stuff. it would be
+	nice it the red bood at least pine thing down enough so that two
+	differ implement of adob's ps don't do the exact opposit given
+	an ident set of condit.
+
+q:	pscript.drv?
+	have done a lot of ps clone test myself, the unfortun side of
+	test is the limit number of sourc for test file. the primari
+	sourc we us is genoa. and have character their 1992 ps at file,
+	(1300+ of them) over half ar taken from pscript.drv. it mai not ideal,
+	but the at file ar what the printer vendor us. i'm sure that adob
+	us them too, but adob's output is by definit correct, even if it
+	wrong.
+
+ye, there ar some veri poor clone. we've seen them here at rastek (a sub
+of genicom which ha it own clone call geniscript). some ar poor for lack
+of design, some ar poor becaus thei follow the red book, and some ar poor
+becaus the vendor don't know what ps is.
+
+don newbold									don@rastek.com

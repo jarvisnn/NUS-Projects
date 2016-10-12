@@ -1,0 +1,29 @@
+from: barmar@think.com (barri margolin)
+subject: re: pulldown menu period hang applic on openwindow 3.0
+organ: think machin corpor, cambridg ma, usa
+line: 22
+distribut: inet
+nntp-post-host: gandalf.think.com
+
+in articl <1rgt23innonv@ssdc.ssdc.sterl.com> rlee@ssdc.ssdc.sterl.com (richard lee) write:
+>: a motif 1.2.2 applic will period hang when run against the
+>: openwindow 3. server (xnew).
+
+>i have seen the same problem us a sparcstat 10, solari 2.1, ow 3.1.
+>in my case, it happen far more often than "period".
+
+i don't know if there's a correspond patch for solari 2.1, but thi
+sound like the follow bug which is supposedli fix in 100492-06, the
+solari 1.x olwm jumbo patch:
+
+	1108642 - window system can hang in an errant pointer grab
+
+actual, i suspect that the ow 3.1 problem mai be differ, sinc the
+readm file sai that thi patch is just a suno 4.x version of the ow 3.1
+olwm (but mayb that line came from an earlier version of the patch, and
+thei forgot to take it out in the -06 version).
+-- 
+barri margolin
+system manag, think machin corp.
+
+barmar@think.com          {uunet,harvard}!think!barmar

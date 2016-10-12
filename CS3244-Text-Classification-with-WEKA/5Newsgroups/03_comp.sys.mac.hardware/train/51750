@@ -1,0 +1,82 @@
+from: brucet@extro.ucc.su.oz.au (bruce tulloch)
+subject: re: help! duo 230 problem
+nntp-post-host: extro.ucc.su.oz.au
+organ: sydnei univers comput servic, sydnei, nsw, australia
+line: 76
+
+bcherka@netcom.com (brian cherka) write:
+>chess@cat.ucsc.edu (brian vantuyl chess) write:
+>>  i just got a duo 230, and i'm have some difficulti.
+>>if the machin is plug in to the wall adapt, put to sleep,
+>>unplug from the wall, and woken up, it crash 75% of the time.
+>>(there's noth but the origin system softwar on the machin.)
+>>the batteri ha plenti of life - i think thi must be a power manag
+>>problem, but i don't know what to do about it.
+>>also, the speaker occasion make a high-pitch hiss.  the nois
+>>is irregular, but seem to favor sleep and restart command.
+
+>i've had my duo 230 for a few week now and suffer from both
+>of the abov problem. i reinstal my system softwar twice
+>in an effort to combat the problem - think thei were
+>system softwar problem. initi reinstal the system
+>seem to help but not anymor. occasion when i try to
+>wake up the duo i get a solid screen of horizont line on
+>the screen - it freez.
+
+>i also get the high-pitch hiss occasion - but onli at
+>startup.
+
+>i've call the appl hotlin (800 so-appl) three time
+>alreadi and final thei agre someth is astrai after my
+>duo's screen would go dim and the hard drive spun down by
+>itselft and put itself to sleep. thi problem onli occur
+>twice. appl sent me a box to ship my duo to be look at in
+>new york but the problem now is intermitt and i can't
+>afford to be without my duo at thi time.
+
+>anyon out there with these same problem?
+
+>-- 
+>brian cherka     * *    bcherka@netcom.com
+>                   i   
+>aol/brianc22      \_/    compuserv/71251,3253
+>netcom - onlin commun servic san jose, ca
+
+ye, quit a number of peopl it seem from discuss i've had (me
+includ). i bought my machin a coupl of week ago as well and
+start to experi these problem.
+
+appl australia via my dealer said that thi problem ha a number of
+potenti caus - faulti applic, faulti third parti hardwar
+(modem, memori etc), system softwar, pram corrupt and power
+manag corrupt, and the duo hardwar itself.
+
+none of the abov ar relev in my case except the last two mayb
+(no applic were run, the system softwar wa re-instal, i
+have no addit hardwar). i have found that clear pram appear
+to help for a while at least (hold down command option p and r on
+startup). unfortun the problem return suggest that pram is
+be corrupt by someth (system softwar bug ? - i don't have ani
+non-issu init in my system). appar the power manag can be
+reset by "hold the reset and interrupt button while power up" -
+appl's advic - but sinc the duo doe not have an interrupt button
+i'm not sure what thei mean in thi case. thi mai also help if
+someon can deciph appl's advic for me.
+
+beyond thi appl suggest that " you should follow the technic
+procedur to check the hardwar of thi duo". sinc so mani other
+appear to be have the same problem it would seem to me that there
+ha been a system softwar bug introduc somewher along the line -
+and quit recent too - sinc it onli seem to be recent duo 230
+purchas who have thi problem.
+
+ani more comment from other in the same boat ar welcom,
+particularli appl duo engin :-)
+
+cheer
+
+brucet
+
+-- 
+          bruce tulloch sydnei australia - brucet@extro.ucc.su.oz.au
+***complex problem have straight forward, easi to understand wrong answer***

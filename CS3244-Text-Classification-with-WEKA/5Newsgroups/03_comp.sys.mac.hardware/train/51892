@@ -1,0 +1,760 @@
+from: bgrubb@dant.nmsu.edu (grubb)
+subject: mac & ibm info-version 1.7.7
+organ: new mexico state univers, la cruce, nm
+line: 753
+distribut: world
+nntp-post-host: dant.nmsu.edu
+
+{send follow up to comp.sy.mac.advocaci. sorri about the header but the 
+pnew here doe not let on easili chang the header and i gave up after a 
+year of try. thi sheet is also avail by ftp on sumex-aim.stanford.edu 
+(36.44.0.6) in the info-mac/report as mac-ibm-compar177.txt.}
+mac & ibm info-version 1.7.7
+
+the reason for thi gener data sheet is to consolid and condens the 
+inform out there, so that peopl in both camp can be clear and accur 
+about what thei ar sai about their machin.  sinc comput technolog 
+is alwai chang there ar alwai go to be point in which the sheet will 
+be lack or incorrect on inform.  so, pleas just don't sai the sheet 
+is incomplet or incorrect but also give me clear and concis inform to 
+make the need correct.  all price ar in us dollar.
+to keep thi data sheet organ pleas provid, if possibl, articl 
+citat for the inform provid or correct and keep the opinion to 
+a minimum.  as thi is a gener data sheet, keep the info provid simpl so 
+i can understand what is be talk about and can explain it to other. 
+final, keep the inform relev to the section correct {for exampl, 
+os code in rom is softwar contain in hardwar, so no more of the 'but it 
+is support in os disk softwar' data for the hardwar section, pleas}. 
+thank you.
+note:  for proper read off line thi document should be in 9 point monaco.
+
+special thank to andrew@aardvark.uc.uoknor.edu (chihuahua charli), 
+andrew@frip.wv.tek.com (andrew klossner), bell-peter@yale.edu (peter bell), 
+bcoleman@hay.com (bill coleman), cj00+@andrew.cmu.edu (carl b jabido), d88-
+jwa@nada.kth.se (jon wtte) ephraim@think.com (ephraim vishniac), 
+fj05+@andrew.cmu.edu (faisal nameer jawdat), gsidler@cafe.eec.nwu.edu 
+(gabriel sidler), julian@deepthnk.kiwi.gen.nz (julian harri), 
+erick.krueger@um.cc.umich.edu, krueger@engin.umich.edu, 
+matt@wardsgi.med.yale.edu (matt heali), mark@bilpin.co.uk (mark allerton), 
+jokim@jarthur.claremont.edu (john h. kim), mem@jhufo.pha.jhu.edu (mel 
+martinez), nan@matt.ksu.ksu.edu (nan zou), pwagner%us.oracl.com, 
+s_fuller@iastat.edu, strobl@gmd.de (wolfgang strobl), 
+jkirvin@pafosu1.hq.af.mil, phill@ichip.intel.com, 
+shaikha@duvm.oc.drexel.edu, sxjcb@orca.alaska.edu (jai c. beaver), lewi 
+kawecki@novel.com, lamont@catfish16.rtsg.mot.com (bradlei lamont), 
+cerro@mbcl.rutger.edu ("cerro, joseph a"), mpark@utmem1.utmem.edu (mel park), 
+logullo@applelink.appl.com (jeff logullo), zrai02@hou.amoco.com (robert 
+irlbeck), and mikew@appl.com for provid some of the inform that made 
+thi list possibl.
+ content
+cpu
+hardwar
+ monitor support
+ expans
+oper system
+ os number crunch
+network & print
+
+the cpu
+ note: i am onli show motorola & intel cpu us in mac and most ibm/pc 
+clone machin. for exampl, sinc appl never us the motorola 68008 and 
+68010 in the mac these chip ar not list. year onli appear with dead cpu 
+and indic first to last year us as a cpu.
+cach note:  both ibm and mac us cach extern to the cpu. these extern 
+cach increas the speed of the cpu but ar not a part of it.  in most of 
+the present mac there ar extern cach built-in while with ibm thei ar 
+option {though machin ar gener sold with them instal}.  sinc 
+there ar mani differ extern cach {cpu-mac and ibm; scsi, video, disk 
+and static ram-mac}, each have a differ effect on cpu perform, and 
+thei ar machin {32kb static ram cach in iici, iifx, and iivx}, seller 
+{cach card instal in some iici} or expans {iici cach card go up to 
+128kb} depend, i have decid to leav them out of the list.
+note:  alu is industri's de-facto standard for cpu bit classif.
+ibm     alu  regist    extern     cpu     featur/
+cpu                     bu  address  cach    note
+8088(6) 16      16    8 (16)   20     none     {1981-9} {198?-9}
+80186   16      16      16     20     none     {198?-9?} segment
+80286   16      16      16     24     none     80186 + protect mode
+80386   32      32      32     32     none     mmu & 32-bit protect mode 
+486sx   32      32      32     32    on 8k    80486 - fpu
+80486   32      32      32     32    on 8k    80386 & fpu
+486dx2  32      32      32     32    on 8k    doubl intern clock rate*
+486dx3  be demo. 20/60 mhz, 25/75 mhz, and 33/99 mhz plan.
+pentium 32      32      64     32    16k code, cisc chip with risc-like  
+   5                                 16k data  featur, 2-issu superscalar, 
+ [p 5]                                         386 write-back, 64-bit
+                                               fpu path, pipelin; speed:
+                                               specint92: 64.5; specfp92:
+                                               56.9**
+
+386sx: 386 chip with 32-bit intern/16-bit extern architectur.
+286 and 386sx chip can address to 16mb maximum ram.
+386sl: low power(3.3v) 386sx with built-in power manag.  us mainli on 
+laptop.
+386slc: ibm 5v 386sx with a 16k on-chip cach ad (john h. kim).  as far as 
+john h. kim know it is onli us on ibm model.
+486slc: neither of two chip that have thi name have a fpu.  cyrix: basic 
+486sx in 386sx socket with 1k cach and improv integ math speed.  ibm: 
+equival to the 486sx except it ha a 16k on-chip cach.
+
+* ex. for 486dx2/50, chip run 50 mhz rest of machin run at 25 mhz.
+***(pc week 04/12/93; pc mag 4/27/93:138) "the latest in a line of cisc chip" 
+(pc mag 4/27/93:110)  sampl releas march 22, 1993, but machin will not 
+be announc until at least mai 1993 (pc week 2/08/93).  $1000 a cpu; system 
+$5000 and up (pc mag 4/27/93:110). 
+
+mac     alu  regist    extern     cpu     featur/
+cpu                     bu  address  cach*   note
+68000   16      32      16     24      none    {1984-1993} 16mb limit**
+68020   32      32      32     32    256 code  {1987-1992} parallel process
+68030   32      32      32     32    two 256   68020 + mmu, 16k burst mode
+68lc040 32      32      32     32     two 4k   68040 - fpu
+68040   32      32      32     32     two 4k   mmu, fpu, pipelin, doubl 
+                                               intern clock rate***
+68050	develop discontinu in favor of 68060
+68060   32      32      32     32     branch   68040 + a better fpu,  
+                                      target   superscal pipelin, cach 
+                                               line burst, equival 
+                                               capabl & speed to 
+                                               pentium*#
+
+*includ data and instruct {code} cach.  the 68030, 68lc040, & 68040 
+have built-in cach for both.
+**68000 mac design creat a 4mb limit.
+***the 040 ha 2 clock, an intern processor clock [pclk] that is 2x freq of 
+extern bu clock [bclk] which is the on us to rate the chip 
+(bradlei lamont; motorola 68040 data book).  some compil produc program 
+sensit to the pclk and so thei act as if the 68040 wa a clock doubler 
+chip, but thi veri compil and program depend.  complier mayb written 
+to allow program to take consit advantag of the 68040's pclk in the 
+futur.  as it is now, studi such as on in a byte articl {which show 
+040/25 ~486/50 and roughli ~486dx2/50} ar veri depend on the machin, os, 
+and program test and as such ar not repres of gener perform.
+*#motorola claim (pc week 09/07/92; 09/14/92).
+
+as the powerpc ar to be in both ibm and mac machin i have list them 
+separ to elimin redund.  thei ar motorola cpu risc chip.
+
+powerpc alu  regist    extern     cpu     featur/
+cpu                     bu  address  cach    note
+mc98601 32      32    32 int   64     32k      speed:  specint92: 50; 
+ [601]                32 fp         combin   specfp92: 80*
+                                      i/d      
+mc98603: low power mc98601 for desktop & portabl system. out by end of 1993.
+ [603]
+mc98604: high perform mc98601 for high end machin. out by 1st q 1994.
+ [604]
+mc98620 64      64    32 int   64     32k      out by mid 1994.
+ [620]                32 fp         combin    
+                                      i/d      
+
+*(pc week 04/12/93; pc mag 4/27/93:138).  select vender were sent sampl 
+mc98601 chip by motorola 2/93 (pc week 2/08/93), and some nubu board 
+contain earli sampl of powerpc 601 have been given to appl's "a-list" 
+develop (pc week 12/7/92; macweek 12/14/92).  mc98601/50mhz-$280;
+mc98601/66mhz-$374 (pc week 4/12/93).  system: ~$3500 with ~$2000 version
+out by mid 1994 (pc week 4/12/93).
+
+cpu comparison list
+as a gener rule of thumb motorola chip ar faster than intel chip at the 
+same frequenc {030/25 ~= 386/33; 040/25 ~= 486dx/50}, but intel ha chip at 
+higher frequenc than motorola, so thi even out.  the macintosh bibl 4th 
+ed. support the comparison between intel and motorola chip for the 68020 
+and abov.
+
+<=80186    ~ 68000 {16-bit vs 16/24/32-bit chip [data path/address 
+line/data & address regist].  the 4mb limit on the 68000 mac bring it 
+down to the 80186 and lower chip, otherwis it would compar to the 80286.}
+
+286        ~ 68020 {hardwar segment vs. 68020's 32-bit alu and these chip 
+come have no usabl built-in mmu unlik their successor [80386, 68030].  the 
+hardwar segment's protect mode is us by os/2 1.0 => and window 3.x. 
+the us of the hardwar segment and their 16-bit natur put the 286 between 
+the 60000 and 68030 in featur and the lc's 16-bit data path strenghthen the 
+286 ~ 68020 comparison.}
+
+386       ~ 68030 {two 32-bit chip with mmu, and protect memori.  a/ux 3.0 
+is at present the onli mac os to us the 68030's protect memori featur for 
+app.  system 7.x us thi featur to protect a ram disk creat by the 
+memori control panel but thi is support onli on powerbook and quadra.  
+the color classic and lcii 16-bit hardwar data path make the 68030s in them 
+compar to 386sx.}
+
+486sx   ~ 68lc040 {same as 486 and 68040 without the fpu; us as a low cost 
+solut for peopl who do not need the fpu.  onli with program sensit to  
+pclk & pipelin doe the 68lc040 behav like 486dx2 - fpu or a '486dx2sx'.}
+
+486     ~ 68040 {two 32-bit microprocessor with built-in fpu, mmu, 8k 
+intern cach (which is implement as two 4k cach in the 68040 and on in 
+the 486).  onli with program sensit to pclk & pipelin doe the 68040 
+behav like a 486dx2.}
+
+pentium   ~ 68060 {both ar plan to be superscalar but both have heat 
+problem.  these chip mai flounder against the cheaper (pc week 3/08/93; 
+4/12/93; pc mag 4/27/93:110), earlier releas (pc week 12/7/92; macweek 
+12/14/92; pc week 2/08/93), less leat produc {160 degre f for pentium
+(pc mag 4/27/93:118)}, and partli port to powerpc chip.} 
+
+powerpc   = powerpc {thi cpu line is plan to run program from do, 
+window 3.x, os/2 and mac os on top of poweropen-a/ux 4.0 [unix] and later 
+pink [talig os] by us emul or, if necessari, the os themselv in 
+a 'shell' a.k. how softpc or os/2 doe do.}
+
+hardwar 
+{in an effort to remov the 'reconfigur the system almost everi time you 
+add someth' requir for add-in card, driver, video, and oper 
+system in the ibm world, intel, microsoft and 12 other hardwar and softwar 
+develop ar work out 'plug and plai' standard (pc week 03/08/93).}
+color support/displai
+ mac: 30.24 mhz pixel clock standard.  all present mac support the us of 
+32-bit color through 32-bit color quickdraw in rom.  32-bit color quickdraw 
+allow an almost transpar capabl to displai and edit x-bit imag in y-
+bit color and retain all the color of y-bit color [where x and y 
+independ ar 1, 2, 4, 8, 16, or 32] regardless of monitor resolut {63 
+dpi [12" color] to 94 dpi [palettebook]} or monitor type {includ 
+autosynchron vga, mcga and svga monitor with rang includ 66.7 hz 
+vertic and 35 khz horizont and onli a hardwar video adaptor (macus 
+aug 1992: 158-176).  older machin that support color {se/30, ii, iix, and 
+iicx} had onli 8-bit color in rom and need a softwar patch to us 32-bit 
+color (macus special 1993:28-29).  
+to keep cost down and speed up most mac have onli 8 or 16 bit displai 
+capabl built-in, but most of those can be expand to displai 24-bit 
+color.    present quickdraw is optim for 72 dpi displai; quickdraw qx 
+will chang thi.
+in addit, quickdraw allow, in mac with a nubu slot, more then on 
+monitor to be us in ani combin, from two monitor show the same 
+thing to multipl monitor act as on larg larg monitor with ani degre 
+of overlap of the pictur.
+vram: video ram.  standard for present non-powerbook mac's handl of 
+ built-in video {from a 32-bit color palett}. vram provid run a 8-bit
+ color 640x480 displai; expand to 16-bit color or a 8-bit 832x624 displai. 
+sound output:  standard in all mac sinc the 128k.  stereo sound becam 
+ standard with the se/30.
+
+ibm:  even though pc have rom bio definit of how the oper system 
+interact with the video hardwar (nan zou), the us of driver bypass 
+bio, video harewar inconsit {see super vga below} and nonstanderz
+of clone bio have left resolut of video displai hardwar, os and program 
+interact up to the os and video hardwar in question (faisal nameer 
+jawdat). in addit, ibm and clone maker never bother to provid a 
+standard hardwar mechan for softwar to determin what displai mode is 
+actual present (matt heali) nor a standard screen-draw toolbox {like 
+mac's qd}. as a result the os must be veri well written to detect some mode, 
+especi with some third parti card or to us them consitantli {at present 
+thing ar so depend on the interact of the program, os, print driver 
+and monitor card that edit 32-bit pictur regardless of color mode, os, 
+and monitor type/card combin as on can do on the mac is imposs with 
+an ibm.  for exampl, on cannot edit a 32-bit color pictur done on a os/2 
+486 with a svga monitor on a 386 with vga {18-bit color palett} and do 5.0 
+and still have all the color on start out with}.
+later ibm machin will have integr graphic acceler, faster 
+processor, and modular upgrad and mai have built-in sound card, cd 
+rom, and ethernet (pc week 12/14/92).  
+mda: monocrom displai adapt
+ origin charact-map video mode, no graphic, 80x25 text.
+cga: color graphic arrai
+ 320x200 4 color or 640x200 b/w, 16 color palett, bad for the ey.
+ega:  enhanc graphic arrai
+ 640x350 16 color from 64 color palett [and some lower re]; some version 
+ could run at 256 color, bearabl on the ey.
+vga:  video graphic arrai*
+ 320x200 at 256 color, 640x480 at 16 color, and some other, these two ar 
+ the most commonli us.  all mode have a 256k clut, from a 
+ 18 to 24-bit {ibm} or a 32-bit {mac} color palett.  25.175 mhz pixel clock
+ (mel martinez).  monitor us analog input, incompat with ttl signal
+ from ega/cga etc. 
+mcga:  multi-color graphic arrai*
+ subset of vga that provid all the featur of mda & cga, but lack some ega 
+ and vga mode, like vga 640x480x16 (dictionari of comput term-dct).  
+ common on the initi ps/1 implement from ibm and some ps/2 model.
+svga:  super vga*
+ thi is not a standard in the wai the other were, but instead wa a 'catch 
+ all' categori for a group of video card.  as such, with each manufactur 
+ us their own implement scheme, svga wa chao with peopl debat
+ as to what is svga and what is not.  in an effort to make svga more of a 
+ standard vesa wa establish and is us in the newer unit, but thing
+ ar still a mess.  video is either 512k [~1990] or 1m [todai], resolut
+ of 800x600 and 1024x768 at 16 and 256 color ar common, newer on [sinc 
+ 1990] have the sierra hicolor ramdac, give 15-bit 32,768 color at 800x600, 
+ some of the veri newer on [~6/92] can do 24 bit per pixel [usual 
+ at 640x480].  speedwis, too much variat, some veri slow [western digit 
+ paradis base, for exampl], some veri fast [s3 86c911 base, for exampl], 
+ some ar so-so [like tseng et4000, a veri popular chipset].  some limit 
+ factor overcom by 40mhz vl bu & 386's linear address map were: 
+ 8.33 mhz isa bu, at architectur where the cpu look at the card through a 
+ 64k "window", etc.
+other non-svga standard: 
+8514/a:
+ ibm's own standard, interlac graphic acceler with graphic function 
+ like linedraw, polygon fill, etc. in hardwar. some clone implement 
+ from ati ar the fastest video avail todai, though some clone model do 
+ not have interlac. 
+tm34010/34020: high end graphic co-processor, usual >$1000, some
+ do 24-bit, speed up vector-orient graphic like cad.
+xga:  extend graphic arrai
+ newer and faster than 8514/a, onli avail for mca bu-base ps/2s, clone 
+ ar come out soon.  emul vga, ega, and cga (dct).  max resolut at 
+ 1024x768x8b, same as 8514/a, also some 16 bpp mode.
+xga-2
+ acceler graphic function up to 20 time faster than standard vga in
+ window and os/2, includ line draw, bit and pixel-block transfer, area
+ fill, mask and x/y address. ha an intellig wai to detect and co-
+ exist with other xga-2 card, so multipl desktop like on the mac mai not be 
+ far awai.  sinc thi is an architectur, it resolut and color depth 
+ isn't fix {ibm implement onli 16-bit [65,536] color, while other 
+ compani can have 24-bit color through ibm technic licens}. refresh 
+ rate up to 75 hz, ensur flicker free, rock solid imag to reduc visual 
+ discomfort, and is vga compat. up to 1280x1024 on os/2.
+*some monitor type usabl by mac-see mac section abov for specif detail.
+
+expans
+both mac & ibm
+scsi: onli extern devic expans interfac common to both mac and ibm.
+ allow the us of ani devic: hard drive, printer, scanner, nubu card 
+ expans {mac plu onli}, some monitor, and cd-rom.  
+ main problem:  there ar a lot of extern devic which ar intern 
+ termin which caus problem for more then two devis off the scsi port 
+ {a scsi chain is suppos to be termin onli at the begin and at the 
+ end.  ani other set up caus problem for either mac or ibm}. 
+scsi-1:  7 devic per scsi control.  8-bit asynchron {~1.5mb/s av}
+ and synchron {5mb/s max} transfer.  differ is due to scsi-1 softwar
+ driver.  "fast scsi-1" is a misnam for 8-bit scsi-2 in scsi-1 mode
+ {see scsi-2 for detail}.
+scsi-2: 10 devic per scsi control in scsi-2 mode.  scsi-2 is fulli
+ scsi-1 compliant and 8-bit scsi-2 tend to be implement as a veri fast
+ scsi-1 sinc it doe not requir the differ control interfac in  
+ hardwar and softwar that 16 and 32-bit scsi-2 do.  transfer speed ar
+ 4-6mb/s with 10mb/s burst {8-bit}, 8-12mb/s with 20mb/s burst {16-bit}, and
+ 15-20mb/s with 40mb/s burst {32-bit/wide and fast}.  sinc 8-bit scsi-2 can
+ us scsi-1 softwar driver and hardwar at 8-bit scsi-2 speed and as such
+ is limit to 7 devic sometim it is mistakenli call "fast scsi-1". 
+ 16-bit fast scsi-2 requir a scsi-2 softwar driver and scsi-2 electron
+ but can still us the scsi-1 port.  wide 16-bit and 32-bit scsi-2 requir a
+ differ scsi port, electron, and softwar driver from scsi-1 {which
+ make them more expens than other scsi interfac}.
+mac scsi: asynchron scsi-1 built-in standard sinc the plu.  even though 
+ appl develop some specif for scsi control, the os scsi manag
+ need to be rewritten to take full advantag of the featur of both scsi
+ interfac.  as a result present scsi-2 mac us 8-bit scsi-2 as a fast 
+ asynchron scsi-1.  present quadra ar the onli mac with a scsi-2
+ control chip built-in (digit review, oct 21, 1991 v8 n33 p8(1)) 
+ though thei lack some other part of the hardwar, like the wide scsi-2 port 
+ interfac.  sinc other mac requir a nubu card to us scsi-2, older nubu 
+ mac had a bottleneck due to the speed of the nubu and cpu.  rumor-some
+ cyclon mac {june} will come with a wide & fast scsi-2 port standard 
+ and have a rewritten os scsi manag.
+ibm scsi:  scsi-1 is not too wide spread yet, gener not bundl with 
+ system, except as add-on {eisa and vesa local bu adapt aval}.
+ like the mac, 8-bit scsi-2 is us as a veri fast scsi-1 by most control
+ out there.  unlik the mac, ibm ha no exact scsi control specif
+ which result in ad incompat for scsi.
+
+mac
+memori expans: with a few except the mac ha us non-pariti 30-pin 
+ 8-bit simm memori expans sinc the plu.  while 32-pin 9-bit pariti simm
+ could be us in these mac, onli special iici could make us of the pariti 
+ featur {by convens both simm type ar call 32-pin simm}.  the iifx 
+ us 64-pin pariti simm.  the lc iii, c610/650 and q800 all us a new 
+ 72-pin simm that is access by 32-bit at a time and is us in ibm.
+ the mac doe a complet memori check at startup by write/read everi
+ memori locat; if someth is serious wrong with a simm the mac will
+ not boot and give a sound chord indic what the problem is.
+ sinc mac made befor feb 15, 1993 manag memori bace on data path, simm 
+ had to be instal in pair {16-bit} or in set of 4 {32-bit}.  the centri 
+ 650 and quadra 800 elimin thi with a new memori manag setup that 
+ allow memori to be upgrad on simm at a time.  if the simm ar the same 
+ size ar us then the memori is 'interleav' across the two simm result 
+ in a 10-15% perform boost on ram access (macworld apr 93: 108-109).
+printer, adb, and modem: built-in interfac standard.
+monitor interfac and sound input: built-in on most present mac. 
+pd: avail in se & all present non-powerbook mac. 16-bit {se, 
+ portabl, lc, lc ii, classic line} and 32-bit.  oper at cpu's mhz.  
+ maximum through put: data path in byte*cpu's mhz {q700/900 & c650: 
+ 4 * 25mhz = 100mb/s; q800 & q950: 4 * 33mhz = 132mb/s}. standard with
+ the lc and 040 bu design.  with an adapt on nubu card can be us in 
+ iisi and c610.  problem: some card have time depend which slow 
+ through put down.
+nubu mac ii: 32-bit, 10 mhz bu clock, 1-to-1 transact/bu cycl ratio,
+ and contigu, hand-shake transact at ~10-20mb/s; theoret peak:
+ 40mb/s.  built-in on all modular mac except the lc seri, c610, and 
+ performa 400.  the se/30 could be adapt to us thi and there wa even a 
+ mac plu scsi nubu.  support everi possibl expans from cpu to ethernet 
+ to dma.
+nubu 90: nubu mac ii back compat. 20mhz bu clock, avg throughput:
+ ~30mb/s; burst mode: 80mb/s.  futur card design will be 7" instead of the 
+ old 12".
+quickr:  a peer-to-peer bu us in parallel with nubu 90.  appl's 
+ vlbu - "architectur is ident to that of vlbu" (byte 10/92:128).
+ burst mode: 350mb/s (byte 10/92:128). in develop.
+cpu expans: handl either through the pd or the nubu.  unlik pd,  
+ nubu cpu card {exampl-radiu rocket} allow us of multipl processor at 
+ the same time.  thi is like have two or more mac in the same box abl to 
+ dual task or joinli process depend on the card or softwar involv {each 
+ nubu card need it own memori but most nubu card of thi type come with 
+ 8mb ram simm on the card standard}.
+
+ibm
+memori expans:  pariti simm, non-pariti simm {some newer model do a mac-
+like simm memori check}, or a dozen or so differ type of memori board.
+
+hd interfac {limit to hard drive by design or lack of develop}: 
+mfm:  modifi frequenc modul, rll:  run length limit
+ onli us with smaller [² 60mb] hard drive.
+id:  integr devic electron 
+ asynchron {~5mb/s max} and synchron {8.3mb/s max} transfer.
+ current the most common standard, and is mainli us for medium size 
+ drive. can have more than on hard drive. 
+esdi:  enhanc small devic interfac
+ ~1.25mb/s throughput. gener consid better interfac than scsi-1 in
+ mani wai but not common enough for practic consider.  outsid of
+ hard drive, devic choic ar veri limit compar to scsi-1. 
+
+bu interfac
+{new 'plug and plai' isa and eisa compat card mai have problem work 
+with old card (infoworld; pc week 03/08/93; vaporwar 4/93).}
+isa
+ 8 & 16-bit interfac common. ha 24-bit data path limit {which produc a
+ 16mb limit for which there ar softwar workaround} (pc mag 4/27/93:105).
+ 1.5 mb/s (byte 3/93:132).  us edg-trigger interrupt, can't share them,
+ henc come the irq conflict.  limit busmast capabl, some card
+ aren't bandwidth limit {com  port, lpt port, game port, midi card, etc.}
+ while other ar {video and disk control}.  domin factor, but it's
+ show it ag.  most isa motherboard design ar 16-bit
+ (pc world feb 1993: 144-5)}.  
+mca {micro channel}
+ ibm's 16 and 32-bit bu; "allow us of more than on cpu in a comput" 
+ (dct) and anyth can talk to anyth, as fast as the two compon 
+ involv can handl it. never took off becaus it wa incompat with isa 
+ and eisa.  plan to be bu interfac of ibm powerpc 601 (carl jabido).
+eisa {nubu mac ii is closest mac equival}
+ 32-bit, 8.33 mhz, burst mode: 33mb/s.  it also ha the abil to 
+ self-configur card like mca and allow multipl bu master, sharabl 
+ interrupt and dma channel and multipl cpu us.
+vesa local bu: vlb {sometim mistakenli refere to as pd}
+ local bu standard. run at cpu clock rate,  burst mode: ~130 mb/s{32-bit}
+ 250 mb/s{64-bit} (byte 10/92:128).  limit to three slot but allow bu 
+ master and will coexist with either isa or eisa. consit ideal for 
+ video and disk i/o.  dell ha fill a claim that thi violat on of
+ their patent (mel martinez).
+quickr: appl's faster {350 mb/s burst} version of vlb architectur
+ (byte 10/92:132).  might show up in some ibm and powerpc machin
+ (byte 10/92:132-133). in develop.
+pci
+ intel's version of local bu that is intend to total replac 
+ isa/eisa/mca.  in develop.
+
+os {assum full instal [print driver, font, multifind, etc.]
+and multipl applic us.}
+mac
+512k to 1mb of os and hardwar command have been put into rom.  thi allow 
+appl to control it machin by put kei hook for the mac os {quickdraw, 
+menu command, print, mous, scsi & sound driver, etc} in rom, which requir 
+clone maker to us the rom chip or read rom on to disk {which requir 
+access to the proper mac sinc differ mac have slightli differ rom 
+chip; plu vs classic for exampl.}  with kei hook for the os support 
+interfac in rom, program do not have to worri as much whether the disk os 
+ha the necessari hardwar command or that those command ar consit and 
+therefor can write smaller program.  thi also allow appl greater control 
+over hardwar-softwar standard and that the disk os can be smaller and, with 
+some of the tookbox command code in rom, with lower ram requir then a 
+total disk base os.  mac us mask rom which is as fast as dram (jon 
+wtte).
+6.0.7: singl program usag base requir: 1 mb and dd floppi, 
+ cooper-multitask base requir: 2mb and hd floppi.  
+ featur a gui, cooper-multitask [multifind], standard program 
+ interfac, & standard stereo sound support [snd]. network receiv part of 
+ appleshar softwar is bundl with the os. ha a 8mb ram barrier and is a 
+ 24-bit os. some third parti product allow 14mb of virtual memori as long as 
+ real ram is below 8mb.
+6.0.8: 6.0.7 with 7.0.0 print driver.
+6.0.8l:  system 6 for some mac that requir system 7.0.x.
+7.0.x: base requir: 2mb, 40mb hard drive, and 68000; de-facto standard 
+ to run all featur well: 4mb, 80mb hard drive, and 68030 {lowest present 
+ non-portabl mac configur}.  us up to 10.08mb {thi is everyth on
+ system disk} of hard disk space thi ha 6.0.7 featur plu program link 
+ within and between comput [iac], built-in server capabl {fileshar 
+ can be us by older os us appleshar client softwar and can be 
+ access by 10 mac max; 4-5 is more speed practic, iac requir 7.x}, 
+ virtual memori in machin with mmu{1.6 time real ram for least notic 
+ iisi speed degrad}, drag and drop, quicktim & built-in truetyp 
+ support.  support sound input [aiff and snd format] for most present 
+ machin.  can access up to 1gb of true ram and 4gb of virtual memori and is 
+ both a 24 and 32-bit os.  to us real ram beyond 8mb it must be in 32-bit 
+ mode and on older machin requir the 'mode 32' extens.  appl's last 
+ 'free' os.
+7.1.0: 7.0.1 with worldscript support, speedier, and less ram usag than 
+ 7.0.dot (macweek 8/24/92; 9/14/92; pc week 9/7/92). to run in 32-bit mode 
+ on older machin it requir the 'mode 32' or '32-bit enabl' extens. 
+ mark the start of appl sale it mac os instead of allow free upgrad
+ {bundl with new machin, $49 for 7.0.x upgrad, $99 otherwis}.
+ [the instal ha a bug that when upgrad it mai keep some old system 
+ font from the previou system insid the system file.  thi can eat up ani 
+ ram benefit and caus other problem.  appl itself recommend remov all 
+ font from the system file.]
+a/ux 3.0 [unix]: need 8mb ram {12-20mb suggest}, 160mb hard drive, and 
+ a 68030 or 68040 equival to run.  thi 32-bit preemptiv multitask os 
+ is larg due to be unix and need translat between it and the mac 
+ rom.  price: $709.
+note: sound output wa support in os 3.2 to 6.0.5 by mani format 
+includ the follow:  snd, wave, asnd, fssd, qssn, smsd, soun, dc2d, and 
+dcfl.  in 6.0.7 the sound manag wa optim for the sound standard 'snd' 
+and aiff which caus some playback problem for the old format, though most 
+still plai.
+
+ibm
+ machi have littl gui code, data, and hook present in hardwar for 
+programm to work with, so most of the code must be provid in the os.  
+sinc hard disk were slow the disk os code is read into ram.  in addit, 
+what littl rom code there is also read into ram {a process call shadow rom}  
+thi result in faster implement sinc ram is faster then prom or 
+eprom.  have most of the os code on disk ha the advantag of be abl to 
+better optim the code given a certain piec or collect of hardwar which 
+is harder with a rom base system due to the 'patch' need.  in addit it 
+reduc the need for and size of patch if a major revis of the hardwar 
+support is need.
+side note:  the ftc charg that microsoft form a os trust by not provid 
+all featur document for it os to develop outsid ms and design 
+it window and do app to fail under os/2 ("undocu window") and 
+"there is deliber code in [window] nt beta which caus the instal to 
+abort if os/2 boot manag is present" (gregori hick, info-ibmpc digest v92 
+#201).  due to a conflict of intrest by on member the vote of the ftc 
+judici council for action against microsoft wa a tie which result in no 
+action.  rumor-the ftc will presu the matter, like to the point of 
+choos a new member or whole new council.  in addit the govern ha 
+turn down microsoft's copyright of "window" which would allow it to charg 
+a fee for develop us their hook (pc week 03/08/93).
+microsoft os
+do 5.0: ha a 640k barrier with it own memori manag, a 1 mb barrier 
+ with third parti memori manag.  thi 16-bit os requir that each program 
+ must provid it own print driver and be 16-bit {program need to be do 
+ protect mode interfac (dpmi) compliant and run on a 386dx [32-bit 
+ protect mode] to break these barrier}.  contain the gui shell present in
+ do 4.0.
+do 6.0: do 5.0 with the ad featur of a built-in file compres, disk 
+ defragment, debugg for the config.sy file. it need a $80 modul for 
+ network {cost: $50 through 5/93, after that $129.99} 
+ (byte april 1993:44-46).
+do 7.0: 32-bit do. in develop (pc week 04/05/93).
+window 3.0: run on top of do.  break 640k and 1m barrier but still ha to 
+ deal with do file structur.  base requir: 1mb, floppi and 286; to
+ run well 2mb, hard drive, 386sx and fast displai adapt {> 8-bit}.  ha the
+ equival of mac's qd call window gdi [graphic devic interfac].
+ thi doe not have a consist applic interfac {like earli mac
+ program  (1984-1985)} nor a veri larg program base {compar to do} and
+ still tend to slow the machin down (info-ibmpc digest v92 #186) with speed
+ is more depend on the displai adapt then on the cpu (bill coleman).
+ window program tend to be disk and memori hog compar to their do
+ counterpart (byte april 1993:98-108).
+window 3.1: a faster version of window 3.0 with better memori manag. base 
+ requir 1 mb, hard drive and a 286 ;to run well 2mb, hard drive, 386sx. 
+ appl plan to releas it print driver for thi (pc week 12/28/92).
+window for workgroup:  to run well: 4mb ram and 386dx (pc world feb/93:160).  
+ intermediari between win 3.1 and window nt.  it is basic window 3.1 
+ with built-in peer to peer network support.
+window nt:  beta releas take about 50mb of disk space [includ the 
+ swap file], and 12mb ram {beta ar notori for ram usag especi in 
+ the interact between debug code and program complier, henc the 
+ report of 24mb requir}.  releas version suppos to need 8mb ram 
+ but, gate himself now recommend 16mb ram (pc week 04/15/92).
+ thi 32-bit os ha protect mode multitask, multithread, symmetr 
+ multiprocess, a recover file system, and 32-bit gdi.  ha built in
+ network that is osf dce compliant and can handl up to 4gb of ram.  even
+ though some peopl see a juli 4 releas date (infoworld nov 16/92), rumor
+ is that the final version will not be avail befor oct 1993
+ (infoworld mai 25/92; juli 6/92; vaporwar 07/92; 08/92) or 4th quarter 1993
+ (pc week 09/28/92). window upgrad will be $295, otherwis $495
+ (pc week 04/15/92; 03/15/93).
+other os
+pc-do 6.0: ibm's version of do 6.0.  it run window much faster then do 
+ 6.0 due to faster file i/o and video handl (infoworld feb 1, 93).
+dr do 6.0: same as do 5.0 with some extra {like built-in data compress} 
+ and memori manag enhanc. still ha 640k/1mb barrier.  a later 
+ version {novel do} of thi mai us a version of the mac finder and appl 
+ file manag system (pc week 12/14/92; infoworld dec 14/92).
+os/2 2.0: unix like featur and unix like requir; 8-16mb ram,
+ 60mb {us 17-33mb} hard drive, and 386dx cpu. thi 32-bit multithread, 
+ multitask os can address up to 4gb of ram but ha to us a fast swap file 
+ to us more than 16 mb ram on isa system us dma {direct memori access}. 
+ ibm plan to us talig's oop in futur version of thi 
+ (infoworld oct 26/92).
+aix:  ibm's unix system, plan to be a subset of poweropen and talig os.
+nextstep: gui unix to provid next featur on ibm machin.  beta out, final 
+ version to be out by mai 25, 1993.
+solari os for x86: a sunsoft port.  a 32-bit os with symmetr 
+ multiprocess and multithread, built-in network capabl with 
+ tool to allow remot configur and adminstr featur, and 
+ commun packag.  client: $795,  50 user server: $1,995, 1000s user
+ server: $5,995.  develop kit-softwar: $495, hardwar: $195.
+mac 7.1 [work name: star trek]:  appl had system 7.0 run off intel 
+ chip and is look at make a 7.1 version avail for ibm 
+ (computerworld nov 2/92; macweek 03/22/93). at present thi is plan to run 
+ on top of novel's dr do, requir a 486 or equival to run and that app 
+ will need to be recompil (macweek 03/22/93).  view as novel's answer to 
+ window nt.  the complex of pc hardwar set up is on reason for slow 
+ progress {thi seem to appl/ibm's wai of lead to the powerpc line out in 
+ late 1993/earli 1994 and pink os in late 1994-earli 1995.}
+
+powerpc
+rumor-ibm will build it powerpc 601 by late 1993 (infoworld june 8 & 15, 92; 
+macweek 7/13/92; pc week 3/15/93).  it will have microchannel bu and xga 
+video (carl b jabido), and will run nativ version aix and mac app (pc week 
+3/15/93); there have been no comment on compatabl of do or window app.
+appl's powerpc 601 machin {tesseract} is plan to be out jan 24, 1994 and 
+to have mc98601/50 mhz, 4/8mb ram, a 2.8-mbyte floppi drive and expect to 
+sale near lc line price {~$2000, down from project of ~$3000 (macus 
+9/92:146)}
+(macweek 3/22/93).
+poweropen [a/ux 4.0]: a 32-bit preemtiv multitask os plan to run on
+ powerpc and 68030/40 mac (macweek 7/13/92).  intel compat uncertain
+ (see mac 7.1 abov).  plan base requir:  68030, 8mb ram, 80mb hard
+ drive (macweek 4/19/93). rumor-ahead of schedul; could be out by mid 1993.
+ rumor-thi could be the os for ibm's powerpc 601 which is due by late 1993.
+pink [talig os]: expect deliveri in 1994 (wall street journal 1/12/92) 
+ and mai have some part ship in os/2 and aix in 1993 and mac os and 
+ poweropen with the powerpc (macweek 01/25/93).
+window nt: possibl port (macweek 04/05/93).  see ibm os section for detail.
+solari os: version of thi sun microsystem inc unix os to run on the
+ power pc in 1994 (macweek 04/05/93).  on of the few os to directli state 
+ that it will run window/do program.  ibm os section for detail
+nextstep: possibl port see ibm os section for detail.
+
+os number crunch (mel park)
+mac
+ arithmet is done in a consist numer environ {sane or standard 
+appl numer environ}. float point number ar 96 bit long when an 
+fpu is present and 80 bit otherwis. except, such as divid by zero or 
+take the squar root of a neg number, do not caus an abort but ar 
+handl in a logic consist manner. 1/0 produc the intern 
+represent for infin (inf).  1/(1/0) produc zero. the abov treatment 
+of 1/(1/0) occur in an fpu-equip machin even when sane is bypass and 
+the fpu program directli.
+
+ibm
+ float point number ar 80-bit with a hardwar fpu, 64-bit when 
+emul.  the wai thei ar handl is depend on the code of whatev 
+compil or assembl wa us for a program. on older do complil 
+except could caus program abort; 1/0 and 1/(1/0) would abort to the do 
+prompt at the point where thei occur.  most present compil handl thi 
+better.  result: there is littl consist handl of number between do, 
+window and os/2 program nor between program for just on os.
+
+network [includ print]
+wysiwyg print can be a problem with either mac of ibm machin especi 
+if on send truetyp font to a older style postscript printer.
+mac
+hardwar: built-in localtalk network port and a built-in printer port.  
+localtalk ha moder speed (230.4 kb/s) requir special connector for 
+each machin ($15 and up) and can be run off of either the printer port {to 
+includ veri old mac} or the network port {standard todai}.  built-in 
+ethernet is becom common but mani older mac requir a pd or nubu card at 
+about $150-$300 for each machin.  these card provid three connector and 
+transceiv {thick, thin, and 10baset} for ethernet.
+the macintosh quadra famili and some centri model includ ethernet 
+interfac on motherboard, with transceiv avail. tokenr ha been a 
+network option sinc 1989.
+softwar: appletalk {the suit of protocol} standard with mac os, which can 
+us varieti of media type.  appleshar client softwar includ with the os 
+as well and can connect to file server such as novel netwar, 3com 3+open, 
+banyan vine, dec pathwork, appl's appleshar server, system 7 file share 
+machin, and afp server run on varieti of unix host.  mactcp allow 
+typic tcp/ip commun (telnet, ftp, nf, rlogin).  a later version 
+will have unix x/open transport interfac (xti) built-in by the end of 1993 
+(macweek 04/12/93).  third-parti softwar to connect to nf server.  dec 
+pathwork provid decnet support.  peer-to-peer file share softwar 
+built-in to system 7.1 (see os section).  full server softwar is extra. 
+print requir connect of the printer and the printer be select in 
+the chooser.  chang printer is by select a differ name in the 
+chooser.  the same is true of connect to server.
+print bug:  monaco truetyp font is differ then the screen bitmap font.
+ {quickdraw qx is supposs to fix thi and similar problem.}
+
+ibm  
+hardwar: localtalk [not wide us], ethernet,  and tokenr.
+softwar: novel netwar, banyan vine, decnet, window/work group, appletalk 
+protocol, and appleshar {subset of appletalk}.
+each of the ms-do network scheme ar, in gener, total incompat 
+with the other. onc you have chosen on, you ar pretti much lock-in to 
+that product line from then on.  window/work group is a littl more 
+forgiv and remov some of thi problem.  novel netwar is the biggest, 
+{~80 percent of the corpor market.} and in gener is more power and 
+offer better control/manag/secur than appleshar, but it's also more 
+complex to set up and manag.  thi will chang due to the us of the mac 
+finder and file manag system by novel. (pc week 12/14/92 & 12/28/92;  
+infoworld dec 14/92; macweek 3/22/93)
+print {veri os depend}
+do: if it's a singl user, then you plug the printer into the parallel port, 
+ and don't worri about it {tweek mai be need with poorli written 
+ softwar}.  network print is not control by the system, but is mostli 
+ implement by the actual program, therefor perform vari from on 
+ softwar program to the next.
+window 3.x: support standard driver and can do a good job of show "job" 
+ in the print queue, but it alwai list printer as "activ"... even if thei 
+ ar not.  thi becom a problem if there ar sever incompat printer 
+ on the same net, becaus there's no wai for softwar to reliabl determin 
+ which printer is activ right now.  window for workgroup is more mac-like 
+ and intellig about thi.
+os/2: mac-like; the os deal with printer, with app make call to the os.
+print bug: due to poor program some program for all the abov os do 
+not have wysiwyg print.  thi is the fault of the program in question and 
+not that of the os involv.
+
+price issu: thi is veri dynam with mac provid more build-in featur 
+than ibm and ibm be more 'get onli what you need' then mac and price war 
+by both world.
+the ibm machin' modualar natur prevent ani kind of true hardwar 
+standar, which in turn requir os and program to be veri complex to 
+handl all the variat in hardwar.  when on add all the standard mac 
+hardwar featur to an ibm {built-in input/output sound support, scsi, pd,  
+built-in monitor support, built-in network, standard mous interfac, and 
+nubu 90 in higher machin} the mac tend to be cheaper then an equival 
+equipt ibm machin {especi sinc some ibm monitor can be us with mac 
+which cut some more of the mac's cost (macus aug 1992:158-176)}.
+ some price us some of the info in thi sheet and macus april 1993.
+all mac below come with a pd slot, vram, and scsi-1 built in.  except where 
+note, monitor is extra and a built-in monitor interfac is provid {no card 
+need except for 24-bit color displai}.
+ibm plan a $1,200 386slc/25mhz model with a 60mb hard drive and color vga 
+monitor {~vram} (macweek 8/17/92) {sound like a color classic without scsi-1, 
+sound support, built-in network support, fpu socket, built-in expans to 
+16-bit color, etc}.
+color classic:  $1,389 - 030/16mhz with 16-bit data bu {~386sx/20mhz 
+equival}, 4/80, fpu socket, and built-in monitor.
+lciii: $1,499 - 030/25mhz {~386dx/33mhz equival}, and 4/160.
+centri 610: $2,899 - 68lc040/20mhz {depend on the program ~486sx/40 or 
+~'486dx2sx'/20[40]mhz equival}, 8/230, built-in ethernet, 300i cd-rom, a 
+pd/nubu 90 slot and vram for 16-bit color.
+centri 650: 040/25mhz {depend on the program ~486dx/50 mhz or 486dx2/50 
+mhz equival} with a pd and 3 nubu 90 slot. $3,189 {ethernet, 8/80}; 
+$3,559 {ethernet, 8/230}; $3,999 {ethernet, 8/230, cd-rom, vram for 16-bit 
+color}
+
+bibliographi note
+'vaporwar' is avail in the digest/vapor directori by ftp on sumex-
+aim.stanford.edu [36.44.0.6] and wa by murphi sewal {last issu: april 93.}
+'info-ibmpc digest' back issu ar avail from wsmr-simtel20.armi.mil in 
+directori pd2:<archiv.ibmpc>
+'dictionari of comput term 3rd ed.' (isbm 0-8120-4824-5)
+
+these ar the fact as thei were known to me on 4/15/93 and mai be chang by 
+new develop, announc, or correct.  correct to the 
+inform ar welcom.
+pleas email correct to 
+compuserv id: 72130,3557
+aol: bruceg6069
+internet:  bgrubb@dant.nmsu.edu
+
+final note: sinc there is no comp.sy.ibm.pc.advocaci group thi ha been 
+post to the closest relev group {comp.os.ms-window.advocaci, 
+comp.os.os2.advocaci, and comp.sy.ibm.pc.misc}.  also sinc some mac vs ibm 
+articl have been show up in comp.sy.mac.hardwar i have includ that 
+newsgroup in the post. {don't site the comp.sy.mac.* faq as a reason not 
+to post to comp.sy.mac.hardwar, sinc the faq itself doe not follow 
+internet guidelin, especi the de-facto "[all] the faq for a newgroup 
+hierarchi should be post to all newsgroup in the hierarchi" standard.}
+
+"elimin the imposs and what ever remain, no matter how improb,
+is the truth" -- sir arthur conan doyl through sherlock holm in the 
+adventur of the beryl coronet, the adventur of the blanch soldier, sign of 
+four and the adventur of the bruce-partington plan.
+
+"the comput is your friend"--parinoia rpg

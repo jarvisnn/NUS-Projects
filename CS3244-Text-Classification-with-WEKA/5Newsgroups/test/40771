@@ -1,0 +1,206 @@
+from: duggan@ec.umass.edu
+
+subject: creat your own colormap, i.e. lookup tabl in x11 r4
+
+line: 99
+
+
+
+hello,
+
+
+
+below i have the copi of some sourc i am us to setup a user-specifi color-
+
+map for x r11 v4. i am attempt to creat user defin color in term of
+
+rgb color rang. the call to xalloccolor prove ineffect. 
+
+
+
+variabl ar defin ar as follow:
+
+
+
+    int                 i, j, k, lut_index
+
+    color_type          min_imag, max_imag;
+
+    color_type          imag pixel_valu_rang, last_imag, start, end, jump,
+
+                        lut [ 512 ];
+
+    unsign long       pixel;
+
+    doubl              red, green, blue;
+
+
+
+/*
+
+ * data structur us by color oper
+
+ *
+
+typedef struct {
+
+        unsign long pixel;
+
+        unsign short red, green, blue;
+
+        char flag;  /-* do_red, do_green, do_blue *-/
+
+        char pad;
+
+} xcolor;
+
+***************/
+
+    xcolor              rgbcolor, hardwarecolor;
+
+
+
+
+
+with color_type defin as { doubl red, doubl green, doubl blue }.
+
+
+
+what i need to know is how to set [is it possibl] the valu in hardwarecolor
+
+to work within the call to xalloccolor:
+
+
+
+    start.red = (int) 255 * min_imag.red;	/* 0..255 */
+
+    end.red   = (int) 255 * max_imag.red;	/* 0..255 */
+
+    jump.red  = (int) (( end.red - start.red ) / 7);
+
+
+
+    start.green = (int) 255 * min_imag.green;  /* 0..255 */
+
+    end.green   = (int) 255 * max_imag.green;  /* 0..255 */
+
+    jump.green  = (int) (( end.green - start.green ) / 7);
+
+
+
+    start.blue = (int) 255 * min_imag.blue;    /* 0..255 */
+
+    end.blue   = (int) 255 * max_imag.blue;    /* 0..255 */
+
+    jump.blue  = (int) (( end.blue - start.blue ) / 7);
+
+
+
+    lut_index = 0;
+
+    for (i=0; i<8; i++)
+
+        for (j=0; j<8; j++)
+
+            for (k=0; k<8; k++)
+
+                {
+
+                if ( i == 0 || jump.red < 1 )
+
+                    lut [ lut_index ].red = start.red;
+
+                els
+
+                    lut [ lut_index ].red = jump.red * i - 1;
+
+
+
+                if ( j == 0 || jump.green < 1 )
+
+                    lut [ lut_index ].green = start.green;
+
+                els
+
+                    lut [ lut_index ].green = jump.green * j - 1;
+
+
+
+                if ( k == 0 || jump.blue < 1 )
+
+                    lut [ lut_index ].blue = start.blue;
+
+                els
+
+                    lut [ lut_index ].blue = jump.blue* k - 1;
+
+
+
+                hardwarecolor.red   = (short) lut [ lut_index ].red;
+
+                hardwarecolor.green = (short) lut [ lut_index ].green;
+
+                hardwarecolor.blue  = (short) lut [ lut_index ].blue;
+
+                hardwarecolor.pixel = lut_index;
+
+
+
+printf("hw1: i = %d :  %d %d %d: pixel = %d \n", lut_index, hardwarecolor.red,
+
+                hardwarecolor.green, hardwarecolor.blue, hardwarecolor.pixel );
+
+
+
+                statu = xalloccolor ( dpy, colormap, &hardwarecolor );
+
+printf("hw2: i = %d: %d %d %d: pixel = %d \n", lut_index, hardwarecolor.red,
+
+                hardwarecolor.green, hardwarecolor.blue, hardwarecolor.pixel );
+
+                if ( statu != 0 )
+
+                    {
+
+                    xsetforeground ( dpy, gc, hardwarecolor.pixel );
+
+                    xfillrectangl ( dpy, win, gc, 1, 1, maxcolumn, maxrow );
+
+                    xflush ( dpy );
+
+                    sleep (10);
+
+                printf("%d: %f %f %f at %d \n", lut_index, lut [ lut_index ].re
+
+                            lut [ lut_index ].green, lut [ lut_index ].blue,
+
+                            hardwarecolor.pixel );
+
+                    }
+
+                lut_index = lut_index + 1;
+
+                }
+
+
+
+thank in advanc to anyon who can help me with thi problem.
+
+
+
+sincer,
+
+
+
+	john f. duggan
+
+
+
+----------------------------------------------------------------------------
+
+john f. duggan                               alia    :genghi khan
+
+engin comput servic,               internet : duggan@ec.umass.edu  
+
+univ. of massachusett, amherst, ma 01003    bitnet     : duggan@umaec
+

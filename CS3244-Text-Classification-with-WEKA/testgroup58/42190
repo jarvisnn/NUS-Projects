@@ -1,0 +1,90 @@
+from: uphya001@odi.uni-bielefeld.de (lar koeller,d0-231/258,1065375,0526189607)
+
+subject: xdm configur
+
+repli-to: uphya001@odi.uni-bielefeld.de
+
+nntp-post-host: odi.uni-bielefeld.de
+
+organ: chao unlimit
+
+line: 38
+
+
+
+---
+
+hello!
+
+
+
+we want to configur our x11r5 sytem (i486 33mhz run bsd-like unix)
+
+com up with a chooser menu with differ machin on it (work) an then
+
+connect to them. but the onli connect work is localhost!
+
+an 'x -indirect <machin>' work veri well!
+
+the configur:
+
+
+
+		- start the 'xdm' at boot time with no server specifi
+
+		   in xserver
+
+		- start the x-server at boot time with x -indirect localhost
+
+
+
+	     ---> the chooser menu appear with the machin name in
+
+		  xacc bye
+
+			'*	chooser <machin1> <machin2> ... broadcast	
+
+		- the number of user on thi machin and the load is 
+
+		    displai correct
+
+
+
+		- select an other machin than my own host the x-server
+
+		   start and noth happen, after a time out the chooser menu
+
+		   appear again.
+
+
+
+i know the xdm bug in x11r4, but all machin run x11r5
+
+
+
+pleas help
+
+			lar
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+
+
+lar koeller			    e-mail: uphya001@odi.uni-bielefeld.de
+
+universitaet bielefeld (germani)	    uphya001@dave.hrz.uni-bielefeld.de
+
+fakultaet fuer physik / d0-231	    phone:  +49 521-106-5375
+
+universitaetsstr. 25		    fax:    +49 521-106-5244
+
+4800 bielefeld 1		    telex:  932 362
+
+
+
+
+

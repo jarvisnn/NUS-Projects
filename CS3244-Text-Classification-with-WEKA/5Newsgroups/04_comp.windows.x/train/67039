@@ -1,0 +1,60 @@
+from: ramakri@csgrad.cs.vt.edu (s.ramakrishnan)
+subject: mwm titl-drag crash x server (sigpip)
+organ: vpi&su comput scienc depart, blacksburg, va
+line: 55
+
+
+   environ:
+      mach/arch : sparc/sun4  (ipx)
+      os	: suno 4.1.3
+      x11	: x11r5 (patchlevel 22)
+      motif	: 1.2.2
+
+i bring up x server us 'startx' and /usr/bin/x11/xsun. the follow sequenc
+of action crash the x server (sigpip, errno=32, 'xinit' report that connexion 
+to x server lost):
+
+   1. xinit -- xsun
+   2. start mwm
+   3. start a client with a 100dpi/75dpi font.
+   4. move the window by drag the titl bar.
+
+the server dump core due to sigpip. on of the two messag is print:
+
+  "connect to x server lost"
+
+or
+  
+  "connect broken (errno=32)"
+
+(i believ the first is report by a client and the second by the server itself).
+
+next, i ran xdm in debug level = 5. after the same set of action, xdm report:
+
+  select return -1
+  server for :0 termin unexpectedli: statu 2560
+
+
+note:
+ * the problem doesn't occur with other window manag (twm or olwm). 
+ * i have not set ld_librari_path. 
+ * i am not run font server. 
+ * if i start the client with fix width font, i do not see thi problem.
+ * my font path:
+     /usr/lib/x11/font/misc/,/usr/lib/x11/font/speedo/,/usr/lib/x11/font/75dpi/,/usr/lib/x11/font/100dpi
+
+   (i did mkfontdir in /usr/lib/x11/font/100dpi, /usr/lib/x11/font/75dpi,
+   /usr/lib/x11/font/pex, /usr/lib/x11/font/speedo,
+   and in /usr/lib/x11/font/misc).
+
+ * thi problem seem to occur onli on ipx machin. i do not see thi 
+   problem on ipc workstat.
+
+question:
+ * what the hell is goin on ? :-)
+ * what doe "statu 2560" mean (of the server).
+
+i'd greatli appreci ani hint as to the caus of the problem.
+
+---
+s ramakrishnan, cs dept, mcbryde hall, vatech

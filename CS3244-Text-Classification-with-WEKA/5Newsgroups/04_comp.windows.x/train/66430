@@ -1,0 +1,937 @@
+from: dbl@visual.com (david b. lewi)
+subject: comp.window.x frequent ask question (faq) 2/5
+summari: us inform about the x window system
+repli-to: faq%craft@uunet.uu.net (x faq mainten address)
+organ: visual, inc.
+expir: sun, 2 mai 1993 00:00:00 gmt
+line: 929
+
+archiv-name: x-faq/part2
+last-modifi: 1993/04/04
+
+----------------------------------------------------------------------
+subject:  24)! how do i make a screendump or print my applic?
+
+	the xwd client in the x11 distribut can be us to select a window 
+or the background. it produc an xwd-format file of the imag of that window. 
+the file can be post-process into someth us or print with the xpr 
+client and your local print mechan. you can us thi command:
+		csh% sleep 10; xwd -root > output.xwd &
+and then spend 10 second or so set up your screen; the entir current
+displai will be save into the file output.xwd. note that xwd also ha an
+undocu (befor r5) -id flag for specifi the window id on the 
+command-line. [there ar also unoffici patch on export to xwd for 
+specifi the delai and the portion of the screen to captur.]
+
+	two publicli-avail program which allow interact definit of 
+arbitrari portion of the displai and built-in delai ar asnap and xgrabsc.
+there ar sever version of xgrabsc; version 2.2, avail on export [8/92]
+is the most recent.
+	xsnap includ some asnap featur and supersed it; it also render 
+xpm output [version unknown]. it is avail on export or avahi.inria.fr;
+see xsnap-pl2.tar.z.
+	a screen-dump and merg/edit program combin featur of xwd and xpr
+is avail from vernam.cs.uwm.edu as xdump1.0.tar.z. inform: 
+soft-eng@cs.uwm.edu.
+	xprint, by alberto accomazzi (alberto@cfa.harvard.edu) is avail
+from cfa0 (128.103.40.1) in xprint.export-2.1.tar.z.
+
+	to post-process the xwd output of some of these tool, you can us xpr,
+which is part of the x11 distribut. also on sever archiv ar xwd2ps
+and xtop, which produc encapsul postscript with trim suitabl for 
+us in present (see export.lc.mit.edu:contrib/xwd2ps.tar.z and
+contrib/imagemagick.tar.z). also us is the pbmplu packag on mani archiv
+server; and the xim packag contain level 2 color postscript output.
+
+	the xv program can grab a portion of the x displai, manipul it, and
+save it in on of the avail format. imagemagick ha similar capabl.
+
+	also: 
+
+	bristol technolog (info@bristol.com, 203-438-6969) offer xprinter 
+2.0, an xlib api for postscript and pcl printer; a demo is on ftp.uu.net
+in vendor/bristol/xprinter.
+
+	colorsoft 9619-459-8500) offer openprint packag includ a screen-
+captur facil, imag-process, and support for postscript and 
+non-postscript printer.
+
+	some vendor' implement of x (e.g. decwindow and openwindow) 
+includ session manag or other desktop program which includ "print portion
+of screen" or "take a snapshot" option. some platform also have tool which 
+can be us to grab the frame-buffer directli; the sun system, for exampl, 
+have a 'screendump' program which produc a sun raster file. some x termin 
+have local screen-dump util to write postscript to a local serial printer.
+
+	some vendor' implement of lpr (e.g. soni) includ direct 
+support for print xwd file, but you'll typic need some other packag 
+to massag the output into a us format which you can get to the printer.
+
+----------------------------------------------------------------------
+subject:  25)  how do i make a color postscript screendump of the x displai?
+
+	if you need color postscript in particular, you can 
+	- grab the screen-imag us a program which can produc color 
+postscript, such as xgrabsc and xv 
+	- grab the screen-imag us xwd and post-process xwd into color ps.
+you can do thi us xwd2ps or the xtop program from the imagemagick 
+distribut. the pbmplu packag is also good for thi, as is the xim packag.
+
+----------------------------------------------------------------------
+subject:  26)  how do i make a screendump includ the x cursor?
+
+	thi can't be done unless the x server ha been extend. consid 
+instead a system-depend mechan for, e.g.,  captur the frame-buffer.
+
+----------------------------------------------------------------------
+subject:  27)  how do i convert/view mac/tiff/gif/sun/pict/img/fax imag in x?
+
+	the likeliest program is an incarn of jef poskanz's us++ 
+portabl bitmap toolkit, which includ a number of program for convert 
+among variou imag format. it includ support for mani type of bitmap, 
+grai-scale imag, and full-color imag. pbmplu ha been updat recent;
+the most recent version [12/91] is on export in contrib/pbmplu10dec91.tar.z.
+	anoth tool is san diego supercomput center's imtool ('imconv' in 
+particular), which packag the function of pbm into a singl binari.
+it's avail anonym ftp from sdsc.edu (132.249.20.22).
+
+	us for view some imag-format is jim frost's xloadimag, a
+version of which is in the r4 directori contrib/client/xloadimag; there ar 
+later version avail, includ contrib/xloadimag.3.03.tar.z on export.  
+graem gill's updat to an earlier version of xloadimag ar also on export; 
+see xli.readm and xli.tar.z.uu; version 1.14 wa releas 2/93.
+
+	xv (x imag viewer), written by bradlei@ci.upenn.edu (john bradlei), 
+can read and displai pictur in sun raster, pgm, pbm, ppm, x11 bitmap, tiff, 
+gif and jpeg. it can manipul on the imag: adjust, color, intens, 
+contrast, aspect ratio, crop). it can save imag in all of the aforement 
+format plu postscript. it can grab a portion of the x displai, manipul on 
+it, and save it in on of the avail format. the program wa updat 5/92; 
+see the file contrib/xv-2.21.tar.z on export.lc.mit.edu.
+
+	the fuzzi pixmap manipul, by michael mauldin <mlm@nl.cs.cmu.edu>.
+convers and manipul packag, similar to pbmplu.  version 1.0 avail
+via ftp as nl.cs.cmu.edu:/usr/mlm/ftp/fbm.tar.z, uunet.uu.net:pub/fbm.tar.z, 
+and ucsd.edu:graphic/fbm.tar.z.
+
+	the img softwar set, by paul ravel <ravel@venera.isi.edu>, read
+and write it own imag format, displai on an x11 screen, and doe some imag
+manipul.  version 1.3 is avail via ftp on expo.lc.mit.edu as
+contrib/img_1.3.tar.z, along with larg collect of color imag.
+
+	the utah rle toolkit is a convers and manipul packag similar 
+to pbmplu.  avail via ftp as cs.utah.edu:pub/urt-*, 
+weedeat.math.yale.edu:pub/urt-*, and freebi.engin.umich.edu:pub/urt-*.
+
+	xim, the x imag manipul, by philip thompson, doe essenti 
+interact displai, edit, filter, and convert of imag. there is 
+a version in the x11r4 contrib area; but a more recent version (us r4 and 
+motif 1.1) is avail from gi.mit.edu (18.80.1.118). xim read/write gif, 
+xwd, xbm, tiff, rle, xim, (write level 2 ep) and other format and also ha a
+librari and command-line util for build your own applic.
+
+	imagemagick [2.3; 2/93] by cristi@dupont.com can be retriev from 
+export's contrib area. it is a collect of util to transform and displai
+imag on ani x server. the tool us the miff format; filter to and from miff
+from other popular format (ppm, tiff, gif, sun raster, etc) ar includ.
+
+	xtiff is a tool for view a tiff file in an x window.  it wa written
+to handl as mani differ kind of tiff file as possibl while remain
+simpl, portabl and effici.  xtiff illustr some common problem
+with build pixmap and us differ visual class.  it is distribut
+as part of sam leffler's libtiff packag and it is also avail on
+export.lc.mit.edu, uunet.uu.net and comp.sourc.x. [db@decwrl.dec.com,10/90]
+xtiff 2.0 wa announc in 4/91; it includ xlib and xt version.
+
+	a version of lee iverson's (leei@mcrcim.mcgill.edu) imag-view tool
+is avail as contrib/vimag-0.9.3.tar.z on export.lc.mit.edu.  the packag 
+also includ an imageviewport widget and a filedialog widget. [12/91;5/92] 
+
+[some materi from larri carrol (larryc@poe.jpl.nasa.gov), 5/91]
+
+----------------------------------------------------------------------
+subject:  28)  how can i chang the titlebar of my xterm window?
+
+	the solut involv send an escap sequenc to xterm which will
+caus it to updat the properti which the window manag reli upon for the
+string which appear in the window titlebar.
+	a solut is as easi as type thi in an xterm run a shell:
+		echo "esc]2;text^g"
+where esc is the escap kei, text is the string you wish to have displai,
+and ^g is a control-g (the bel charact).
+
+	here is a more complic csh alia which chang the titlebar to
+the current work directori when you chang directori:
+		alia newcd 'cd \!*; echo -n esc]2\;$cwd^g'
+
+	the digit '2' in these string indic to xterm that it should 
+chang onli the titl of the window; to chang both the titl and the name 
+us in the icon, us the digit '0' instead, and us '1' to chang onli the 
+icon name.
+
+	note: anoth wai to do thi, which prevent an incorrect displai of
+the local directori if a modifi `cd` is us in a subshel, is to wrap the
+escap sequenc into the ps1 prompt itself.
+
+	note: on an ibm rs/6000 is mai be necessari to begin the sequenc with
+a ^v.
+
+----------------------------------------------------------------------
+subject:  29)  where can i find the xterm control sequenc?
+
+the best sourc of such inform is in your r5 sourc in the file 
+ctlseq.ms; a postscript version is in mit/hardcopi/client/ctlseq.ps.z.
+
+o'reilli's volum 3, the x user's guid, includ an r5 version of the control 
+sequenc; the standard volum will be avail 3/93, and a motif version of 
+the book is avail now. the current (r4) guid includ an outdat version
+of the control sequenc. [1/93]
+
+other good sourc of inform includ the r4 version of that document
+and also the file in the r4 sourc call mit/client/xterm/ctlseq2.txt, a 
+compil put togeth by skip montanaro (ge cr&d) list the vt100 
+sequenc. it date from r3 but is fairli accur.  a hardcopi version wa 
+publish in the decemb 1989 xnextev (the xug newslett).
+
+in a pinch, a vt100 manual will do.
+
+[last updat 10/91]
+
+----------------------------------------------------------------------
+subject:  30)- why doe the r3 xterm, et al, fail against the r4 server?
+----------------------------------------------------------------------
+subject:  31)  how can i us charact abov ascii 127 in xterm ?
+
+	in order to us special charact such as the o-umlaut, you need to 
+"stty pass8" but also to us a charcel iso8859 font, such as 
+	xterm*font: 	-*-*-medium-r-normal-*-*-130-*-*-c-*-iso8859-1
+	xterm*boldfont:	-*-*-bold-r-normal-*-*-130-*-*-c-*-iso8859-1
+[the famili is intention unspecifi in thi exampl.]
+
+in addit, you mai want to set thi in your shell:
+	setenv lc_ctype iso_8859_1
+
+        for a given charact abov 127, you can determin the kei to us with 
+the alt modifi by find the equival charact below 127 (try us
+`man ascii`). for exampl, o-umlaut (v) is alt-v and the section charact (') 
+is alt-'. 
+
+[thank to greg holmberg (greg%thirdi@uunet.uu.net) and stephen gildea 
+(gildea@expo.lc.mit.edu); 6/92]
+
+----------------------------------------------------------------------
+subject:  32)  why ar my xterm menu so small?
+
+	you ar probabl set the geometri small accident. if you give 
+a resourc specif like thi:
+		xterm*geometri: 80x24
+then you ar ask for all widget under xterm to have their geometri set to
+80x24. for the main window, thi is ok, as it us charact for it size. 
+but it popup menu don't; thei ar in pixel and show up small. to set onli
+the termin widget to have the specifi geometri, name it explicitli:
+		xterm*vt100.geometri: 80x24
+
+----------------------------------------------------------------------
+subject:  33)  how can i print the current select?
+
+	you could past it into an xterm after execut the lpr command. 
+howev, a program by richard hesketh (rlh2@ukc.ac.uk) specif for 
+manipul the select will help; e.g. 
+	% xselect primari | lpr
+find the primari select and print it. thi command can be place in a 
+window-manag menu or in shell-script. xselect also permit the set of
+the select and other properti. a version is on export.
+	also avail is ria.cc.uwo.ca:pub/xget_select.tar.z, which can be
+adapt to do thi.
+
+----------------------------------------------------------------------
+subject:  34)  how doe xt us environ variabl in load resourc?
+
+	you can us sever environ variabl to control how resourc ar 
+load for your xt-base program -- xfilesearchpath, xuserfilesearchpath, and 
+xapplresdir.  these environ variabl control where xt look for 
+applic-default file as an applic is initi.  xt load at most
+on app-default file from the path defin in xfilesearchpath and anoth from
+the path defin in xuserfilesearchpath.
+
+	set xfilesearchpath if softwar is instal on your system in such a 
+wai that app-default file appear in sever differ directori hierarchi.
+suppos, for exampl, that you ar run sun's open window, and you also 
+have some r4 x applic instal in /usr/lib/x11/app-default. you could 
+set a valu like thi for xfilesearchpath, and it would caus xt to look up 
+app-default file in both /usr/lib/x11 and /usr/openwin/lib (or wherev your
+openwinhom is locat):
+	setenv xfilesearchpath /usr/lib/x11/%t/%n:$openwinhom/lib/%t/%n
+
+the valu of thi environ variabl is a colon-separ list of pathnam.  the pathnam contain replac charact as follow (see 
+xtresolvepathnam()):
+
+        %n      the valu of the filenam paramet, or the
+                applic's class name.
+        %t      the valu of the file "type".  in thi case, the
+                liter string "app-default"
+        %c      custom resourc (r5 onli)
+        %s      suffix.  none for app-default.
+        %l      languag, local, and codeset (e.g. "ja_jp.euc")
+        %l      languag part of %l  (e.g. "ja")
+        %t      the territori part of the displai's languag string
+        %c      the codeset part of the displai's languag string
+
+	let's take apart the exampl.  suppos the applic's class name is 
+"myterm". also, suppos open window is instal in /usr/openwin. (notic the 
+exampl omit local-specif lookup.)
+	/usr/lib/x11/%t/%n        mean /usr/lib/x11/app-default/myterm
+	$openwinhom/lib/%t/%n    mean /usr/openwin/lib/app-default/myterm
+
+	as the applic initi, xt tri to open both of the abov 
+app-default file, in the order shown.  as soon as it find on, it read it 
+and us it, and stop look for other.  the effect of thi path is to 
+search first in /usr/lib/x11, then in /usr/openwin.
+
+	let's consid anoth exampl. thi time, let's set 
+xuserfilesearchpath so it look for the file myterm.ad in the current work 
+directori, then for myterm in the directori ~/app-default.
+	setenv xuserfilesearchpath ./%n.ad:$home/app-default/%n
+
+	the first path in the list expand to ./myterm.ad.  the second expand 
+to $home/app-default/myterm.  thi is a conveni set for debug 
+becaus it follow the imak convent of name the app-default file 
+myterm.ad in the applic's sourc directori, so you can run the applic
+from the directori in which you ar work and still have the resourc load
+properli.  note: when look for app-default file with xuserfilesearchpath,
+for some  bizarr reason, neither the type nor file suffix is defin so %t and
+%s ar useless.
+
+	with r5, there's anoth twist.  you mai specifi a custom 
+resourc valu.  for exampl, you might run the "myterm" applic like thi:
+	myterm -xrm "*custom: -color"
+
+	if on of your pathnam specif had the valu
+"/usr/lib/x11/%t/%n%c" then the expand pathnam would be
+"/usr/lib/x11/app-default/myterm-color" becaus the %c substitut charact 
+take on the valu of the custom resourc.
+
+	the default xfilesearchpath, compil into xt, is:
+		/usr/lib/x11/%l/%t/%n%c:\  (r5)
+		/usr/lib/x11/%l/%t/%n%c:\  (r5)
+		/usr/lib/x11/%t/%n%c:\     (r5)
+		/usr/lib/x11/%l/%t/%n:\
+		/usr/lib/x11/%l/%t/%n:\
+		/usr/lib/x11/%t/%n
+
+	(note: some site replac /usr/lib/x11 with a projectroot in
+thi batch of default set.)
+
+	the default xuserfilesearchpath, also compil into xt, is 
+		<root>/%l/%n%c:\  (r5)
+		<root>/%l/%n%c:\  (r5)
+		<root>/%n%c:\     (r5)
+		<root>/%l/%n:\
+		<root>/%l/%n:\
+		<root>/%n:
+
+	<root> is either the valu of xapplresdir or the user's home directori 
+if xapplresdir is not set.  if you set xuserfilesearchpath to some valu other 
+than the default, xt ignor xapplresdir altogeth.
+
+	notic that the quick and dirti wai of make your applic find 
+your app-default file in your current work directori is to set xapplresdir 
+to ".", a singl dot.  in r3, all thi machineri work differ; for r3 
+compatibilti, mani peopl set their xapplresdir valu to "./", a dot follow 
+by a slash.
+
+[thank to oliv jone (oj@world.std.com); 2/93.]
+
+----------------------------------------------------------------------
+subject:  35)  how to i have the r4 xdm put a pictur behind the log-in window?
+
+the answer li in chang xdm's xrdb resourc in the xdm-config file to run a
+program to chang the background befor load the resourc; for exampl, 
+your /usr/lib/x11/xdm/xdm-config file mai add the line 
+	displaymanag.0.author: fals 
+to permit unrestrict access to the displai befor log-in (bewar!) and also 
+	displaymanag*xrdb:	/usr/lib/x11/xdm/new.xrdb
+where that file doe someth (for all connect) along the line of:
+	#!/bin/sh
+	#come in with argument: -displai :0 -load /usr/lib/x11/xdm/xresourc
+	/usr/bin/x11/xsetroot -displai $2 -bitmap /usr/lib/x11/xdm/new.bitmap
+	/usr/bin/x11/xrdb $*
+substitut xloadimag or xv for xsetroot, to tast.  note that thi is a 
+gener hack that can be us to invok a consol window or ani other client.
+
+[thank to jai bourland (jayb@cauchi.stanford.edu), 9/91]
+
+----------------------------------------------------------------------
+subject:  36)  why isn't my path set when xdm run my .xsession file?
+
+	when xdm run your .xsession it doesn't sourc your .cshrc or .login
+file. you can set the path explicitli as you normal could for ani sh script;
+or you can place all environ-set statement in a separ file and
+sourc it from both the .xsession file and your shell configur file; or,
+if you set your path in your .cshrc file, the normal place, you can make your 
+.xsession have path set simpli by make it a csh script, i.e. by start
+your .xsession file off with "#!/bin/csh". 
+	if thi doesn't work, also try start off with:
+		#!/bin/sh
+		# reset path:
+		path=`csh -c 'echo $path'` ; export path
+
+----------------------------------------------------------------------
+subject:  37)  how do i keep my $displai when i rlogin to anoth machin?
+
+	there ar sever wai to avoid have to do a "setenv displai ..."
+whenev you log in to anoth network unix machin run x.
+	on solut is to us the client/xrsh on the r5 contrib tape.  it 
+includ xrsh, a script to start an x applic on remot machin, and
+xrlogin, a script to start a local xterm run rlogin to a remot machin.
+a more recent version is on export in xrsh-5.4.shar.
+	on solut is to us the xrlogin program from der mous
+(mous@larri.mcrcim.mcgill.edu). you can ftp caveat-emptor version from
+132.206.1.1, in x/xrlogin.c and x/xrlogind.c. the program packag up $term and
+$displai into a singl string, which is stuf into $term.  rlogin then 
+propag $term normal; your .cshrc on the remot machin should contain
+		eval `xrlogind`
+where xrlogind is a program that check $term and if it is of the special 
+format it recogn, unpack it and spit out setenv and unsetenv command to 
+recreat the environ variabl. [11/90]
+
+	in addit, if all you need to do is start a remot x process on 
+anoth host, and you find
+		rsh <host> -n /usr/bin/x11/xterm -displai $displai 
+too simpl (displai must have your real hostnam), then thi version of xrsh 
+can be us to start up remot x process. the equival usag would be 
+		xrsh <host> xterm
+
+  #! /bin/sh
+  # start an x11 process on anoth host
+  # date: 8 dec 88 06:29:34 gmt
+  # from: chri torek <chri@mimsi.umd.edu>
+  # rsh $host -n "setenv displai $displai; exec $@ </dev/null >&/dev/null"
+  #
+  # an improv version:
+  # rxcmd (suggest by john robinson, jr@bbn.com)
+  #       (gener for sh,ksh by keith boyer, keith@ci.ohio-state.edu)
+  #
+  # but thei put the rcmd in ()'s which left zombi again.  thi
+  # script combin the best of both.
+  
+  case $# in
+  [01])  echo "usag: $0 host x-cmd [arg...]";;
+  *)
+  	case $shell in
+  	*csh*)  host="$1"; shift
+  		xhost "$host" > /dev/null
+  		rsh "$host" -n \
+  			"setenv term xterm; setenv displai `hostnam`:0; \
+  			exec $* </dev/null >& /dev/null" &
+  		;;
+  	*sh)
+  		host="$1"; shift
+  		xhost "$host" > /dev/null
+  		rsh "$host" -n \
+  			"term=xterm export term; \
+  			displai=`hostnam`:0 export displai; \
+  			ld_librari_path=/usr/x11/lib export ld_librari_path; \
+  			path=\$path:/usr/x11/bin:/usr/bin/x11:/usr/local/bin; \
+			export path; \
+  			exec $* < /dev/null > /dev/null 2>&1" &
+  		;;
+  	esac
+  	;;
+  esac
+
+----------------------------------------------------------------------
+subject:  38)  how can i design my own font?
+
+	on wai is to us the "bitmap" client or some other bitmap-editor (e.g.
+sun's icon-editor tool, post-process with pbmplu) to design the individu 
+charact and then to do some larg amount of post-process to concaten 
+them into the bdf format. see olli jone's articl in the novemb 91 x 
+journal for more inform.
+	the r3 contrib/ area (in font/util/ and in client/xtroff) contain 
+a number of us util, includ some to convert between bdf font format
+and a simpl charact format which can be edit with ani text editor.
+	an easier wai is to us the "xfed" client to modifi an exist font; a
+version is on the r4 or r5 x11r5 contrib tape in contrib/client/xfed. xfed is 
+avail for anonym ftp on ftp.informatik.uni-dortmund.de [129.217.64.63], 
+possibl as file /pub/window/x/divers-x11-sourcen/xfed.tar.z. it can produc
+bdf-format font which can be compil for a varieti of x server.
+	the xfedor client from group bull permit creation of bitmap, cursor,
+xpm1 pixmap, and font. binari for common machin ar on avahi.inria.fr in
+/pub; in addit, the sourc (an old xlib implement) have been place 
+[5/91] in export:/contrib. 
+	if you ar a metafont user you can us "mftobdf" from the seetex
+distribut to convert pk, gf, and pxl font to bdf format; the distribut
+is on ftp.cs.colorado.edu and on export.lc.mit.edu.
+	the gnu packag fontutil-0.4.tar.z on prep.ai.mit.edu includ xbfe,
+a font editor, and a number of util for massag font format.
+	the o'reilli x resourc issu #2 contain an articl on us these
+tool to modifi a font.
+	font can be resiz with hiroto kagotani's bdfresiz; a new version is
+in ftp.cs.titech.ac.jp:/x11/contrib.
+
+----------------------------------------------------------------------
+subject:  39)  why doe ad a font to the server not work (sic)?
+
+	after you have built the font us your system's font-compil, 
+instal it in some directori, and run `mkfontdir` or your system's equival
+(e.g. bldfamili for openwindow) in that directori, be sure to us `xset +fp 
+$dir` to add that full path-name to the server's font-path, *or* if the 
+directori is alreadi in the path, us `xset fp rehash` so that the new font in
+that directori ar actual found; it is thi last step that you're probabl 
+leav out. (you can also us `xset q` to make sure that that directori is in 
+the path.)
+	sometim your "xset +fp $dir" command fail with a badvalu error:
+		x error of fail request:badvalu
+			(integ paramet out of rang for oper)
+		major opcod of fail request:  51 (x_setfontpath)
+
+	thi mean the x server cannot find or read your font directori, or
+that your directori doe not look like a font directori to the server.  (the
+mention of an "integ paramet" in the messag is spuriou.)
+
+-- is the font directori you're specifi readabl from the server's file
+   system?  rememb, it's the server, not the client, which interpret your
+   font directori.  troubl in thi area is especi like when you issu an
+   xset command with shell metacharact in it (e.g. "xset +fp ~/myfont") and
+   the server is an x termin or manag by xdm.
+
+-- is the directori realli a font directori?  if you're run an mit server
+   (or most varieti of vendor server) look in the directori for the file
+   "font.dir".  if you can't find that file, run mkfontdir(1).  (if you're
+   run openwindow, look for the file "famili.list".  if you can't find
+   it, run bldfamili(1).)
+
+-- if you're in a site where some peopl run x11rn server and other run a
+   proprietari server with nonstandard font format (openwindow, for
+   exampl), make sure the font directori is right for the server you're us.
+   hint: if the directori contain .pcf and/or .snf file, it won't work for
+   open window.  if the directori contain .ff and/or .fb file, it won't work
+   for x11rn.
+
+[thank to der mous (mous@larri.mcrcim.mcgill.edu) and to oliv jone 
+(oj@pictel.com); 7/92 ]
+
+----------------------------------------------------------------------
+subject:  40)  how do i convert a ".snf" font back to ".bdf" font?
+
+	a tool call "snftobdf 1.4" is part of the bdftool packag, which is 
+avail from export.lc.mit.edu:contrib/bdftool.tar.z and from 
+crl.nmsu.edu:pub/misc/bdftool.tar.z.  [2/91]
+
+----------------------------------------------------------------------
+subject:  41)  what is a gener method of get a font in usabl format?
+
+	der mous's getbdf is on solut; it connect to a server and 
+produc a .bdf file for ani font the server is will to let it.  it can be 
+us as an anyth-to-bdf convert, but requir access to a server that can 
+understand the font file, thu is both more and less power than other tool 
+such as snftobdf. getbdf is on 132.206.1.1 in x/getbdf.c or avail via mail 
+from mous@larri.mcrcim.mcgill.edu. [5/91]
+	in addit, the r5 program "fstobdf" can produc bdf for ani font that
+the r5 server ha access to.
+
+----------------------------------------------------------------------
+subject:  42)  how do i us decwindow font on my non-decwindow server?
+
+	the decwindow font typic don't exist on a non-dec instal,
+but rewrit rule can be us to alia font us by decwindow applic to
+standard mit font of similar characterist and size. pick up the file 
+contrib/decwindow_on_x11r4_font.alias from export.lc.mit.edu; thi file is 
+for a standard mit r4 server.  it can also serv as a start point for 
+creat a similar alias file for the open window server or other server 
+which do not us the mit font scheme.
+
+----------------------------------------------------------------------
+subject:  43)  how do i add ".bdf" font to my decwindow server?
+
+	the format of font prefer by dec's x server is the ".pcf" format.
+you can produc thi compil format from the .bdf format by us dec's dxfc
+font-compil. note that the dec server can also us raw .bdf font, with a
+perform hit.
+
+----------------------------------------------------------------------
+subject:  44)! how can i set backgroundpixmap in a default file? (what is xpm?)
+i want to be abl to do someth like thi:
+	xclock*backgroundpixmap:      /usr/includ/x11/bitmap/rootweav
+
+	you can't do thi. the backgroundpixmap resourc is a pixmap of the 
+same depth as the screen, not a bitmap (which is a pixmap of depth 1). becaus 
+of thi, write a gener string to pixmap convert is imposs, sinc 
+there is no accept convent for a file format for pixmap. therefor, 
+neither the x toolkit or the athena widget set defin a string to pixmap 
+convert, becaus there is no convert you cannot specifi thi valu as a 
+resourc.  the athena widget set doe defin a string to bitmap convert for 
+us in mani of it widget, howev.
+[courtesi chri d. peterson (now kit@ic.com), 4/90]
+
+howev:
+	a specif convert which encapsul much of the function of 
+the xloadimag packag by jim frost wa post 12/90 by sebastian wangnick 
+(basti@unido.informatik.uni-dortmund.de); it permit load of a number of 
+imag format as a pixmap.
+
+	the lead gener-purpos format for pixmap is the xpm format us 
+by group bull in sever of it program, includ the gwm window manag, by
+at&t in it olpixmap editor, and by ic in it interfac builder. xpm 
+distribut, avail on export as contrib/xpm.tar.z, includ read/write 
+routin which can easili be adapt to convert by new widget which want to
+allow specif of pixmap resourc in the abov manner.  see inform
+on the xpm-talk mail list abov. xpm 3.0f wa announc in 3/93 and is
+avail from export.lc.mit.edu and avahi.inria.fr; an older version is on 
+the r5 contrib tape. [a set of xpm icon collect by anthoni thyssen 
+(anthoni@kurango.cit.gu.edu.au) is on export in contrib/aicon.]
+
+----------------------------------------------------------------------
+subject:  45)  why can't i overrid translat? onli the first item work.
+
+	you probabl have an extra space after the specif of the first 
+item, like thi:
+	basic*text.translat:  #overrid \
+	ctrl<kei>a:    begin-of-line() \n\ 	
+	ctrl<kei>e:    end-of-line()
+					      ^ extra space
+the newlin after that space is end the translat definit.
+[thank to timothi j. horton, 5/91]
+
+----------------------------------------------------------------------
+subject:  46)  how can i have xclock or oclock show differ timezon?
+
+	on solut is xchron, in volum 6 of comp.sourc.x, which can show
+the time for timezon other than the local on. 
+	altern, you can probabl set the timezon in the shell from
+which you invok the xclock or oclock, or us a script similar to thi:
+	#!/bin/sh
+	tz=pst8pdt xclock -name "san_lui_obispo_ca" 2> /dev/null &
+	tz=est5edt xclock -name "king_of_prussia_pa" 2> /dev/null &
+
+----------------------------------------------------------------------
+subject:  47)  i have xmh, but it doesn't work. where can i get mh?
+
+	the xmh mail-reader requir the rand mh mail/messag handl system,
+which is not part of the unix softwar distribut for mani machin. a list 
+of variou ftp, uucp, e-mail and us-mail site for both xmh and mh is given in 
+the monthli mh faq; on sourc is ic.uci.edu in the file pub/mh/mh-6.7.tar.z.
+if you do not receiv the comp.mail.mh newsgroup or the mh-user mail list, 
+you can request a copi of the faq, which also includ a section on xmh, 
+by send mail to mail-server@pit-manag.mit.edu contain the request
+"send usenet/new.answer/mh-faq".
+
+----------------------------------------------------------------------
+subject:  48)  why am i suddenli unabl to connect to my sun x server?
+after a seemingli random amount of time after the x server ha been start, no
+other client ar abl to connect to it.
+
+	the default cron cleanup job suppli by sun (for 4.0.3, at least)
+delet "old" (unreferenc) file from /tmp -- includ /tmp/.x11-unix, which 
+contain the socket descriptor us by x. the solut is to add "! -type s" to
+the find exclus in the cron job.
+[10/90]
+
+----------------------------------------------------------------------
+subject:  49)  why don't the r5 pex demo work on my mono screen?
+
+the r5 sampl server implement work onli on color screen, sorri.
+
+----------------------------------------------------------------------
+subject:  50)! how do i get my sun type-[45] keyboard fulli support by xsun?
+ 
+mani user want the num lock kei to light the num lock led and have the 
+appropri effect on the numer keypad. the xsun server as distribut by mit
+doesn't do thi but there ar two differ patch avail.
+ 
+the first patch is written by jonathan lemon and fix the num lock relat 
+problem. it is avail from export.lc.mit.edu in the file
+contrib/xsun-r5.numlock_patch.z .
+ 
+the second is written by martin forssen and fix the num lock and compos kei
+and add support for the differ nation keyboard layout for type-4 and 
+type-5 keyboard. thi patch is avail from export.lc.mit.edu in
+contrib/sunkbd1216-0314.tar.z or via email from maf@dtek.chalmer.se.
+ 
+[thank to martin forssen (maf@dtek.chalmer.se or maf@math.chalmer.se), 8/92]
+
+a set of patch by william bailei (dbgwab@arco.com) wa post to newsgroup
+11/92 to provid support for the type-5 keyboard.
+
+----------------------------------------------------------------------
+subject:  51)  how do i report bug in x?
+
+	gener, report bug you find to the organ that suppli you
+with the x window system. if you receiv the r5 sourc distribut directli 
+from mit, pleas read the file mit/bug-report for instruct. [look in
+mit/doc/bug/bug-report in r4.]
+
+[thank to stephen gildea <gildea@expo.lc.mit.edu>, 5/91; 12/91]
+
+----------------------------------------------------------------------
+subject:  52)  why do i get "warn: widget class version mismatch"?
+
+	thi error, which typic goe on to sai, "widget 11004 vs. 
+intrins 11003" indic that the header file you includ when build 
+your program didn't match the header file that the xt librari you're link 
+against wa built with; check your -i includ path and -l link-path to be sure.
+	howev, the problem also occur when link against a version of the 
+x11r4 xt librari befor patch 10; the version number wa wrong. some sun ow
+system, in particular, were ship with the flaw version of the librari, 
+and applic which link against the librari typic give the warn you
+have seen.
+
+----------------------------------------------------------------------
+subject:  53)  where can i find a dictionari server for xwebster?
+
+	webster's still own the copyright to the on-line copi of webster's
+dictionari which ar found at variou (univers) site. after it becam awar
+that these site were then act as server for other site run xwebster 
+and gnuemac-webster, it ask that server site close off extern access.
+	[the next machin appar is also licens to have the dictionari. a
+webster daemon for next machin is avail from iuvax.cs.indiana.edu 
+(129.79.254.192) in "pub/webster/next-2.0".]
+	unless you want to get a legal on-line copi yourself or can find a site
+which can grant you access, you ar probabl out of luck. 
+
+	howev, if you ar a legitim site, you'll want to pick up the
+latest xwebster, as-is on export:contrib/xwebster.tar.z [10/91]; the file 
+xwebster.readm includ discuss of the avail, illeg, and 
+non-avail of dictionari server. 
+	
+[courtesi steve@umiac.umd.edu (steve miller) and mayer@hplab.hp.com (niel 
+mayer) 11/90]
+
+----------------------------------------------------------------------
+subject:  54)  topic: obtain x and relat softwar and hardwar
+----------------------------------------------------------------------
+subject:  55)  is x public-domain softwar?
+
+	no. the x softwar is copyright by variou institut and is not 
+"public domain", which ha a specif legal mean. howev, the x 
+distribut is avail for free and can be redistribut without fee.
+	contribut softwar, though, mai be place in the public domain by
+individu author.
+
+----------------------------------------------------------------------
+subject:  56)  how compat ar x11r3, r4, and r5? what chang ar there?
+
+the releas note for each mit releas of x11 specifi the chang from the 
+previou releas.  the x consortium tri veri hard to maintain compat 
+across releas.  in the few place where incompat chang were necessari, 
+detail ar given in the releas note.  each x11 distribut site on the 
+network also offer the releas note that go with the releas thei offer; the 
+file typic can be found at the top of the distribut tree.
+
+[stephen gildea, 1/92]
+
+the comp.window.x.intrins faq-xt list xt differ among these version.
+
+----------------------------------------------------------------------
+subject:  57)! where can i get x11r5 (sourc and/or binari)?
+
+inform about mit's distribut of the sourc on 6250bpi and qic-24 tape 
+and it distribut of hardcopi of the document is avail from 
+softwar center, technolog licens offic, massachusett institut of 
+technolog, 28 carleton street, room e32-300, cambridg ma 02142-1324,
+phone: 617-258-8330.
+
+you will need about 100mb of disk space to hold all of core and 140mb to hold
+the contrib softwar donat by individu and compani. 
+
+pleas us a site that is close to you in the network.
+
+note that the releas note ar gener avail separ in the same
+directori; the note list chang from previou version of x and offer a
+guid to the distribut.
+
+			  north america anonym ftp:
+
+california	gatekeep.dec.com		pub/x11/r5
+		16.1.0.2
+california	soda.berkelei.edu		pub/x11r5
+		128.32.131.179
+indiana		mordr.cs.purdu.edu		pub/x11/r5
+		128.10.2.2
+maryland	ftp.brl.mil			pub/x11r5
+		128.63.16.158
+		(good for milnet site)
+massachusett	crl.dec.com			pub/x11/r5
+		192.58.206.2
+massachusett	export.lc.mit.edu		pub/r5
+		18.24.0.12
+		(crl.dec.com is better)
+michigan	merit.edu			pub/x11r5
+		35.1.1.42
+missouri	wuarchiv.wustl.edu		packag/x11r5
+		128.252.135.4
+montana		ftp.cs.montana.edu		pub/x.v11r5
+		192.31.215.202
+new mexico	pprg.eec.unm.edu		pub/dist/x11r5
+		129.24.24.10
+new york	azur.acsu.buffalo.edu		pub/x11r5
+		128.205.7.6
+north carolina	cs.duke.edu			dist/sourc/x11r5
+		128.109.140.1
+ohio		ftp.ci.ohio-state.edu		pub/x.v11r5
+		128.146.8.52
+ontario		ftp.cs.utoronto.ca		pub/x11r5
+		128.100.1.105
+washington dc	x11r5-a.uu.net			x/r5
+		192.48.96.12
+washington dc	x11r5-b.uu.net			x/r5
+		137.39.1.12
+
+		   europ/middl east/australia anonym ftp:
+
+australia	munnari.oz.au			x.v11/r5
+		128.250.1.21
+denmark		freja.diku.dk			pub/x11r5
+		129.142.96.1
+unit kingdom	src.doc.ic.ac.uk		graphic/x.v11r5
+		146.169.3.7
+		hpb.mcc.ac.uk			pub/x11r5
+		130.88.200.7
+finland		nic.funet.fi			pub/x11/r5
+		128.214.6.100
+franc		nuri.inria.fr			x/x11r5
+		128.93.1.26
+germani		ftp.germani.eu.net		pub/x11/x11r5
+		192.76.144.129
+israel		cs.huji.ac.il			pub/x11r5
+		132.65.6.5
+itali		ghost.sm.dsi.unimi.it		pub/x11r5
+		149.132.2.1
+netherland	archiv.eu.net			window/x/r5
+		192.16.202.1
+norwai		ugl.unit.no			pub/x11r5
+		129.241.1.97
+norwai		nac.no				pub/x11r5
+		129.240.2.40
+switzerland	nic.switch.ch			softwar/x11r5
+		130.59.1.40
+
+			 japan anonym ftp:
+
+kanagawa	sh.wide.ad.jp			x11r5
+		133.4.11.11
+kwansai		ftp.ic.osaka-u.ac.jp		x11r5
+		133.1.12.30
+kyushu		wnoc-fuk.wide.ad.jp		x11r5
+		133.4.14.3
+tisn		utsun.s.u-tokyo.ac.jp		x11r5
+		133.11.11.11
+tokyo		kerr.iwanami.co.jp		x11r5
+		133.235.128.1
+tokyo		scslwide.soni.co.jp		pub/x11r5
+		133.138.199.1
+
+				uucp:
+
+uunet		for uunet custom		~/x/r5
+decwrl		exist neighbor onli		~/pub/x11/r5
+osu-ci						~/x.v11r5
+		(not onlin until ~ 9 sept)
+utai		exist neighbor onli		~/ftp/pub/x11r5
+hp4nl		netherland onli		~uucp/pub/window/x/r5
+		
+
+
+				 nf:
+missouri	wuarchiv.wustl.edu		/archiv/packag/x11r5
+		128.252.135.4			mount point: /archiv
+							
+				 af:
+pennsylvania	/af/grand.central.org/pub/x11r5
+
+		     niftp (hhcp, cpf, fcp, ...):
+unit kingdom	uk.ac.ic.doc.src		<x.v11r5>
+		00000510200001
+		user "guest"
+
+			      anon ftam:
+unit kingdom	000005102000 (janet)		x.v11r5
+		146.169.3.7 (internet)
+		204334504108 (ixi)
+
+			       acsnet:
+australia	munnari.oz (fetchfil)		x.v11/r5
+		pleas fetch onli on file
+		at a time, after check
+		that a copi is not avail
+		at a closer site.
+
+[9/2/91; updat for contrib 10/91]
+
+anyon in europ can get a copi of the mit x.v11r5 distribut, includ
+the core and contribut softwar and all offici patch, free of charg.
+the onli requir is to agre to return the tape, or equival new tape.
+onli qic and tk format cartridg can be provid.  contact: jami watson,
+adasoft ag, nesslerenweg 104, 3084 wabern, switzerland.
+tel: +41 31 961.35.70 or +41 62 61.41.21; fax: +41 62 61.41.30; jw@adasoft.ch.
+
+uk site can obtain x11 through the ukuug softwar distribut servic, from 
+the depart of comput, imperi colleg, london, in sever tape format.
+you mai also obtain the sourc via janet (and therefor pss) us niftp (host:
+uk.ac.ic.doc.src name: guest password: your_email_address).  queri should be 
+direct to lee mcloughlin, 071-589-5111#5037, or to info-server@doc.ic.ac.uk 
+or ukuug-soft@uk.ac.ic.doc (send a subject line of "want". also offer ar 
+copi of comp.sourc.x, the export.lc.mit.edu contrib and doc area and most
+other announc freeli distribut packag. 
+
+x11r5 and x11r4 sourc along with x11r5 contrib code, prebuilt x binari for
+major platform, and sourc code exampl from o'reilli's book is avail on
+an iso-9660-format cd-rom from o'reilli & associ. [as of 3/92].
+
+x11r5 sourc is avail on iso-9660-format cd-rom for member of the japan
+unix societi from hiroaki obata, obata@jrd.dec.com.
+
+x11r5 sourc along with gnu sourc, the comp.sourc.x archiv, and sparc
+binari is avail on an iso-9660-format cd-rom from pdq softwar,
+510-947-5996 (or robert a. bruce, rab@sprite.berkelei.edu).
+
+x11r5 sourc is avail from automata design associ, +1 215-646-4894.
+
+variou user' group (e.g. sug) offer x sourc cheapli, typic on cd-rom.
+
+sourc for the andrew user interfac system 5.1 and binari for common system
+ar avail on cd-rom. inform: info-andrew-request@andrew.cmu.edu,
+412-268-6710, fax 412-621-8081.
+
+binari for x11r5, with share libx11 and libxmu, for a/ux 2.0.1 ar now 
+avail from wuarchiv.wustl.edu:/archiv/system/aux/x11r5.  patch for 
+x11r5 compil with gcc (but not share librari) ar also avail.
+[john l. coolidg (coolidg@cs.uiuc.edu, 10/91)]
+
+binari by rich kaul (kaul@ee.eng.ohio-state.edu) for the sun386i run 
+suno 4.0.2 ar avail on dsinc.dsi.com (pleas onli after-hour usa est).
+
+binari for the sun386i ar avail from compaq.com (131.168.249.254) in
+pub/sun-386i/sourc and from vernam.cs.uwm.edu (129.89.9.117).
+
+a binari tree for the next by dougla scott (doug@foxtrot.ccmrc.ucsb.edu) is on
+foxtrot.ccmrc.ucsb.edu; it is miss the server, though.
+
+binari for the sun386i ar in vernam.cs.uwm.edu:/sun386i.
+
+binari for the hp-pa ar on hpcvaaz.cv.hp.com (15.255.72.15).
+
+sourc and binari for hp-ux 8.*/9.0(s300/400/700/800) and domain 10.4 (68k,
+dn 10k) ar avail through the interwork user group; contact carol relph
+at 508-436-5046, fax 508-256-7169, or relph_c@apollo.hp.com.
+
+patch to x11r5 for solari 2.1 by casper h.s. dik (casper@fwi.uva.nl) et al
+ar on export in contrib/{r5.suno5.patch.tar.z,r5.suno5.patch.readm}.
+
+patch to x11r5 for the sun type 5 keyboard and the keyboard numlock ar 
+avail from william bailei (dbgwab@arco.com).
+
+also:
+
+binari ar avail from unipalm (+44 954 211797, xtech@unipalm.co.uk), 
+probabl for the sun platform. 
+----------------------------------------------------------------------
+
+
+david b. lewi 					faq%craft@uunet.uu.net
+
+		"just the faq, ma'am." -- joe fridai 
+-- 
+david b. lewi		temporarili at but not speak for visual, inc.
+dai: dbl@visual.com	even: david%craft@uunet.uu.net

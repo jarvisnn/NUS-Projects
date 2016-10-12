@@ -1,0 +1,35 @@
+nntp-post-host: 134.58.96.14
+from: wimvh@liri.tew.kuleuven.ac.be (wim van holder)
+distribut: world
+organ: k.u.leuven - appli econom scienc depart
+subject: re: winqvtnet with ndi on token ring ?
+line: 28
+
+in articl <1993apr21.210954.40516@datamark.co.nz>, thoma@datamark.co.nz write:
+|> in articl <1993apr21.082152@liri.tew.kuleuven.ac.be> wimvh@liri.tew.kuleuven.ac.be (wim van holder) write:
+|> >is it possibl to us winqvt/net on a machin that us ndi to connect to a
+|> >token ring ? i tri it with older version (< 3.2) but got an invalid packet
+|> >class error or someth the like...
+|>
+|> how ar you attempt to do that?
+|>
+|> ar you us the di_pkt9 program? thi provid a packet driver on
+|> top of the ndi driver.
+|>
+
+i tri to do so, but peopl told me that even if i us dispkt, the packet
+would still be incompat. is thi true ?
+
+
+|> --
+|>    thoma beagl | thoma@datamark.co.nz        work: 64 4 233 8186    __o
+|> technic writer | thoma@cavebb.welli.gen.nz  home: 64 4 499 3832  _-\<,
+|>   wellington, nz |    hound for hire. will work for dog biscuit.   (_)/(_)
+
+wim van holder
+katholiek universiteit leuven          tel: ++32 (0)16/28.57.16
+depart t.e.w.                      fax: ++32 (0)16/28.57.99
+dekenstraat 2
+b-3000 leuven                           e-mail: wimvh@liri.tew.kuleuven.ac.be
+belgium                                         fdbaq03@cc1.kuleuven.ac.be
+

@@ -1,0 +1,66 @@
+from: mmc@cs.rit.edu (mahendra m chheda)
+
+subject: print from within an applic
+
+organ: rochest institut of technolog
+
+line: 27
+
+nntp-post-host: mackinac
+
+
+
+hi,
+
+
+
+i have an applic which draw graph, bar chart etc. i need to includ
+
+print support for these from within my applic i.e. a user can print
+
+the graph from within the applictaion by click on a print button. i am 
+
+not sure if i can invok xwd & xpr from within my applic and specifi
+
+the window id to get my window dump and then send thi file for print or 
+
+if there ar other wai of do thi. i would appreci ani help in thi 
+
+regard. thanx.
+
+
+
+	- mahendra.
+
+
+
+ps : pleas mail your repli to me as i am not a regular reader of thi 
+
+new group. i will post a summari if there is suffici interest.
+
+
+
+-- 
+
+
+
+***************************************************************************
+
+	mahendra chheda			#
+
+	mmc@cs.rit.edu			#
+
+	mmc7274@ritvax.isc.rit.edu	#
+
+					#
+
+	offic :			#	resid :
+
+	dept. of comput scienc	#	440 kimbal drive
+
+	rochest institut of tech.	#	rochest, ny 14623
+
+	tel. 716-475-2079		#	tel. 716-292-5726
+
+***************************************************************************
+

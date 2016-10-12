@@ -1,0 +1,37 @@
+from: joedal@dfi.aau.dk (lar joedal)
+subject: 80386 and 80486: what's the differ?
+nntp-post-host: dfi.aau.dk
+organ: aarhu univers, denmark
+line: 31
+
+except from clock frequenc, what ar the differ between the
+variou type of 386 and 486 processor?
+the follow is a list with what i know (or perhap onli what i
+think i know!). can anybodi extend & correct?
+
+
+80386:  true 32 bit processor.
+        (cach?)
+
+80386sx:  emul 80386 with a 16 bit bu.
+
+80486:  true 32 bit processor.
+        intern mathemat coprocessor (correct?)
+        intern cach (correct? how big?)
+        (extend instruct set in ani wai?)
+
+80486sx:  probabl sorta like 80486...
+
+80486dx:  probabl sorta like 80386...
+
+
+well, it's not much, but i'm sure there is a lot of peopl out there
+who can add a lot of inform. post or email as you prefer.
+
++------------------------------------------------------------------------+
+| lar j|dal                | q: what's the differ between a quantum |
+| email: joedal@dfi.aau.dk  |    mechan and an auto mechan?          |
+| physic student at the    | a: a quantum mechan can get hi car into |
+| univers of aarhu      |    the garag without open the door.    |
+| denmark                   |                    -- david kra            |
++------------------------------------------------------------------------+

@@ -1,0 +1,78 @@
+from: brendan@oc3s-emh1.armi.mil (brendan mckenna)
+
+subject: problem with charact abov 127
+
+organ: the internet
+
+line: 33
+
+to: xpert@expo.lc.mit.edu
+
+
+
+
+
+hi all,
+
+
+
+i've read the faq, i've fiddl around, but i am still have problem get
+
+my poor old hp9000/300 to let me input/displai charact abov 127.  i have 
+
+the follow in my .xdefault:
+
+
+
+xterm*font     :   -adob-courier-bold-r-normal--14-140-75-75-m-90-iso8859-1
+
+
+
+so i believ that i have the correct font select to us in xterm.  i have not
+
+set my lc_ctype environ variabl becaus whatev i put it, it tell me that
+
+that local is not support (appar we have no addit local defin,
+
+or at least, /lib/local doesn't exist).  i can get some of the charact
+
+abov 127 to print out, but thei ar not where i'd expect them -- for exampl,
+
+alt-v doe not produc a u umlaut.  thi lead me to believ that the fault
+
+li with the stty set, which ar as follow:
+
+
+
+speed 9600 baud; line = 0; susp <undef>; dsusp <undef>
+
+intr = ^c; quit = ^\; eras = ^h; kill = ^k; swtch = ^@
+
+eof = ^d; eol = ^@; min = 4; time = 0; stop = ^s; start = ^q
+
+-parenb -parodd cs8 -cstopb hupcl cread -clocal -loblk -crt 
+
+-ignbrk -brkint -ignpar -parmrk -inpck -istrip -inlcr -igncr icrnl -iuclc 
+
+ixon -ixani ixoff -ienqak 
+
+isig icanon iexten -xcase echo echo echok -echonl -noflsh 
+
+opost -olcuc onlcr -ocrnl -onocr -onlret -ofil -ofdel -tostop 
+
+
+
+anywai, i've struggl with thi off and on for a coupl of week, and ani help
+
+anyon could offer would be greatli appreci.
+
+
+
+
+
+					thank!
+
+
+
+					brendan
+

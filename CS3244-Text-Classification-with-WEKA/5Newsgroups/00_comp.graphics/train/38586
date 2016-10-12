@@ -1,0 +1,44 @@
+from: thester@nyx.cs.du.edu (uncl fester)
+subject: re: cview answer
+x-disclaim: nyx is a public access unix system run by the univers
+	of denver for the denver commun.  the univers ha neither
+	control over nor respons for the opinion of user.
+organ: nyx, public access unix at u. of denver math/cs dept.
+line: 36
+
+in articl <5103@moscom.com> mz@moscom.com (matthew zenkar) write:
+>cyberspac buddha (cb@wixer.bga.com) wrote:
+>: renew@blade.stack.urc.tue.nl (rene walter) write:
+>: >over where it place it temp file: it just place them in it
+>: >"current directori".
+>
+>: i have to beg to differ on thi point, as the batch file i us
+>: to launch cview cd's to the dir where cview resid and then
+>: invok it.  everi time i crash cview, the 0-byte temp file
+>: is found in the root dir of the drive cview is on.
+>
+>i post thi as well befor the cview "expert".  appar, he thought
+he
+>knew better.
+>
+>matthew zenkar
+>mz@moscom.com
+
+
+     ar we talk about colorview for do here?  
+     i have version 2.0 and it write the temp file to it own
+     current directori.
+     what later version do, i admit that i don't know.
+     assum your "expert" referenc abov is talk about
+     the version that i have, then i'd sai he is correct.
+     is the colorview for unix what is be discuss?
+     just mix up, confus, befuddl, but genuin and
+     entir curiou....
+
+     uncl fester
+
+--
+           :     what god want      :  god want gigolo          :
+           :        god get         :  god want giraff         :
+           :     god help us all     :  god want polit         :
+           : *thester@nyx.cs.du.edu* :  god want a good laugh     :

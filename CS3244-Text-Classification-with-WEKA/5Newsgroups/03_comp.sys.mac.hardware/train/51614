@@ -1,0 +1,36 @@
+from: jim@jagubox.gsfc.nasa.gov (jim jagielski)
+subject: re: quadra scsi problem???
+keyword: quadra scsi ap
+line: 29
+repli-to: jim@jagubox.gsfc.nasa.gov (jim jagielski)
+organ: nasa/goddard space flight center
+
+tz@stein2.u.washington.edu (tim smith) write:
+
+>> attent: mac quadra owner: mani storag industri expert have
+>> conclud that mac quadra suffer from time irregular deviat
+>> from the standard scsi specif. thi result in silent corrupt
+>> of data when us with some devic, includ ultra-modern devic.
+>> although i will not name the devic, sinc it is not their fault, an
+>> exampl would be a soni 3.5 inch mo, without the special "mac-compat"
+>> firmwar instal. on solut, sometim, is to disabl "blind write"
+
+>thi doesn't sound right to me.  don't quadra us the 53c96?  if so, the
+>mac ha noth to do with the scsi time.  that's all handl by the
+>chip.  about the onli the time could be wrong is if appl program the
+>clock regist wrong on the 96.  that, howev, should onli realli hurt
+>synchron transfer, which is not us by the mac scsi manag.
+
+>furthermor, disabl blind write should be meaningless on a quadra.
+>on mac that us the 5380, which is a much lower level scsi chip, the
+>mac wa respons for the handshak of each byte transfer.  blind
+>mode affect how the mac handl that handshak.  on the 5396, the
+>handshak is entir handl by the chip.
+
+the doc sai that it's a scsi manag bug, if thi chang thing at all...
+-- 
+    jim jagielski               |  "and he's gonna stiff me. so i sai,
+    jim@jagubox.gsfc.nasa.gov   |   'hei! lama! how about someth,
+    nasa/gsfc, code 734.4       |   you know, for the effort!'"
+    greenbelt, md 20771         |
+

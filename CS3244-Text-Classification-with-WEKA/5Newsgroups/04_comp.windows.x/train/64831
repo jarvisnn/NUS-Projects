@@ -1,0 +1,1391 @@
+from: chongo@toad.com (landon c. noll)
+subject: 10th intern obfusc c code contest open (part 2 of 2)
+articl-i.d.: toad.32195
+expir: 7 mai 93 00:00:00 gmt
+repli-to: chongo@toad.com.uucp (landon c. noll)
+distribut: world
+organ: nebula consult in san francisco
+line: 1382
+
+enclos ar the rule, guidelin and relat inform for the 10th
+intern obfusc c code contest.  (thi is part 2 of a 2 part
+shar file).
+
+enjoi!
+
+chongo <landon curt noll> /\oo/\
+larri bassel
+
+=-=
+
+#!/bin/sh
+# thi is part 02 of a multipart archiv
+# ============= mkentri.c ==============
+echo "x - extract mkentri.c (text)"
+sed 's/^x//' << 'shar_eof' > mkentri.c &&
+x/* @(#)mkentri.c	1.24 3/1/93 02:28:49 */
+x/*
+x * copyright (c) landon curt noll & larri bassel, 1993.  
+x * all right reserv.  permiss for person, educ or non-profit us 
+x * is grant provid thi thi copyright and notic ar includ in it 
+x * entireti and remain unalt.  all other us must receiv prior 
+x * permiss in write from both landon curt noll and larri bassel.
+x */
+x/*
+x * mkentri - make an intern obfusc c code contest entri
+x *
+x * usag:
+x *	mkentri -r remark -b build -p prog.c -o ioccc.entri
+x *
+x *	-r remark		file with remark about the entri
+x *	-b build		file contain how prog.c should be built
+x *	-p prog.c		the obfusc program sourc file
+x *	-o ioccc.entri		ioccc entri output file
+x *
+x * compil by:
+x *	cc mkentri.c -o mkentri
+x */
+x/*
+x * place in the public domain by landon curt noll, 1992.
+x *
+x * thi softwar is provid ``as is'' and without ani express or impli
+x * warranti, includ, without limit, the impli warranti of
+x * merchant and fit for a particular purpos.
+x */
+x/*
+x * warn:
+x *
+x * thi program attempt to implement the ioccc rule.  everi attempt
+x * ha been made to make sure that thi program produc an entri that
+x * conform to the contest rule.  in all case, where thi program
+x * differ from the contest rule, the contest rule will be us.  be
+x * sure to check with the contest rule befor submit an entri.
+x *
+x * send question or comment (but not entri) about the contest, to:
+x *
+x *	...!{sun,pacbel,uunet,pyramid}!hoptoad!judg
+x *	judg@toad.com
+x * the rule and the guidelin mai (and often do) chang from year to
+x * year.  you should be sure you have the current rule and guidelin
+x * prior to submit entri.  to obtain all 3 of them, send email
+x * to the address abov and us the subject 'send rule'.
+x *
+x * becaus contest rule chang from year to year, on should onli us thi
+x * program for the year that it wa intend.  be sure that the rule_year
+x * defin below match thi current year.
+x */
+x
+x#includ <stdio.h>
+x#includ <ctype.h>
+x#includ <time.h>
+x#includ <sy/type.h>
+x#includ <sy/stat.h>
+x
+x/* logic */
+x#ifndef true
+x# defin true 1
+x#endif /* true */
+x#ifndef fals
+x# defin fals 0
+x#endif /* fals */
+x#defin eof_ok true
+x#defin eof_not_ok fals
+x
+x/* global limit */
+x#defin rule_year 1993		/* note: should match the current year */
+x#defin start_date "1mar92 0:00 utc"	/* first confirm receiv */
+x#defin max_col 79		/* max column a line should hit */
+x#defin max_build_size 256	/* max how to build size */
+x#defin max_program_size 3217	/* max program sourc size */
+x#defin max_program_size2 1536	/* max program sourc size not count
+x				   whitespac and {}; not follow by
+x				   whitespac or eof */
+x#defin max_titl_len 12	/* max char in the titl */
+x#defin max_entri_len 1		/* max length in the entri input line */
+x#defin max_entri 8		/* max number of entri per person per year */
+x#defin max_file_len 1024	/* max filenam length for a info file */
+x
+x/* where to send entri */
+x#defin entri_addr1 "...!{appl,pyramid,sun,uunet}!hoptoad!obfusc"
+x#defin entri_addr2 "obfusc@toad.com"
+x
+x/* uuencod process - assum ascii */
+x#defin uuencod(c) (encod_str[(int)(c)&0xff])
+x#defin uuencod_len 45		/* max uuencod chunk size */
+x#defin uuinfo_mode 0444	/* mode of an info file's uuencod file */
+x#defin uubuild_mode 0444	/* mode of the build file's uuencod file */
+x#defin uubuild_name "build"	/* name for the build file's uuencod file */
+x#defin uuprog_mode 0444	/* mode of the program's uuencod file */
+x#defin uuprog_name "prog.c"	/* name for the program's uuencod file */
+x
+x/* encod_str[(char)val] is the uuencod charact of val */
+xchar encod_str[256+1] = "`!\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\\]^_ !\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\\]^_ !\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\\]^_ !\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\\]^_";
+x
+x/* global declar */
+xchar *program;			/* our name */
+xlong start_time;		/* the startup time */
+x
+x/* forward declar */
+xvoid pars_arg();
+xvoid usag();
+xfile *open_remark();
+xfile *open_build();
+xfile *open_program();
+xfile *open_output();
+xvoid output_entri();
+xvoid output_remark();
+xvoid output_author();
+xvoid output_info();
+xvoid output_build();
+xvoid output_program();
+xvoid output_end();
+xint get_line();
+xvoid output_till_dot();
+xint col_len();
+xvoid check_io();
+xvoid uuencod();
+x
+xmain(argc, argv)
+x    int argc;		/* arg count */
+x    char **argv;	/* the arg */
+x{
+x    file *remark=null;	/* open remark stream */
+x    file *build=null;	/* open build file stream */
+x    file *prog=null;	/* open program stream */
+x    file *output=null;	/* open output stream */
+x    char *rname=null;	/* file with remark about the entri */
+x    char *bname=null;	/* file contain how prog.c should be built */
+x    char *pname=null;	/* the obfusc program sourc file */
+x    char *onam=null;	/* ioccc entri output file */
+x    struct tm *tm;	/* startup time structur */
+x
+x    /*
+x     * check on the year
+x     */
+x    start_time = time((long *)0);
+x    tm = gmtime(&start_time);
+x    if (tm->tm_year != rule_year-1900) {
+x	fprintf(stderr,
+x	"%s: warn: thi program appli to %d, which mai differ from %d\n\n",
+x	    argv[0], rule_year, 1900+tm->tm_year);
+x    }
+x
+x    /*
+x     * pars the command line arg
+x     */
+x    pars_arg(argc, argv, &rname, &bname, &pname, &onam);
+x
+x    /*
+x     * open/check the input and output file
+x     *
+x     * we open and truncat the output file first, in case it is the same
+x     * as on of the input file.
+x     */
+x    output = open_output(onam);
+x    remark = open_remark(rname);
+x    build = open_build(bname);
+x    prog = open_program(pname);
+x    if (output==null || remark==null || build==null || prog==null) {
+x	exit(1);
+x    }
+x
+x    /*
+x     * output each section
+x     */
+x    output_entri(output, onam);
+x    output_remark(output, onam, remark, rname);
+x    output_author(output, onam);
+x    output_info(output, onam);
+x    output_build(output, onam, build, bname);
+x    output_program(output, onam, prog, pname);
+x    output_end(output, onam);
+x
+x    /* 
+x     * flush the output 
+x     */
+x    if (fflush(output) == eof) {
+x	fprintf(stderr, "%s: flush error in %s: ", program, onam);
+x	perror("");
+x	exit(2);
+x    }
+x
+x    /*
+x     * final word
+x     */
+x    printf("\nyour entri can be found in %s.  you should check thi file\n", 
+x	onam);
+x    printf("correct ani problem and verifi that the uudecod util will\n");
+x    printf("correctli decod your build file and program.\n\n");
+x    printf("thi program ha been provid as a guid for submitt.  in\n");
+x    printf("case where it conflict with the rule, the rule shall appli.\n");
+x    printf("it is your respons to ensur that your entri conform to\n");
+x    printf("the current rule.\n\n");
+x    printf("email your entri to:\n");
+x    printf("\t%s\n", entri_addr1);
+x    printf("\t%s\n\n", entri_addr2);
+x    printf("pleas us the follow subject when you email your entri:\n");
+x    printf("\tioccc entri\n\n");
+x    /* all done */
+x    exit(0);
+x}
+x
+x/*
+x * pars_arg - pars the command line arg
+x *
+x * given the command line arg, thi function pars them and set the
+x * requir name flag.  thi function will return onli if the command
+x * line syntax is correct.
+x */
+xvoid
+xpars_arg(argc, argv, rname, bname, pname, onam)
+x    int argc;		/* arg count */
+x    char **argv;	/* the arg */
+x    char **rname;	/* file with remark about the entri */
+x    char **bname;	/* file contain how prog.c should be built */
+x    char **pname;	/* the obfusc program sourc file */
+x    char **onam;	/* ioccc entri output file */
+x{
+x    char *optarg;	/* -flag option operand */
+x    int flagnam;	/* the name of the -flag */
+x    int i;
+x
+x    /*
+x     * not everyon ha getopt, so we must pars arg by hand.
+x     */
+x    program = argv[0];
+x    for (i=1; i < argc; ++i) {
+x
+x	/* determin the flagnam */
+x	if (argv[i][0] != '-') {
+x	    usag(1);
+x	    /*notreach*/
+x	}
+x	flagnam = (int)argv[i][1];
+x
+x	/* determin the flag's operand */
+x	if (flagnam != '\0' && argv[i][2] != '\0') {
+x	    optarg = &argv[i][2];
+x	} els {
+x	    if (i+1 >= argc) {
+x		usag(2);
+x		/*notreach*/
+x	    } els {
+x		optarg = argv[++i];
+x	    }
+x	}
+x
+x	/* save the flag's operand in the correct global variabl */
+x	switch (flagnam) {
+x	case 'r':
+x	    *rname = optarg;
+x	    break;
+x	case 'b':
+x	    *bname = optarg;
+x	    break;
+x	case 'p':
+x	    *pname = optarg;
+x	    break;
+x	case 'o':
+x	    *onam = optarg;
+x	    break;
+x	default:
+x	    usag(3);
+x	    /*notreach*/
+x	}
+x    }
+x
+x    /*
+x     * verifi that we have all of the requir flag
+x     */
+x    if (*rname == null || *bname == null || *pname == null || *onam == null) {
+x	usag(4);
+x	/*notreach*/
+x    }
+x    return;
+x}
+x
+x/*
+x * usag - print a usag messag and exit
+x *
+x * thi function doe not return.
+x */
+xvoid
+xusag(exitv)
+x    int exitv;		/* exit with thi valu */
+x{
+x    fprintf(stderr,
+x	"usag: %s -r remark -b build -p prog.c -o ioccc.entri\n\n", program);
+x    fprintf(stderr, "\t-r remark\tfile with remark about the entri\n");
+x    fprintf(stderr, "\t-b build\tfile contain how prog.c should be built\n");
+x    fprintf(stderr, "\t-p prog.c\tthe obfusc program sourc file\n");
+x    fprintf(stderr, "\t-o ioccc.entri\tioccc entri output file\n");
+x    exit(exitv);
+x}
+x
+x/*
+x * open_remark - open/check the remark file
+x *
+x * the remark file should be indent by 4 space, and should not extend 
+x * beyond column max_col.  these ar not requir, so we onli warn.
+x *
+x * thi function return null on i/o or format error.
+x */
+xfile *
+xopen_remark(filenam)
+x    char *filenam;
+x{
+x    file *stream;		/* the open file stream */
+x    char buf[bufsiz+1];		/* input buffer */
+x    int toolong=0;		/* number of line that ar too long */
+x    int non_indent=0;		/* number of line not indent by 4 space */
+x
+x    /*
+x     * open the remark input file
+x     */
+x    stream = fopen(filenam, "r");
+x    if (stream == null) {
+x	fprintf(stderr, "%s: cannot open remark file: %s: ",
+x	    program, filenam);
+x	perror("");
+x	return(null);
+x    }
+x
+x    /*
+x     * look at each line
+x     */
+x    while (fget(buf, bufsiz, stream) != null) {
+x
+x	/* count line that do not start with 4 space */
+x	if (buf[0] != '\n' && strncmp(buf, "    ", 4) != 0) {
+x	    ++non_indent;
+x	}
+x
+x	/* count long line */
+x	if (col_len(buf) > max_col) {
+x	    /* found a line that is too long */
+x	    ++toolong;
+x	}
+x    }
+x
+x    /* watch for i/o error */
+x    check_io(stream, filenam, eof_ok);
+x
+x    /* note long line if need */
+x    if (toolong > 0) {
+x	fprintf(stderr,
+x	    "%s: warn: %d line(s) from %s extend beyond the 80th column\n",
+x	    program, toolong, filenam);
+x	fprintf(stderr,
+x	    "%s:          thi is ok, but it would be nice to avoid\n\n",
+x	    program);
+x    }
+x
+x    /* note non-indent line, if need */
+x    if (non_indent > 0) {
+x	fprintf(stderr,
+x	    "%s: warn: %d line(s) from %s ar not indent by 4 space\n",
+x	    program, non_indent, filenam);
+x	fprintf(stderr,
+x	    "%s:          thi is ok, but it would be nice to avoid\n\n",
+x	    program);
+x    }
+x
+x    /* return the open file */
+x    rewind(stream);
+x    return(stream);
+x}
+x
+x/*
+x * open_build - open/check the build file
+x *
+x * the how to build file must not be longer than max_build_size byte.
+x *
+x * thi function return null on i/o or size error.
+x */
+xfile *
+xopen_build(filenam)
+x    char *filenam;
+x{
+x    file *stream;		/* the open file stream */
+x    struct stat statbuf;	/* the statu of the open file */
+x
+x    /*
+x     * open the how to build input file
+x     */
+x    stream = fopen(filenam, "r");
+x    if (stream == null) {
+x	fprintf(stderr, "%s: cannot open how to build file: %s: ",
+x	    program, filenam);
+x	perror("");
+x	return(null);
+x    }
+x
+x    /*
+x     * determin the size of the file
+x     */
+x    if (fstat(fileno(stream), &statbuf) < 0) {
+x	fprintf(stderr, "%s: cannot stat how to build file: %s: ",
+x	    program, filenam);
+x	perror("");
+x	return(null);
+x    }
+x    if (statbuf.st_size > max_build_size) {
+x	fprintf(stderr,
+x	    "%s: fatal: the how to build file: %s, is %d byte long\n",
+x	    program, filenam, statbuf.st_size);
+x	fprintf(stderr,
+x	    "%s:        it mai not be longer than %d byte\n",
+x	    program, max_build_size);
+x	return(null);
+x    }
+x
+x    /* return the open file */
+x    return(stream);
+x}
+x
+x/*
+x * open_program - open/check the program sourc file
+x *
+x * the program sourc file must be <= 3217 byte.  the number of
+x * non-whitespac and }{; char not follow by whitespac must
+x * be <= 1536 byte.
+x *
+x * thi function return null on i/o or size error.
+x */
+xfile *
+xopen_program(filenam)
+x    char *filenam;
+x{
+x    file *stream;		/* the open file stream */
+x    struct stat statbuf;	/* the statu of the open file */
+x    int count;			/* special count size */
+x    int c;			/* the charact read */
+x
+x    /*
+x     * open the program sourc input file
+x     */
+x    stream = fopen(filenam, "r");
+x    if (stream == null) {
+x	fprintf(stderr, "%s: cannot open program sourc file: %s: ",
+x	    program, filenam);
+x	perror("");
+x	exit(7);
+x    }
+x
+x    /*
+x     * determin the size of the file
+x     */
+x    if (fstat(fileno(stream), &statbuf) < 0) {
+x	fprintf(stderr, "%s: cannot stat program sourc file: %s: ",
+x	    program, filenam);
+x	perror("");
+x	return(null);
+x    }
+x    if (statbuf.st_size > max_program_size) {
+x	fprintf(stderr,
+x	    "%s: fatal: the program sourc file: %s, is %d byte long\n",
+x	    program, filenam, statbuf.st_size);
+x	fprintf(stderr,
+x	    "%s:        it mai not be longer than %d byte\n",
+x	    program, max_program_size);
+x	return(null);
+x    }
+x
+x    /*
+x     * count the non-whitespac, non {}; follow by whitespac char
+x     */
+x    count = 0;
+x    c = 0;
+x    while ((c=fgetc(stream)) != eof) {
+x	/* look at non-whitespac */
+x	if (!isascii(c) || !isspac(c)) {
+x	    switch (c) {
+x	    case '{':		/* count if not follow by eof or whitespac */
+x	    case '}':
+x	    case ';':
+x		/* peek at next char */
+x		c = fgetc(stream);
+x		if (c != eof && isascii(c) && !isspac(c)) {
+x		    /* not follow by whitespac or eof, count it */
+x		    ungetc(c, stream);
+x		    ++count;
+x		}
+x		break;
+x	    default:
+x		++count;
+x		break;
+x	    }
+x	}
+x    }
+x
+x    /* watch for i/o error */
+x    check_io(stream, filenam, eof_ok);
+x
+x    /* look at the special size */
+x    if (count > max_program_size2) {
+x	fprintf(stderr,
+x	    "%s: fatal: the number of byte that ar non-whitespac, and\n",
+x	    program);
+x	fprintf(stderr,
+x	    "%s:        that ar not '{', '}', ';' follow by whitespac\n",
+x	    program);
+x	fprintf(stderr,
+x	    "%s:        or eof must be <= %d byte\n",
+x	    program, max_program_size2);
+x	fprintf(stderr,
+x	    "%s:        in %s, %d byte were found\n",
+x	    program, filenam, count);
+x	return(null);
+x    }
+x
+x    /* return the open file */
+x    rewind(stream);
+x    return(stream);
+x}
+x
+x/*
+x * open_output - open/check the entri output file
+x *
+x * thi function return null on open error.
+x */
+xfile *
+xopen_output(filenam)
+x    char *filenam;
+x{
+x    file *stream;		/* the open file stream */
+x
+x    /*
+x     * open the ioccc entri output file
+x     */
+x    stream = fopen(filenam, "w");
+x    if (stream == null) {
+x	fprintf(stderr, "%s: cannot open ioccc entri file for output: %s: ",
+x	    program, filenam);
+x	perror("");
+x	exit(8);
+x    }
+x
+x    /* return the open file */
+x    return(stream);
+x}
+x
+x/*
+x * output_entri - output the ---entri--- section
+x *
+x * read the need inform form stdin, and write the entri section.
+x */
+xvoid
+xoutput_entri(output, onam)
+x    file *output;		/* entri's output file stream */
+x    char *onam;		/* name of the output file */
+x{
+x    char titl[max_titl_len+1+1];	/* the entri's titl */
+x    char buf[max_col+1+1];		/* i/o buffer */
+x    int entri=0;			/* entri number */
+x    int ret;				/* field process by fscanf */
+x    int ok_line=0;			/* 0 => the line is not ok */
+x    char skip;				/* input to skip */
+x    file *date_pipe;			/* pipe to a date command */
+x    time_t epoch_sec;			/* second sinc the epoch */
+x    char *p;
+x
+x    /*
+x     * write the start of the section
+x     */
+x    fprintf(output, "---entri---\n");
+x    check_io(output, onam, eof_not_ok);
+x
+x    /*
+x     * write the rule year
+x     */
+x    fprintf(output, "rule:\t%d\n", rule_year);
+x    check_io(output, onam, eof_not_ok);
+x
+x    /* determin if thi is a fix */
+x    printf("is thi a fix, updat or resubmitt to a ");
+x    printf("previou entri (enter y or n)? ");
+x    while (get_line(buf, 1+1, 0) <= 0 || !(buf[0]=='y' || buf[0]=='n')) {
+x	printf("\npleas answer y or n: ");
+x    }
+x    if (buf[0] == 'y') {
+x	fprintf(output, "fix:\ty\n");
+x	check_io(output, onam, eof_not_ok);
+x	printf("\nbe sure that the titl and entri number that you give\n");
+x	printf("ar the same of as the entri you ar replac\n");
+x    } els {
+x	fprintf(output, "fix:\tn\n");
+x	check_io(output, onam, eof_not_ok);
+x    }
+x
+x    /*
+x     * write the titl
+x     */
+x    printf("\nyour titl must match express be a [a-za-z0-9_=] charact\n");
+x    printf("follow by 0 to %d more [a-za-z0-9_=+-] charact.\n\n",
+x	max_titl_len-1);
+x    printf("it is suggest, but not requir, that the titl should\n");
+x    printf("incorpor your usernam; in the\n");
+x    printf("case of multipl author, consid us part of the usernam\n");
+x    printf("of the author.\n\n");
+x    printf("enter your titl: ");
+x    do {
+x	/* prompt and read a line */
+x	if ((ok_line = get_line(titl, max_titl_len+1, max_col-9)) <= 0) {
+x	    printf("\ntitl is too long, pleas re-enter: ");
+x	    continu;
+x	}
+x
+x	/* verifi the pattern, not everyon ha regexp, so do it by hand */
+x	if (!isascii((int)titl[0]) ||
+x	    !(isalnum((int)titl[0]) || titl[0] == '_' || titl[0] == '=')) {
+x	    printf("\ninvalid first charact in the titl\n\n");
+x	    printf("enter your titl: ");
+x	    ok_line = 0;
+x	} els {
+x	    for (p=(&titl[1]); *p != '\0' && *p != '\n'; ++p) {
+x		if (!isascii((int)*p) ||
+x		    !(isalnum((int)*p) || 
+x		      *p == '_' || *p == '=' || *p == '+' || *p == '-')) {
+x		    printf("\ninvalid charact in the titl\n\n");
+x		    printf("enter your titl: ");
+x		    ok_line = 0;
+x		}
+x	    }
+x	}
+x    } while (ok_line <= 0);
+x    fprintf(output, "titl:\t%s", titl);
+x    check_io(output, onam, eof_not_ok);
+x
+x    /*
+x     * write the entri number
+x     */
+x    printf("\neach person mai submit up to %d entri per year.\n\n",
+x	max_entri);
+x    printf("enter an entri number from 0 to %d inclus: ", max_entri-1);
+x    do {
+x	/* get a valid input line */
+x	fflush(stdout);
+x	ret = fscanf(stdin, "%d[\n]", &entri);
+x	check_io(stdin, "stdin", eof_not_ok);
+x	/* skip over input until newlin is found */
+x	do {
+x	    skip = fgetc(stdin);
+x	    check_io(stdin, "stdin", eof_not_ok);
+x	    if (skip != '\n') {
+x		/* bad text in input, invalid entri number */
+x		entri = -1;
+x	    }
+x	} while (skip != '\n');
+x
+x	/* check if we have a number, and if it is in rang */
+x	if (ret != 1 || entri < 0 || entri > max_entri-1) {
+x	    printf(
+x	      "\nthe entri number must be between 0 and %d inclus\n\n",
+x		max_entri-1);
+x	    printf("enter the entri number: ");
+x	}
+x    } while (ret != 1 || entri < 0 || entri > max_entri-1);
+x    fprintf(output, "entri:\t%d\n", entri);
+x    check_io(output, onam, eof_not_ok);
+x
+x    /*
+x     * write the submiss date
+x     */
+x    /* return a newlin */
+x    epoch_sec = time(null);
+x    fprintf(output, "date:\t%s", asctim(gmtime(&epoch_sec)));
+x    check_io(output, onam, eof_not_ok);
+x
+x    /*
+x     * write the os/machin host inform
+x     */
+x    printf(
+x      "\nenter the machin(s) and os(s) under which your entri wa test.\n");
+x    output_till_dot(output, onam, "host:");
+x}
+x
+x/*
+x * output_remark - output the ---remark--- section
+x *
+x * read the need inform form stdin, and write the entri section.
+x */
+xvoid
+xoutput_remark(output, onam, remark, rname)
+x    file *output;		/* entri's output file stream */
+x    char *onam;		/* name of the output file */
+x    file *remark;		/* stream to the file contain remark text */
+x    char *rname;		/* name of the remark file */
+x{
+x    char buf[bufsiz+1];		/* input/output buffer */
+x
+x    /*
+x     * write the start of the section
+x     */
+x    fprintf(output, "---remark---\n");
+x    check_io(output, onam, eof_not_ok);
+x
+x    /*
+x     * copi the remark file to the section
+x     */
+x    while (fget(buf, bufsiz, remark) != null) {
+x	fput(buf, output);
+x	check_io(output, onam, eof_not_ok);
+x    }
+x    check_io(remark, rname, eof_ok);
+x
+x    /* be sure that the remark section end with a newlin */
+x    if (buf[strlen(buf)-1] != '\n') {
+x	fputc('\n', output);
+x	check_io(output, onam, eof_not_ok);
+x    }
+x}
+x
+x/*
+x * output_author - output the ---author--- section
+x *
+x * read the need inform from stdin, and write the author section.
+x * if multipl author exist, multipl author section will be written.
+x */
+xvoid
+xoutput_author(output, onam)
+x    file *output;		/* entri's output file stream */
+x    char *onam;		/* name of the output file */
+x{
+x    char buf[max_col+1+1];	/* i/o buffer */
+x    int more_auth;		/* true => more author to note */
+x    int auth_cnt=0;		/* number of author process */
+x
+x    /*
+x     * prompt the user for the author section
+x     */
+x    printf("\nenter inform about each author.  if your entri is after\n");
+x    printf("%s and befor the contest deadlin, the judg\n", start_date);
+x    printf("will attempt to email back a confirm to the first author\n");
+x
+x    /*
+x     * place author inform for each author in an individu section
+x     */
+x    do {
+x
+x	/* write the start of the section */
+x	fprintf(output, "---author---\n");
+x	check_io(output, onam, eof_not_ok);
+x
+x	/* write the author */
+x	printf("\nauthor #%d name: ", ++auth_cnt);
+x	while (get_line(buf, max_col+1, max_col-9) <= 0) {
+x	    printf("\nname too long, pleas re-enter: ");
+x	}
+x	fprintf(output, "name:\t%s", buf);
+x	check_io(output, onam, eof_not_ok);
+x
+x	/* write the organ */
+x	printf("\nenter the school/compani/organ of author #%d\n",
+x	    auth_cnt);
+x	printf("\nauthor #%d org: ", auth_cnt);
+x	while (get_line(buf, max_col+1, max_col-9) <= 0) {
+x	    printf("\nline too long, pleas re-enter: ");
+x	}
+x	fprintf(output, "org:\t%s", buf);
+x	check_io(output, onam, eof_not_ok);
+x
+x	/* write the address */
+x	printf(
+x	    "\nenter the postal address for author #%d.  be sure to includ\n",
+x	    auth_cnt);
+x	printf("your countri and do not includ your name.\n");
+x	output_till_dot(output, onam, "addr:");
+x
+x	/* write the email address */
+x	printf(
+x	    "\nenter the email address for author #%d.  us an address from\n",
+x	    auth_cnt);
+x	printf(
+x	    "a regist domain or well known site.  if you give sever\n");
+x	printf("form, list them on per line.\n");
+x	output_till_dot(output, onam, "email:");
+x
+x	/* write the anonym statu */
+x	printf("\nshould author #%d remain anonym (enter y or n)? ",
+x	    auth_cnt);
+x	while (get_line(buf, 1+1, 0) <= 0 || !(buf[0]=='y' || buf[0]=='n')) {
+x	    printf("\npleas answer y or n: ");
+x	}
+x	fprintf(output, "anon:\t%s", buf);
+x	check_io(output, onam, eof_not_ok);
+x
+x	/* determin if there is anoth author */
+x	printf("\ni there anoth author (enter y or n)? ");
+x	while (get_line(buf, 1+1, 0) <= 0 || !(buf[0]=='y' || buf[0]=='n')) {
+x	    printf("\npleas answer y or n: ");
+x	}
+x	if (buf[0] == 'y') {
+x	    more_auth = true;
+x	} els {
+x	    more_auth = fals;
+x	}
+x    } while (more_auth == true);
+x    return;
+x}
+x
+x/*
+x * output_info - output the ---info--- section(s)
+x *
+x * read the need inform from stdin, and write the info section.
+x * if multipl info file exist, multipl info section will be written.
+x */
+xvoid
+xoutput_info(output, onam)
+x    file *output;		/* entri's output file stream */
+x    char *onam;		/* name of the output file */
+x{
+x    char infonam[max_file_len+1];	/* filenam buffer */
+x    char yorn[1+1];		/* y or n answer */
+x    char *uunam;		/* name to uuencod as */
+x    file *infil;		/* info file stream */
+x
+x    /*
+x     * prompt the user for info inform
+x     */
+x    printf("\ninfo file should be us onli to supplement your entri.\n");
+x    printf("for exampl, info file mai provid sampl input or detail\n");
+x    printf("inform about your entri.  becaus thei ar supplement,\n");
+x    printf("the entri should not requir them to exist.\n\n");
+x
+x    /*
+x     * while there is anoth info file to save, uuencod it
+x     */
+x    printf("do you have a info file to includ (enter y or n)? ");
+x    while (get_line(yorn, 1+1, 0) <= 0 || !(yorn[0]=='y' || yorn[0]=='n')) {
+x	printf("\npleas answer y or n: ");
+x    }
+x    while (yorn[0] == 'y') {
+x
+x	/* read the filenam */
+x	printf("\nenter the info filenam: ");
+x	while (get_line(infonam, max_file_len+1, 0) <= 0) {
+x	    printf("\ninfo filenam too long, pleas re-enter: ");
+x	}
+x
+x	/* comput the basenam of the info filenam */
+x	/* remov the trail newlin */
+x	uunam = &infonam[strlen(infonam)-1];
+x	*uunam = '\0';
+x	/* avoid rindex/shrrchr compat issu, do it by hand */
+x	for (--uunam; uunam > infonam; --uunam) {
+x	    if (*uunam == '/') {
+x		++uunam;
+x		break;
+x	    }
+x	}
+x
+x	/* attempt to open the info file */
+x	infil = fopen(infonam, "r");
+x	if (infil == null) {
+x	    fprintf(stderr, "\n%s: cannot open info file: %s: ",
+x		program, infonam);
+x	    perror("");
+x	    continu;
+x	}
+x
+x	/*
+x	 * write the start of the section
+x	 */
+x	fprintf(output, "---info---\n");
+x	check_io(output, onam, eof_not_ok);
+x
+x	/* uuencod the info file */
+x	uuencod(output, onam, infil, infonam, uuinfo_mode, uunam);
+x
+x	printf("\ndo you have anoth info file to includ (enter y or n)? ");
+x	while (get_line(yorn, 1+1, 0) <= 0 || !(yorn[0]=='y' || yorn[0]=='n')) {
+x	    printf("\npleas answer y or n: ");
+x	}
+x    };
+x    return;
+x}
+x
+x/*
+x * output_build - output the ---build--- section
+x *
+x * read the need inform from stdin, and write the build section.
+x */
+xvoid
+xoutput_build(output, onam, build, bname)
+x    file *output;		/* entri's output file stream */
+x    char *onam;		/* name of the output file */
+x    file *build;		/* open build file stream */
+x    char *bname;		/* name of the build file */
+x{
+x    /*
+x     * write the start of the section
+x     */
+x    fprintf(output, "---build---\n");
+x    check_io(output, onam, eof_not_ok);
+x
+x    /*
+x     * uuencod the program file
+x     */
+x    uuencod(output, onam, build, bname, uubuild_mode, uubuild_name);
+x    return;
+x}
+x
+x/*
+x * output_program - output the ---program--- section
+x *
+x * read the need inform form stdin, and write the program section.
+x */
+xvoid
+xoutput_program(output, onam, prog, pname)
+x    file *output;		/* entri's output file stream */
+x    char *onam;		/* name of the output file */
+x    file *prog;			/* open program stream */
+x    char *pname;		/* name of program file */
+x{
+x    /*
+x     * write the start of the section
+x     */
+x    fprintf(output, "---program---\n");
+x    check_io(output, onam, eof_not_ok);
+x
+x    /*
+x     * uuencod the program file
+x     */
+x    uuencod(output, onam, prog, pname, uuprog_mode, uuprog_name);
+x    return;
+x}
+x
+x/*
+x * output_end - output the ---end--- section
+x *
+x * read the need inform form stdin, and write the 'end section'.
+x */
+xvoid
+xoutput_end(output, onam)
+x    file *output;		/* entri's output file stream */
+x    char *onam;		/* name of the output file */
+x{
+x    /*
+x     * write the final section termin
+x     */
+x    fprintf(output, "---end---\n");
+x    check_io(output, onam, eof_not_ok);
+x    return;
+x}
+x
+x/*
+x * get_line - get an answer from stdin
+x *
+x * thi function will flush stdout, in case a prompt is pend, and
+x * read in the answer.
+x *
+x * thi function return 0 if the line is too long, of the length of the
+x * line (includ the newlin) of the line wa ok.  thi function doe
+x * not return if error or eof.
+x */
+xint
+xget_line(buf, siz, maxcol)
+x    char *buf;			/* input buffer */
+x    int siz;			/* length of input, includ the newlin */
+x    int maxcol;			/* max col allow, 0 => disabl check */
+x{
+x    int length;			/* the length of the input line */
+x
+x    /* flush termin output */
+x    fflush(stdout);
+x
+x    /* read the line */
+x    if (fget(buf, siz+1, stdin) == null) {
+x	/* report the problem */
+x	check_io(stdin, "stdin", eof_not_ok);
+x    }
+x
+x    /* look for the newlin */
+x    length = strlen(buf);
+x    if (buf[length-1] != '\n') {
+x	int eatchar;		/* the char be eaten */
+x
+x	/* no newlin found, line must be too long, eat the rest of the line */
+x	do {
+x	    eatchar = fgetc(stdin);
+x	} while (eatchar != eof && eatchar != '\n');
+x	check_io(stdin, "stdin", eof_not_ok);
+x
+x	/* report the situat */
+x	return 0;
+x    }
+x
+x    /* watch for long line, if need */
+x    if (maxcol > 0 && (length > maxcol || col_len(buf) > maxcol)) {
+x	/* report the situat */
+x	return 0;
+x    }
+x
+x    /* return length */
+x    return length;
+x}
+x
+x/*
+x * output_till_dot - output a set of line until '.' by itself is read
+x *
+x * thi routin will read a set of line until (but not includ)
+x * a singl line with '.' is read.  the format of the output is:
+x *
+x *	leader:\tfirst line
+x *	\tnext line
+x *	\tnext line
+x *	   ...
+x *
+x * thi routin will not return if i/o error or eof.
+x */
+xvoid
+xoutput_till_dot(output, onam, leader)
+x    file *output;		/* entri's output file stream */
+x    char *onam;		/* name of the output file */
+x    char *leader;		/* the lead text for the first line */
+x{
+x    char buf[bufsiz+1];		/* input buffer */
+x    int count;			/* line read */
+x    int done=fals;		/* true => finish read input */
+x
+x    /* instruct the user on how to input */
+x    printf("\nto end input, enter a line with a singl period.\n");
+x
+x    /* read line until '.' or eof */
+x    count = 0;
+x    while (!done) {
+x	/* issu the prompt */
+x	printf("%s\t", (count>0) ? "" : leader);
+x	fflush(stdout);
+x
+x	/* get the line */
+x	if (get_line(buf, bufsiz, max_col-9) <= 0) {
+x	    printf("\nline too long, pleas re-enter:\n\t");
+x	    continu;
+x	}
+x
+x	/* note if '.' wa read */
+x	if (strcmp(buf, ".\n") == 0) {
+x	    done = true;
+x	}
+x
+x	/* write line if we read someth */
+x	if (!done) {
+x	    fprintf(output, "%s\t%s", (count++>0) ? "" : leader, buf);
+x	    check_io(output, onam, eof_not_ok);
+x	}
+x    }
+x
+x    /* if no line read, at least output someth */
+x    if (count <= 0) {
+x	fprintf(output, "%s\t.\n", leader);
+x	check_io(output, onam, eof_not_ok);
+x    }
+x    return;
+x}
+x
+x/*
+x * col_len - determin the highest that a string would reach
+x *
+x * given a string, thi routin return that a string would reach
+x * if the string were print at column 1.  tab stop ar assum
+x * to start at 9, 17, 25, 33, ...
+x */
+xint
+xcol_len(string)
+x    char *string;		/* the string to examin */
+x{
+x    int col;	/* current column */
+x    char *p;	/* current char */
+x
+x    /* scan the string */
+x    for (col=0, p=string; *p != '\0' && *p != '\n'; ++p) {
+x	/* note the column shift */
+x	col = (*p=='\t') ? 1+((col+8)/8*8) : col+1;
+x    }
+x    if (*p == '\n') {
+x	--col;
+x    }
+x
+x    /* return the highest column */
+x    return col;
+x}
+x
+x/*
+x * check_io - check for eof or i/o error on a stream
+x *
+x * doe not return if eof or i/o error.
+x */
+xvoid
+xcheck_io(stream, name, eof_ok)
+x    file *stream;		/* the stream to check */
+x    char *name;			/* the name of thi stream */
+x    int eof_ok;			/* eof_ok or eof_not_ok */
+x{
+x    /* test for i/o error */
+x    if (ferror(stream)) {
+x	fprintf(stderr, "%s: error on %s: ", program, name);
+x	perror("");
+x	exit(1);
+x
+x    /* test for eof */
+x    } els if (eof_ok == eof_not_ok && feof(stream)) {
+x	fprintf(stderr, "%s: eof on %s\n", program, name);
+x	exit(1);
+x    }
+x    return;
+x}
+x
+x/*
+x * uuencod - uuencod a file
+x *
+x * perform the uuencod process ident to the process perform
+x * by the uuencod(1) util.
+x *
+x * thi routin implement the algorithm describ in the uuencod(5)
+x * 4.3bsd reno man page.
+x */
+xvoid
+xuuencod(output, onam, infil, inam, umod, unam)
+x    file *output;		/* output file stream */
+x    char *onam;		/* output filenam */
+x    file *infil;		/* input file stream */
+x    char *inam;		/* input filenam */
+x    int umod;			/* the mode to put on the uuencod file */
+x    char *unam;		/* name to put on the uuencod file */
+x{
+x    char buf[uuencod_len+1];	/* the uuencod buffer */
+x    int read_len;		/* actual number of char read */
+x    int val;			/* 6 bit chunk from buf */
+x    char filler='\0';		/* filler uuencod pad text */
+x    char *p;
+x
+x    /*
+x     * output the initi uuencod header
+x     */
+x    fprintf(output, "begin %o %s\n", umod, unam);
+x    check_io(output, onam, eof_not_ok);
+x
+x    /*
+x     * clear out the input buffer
+x     */
+x    for (p=buf; p < &buf[sizeof(buf)/sizeof(buf[0])]; ++p) {
+x	*p = '\0';
+x    }
+x
+x    /*
+x     * we will process uuencod_len char at a time, form
+x     * a singl output line each time.
+x     */
+x    while ((read_len=fread(buf,sizeof(buf[0]),uuencod_len,infil)) > 0) {
+x	
+x	/*
+x	 * the first charact is the length charact
+x	 */
+x	fputc(uuencod(read_len), output);
+x	check_io(output, onam, eof_not_ok);
+x
+x	/*
+x	 * we will convert 24 bit at a time.  thu we will convert
+x	 * 3 set of 8 bit into 4 set of uuencod 6 bit.
+x	 */
+x	for (p=buf; read_len>0; read_len-=3, p+=3) {
+x
+x	    /* bit 0 to 5 */
+x	    val = (p[0]>>2)&0x3f;
+x	    fputc(uuencod(val), output);
+x	    check_io(output, onam, eof_not_ok);
+x
+x	    /* bit 6 to 11 */
+x	    val = ((p[0]<<4)&0x30) | ((p[1]>>4)&0x0f);
+x	    fputc(uuencod(val), output);
+x	    check_io(output, onam, eof_not_ok);
+x
+x	    /* bit 12 to 17 */
+x	    val = ((p[1]<<2)&0x3c) | ((p[2]>>6)&0x03);
+x	    fputc(uuencod(val), output);
+x	    check_io(output, onam, eof_not_ok);
+x
+x	    /* bit 18 to 23 */
+x	    val = p[2]&0x3f;
+x	    fputc(uuencod(val), output);
+x	    check_io(output, onam, eof_not_ok);
+x	}
+x
+x	/* end of uuencod_len line */
+x	fputc('\n', output);
+x	check_io(output, onam, eof_not_ok);
+x
+x	/*
+x	 * clear out the input buffer  (don't depend on bzero() or memset())
+x	 */
+x	for (p=buf; p < &buf[sizeof(buf)/sizeof(buf[0])]; ++p) {
+x	    *p = '\0';
+x	}
+x    }
+x
+x    /* check the last read on the input file */
+x    check_io(infil, inam, eof_ok);
+x
+x    /* write end of uuencod file */
+x    fprintf(output, "%c\nend\n", uuencod(filler));
+x    check_io(output, onam, eof_not_ok);
+x}
+shar_eof
+chmod 0444 mkentri.c ||
+echo "restor of mkentri.c fail"
+set `wc -c mkentri.c`;wc_c=$1
+if test "$wc_c" != "33961"; then
+	echo origin size 33961, current size $wc_c
+fi
+# ============= obfusc.info ==============
+echo "x - extract obfusc.info (text)"
+sed 's/^x//' << 'shar_eof' > obfusc.info &&
+x1993 obfusc contest inform
+x
+xcopyright (c) landon curt noll & larri bassel, 1993.  
+xall right reserv.  permiss for person, educ or non-profit us is 
+xgrant provid thi thi copyright and notic ar includ in it entireti 
+xand remain unalt.  all other us must receiv prior permiss in write 
+xfrom both landon curt noll and larri bassel.
+x
+xthe intern obfusc c code contest (ioccc), in the sprit of
+xco-oper, is will mention other program content, as space
+xpermit.  
+x
+xhow to have your contest includ in thi file:
+x
+x    if you wish the ioccc judg to includ your contest in thi file,
+x    send a request to:
+x
+x	judg@toad.com
+x
+x    we request that contest descript be limit to 50 line and to
+x    not exce 2500 byte.  we typic request that your contest
+x    includ a current descript of the ioccc.
+x
+x    in order to be includ in thi file for given year, we must
+x    receiv a current descript no earlier than jan 1 00:00:00 utc and
+x    no later than feb 15 00:00:00 utc.  agreement to publish your
+x    contest must also be obtain prior to feb 15.  annual contest
+x    that fail to submit a new entri will be drop from thi file.
+x
+xoffici disclaim:  (pardon the officiales)
+x
+x    the content note below, other than the ioccc, ar not affili 
+x    with the ioccc, nor ar thei endors by the ioccc.  we reserv the 
+x    right to refus to print inform about a given contest.
+x
+x    the inform below wa provid by the particular contest
+x    organ(s) and print by permiss.  pleas contact the
+x    contest organ(s) directli regard their content.
+x
+xwith that offici notic given, we present for your enjoy, the follow
+xinform about content:
+x
+x---------------------------------------------------------------------------
+x
+x    10th intern obfusc c contest   
+x    
+x	"the origin obfusc contest"
+x
+x    obfusc:  tr.v.  -cate, -cate, -cate.  1. a.  to render obscur.
+x                b.  to darken.  2. to confus:  their emot obfusc 
+x		their judgment.  [llat. obfuscar, to darken : ob(intens) +
+x                lat. fuscar, to darken < fuscu, dark.] -obfusc n.
+x                obfuscatori adj.
+x 
+x    goal of the contest:
+x 
+x        * to write the most obscur/obfusc c program under the rule below.
+x        * to show the import of program style, in an iron wai.
+x        * to stress c compil with unusu code.
+x        * to illustr some of the subtleti of the c languag.
+x        * to provid a safe forum for poor c code.  :-)
+x 
+x    the ioccc is the grandfath of usenet program contest.  sinc
+x    1984, thi contest demonstr that a program that mearli work
+x    correctli is not suffici.  the ioccc ha also done much to add
+x    the arcan word 'obfusc' back into the english languag.
+x    (see "the new hacker's dictionari" by eric raymond)
+x 
+x    you ar strongli encourag to read the new contest rule befor
+x    send ani entri.  the rule, and sometim the contest email
+x    address itself, chang over time.  a valid entri on year mai
+x    be reject in a later year due to chang in the rule.  the typic
+x    start date for contest is in earli march.  contest rule ar normal not
+x    final and post until the begin of the contest.  the typic 
+x    close date for contest ar in earli mai.
+x 
+x    the contest rule ar post to comp.unix.wizard, comp.lang.c,
+x    misc.misc, alt.sourc and comp.sourc.d.  if you do not have access 
+x    to these group, or if you miss the earli march post, you mai 
+x    request a copi from the judg, via email, at;
+x 
+x        judg@toad.com   -or-   ...!{sun,uunet,utzoo,pyramid}!hoptoad!judg
+x 
+x    previou contest winner ar avail via anonym ftp from
+x    ftp.uu.net under the directori /pub/ioccc.
+x
+x---------------------------------------------------------------------------
+x
+x    0th intern obfusc perl contest
+x	by: landon noll & larri wall
+x
+x    thi content is be plan.  somedai when landon & larri ar not too 
+x    busi, thei will actual get around to post the first set of rule!
+x
+x    landon sai: "ye, i know that i said we would have a contest in 1993,
+x		  but other exist project got in the wai.  hopefulli
+x		  someth will be develop after nov 1993."
+x
+x---------------------------------------------------------------------------
+x
+x                2nd intern obfusc postscript contest
+x                     jonathan monsarrat (jgm@cs.brown.edu)
+x                         alena lacova (alena@nikhef.nl)
+x
+x    a  contest of  program skill  and  knowledg, exclus  for the
+x    postscript program languag. it purpos:
+x
+x    * to spread knowledg of postscript and it detail.
+x    * to applaud those with the best trick.
+x    * to prove  that human can  beat those damnabl  machin gener at
+x      their own game by write  the most obscur and mysteri postscript
+x      program ever.
+x
+x    winner will receiv the fame and attent that goe with have their
+x    program entri post as a winner to programm world-wide.
+x
+x    the 1993 contest rule and result ar avail by ftp as
+x    ``wilma.cs.brown.edu:pub/postscript/obfusc*.shar'', or individu
+x    in the obfusc directori. the judg will post the 1994 rule
+x    in novemb to comp.lang.postscript on usenet, and other place.
+x    send question to jgm@cs.brown.edu.
+x
+x    categori includ: best obfusc postscript, best artwork,
+x    most compact, best interact program, most us, and
+x    anyth so unusu and creativ that it deserv an award.
+x
+x    the judg will choos the winner of each categori.
+x
+x    alena lacova  is a system  administr at nikhef  (institut for high
+x    energi and nuclear  physic) in the  netherland. she is  the author of
+x    the postscript chao  program, which draw  julia set, mandelbrot set
+x    and other kind of fractal function.
+x
+x    jonathan monsarrat is a graduat  student from mit and brown univers
+x    in  the  u.s.a. he  is  the  faq maintain  for  the  usenet newsgroup
+x    comp.lang.postscript and the author of the postscript zone and lametex.
+x .
+x
+shar_eof
+chmod 0444 obfusc.info ||
+echo "restor of obfusc.info fail"
+set `wc -c obfusc.info`;wc_c=$1
+if test "$wc_c" != "6257"; then
+	echo origin size 6257, current size $wc_c
+fi
+exit 0
+-- 
+sunnyval resid: vote landon noll for sunnyval citi council seat 1.

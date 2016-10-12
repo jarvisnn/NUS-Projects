@@ -1,0 +1,60 @@
+from: wiseb@colossu.cs.rpi.edu (bowden wise)
+
+subject: re: deriv from class object with owl
+
+organ: renssela polytechn institut comput scienc, troi ny
+
+line: 22
+
+distribut: comp
+
+nntp-post-host: colossu.cs.rpi.edu
+
+in-repli-to: wiseb@colossu.cs.rpi.edu's messag of 12 mai 1993 18:47:10 gmt
+
+
+
+i solv my problem.  i still do not understand why it happen th
+
+wai; perhap some of you c++ guru can explain thi to all of us!
+
+
+
+for some reason when i defin the follow functin in the class
+
+definit (in the .h file) the compil think some pure virtual
+
+function ar not defin.  when i place these two in a separ
+
+sourc file and compil them, the problem went awai.  ani idea what
+
+happen?  ar the function that ar defin in the class construct all
+
+inlin ?  is thi the problem?
+
+
+
+virtual int            isequ (const object _far &obj) const
+
+{ return thi == &(hashentri&) obj; }
+
+
+
+virtual void           printon( rostream os) const
+
+{
+
+ os << "[ hwindow is " << (void _far *) hwindow << " ]\n"; 
+
+}
+
+--
+
+--------------------------------------------------------------------
+
+- bowden wise
+
+  comput scienc dept, renssela polytechn inst, troi, ny 12180
+
+  internet: wiseb@cs.rpi.edu
+

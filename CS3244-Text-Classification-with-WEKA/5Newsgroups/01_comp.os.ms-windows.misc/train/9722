@@ -1,0 +1,35 @@
+from: dmsilev@athena.mit.edu (daniel m silevitch)
+subject: re: util for updat win.ini and system.ini
+organ: massachusett institut of technolog
+line: 28
+distribut: world
+nntp-post-host: w20-575-72.mit.edu
+
+in articl <1993apr20.180234.18192@oz.plymouth.edu>, oddjob@oz.plymouth.edu (andrew c. stoffel) write:
+|> in articl <1993apr20.151912.18590@midwai.uchicago.edu> am37@midwai.uchicago.edu write:
+|> 
+|> >unless i am complet misunderstand you, try us either notepad or
+|> >sysedit.ex (found in your system subdirectori) to edit you .ini file.
+|> you can add sysedit (& regedit) to a program group... thei ar window
+|> program. 
+|> >the sysedit.ex program is cool becaus it automat open you win.ini,
+|> >system.ini, autoexec.bat and config.sy file to be edit.
+|> 
+|> is it possibl to get it to load other *.ini file ????
+|> 
+
+no. when the program is run, it load 4 configur file; autoexec.bat,
+config.sy, win.ini, and system.ini. there is no open entri on the file
+menu. you can onli edit these four file. if you need to edit some other
+program's .ini file, us notepad or some other ascii editor.
+
+i wonder whether microsoft intend for sysedit to be us, or if it wa
+just a holdov from the test period and thei forgot to take it out. the
+reason i think thi is becaus there is absolut no mention in the manual
+about thi program, and there is no onlin help for it (just an about entri
+under the file menu). the program look like someth that wa intend for
+intern us onli. it's kind of a shame, though. it would have made a nice
+multi-file replac for notepad.
+
+daniel silevitch                           dmsilev@athena.mit.edu
+massachusett institut of technolog

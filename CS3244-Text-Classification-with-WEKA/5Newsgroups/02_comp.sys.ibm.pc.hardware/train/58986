@@ -1,0 +1,31 @@
+from: dalla@ravel.udel.edu (paul lewi finck)
+subject: scsi help
+nntp-post-host: ravel.udel.edu
+organ: univers of delawar
+distribut: us
+line: 24
+
+
+howdi,
+
+sorri if thi ha been cover befor:
+
+on of my pc illiter friend ask me to help him instal drdo 6.0 on hi
+nec powerm sx (386sx 16).  of cours, i said "no problem" and went to work.
+unfortun, the drdo refus to recogn the hard drive dure 
+instal, even though i am still abl to boot off of the hard drive us
+the old do.  after open it up i discov it wa us an 8-bit 
+seagat scsi control on a st-157n scsi 40mbtye drive.  i then boot 
+with drdo 6.0 off of the floppi a second time and ran fdisk to see if 
+i could access the drive.  lo and behold the primari 46.5 mbyte partit 
+wa intact (creat by do 3.1 no less, i didn't think you could go over a
+32mbyte partit in the older dose. i could be wrong...).  i then tri 
+to remov the primari partit, which it wouldn't allow me to do.  i am 
+unawar of anyth special that ha to be done with a scsi drive (i 
+kinda expect it to work just like an id/mfm/rll drive for do 
+instal).  ani suggest would be greatli appreci (except for 
+"throw it in the garbag and bui a new pc")...
+
+thank in advanc,
+
+paul "mr. scsi... not!" finck

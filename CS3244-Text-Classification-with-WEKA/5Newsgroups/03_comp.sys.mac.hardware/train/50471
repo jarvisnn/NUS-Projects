@@ -1,0 +1,55 @@
+from: mel_shear@maccomw.uucp
+subject: adapt cabl for vga monitor
+line: 51
+
+doe anyon know who make a cabl or adapt that is wire accord to
+appl's spec that forc the extern output on lc's and the powerbook's
+160/180 and duo 230 into a true vga style output signal? the nec adapt doe
+not do thi sinc their monitor ar multisync thei just rout the signal into
+the correct pinout but do not switch the mac output into vga mode.
+
+do i have to make on of these or doe someon alreadi have on made-up??
+
+the follow is the appl spec for the lc cpu vga cabl adapt. i'm assum
+that the powerbook/duo will work with the same adapt(?);
+
+
+macintosh lc to vga
+ 
+the macintosh lc can suppli a 640 x 480, vga time signal for us with vga
+monitor by us an adapt cabl.  the standard macintosh lc support vga to
+16 color, and with the option 512k vram simm, the vga monitor is support
+to 256 color.
+ 
+note:     the macintosh lc suppli signal capabl of drive ttl level
+          input.  howev, some low imped input vga monitor do not work
+          with the macintosh lc.
+ 
+to connect a macintosh lc to a vga monitor, you need to make an adapt cabl
+from the macintosh lc video connector to the vga monitor.  follow is the
+pinout descript for the adapt cabl:
+ 
+macintosh lc        vga
+video connector     pin     signal name
+---------------     ----    -----------
+1                   6       red ground
+2                   1       red video signal
+5                   2       green video signal
+6                   7       green ground
+9                   3       blue video signal
+13                  8       blue ground
+15                  13      /hsync
+12                  14      /vsync
+14                  10      hsync ground
+7,10                nc      sens1 & sens2 ti togeth
+ 
+vga monitor ar identifi by short pin 7 to pin 10 on the macintosh lc
+video connector.  the macintosh lc ground pin 7 on it video connector, which
+result in pull down pin 10 and give the correct monitor id for a vga
+monitor.
+
+***************************************************************************
+thi messag wa creat on mcw bb a jointli support by
+new orlean mac user group & nation home & school user group
+user@maccomw.uucp        the view express in thi post those of the individu author onli.
+***************************************************************************

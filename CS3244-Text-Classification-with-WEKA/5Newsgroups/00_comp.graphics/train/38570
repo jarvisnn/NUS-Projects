@@ -1,0 +1,45 @@
+from: freemant@dc.glasgow.ac.uk (tobi freeman,tjf,g151,3344813,oct95, )
+subject: re: coreldraw bitmap to scodal
+nntp-post-host: speedwel
+repli-to: freemant@dc.glasgow.ac.uk
+organ: dept. of comput scienc, glasgow univers, glasgow.
+line: 38
+
+>doe anyon know of softwar that will allow
+>you to convert coreldraw (.cdr) file
+>contain bitmap to scodal, as thi is the
+>onli format our bureau's filmrecord recognis.
+>
+>jeff lyall
+
+i us thi combin for a while - a qcr-z record,
+i think - and as far as i rememb corel can export in
+scodal (.scd) format.  just select 'export' on the main
+file menu.  thi mai not be implement in earlier version,
+of cours, in which case you're on your own!!!
+
+also, i seem to think that the s/w for the qcr-z (at the time)
+did strang (and veri undesir) thing if ani part of the
+pic wa outsid the screen area on corel.  i onc spent an
+afternoon painfulli discov that on pixel had somehow
+strai off-screen, caus my whole slide to be blank!!!
+
+the qcr-z also couldn't handl grad-fill over grad-fill -
+so if you us a graduat colour background, if you then
+grad-fill an object on top of thi, the fill appear on the
+final slide as a circl (i think) and total ignor the
+shape of the object be fill!!!
+
+of cours, if the record isn't a qcr, you can ignor all
+thi and feel suitabl :-)
+
+cheer, tobi.
+____________________________________._.____._.__________._.__________._.______
+____________________________________!  \__/  !__________!_!__________! !______
+___!                            !___! . \/ . !___.__.___._.___.___._.! !__.___
+___! tobi freeman               !___! !\  /! !__/ __ \__! !__/ .__!_!. .__!___
+___! glasgow univers         !___! !_\/_! !_! !__! !_! !_! <__.___! !______
+___! freemant@uk.ac.glasgow.dc !___! !____! !_! !__! !_! !__\___ \__! !______
+___!____________________________!___! !____! !_! !__! !_! !_.____> !_! !__.___
+____________________________________!_!____!_!__\____/__!_!_!_____/___\___!___
+

@@ -1,0 +1,28 @@
+from: petrack@vnet.ibm.com
+subject: chang port buffer size in zterm
+repli-to: petrack@vnet.ibm.com
+disclaim: thi post mai contain no view at all
+new-softwar: usenet 3.1
+line: 21
+
+some kind soul told me that i could chang the serial port buffer size
+of zterm via resedit. he did not tell me how i could chang it us
+resedit, and i have lost hi e-mail address.
+
+could he or ani on els pleas tell me what to do?
+
+i assum that the relev resourc is zset, but i do not know, and
+i have no templat for that resourc. if you have a tmpl for the correct
+resourc, i would be grate to receiv it. that wai, i could plai around
+a bit and mayb get my duo to do someth us with it serial port.
+(other than appletalk).
+
+btw, i believ that when the port stat sai that maximum in buffer is
+3074 byte, that that mean increas the buffer will help, if you ar
+us hardwar handshak. i can cram text data pretti fast into my duo,
+and can monitor that ct is be lower, but the buffer never get beyond
+3074 (out of 4096) byte. make sens to me.
+
+scott petrack
+petrack@haifasc3.vnet.ibm.com
+

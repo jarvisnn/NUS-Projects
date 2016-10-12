@@ -1,0 +1,64 @@
+from: kbw@helio.ath.epa.gov (kevin b. weinrich)
+
+subject: tcpview doesn't read my xkeysymdb file. howcum?
+
+organ: comput scienc corp.
+
+line: 25
+
+distribut: world
+
+nntp-post-host: helio.ath.epa.gov
+
+
+
+ani tcpview-for-sun user out there?  i pull down the pre-compil
+
+execut made for sun for tcpview, but i'm get a whole slew of the
+
+follow type of error messag when i try to start it up:
+
+  warn: translat tabl syntax error: unknown keysym name: osfactiv
+
+  warn: ... found while pars '<kei>osfactiv:managerparentactiv()'
+
+  warn: translat tabl syntax error: unknown keysym name: osfcancel
+
+  warn: ... found while pars '<kei>osfcancel:managerparentcancel()'
+
+  warn: translat tabl syntax error: unknown keysym name: osfselect
+
+  warn: ... found while pars '<kei>osfselect:managergadgetselect()'
+
+  ...
+
+but i *know* i have those in my keysym:
+
+  egrep "osfactiv|osfcancel|osfselect" $openwinhom/lib/xkeysymdb
+
+yield:
+
+  osfactiv             :1004ff44
+
+  osfselect               :1004ff60
+
+  osfcancel               :1004ff69
+
+  osfselectal            :1004ff71
+
+and, if i take *out* the osf line from said xkeysymdb, my copi of wscrawl
+
+(anoth motif-compil-for-sun program) give the same type of complaint
+
+as list abov.
+
+
+
+ani tip?  i'm mystifi.
+
+-- 
+
+kevin weinrich     comput scienc corp.
+
+kbw@helio.ath.epa.gov
+

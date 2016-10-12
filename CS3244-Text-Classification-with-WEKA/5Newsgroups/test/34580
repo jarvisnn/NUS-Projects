@@ -1,0 +1,328 @@
+from: xmplu@ani.univi.ac.at (bernhard strassl)
+
+subject: announc: xm++/commoninteract ui develop sy
+
+organ: vienna univers comput center, austria
+
+line: 157
+
+nntp-post-host: enterpoop.mit.edu
+
+to: xannounc@expo.lc.mit.edu
+
+
+
+xm++/commoninteract    anoth user interfac develop system
+
+-------------------
+
+
+
+if you would like to implement x-toolkit applic with c++ in a style
+
+like thi...
+
+
+
+// mini sampl applic /////////////////////////////////////
+
+
+
+class test : public xmwindow {
+
+	void cmd(char*);
+
+	void quit(void*);
+
+public:
+
+    test() : xmwindow("xm++ test window") {}
+
+
+
+	void initi();
+
+};
+
+
+
+void test::initi() {
+
+    xmdropdownmenu* menu = createdropdownmenu();
+
+
+
+    menu->addlabel("&file");
+
+    menu->additem( entri("menu item &on", cb(test::cmd)), 
+
+                    entri("menu item &two", cb(test::cmd)),
+
+                    nullentri);
+
+    menu->addsepar();
+
+    menu->additem(	entri("e&xit", cb(test::quit)));
+
+
+
+    addsubpan(edit, "myedit");
+
+    edit("myedit")->settext("hello world.");
+
+}
+
+
+
+void test::cmd(char* n) {
+
+	edit("myedit")->settext(n);
+
+}
+
+
+
+void test::quit(void*) {
+
+	exit(0);
+
+}
+
+
+
+void xmapp::initi() {
+
+    (new test)->initi();
+
+}
+
+
+
+///////////////////////////////////////////////////////////////
+
+
+
+...then continu read (content of the current releas's readm):
+
+
+
+xm++ is a user interfac framework for the c++ languag built upon x11
+
+and the x-toolkit. it is design to be a simpl and intuit program
+
+interfac to access the function of commonli us widget.
+
+xm++ wa initi creat for the motif widget set, now support for the
+
+athena widget wa ad. applic creat with xm++ run in both
+
+environ without chang, although mani nice featur ar onli
+
+avail when us motif.
+
+in some situat xm++ extend the underli toolkit (i.e. provid
+
+a combobox borrow from ms-window), but never tri to replac it -
+
+data of user interfac object is left to the widget and onli duplic
+
+in rare case.
+
+
+
+xm++ ha noth common with motif++ besid the gener idea to
+
+encapsul motif widget in c++ object and the '++' in it's name. mani
+
+idea for the xm++ architectur came from digitalk's smalltalk version,
+
+which provid an easi to us framework for window/pm/mac applic
+
+(in the veri first time of develop i us the window dialog editor and
+
+a simpl parser to creat similar smalltalk and xm++ dialog :-).
+
+
+
+top level object in xm++:
+
+* 'window', 'systemdialog' and 'toolbox' which us the automat layout
+
+  featur of variou composit widget in motif and xaw
+
+* 'userdialog' which can be individu laid out with a user interfac
+
+  builder (a first version of such a dialog editor is includ in thi
+
+  distribut)
+
+
+
+control (children of top level object):
+
+'statictext', 'staticimag', 'pushbutton', 'checkbox', 'radiobutton',
+
+'edit', 'listbox', 'combobox', 'groupbox', 'panearea', 'draw', 'toolbar'
+
+
+
+the staticimag and all the button class can displai b/w (x-bitmap
+
+format) or color (gif format) pictur as an altern to a label text.
+
+
+
+event handl is done by a simpl but power mechan which redirect
+
+xt callback to member function of xm++ object.
+
+
+
+
+
+commoninteract(ii) is built upon the xm++ draw class and provid
+
+compon for build direct manipul applic. is is a veri
+
+simplifi implement of some featur from the commoninteract system
+
+(research project of our institut in 1991), an approach to defin a
+
+softwar achitectur for implement direct manipul applic
+
+with multipl interact media (i.e. sound, altern input devic).
+
+if you ar interrest, look into the june 1993 issu of the joop (sig
+
+public - journal of object orient program) - there should be
+
+our paper about commoninteract (but be awar, that it is our 'state of
+
+the art' from 1991).
+
+commoninteract(ii) is still undocu and is includ becaus it wa
+
+us to implement the dialog editor. it current support onli draw
+
+primit (line, rectangl, circl...), but we plan to extend it to
+
+support bitmap and some control also.
+
+known problem: the xm++ draw class ha no redraw strategi (alwai
+
+redraw the whole window, even after minim chang like select an
+
+object), thi look veri ugli on slow displai and should be fix.
+
+
+
+
+
+about thi first releas:
+
+
+
+xm++ is still incomplet and ha a lot of bug but we ar us it here
+
+for smaller applic which ar run without problem. so i think
+
+i can call it a 'beta releas' which can be us to develop applic
+
+for ani non-critic purpos.
+
+commoninteract mai be call a 'pre alpha releas'. it's develop will
+
+be continu thi year becaus we plan to us it for anoth research
+
+project here. besid incomplet and the redraw problem it seem
+
+to be stabl and can be us for experiment applic.
+
+
+
+platform: thi releas wa compil and test on:
+
+  hp9000/720 run hp-ux 8.07
+
+  sun sparc run suno releas 4.1.1
+
+  pc-at386 run linux v0.99pl6
+
+
+
+caution: although the whole stuff wa initi develop us an at&t
+
+standard c++ compil - thi releas is test onli with gnu g++ 2.3.3 or
+
+abov (the next releas will be test with both compil).
+
+
+
+where to get it:
+
+================
+
+
+
+i have upload it on: export.lc.mit.edu as: /contrib/xm++.0.5.tar.z
+
+
+
+(send a mail, if you cannot find it there, e-mail addr. below)
+
+
+
+where to find more inform:
+
+===============================
+
+
+
+the .../doc directori contain
+
+   instal - how to build the librari and exampl
+
+   readm.gnu - problem and limit when us gnu g++ (read!!)
+
+   usersguid.txt - a tutori how to us xm++
+
+   refer.txt - a first try of a xm++ class refer manual
+
+
+
+the readm file in the .../sampl give a brief descript of
+
+each of the seven sampl.
+
+
+
+
+
+xm++/commoninteract is free softwar for ani non-profit purpos,
+
+see the file .../lib/copyright for detail.
+
+
+
+send ani comment, bug report and donat :-) to the author:
+
+
+
+    bernhard strassl
+
+    vienna user interfac group
+
+	institut for appli comput scienc and inform system
+
+    univers of vienna
+
+    lenaugass 2/8, a-1080 wien, austria
+
+
+
+e-mail: xmplu@ani.univi.ac.at
+
+
+
+
+

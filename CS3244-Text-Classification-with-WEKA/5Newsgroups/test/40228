@@ -1,0 +1,48 @@
+from: joe eddi demer <coyot+@cmu.edu>
+
+subject: bio timer interrupt
+
+organ: sophomor, math/comput scienc, carnegi mellon, pittsburgh, pa
+
+line: 18
+
+nntp-post-host: po2.andrew.cmu.edu
+
+
+
+hello,
+
+    i'm try to us the bio timer interrupt (which occur everi .055
+
+second, or 18.2 time a second) to time peopl's respons time, in a
+
+psycholog experi, and the respons time ar on the order of .01
+
+second. is there ani wai i can get better precis than by count
+
+tick? or can i make the tick occur more frequent? i'm try to do
+
+thi in do 5.0 on a 386, and it would be nice if thi could also work
+
+on our old 8086 machin run do 2.1 (i know, i know, i don't like
+
+them ani more than you do) but thi is by no mean a requir, just a
+
+possibl. 
+
+    so, basic, ani inform on the bio tick scheme and the
+
+relat inrterruot would be appreci, as well as ani inform on
+
+altern wai of improv accuraci. email is prefer, as i'm
+
+plan on post thi to a few board, and i don't read all of them.
+
+thank
+
+
+
+joe
+
+
+

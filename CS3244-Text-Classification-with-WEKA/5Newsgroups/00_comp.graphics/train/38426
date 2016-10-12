@@ -1,0 +1,40 @@
+from: bolson@carson.u.washington.edu (edward bolson)
+subject: re: sphere from 4 point?
+organ: univers of washington, seattl
+line: 33
+distribut: world
+nntp-post-host: carson.u.washington.edu
+
+i plan to post a summari of respons to thi as soon as i have work
+code, which i will also includ.  the intersect of 3 plane method
+look best, but my implement base on a short articl in 
+graphic gem i doesn't work.  i mai be misinterpret, of cours.
+
+i had avoid the simultan solut of the plane equat in favor
+of dot and cross product, but the former mai actual be better.  in either
+case a matrix determin need to be comput (implicitli in the solut
+of linear equat).
+
+to get the plane, i wa take the midpoint of the line from, sai,
+p1 to p2, and set the normal as the "normal" vector from p1 to p2.
+these just plug into the formula in graphic gem.  howev, the result
+center point is onli occasion equidist from all 4 of my test point
+(for differ test).  my matrix/vector math is veri rusti, but it look like
+i need to verifi the formula, or us the simultan equat solut, which
+will requir bring in anoth routin i don't have (but should be easi to
+find).
+
+anoth method is to first find the center of the circl defin by 2 set
+of 3 point, and intersect the normal from there.  thi would also defin
+the circl center.  howev, small numer imprecis would make the
+line not intersect.  supposedli 3 plane have to intersect in a uniqu
+point if thei ar not parallel.
+
+ed
+
+thank to all who answer so far.
+-- 
+ed bolson
+univers of washington  cardiovascular research               (206)543-4535
+bolson@u.washington.edu (prefer)
+bolson@max.bitnet                bolson@milton.u.washington.edu (if you must)

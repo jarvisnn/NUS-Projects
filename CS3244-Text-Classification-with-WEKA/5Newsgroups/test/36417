@@ -1,0 +1,144 @@
+from: dl@autodesk.com (daniel loui smith)
+
+subject: window -> motif tool summari
+
+organ: autodesk inc., sausalito ca, usa
+
+line: 67
+
+
+
+
+
+	i post thi mai 12th:
+
+
+
+
+
+>         i am look for info on product that can take
+
+> window sourc on a unix box (such as sparc), and produc a
+
+> motif execut.  anoth requir is that mfc 2.0 should
+
+> be support.  i alreadi know of:
+
+> 
+
+>         wind/u  by bristol technolog
+
+>         hunter sdk
+
+>         mainwin by mainsoft
+
+> 
+
+>         ar there ani other?
+
+> 
+
+> 	i will post a summari if it's want.
+
+
+
+
+
+	i got a few request ask for a summari, so i'll attempt on
+
+here:
+
+
+
+
+
+	here's the on i know of:
+
+
+
+	wind/u		- bristol technolog
+
+
+
+	hunter sdk	- hunter system
+
+
+
+	mainwin		- mainsoft
+
+
+
+	libwxm          - visual solut
+
+
+
+
+
+	hunter 
+
+
+
+	the compani is go through some big chang.  i expect
+
+to eventu see the hunter sdk pop up with a new name.  at the moment, it
+
+is difficult to get phone call return and otherwis obtain info.
+
+hopefulli thei will post someth about themselv onc thing settl down. 
+
+
+
+	visual solut
+
+
+
+	libwxm is a product that i just heard about.  thei don't
+
+yet support mdi or mfc.  libwxm wa us to port vissim, a mathemat
+
+model packag.  doe nativ motif widget, like wind/u from bristol.
+
+contact carri lemieux at 508 392 0100 for more info.  she's veri help.
+
+
+
+	mainsoft
+
+
+
+	thi translat window sourc to a unix execut that
+
+can switch off between a window or quasi-motif look and feel at
+
+runtim.  thei skip the xt and xm (motif) x toolkit level and go
+
+straight to xlib.  thei don't yet support mfc.  thei're at 415 896 0708.
+
+
+
+	bristol
+
+
+
+	thi compani that seem to be on the right track.  wind/u us
+
+xlib/xt/xm to give a *real* motif app.  thei seem to be do the most work
+
+in try to support thing like dde, common dialog, and more on the horizon.
+
+my contact there is knowledg, respond to my email, and wrote an exampl
+
+program for me show how to obtain x widget from window handl.
+
+thei're at 203 438 6969, or you can email info@bristol.com.
+
+
+
+-- 
+
+		 dl@autodesk.com           dl@netcom.com
+
+     daniel l smith, autodesk, sausalito, california, (415) 332-2344 x 2580
+
+disclaim:  accuraci of statement corrrel somehow to caffein intak
+

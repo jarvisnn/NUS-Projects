@@ -1,0 +1,19 @@
+from: wstuartj@lucki.ecn.purdu.edu (w stuart jone)
+subject: ad vram to quadra 800 ?
+summari: how mani 512k vram simm do i need to add to the quadra 800?
+keyword: vram quadra 800
+organ: purdu univers engin comput network
+line: 12
+
+i want to go from 512k to 1m vram on my quadra 800.  how mani 512k simm do i
+need to bui?  is the current 512k solder on the board or do i need to take
+out the current vram befor i add more?
+
+thank,
+
+weslei stuart jone
+--
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  weslei stuart jone         jonesw@re.we.mot.com               	%%
+%%                              wstuartj@ecn.purdu.edu                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

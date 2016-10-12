@@ -1,0 +1,120 @@
+from: jk87377@lehtori.cc.tut.fi (kouhia juhana)
+subject: xv problem
+organ: tamper univers of technolog
+line: 113
+distribut: world
+nntp-post-host: cc.tut.fi
+
+[pleas, note the newsgroup.]
+
+recent discuss about xv's problem were held in some newsgroup.
+here is some text user of xv might find interest.
+i have ad more to text to thi collect articl, so read on, even
+you so my articl a while ago.
+
+i hope author of xv correct those problem as best he can, so fine
+program xv is that it is worth of improv.
+(i have also minor idea for 24bit xv, e-mail me for them.)
+
+ani misundertand of mine is understand.
+
+
+juhana kouhia
+
+
+==clip==
+
+[ ..delet..]
+
+note that 'xv' save onli 8bit/raster imag; that mean that
+the save jpeg ar just like jpeg-to-gif-to-jpeg qualiti.
+also, there's three kind of 8bit quantiz; your final imag qualiti
+depend on them too.
+ 
+thi were the situat when i read jpeg faq a while ago.
+ 
+imho, it is design error of 'xv'; there should not be such confus
+error in program.
+there's two error:
+  -xv allow the save of 8bit/raster imag as jpeg even the
+   origin is 24bit -- save 8bit/raster imag instead of
+   origin 24bit should be a special case
+  -xv allow save the 8bit/raster imag made with ani quantiz
+   -- the main case should be that 'xv' quantiz the imag with the
+   best quantiz avail befor save the imag to a file; lousier
+   quantiz should be just for view purpos (and a special case
+   in save the imag, if at all)
+ 
+==clip==
+
+==clip==
+
+[ ..delet..]
+
+it is limit of *xv*, but not limit of design.
+it is error in design.
+it is error that 8bit/quantiz/raster imag ar store as jpeg;
+jpeg is not design to that.
+
+as matter of fact, i'm sure when xv were design 24bit displai were
+known. it is not bad error to program a program for 8bit imag onli
+at that time, but when 24bit imag format ar includ to program the
+whole design should be chang to support 24bit imag.
+that were not done and now we have
+ -the program violat jpeg design (and ani 24bit imag format)
+ -the program ha human interfac error.
+
+otherwai is to drop save imag as jpeg or ani 24bit format without
+clearli sai that it is special case and not expect in normal us.
+
+[ ..delet.. ]
+
+==clip==
+
+some new item follow.
+
+==clip==
+
+i have seen that xv quantiz the imag sometim poorli with -best24
+option than with default option we have.
+the reason sure is the quantiz us as -best24; it is (surpris)
+the same than us in ppmquant.
+
+if you rememb, i have test some quantiz. in that test i found
+that rlequant (with default) is best, then come djpeg, fbmquant, xv
+(our default) in that order. in my test ppmquant suggeed veri poorli
+-- it actual gave imag with bad artifact.
+
+i don't know is ppmquant improv ani, but i expect no.
+so, us of xv's -best24 option is not veri good idea.
+
+i suggest that author of xv chang the quantiz to the on us in
+rlequant -- i'm sure rle-peopl give permiss.
+(anoth could be on us in imagemagick; i have not test it, so i
+can sai noth about it.)
+
+==clip==
+
+==clip==
+
+some minor bug in human interfac ar:
+
+kei press and cursor click goe to a buffer; often it happen
+that i make click error or press keyboard when cursor is in the wrong
+place. it is veri annoi when you have wait imag to come about
+five minut and then it is gone awai immedi.
+the buffer should be clean when the imag is complet.
+
+also, good idea is to wait few second befor activ keyboard
+and mous for xv after the imag is complet.
+often it happen that imag pop to the screen quickli, just when
+i'm write someth with editor or such. those kei press
+then go to xv and imag ha gone or someth weird.
+
+in the color editor, when i turn a color meter and releas it, xv
+updat the imag. it is imposs to chang all rgb valu first
+and then get the updat imag. it is annoi wait imag to be
+updat when the set ar not readi yet.
+i suggest of ad an 'appli' button to updat the exchang done.
+
+==clip==

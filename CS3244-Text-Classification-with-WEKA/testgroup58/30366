@@ -1,0 +1,50 @@
+from: gml4410@ggr.co.uk (lack mr g m)
+
+subject: re: xdm and env. var
+
+organ: the internet
+
+line: 18
+
+nntp-post-host: enterpoop.mit.edu
+
+to: xpert@expo.lc.mit.edu
+
+
+
+in articl <9304292140.aa29951@haji.haji_sun>, fwr8bv@fin.af.mil write:
+
+> i am us xdm on x11r5 with ow3 and xview3 on sun3s and sparc run 
+
+> suno 4.1.1.  prior to us xdm, i us to set path and other environ
+
+> variabl (like manpath, helppath, arch, etc) in my .login file.  with xdm,
+
+> the .login file doesn't get execut and therefor neither the olwm
+
+> root-window nor my applic know about these variabl.
+
+
+
+     you  should  try  have  a  .xsession  script in $home to do these
+
+thing.  xdm will  start  up  your  process  us  the  system  version
+
+(usual /usr/lib/x11/xdm/xsession), which should check whether you have
+
+your won and chang to that if you do.  (take a copi of the  system  on
+
+and edit it). 
+
+
+
+     note, that thi file requir "x" access to be set.
+
+
+
+-------------------------- gordon lack ----------------------------------
+
+the content of thi messag *mai* reflect my person opinion.  thei ar
+
+*not* intend to reflect those of my employ, or anyon els.
+

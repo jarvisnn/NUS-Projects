@@ -1,0 +1,96 @@
+from: lillei@v5.cgu.mcc.ac.uk (chri lillei)
+
+subject: re: 48-bit graphic...
+
+keyword: 48-bit alpha channel imag
+
+line: 41
+
+repli-to: c.c.lillei@mcc.ac.uk
+
+organ: comput graphic unit, mcc
+
+
+
+
+
+in articl <1993apr24.201117.26232@cs.wisc.edu>, oehler@yar.cs.wisc.edu (wonko
+
+the sane) write:
+
+
+
+>	i wa recent talk to a possibl employ ( mine! :-) ) and he made a
+
+>refer to a 48-bit graphic comput/imag process system.  i seem to
+
+>rememb it be call imag or someth akin to that.  anywai, he claim
+
+>it had 48-bit color + a 12-bit alpha channel.  that's 60 bit of info--what
+
+>could that possibl be for?  specif the 48-bit color?  that's 280
+
+>trillion color, mani more than the human ey can resolv.  is thi an
+
+>anti-alias thing?  or is thi just some magic number to make it work better
+
+>with a certain processor.
+
+
+
+well 48 bit colour *could* be for improv resolut but 16 bit per channel
+
+seem like a bit excess. i have seen a paper that quot 10 bit per channel
+
+of 12 bit for comput precis. more than that would seem to be wast.
+
+
+
+perhap the frame buffer us anoth colourspac which need more bit to
+
+repres the full rang - rgb is a cube so it is a compact encod.
+
+
+
+most like howev is that there ar two separ 24 bit (8 bit per compon)
+
+frame buffer. thi set up, call doubl buffer, allow a complex 3d pictur
+
+to be built up on on buffer while the other buffer (contain the previou
+
+frame) is displai. thi make for smoother anim.
+
+
+
+>(sadli, i have access to none of them.  just a dec 5000/25.  sigh.)
+
+
+
+well hei if you want to brag about number, the 5000 rang can take a pxg turbo+
+
+card with 96 bit per pixel. full doubl buffer (two 24 bit buffer), a 24
+
+bit z buffer and an extra 24 bit buffer for off screen imag storag.
+
+
+
+mind you the card cost more than your workstat.
+
+
+
+--
+
+chri lillei
+
+----------------------------------------------------------------------------
+
+technic author, itti comput graphic and visualis train project
+
+comput graphic unit, manchest comput centr, oxford road, 
+
+manchest, uk.  m13 9pl                        internet: c.c.lillei@mcc.ac.uk 
+
+voic: +44 (0)61 275 6045  fax: +44 (0)61 275 6040 janet: c.c.lillei@uk.ac.mcc
+
+------------------------------------------------------------------------------
+

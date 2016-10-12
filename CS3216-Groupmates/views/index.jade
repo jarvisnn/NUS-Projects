@@ -1,0 +1,20 @@
+extends base
+
+block append head
+  link(rel='stylesheet', href='/stylesheets/index.css')
+  link(rel='stylesheet', href="/stylesheets/button.css")
+  link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet', type='text/css')
+
+block content
+  header
+    .layer
+      .container
+        .logo
+          a(href='/')
+            img(src='images/logo.png')
+        .intro-text
+          .intro-lead-in Finding groupmates, done the right way.
+          .buttons
+            a.btn.btn-lg.btn-social.btn-facebook(href='/account/login')
+              i.fa.fa-facebook
+              | Login with Facebook

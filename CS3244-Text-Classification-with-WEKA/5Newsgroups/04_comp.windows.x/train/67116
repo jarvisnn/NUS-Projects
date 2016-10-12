@@ -1,0 +1,40 @@
+from: bade@cs.tu-berlin.de (tobia 'dope' bade)
+subject: re: forc a window manag to accept specif coordin for a window
+organ: technic univers of berlin, germani
+line: 30
+nntp-post-host: athen.cs.tu-berlin.de
+mime-version: 1.0
+content-type: text/plain; charset=iso-8859-1
+content-transfer-encod: 8bit
+in-repli-to: ethan@cs.columbia.edu's messag of mon, 19 apr 1993 21:25:08 gmt
+
+
+try thi after xcreatewindow:
+-----------------------------
+
+#includ <x11/xutil.h>
+
+displai displai;
+window window;
+
+{
+  xsizehint *xsizehint = xallocsizehint ();
+  xsizehint->flag = usposit | ussiz;	/* or = pposit | psize */
+  xsizehint->x = 42;
+  xsizehint->y = 42;
+  xsizehint->width = 100;
+  xsizehint->height = 100;
+  xsetwmnormalhint (displai, window, xsizehint);
+  xfree (xsizehint);
+}
+
+these hint tell the window manag that the posit and size of the window
+ar specifi by the user and that the window manag should accept these
+valu. if you us xsizehint->flag = pposit | psize, thi tell the window
+manag that the valu ar prefer valu of the program, not the user.
+i don't know a window manag that doesn't place the window like you prefer if
+you specifi the posit and size like abov.
+
+greet from berlin,
+
+tobia (bade@cs.tu-berlin.de)

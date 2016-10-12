@@ -1,0 +1,14 @@
+from: vic@fajita (v. martinez 6463)
+subject: re: troubl compil x11r5 on suno_4.1.3
+articl-i.d.: ast.1993apr6.165718.528
+organ: saic
+line: 7
+x-newsread: tin 1.1 pl5
+
+i wa have the same problem compil x11r5 on a ipc suno 4.1.3.
+if you compil with 'make -k world' it will not stop on the
+ld error. as wa state in anoth post the client with the
+error still run correctli.
+
+victor martinez
+vic@fajita.saic.com

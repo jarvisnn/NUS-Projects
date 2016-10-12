@@ -1,0 +1,35 @@
+from: mppa3@syma.sussex.ac.uk (alan richardson)
+subject: re: how 2 get fontnam from fonstruct ???
+organ: univers of sussex
+line: 30
+
+in articl <1993apr20.105725@narya.gsfc.nasa.gov> 
+   deali@narya.gsfc.nasa.gov (brian deali - csc) write:
+>
+>anyon know how an applic can retriev the name of the font from
+>an applic given an xfontstruct *? 
+>would xgetfontproperti work if i pass xa_font_name? 
+>anyon know detail of thi?  thank in advanc.
+>brian
+>
+>-- 
+>brian deali                |301-572-8267| it not know where it's at  
+>deali@kong.gsfc.nasa.gov   |            | that's import,it's know
+>!uunet!dftsrv!kong!deali   |            | where it's not at...  b.dylan
+
+
+try thi:
+
+char *name=null;
+unsign long valu;
+
+if(xgetfontproperti(font, xa_font, valu)) 
+    name=xgetatomnam(dpy, valu);
+
+where dpy is your displai connect and font your xfontstruct pointer.
+
+-- 
+alan richardson,                             * "you don't have to be *
+school of math & physic scienc,         *  old to be wise"      *
+univ. of sussex, brighton bn1 9qh, england   * ******juda priest*****
+uk: mppa3@uk.ac.sussex.syma         elsewher: mppa3@syma.sussex.ac.uk

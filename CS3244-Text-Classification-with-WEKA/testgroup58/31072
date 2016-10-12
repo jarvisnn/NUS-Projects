@@ -1,0 +1,66 @@
+from: stephen@rd1.interlan.com (jack stephenson)
+
+subject: re: what is thi .gl file?
+
+distribut: usa
+
+organ: racal-datacom, sunris, fl
+
+line: 27
+
+
+
+from articl <1suntv$3km@watson.mtsu.edu>, by csjohn@watson.mtsu.edu (john wallac):
+
+> i've got thi anim file with a .gl extens.
+
+> what is thi?  ar there anu ms-do or os/2 program
+
+> which will run thi file?  thank.
+
+> 
+
+
+
+the gl file is an archiv contain individu frame or piec of
+
+frame (usual store as .pic or .clp file), font, and a .txt file
+
+that tell the grasp anim system how to displai it.  gl stand
+
+for grasp librari.  there is probabl a detail discuss of thi subject
+
+in the alt.binari.pictur faq.
+
+
+
+there ar freeli distribut viewer for gl file, and thei ar usual
+
+name grasprt?.ex (replac the ? with a version digit or letter).  most
+
+gl file contain frame that ar hardwar-specif to particular mode
+
+of the cga, ega, or vga adapt on pc.  i think that there ar some
+
+copi of grasprt avail by anonym ftp (i know that i got on there
+
+a long time ago).
+
+
+
+		good luck
+
+		jack
+
+
+
+-- 
+
+== jack stephenson          main e-mail: j_stephenson@isuv1.interlan.com  ==
+
+|| racal-datacom            altern e-mail: stephen@souv1.interlan.com ||
+
+|| p.o. box 407044                                                        ||
+
+== ft. lauderdal, fl  33340  usa     phone: (+1) 305-846-6137            ==
+

@@ -1,0 +1,252 @@
+from: jim@n5ial.mythic.com (jim graham)
+
+subject: re: courier vs sportster
+
+organ: what, me???  you must be joke.
+
+line: 121
+
+
+
+note:  followup to comp.dcom.modem (for obviou reason)
+
+
+
+in articl <1r0mb9$67h@usenet.in.cwru.edu> da416@cleveland.freenet.edu
+
+(andi nicola) write:
+
+
+
+>in a previou articl, cs3sd3ae@macc.mcmaster.ca (holli       ks) sai:
+
+
+
+>>what is the differ between the us robot courier v32bi extern and the
+
+>>sportster 14400 extern? i see that the price of a sportster ha dramat
+
+>>drop to below $200 but the price of the courier remain abov $400.
+
+>>
+
+>>anyon with knowledg of both of these modem or anyon that own a courier?
+
+
+
+the courier is their top-of-the-line product, thu the higher price.  i've
+
+never taken a real look at the sportster line (onli courier), but from what
+
+i've gather, it's basic more of an entri-level modem.  probabl
+
+doesn't meet the same specif that the courier doe.  i'm not sure
+
+if the sportster line is fulli dsp driven like the (more recent) courier
+
+modem ar, so upgrad in the futur mai be an issu.
+
+
+
+again, take all of the abov with a grain of salt...i've never evalu
+
+the sportster, so i'm go by bit and piec that i've heard.  if you
+
+want a real answer, post the question in comp.dcom.modem and you'll find
+
+peopl who have work with the sportster.
+
+
+
+person, though, if i were go to look at the courier modem, i'd
+
+bui the dual standard...then i'd get both hst and v.32bi.  in fact, thi
+
+is exactli what i did.  :-)  i'm sit here look at my usr ds right
+
+now.
+
+
+
+and now, to correct a few veri incorrect statement....  folk, if you want
+
+to get reliabl answer to modem and/or uart question, post them to
+
+comp.dcom.modem.  if you post in other group, you never know what you'll
+
+get in the wai of an answer (you mai veri well get a good answer...or you
+
+mai get someth like the on below).  at least in cdm, if someon post
+
+complet and utter bs, you'll see a flurri of folk correct them (to
+
+avoid spread faulti info).
+
+
+
+>the sportster at 14.4 ha v.42 error control and v.42 bi data compress.
+
+
+
+just as it doe at lower speed, too.  there is absolut noth in
+
+either ccitt recommend v.42 or v.42bi that sai that thei can onli
+
+oper on modem that ar run v.32bi.  v.42bi, of cours, is
+
+current onli *standard* for oper on top of v.42 (in it primari
+
+mode of oper, lapm), but that's about as far as that goe.
+
+
+
+and just in case there's some confus on thi, v.42/v.42bi ar also
+
+support by the courier line (unless you have a realli ancient on).
+
+
+
+>the differ
+
+>with the courier, is that it can run at 16.8 and onli in the hst mode. 
+
+
+
+take a second look at the origin question:
+
+
+
+>in a previou articl, cs3sd3ae@macc.mcmaster.ca (holli       ks) sai:
+
+>>what is the differ between the us robot courier v32bi extern
+
+                                                 ^^^^^^^^^^^^^^
+
+see the v.32bi up there?  the question wa not about the courier hst
+
+modem, or about the courier dual standard...it wa about the courier
+
+v.32bi modem.  the modem in question doe not support hst, period.  it
+
+therefor doe not support the 16.8 kb hst.
+
+
+
+also, not all courier hst / courier dual standard modem support the 16.8 kb
+
+version of hst.  my dual standard onli support hst at 14.4 kb.  there ar
+
+even older model that onli run hst at 9.6 kb.
+
+
+
+>thi is a proprietari mode of usr and it will onli connect to anoth of
+
+>the same type unit to achiev thi speed.
+
+
+
+hst is usr's proprietari modul scheme....  but we're not talk about
+
+hst, we're talk about v.32bi.  v.32bi is most definit *not* a
+
+proprietari modul scheme.
+
+
+
+>the sportster will do
+
+>asynchron transmiss as well as synchron.  the hst is on wai
+
+>onli.
+
+
+
+i do hope you didn't mean for these two sentenc to be relat in some
+
+wai.....
+
+
+
+first off, v.32 and v.32bi ar both synchron and asynchron.  thi is
+
+part of the ccitt recommend (i.e., part of the standard).  it isn't a
+
+featur uniqu to the sportster (i just look at the appropri chapter
+
+in the courier ds manual).
+
+
+
+second, hst is not ``on wai onli.''  more correctli put, it is an
+
+asymmetr modul scheme, mean it doesn't work at the same speed
+
+in both direct.  hst oper at [9.6 / 14.4 / 16.8] in on direct,
+
+and ha a low-speed back-channel in the other direct.  the high-speed
+
+channel goe in the direct of the higher data flow.  thi is fine if
+
+you're log on to sai, a bb, and type on letter and get screen of
+
+info back, transfer file (not us bimodem), etc....  there is, of cours,
+
+a penalti for turnaround time when the high-speed channel need to revers
+
+direct.
+
+
+
+v.32 and v.32bi ar both symmetr, mean thei do transfer the full
+
+data rate in both direct at the same time.
+
+
+
+third, synchron vs asynchron ha absolut noth to do with
+
+symmetr vs asymmetr...thei ar two complet differ topic.
+
+
+
+>the hst's will be upgrad to the v.fast spec when it is avail.
+
+
+
+again, more correctli put, *some* of the courier line will be upgrad
+
+to whatev ``v.fast'' is call when it's complet.  if you have the larg
+
+footprint courier modem (like i do), you're s.o.l.....  there wa an
+
+upgrad plan a while back to upgrad to a small footprint varieti, which
+
+could eventu be upgrad to support v.fast, but the cost of the two
+
+upgrad togeth pretti much put it higher than just bui a new modem.
+
+
+
+later.....
+
+   --jim
+
+
+
+--
+
+#includ <std_disclaim.h>                                 73 de n5ial (/4)
+
+------------------------------------------------------------------------------
+
+internet: jim@n5ial.mythic.com  |  j.graham@ieee.org     icbm: 30.23n 86.32w
+
+amateur radio: n5ial@w4zbb (ft. walton beach, fl)          amtor selcal: nial
+
+------------------------------------------------------------------------------
+
+e-mail me for inform about kamterm (host mode for kantron tnc).
+
+
+

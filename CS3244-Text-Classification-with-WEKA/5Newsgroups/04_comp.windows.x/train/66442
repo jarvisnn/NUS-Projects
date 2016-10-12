@@ -1,0 +1,199 @@
+from: troll@sug.org (a. newman)
+subject: re: troubl compil x11r5 on suno_4.1.3
+articl-i.d.: world.c52nbl.u5
+organ: sun user group
+line: 192
+nntp-post-host: bridg.sug.org
+
+in articl <1993apr6.081605.12977@fwi.uva.nl> casper@fwi.uva.nl (casper h.s. dik) write:
+>epstein@trwac.fp.trw.com (jeremi epstein) write:
+>
+>>dmm@head-cfa.harvard.edu (david meleedi) write:
+>>there's a bug in suno 4.1.3, which is allud to in the faq (although
+>>there it's talk about x11r4 as be affect).  you need to forc
+>>libxmu to be link static, rather than dynam, which work
+>>around the linker error.  the simplest thing to do is edit each of
+>>the makefil where there's a failur and chang the line which read:
+>>	xmulib = -l$(xmusrc) -lxmu
+>>to:
+>>	xmulib = -l$(xmusrc) -bstatic -lxmu -bdynam
+>
+>no. thi is onli relev for openwindow 3.x as ship with suno.
+>it is not relev for mit r5. mit r5 should compil without problem.
+>
+>casper
+
+i don't know how mani hour you've spent on thi, but the sun user
+group make x11r5 avail on cd-rom to it member. the 1992.1 disk
+ha both sourc and binari and it sell for $50.  i've tag a
+tabl of content and an orderform on below if anyon's interest.
+
+alex newman
+
+----------------------------------------------------------------------------
+alex newman	(617) 232-0514 voic	my life mai be stress,
+troll@sug.org	(617) 232-1347 fax	but at least it's not bore
+sun user group * 1330 beacon st., #315 * brooklin, ma 02146
+----------------------------------------------------------------------------
+
+
+
+
+sug cd 1992.1 is x11r5 and gnu on a cdrom, price at $50 to sug
+member, includ a caddi!
+
+sug's emphasi ha alwai been on suppli the greatest possibl
+servic and valu-ad to our member.  last year, the sug 1991 disk
+contain plug-and-plai x11r4, 20mb of addit essenti binari,
+almost 200mb of sun patch, fulli-index archiv of sun-relat net
+post, price at onli $250.
+
+our aim thi year ha been to reduc the price for disk which can be
+produc inexpens, but to continu to suppli as much valu-ad
+as possibl.  to accomplish thi, we will be put out a two disk
+set, the first contain what's readi and need now, the second
+avail later in '92, contain more sparc binari and other
+us materi not found on previou disk.
+
+the sug 1992.1 disk, which wa assembl by robert a. bruce, contain
+a lot of essenti sourc code, and we decid it would be a great
+servic to make it avail right awai to our member (and thi
+price make thi a good opportun to becom a member!) for $50 per
+disk (includ on of those hard-to-find caddi!).  if you ar not a
+sug member, you can becom on for an addit $40 if you live
+within the us or $55 outsid.
+
+the sug 1992.1 cdrom is an iso 9660 disk (which mean it can be us
+by pc, macintosh, and other workstat as well), and contain a
+total of 543mb of materi, includ:
+
+x11r5 sourc and core binari (for sparc) as of sever week after
+the initi distribut, thu, four fix and the the mit contrib-0
+distribut ar includ (109mb of materi).  binari for: x xsun
+xsunmono appr atobm auto_box bdftopcf beach_ball bitmap bmtoa
+constyp editr fs fsinfo fslsfont fstobdf ico imak kbd_mode
+listr lndir makedepend maze mkdirhier mkfontdir oclock plbpex puzzl
+resiz showfont showrgb startx twm viewr x11perf x11perfcomp xauth
+xbiff xcalc xclipboard xclock xcmsdb xcmstest xconsol xcutsel
+xditview xdm xdpr xdpyinfo xedit xev xey xfd xfontsel xga xgc xhost
+xinit xkill xload xlogo xlsatom xlsclient xlsfont xmag xman xmh
+xmkmf xmodmap xon xpr xprop xrdb xrefresh xset xsetroot xstdcmap xterm
+xwd xwininfo xwud
+
+copi of contribut x sourc (from export.lc.mit.edu/contrib),
+which were then uncompress/untar into sourc directori (212mb).
+these ar sourc onli, and some of them were (after the date of
+product of thi disk) includ in the mit contrib-2 and contrib-3
+distribut.
+
+gnu sourc which were uncompress/untar into sourc directori
+(88mb).
+
+sparc binari (and need librari) for these gnu program: a2p ar
+as basenam bash bison cat cc1 cc1plu chgrp chmod chown ci cmp co
+comm compress cp cpio cpp ctag cut cv date dd df diff diff3 dir
+dirnam du egrep elvi emac env etag expand expr fgrep find
+find2perl flex fold g++ g++dep g++filt gawk gcc gdb ginstal gnuchess
+gnuchessn gnuchessr gnugo gnuplot gnuplot_x11 gprof grep h2ph head id
+ident indent ispel ld ld++ less ln locat lognam ls m4 make merg
+mkdir mkfifo mkmodul mknod mt mv nice nm oleo past pathchk perl pr
+printenv printf ranlib rc rcsdiff rcsinfo rcsmerg rcstest ref refont
+rlog rm rmdir rmt s2p screen sed size sleep split strip stty sum tac
+tail taintperl tar tee test time touch tput tty unam unexpand uniq
+vdir virec whoami xarg xchess ye zmore
+
+an archiv of comp.sourc.x post, volum 0 through volum14
+(58mb).  part ar suppli just as post.  you get to put togeth
+the piec, compil, instal, etc.
+
+cost: sug member: $50; non-member: addit $40 within the us, $55
+	elsewher 
+ship & handl: $10 insid the usa; $25 elsewher
+
+mail to: sun user group, inc.
+	 suit 315
+	 1330 beacon street
+	 brooklin, ma  02146
+	 usa
+
+	(617) 232-0514	voic
+	(617) 232-1347	fax
+
+
+the sun user group also accept visa and mastercard via telephon or
+electron.
+
+
+--------------------- cut here and return complet form ---------------------
+
+                                 the sugcd 1992.1
+                                     order form
+
+the price of the cd is $50.
+
+ship and handl: add $10 (usa) or $25 (intl.)
+
+if you ar not a member of the sun user group, add $40 (usa) or $55
+(intern) to the abov sum for membership.  you must be a sug
+member to purchas the cd-rom.  i enclos a us $ check for:
+
+                    __$ 60 (sug member in the usa)
+                    __$ 75 (sug member outsid the usa)
+                    __$100 (includ membership insid the usa)
+                    __$130 (includ intern membership)
+
+
+ name__________________________________ signatur___________________________
+
+ compani name_______________________________________________________________
+
+ sug membership #(if known)_________________________________________________
+
+ electron mail address____________________________________________________
+
+ telephon number___________________________________________________________
+
+ check enclos_____             mastercard_____  visa_____
+
+ credit card #__________________________________  exp. date.________________
+
+ card holder:__________________________ signatur:__________________________
+
+ ship to:                                bill to:
+
+ ______________________________________  ___________________________________
+
+ ______________________________________  ___________________________________
+
+ ______________________________________  ___________________________________
+
+ ______________________________________  ___________________________________
+
+-------------------------------------------------------------------------
+
+[   ]  i herebi author the sun user group to renew my membership
+        and charg my credit card automat on an annual basi.
+
+[   ]  i do not wish my name to be includ in non-sun user
+        group mail.
+
+[   ]  i do not wish my name to be publish in the sun user
+        group member directori.
+
+[   ]  i wish to be ad to the sun user group electron
+	mail-list (member onli)
+
+
+                  outsid the u.s. onli:
+
+individu outsid of the usa mai find us their credit card easier
+than purchas us$ check as thi elimin bank charg.
+
+-------------------------------------------------------------------------
+                   sun user group
+                   1330 beacon street, suit 315
+                   brooklin, ma  02146
+
+		   voic: +1 617 232-0514
+		   fax:   +1 617 232-1347
+		   email: offic@sug.org

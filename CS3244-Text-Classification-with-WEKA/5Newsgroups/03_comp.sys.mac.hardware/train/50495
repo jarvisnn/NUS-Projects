@@ -1,0 +1,45 @@
+from: panlilio@ac.ucalgari.ca (victor p. panlilio)
+subject: re: what thi "thermal recalibr" on quantum drive ?
+summari: thermal recalibr on hard drive
+articl-i.d.: ac.93apr06.172811.42754
+distribut: na
+organ: the univers of calgari, alberta
+line: 36
+nntp-post-host: ac3.ac.ucalgari.ca
+
+
+in articl <1993mar26.195307.25146@midwai.uchicago.edu> gari@midwai.uchicago.edu write:
+
+>whether the drive is hook up to the comput or not, the lp240
+>make a "disk seek nois" everi 20 second.  thi is consist 
+>and will continu as lomg as the drive is power up.  even if 
+>i disconnect the drive from the comput, thi "drive activ"
+>continu at 20 second interv.
+>
+>someon tri to tell me the drive wa do a "thermal recalibr".
+>
+>not know bean about the intern physic work of the lastest
+>disk drive technolog.... i guess i might believ anyth.
+>
+>what the scoop on thi standalon "drive activ" everi 20 sec?
+
+i can onli comment on thermal recalibr in gener. some new
+drive perform it in order to increas overal integr of data
+write. basic, the firmwar instruct the actuat to perform
+a test to see if the data track ar within a certain physic
+toler, sinc when the media heat up or cool down, *some*
+track drift is inevit, and the drive ha to monitor it. thi
+becom especi critic at veri high record densiti, and
+so wa us primarili on veri larg-capac mechan, but it
+seem to be find it wai into more smaller drive as a wai of
+boost the drive's long-term reliabl and mtbf rate.
+
+i first becam awar of thermal recalibr when it wa point
+out that the techniqu conflict with prolong write time when
+digit, sai, audio or video to hard disk. some manufactur
+explicitli state that drive with thermal recalibr ar not
+to be us for applic that have prolong disk write.
+
+hope thi help.
+
+victor

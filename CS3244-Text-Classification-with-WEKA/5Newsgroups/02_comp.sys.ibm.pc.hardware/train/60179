@@ -1,0 +1,25 @@
+from: epwong@nyx.cs.du.edu (elliott wong)
+subject: help! ka9q/ethernet
+organ: univers of denver, dept. of math & comp. sci.
+follow-up: poster
+line: 19
+
+dear all,
+
+	i am try to get my standard connect go with ka9q (pa0gri113016)
+and a gvc nic-2000 ethernet card. i know that my router and modem is
+work becaus i am abl to ping, finger, and even telnetd with it.
+
+	howev, after a time, it crash randomli. help would be
+greatli appreci.
+
+	i suspect that there is a hardwar conflict in the pc.  i am
+run with a 386sx/33, 2 mb ram.  the ethernet card is configur
+for irq 5, port 0x360-0x37f. 
+
+	thank in advanc. i know that it's not much to go on, but i
+don't even know what the question to ask ar, sorri.
+
+pleas send mail.
+
+elliott

@@ -1,0 +1,60 @@
+from: gjp@sei.cmu.edu (georg pandelio)
+subject:  help me select a backup solut
+organ: the softwar engin institut
+line: 55
+
+
+hi netter!
+
+i'm look at purchas some sort of backup solut.  after you read about
+my situat, i'd like your opinion.  here's the scenario:
+
+1.  there ar two comput in the hous.  on is a small 286 (40mb id drive).
+    the other is a 386dx (213 scsi drive w/ adaptec 1522 control).  both 
+    system have pc tool and will us central point backup as the backup / 
+    restor program.  both system have 3.5" and 5.25" floppi.
+
+2.  the comput ar not network (nor will thei be anytim soon).
+
+from what i have seen so far, there appear to be at least 4 possibl
+solut (i'm sure there ar other i haven't thought about).  for these 
+option, i would appreci hear from anyon who ha tri them or see 
+ani flaw (drive type x won't coexist with devic y, etc.) in my think 
+(i don't know veri much about these beast):
+
+1.  put 2.88mb floppi drive (or a combin drive) on each system.
+    can someon suppli cost and brand inform?  what's a good brand?
+    what do the floppi themselv cost?
+
+
+2.  put an intern tape backup unit on the 386 us my scsi adapt, and
+    continu to back up the 286 with floppi.  again, can someon recommend a
+    few manufactur?  the onli brand i rememb is colorado memori.  ani
+    happi or unhappi user (i know about the compress controversi)?
+ 
+
+3.  connect an extern tape backup unit on the 386 us my scsi adapt, and
+    (mayb?) connect it to the 286 somehow (ani suggest?)
+
+
+4.  instal a floptic drive in each machin.  again, ani gotcha's or 
+    recommend for manufactur?  
+
+i appreci your help.  you mai either post or send me e-mail.  i will
+summar all respons for the net.
+
+thank,
+
+georg
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  georg j. pandelio				internet:  gjp@sei.cmu.edu
+  softwar engin institut		usenet:	   sei!gjp
+  4500 fifth avenu				voic:	   (412) 268-7186
+  pittsburgh, pa 15213				fax:	   (412) 268-5758
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+disclaim:  these opinion ar my own and do not reflect those of the
+	     softwar engin institut, it sponsor, custom, 
+	     client, affili, or carnegi mellon univers.  in fact,
+	     ani resembl of these opinion to ani individu, live
+	     or dead, fiction or real, is pure coincident.  so there.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

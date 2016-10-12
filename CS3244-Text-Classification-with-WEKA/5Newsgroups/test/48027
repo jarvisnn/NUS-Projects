@@ -1,0 +1,58 @@
+from: "michael flood" <michael.flood@channel1.com>
+
+subject: vlb scsi card suggest
+
+repli-to: "michael flood" <michael.flood@channel1.com>
+
+distribut: comp
+
+organ: channel 1 commun
+
+line: 22
+
+
+
+gisi@wam.umd.edu (satan) wrote:
+
+
+
+> can someon recommend a decent vesa local bu scsi control
+
+> card?  i saw a post for the ultrastor someth or other, and
+
+> wa wonder if thi would be a good choic?  i need a support
+
+> card that softwar like the march nt beta will recogn.
+
+
+
+buslog just announc the bt445 fast scsi-2 vlb interfac as of
+
+april 20.  thi alwai happen to me!
+
+
+
+i have a on week old bt545s which is the isa version.  i am
+
+enjoi spectacular perform with a micropoli mc2105 560mb 10ms
+
+3.5" hh 5200 rpm drive.  i'll be chang to the bt445 veri soon,
+
+though it is difficult to imagin even higher transfer speed with
+
+the 32bit vesa support.
+
+
+
+you can call buslog and ask 'em about the nt question. i hear that
+
+the support is excel.   i have not had to call them myself yet.
+
+regard.
+
+--
+
+channel 1 (r)   cambridg, ma
+
+
+

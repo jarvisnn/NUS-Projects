@@ -1,0 +1,17 @@
+from: megan@cs.uq.oz.au (megan greneng)
+subject: regress test and x
+summari: info requir on captur/playback test tool for x client
+keyword: x regress
+repli-to: megan@cs.uq.oz.au
+line: 10
+
+i'd appreci ani feedback on captur/playback tool for us with x client.
+
+i have pull xtm from public domain but it appear to be set up to test
+x server not x client. 
+
+ani comparison/comment on regress test tool would be great -
+particularli xtm, xrunner, autotest, and sri's capbak, smart and exdiff.
+
+megan greneng
+megan@cs.uq.oz.au

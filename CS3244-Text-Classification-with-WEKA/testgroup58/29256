@@ -1,0 +1,56 @@
+from: claebaur@shell.portal.com (toni s annes)
+
+subject: re: troubl with sound blaster pro driver
+
+keyword: sbp
+
+nntp-post-host: jobe
+
+organ: portal commun compani -- 408/973-9111 (voic) 408/973-8091 (data)
+
+line: 21
+
+
+
+in articl <kaz.736031654@vincent1.iastat.edu> kaz@iastat.edu (errington shroud) write:
+
+>recent, window ha start give me the error "sound blaster pro:
+
+>requir newer version of window 3.1."  it ha work correctli for a long
+
+>time, and don't know what the problem could be.  thank!
+
+
+
+
+
+i had thi problem when i initi instal my sound blaster pro and here's
+
+what the tech support told me.
+
+
+
+thei told me to look for the file that ar state in the readm file from
+
+the win31 subdirectori of the soudblast directori. now look in the system.ini
+
+file and if ani of them sai devic=xxxxxxx.386 than chang it to 
+
+devic=*xxxxxxx
+
+that should work. wa your system.ini file eras for some reason? that would
+
+be the onli reason that i would think that windo is give you the error now.
+
+
+
+--
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+toni annes                                    claebaur@shell.portal.com
+
+                                          -or- claebaur@cup.portal.com
+
+\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+

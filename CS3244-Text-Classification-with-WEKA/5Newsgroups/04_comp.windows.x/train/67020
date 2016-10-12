@@ -1,0 +1,34 @@
+from: mikei@eukanuba.wpd.sgi.com (mike yang)
+subject: re: monthli question about xcopyarea() and expos event
+repli-to: mikei@sgi.com
+organ: silicon graphic, inc.
+line: 27
+nntp-post-host: eukanuba.wpd.sgi.com
+
+in articl <buzz.93apr19125438@lion.bear.com>, buzz@bear.com (buzz moschetti) write:
+|> (2nd post of the question that just doesn't seem to get answer)
+
+how can we resist a question that sai someth like thi?
+
+|> the problem, of cours, is that no expos event is gener if the window
+|> is alreadi visibl and map.  what we need to do is somehow "tickl" the
+|> window so that the expos handler is hit with argument that will enabl
+|> it to render *just* the part of the window that contain the new item.
+|> 
+|> what is the best wai to tickl a window to produc thi behavior?
+
+if your expos event handler is truli intellig about expos
+rectangl inform, then you can us xcleararea to gener an
+expos event (assum that your background pixel is not none) for the
+enclos rectangl of your new item.
+
+thi is still not great, sinc ani other item contain within that
+rectangl will still be unnecessarili redrawn.
+
+if your expos event handler simpli redraw everyth, you'll be
+do much more work than just draw the new item "on top" of the
+exist scene.
+
+-----------------------------------------------------------------------
+                 mike yang        silicon graphic, inc.
+               mikei@sgi.com           415/390-1786

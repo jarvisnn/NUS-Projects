@@ -1,0 +1,24 @@
+from: wlieftin@cs.vu.nl (lieft w)
+subject: re: 486/33 win3.1 hang
+organ: fac. wiskund & informatica, vu, amsterdam
+line: 19
+
+10748539@eng2.eng.monash.edu.au (charl choong) write:
+
+>help, problem 486/33mhz hang in extend mode try to
+>access drive a: or b: , sometim it will do dir , sometim will hang
+>on access sometim will when ty a text file.
+
+>hardwar:
+>american megatrend motherboard
+>ami bio 91
+>conner 85mb hard drive
+>trident 1 meg svga
+
+>pleas help!!!
+>it ok in standard mode!!!
+
+i have the same problem. someon suggest it might be a bio bug.
+gonna check with my supplier tomorrow. i'll tell you if it help.
+
+wouter.

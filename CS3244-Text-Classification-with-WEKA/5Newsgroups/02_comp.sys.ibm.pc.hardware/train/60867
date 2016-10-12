@@ -1,0 +1,45 @@
+from: ebosco@us.oracl.com (eric bosco)
+subject: help ad a scsi drive
+nntp-post-host: monica.us.oracl.com
+repli-to: ebosco@us.oracl.com
+organ: oracl corp., redwood shore ca
+x-disclaim: thi messag wa written by an unauthent user
+              at oracl corpor.  the opinion express ar those
+              of the user and not necessarili those of oracl.
+line: 35
+
+
+i have a 486sx25 comput with a 105 mg seagat id drive and a control  
+built into the motherboard. i want to add a scsi drive (a quantum prodriv  
+425f 425 mg format). i have no document at all and i need your  
+help!
+
+as i understand it, here is the process of ad such a drive.  could you  
+pleas tell me if i'm right..
+
+1- bui a scsi contol.  which on? i know adaptec is good, but thei ar  
+kind of expens.  ar there ani good board in the $100 region? i want  
+it to be compat with os2 and unix if possibl.  also, i have seen on  
+the net that there ar scsi and scsi2 drive. is thi true? doe the  
+adapt need to be the same as the drive? what type of drive is the  
+quantum?
+
+2- connect the drive to the adapt via a scsi cabl and the power cabl.
+do i have to worri about the power suppli? i think i have 200 watt and  
+all i'm power ar two floppi and the seagat drive.
+
+3- setup the bio to recogn the drive as the second drive.  what type  
+of drive is thi? i don't have the number for thi drive.
+
+4- format and creat partit on the drive. do i us format or fdisk? i  
+think that id drive can't be low-level format. is it the same with  
+scsi? how exactli doe fdisk work? i have a reduc msdo 5.0 manual  
+(clone oblig) and there is no mention of fdisk.  ideal, i would want  
+the drive partit in to two partit d: and e: how do i do thi?
+
+well that seem to be all. is there anythi i'm forget? 
+ani help is *realli* appreci, i'm lost...
+
+-eric
+
+ebosco@us.oracl.com

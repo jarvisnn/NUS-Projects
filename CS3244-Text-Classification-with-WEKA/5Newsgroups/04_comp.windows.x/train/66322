@@ -1,0 +1,1619 @@
+from: ware@ci.ohio-state.edu (peter ware)
+subject: comp.window.x.intrins frequent ask question (faq)
+supersed: <faq-xt_728840923@obo.ci.ohio-state.edu>
+organ: the ohio state univers dept. of comput and info. scienc
+line: 1609
+expir: 14 mai 1993 17:41:53 gmt
+repli-to: ware@ci.ohio-state.edu
+nntp-post-host: obo.ci.ohio-state.edu
+summari: answer about the x11 window system widget and xt intrins librari
+
+archiv-name: xt-faq
+version: $id: faq-xt,v 1.28 93/04/02 12:41:12 ware exp $
+
+		    the x toolkit intrins f.a.q
+			  a monthli post
+
+
+thi articl contain the answer to some frequent ask question
+(faq) from comp.window.x about the x toolkit intrins.  to submit
+question (prefer with an answer) send email to: ware@ci.ohio-state.edu
+
+mani faq, includ thi on, ar avail on the archiv site
+rtfm.mit.edu in the directori pub/usenet/new.answer.  the name
+under which a faq is archiv appear in the archiv-name 
+line at the top of the articl.  thi faq is archiv as xt-faq.
+
+all code fragment ar public domain.  
+
+			       content
+0.  xt glossari
+1.  softwar version
+2.  relat faq's
+3.  why doe my applic core dump when i us signal/alarm/cthread?
+4.  how do i us a differ visual than the default?
+5.  which visual should an applic us?
+6.  why do onli shell widget have a visual?
+7.  which visual, depth and colormap do shell inherit?
+8.  i've done all the abov and i still get a badmatch error.  why?
+9.  why doesn't my widget get destroi when i call xtdestroywidget()?
+10. how do i exit but still execut the destroycallback?
+11. how do i resiz a shell widget?
+12. why can't xtappaddinput() handl file?
+13. what good book and magazin ar there on xt?
+14. what widget ar avail?
+15. what altern to the intrins ar there?
+16. how do i pass a float valu to xtsetvalu?
+17. how do i write a resourc convert?
+18. how do i open multipl displai?
+19. what chang from r3 to r4 to r5?
+20. where ar the resourc load from?
+21. what order ar callback execut in?
+22. how do i know if a widget is visibl?
+23. how do i repar a widget in xt, i.e. xtreparentwidget()?
+24. why us xtmalloc, xtfree, etc?
+25. how to debug an xt applic?
+26. why don't xtaddinput(), xtaddtimeout() and xtaddworkproc() work?
+27. what is and how can i implement drag and drop?
+
+----------------------------------------------------------------------
+0.  xt glossari
+----------------------------------------------------------------------
+
+o the xt intrins implement an object orient interfac to c code
+  to allow us graphic compon to be creat.  includ with
+  thi ar class that provid the base function: object,
+  rectobj, core, composit, constraint, shell, overrideshel, wmshell,
+  etc.  the term "xt" and "intrins" ar us interchang,
+  howev, thei ar us veri precis to mean a specif librari of the x
+  window system.  in particular, it doe not includ the athena,
+  motif, olit or ani other widget set.  without further widget the
+  intrins ar not especi us.
+
+o a widget refer to a user interfac abstract creat via xt.  the
+  precis us, is ani object that is a subclass of the core class.  it
+  is us loos to refer to anyth that is a subclass of the
+  object class although these ar more accur call windowless
+  widget or gadget.
+
+o xlib is the c interfac to the x11 protocol.  it is on layer below
+  the xt intrins.  typic a widget us rel few xlib
+  function becaus xt provid most such servic although an
+  understand of xlib help with problem.
+
+----------------------------------------------------------------------
+1.  softwar version
+----------------------------------------------------------------------
+
+the follow ar the latest version of xt base softwar:
+        _____________________________________________________________
+	softwar	version		releas	next expect
+        _____________________________________________________________
+	x11r4		patch 18			(none)
+	x11r5		patch 21	12/18/92	??
+	athena widget	(see x11r5)
+	motif		1.2.1		9/92		??
+	olit		??		??		??
+	xtra		2.5		6/15/92		??
+	xw		x11r4				(none)
+	xcu		x11r5				(none)
+	fwf		3.4		1/11/92		4/93
+        _____________________________________________________________
+
+----------------------------------------------------------------------
+2.  relat faq's
+----------------------------------------------------------------------
+david b. lewi (uunet!craft!faq) maintain the faq on x.  it
+is post monthli on comp.window.x and locat on export in contrib/faq.
+
+liam r. e. quin (lee@sq.sq.com) post an faq list on open look to 
+comp.window.x.  
+
+jan newmarch (jan@pandonia.canberra.edu.au) post an faq list on motif 
+to comp.window.x.motif.
+
+peter ware (ware@ci.ohio-state.edu) post an faq list for
+comp.window.x.intrins; it is on export in contrib/faq-xt.
+
+----------------------------------------------------------------------
+3.  why doe my applic core dump when i us signal/alarm/cthread?
+----------------------------------------------------------------------
+
+in brief, xlib, xt and most widget set have no mutual exclus for
+critic section.  ani interrupt handler is like to leav on of
+the abov librari in an inconsist state -- such as all the
+appropri flag not yet set, dangl pointer, in the middl of a
+list travers, etc.  note that the ansi c standard point out that
+behavior of a signal handler is undefin if the signal handler call
+ani function other than signal() itself, so thi is not a problem
+specif to xlib and xt; the posix specif mention other
+function which mai be call safe but it mai not be assum that
+these function ar call by xlib or xt function.
+
+the onli safe wai to deal with signal is to set a flag in the
+interrupt handler.  thi flag later need to be check either by a
+work procedur or a timeout callback.  it is incorrect to add either
+of these in the interrupt handler.  as anoth note, it is danger
+to add a work procedur that never finish.  thi effect
+preempt ani work procedur previous ad and so thei will never
+be call.  anoth option is to open a pipe, tell the event loop
+about the read end us xtappaddinput() and then the signal handler
+can write a byte to the write end of the pipe for each signal.
+howev, thi could deadlock your process if the pipe fill up.
+
+why don't the intrins deal with thi problem?  primarili becaus it
+is suppos to be a portabl layer to ani hardwar and oper
+system.   is that a good enough reason -- i don't think so.
+
+        note: the articl in the x journal 1:4 and the exampl in o'reilli
+volum 6 ar in error.
+
+----------------------------------------------------------------------
+4.  how do i us a differ visual than the default?
+----------------------------------------------------------------------
+
+thi requir a more complic answer than it should.  a window ha
+three thing that ar visual specif -- the visual, colormap and
+border pixmap.  all widget have their own colormap and borderpixmap
+resourc; onli shell widget have visual resourc (anoth question
+deal with why shell have a visual).  the default valu of these
+resourc is copyfrompar which doe exactli what it sai.  in the
+shell widget copyfrompar get evalul as defaultvisualofscreen
+and defaultcolormapofscreen.  when ani on of the three resourc is
+not properli set, a badmatch error occur when the window is
+creat.  thei ar not properli set becaus each of the valu depend
+on the visual be us.  
+
+how to get thi to work?  there ar two part to the answer.  the
+first is if you want an applic to start with a particular visual
+and the second is if you want a particular shell within an applic
+to start with a differ visual.  the second is actual easier
+becaus the basic inform you need is avail.  the first is a
+littl harder becaus you'll need to initi much of the toolkit
+yourself in order to determin the need inform.
+
+/*
+ * some sampl code to start up an applic us someth other
+ * than the default visual.
+ *
+ * to compil:
+ *	cc -g visual.c -o visual -lxaw -lxmu -lxt -lxext -lx11 -lm
+ *
+ * to run:
+ *	./visual -geometri 300x300 -depth 24 -visual staticcolor -fg blue -bg yellow
+ *
+ * you need to move the mous to get the particular visual colormap
+ * to instal.
+ */
+
+#includ <x11/intrins.h>
+#includ <x11/stringdef.h>
+#includ <x11/shell.h>
+
+typedef struct
+{
+	visual	*visual;
+	int	depth;
+} optionsrec;
+
+optionsrec	option;
+
+xtresourc resourc[] =
+{
+	{"visual", "visual", xtrvisual, sizeof (visual *),
+	xtoffsetof (optionsrec, visual), xtrimmedi, null},
+	{"depth", "depth", xtrint, sizeof (int),
+	xtoffsetof (optionsrec, depth), xtrimmedi, null},
+};
+
+xrmoptiondescrec desc[] =
+{
+	{"-visual", "*visual", xrmoptionseparg, null},
+	{"-depth", "*depth", xrmoptionseparg, null}
+};
+
+
+
+int
+main (argc, argv)
+	int		argc;
+	char		**argv;
+{
+	xtappcontext	app;		/* the applic context */
+	widget		top;		/* toplevel widget */
+	displai		*dpy;		/* displai */
+	char		**xargv;	/* save argument vector */
+	int		xargc;		/* save argument count */
+	colormap	colormap;	/* creat colormap */
+	xvisualinfo	vinfo;		/* templat for find visual */
+	xvisualinfo	*vinfo_list;	/* return list of visual */
+	int		count;		/* number of match (onli 1?) */
+	arg		arg[10];
+	cardin	cnt;
+	char		*name = "test";
+	char		*class = "test";
+
+	/*
+	 * save the command line argument
+	 */
+
+	xargc = argc;
+	xargv = (char **) xtmalloc (argc * sizeof (char *));
+	bcopi ((char *) argv, (char *) xargv, argc * sizeof (char *));
+
+	/*
+	 * the follow creat a _dummi_ toplevel widget so we can
+	 * retriev the appropri visual resourc.
+	 */
+	cnt = 0;
+	top = xtappiniti (&app, class, desc, xtnumber (desc), &argc, argv,
+			       (string *) null, arg, cnt);
+	dpy = xtdisplai (top);
+	cnt = 0;
+	xtgetapplicationresourc (top, &option, resourc,
+				   xtnumber (resourc),
+				   arg, cnt);
+	cnt = 0;
+	if (option.visual && option.visual != defaultvisualofscreen (xtscreen (top)))
+	{
+		xtsetarg (arg[cnt], xtnvisual, option.visual); ++cnt;
+		/*
+		 * now we creat an appropri colormap.  we could
+		 * us a default colormap base on the class of the
+		 * visual; we could examin some properti on the
+		 * rootwindow to find the right colormap; we could
+		 * do all sort of thing...
+		 */
+		colormap = xcreatecolormap (dpy,
+					    rootwindowofscreen (xtscreen (top)),
+					    option.visual,
+					    allocnon);
+		xtsetarg (arg[cnt], xtncolormap, colormap); ++cnt;
+
+		/*
+		 * now find some inform about the visual.
+		 */
+		vinfo.visualid = xvisualidfromvisu (option.visual);
+		vinfo_list = xgetvisualinfo (dpy, visualidmask, &vinfo, &count);
+		if (vinfo_list && count > 0)
+		{
+			xtsetarg (arg[cnt], xtndepth, vinfo_list[0].depth);
+			++cnt;
+			xfree ((xpointer) vinfo_list);
+		}
+	}
+	xtdestroywidget (top);
+
+
+	/*
+	 * now creat the real toplevel widget.
+	 */
+	xtsetarg (arg[cnt], xtnargv, xargv); ++cnt;
+	xtsetarg (arg[cnt], xtnargc, xargc); ++cnt;
+	top = xtappcreateshel ((char *) null, class,
+				applicationshellwidgetclass,
+				dpy, arg, cnt);
+
+	/*
+	 * displai the applic and loop handl all event.
+	 */
+	xtrealizewidget (top);
+	xtappmainloop (app);
+	return (0);
+}
+
+----------------------------------------------------------------------
+5.  which visual should an applic us?
+----------------------------------------------------------------------
+
+thi is a point that can be argu about but on opinion is there is
+no wai for an applic to know the appropri visual -- it ha to
+be specifi by the user.  if you disagre with thi then your
+applic probabl fall into the categori of alwai us the
+default visual or it is hardwar specif and expect some particular
+visual such as 24bit truecolor with an overlayplan extens (or some
+such).
+
+why?  no applic run in isol.  depend on the wai a server
+alloc resourc i mai not alwai want your applic to run in
+truecolor mode if it is go to mess up my other applic.  i mai
+be veri upset if it choos to run in greyscal instead of psuedocolor
+or just monochrom.
+
+as an exampl, on a low end color sun server there ar mani differ
+possibl visual: monochrom, 256 entri colormap, static grai, static
+color, and a 3/3/2 truecolor.  the sgi iri's offer all the abov 
+plu 12 bit truecolor, 24 bit truecolor, an overlai plane.
+
+----------------------------------------------------------------------
+6.  why do onli shell widget have a visual?
+----------------------------------------------------------------------
+
+thi is strictli by convent.  it make it possibl for an arbitrari
+widget to know that the visual it us can be found by look for the
+shell widget that is it ancestor and obtain the visual of that
+shell.
+
+a widget can have it own visual resourc.  if it doe, it must have
+it own realiz method to us the visual when it call
+xcreatewindow().  you should also make thi a resourc that can be
+obtain with xtgetvalu() so other widget can find it.  a
+reason valu is probabl xtnvisual.
+
+----------------------------------------------------------------------
+7.  which visual, depth and colormap do shell inherit?
+----------------------------------------------------------------------
+
+the default valu for these resourc ar set to copyfrompar.  thi
+is interpret as the defaultcolormapofscreen(), defaultdepthofscreen()
+and the default visual of the screen if the widget ha no parent -- i.e.
+it is an applicationshellwidgetclass and the root of your widget tree.
+
+if the parent of the widget is not null, then the shell copi
+colormap and depth from it parent and us copyfrompar as the
+visual.
+
+----------------------------------------------------------------------
+8.  i've done all the abov and i still get a badmatch error.  why?
+----------------------------------------------------------------------
+
+some resourc convert improperli cach refer.  thi wa
+especi true of x11r3 and earlier version of motif.
+
+----------------------------------------------------------------------
+9.  why doesn't my widget get destroi when i call xtdestroywidget()?
+----------------------------------------------------------------------
+
+see section 2.8 of the xt specif.
+
+it eventu doe get destroi, just not immedi.  the
+intrins destroi a widget in a two-phase process.  first it and all
+of it children have a flag set that indic it is be destroi.
+it is then put on a list of widget to be destroi.  thi wai ani
+pend x event or further refer to that widget can be clean
+up befor the memori is actual freed.  the second phase is then
+perform after all callback, event handler, and action have
+complet, befor check for the next x event.  at thi point the
+list is travers and each widget's memori is actual free()'d, among
+other thing.
+
+as some further caveat/trivia, the widget mai be destroi if the
+intrins determin that thei have no further refer to the
+widget on the list.  if so, then the phase 2 destruct occur
+immedi.  also, if nest event loop ar us, widget place on
+the destroi list befor enter the inner event loop ar not
+destroi until return to the outer event loop.
+
+----------------------------------------------------------------------
+10. how do i exit but still execut the destroycallback?
+----------------------------------------------------------------------
+
+the problem is if a simpl and entir reason approach to exit
+an applic is us, such as call exit() directli, then a widget
+mai not have a chanc to clean up ani extern state -- such as open
+socket, temporari file, alloc x resourc, etc.  (thi code for
+simplic reason assum onli a singl toplevel widget):
+
+
+	widget
+	toplevelget (gw)
+		widget		gw;		/* widget to find toplevel */
+	{
+		widget		top;
+
+		for (top = gw; xtparent (top); top = xtparent (top))
+			/* empti */;
+		return (top);
+	}
+
+	void
+	exitcallback (gw, closur, call_data)
+		widget		gw;		/* widget */
+		xtpointer	closur;	/* data the app specifi */
+		xtpointer	call_data;	/* widget specif data */
+	{
+		widget		toplevel;
+
+		toplevel = toplevelget (gw);
+		xtunmapwidget (toplevel);	/* make it disappear quickli */
+		xtdestroywidget (toplevel);
+		exit (0);
+	}
+
+on can see that the abov code exit's immedi after destroi
+the toplevel widget.  the troubl is the phase 2 destruct mai never
+occur.  
+
+thi work for most widget and most applic but will not work
+for those widget that have ani extern state.  you might think that
+sinc it work now it will alwai work but rememb that part of the
+reason an object orient approach is us is so on can be ignor
+of the implement detail for each widget.  which mean that the
+widget mai chang and somedai requir that some extern state is
+clean up by the destroi callback.
+
+on altern is to modifi exitcallback() to set a global flag and
+then test for that flag in a privat event loop.  howev, privat
+event loop ar frown upon becaus it tend to encourag sloppi, and
+difficult to maintain practic.
+
+try the follow code instead.
+
+	#includ <x11/intrins.h>
+
+	extern widget toplevelget (
+	#if needfunctionprototyp
+		widget		gw
+	#endif
+	);
+
+	extern boolean exitworkproc (
+	#if needfunctionprototyp
+		xtpointer	closur
+	#endif
+	);
+
+	extern void exitcallback (
+	#if needfunctionprototyp
+		widget		gw,
+		xtpointer	closur,
+		xtpointer	call_data
+	#endif
+	);
+
+	widget
+	toplevelget (gw)
+	widget		gw;		/* widget to find toplevel */
+	{
+		widget		top;
+
+		for (top = gw; xtparent (top); top = xtparent (top))
+			/* empti */;
+		return (top);
+	}
+
+
+	void
+	exitcallback (gw, closur, call_data)
+	widget		gw;		/* widget */
+	xtpointer	closur;	/* data the app specifi */
+	xtpointer	call_data;	/* widget specif data */
+	{
+		widget		toplevel;
+
+		toplevel = toplevelget (gw);
+		xtunmapwidget (toplevel);	/* make it disappear quickli */
+		xtdestroywidget (toplevel);
+		xtappaddworkproc (xtwidgettoapplicationcontext (gw),
+				  exitworkproc, (xtpointer) null);
+	}
+
+	boolean
+	exitworkproc (closur)
+		xtpointer	closur;
+	{
+		exit (0);
+		/*notreach*/
+	}
+
+
+exitcallback() add a work procedur that will get call when the
+applic is next idl -- which happen after all the event ar
+process and the destroi callback ar execut.
+
+----------------------------------------------------------------------
+11. how do i resiz a shell widget?
+----------------------------------------------------------------------
+
+after it is realiz, on doesn't resiz a shell widget.  the proper
+thing is to resiz the current manag child of the shell widget
+us xtsetvalu().  the geometri chang is then propag to the
+shell which ask the window manag which mai or mai not allow the
+request.  howev, the shell must have the resourc
+xtnallowshellres set to true otherwis it will not even ask the
+window manag to grant the request and the shell will not resiz.
+
+to chang the posit of a shell, us xtsetvalu() on the shell, not
+the child, and within the limit of the window manag it should be grant.
+
+----------------------------------------------------------------------
+12. why can't xtappaddinput() handl file?
+----------------------------------------------------------------------
+
+it doe, howev unix semant for when i/o is readi for a file doe
+not fit most peopl' intuit model.  in unix term a file
+descriptor is readi for read whenev the read() call would not
+block, ignor the set of option flag that indic not to
+block.  thi work as expect for termin, socket and pipe.  for
+a file the read() will alwai return but the return indic an eof
+-- i.e. no more data.  the result is the code in the intrins alwai
+call the input handler becaus it alwai think someth is about to
+be read.  the culprit is the select() system call or on sysv base
+os's it is the poll() system call.
+
+how to get around thi on a unix system?  the best approach is to us
+anoth process to check for avail input on the file.  us a pipe
+to connect the applic with thi other process and pass the file
+descriptor from the pipe to xtappaddinput().  a suitabl program on
+bsd system is "tail -f filenam".
+
+it's rumor that select() on some system is not _complet_
+reliabl.  in particular:
+
+	- ibm aix 3.1: thi is on where it would work for a while
+	  (sever thousand time) and then stop until some other
+	  event woke it up. thi seem to be the result of a race
+	  condit in the kernel.  ibm claim to have a fix for thi.
+
+	- pyramid, doesn't work at all.
+
+	- ultrix (and possibl other where pipe ar implement as
+	  socket), wasn't complet broken, but although the write
+	  side wrote in 512 byte block the read side receiv it
+	  all broken up as if it wa be put into the pipe a byte at
+	  a time.  you can wast a lot of time by read small block
+	  (get raound it by detect the situat and have
+	  select() ignor the pipe for 10 msecond - by then it had
+	  been given the whole block).
+
+
+note that all the abov descript us unix terminolog such as
+read(), file descriptor, pipe, etc.  thi is an os depend area and
+mai not be ident on all system.  howev the intrins design
+felt it wa a common enough oper that it should be includ with
+part of the toolkit.  why thei didn't also deal with signal at thi
+point i don't know.
+
+----------------------------------------------------------------------
+13. what good book and magazin ar there on xt?
+----------------------------------------------------------------------
+
+i have a favorit that is the definit refer.  to my perspect
+it offer a reason introduct but also goe into the full
+detail of the intrins.  when i start us it i wa alreadi
+familiar with xt and the concept behind it, so newcom mai or mai
+not find it us.  i've alwai found it accur and complet, which
+mean it a 1000 page.
+
+asent, paul j., and swick, ralph r., "x window system toolkit, the
+	complet programm's guid and specif", digit press,
+	1990, isbn 1-55558-051-3, order number ey-e757e-dp; and by
+	prentic-hall, isbn 0-13-972191-6. also avail through dec
+	direct at 1-800-digit.
+
+the other book i commonli recomend to novic is:
+
+young, doug. "the x window system: applic and program with
+	xt (motif version)," prentic hall, 1989 (isbn 0-13-497074-8).
+	(isbn 0-13-972167-3)
+
+and of cours o'reilli ha an entir seri of manual on x and xt.
+o'reilli order is 800-998-9938.  in particular, volum 5 is an xt
+refer done in manual page style.  the 3rd edit is extens
+overhaul and goe far beyond the mit manual page.  i'm find it
+veri us.  in particular, the permut index and refer to
+other manual page help a great deal in chase down relat
+inform.
+
+i read two period, "the x resourc" and the "the x journal".
+these ar the onli two deal specif with x.  "the x resourc"
+is publish quarterli, by o'reilli, with on of the issu be the
+mit x consortium technic confer proceed.  there is no
+advertis.  i've found it inform with pretti good depth.  for
+order, call 1-800-998-9938, or email cathyr@ora.com.  for editori
+matter, email adrian@ora.com.  tabl of content ar post at
+math.utah.edu in ~ftp/pub/tex/bib in tex form and on ftp.uu.net in
+~ftp/publish/oreilli/xresourc in ascii form.
+
+
+"the x journal" is a bimonthli trade rag with lot of advertis.
+the articl ar inform and orient toward a less technic
+audienc.  i read it more to see what's go on then with an
+expect of learn a great deal (but rememb, i repres a
+fairli small percentag of peopl).  also, thei have a pretti good
+collect of peopl on the advisori board and as columnist.  call
+(908) 563-9033.
+
+----------------------------------------------------------------------
+14. what widget ar avail?
+----------------------------------------------------------------------
+
+there ar three popular widget set:
+
+athena	- the set provid with x11.  thi is suffici for most
+	  purpos but is on the ugli side.  recent, a 3d look is
+	  avail for ftp on export.lc.mit.edu:/contrib/xaw3d.tar.z.
+motif	- from osf avail for a licens fee and commonli ship on
+	  mani workstat vendor platform (almost everyon but
+	  sun).  it look good and work well but person i think
+	  it is poorli implement.
+olit	- the open look intrins toolkit is a set of widget
+	  implement sun's open look specif.  develop by
+	  at&t.  i've never us it so can't comment on it qualiti.
+	  i've heard rumour that it is a pain to actual get.
+
+in addit the follow collect of widget ar also avail:
+
+xtra	- a librari of widget for sale from graphic softwar
+	  technolog (310-328-9338).  it includ bar graph, stack
+	  bar graph, line graph, pie chart, xy plot, hypertext, help,
+	  spreadsheet, and data entri form widget.  i've never seen
+	  them so i can't comment.
+fwf	- the free widget foundat is attempt to collect a set of
+	  freeli avail widget.  includ ar a pixmap editor,
+	  filedialog, and a few other.  the current set of widget
+	  can be obtain via anonym ftp from the machin
+	  a.cs.uiuc.edu (128.174.252.1) in the file pub/fwf.shar.z.
+xcu	- the cornel univers widget from gene dyke.  on of the
+	  earli widget set releas.  provid a nice appear for
+	  button and ha a mini command languag.  probabl not so
+	  wide us.
+xs	- the soni widget set.  thi wa around dure r3 dai but
+	  seem to disappear.  it look like it had promis.
+xw	- the hp widget.  the precursor to motif.  origin written
+	  for r3 there exist diff to get it to work under r4 & r5.
+	  again, a pretti good widget set but ha more or less di.
+	  the precursor to thi wa the xrai toolkit which wa
+	  origin implement for x10r4 and appar provid
+	  much experi for the design of xt.
+xo	- a widget set i'm work on.  it's still primit but you
+	  can give it a try in archiv.ci.ohio-state.edu:pub/xo/*
+
+the follow special widget ar also avail:
+
+tbl	- implement a tabular layout of widget.  support motif
+	  widget as children.  part of wcl.
+plot	- the athena plot widget (not the athena widget).
+	  contact gnb@bby.oz.au or joe@athena.mit.edu.
+
+----------------------------------------------------------------------
+15. what altern to the intrins ar there?
+----------------------------------------------------------------------
+
+	__________________________________________
+	name		languag	vendor
+	__________________________________________
+	xview		c		sun
+	oi		c++		parcplac
+	interview	c++		stanford
+	tcl/tk		c		sprite.berkelei.edu
+	__________________________________________
+
+
+howev much i like c and admir the skill in both design and
+implement the intrins, hopefulli some altern will develop
+in the next 3-5 year that us an object orient languag.  keep
+your ey open and expect some chang about the same time a languag
+other than c _start_ gain accept.
+
+----------------------------------------------------------------------
+16. how do i pass a float valu to xtsetvalu?
+----------------------------------------------------------------------
+
+first, what is go wrong is the structur for an arg is (essenti)
+	typdef struct
+	{	
+	    string	name;
+	    long	valu;
+	} arg;
+
+and the code:
+	arg	arg;
+
+	xtsetarg (arg, "name", 3.2)
+
+expand to
+	arg	arg;
+
+	arg.name = "name";
+	arg.valu = 3.2;
+
+you can see that with normal c type convers, the arg.valu
+get the integ "3" instead of the float point valu "3.2".  when
+the valu is copi into the widget resourc, the bit pattern is
+wildli differ than that requir for a float point valu.  so,
+how to get around thi?
+
+the follow macro is from the athena widget document and i am now
+recomend it over the previou suggest.
+
+#defin xtsetfloatarg(arg, n, d) \
+    if (sizeof(float) > sizeof(xtargval)) { \
+        xtsetarg(arg, n, &(d)); \
+    } els { \
+        xtargval *ld = (xtargval *)&(d); \
+        xtsetarg(arg, n, *ld); \
+    }
+
+
+----------------------------------------------------------------------
+17. how do i write a resourc convert?
+----------------------------------------------------------------------
+
+courtesi of rich thomson (rthomson@dsd.es.com):
+
+the follow discuss of resourc convert assum r4 (or r5)
+intrins.  resourc convert chang between r3 and r4 to allow
+for destructor and cach of convert valu.
+
+there ar sever main type of resourc convert:
+
+    string to data type
+    data type to string
+    data type to data type
+
+i) string to data type
+    usual a string to data type convert ha a fix set of string
+    that will be convert to data type valu.  thi is most often
+    us to map enumer name to enumer valu:
+
+	name		valu
+	"true"		1
+	"fals"		0
+
+    in thi case, the string to data type convert need to compar
+    the resourc valu to the list of fix string.  thi is most
+    readili accomplish by the us of the "quark" mechan of the
+    resourc manag.  the resourc valu is turn into a quark,
+    which is a uniqu represent of the string that fit into a
+    singl word.  then the resourc quark is compar against the
+    quark for the fix string repres the enumer valu.
+
+    if there ar mani enumer string in the convert (or mani
+    convert, each with a small number of enumer string), then
+    a global initi routin might be us to turn all the
+    resourc string into quark.  that wai, the first time on of
+    these convert is us, the string will be turn into quark
+    and held in static variabl for us in the next invoc of on
+    of the convert.
+
+ii) data type to string
+    thi type of convert is slightli easier than the string to data
+    type convert sinc the us of quark isn't necessari.  instead,
+    the data type valu is simpli convert to a string valu,
+    probabl by the us of sprintf.
+
+    data type to string convert ar us for applic that
+    wish to convert an intern data type valu into a string so that
+    thei can write out a valid resourc specif to a file.  thi
+    mechan can be us to provid a "snapshot" of applic state
+    into a file.  thi snapshot can be us to restor the program to
+    a known state via the usual x resourc databas mechan.
+
+    if you ar take the troubl to write a string to data type
+    convert, it isn't much extra effort to write the data type to
+    string convert.  write both at the same time help to ensur
+    that thei ar consist.
+
+iii) data type to data type
+    thi type of convert is us to convert an exist data type
+    valu to anoth data type.  for instanc, an x pixel valu can be
+    convert to an rgb data type that contain separ field for
+    red, green and blue.
+
+
+the type signatur for a resourc convert is as follow:
+
+typedef boolean (*xttypeconvert)(displai *, xrmvalueptr, cardin *,
+	xrmvalueptr, xrmvalueptr, xtpointer *);
+    displai *dpy;
+    xrmvalueptr arg;
+    cardin *num_arg;
+    xrmvalueptr fromval;
+    xrmvalueptr toval;
+    xtpointer *convert_data;
+
+when the convert is invok, the "fromval" argument point to the sourc
+x resourc manag valu and the "toval" argument point to the
+destin x resourc manag valu.  the "convert_data" argument
+is an opaqu pointer to some convert-specif data that is specifi
+when the convert is regist.  the "arg" and "num_arg" argument
+allow extra inform to be pass to the convert when it is
+invok.  for instanc, the pixel to rgb structur convert discuss
+abov would need colormap and visual argument in which to lookup the
+pixel to obtain the rgb valu correspond to that pixel.
+
+care must be taken with the "toval" argument.  an xrmvalu ha the
+follow type definit and specifi a size and locat for a
+convert valu:
+
+typedef struct {
+    unsign int    size;
+    caddr_t         addr;
+} xrmvalu, *xrmvalueptr;
+
+when the convert is invok, the address mai point to a locat of
+the given size for the convert valu or the locat can be null.
+in the former case, the convert should ensur that the size of the
+destin area is larg enough to handl the convert valu.  if
+the destin area is not larg enough, then the convert should
+set the size to the amount of space need and return fals.  the
+caller can then ensur that enough space is alloc and reinvok the
+convert.  if the size is larg enough, then the convert can simpli
+copi the convert valu into the space given and return true.
+
+if the locat is null, then the convert can assign the locat to
+the address of a static variabl contain the convert valu and
+return true.
+
+when write a group of convert, thi code is often repeat and it
+becom conveni to defin a macro:
+
+    #defin done(var, type) \
+      if (toval->addr) \
+	{ \
+	  if (toval->size < sizeof(type)) \
+	    { \
+	      toval->size = sizeof(type); \
+	      return fals; \
+	    } \
+	  els \
+	    *((type *) toval->addr) = var; \
+	} \
+      els \
+	toval->addr = (caddr_t) &var; \
+      toval->size = sizeof(type); \
+      return true;
+
+    #defin donestr(str) \
+      if (toval->addr && toval->size < sizeof(string)) \
+	{ \
+	  toval->size = sizeof(string); \
+	  return fals; \
+	} \
+      els \
+	toval->addr = (caddr_t) str; \
+      toval->size = sizeof(string); \
+      return true;
+
+insid the convert, it is a good idea to perform a littl safeti
+check on the "num_arg" and "arg" argument to ensur that your
+convert is be call properli.
+
+onc you have written your convert, you need to regist it with the
+intrins.  the intrins invok resourc convert when creat
+widget and fetch their resourc valu from the resourc databas.
+
+to regist a convert with a singl applic context, us
+xtappsettypeconvert:
+
+void xtappsettypeconvert(context, from, to, convert, arg, num_arg,
+	cach, destructor)
+    xtappcontext context;
+    string from;
+    string to;
+    xttypeconvert convert;
+    xtconvertarglist arg;
+    cardin num_arg;
+    xtcachetyp cach;
+    xtdestructor destructor;
+
+to regist a convert with all applic context, us
+xtsettypeconvert:
+
+void xtsettypeconvert(from, to, convert, arg, num_arg,
+	cach, destructor)
+    string from;
+    string to;
+    xttypeconvert convert;
+    xtconvertarglist arg;
+    cardin num_arg;
+    xtcachetyp cach;
+    xtdestructor destructor;
+
+in the r3 intrins, there were the routin xtappaddconvert and
+xtaddconvert; these have been supersed by xtappsettypeconvert
+and xtsettypeconvert.  whenev possibl, the newer routin should be
+us.
+
+when a convert is regist with the intrins, a "cach" argument
+specifi how convert resourc valu ar to be cach:
+
+    xtcachenon		don't cach ani convert valu
+    xtcacheal		cach all convert valu
+    xtcachebydisplai	cach convert valu on a per displai basi
+
+cach convert valu that requir a round-trip to the server is a
+good idea (for instanc string to pixel convers).
+
+the "destructor" argument is a routin that is invok then the
+resourc is destroi, either becaus it cach refer count ha
+been decrement to zero or becaus the widget own the valu is
+be destroi.  xtdestructor ha the follow type definit:
+
+typedef void (*xtdestructor)(xtappcontext, xrmvalueptr, xtpointer,
+	xrmvalueptr, cardin *);
+    xtappcontext context;
+    xrmvalueptr to;
+    xtpointer convert_data;
+    xrmvalueptr arg;
+    cardin *num_arg;
+
+the destructor is invok to free ani auxiliari storag associ
+with the "to" argument, but doe not actual free the storag point
+to by the "to" argument itself (to->addr).  the destructor is pass
+the extra argument that were pass to the convert when the
+convers wa perform (for instanc, colormap and visual argument
+for the string to pixel convert sinc the destructor would need to
+free the alloc pixel from the colormap) as well as the privat
+data pass in when the convert wa regist.
+
+sampl convert code can be found in the follow file in the mit
+r5 distribut:
+
+    mit/lib/xt/convert.c
+    contrib/lib/pext/convert.c
+    contrib/lib/pext/convert.h
+
+----------------------------------------------------------------------
+18. how do i open multipl displai?
+----------------------------------------------------------------------
+
+see "multi-user applic softwar us xt", the x resourc, issu 3,
+(summer 1992) by oliv jone for a complet coverag of the issu
+involv.  most of thi answer is base on that articl.  in a
+nutshel, on us xtopendisplai() to add each displai to a _singl_
+applic context and then xtclosedisplai() to shutdown each displai
+and remov it from the applic context.
+
+the real problem occur when try to close down a displai.  thi can
+happen 3 wai:
+	1. user select a "quit" button on on of the displai,
+	2. user ha window manag send a wm_delet_window messag,
+	3. server disconnect -- possibl from a killclient messag,
+	   server shutdown/crash, or network failur.
+
+i'll assum you can deal gracefulli with 1 & 2 sinc it is _mere_ a
+problem of translat a widget to a displai and remov that
+displai.  if not, then read the oliv jone articl.
+
+the third on is difficult to handl.  the follow is base on the
+oliv jone articl and i includ it here becaus it is a difficult
+problem.
+
+the difficulti aris becaus the xlib design presum that an i/o
+error is alwai unrecover and so fatal.  thi is essenti true
+for a singl displai x base applic, but not true for a
+multipl displai program or an applic that doe thing other than
+displai inform on an x server.  when an x i/o error occur the
+i/o error handler is call and _if_ it return then an exit()
+happen.  the onli wai around thi is to us setjmp/longjmp to avoid
+return to the i/o error handler.  the follow code fragment
+demonstr thi:
+
+#includ <setjmp.h>
+jmp_buf xiorecov;
+
+void
+xiohandl (dpy)
+	displai		*dpy;
+{
+	destroydisplai (dpy);
+	longjmp (xiorecov, 1);
+}
+
+main ()
+{
+	...
+	if (setjmp (xiorecov) == 0)
+		xsetioerrorhandl (xiohandl);
+	xtappmainloop (app_context);
+}
+
+the destroydisplai() is someth that given a displai pointer can go
+back to the applic specif data and perform ani necessari
+cleanup.  it should also call xtclosedisplai().
+
+for those of you unfamiliar with setjmp/longjmp, when setjmp() is
+first call it return a 0 and save's enough inform in the
+jmp_buf that a latter execut of longjmp() can return the program to
+the same state as if the setjmp() wa just execut.  the return valu
+of thi second setjmp() is the valu of the second argument to
+longjmp().  there ar sever caveat about us these but for thi
+purpos it is adequ.
+
+some other problem you might run into ar resourc convert that
+improperli cach resourc.  the most like symptom ar xlib error
+such as badcolor, badatom, or badfont.  there mai be problem with the
+total number of displai you can open sinc typic onli a limit
+number of file descriptor ar avail with 32 be a typic
+valu.  you mai also run into author problem when try to
+connect to a displai.
+
+there wa much discuss in comp.window.x about thi topic in
+novemb of 91.  robert scheifler post an articl which basic
+said thi is the wai it will be and xlib will not chang.
+
+----------------------------------------------------------------------
+19. what chang from r3 to r4 to r5?
+----------------------------------------------------------------------
+
+thi address onli chang in the intrins.  first, the gener
+chang for each releas ar describ.  then a, certainli incomplet,
+list of new function ad and other that ar now deprec ar
+list.  breviti is a primari goal.
+
+much of the follow inform is retriev from chapter 13 of the mit
+xt intrins manual and from o'reilli volum 5, 3rd edit.
+
+from r3 to r4
+- addit of gadget (windowless widget)
+- new resourc type convert interfac to handl cach and
+  addit  data.
+- variabl argument list interfac.
+- #defin xtspecificationreleas 4  (ad with thi releas)
+- wmshellpart, toplevelshellpart & transientshellpart chang
+  incompat.
+- core.initi, core.set_valu ad arglist and count paramet
+- event handler had continu_to_dispatch paramet ad
+- core.set_valu_almost specif chang.
+- core.compress_exposur chang to an enumer data type from boolean
+- core.class_init chang to enumer data type from boolean
+- constraint.get_valu_hook ad to extens record
+- core.initi_hook obsolet as info is pass to core.initi
+- shell.root_geometri_manag ad to extens record
+- core.set_valu_hook obsolet as info is pass to core.set_valu
+- call xtquerygeometri() must store complet geometri.
+- ad unrealizecallback.
+- xttranslatecoord() actual work under r4.
+
+from r4 to r5:
+- psuedo resourc basetransl ad.
+- search for app-default, and other file, made more flexibl
+- custom resourc ad.
+- per-screen resourc databas.
+- support perman alloc string.
+- permanetli alloc string requir for sever class field.
+- the arg argument to xtappiniti, xtvaappiniti,
+  xtopendisplai, xtdisplayiniti, and xtiniti were chang
+  from cardin* to int*
+- mani perform improv (thi is summar from the articl
+  "xt perform improv in releas 5" by gabe bege-dov in "the
+  x resourc", issu 3):
+	- xrmstringtoquark() augment with xrmpermstringtoquark() to
+	  avoid string copi.  sever field in the class record ar
+	  indic as need perman string.
+	- us an arrai of string for resourc
+	- callback list redesign to us less memori
+	- translat manag redesign and rewritten so it take
+	  less memori, translat tabl merg ar faster, cach of
+	  action bind
+	- keycod to keysym ar cach.
+	- better share of gc's with modifi field
+	- window to widget translat us less space and faster
+	- doe not malloc space for widget name sinc quark is avail
+	- widget space is alloc to includ the constraint
+	- over sever exampl program, about a 26% reduct in
+	  memori usag.
+
+function new with r5:
+----------------------
+xtallocategc()		- sharabl gc with modifi field  
+xtgetactionlist()	- get the action tabl of a class
+xtscreendatabas()	- return resourc databas for a screen
+xtsetlanguageproc()	- regist languag procedur call to set local
+
+
+function new with r4:
+----------------------
+xtappaddactionhook()	- procedur to call befor _everi_ action.
+xtappiniti()	- lot of initi work.
+xtappreleasecacheref()	- decrement cach refer count for convert
+xtappsetfallbackresourc() - specifi default resourc
+xtappsettypeconvert()	- regist a new style convert
+xtcallcallbacklist()	- directli execut a callback list
+xtcallconvert	()	- invok a new style convert
+xtcallbackreleasecacheref() - releas a cach resourc valu
+xtcallbackreleasecachereflist() - releas a list of cach resourc valu
+xtconvertandstor()	- find and call a resourc convert
+xtdirectconvert()	- invok old-style convert
+xtdisplayofobject()	- return the displai
+xtdisplaystringconversionwarn() - issu a warn about convers
+xtfindfil()		- find a file
+xtgetactionkeysym()	- retriev keysym & modifi for thi action
+xtgetapplicationnameandclass() - return name and class
+xtgetconstraintresourcelist() - get constraint for a widget
+xtgetkeysymt()	- return keycod-to-keysym map tabl
+xtgetmulticlicktim()	- read the multi-click time
+xtgetselectionrequest()	- retriev the selectionrequest event
+xtgetselectionvalueincrement() - obtain the select valu increment
+xtgetselectionvaluesincrement() - obtain the select valu increment
+xtinitializewidgetclass() - initi a widget class manual
+xtinserteventhanld()	- regist event handler befor/after other
+xtinsertraweventhandl() - regist event handler without modifi input mask
+xtisobject()		- test if subclass of object
+xtisrectobj()		- test if subclass of rectobj
+xtkeysymtokeycodelist()	- return list of keycod
+xtlasttimestampprocess() - retriev most recent event time
+xtmenupopdown		- action for pop down a widget
+xtmenupopup		- action for pop up a widget
+xtoffsetof		- macro for structur offset
+xtownselectionincrement() - make select data availab increment
+xtpoupspringload()	- map a spring-load popup
+xtregistergrabact()	- indic action procedur need a passiv grab
+xtremoveactiohhook()	- remov function call after everi action
+xtresolvepathnam()	- find a file
+xtscreenofobject()	- return screen of object.
+xtsetmulticlicktim()	- set the multi-click time
+xtsetwmcolormapwindow() - set wm_colormap_window for custom colormap
+xtungrabbutton()	- cancel a passiv button grab
+xtungrabkei()		- cancel a passiv kei grab
+xtungrabkeybard()	- releas an activ keyboard grab
+xtungrabpoint()	- releas an activ pointer grab
+xtva*()			- varag interfac to a bunch of function
+xtwindowofobject()	- return window of nearest widget ancestor
+
+
+deprec		replac			when
+----------------------------------------------------------------------
+xtaddact()		xtappaddact()		r3
+xtaddconvert()	xtappaddconvert()		r3
+xtaddinput()		xtappaddinput ()		r3
+xtaddtimeout()		xtappaddtimeout()		r3
+xtaddworkproc()		xtappaddworkproc()		r3
+xtconvert()		xtconvertandstor()		r4
+xtcreateapplicationshel xtappcreateshel()		r3
+xtdestroygc()		xtreleasegc()			r3
+xterror()		xtapperror()			r3
+xtgeterrordatabas()	xtappgeterrordatabas		r3
+xtgeterrordatabasetext() xtappgeterrordatabasetext	r3
+xtgetselectiontimeout()	xtappgetselectiontimeout	r3
+xtiniti()		xtappiniti()		r3
+xtmainloop()		xtappmainloop()			r3
+menupopdown(action)	xtmenupopdown(action)		r4
+menupopup(action)	xtmenupopup(action)		r4
+xtnextev()		xtappnextev()		r3
+xtpeekev()		xtapppeekev()		r3
+xtpend()		xtapppend()			r3
+xtseterrorhandl()	xtappseterrorhandl()		r3
+xtseterrormsghandl	xtappseterrormsghandl()	r3
+xtsetselectiontimeout()	xtappsetselectiontimeout()	r3
+xtsetwarninghandl()	xtappsetwarninghandl()	r3
+xtsetwarningmsghandl() xtappsetwarningmsghandl()	r3
+xtwarn()		xtappwarn()			r3
+xtwarningmsg()		xtappwarningmsg()		r3
+
+----------------------------------------------------------------------
+20. where ar the resourc load from?
+----------------------------------------------------------------------
+
+the resourc of a widget ar fill in from the follow place
+(from highest prioriti to lowest prioriti):
+
+	1. arg pass at creation time.
+	2. command line argument.
+	3. user's per host default file
+	4. user's default file.
+	5. user's per applic default file.
+	6. system wide per applic default file.
+
+note that 2-6 ar read onli onc on applic startup.  the result
+of step 3-6 is a singl resourc databas us for further queri.
+
+the per host default file contain custom for all
+applic execut on a specif comput.  thi file is either
+specifi with the xenviron environ variabl or if that is not
+set then the file $home/.xdefault-<host> is us.
+
+the user default file is either obtain from the resourc_manag
+properti on the root window of the displai or if that is not set then
+the file $home/.xdefault is us.  typic, the program "xrdb" is
+us to set the resourc_manag properti.  pleas note that thi
+should be kept rel small as each client that connect to the
+displai must transfer the properti.  a size of around 1-3kbyte is
+reason.  some toolkit mai track chang to the resourc_manag
+but most do not.
+
+a user mai have mani per applic default file contain
+custom specif to each applic.  the intrins ar quit
+flexibl on how thi file is found.  read the next part that describ
+the variou environ variabl and how thei effect where thi file
+is found.
+
+the system wide per applic default file ar typic found in
+/usr/lib/x11/app-default.  if such a file is not found then the
+fallback resourc ar us.  the intrins ar quit flexibl on how
+thi file is found.  read the next part that describ the variou
+environ variabl and how thei effect where thi file is found.
+
+[thank to oliv jone (oj@pictel.com) for the follow, 6/92]
+
+you can us sever environ variabl to control how resourc ar
+load for your xt-base program -- xfilesearchpath,
+xuserfilesearchpath, and xapplresdir.  these environ variabl
+control where xt look for applic-default file as an
+applic is initi.  xt load at most on app-default file
+from the path defin in xfilesearchpath and anoth from the path
+defin in xuserfilesearchpath.
+
+set xfilesearchpath if softwar is instal on your system in such a
+wai that app-default file appear in sever differ directori
+hierarchi.  suppos, for exampl, that you ar run sun's open
+window, and you also have some r4 x applic instal in
+/usr/lib/x11/app-default. you could set a valu like thi for
+xfilesearchpath, and it would caus xt to look up app-default file
+in both /usr/lib/x11 and /usr/openwin/lib (or wherev your
+openwinhom is locat):
+
+	setenv xfilesearchpath /usr/lib/x11/%t/%n:$openwinhom/lib/%t/%n
+
+the valu of thi environ variabl is a colon-separ list of
+pathnam.  the pathnam contain replac charact as follow
+(see xtresolvepathnam()):
+
+	%n	the valu of the filenam paramet, or the
+		applic's class name.
+	%t	the valu of the file "type".  in thi case, the
+		liter string "app-default"
+	%c	custom resourc (r5 onli)
+	%s	suffix.  none for app-default.
+	%l	languag, local, and codeset (e.g. "ja_jp.euc")
+	%l	languag part of %l  (e.g. "ja")
+	%t	the territori part of the displai's languag string
+	%c	the codeset part of the displai's languag string
+
+let's take apart the exampl.  suppos the applic's class name is
+"myterm". also, suppos open window is instal in /usr/openwin.
+(notic the exampl omit local-specif lookup.)
+
+	/usr/lib/x11/%t/%n        mean /usr/lib/x11/app-default/myterm
+	$openwinhom/lib/%t/%n    mean /usr/openwin/lib/app-default/myterm
+
+as the applic initi, xt tri to open both of the abov
+app-default file, in the order shown.  as soon as it find on, it
+read it and us it, and stop look for other.  the effect of
+thi path is to search first in /usr/lib/x11, then in /usr/openwin.
+
+let's consid anoth exampl. thi time, let's set
+xuserfilesearchpath so it look for the file myterm.ad in the current
+work directori, then for myterm in the directori ~/app-default.
+
+	setenv xuserfilesearchpath ./%n.ad:$home/app-default/%n
+
+the first path in the list expand to ./myterm.ad.  the second expand
+to $home/app-default/myterm.  thi is a conveni set for
+debug becaus it follow the imak convent of name the
+app-default file myterm.ad in the applic's sourc directori, so
+you can run the applic from the directori in which you ar
+work and still have the resourc load properli.
+
+note: when look for app-default file with xuserfilesearchpath,
+      for some  bizarr reason, neither the type nor file suffix is
+      defin so %t and %s ar useless.
+
+with r5, there's anoth twist.  you mai specifi a custom
+resourc valu.  for exampl, you might run the "myterm" applic
+like thi:
+
+	myterm -xrm "*custom: -color"
+
+if on of your pathnam specif had the valu
+"/usr/lib/x11/app-default/%n%c" then the expand pathnam would be
+"/usr/lib/x11/app-default/myterm-color" becaus the %c substitut
+charact take on the valu of the custom resourc.
+
+the default xfilesearchpath, compil into xt, is:
+
+		/usr/lib/x11/%l/%t/%n%c:\  (r5)
+		/usr/lib/x11/%l/%t/%n%c:\  (r5)
+		/usr/lib/x11/%t/%n%c:\     (r5)
+		/usr/lib/x11/%l/%t/%n:\
+		/usr/lib/x11/%l/%t/%n:\
+		/usr/lib/x11/%t/%n
+
+(note: some site replac /usr/lib/x11 with a projectroot in thi
+batch of default set.)
+
+the default xuserfilesearchpath, also compil into xt, is 
+
+		<root>/%l/%n%c:\  (r5)
+		<root>/%l/%n%c:\  (r5)
+		<root>/%n%c:\     (r5)
+		<root>/%l/%n:\
+		<root>/%l/%n:\
+		<root>/%n:
+
+<root> is either the valu of xapplresdir or the user's home directori
+if xapplresdir is not set.  if you set xuserfilesearchpath to some
+valu other than the default, xt ignor xapplresdir altogeth.
+
+notic that the quick and dirti wai of make your applic find
+your app-default file in your current work directori is to set
+xapplresdir to ".", a singl dot.  in r3, all thi machineri work
+differ; for r3 compatibilti, mani peopl set their xapplresdir
+valu to "./", a dot follow by a slash.
+
+
+----------------------------------------------------------------------
+21. what order ar callback execut in?
+----------------------------------------------------------------------
+(courtesi of donna convers, convers@expo.lc.mit.edu; 5/10/92)
+
+the intrins librari do not guarante an order.  thi is becaus
+both the widget writer and the applic writer have the abil to
+modifi the entir content of the callback list.  neither on
+current know what the other is do and so the intrins cannot
+guarante the order of execut.
+
+the applic programm cannot reli on the widget writer; the
+widget writer is not requir to document when the widget will add and
+remov callback from the list or what effect thi will have;
+therefor the function contain in a callback should be
+independ of the function contain in other callback on the
+list.
+
+even though the xt standard in the definit of xtaddcallback
+sai:
+
+ 	"callback_name: specifi the callback list to which the
+ 	procedur is to be append."
+ 
+you mai not infer from the word "append" that the callback routin
+ar call in the same order as thei have been ad to the callback
+list.
+
+----------------------------------------------------------------------
+22. how do i know if a widget is visibl?
+----------------------------------------------------------------------
+(courtesi of donna convers, convers@expo.lc.mit.edu; 5/14/92)
+
+> i am build a widget need to know if it is visibl. i set the visibl
+> interest field in core and if my window is complet obscur, the core
+> visibl flag goe fals. howev, if my window is iconifi, the flag
+> stai set to true.
+
+right, everyth is implement correctli.  thi demonstr a "defici"
+in the x protocol, and the core widget is reflect the capabl of the
+protocol.  (the "defici" is that the inform is avail in on wai,
+in thi case an inconveni wai.)  the xt specif is accur, in
+the second and third paragraph of section 7.10.2, so read thi section
+carefulli.  the visibl field will not chang in respons to iconif.
+
+a visibilitynotifi event will not be receiv when the window goe from
+viewabl to unview, that is, when the widget or an ancestor is unmap;
+that is, when iconif occur.  thi is the protocol defici.
+visibl state and viewabl state have specif mean in the x protocol;
+see the glossari in your xlib and x protocol refer manual.
+
+> is thi a problem with "mwm" or is there someth
+> els which need to be done?
+
+you'll see thi with ani window manag, with no window manag.
+
+> if the problem is "mwm", what is the fastest
+> wai to determin if a window is iconifi? 
+
+as an applic writer, keep track with a global boolean in an action
+routin with translat for mapnotifi and unmapnotifi on the shell widget
+which contain your custom widget.  as the custom widget writer, see the
+map_state field return by a call to xgetwindowattribut.  these ar
+suggest.
+
+----------------------------------------------------------------------
+23. how do i repar a widget in xt, i.e. xtreparentwidget()?
+----------------------------------------------------------------------
+
+you can't.
+
+----------------------------------------------------------------------
+24. why us xtmalloc, xtfree, etc?
+----------------------------------------------------------------------
+
+unfortun, most code that call malloc(), realloc() or calloc()
+tend to ignor the possibl of return null.  at best it is
+handl someth like:
+
+	ptr = (type *) malloc (sizeof (type))
+	if (!ptr)
+	{
+		perror ("malloc in xyzzi()");
+		exit (1)
+	}
+to handl thi common case the intrins defin the function
+xtmalloc(), xtcalloc(), xtnew(), xtnewstr() and xtrealloc() which
+all us the standard c languag function malloc(), calloc() and
+realloc() but execut xterrormsg() if a null valu is return.  xt
+error handler ar not suppos to return so thi effect exit.
+
+in addit, if xtrealloc() is call with a null pointer, it us
+xtmalloc() to get the initi space.  thi allow code like:
+
+	if (!ptr)
+		ptr = (type *) malloc (sizeof (type));
+	els
+		ptr = (type *) realloc (ptr, sizeof (type) * (count + 1));
+	++count;
+
+to be written as:
+
+	ptr = xtrealloc (ptr, sizeof (ptr) * ++count);
+
+also, xtfree() accept a null pointer as an argument.  gener, i've
+found the xt function conveni to us.  howev, anytim i'm
+alloc anyth potenti larg i us the standard function so
+i can fulli recov from not enough memori error.
+
+xtnew() and xtnewstr() ar conveni macro for alloc a
+structur or copi a string:
+
+	  struct abc *xyzzi;
+	  char	     *ptr;
+	  char	     *str = "abcdef";
+
+	  xyzzi = xtnew (struct abc);	/* take care of type cast */
+	  ptr = xtnewstr (str);
+
+a strict interpret of the intrins refer manual allow an
+implement to provid function that ar not exchang with
+malloc() and free().  i.e. code such as:
+
+	 char	      *ptr;
+
+	 ptr = xtmalloc (100);
+	 /* ... */
+	 free (ptr);
+
+mai not work.  person, i'd call ani implement that did thi
+broken and complain to the vendor.
+
+a common error for motif programm is to us xtfree() on a string
+when thei should realli be us xmstringfre().
+
+----------------------------------------------------------------------
+25. how to debug an xt applic?
+----------------------------------------------------------------------
+first, i'd recomend get "purifi" from pure softwar.  thi is a
+great packag for trace memori problem on sun's.  it's a bit pricei
+at $2750 but i'd still recomend it.  excus the market blurb
+(contact support@pure.com for more info).
+
+	purifi insert addit check instruct directli into
+	the object code produc by exist compil.  these
+	instruct check everi memori read and write perform by
+	the program under test and detect sever type of access
+	error, such as read uniti memori, write past
+	malloc'd bound, or write to freed memori.  purifi insert
+	check logic into all of the code in a program, includ
+	third parti and vendor object-code librari, and verifi
+	system call interfac.  in addit, purifi track memori
+	usag and identifi individu memori leak us a novel
+	adapt of garbag collect techniqu.  purifi's nearli
+	comprehens memori access check slow the target program
+	down typic by a factor of two to five.
+
+an altern packag that isn't as pricei ($395 for a sun), run on
+mani unix's and ha pretti similar featur is "the sentinel debug
+environ".  thi replac malloc() and sever other c librari
+function to add addit check.  (contact cpcahil@virtech.vti.com
+for more info)
+
+next, if you ar get ani sort of xlib error, you'll need to run in
+synchron mode, easili accomplish with the "-sync" command line
+argument or by set the variabl xdebug to 1 with your debugg.  then
+set a break point in exit().  thi will let you trace back to the
+origin xlib function be call.  if you don't run in synchron
+mode, then the actual error mai have occur ani number of call to
+xlib previous sinc the xlib call ar buffer and repli from the
+server ar asynchron.
+
+next, if you ar have troubl with window layout, you can us the
+undocu resourc "xtidentifywindow" or the class resourc
+"xtdebug" to caus the widget name to be identifi with each window.
+for exampl:
+
+    exampl% xload -xrm '*xtdebug:true' &
+    exampl% xwininfo -tree
+	     <click in new xload window>
+
+will give the normal inform but the widget name and class of each
+window is includ.  thi can help for check the locat and size
+of errant widget.
+
+next, if you ar have troubl with geometri manag or you want to
+test the wai a widget manag it's children, you can try
+export.lc.mit.edu:contrib/libxtgeo.tar.z.  thi act as a filter
+between ani children and a geometri manag and check the behaviour
+of both.  it's a veri clever idea.
+
+the most unfortun problem is debug a callback while the
+applic is execut a grab of the keyboard or mous (such as from
+a pulldown menu).  the server effect lock up and you'll need to
+go to anoth machin and kill the debugg manual.  the server
+lock up becaus the applic be debug ha said no on els
+can have access to the keyboard but the applic is not stop
+wait becaus the debugg is wait for your command.
+unfortun you can't give them becaus all the input is go to
+your applic which is stop.
+
+the best wai to debug thi kind of problem is with two machin on
+your desk, run the program under a debugg (or other environ)
+on on machin, and run the applic on the other, possibl
+us a command sequenc like thi:
+
+	othermachin% xhost +thismachin
+	thismachin% setenv displai othermachin:0;
+	thismachin% gdb applic	# your favorit debugg.
+	or thi:
+	othermachin% xhost +thismachin
+	thismachin% gdb applic
+	(gdb) set environ displai othermachin:0
+	(gdb) run ...
+
+i believ codecent, a c interpret/graphic debugg ha a method
+of deal with thi by explicit call the xlib function to
+releas ani grab dure breakpoint.
+
+debug widget problem requir pretti good debug skill and
+knowledg of how widget work.  you can go a long wai without know
+the intern of a particular widget but not veri far without
+understand how a widget work.  judici us of condit
+breakpoint and ad print statement with the debugg help a great
+deal.
+
+----------------------------------------------------------------------
+26. why don't xtaddinput(), xtaddtimeout() and xtaddworkproc() work?
+----------------------------------------------------------------------
+   i have got a delic problem with the three routin xtaddinput,
+   xtaddtimeout and xtaddworkproc. the problem i have is that when
+   i us them in my applic thei seem not to be registr properli.
+   i have made a handi littl testprogram where everyth work
+   perfect, but in my "real" applic noth happen. 
+
+the introduct in r3 of the xtapp*() function obsolet those
+routin (see q19 for other chang in r3, r4, and r5).  what happen is
+thei us a default applic context differ then the on you mai
+have creat.  sinc event and timeout ar distribut on a per
+applic context basi and you ar us two applic context,
+you won't get those event.
+
+for exampl:
+
+	...
+	cnt = 0;
+	toplevel = xtappiniti(&app, class,
+				   desc, xtnumber (desc),
+				   &argc, argv,
+				   fallback, arg, cnt);
+
+	xtaddtimeout (...)
+	xtaddworkproc (...)
+
+	xtappmainloop (app)
+
+would never invok the timeout.
+
+----------------------------------------------------------------------
+27. what is and how can i implement drag and drop?
+----------------------------------------------------------------------
+(courtesi of roger reynold, rogerr@netcom.com; 19 feb 93)
+
+drag-n-drop is a buzzword for move data between client, in an
+``intuit'' fashion.
+
+motif version 1.2 support drag-n-drop capabl, openlook ha
+support d-n-d all along.  the two protocol ar not compat with
+each other, and so far as i know, thei ar not publish.
+
+i wrote a packag call rdd which is design to be a flexibl public
+protocol for do drag 'n drop oper between client.  my
+intent wa to provid a tool which would make it easi for peopl to
+support a "standard" drag-n-drop protocol in the program thei develop
+and contribut or sell, regardless of what widget set is us (as long
+as it is base on xt).
+
+the implement is base upon my understand of the icccm
+convent, for more detail read the code.
+
+i have heard from dozen of peopl us rdd who like it and feel that
+it work a whole lot better than motif 1.2 stuff.  also, there seem to
+be mani who think that it is neat but ar constrain to us motif
+anywai.
+
+the latest rdd (and some other stuff) is avail for ftp from
+netcom.com, in /pub/rogerr.  a (possibl older) version is also
+avail on export.lc.mit.edu in /contrib.
+-- 
+pete ware					ware@ci.ohio-state.edu
+ci dept, ohio state univers			w/ (614) 292-7318
+228 bolz hall, 2036 neil av.			h/ (614) 538-0965
+columbu, oh 43210

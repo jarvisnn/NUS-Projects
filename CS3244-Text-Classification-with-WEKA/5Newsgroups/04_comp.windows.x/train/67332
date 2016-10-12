@@ -1,0 +1,29 @@
+from: hughm@brwal.inmo.co.uk (hugh mcintyr)
+subject: sun3/60 + x11r5 -> undelet consol messag.
+keyword: sun sun3 x11r5 consol
+organ: inmo limit, bristol, uk
+line: 23
+
+we have an old sun3/60 here which get occasion us.  when x11r5 is start
+on it ani consol messag dure startup ar undelet.  after x is fulli
+start we run an xterm as the "consol" - the problem is that ani messag
+that arriv befor thi start go to the plain consol.  "refresh window" fail
+to remov them.  the messag ar a real pain sinc thei sit in the middl of
+the screen obscur anyth els below them.
+
+at boot time the 3/60 list two framebuff  -  /dev/cgfour0 and /dev/bwtwo1.
+we're run x in color, and i suspect that mayb the offend messag ar
+on the b/w framebuff, and therebi not get delet.
+
+my question is: ha anyon els seen thi, and is there an easi wai to get rid
+of these messag?
+
+pleas repli by e-mail to hughm@inmo.co.uk.
+
+hugh mcintyr.
+inmo ltd., bristol, uk.
+
+(btw: suno 4.0.3, x11r5, mwm).
+
+ps: i know i can redirect output of the relev command to /dev/null - i'm
+    look for a more gener solut).

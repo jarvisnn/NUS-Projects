@@ -1,0 +1,32 @@
+from: renner@adob.com (john renner)
+subject: re: detect doubl point in bezier curv
+organ: adob system incorpor, mountain view
+line: 27
+
+in articl <19930420.090030.915@almaden.ibm.com> capelli@vnet.ibm.com (ron capelli) write:
+>in <ia522b1w165w@oeinck.waterland.wlink.nl> ferdinand oeinck write:
+>>i'm look for ani inform on detect and/or calcul a doubl
+>>point and/or cusp in a bezier curv.
+>
+>see:
+>   maureen stone and toni deros,
+>   "a geometr character of parametr cubic curv",
+>   acm tog, vol 8, no 3, juli 1989, pp. 147-163.
+
+i've us that refer, and found that i need to go to their
+origin tech report:
+
+	maureen stone and toni deros,
+	"character cubic bezier curv"
+	xerox  edl-88-8, decemb 1988
+
+thi report can be obtain for free from:
+xerox corpor
+palo alto research center
+3333 coyot hill road
+palo alto, california 94303
++1-415-494-4440
+
+the tog paper wa good, but thi tech report had more interest detail ;-)
+
+-john

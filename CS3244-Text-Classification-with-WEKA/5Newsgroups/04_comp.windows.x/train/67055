@@ -1,0 +1,55 @@
+from: gvanvugh@cs.uct.ac.za (gerhard van vught)
+subject: problem with libarari (?)
+organ: comput scienc depart, univers of cape town
+line: 50
+
+i have been try to compil some sourc code for a mpeg anim viewer for
+x window. i got the code from a ftp site. i have modifi the makefil as
+thei instruct, no error there. what happen is that i get the follow
+messag when everyth is go to be link:
+
+
+	cc  util.o video.o parseblock.o motionvector.o decod.o  fs2.o fs2fast.o fs4.o hybrid.o hybriderr.o 2x2.o  gdith.o grai.o mono.o main.o jrevdct.o 24bit.o util32.o order.o  order2.o mb_order.o /lib/libx11.so /lib/libxext.so -lm -o mpeg_plai
+undefin			first referenc
+ symbol  			    in file
+getnetpath                          /lib/libx11.so
+t_alloc                             /lib/libx11.so
+t_unbind                            /lib/libx11.so
+t_open                              /lib/libx11.so
+t_rcvdi                            /lib/libx11.so
+netdir_free                         /lib/libx11.so
+t_error                             /lib/libx11.so
+netdir_getbynam                    /lib/libx11.so
+getnetconfig                     /lib/libx11.so
+t_look                              /lib/libx11.so
+t_errno                             /lib/libx11.so
+t_close                             /lib/libx11.so
+netdir_getbyaddr                    /lib/libx11.so
+t_listen                            /lib/libx11.so
+t_rcv                               /lib/libx11.so
+setnetpath                          /lib/libx11.so
+t_bind                              /lib/libx11.so
+t_connect                           /lib/libx11.so
+t_accept                            /lib/libx11.so
+nc_perror                           /lib/libx11.so
+inet_addr                           /lib/libx11.so
+ld: mpeg_plai: fatal error: symbol referenc error. no output written to mpeg_plai
+*** error code 1 (bu21)
+
+make: fatal error.
+
+doe anyon know where these miss function ar locat? if you do can you
+help me with it?
+
+i post befor to on of the other unix group, i tri their suggest but
+alwai get thi error.
+
+if you have to know: i am us unix system v. the machin here ar 486's. the
+termin i want to us ar separ and just call x-termin and thei seem
+dedic to that. i'm not sure as to what thei realli ar, sinc it is on of
+my first time out with thi x-window gidget! that is, first time program
+for it, so to speak. i us them alot just for the graphic thing.
+
+if you can help, mail me soon.
+
+gerard.

@@ -1,0 +1,873 @@
+from: chongo@toad.com (landon c. noll)
+subject: repost: 10th intern obfusc c code contest rule (1 of 2)
+expir: 8 mai 93 00:00:00 gmt
+repli-to: chongo@toad.com (landon c. noll)
+distribut: world
+organ: nebula consult in san francisco
+line: 864
+keyword: ioccc
+
+we have receiv a number of request for a repost of the
+intern obfusc c code contest rule and guidelin.  also
+some peopl request that these rule be post to a wider set of
+group.  sorri for the cross post.
+
+some technic clarif were made to the rule and guidelin
+(see the diff mark at the right hand edg).  the rule and guidelin
+for thi year remain the same, so peopl who have alreadi or ar
+in the process of submit entri for the 1993 ioccc need not worri 
+about these chang.
+
+chongo <landon curt noll> /\cc/\        chongo@toad.com
+larri bassel                            lab@sun.com
+
+=-=
+
+#!/bin/sh
+# thi is a shell archiv (shar 3.32)
+# made 04/05/1993 23:00 utc by chongo@toad.com
+# sourc directori /tmp
+#
+# exist file will be overwritten
+#
+# thi shar contain:
+# length  mode       name
+# ------ ---------- ------------------------------------------
+#   8971 -r--r--r-- rule
+#  25592 -r--r--r-- guidelin
+#  34482 -r--r--r-- mkentri.c
+#   6418 -r--r--r-- obfusc.info
+#
+# ============= rule ==============
+echo "x - extract rule (text)"
+sed 's/^x//' << 'shar_eof' > rule &&
+x10th intern obfusc c code contest rule
+x
+xcopyright (c) landon curt noll & larri bassel, 1993.
+xall right reserv.  permiss for person, educ or non-profit us is
+xgrant provid thi thi copyright and notic ar includ in it entireti
+xand remain unalt.  all other us must receiv prior permiss in write
+xfrom both landon curt noll and larri bassel.
+x
+x    obfusc:  tr.v.  -cate, -cate, -cate.  1. a.  to render obscur.
+x		b.  to darken.  2. to confus:  hi emot obfusc hi
+x		judgment.  [llat. obfuscar, to darken : ob(intens) +
+x		lat. fuscar, to darken < fuscu, dark.] -obfusc n.
+x		obfuscatori adj.
+x
+x
+xgoal of the contest:
+x
+x    * to write the most obscur/obfusc c program under the rule below.
+x    * to show the import of program style, in an iron wai.
+x    * to stress c compil with unusu code.
+x    * to illustr some of the subtleti of the c languag.
+x    * to provid a safe forum for poor c code.  :-)
+x
+x
+xnote: chang from the 1993 draft ar note by chang bar.  --->	      |
+x
+x
+xrule:
+x
+x    to help us with the volum of entri, we ask that you follow these rule:
+x
+x    1) your entri must be a complet program.
+x
+x    2) your entri must be <= 3217 byte in length.  the number of charact
+x       exclud whitespac (tab, space, newlin), and exclud ani ; { or }
+x       follow by either whitespac or end of file, must be <= 1536.
+x
+x    3) your entri must be submit in the follow format:
+x
+x---entri---
+xrule:	1993
+xfix:	y or n   (n => thi is a new entri, y => thi replac an older entri)
+xtitl:	titl of entri  		    (see comment below)
+xentri:	entri number from 0 to 7 inclus  (your 1st entri should by 0)
+xdate:	date/time of submiss in utc	    (see comment below)
+xhost:	machin(s) and os(s) under which your entri wa test
+x	us tab indent line if need
+x---remark---
+x    place remark about thi entri in thi section.  it would be help if
+x    you were to indent your remark with 4 space, though it is not a
+x    requir.  also, if possibl, try to avoid go beyond the 79th
+x    column.  blank line ar permit.
+x---author---
+xname:	your name
+xorg:	school/compani/organ
+xaddr:	postal address
+x	us tab indent line to continu
+x	don't forget to includ the countri
+xemail:  email address from a well known site or regist domain.
+x        if you give sever form, list them on separ tab indent line.
+xanon:	y or n   (y => remain anonym, n => ok to publish thi info)
+x---info---
+xif your program need an info file, place a uuencod copi of it in
+xthi section.  in the case of multipl info file, us multipl info
+xsection.  if your entri doe not need a info file, skip thi section.
+x---build---
+xplace a uuencod copi of the command(s) us to compil/build your program
+xin thi section.  it must uudecod into a file name 'build'.  the result
+xfile must be 255 byte or less.
+x---program---
+xplace a uuencod copi of your program in thi section.  it must uudecod
+xinto a file name is 'prog.c'.  the result file must follow rule #2.
+x---end---
+x
+x      regard the abov format:
+x
+x	* the titl must match the express: [a-za-z0-9_=][a-za-z0-9_=+-]*
+x	  and must be 1 to 12 charact in length.
+x
+x	  it is suggest, but not requir, that the titl should
+x	  incorpor your usernam; in the case of multipl author,
+x	  consid us part of the usernam of the author.
+x
+x	* the date in the ---entri--- section should be given with respect
+x	  to utc.  the format of the date should be as return by asctim()
+x	  us the c local.  (see guidelin for more info)
+x
+x	* you mai correct/revis a previous submit entri by send
+x	  it to the contest email address.  be sure to set 'fix' in the
+x	  ---entri--- section to 'n'.  the correct entri must us the same
+x	  titl and entri number as submitt that is be correct.  be
+x	  sure that you note the resubmitt in the ---remark--- as well.
+x
+x	* with the except of the header, all text outsid of the abov
+x	  format mai be ignor by the judg.  if you need tell the judg
+x	  someth, put it in the ---remark--- section, or send a separ
+x	  email messag to the judg.
+x
+x	* inform from the ---author--- section will be publish unless
+x	  'y' wa given to the respect author's 'anon' line.
+x
+x	* to credit multipl author, includ an ---author--- section for
+x	  each author.  each should start with ---author--- line, and
+x	  should be found between the ---entri--- and ---build--- section.
+x
+x	* the entri's remark should includ:
+x	    - what thi program doe
+x	    - how to run the program (sampl arg or input)
+x	    - special compil or execut instruct, if ani
+x	    - special filenam requir (see rule 4 and 5)
+x	    - inform about ani ---data--- file
+x	    - why you think the program is obfusc
+x	    - note if thi entri is a re-submiss of a previou entri.
+x	    - ani other remark (humor or otherwis)
+x
+x	* do not rot13 your entri's remark.  you mai suggest that certain
+x	  portion of your remark be rot13ed if your entri win an award.
+x
+x        * info file should be us onli to supplement your entri.  thei
+x	  should not be requir to exist.
+x
+x	  if your entri doe not need an info file, skip the ---info---
+x	  section.  if your entri need multipl info file, us multipl
+x	  ---info--- section, on per info file.  you should describ
+x	  each info file in the ---remark--- section.
+x
+x    4) if your entri is select as a winner, it will be modifi as follow:
+x
+x	   'build' is incorpor into a makefil, and 'build' is remov
+x	   'prog.c' is renam to your entri's titl, follow by an option
+x	       digit, follow by '.c'
+x	   your entri is compil into a file with the name of your entri's
+x	       titl, possibl follow by a digit
+x
+x       if your entri requir that a build file exist, state so in your
+x       entri's remark section.  the makefil will be arrang to execut a
+x       build shell script contain the 'build' inform.  the name of
+x       thi build shell script will be your entri's titl, possibl follow
+x       by a digit, follow by '.sh'.
+x
+x       if need, your entri's remark should indic how your entri must
+x       be chang in order to deal with the new filenam.
+x
+x    5) the build file, the sourc and the result execut should be
+x       treat as read-onli file.  if your entri need to modifi these file,
+x       it should make and modifi a copi of the appropri file.  if thi
+x       occur, state so in your entri's remark.
+x
+x    6) entri that cannot be compil by an ansi c compil will be reject.
+x       us of common c (k&r + extens) is permit, as long as it doe not
+x       caus compil error for ansi c compil.
+x
+x    7) the program must be of origin work.  all program must be in the
+x       public domain.  all copyright program will be reject.
+x
+x    8) entri must be receiv prior to 07-mai-93 0:00 utc.  (utc is
+x       essenti equival to greenwich mean time)  email your entri to:
+x
+x		...!{appl,pyramid,sun,uunet}!hoptoad!obfusc
+x		obfusc@toad.com
+x
+x       we request that your messag us the subject 'ioccc entri'.
+x
+x       if possibl, we request that you hold off on email your entri
+x       until 1-mar-93 0:00 utc.  earli entri will be accept, howev.
+x       we will attempt to email a confirm to the the first author for
+x       all entri receiv after 1-mar-93 0:00 utc.
+x
+x    9) each person mai submit up to 8 entri per contest year.  each entri
+x       must be sent in a separ email letter.
+x
+x   10) entri requir human interact to be built ar not allow.
+x       compil an entri produc a file (or file) which mai be execut.
+x
+x   11) program that requir special privileg (setuid, setgid, super-user,
+x       special owner or group) ar not allow.
+x
+x
+xfor more inform:
+x
+x    the judg will be done by landon noll and larri bassel.  pleas send
+x    question or comment about the contest, to:
+x
+x	...!{appl,pyramid,sun,uunet}!hoptoad!judg	(not the address for  |
+x	judg@toad.com					 submit entri)  |
+x
+x    the rule and the guidelin mai (and often do) chang from year to
+x    year.  you should be sure you have the current rule and guidelin
+x    prior to submit entri.  to obtain them, send email to the address   |
+x    abov and us the subject 'send rule'.				      |
+x
+x    on mai obtain winner of previou contest (1984 to date), via ftp from: |
+x
+x	host: ftp.uu.net	(192.48.96.9)				      |
+x	user: anonym
+x	pass: yournam@yourhost
+x	dir:  ~/pub/ioccc						      |
+x
+x    as a last resort, previou winner mai be obtain by send email       |
+x    to the abov address.  pleas us the subject 'send year winner',        |
+x    where year is a singl 4 digit year, a year rang, or 'all'.	      |
+x
+x
+xchongo <landon curt noll> /\cc/\  	chongo@toad.com			      |
+xlarri bassel			  	lab@sun.com			      |
+shar_eof
+chmod 0444 rule ||
+echo "restor of rule fail"
+set `wc -c rule`;wc_c=$1
+if test "$wc_c" != "8971"; then
+	echo origin size 8971, current size $wc_c
+fi
+# ============= guidelin ==============
+echo "x - extract guidelin (text)"
+sed 's/^x//' << 'shar_eof' > guidelin &&
+x10th intern obfusc c code contest guidelin, hint and comment
+x
+xcopyright (c) landon curt noll & larri bassel, 1993.
+xall right reserv.  permiss for person, educ or non-profit us is
+xgrant provid thi thi copyright and notic ar includ in it entireti
+xand remain unalt.  all other us must receiv prior permiss in write
+xfrom both landon curt noll and larri bassel.
+x
+xabout thi file:
+x
+x    thi file is intend to help peopl who wish to submit entri to
+x    the intern obfusc c code contest (ioccc for short).
+x
+x    thi is not the ioccc rule, though it doe contain comment about
+x    them.  the guidelin should be view as hint and suggest.
+x    entri that violat the guidelin but remain within the rule ar
+x    allow.  even so, you ar safer if you remain within the guidelin.
+x
+x    you should read the current ioccc rule, prior to submit entri.
+x    the rule ar typic sent out with these guidelin.
+x
+x    chang from the 1993 draft ar note by chang bar.  --->		      |
+x
+x
+xwhat is new in 1993:
+x
+x    the entri format is better (for us anywai).  the program mkentri.c
+x    ha been updat.  see entri format.
+x
+x    we will reject entri that cannot be compil us an ansi c
+x    compil.  certain old obfusc hack that caus ansi c compil
+x    fit ar no longer permit.  some of the new issu deal with
+x    non-integr arrai type, variabl number of argument, c preprocessor
+x    direct and the exit() function.  see our like and dislik.
+x
+x
+xhint and suggest:
+x
+x    you ar encourag to examin the winner of previou contest.  see
+x    for more inform for detail on how to get previou winner.
+x
+x    keep in mind that rule chang from year to year, so some win entri
+x    mai not be valid entri thi year.  what wa uniqu and novel on year
+x    might be 'old' the next year.
+x
+x    an entri is usual examin in a number of wai.  we typic appli
+x    a number of test to an entri:
+x
+x	* look at the origin sourc
+x	* convert ansi tri-graph to ascii
+x	* c pre-process the sourc ignor '#includ' line
+x	* c pre-process the sourc ignor '#defin' and '#includ' line
+x	* run it through a c beautifi
+x	* examin the algorithm
+x	* lint it
+x	* compil it
+x	* execut it
+x
+x    you should consid how your entri look in each of the abov test.
+x    you should ask yourself if your entri remain obscur after it ha been
+x    'clean up' by the c pre-processor and a c beautifi.
+x
+x    your entri need not do well under all, or in most test.  in certain
+x    case, a test is not import.  entri that compet for the
+x    'strangest/most creativ sourc layout' need not do as well as
+x    other in term of their algorithm.  on the other hand, given
+x    two such entri, we ar more inclin to pick the entri that
+x    doe someth interest when you run it.
+x
+x    we try to avoid limit creativ in our rule.  as such, we leav
+x    the contest open for creativ rule interpret.  as in real life
+x    program, interpret a requir document or a custom request
+x    is import.  for thi reason, we often award 'worst abus of the
+x    rule' to an entri that illustr thi point in an iron wai.
+x
+x    if you do plan to abus the rule, we suggest that you let us know
+x    in the remark section.  pleas note that an invit to abus
+x    is not an invit to break.  we ar strict when it come to the
+x    3217 byte size limit.  also, abus the entri format tend to
+x    annoi more than amus.
+x
+x    we do realiz that there ar hole in the rule, and invit entri
+x    to attempt to exploit them.  we will award 'worst abus of the rule'
+x    and then plug the hole next year.  even so, we will attempt to us
+x    the smallest plug need, if not smaller.  :-)
+x
+x    check out your program and be sure that it work.  we sometim make
+x    the effort to debug an entri that ha a slight problem, particularli
+x    in or near the final round.  on the other hand, we have seen some
+x    of the best entri fall down becaus thei didn't work.
+x
+x    we tend to look down on a prime number printer, that claim that
+x    16 is a prime number.  if you do have a bug, you ar better off
+x    document it.  note "thi entri sometim print the 4th power
+x    of a prime by mistak" would save the abov entri.  and sometim,
+x    a strang bug/featur can even help the entri!  of cours, a correctli
+x    work entri is best.
+x
+x
+xour like and dislik:
+x
+x    do mass of #defin to obscur the sourc ha becom 'old'.  we
+x    tend to 'see thru' mass of #defin due to our pre-processor test
+x    that we appli.  simpli abus #defin or -dfoo=bar won't go as far
+x    as a program that is more well round in confus.
+x
+x    mani ansi c compil dislik the follow code, and so do we:
+x
+x	#defin d defin
+x	#d foo		   <-- don't expect thi to turn into #defin foo
+x
+x	int i;
+x	j;		   <-- don't us such implicit type declar
+x	int k;
+x
+x    we suggest that you compil your entri with an ansi c compil.  if you
+x    must us non-ansi c, such as k&r c, you must avoid area that result in
+x    compil/link error for ansi c compil.
+x
+x    unfortun, some ansi c compil requir arrai index to be of       |
+x    integr type.  thu, the follow classic obfusc hack should    |
+x    not be us in 1993.  thi rule mai be relax in futur contest.	      |
+x
+x	int i;
+x	char *c;
+x	i[c];		   <--- us c[i] instead
+x	(i+3)["string"];   <--- us "string"[i+3] instead
+x
+x    if your entri us function that have a variabl number of
+x    argument, be care. system implement va_list as a wide varieti
+x    of wai.  becaus of thi, a number of oper us va_list ar
+x    not portabl and must not be us:
+x
+x	* assign a non-va_list variabl to/from a va_list variabl
+x	* cast a non-va_list variabl into/from a va_list variabl
+x	* pass a va_list variabl to a function expect a non-va_list arg
+x	* pass a non-va_list variabl to a function expect a va_list arg
+x	* perform arithmet on va_list variabl
+x	* us va_list as a structur or union
+x
+x    in particular, do not treat va_list variabl as if thei were a char **'s.
+x
+x    avoid us <vararg.h>, us <stdarg.h> instead.
+x
+x    if you us c preprocessor direct (#defin, #if, #ifdef, ...),
+x    the lead '#' must be the first charact on a line.  while some
+x    c preprocessor allow whitespac the lead '#', mani do not.
+x
+x    becaus the exit() function return void on some system, entri
+x    must not assum that it return an int.
+x
+x    small program ar best when thei ar short, obscur and concis.
+x    while such program ar not as complex as other winner, thei do
+x    serv a us purpos.  thei ar often the onli program that peopl
+x    attempt to complet understand.  for thi reason, we look for
+x    program that ar compact, and ar instruct.
+x
+x    on line program should be short on line program, sai around 80
+x    byte long.  get close to 160 byte is a bit too long in our opinion.
+x
+x    we tend to dislik program that:
+x
+x	* ar veri hardwar specif
+x	* ar veri os or un*x version specif
+x	     (index/strchr differ ar ok, but socket/stream specif
+x	      code is like not to be)
+x	* dump core or have compil warn
+x	     (it is ok onli if you warn us in the 'remark' header item)
+x	* won't compil under both bsd or sy v un*x
+x	* abus the build file to get around the size limit
+x	* obfusc by excess us of ansi tri-graph
+x	* ar longer than thei need to be
+x	* ar similar to previou winner
+x	* ar ident to previou loser  :-)
+x
+x    unless you ar cramp for space, or unless you ar enter the
+x    'best on liner' categori, we suggest that you format your program
+x    in a more creativ wai than simpli form excess long line.
+x
+x    the build file should not be us to try and get around the size
+x    limit.  it is on thing to make us of a sever -d's to help out,
+x    but it is quit anoth to us 200+ byte of -d's in order to
+x    try and squeez the sourc under the size limit.  you should feel
+x    free to make us of the build file space, but you ar better off
+x    if you show some amount of restraint.
+x
+x    we allow whitespac, and in certain case ; { or } do not impact
+x    your program size (up to a certain point), becaus we want to get
+x    awai from sourc that is simpli a compact blob of charact.
+x
+x    given two version of the same program, on that is a compact blob
+x    of code, and the other that is format more like a typic c
+x    program, we tend to favor the second version.  of cours, a third
+x    version of the same program that is format in an interest
+x    and/or obfusc wai, would definit win over the first two!
+x
+x    we suggest that you avoid try for the 'smallest self-replic'
+x    program.  we ar amaz at the mani differ size that claim
+x    to be the smallest.  there is noth wrong with self-replic
+x    program.  in fact, a number of winner have been self-replic.
+x    you might want to avoid the claim of 'smallest', lest we (or other)
+x    know of a smaller on!
+x
+x    x client entri should be as portabl as possibl.  entri that
+x    adapt to a wide collect of environ will be favor.  don't
+x    depend on a particular type of displai.  for exampl, don't depend
+x    on color or a given size.  don't requir back store.
+x
+x    x client entri should avoid us x relat librari and
+x    softwar that is not in wide spread us.  we ask that such x client
+x    entri restrict themselv to onli the low level xlib and the
+x    athena widget set (libx11.a, libxaw.a, libxmu.a and libxt.a).
+x    don't us m*tif, xv*ew, or openl*ok toolkit, sinc not everyon
+x    ha them.  avoid depend on a particular window manag.  not
+x    everyon ha x11r5, and some peopl ar stuck back in x11r4 (or
+x    earlier), so try to target x11r5 without requir x11r5.  better
+x    yet, try to make your entri run on all version 11 x window system.
+x
+x    x client entri should not to depend on particular item on
+x    .xdefault.  if you must do so, be sure to note the requir line
+x    in the ---remark--- section.
+x
+x    we like program that:
+x
+x	* ar as concis and small as thei need to be
+x	* do someth at least quasi-interest
+x	* pass lint without complaint (not a requir, but it is nice)
+x	* ar portabl
+x	* ar uniqu or novel in their obfusc style
+x	* make us of a number of differ type of obfusc
+x	* make us laugh and/or throw up  :-)
+x
+x    some type of program can't excel in some area.  of cours, your
+x    program doesn't have to excel in all area, but do well in sever
+x    area realli doe help.
+x
+x    we freeli admit that interest, creativ or humor comment in
+x    the ---remark--- section help your chanc of win.  if you had to
+x    read of mani twist entri, you too would enjoi a good laugh or two.
+x    we think the reader of the contest winner do as well.
+x
+x    be creativ!
+x
+x
+xentri format:
+x
+x    in order to help us process the mani entri, we must request your
+x    assist by format your entri in a certain wai.  thi format,
+x    in addit, allow us to quickli separ inform about the
+x    author from the program itself.  (see judg process)
+x
+x    we have provid the program, mkentri, as an exampl of how to
+x    format entri.  you should be awar of the follow warn that
+x    is found in mkentri.c:
+x
+x	thi program attempt to implement the ioccc rule.  everi
+x	attempt ha been made to make sure that thi program produc
+x	an entri that conform to the contest rule.  in all case,
+x	where thi program differ from the contest rule, the
+x	contest rule will be us.  be sure to check with the
+x	contest rule befor submit an entri.
+x
+x    you ar not requir to us mkentri.  it is conveni, howev,
+x    as it attempt to uuencod the need file, and attempt to check
+x    the entri against the size rule.
+x
+x    if you have ani suggest, comment, fix or complaint about
+x    the mkentri.c program, pleas send email to the judg.  (see below)
+x
+x    the follow is a sampl entri:
+x
+x---entri---
+xrule:	1993
+xfix:	n
+xtitl:	chonglab
+xentri:	0
+xdate:	mon mar  1 08:45:20 1993
+xhost:	un*x v6, pdp11/45
+x	2.9bsd, pdp11/70
+x---remark---
+x    thi is a non-obfusc obfusc c program.
+x
+x    it is like not to win a prize.  but what do you expect from
+x    a short exampl!
+x---author---
+xname:	landon curt noll
+xorg:	ioccc judg group
+xaddr:	toad hall
+x	po box 170608
+x	san francisco, california
+x	94117-0608
+x	usa
+xemail:	chongo@toad.com
+xanon:	n
+x---author---
+xname:	larri bassel
+xorg:	ioccc judg group
+xaddr:	toad hall
+x	po box 170608
+x	san francisco, california
+x	94117-0608
+x	usa
+xemail:	hoptoad!sun!lab
+x	lab@sun.com
+xanon:	n
+x---info---
+xbegin 444 info.file
+xm0v]p>7)i9vat("ac*2!,86yd;vx@0w5r="!.;vql+"`q.3ds+@i!;&p@4feg
+xm:'1s(%)e<v5r=f5d+b`@4&5r;6es<veo;b!f;w(@<&5r<v]n86pl(&5d=6-a
+xm=&eo;b!o<b!n;vxm<')o9fet('5s92!i<pig<f%n=&5d('!r;w9i9&5d('1h
+xm:7,@=&ai<r!c;w!y<feg:'0@86yd(&yo=&ec92!a<f4@:6yc;'5d960@:6x@
+xm:71s(&5n=&er971y"f%n9"!r96ua:6ys('5n86qt97)e9"x@($%l;"!o=&ae
+xm<b!u<v5s(&uu<w0@<f5c96ev92!p<feo<b!p97)m:7-s:6]n(&en('=r:71i
+xm;f<*9g)o;2!,86yd;vx@0w5r="!.;vql+@h*5&aa="!t:&%t(&es+"!i<rx*
+xm5&aa="!t:&%t(&es(&yo="p*("`@(&es(&yo="!t:&%t('1h870@;f]t(&es
+xm+@i4:&%t(&es+"!t:&%t('1h870@:7,@;f]t+"!i<r$*"@d)+2t@8vao;f=o
+xm(#$y-s0*"dqa<w0@>65a<bp@;vye('!e<g-o;b!t;vqd('5s('1h870@=&ae
+xm>2!a8w1u86ql>2!d96-o9&5d('1h:7,@9fel92x*22!w;vyd97(@:&]w(&ua
+x9;gd@=vel;"!d;r!i="!t:&es('ee87(_"@``
+x`
+xend
+x---build---
+xbegin 444 build
+x28v,@<')o9ryc("uo('!r;v<*
+x`
+xend
+x---program---
+xbegin 444 prog.c
+xm;6%i;b@i"gl*(vef(&1e9fen960h05]214=)4u1%4d5$7u9/5$527te.7u-5
+xm3dy95d%,15]#04q)1d]23de!7u5302d*("`@('!r:6yt9b@b5f]t92!,86yd
+xm;vx@3f]l;"!f;w(@4w5n;gev86qe($-i='d@0v]u;f-i;"!s96%t(",q+eqn
+x:(bd["b-e;f1i9@h@("`@97ai="@p*3l*?0h`
+x`
+xend
+x---end---
+x
+x    typic the build file should assum that the sourc is prog.c
+x    and will compil into prog.  if an entri win, we will renam
+x    it sourc and binari to avoid filenam collis.  by tradit,
+x    we us the name of the entri's titl, follow by an option
+x    digit in case of name conflict.
+x
+x    if the abov entri somehow won the 'least like to win' award,
+x    we would us chonglab.c and chonglab.
+x
+x    if your entri depend on, or requir that your build, sourc
+x    and/or binari file be a particular name, pleas sai so in the
+x    ---remark--- section.  if thi case appli, it would be be help
+x    if you did on of the follow:
+x
+x	* tell us how to chang the filenam(s) in your entri.
+x
+x	* have the build file make copi of the file.  for exampl:
+x
+x		cc prog.c -o special_name		need special binari
+x
+x	    or  rm -f special_src.c			need special sourc
+x		cp prog.c special_src.c
+x		cc special_src.c -o special_name
+x
+x	    or  rm -f special_build			need special build
+x		tail +4 build > special_build
+x		sh < special_build
+x
+x	* assum that we will us the entri titl.  send us a version of
+x	  your build/program file that us the name convent.  you
+x	  should uuencod these file in ---data--- section.
+x
+x    if your entri need to modifi it sourc, info or binari file,
+x    pleas sai so in the ---remark--- section.  you should try to avoid
+x    touch your origin build, sourc and binari file.  you should
+x    arrang to make copi of the file you intend to modifi.  thi
+x    will allow peopl to re-gener your entri from scratch.
+x
+x    rememb that your entri mai be built without a build file.  we
+x    typic incorpor the build line into a makefil.  if the
+x    build file must exist, sai so in the ---remark--- section.
+x
+x    if your entri need special info file, you should uuencod them
+x    into ---info--- section.  in the case of multipl info file,
+x    us multipl ---info--- section.  if no info file ar need,
+x    then skip the ---info--- section.
+x
+x    info file ar intend to be input, or detail inform that
+x    doe not fit well into the ---remark--- section.  for exampl, an
+x    entri that implement a compil might want to provid some sampl
+x    program for the user to compil.  an entri might want to includ a
+x    lengthi design document, that might not be appropri for a
+x    'hint' file.
+x
+x    info file should be us onli to supplement your entri.  for
+x    exampl, info file mai provid sampl input or detail
+x    inform about your entri.  becaus thei ar supplement,
+x    the entri should not requir them exist.
+x
+x    in some case, your info file might be renam to avoid name
+x    conflict.  if info file should not be renam for some reason,
+x    sai so in the ---remark--- section.
+x
+x    info file must uudecod into the current directori.  if thei
+x    absolut must be renam, or move into a sub-directori, sai
+x    so in the ---remark--- section.
+x
+x    when submit multipl entri, be sure that each entri ha
+x    a uniqu entri number from 0 to 7.  your first entri should
+x    have entri number 0.
+x
+x    with the except of the header, all text outsid of the entri
+x    format mai be ignor.  that is, don't place text outsid of the
+x    entri and expect the judg to see it.  (our decod tool aren't
+x    ai prog!) if you need tell the the someth, put it in the
+x    ---remark--- section, or send a email to the judg at:
+x
+x	...!{appl,pyramid,sun,uunet}!hoptoad!judg	(not the address for
+x	judg@toad.com					 submit entri)
+x
+x    the date should be given with respect to utc.  (some system refer
+x    to thi as gmt or gmt0)  the format of the date should be that as
+x    return by asctim() in the c local.  an exampl of such a string is:
+x
+x	thr apr 01 00:47:00 1993
+x
+x    thi format is similar to the output of the date(1) command.  the
+x    string doe not includ the timezon name befor the year.  on mani
+x    system, on of the follow command will produc a similar string:
+x
+x	date -u "+%a %h %d %t 19%y"
+x	date -u | sed -e 's/... \(19[0-9][0-9]\)$/\1/'
+x	sh -c 'tz=utc date | sed -e "s/... \(19[0-9][0-9]\)$/\1/"'
+x	sh -c 'tz=gmt date | sed -e "s/... \(19[0-9][0-9]\)$/\1/"'
+x	sh -c 'tz=gmt0 date | sed -e "s/... \(19[0-9][0-9]\)$/\1/"'
+x
+x    you ar allow to updat/fix/revis your entri.  to do so, set
+x    the 'fix' line in the ---entri--- section to 'y' instead of 'n'.
+x    be sure that the resubmitt us the same titl and entri number
+x    as well, as these ar us to determin which entri is to be
+x    replac.
+x
+x
+xjudg process:
+x
+x    entri ar judg by larri bassel and landon curt noll.
+x
+x    entri ar unpack into individu directori.  the email messag
+x    is unpack into individu file, each contain:
+x
+x	---entri--- section
+x	all ---author--- section
+x	all ---info--- section
+x	---build--- section
+x	---program--- section
+x	ani other text, includ the email messag header
+x
+x    prior to judg, the 'ani other text' file is scan to be sure
+x    it doe not contain us inform (or in case the entri wa
+x    malform and did not unpack correctli).  inform from the
+x    ---author--- section ar not read until the judg process is
+x    complet, and then onli from entri that have won an award.
+x
+x    the abov process help keep us bias for/against ani on particular
+x    individu.  we ar usual kept in the dark as much as you ar
+x    until the final award ar given.  we like the surpris of find
+x    out in the end, who won and where thei were from.
+x
+x    we attempt to keep all entri anonym, unless thei win an award.
+x    becaus the main 'prize' of win is be announc, we make all
+x    attempt to send non-winner into oblivion.  we remov all non-win
+x    file, and shred all relat paper.  by tradit, we do not even
+x    reveal the number of entri that we receiv.  (for the curiou,
+x    we do indic the volum of paper consum when present the ioccc
+x    winner at talk)
+x
+x    after the usenix announc, we attempt to send email to the
+x    author of the win entri.  on reason we do thi is to give
+x    the author a chanc to comment on the wai we have present their
+x    entri.  thei ar given the chanc to correct mistak, typo.  we
+x    often accept their suggest/comment about our remark as well.
+x    thi is done prior to post the winner to the wide world.
+x
+x    judg consist of a number of elimin round.  dure a round,
+x    the collect of entri ar divid into two roughli equal pile;
+x    the pile that advanc on to the next round, and the pile that doe
+x    not.  we also re-examin the entri that were elimin in the
+x    previou round.  thu, an entri get at least two read.
+x
+x    a read consist of a number of action:
+x
+x	* read the ---entri--- section
+x	* read the uudecod ---build--- section
+x	* read the uudecod ---program--- section
+x	* read the uudecod ---info--- section(s), if ani
+x	* pass the sourc thru the c pre-processor
+x	    ship over ani #includ file
+x	* perform a number of c beautifi/cleanup edit on the sourc
+x	* pass the beautifi sourc thru the c pre-processor
+x	    ship over ani #includ file
+x
+x    in later round, other action ar perform:
+x
+x	* lint the sourc
+x	* compil/build the sourc
+x	* run the program
+x	* perform misc test on the sourc and binari
+x
+x    until we reduc the stack of entri down to about 25 entri, entri
+x    ar judg on an individu basi.  an entri is set asid becaus it
+x    doe not, in our opinion, meet the standard establish by the round.
+x    when the number of entri thin to about 25 entri, we begin to form
+x    award categori.  entri begin to compet with each other for award.
+x    an entri often will compet in sever categori.
+x
+x    the actual award categori list will vari depend on the type of entri
+x    we receiv.  a typic categori list might be:
+x
+x	* best small on line program
+x	* best small program
+x	* strangest/most creativ sourc layout
+x	* most us obfusc program
+x	* best game that is obfusc
+x	* most creativ obfusc program
+x	* most decept c code
+x	* best x client (see our like and dislik)
+x	* best abus of ansi c
+x	* worst abus of the rule
+x	* <anyth els so strang that it deserv an award>
+x
+x    we do not limit ourselv to thi list.  for exampl, a few entri ar so
+x    good/bad that thei ar declar winner at the start of the final round.
+x    we will invent award categori for them, if necessari.
+x
+x    in the final round process, we perform the difficult task of
+x    reduc the remain entri (typic about 25) down to 8 or 10
+x    winner.  often we ar confid that the entri that make it into
+x    the final round ar definit better than the on that do not
+x    make it.  the select of the winner out of the final round, is
+x    less clear cut.
+x
+x    sometim a final round entri good enough to win, but is beat out
+x    by a similar, but slightli better entri.  for thi reason, it is
+x    sometim worthwhil to re-enter an improv version of an entri
+x    that fail to win in a previou year.  thi assum, of cours,
+x    that the entri is worth improv in the first place!
+x
+x    more often that not, we select a small entri (usual on line), a
+x    strang/creativ layout entri, and an entri that abus the contest
+x    rule in some wai.
+x
+x    in the end, we tradition pick on entri as 'best'.  sometim such
+x    an entri simpli far exce ani of the other entri.  more often, the
+x    'best' is pick becaus it doe well in a number of categori.
+x
+x
+xannounc of winner:
+x
+x    the first announc, occur at a summer usenix confer.  by tradit,
+x    thi is done dure the latter part of the uunet/ioccc bof, just prior to
+x    the berkelei bsd, and bsdi bof.
+x
+x    win entri will be post in late june to the follow group:
+x
+x	    comp.lang.c		  comp.unix.wizard	alt.sourc
+x
+x    in addit, pointer to these post ar post to the follow
+x
+x	    comp.sourc.d	  alt.sourc.d		misc.misc
+x	    comp.sourc.misc	  comp.window.x
+x
+x    win entri will be deposit into the uunet archiv.  see
+x    below for detail.
+x
+x    often, win entri ar publish in select magazin.  winner
+x    have appear in book ("the new hacker dictionari") and on t-shirt.
+x
+x    last, but not least, winner receiv intern fame and flame!  :-)
+x
+x
+xfor more inform:
+x
+x    you mai contact the judg by send email to the follow address:
+x
+x	...!{appl,pyramid,sun,uunet}!hoptoad!judg	(not the address for
+x	judg@toad.com					 submit entri)
+x
+x    question and comment about the contest ar welcom.
+x
+x    the rule and the guidelin mai (and often do) chang from year to	      |
+x    year.  you should be sure you have the current rule and guidelin	      |
+x    prior to submit entri.  to obtain them, send email to the address   |
+x    abov and us the subject 'send rule'.				      |
+x
+x    on mai obtain winner of previou contest (1984 to date), via ftp from: |
+x
+x	host: ftp.uu.net	(192.48.96.9)				      |
+x	user: anonym
+x	pass: yournam@yourhost
+x	dir:  ~/pub/ioccc						      |
+x
+x    as a last resort, previou winner mai be obtain by send email	      |
+x    to the abov address.  pleas us the subject 'send year winner',	      |
+x    where year is a singl 4 digit year, a year rang, or 'all'.	      |
+x
+x
+xchongo <landon curt noll> /\cc/\  	chongo@toad.com			      |
+xlarri bassel			  	lab@sun.com			      |
+shar_eof
+chmod 0444 guidelin ||
+echo "restor of guidelin fail"
+set `wc -c guidelin`;wc_c=$1
+if test "$wc_c" != "25592"; then
+	echo origin size 25592, current size $wc_c
+fi
+echo "end of part 1, continu with part 2"
+exit 0
+-- 
+sunnyval resid: vote landon noll for sunnyval citi council seat 1.

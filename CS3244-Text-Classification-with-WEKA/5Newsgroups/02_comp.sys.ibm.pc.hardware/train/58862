@@ -1,0 +1,668 @@
+from: drice@ponder.csci.unt.edu (d. keith rice)
+subject: re: drive/control compat
+line: 672
+organ: univers of north texa
+
+thank to all who respond to my origin post.  i got the number for
+western digit tech support and determin that i need to upgrad the
+bio to the super bio.  it will handl hard drive with up to 16 read/
+write head and up to 1024 cylind.  the upgrad is $15, payabl by
+check or monei order.  send to:
+
+	western digit corpor
+	technic support group
+	p.o. box 19665
+	irvin, ca  92713-9665
+
+the super bio is for ani wd xt hard drive control card in the
+wd1002 seri.
+
+the bio on my system would onli handl up to 20mb drive.
+
+the respons to my request for help follow my .sig.  warn: it's long.
+
+keith
+
+--
+_____________________________
+__-----____--___--__-----____	d. keith rice
+__--__--___--__--___--__--___	univers of north texa
+__--___--__--_--____--___--__	depart of comput scienc
+__--___--__----_____--__--___	denton, texa, usa
+__--___--__--_--____--_--____
+__--__--___--__--___--__--___	drice@ponder.csci.unt.edu
+__-----____--___--__--___--__	drice@cs.unt.edu
+_____________________________
+
+<========================== respons below ==========================>
+
+from raval@mailbox.syr.edu sat apr  3 16:45:03 1993
+receiv: from mailbox.syr.edu by ponder (5.61/1.36)
+	id aa15218; sat, 3 apr 93 16:45:00 -0600
+from: raval@mailbox.syr.edu (bob valentin)
+receiv: from mothra.syr.edu by mailbox.syr.edu (4.1/cn)
+	id aa16647; sat, 3 apr 93 17:44:49 est
+receiv: by mothra.syr.edu (4.1/spike-2.0)
+	id aa03607; sat, 3 apr 93 17:43:27 est
+date: sat, 3 apr 93 17:43:27 est
+messag-id: <9304032243.aa03607@mothra.syr.edu>
+to: drice@ponder
+statu: or
+
+to: drice@ponder.csci.unt.edu
+subject: re: drive/control compat
+newsgroup: comp.sy.ibm.pc.hardwar
+in-repli-to: <drice.733866833@ponder>
+organ: syracus univers, syracus, ny
+cc: 
+
+in articl <drice.733866833@ponder> you write:
+>i recent bought a us seagat st-251 hard drive.  the gui told me that
+>it had been fulli test and that it wa good.  i took it home to instal
+>in my compaq portabl (ok, i'm a littl behind in technolog).  i alreadi
+>had an mfm control.
+>
+>i instal the drive and power up the system.  i got a post error, "1701".
+>
+>my control is a western digit wd1002s-wx2 rev. c.
+>as i said abov, the drive is a seagat st-251.
+>the system is a compaq portabl (circa 1985).
+
+     ah, final a question i can answer.   i mess with thi older
+stuff alot.   kinda fun.  8)
+
+     first problem i can forse is that the st-251 will not be
+compad with that wd card unless it ha the right bio rom.  
+
+    check the number on it.  it should be the onli non-smt chip on
+the board.  slightli below center, and left.    the bio should read 
+either :     62-000042-015 or
+             62-000094-0x2
+
+     if the last 3 digit ar 013, you got problem.
+
+>
+>control jumper ar set as follow: ("-" repres jumper)
+>	w1	1-2 3
+>       w2      1-2 3
+>	w3	1-2
+>	w4	1 2-3
+>	w5	1 2 3
+>	w6	1-2 3
+>	w7	1 2 3
+
+    look right.   w5 and w7 ar factori jump (with a trace) between
+pin 1 and 2 to select the primari control address.
+
+>the drive jumper ar as follow: ("8" repres jumper)
+
+    look right.
+  
+[art delet]
+
+>here ar my question:
+>
+>1.)	ar the drive and control compat w/ each other?
+
+      i notic you left out the s1 jumper tabl set.   those ar
+what control what drive the control think it ha.   if you have
+the 62-000042-015 rom, set it like thi:
+
+              5 + +    open
+              6 + +    open             
+              7 + +    open        
+              8 + +    open
+              4 + +    close
+              3 + +    close
+              2 + +    open
+              1 + +    open
+
+    note:   those ar how wd run the number on the jumper block.
+top to bottom.   +'s repres the jumper pin.    pin 3,4, and 8
+select the first drive set (drive 0) and pin 1,2 and 7 select the
+second drive (drive 1).   
+
+      if you have the 62-000094 rom, it's a auto-config, and i'll have
+to look up how to do it... i don't have the big book right here.
+
+>2.)	ar the jumper on the card/drive set correctli?
+
+      see abov.  you might have problem if the s1 jumper ar not
+right.   also,  at the risk of be insult, make sure the cabl
+ar on right and good. 8).    on the jumper on the 251, try move it
+to the opposit side of the drive.    it's on or the other.   
+     the narrow data cabl goe to j2.   i've thrown it on j3 a few
+time and bang my head for a dai.....
+
+>3.)	is my system's bio in need of an upgrad?
+
+     dunno.    ibm rom had to be later than 10/27/82.   a quick wai
+to check is to boot do and run debug.   enter:
+       
+        -d f000:fff5 fffc    (the - is the debug prompt)
+   
+    thi will return the rom date, if it's of ani us.
+
+>keith rice
+
+      if i oversimplifi ani of the abov, i appolog.     it's
+just hard to know what calib of person i'm talk to. 8).
+
+                     -->   bob valentin  <--  
+                  --> raval@mailbox.syr.edu <--  
+
+
+
+from chpp@unitrix.utr.ac.za mon apr  5 06:33:46 1993
+receiv: from unitrix.utr.ac.za by ponder (5.61/1.36)
+	id aa16194; mon, 5 apr 93 06:32:59 -0500
+receiv: by unitrix.utr.ac.za (smail3.1.28.1 #1)
+	id m0nfpma-0001x7c; mon, 5 apr 93 13:28 gmt
+messag-id: <m0nfpma-0001x7c@unitrix.utr.ac.za>
+from: chpp@unitrix.utr.ac.za (prof p. piacenza)
+subject: st251
+to: drice@ponder
+date: mon, 5 apr 1993 13:28:49 +0200 (gmt)
+x-mailer: elm [version 2.4 pl11]
+mime-version: 1.0
+content-type: text/plain; charset=us-ascii
+content-transfer-encod: 7bit
+content-length: 24559     
+statu: or
+
+
+if you ar us a twist 34-wai cabl then move the jumper 
+on your drive to the neighbour pin   :8::::::.  make sure that
+the twist cabl is for a hard disk (and not a floppi disk) - the
+colour stripe (pin 1) should be furthest from the twist.
+
+thi mai also help.
+
+
+                             product for xt system
+     
+     
+     hard disk control for mfm hard disk drive
+                                  refer note 1.
+     
+          
+          wd1002a-wx1, featur f300r - half-slot size hard disk control 
+          card with an st506/st412 interfac.  it support 2 mfm drive 
+          with up to 16 head and 1024 cylind and is jumper 
+          configur for secondari address and default drive tabl.  
+          built in rom bio support non-standard drive type, virtual 
+          drive format, dual drive oper, bad track format and 
+          dynam format.  thi board featur a power connector for 
+          filecard applic and it will also oper in at system. 
+          pleas note that thi control card will be unavail from 
+          the manufactur (western digit) after march, 1989.  refer 
+          note 2.
+          
+          wdxt-gen, featur f300r - half-slot size hard disk control 
+          card with an st506/st412 interfac.  it  support 2 mfm hard 
+          disk drive with up to 8 head and 1024 cylind.  built-in rom 
+          bio support non-standard drive type, virtual drive 
+          format, dual drive oper, bad track format and 
+          dynam format.  pleas note that thi control card will 
+          be unavail from the manufactur (western digit) after 
+          march, 1989.
+          
+          wd1004a-wx1, featur f300r - half-slot size disk control 
+          card  with an st506/st412 interfac.  it support 2 mfm drive 
+          with up to 16 head and 1024 cylind and is jumper 
+          configur for secondari address and default drive tabl.  
+          built in rom bio support non-standard drive type, virtual 
+          drive format, dual drive oper, bad track format and 
+          dynam format.  thi board featur a power connector for 
+          filecard applic and it will also oper in at system.  
+          refer note 2.
+          
+          wdxt-gen2, featur f300r - half-slot size hard disk control   
+          card with an st506/st412 interfac.  it support 2 mfm hard disk 
+          drive with up to 8 head and 1024 cylind.  built-in rom bio 
+          support non-standard drive type, virtual drive format, 
+          dual drive oper, bad track format and dynam 
+          format.  refer note 2.
+          
+          
+     
+     hard disk control for rll hard disk drive
+                                  refer note 2.
+     
+          
+          wd1002-27x, featur f301r - half-slot size hard disk control 
+          card with an st506/st412 interfac.  it support 2 rll hard disk 
+          drive with up to 16 head and 1024 cylind and is jumper 
+          configur for secondari address and default drive tabl.  
+          built in rom bio support non-standard drive type, virtual 
+          drive format, dual drive oper, bad track format and 
+          dynam format.  thi board featur a power connector for 
+          filecard applic and it will also oper in at system.   
+          pleas note that thi control card will be unavail from 
+          the manufactur (western digit) after march, 1989.  refer 
+          note 2.
+          
+          wd1002a-27x, featur 300r - half-slot size hard disk control 
+          with an st506/st412 interfac.  it support 2 rll drive with up 
+          to 16 head and 1024 cylind. built-in rom bio support non-
+          standard drive type, virtual drive format, bad track 
+          format and dynam format.  pleas note that thi 
+          control card will be unavail from the manufactur     
+          (western digit) after march, 1989.
+          
+          wd1004-27x, featur f301r - half-slot size hard disk control  
+          card with an st506/st412 interfac.  it support 2 rll hard    
+          disk drive with up to 16 head and 1024 cylind and is jumper 
+          configur for secondari address and default drive tabl.  
+          built in rom bio support non-standard drive type, virtual    
+          drive format, dual drive oper, bad track format     
+          and dynam format.  thi board featur a power connect 
+          for filecard applic and it will also oper in at 
+          system.  refer note 2.
+          
+          wd1004a-27x, featur f300r - half-slot size hard disk 
+          control  with an st506/st412 interfac.  it support 2 rll 
+          drive with up to 16 head and 1024 cylind.  built-in rom 
+          bio support non-standard drive type, virtual drive 
+          format, bad track format and dynam format.
+          
+          note 1:  at&t 6300 - the at&t 6300 and the at&t 6300 plu 
+          contain system bio chip that support the hard disk drive.  
+          when us a western digit xt control card the system will 
+          not "boot."  to solv thi problem, on of the rom bio chip 
+          must be disabl.  to disabl the bio on your western digit  
+          xt control card, you must remov the jumper at posit w-3 
+          or add a jumper at posit r-23 (depend on which model of xt 
+          control you ar us).
+          
+                                       -2-
+
+
+          
+          note 2:  tandi 1000 system - the wd1002a-wx1, wd1004a-wx1, 
+          wdxt-gen2 and the wd1004-27x can be modifi to oper in 
+          tandi 1000 seri comput, model sx, tx and the origin or 
+          "a" version.  these comput util an interrupt of 2 (irq2) 
+          instead of irq5, the ibm standard.  to modifi the wd1002a-wx1 or 
+          the wd1002-27x to oper in these system, you must cut the 
+          etch between pin 1 and pin 2 at jumper posit w-7.  then 
+          solder pin 2 and pin 3 at the posit (w-7).  to complet the 
+          modif, a jumper must be ad to posit 7 of switch s-1 
+          (2 row of 8 pin).  pleas note that ani physic modif 
+          to your western digit hard disk control void the warranti 
+          on your board.  to modifi the wd1004a-wx1, wdxt-gen2 or the 
+          wd1004-27x for your tandi 1000 system, a zero ohm resist must 
+          be solder to jumper posit w-27.  thi will chang the 
+          interrupt from irq5 to irq2.
+     
+     
+     xt control for floppi disk drive
+     
+          
+          wd1002a-fox - half-slot floppi disk control for xt or at  
+          system.  four version of the board ar avail:
+                featur f001 support two floppi disk drive.
+                featur f002 support four floppi disk drive and includ 
+                an option 37-pin control, data and power connector and 
+                an option 4-pin power connector.
+                featur f003 support two floppi disk drive and includ
+                a rom bio that will enabl your system to recogn 
+                floppi disk drive that mai not be support by your at
+                system rom bio.  the option rom bio will also allow
+                thi control card to oper high densiti floppi disk
+                drive in an xt system.
+                featur f004 support four floppi disk drive and includ
+                an option 37-pin control, data and power connector, an
+                option 4-pin power connector and a rom bio that will 
+                enabl your system to recogn floppi disk drive that 
+                mai not be support by your at system rom bio.  the 
+                option rom bio will also allow thi control card to 
+                oper high densiti floppi disk drive in an xt system.
+                
+                
+                                       -3-
+
+
+
+                             product for at system
+     
+      
+     hard disk control for mfm hard disk drive - no floppi support
+     
+          
+          wd1003-wah, featur f003r - hard disk control card with an   
+          st506/st412 interfac.  it support 2 mfm drive with up to 16 
+          head and 2048 cylind, 3:1 interleav.
+          
+          wd1003v-mm1, featur f300r - hard disk control card with an  
+          st506/st412 interfac. it support 2 mfm drive with up to 16  
+          head and 2048 cylind, 2:1 interleav.  the "v" board can   
+          run in high speed at system (10 to 16 megahertz system speed).
+          
+          wd1006-wah , featur f001r - hard disk control card with     
+          an st506/st412 interfac.  it support 2 mfm drive with up to 
+          16 head and 2048 cylind, 1:1 interleav.
+              
+          wd1006v-mm1, featur f300r - hard disk control card with an  
+          st506/st412 interfac.  it support 2 mfm drive with up to 16  
+          head and 2048 cylind, 1:1 interleav and faster data     
+          transfer due to "look ahead cach."  the "v" board can run in 
+          high speed at system (10 to 16 megahertz system speed).
+          
+          
+     hard disk control for mfm hard disk drive and floppi disk drive
+     
+     
+          wd1003-wa2, featur f003r - hard disk control card with an  
+          st506/st412 interfac, full at form factor.  it support 2 mfm 
+          drive with up to 16  head and 2048 cylind, at 3:1 
+          interleav and 2 floppi disk drive (360k and 1.2 mb).
+          
+          wd1003a-wa2, featur f003r - hard disk control card with an 
+          st506/st412 interfac, full xt form factor.  it support 2 mfm 
+          drive with up to 16 head and 2048 cylind, at 3:1 interleav 
+          and 2 floppi disk drive (360k and 1.2 mb).
+          
+          wd1003v-mm2, featur f300r - hard disk control card with an  
+          st506/st412 interfac.  it support a maximum of 2 mfm drive 
+          with up to 16  head and 2048 cylind at 2:1 interleav, and 2 
+          floppi disk drive (5-1/4" 360k, 1.2mb; 3-1/2" 720k, 1.44mb).   
+          the "v" board can run in high speed at system, (10 to 16 
+          megahertz system speed).
+          
+          wd1006v-mm2, featur f300r - hard disk control card with an   
+          st506/st412 interfac.  it support a maximum of 2 mfm drive 
+          with up to 16 head and 2048 cylind at 1:1 interleav and 
+          faster data transfer due to "look ahead cach" and 2 floppi 
+          disk drive (5-1/4" 360k, 1.2 mb; 3-1/2" 720k, 1.44 mb).  the 
+          "v" board can run in high speed at system, (10 to 16 megahertz 
+          system speed).
+          
+     
+                                       -4-
+
+
+     hard disk control for rll hard disk drive - no floppi support 
+     
+          
+          wd1003-rah - hard disk control card with an st506/st412 
+          interfac.  it support 2 rll hard disk drive with up to 16  
+          head and 2048 cylind at 3:1 interleav. 
+          
+          wd1003v-sr1 - hard disk control card with an st506/st412 
+          interfac.  it support a maximum of 2 rll hard disk drive with 
+          up to 16 head and 2048 cylind at 2:1 interleav. the "v" 
+          board can run in high speed at system (10 to 16 megahertz 
+          system speed).
+                featur f301r includ an option rom bio that allow 
+                the user to defin the drive's paramet. 
+                featur f300r doe not includ the rom bio and you must  
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet.
+                
+          
+          wd1006-rah - hard disk control card with an st506/st412 
+          interfac.  it support a maximum of 2 rll hard disk drive with 
+          up to 16 head and 2048 cylind, 1:1 interleav.
+                featur f001r includ an option rom bio that provid  
+                addit drive paramet tabl.
+                featur f300r doe not includ the rom bio and you must   
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet.
+                
+          
+          wd1006v-sr1 - hard disk control card with an st506/st412     
+          interfac.  it support 2 rll hard disk drive with up to 16 
+          head and 2048 cylind, 1:1 interleav and faster data 
+          transfer due to "look ahead cach."  the "v" board can run in 
+          high speed at  system (10 to 16 megahertz system speed).
+                featur f301r includ an option rom bio that allow  
+                the user to defin the drive's paramet.           
+                featur f300r doe not includ the rom bio and you must  
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet.
+                
+                 
+     
+     hard disk control for rll hard disk drive and floppi disk drive
+     
+     
+          wd1003-ra2, featur f001r -  hard disk control card with an  
+          st506/st412 interfac.  it support a maximum of 2 rll hard disk 
+          drive with up to 16  head and 2048 cylind, at 3:1 
+          interleav, and 2 floppi disk drive (5-1/4" 360k, 1.2 mb).
+          
+          
+     
+                                       -5-
+
+          
+          wd1003v-sr2 -  hard disk control card with an st506/st412    
+          interfac.  it support a maximum of 2 rll hard disk drive with 
+          up to 16 head and 2048 cylind, at 2:1 interleav, and 2 
+          floppi disk drive, (5-1/4" 360k, 1.2 mb; 3-1/2" 720k, 1.44 
+          mb).  the "v" board run in high speed at system (10 to 16 
+          megahertz system speed).
+                featur f301r includ an option rom bio that allow   
+                the user to defin the drive's paramet.
+                featur 300r doe not includ the rom bio and you must
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet.
+                
+          
+          wd1006v-sr2 -  hard disk control card with an st506/st412   
+          interfac.  it support a maximum of 2 rll hard disk drive with 
+          up to 16 head, 2048 cylind and 2 floppi disk drive (5-1/4" 
+          360k, 1.2 mb; 3-1/2" 720k, 1.44 mb).   it also featur 1:1 
+          interleav and faster data transfer due to  "look ahead 
+          cach".  the "v" board can run in high speed at  system (10 
+          to 16 megahertz system speed).              
+                featur f301r includ an option rom bio that allow 
+                the user to defin the drive's paramet.
+                featur 300r doe not includ the rom bio and you must   
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet.
+                
+                 
+     
+     hard disk control for esdi hard disk drive - no floppi support -
+     
+          
+          wd1007a-wah - thi control card will support up to 2 esdi 
+          hard disk drive, 10 megabit per second data transfer rate and 
+          1:1 interleav.        
+                featur f301r  includ an option rom bio with "shadow 
+                ram" that will enabl the control card to interfac 
+                with all type of esdi drive without modifi the system 
+                rom bio.
+                featur f300r doe not includ the rom bio and you must 
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet.
+                
+          wd1007v-se1/me1 - thi control card will support up to 2 esdi 
+          hard disk drive, 15 megabit per second data transfer rate and 
+          1:1 interleav.  the "v" board can run in high speed at 
+          system, (10 to 16 megahertz system speed).
+                featur f301r includ an option rom bio with "shadow 
+                ram" that will enabl the control card to interfac 
+                with all type of esdi drive without modifi the system 
+                rom bio.
+                featur f300r doe not includ the rom bio and you must 
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet.
+                
+                                       -6-
+      
+     hard disk control for esdi hard disk drive and floppi disk 
+     drive
+     
+          
+          wd1007a-wa2 - thi control card will support up to 2 esdi 
+          hard disk drive, 10 megabit per second data transfer rate, 1:1 
+          interleav and 2 floppi disk drive (5-1/4" 360k, 1.2 mb; 3-1/2" 
+          720k, 1.44 mb).
+                featur f301r includ an option rom bio with "shadow 
+                ram" that will enabl the control card to interfac 
+                with all type of esdi drive without modifi the system 
+                rom bio.
+                featur f300r doe not includ the rom bio and you must 
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet.
+                
+          
+          wd1007v-se2/me2 - thi control card will support up to 2 esdi 
+          hard disk drive, 15 megabit per second data transfer rate, 1:1 
+          interleav and 2 floppi drive (5-1/4" 360k, 1.2 mb; 3-1/2" 
+          720k, 1.44 mb).  the "v" board can run in high speed at system 
+          (10 to 12 megahertz bu speed).
+                featur f301r includ an option rom bio with "shadow 
+                ram" that will enabl the control card to interfac 
+                with all type of esdi drive without modifi the system 
+                rom bio.
+                featur f300r doe not includ the rom bio and you must 
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet.
+                
+                
+          wd1007a-wa4 - thi control card will support up to 2 esdi 
+          hard disk drive, 10 megabit per second data transfer rate, 1:1 
+          interleav and 2 floppi disk drive (5-1/4" 360k, 1.2 mb; 3-1/2" 
+          720k, 1.44 mb).  thi board also ha a serial port and parallel 
+          port.
+                featur f301r includ an option rom bio with "shadow 
+                ram" that will enabl the control card to interfac 
+                with all type of esdi drive without modifi the system 
+                rom bio.
+                featur f300r doe not includ the rom bio and you must 
+                us the drive tabl on your system's rom bio that must 
+                contain the appropri drive paramet. 
+                
+                
+                                       -7-
+
+
+      
+     hard disk control for scsi hard disk drive
+     
+          
+          7000-asc - a scsi host adapt that serv as an interfac 
+          between the at bu and the scsi bu.  all necessari driver and 
+          receiv ar includ, permit direct cabl connect to 
+          the scsi bu through a 50 pin connector and to the at bu 
+          through two edg connector.  the 7000-asc util jumper  
+          configur option that enabl the address space, dma channel 
+          and interrupt request to be select to suit the end user's 
+          applic.  the board also featur word data transfer at 4 
+          megabyt per second (synchron), an on-board floppi disk 
+          control and a rom bio.  pleas note that the 7000-asc 
+          oper us standard do 3.2 or do 3.3 onli.
+          
+          7000-fasst2 - thi scsi host adapt card provid the same 
+          featur as the 7000-asc plu addit support capabl 
+          us softwar develop by columbia data product.  the 7000-
+          fasst2 will support ms-do 3.2-3.3, compaq do 3.31, pc-do 4.0, 
+          pc-mo/386 version 2.1, xenix, microsoft window, novel and 
+          syto tape backup.
+          
+          wdatxt-fasst kit - an "unintellig" scsi host adapt that is 
+          compat with the ibm xt, at and compat system.  it us 
+          a 50 pin extern scsi bu "d" connector with a standard 50 pin 
+          intern scsi cabl.  the wdatxt-fasst can be us as  both a 
+          target and an initi and it serv as an excel tool for 
+          scsi design.  it also provid a low cost altern for end-
+          user desir to instal a scsi peripher devic such as a 
+          hard disk drive or a tape backup unit. the kit includ an 8-bit 
+          scsi hba board, manual, fasst softwar diskett and an intern 
+          scsi cabl.
+          
+          syto tape backup - (util for 7000-fasst) - fasst-syto - 
+          fasst version of syto tape backup util.  ms-do 
+          compat, it run with fasst softwar product revis 3.3+.
+          
+          
+     hard disk control for ps/2 model 50, 60, 80 system  
+     (microchannel architectur)
+     
+          
+          wd1006v-mc1, featur f300r - hard disk control with an 
+          st506/st412 interfac for microchannel system.  it support 2 
+          mfm drive with up to 16 head and 2048 cylind, 1:1 
+          interleav and faster data transfer due to "look ahead 
+          cach."  the"v" board can run in high speed at system (10 to 
+          16 megahertz system speed).
+          
+     
+                                       -8-
+
+
+          
+          wd1007v-mc1, featur f300r - thi control card will support 
+          up to 2 esdi hard disk drive, 15 megabit per second transfer 
+          rate and it contain a rom bio with "shadow ram" that will 
+          enabl the control card to interfac with all type of esdi 
+          hard disk drive without modifi the system bio.  it us 1:1 
+          interleav.  the "v" board can run in high speed at system, 
+          (10 to 12 megahertz bu speed).
+          
+          
+     
+     control for floppi disk drive onli
+     
+          
+          wd1002a-fox - half-slot floppi disk control for xt or at 
+          system.  four version of the board ar avail:
+                featur f001 support two floppi disk drive.
+                featur f002 support four floppi disk drive and includ 
+                an option 37-pin control, data and power connector and 
+                an option 4-pin power connector.
+                featur f003 support two floppi disk drive and includ 
+                a rom bio that will enabl your system to recogn     
+                floppi disk drive that mai not be support by your at 
+                system rom bio.  the option rom bio will also allow 
+                thi control card to oper high densiti floppi disk
+                drive in an xt system.
+                featur f004 support four floppi disk drive and includ 
+                an option 37-pin control, data and power connector, an 
+                option 4-pin power connector and a rom bio that will 
+                enabl your system to recogn floppi disk drive that 
+                mai not be support by your at system rom bio.  the 
+                option rom bio will also allow thi control card to 
+                oper high densiti floppi disk drive in an xt system.
+                
+
+
+-- 
+    prof. l. piacenza - chemistri depart - univers of transkei
+    internet: chpp@unitrix.utr.ac.za  (prefer).  tel. 27-471-3022384
+    internet: sppp@hippo.ru.ac.za
+
+
+from neci!mydual.uucp!olson@transfer.stratu.com mon apr  5 12:14:06 1993
+receiv: from transfer.stratu.com by ponder (5.61/1.36)
+	id aa29202; mon, 5 apr 93 12:14:03 -0500
+receiv: from neci.uucp by transfer.stratu.com (4.1/3.12-jjm)
+	id aa22183; mon, 5 apr 93 13:12:04 edt
+receiv: from mydual by neci.neci.ma.nec.com id aa21760; 5 apr 93 12:50 edt
+receiv: by mydual.uucp (5.58/smail2.5/09-28-87)
+	id aa18009; mon, 5 apr 93 13:24:23 est
+date: mon, 5 apr 93 13:24:23 est
+from: "kirtland h. olson" <mydual!olson@transfer.stratu.com>
+messag-id: <9304051824.aa18009@mydual.uucp>
+to: drice@ponder
+subject: re: drive/control compat
+newsgroup: comp.sy.ibm.pc.hardwar
+in-repli-to: <drice.733866833@ponder>
+organ: the harvard group, 01451-0667
+repli-to: neci!olson%mydual.uucp@transfer.stratu.com
+cc: 
+statu: or
+
+suggest you move jumper on drive rightward on posit.
+
+regard,
+
+      --kirt
+
+-- 
+kirtland h olson harvard ma 01451-0667 usa olson%mydual.uucp@neci.ma.nec.com
+

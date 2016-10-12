@@ -1,0 +1,44 @@
+from: klusken@radar.nrl.navi.mil (michael s klusken)
+subject: re: quadra scsi problem???
+organ: naval research laboratori
+line: 39
+
+in articl <1993apr19.131311.25871@mintaka.lc.mit.edu>, nodin@lc.mit.edu
+(mark h. nodin) wrote:
+> 
+> in articl <c5l39p.2qz@new.udel.edu>, johnston@me.udel.edu (bill johnston) write:
+> |> in articl <1993apr16.144750.1568@mintaka.lc.mit.edu> nodin@lc.mit.edu (mark h. nodin) write:
+> |> >i don't know about the specif problem mention in your
+> |> >messag, but i definit had scsi problem between my
+> |> >q700 and my vener jasmin megadr 10 cartridg
+stuff delet
+> |> 
+> |> i doubt thi is a quadra-specif problem.  i had to get
+> |> rid of my "vener" bernoulli 20 last year (with enough 
+stuff delet
+> |> might fix the problem - in my case the cartridg wouldn't 
+> |> format/mount/partit for a/ux.  
+> 
+> all i know is that the megadr work perfectli on both my
+> mac plu and my powerbook 140.  it wa for thi reason i assum
+> the problem had someth to do with the quadra.  even with the
+> quadra, thei mostli work ok.  the problem occur when i eject
+> a cartridg from a drive: it would start pop up dialog box
+> sai "thi cartridg must be format with jasmin drivewar"
+> even though there wa no cartridg in the drive.
+> 
+> 	--mark
+
+the problem mention last is a known quadra scsi problem, it wa heavili
+discuss last year and an appl employe point out that there wa a
+on byte error in the scsi driver routin for the quadra's (at least the
+700
+and 900).  system 7.1 should not have that problem, for most peopl the 
+solut wa to get an updat driver from the drive manufactor.  in my
+case mass microsystem wrote a new driver which fix the problem on my
+quadra
+700, all that occur earli last year.
+
+michael s. klusken
+klusken@radar.nrl.navi.mil
+opinion express ar the author's and not those of hi employ.

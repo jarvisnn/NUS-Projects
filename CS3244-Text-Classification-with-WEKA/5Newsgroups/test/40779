@@ -1,0 +1,42 @@
+from: jhood@smoke.marlboro.vt.us (john hood)
+
+subject: re: can't set com4
+
+keyword: g2k
+
+organ: domest vorpal bunni breeder's associ
+
+distribut: usa
+
+line: 14
+
+
+
+in articl <c5rajn.67@cbnewsh.cb.att.com> k4bnc@cbnewsh.cb.att.com (john.a.siegel) write:
+
+>i have been unabl to get com 4 to work - diagnost program such as msd show
+
+>noth instal.  i think the softwar option ar ok - is there a known
+
+>hardwar conflict and/or workaround for thi problemand cd rom
+
+>system is a g2k 486dx2/66 tower with ati video card
+
+
+
+it's the video card.  it's 8514/a compat, which mean it us the
+
+same i/o address as com4.
+
+
+
+  --jh
+
+-- 
+
+john hood					cthulhu-- just imagin it!
+
+jhood@smoke.marlboro.vt.us
+
+
+

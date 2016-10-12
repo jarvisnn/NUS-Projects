@@ -1,0 +1,66 @@
+from: ab@nova.cc.purdu.edu (allen b)
+subject: re: point within a polygon
+keyword: obfusc postscript
+organ: purdu univers
+line: 60
+
+in articl <jona-y.734802983@gouraud> jona-y@isi.liu.se (jona yngvesson)  
+write:
+> intersect between a line and a polygon (undecid??),
+> 	by dave baraff, tom duff
+> 
+> 	from: deb@charisma.graphic.cornel.edu
+> in recent year, mani geometr problem have been successfulli model in a
+> new languag call postscript.  (see "postscript languag", by adob system
+> incorpor, isbn # 0-201-10179-3, co. 1985).
+> 
+> so, given a line l and a polygon p, we can write a postscript program that
+> draw the line l and the polygon p, and then "output" the answer.  by
+> "output", we mean the program execut a command call "showpag", which
+> actual print a page of paper contain the line and the polygon.  a quick
+> examin of the paper provid an answer to the reduc problem q, and  
+thu
+> the origin problem.
+
+curious, in modern postscript, the point in a polygon problem can
+be solv even more easili.  to wit:
+
+%!
+%%titl: point in polygon
+%%creator: allen b (ab@cc.purdu.edu)
+%%for: the amus of comp.graphic regular
+%%languagelevel: 2
+%%documentneededresourc: humor sens thereof
+%%endcom
+
+% thi program will test whether a point is insid a given polygon.
+% current it us the even-odd rule, but that can be chang by
+% replac ineofil with infil.  these ar level 2 oper,
+% so if you've onli got level 1 you're out of luck.
+%
+% the result will be print on the output stream.
+%
+% caution: onli accur to devic pixel!
+% put a huge scale in first if you aren't sure.
+
+% point to test
+% put x and y coordin here
+
+50 75
+
+% vertic of polygon in counter-clockwis order
+% put arrai of pair of coordin here
+[
+[   0   0 ]
+[ 100   0 ]
+[ 100 100 ]
+[  67 100 ]
+[  67  50 ]
+[  33  50 ]
+[  33 100 ]
+[   0 100 ]
+]
+
+dup 0 get aload pop moveto dup length 1 dup 3 1 roll
+sub getinterv { aload pop lineto } foral closepath
+ineofil { (ye!) } { (no!) } ifels =

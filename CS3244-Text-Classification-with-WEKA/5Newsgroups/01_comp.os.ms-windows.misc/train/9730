@@ -1,0 +1,124 @@
+from: basebal@catch-the-fever.scd.ucar.edu (gregg walter)
+subject: mathcad 4.0 swap file?
+organ: scientif comput divison/ncar boulder, co
+line: 119
+
+repost and summar, for your inform or addit comment.
+
+*** thi is long ***
+
+i have 16mb of memori on my 386sx (25 mhz), an intel math coprocessor, and
+a 120mb hard drive with 20mb free (no compress).  i have been run
+mathcad 3.1, under window 3.1 in enhanc mode, with a 5mb ram drive,
+2mb/1mb smart drive, and no swap file (perman or temporari) for
+sever month.
+
+i am interest in the faster mathcad 4.0, but i am concern about report
+swap file requir and the legitimaci of mathsoft's claim about increas
+speed.
+
+to 386sx user:
+
+  will mathcad 4.0 run without a swap file, or insist that i us a swap file?
+
+so far, in respons to a less detail descript of my setup, or in
+unrel post, the more inform answer, on the net or by e-mail,
+appear to be:
+
+  1) by fuess@llnl.gov (david a. fuess) >>
+
+   >> accord to mathsoft, no. mathcad us the swap file extens so as
+   >> not to overburden the physic resourc. thei sai thi is actual a
+   >> win32s featur. a figur of 10mb wa indic to me as a minimum. but
+   >> you might try anywai!
+
+  2) by bert.tyler@satalink.com (bert tyler) >>
+
+   >> i'm not all that certain that mathcad is the culprit here.
+   >>
+   >> i have a 486/66dx2 with 16mb of main memori (less 2mb for a ramdisk and
+   >> a bit for a do session that is open as part of the startup process),
+   >> which i have been run without ani swapfil.  when i instal the
+   >> win32s subsystem from the march beta of the nt sdk, the win32s subsystem
+   >> itself demand the presenc of a swapfil.  the onli win32s program
+   >> i've run to date is the 32-bit version of freecel that came with that
+   >> subsystem.
+   >>
+   >> i gave window a small temporari swapfil (i'm leeri of file that must
+   >> remain in fix locat on my hard disk), and all seem well.
+
+  3) by bca@ec.cmu.edu (brian c. anderson) >>
+
+   >> what is win32?  i upgrad to mathcad 4.0 and it instal a directori for
+   >> win32 under \window\system .  dure the upgrad it told me that win32
+   >> wa requir.
+
+  4) by case0030@student.tc.umn.edu (steven v case-1) >>
+
+  >> mathcad 4.0 make us of the win32s librari.  you've probabl
+  >> heard about win32s, it is a 32-bit window librari that provid
+  >> much of the window nt function (no support for thread and
+  >> multitask and such) but can be run under window 3.1.
+
+  5) by rhynetc@zardoz.chem.appstat.edu (thoma c. rhyne) >>
+
+   >> i also have 16 mb of ram, and inde mathcad 4.0 insist on a perman
+   >> swapfil; it would not run otherwis.
+
+  6) by bishop@baeyer.chem.fsu.edu (greg bishop) >>
+
+   >> 3) mathcad absolut requir 4mb ram (with 12mb swap file) or 8mb ram
+   >> (with 8mb swap file).  it will give you a not enough memori error if the
+   >> swap file is less than 8mb.  it is a major resourc hog.  if you do not
+   >> load the symbol processor or the smart math, it take about 5mb of ram
+   >> (real or virtual) just to load (again, due to the win32s librari.
+
+********************************************************************************
+*                                                                              *
+* so it seem that in addit to the system requir shown on mathsoft's  *
+* advertis for 4.0, that you need a swap file, possibl as big as 12mb.   *
+* look like i would just need an 8mb swap file, and would need to choos (or  *
+* can i?) between a faster perman swap file, or a slower temporari swap file*
+*                                                                              *
+* appar a win32 subsystem ship with mathcad 4.0 - how much disk space    *
+* doe thi requir?                                                           *
+*                                                                              *
+********************************************************************************
+
+i also receiv these answer:
+
+  1) by mfdjh@uxa.ecn.bgu.edu (dale hampl) >>
+
+   >> if you've got 16 meg of ram, why not configur 10meg as a ram disk for
+   >> mathcad?  do 6 permit differ bootup configur.
+
+********************************************************************************
+*                                                                              *
+* can mathcad 4.0 + win32 be configur to us such a ram drive instead of a   *
+* swap file?  if not, i don't see how us do 6.0 for an altern bootup    *
+* would provid window with thi swap file.   some time back i rememb a     *
+* discuss about the issu of us a ram drive to support a swap file,     *
+* but i thought thi involv slower, < 8mb system.                           *
+*                                                                              *
+* i have do 6.0 but for variou reason have not yet done a full instal.*
+*                                                                              *
+* by the wai, is a full instal of do 6.0 requir to avail oneself of   *
+* the "altern bootup" featur?  which file from the instal disk ar *
+* requir?                                                                    *
+*                                                                              *
+********************************************************************************
+
+  2) by wild@access.digex.com (wildstrom) >>
+
+   >> presum, you mean without a _perman_ swap file. if window need a
+   >> swap file, it will upo and creat on if a perman on doesn't exist.
+   >> perman is gener faster though. i don't know why mathcad wouldn't
+   >> be happi with either type--ver. 3.0 is and so should ani program conform
+   >> to the win specif.
+
+*********************************************************************************
+*                                                                               *
+* so far, 16mb ha been enough ram to avoid the overhead of run ani swap    *
+* file - i have been run mathcad 3.1 under window 3.1 without on.         *
+*                                                                               *
+*********************************************************************************

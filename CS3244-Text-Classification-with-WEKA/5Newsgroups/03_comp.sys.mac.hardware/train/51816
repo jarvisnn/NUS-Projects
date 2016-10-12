@@ -1,0 +1,40 @@
+from: sven@beowulf.jpl.nasa.gov (sven u. grenand)
+subject: re: increas the number of serial port
+organ: jet propuls laboratori
+line: 33
+distribut: world
+nntp-post-host: mac4.jpl.nasa.gov
+
+in articl <1993apr18.134943.16479@bmer95.bnr.ca>, slang@bnr.ca (steven
+langloi) wrote:
+> 
+> doe anyon know if there ar ani devic avail for the mac which
+> will increas the number of serial port avail for us
+> simultan?  i would like to connect up to 8 serial devic to my
+> mac for an applic i am work on. i must be abl to access each
+> on of the independ.
+> 
+> if such a devic exist, ar there ar ani limit to the number of
+> serial devic i can us?
+> 
+> ani inform is appreci.
+> 
+> steven langloi
+> slang@bnr.ca
+
+the quadralink by ae is a possibl problemat solut to your need.
+i've us on for the last 4 (?) year on my person system, but a fatal
+bug ha crept into their more recent s/w. the bug onli show up dure
+heavi serial traffic but complet crash the system (macsbug can not
+reboot, time to hit the restart button).
+
+ae told me in januari that thei were awar of and work on fix the bug
+which i describ to them. sinc then thei have not answer ani of my
+fax ask them for a statu of the bug-fix.
+
+the ql ha been great, but for now i have mine sidelin. if you ar onli
+go to be us 2400 baud or less, then you mai have no, or veri
+infrequ problem,
+
+
+-sven

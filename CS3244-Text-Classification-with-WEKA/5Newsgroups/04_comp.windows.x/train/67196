@@ -1,0 +1,75 @@
+from: toml@blade.boulder.parcplac.com (tom lastrang)
+subject: re: repost: acceler/translat
+keyword: acceler, case
+repli-to: toml@boulder.parcplac.com
+organ: parcplac boulder
+line: 68
+
+in articl <1993apr22.162016.5923@telesoft.com>, trevor@telesoft.com (trevor bourget @ignit) write:
+|> in <sdenni.735423404@aa.cad.slb.com> sdenni@osf.org write:
+|> 
+|> >i post thi a while ago and didn't receiv on repli, and now we
+|> >have anoth bug report on the same subject. can anybodi help me out?
+|> 
+|> the problem is that motif us xgrabkei to implement menu acceler,
+|> and these grab ar specif about which modifi appli.  unfortun,
+|> the specif for xgrabkei doesn't allow anymodifi to be combin
+|> with other modifi, which is exactli what would be desir in thi case:
+|> "ctrl ani<kei>q".
+|> 
+|> >in ora vol. 6, in the section on acceler it sai "for inform
+|> >on how to specifi translat tabl see vol. 4...", thi is so you
+|> >know what to put for the xmnacceler resourc.  if you go to
+|> >vol. 4 it sai, "likewis, if a modifi is specifi, there is
+|> >noth to prohibit other modifi from be present as well. for
+|> >exampl, the translat:
+|> >	shift<kei>q:	quit()
+|> >will take effect even if the ctrl kei is held down at the same time as
+|> >the shift kei (and the q kei).
+|> 
+|> thi is true for acceler and mnemon, which ar implement us
+|> event handler instead of grab; it's not true for menu acceler.  if
+|> you're a motif implementor, i'd suggest lobbi to get the xlib semant
+|> chang to support the featur i describ abov.  otherwis, chang the
+|> document for menu acceler to properli set the user's
+|> expect, becaus menu acceler ar not the same thing as
+|> translat.
+|> 
+|> >is it possibl to suppli > 1 acceler for a menu entri?
+|> 
+|> if you mean "menu acceler", no it's not possibl.  that's accord to
+|> the definit of the xmnacceler resourc in the xmlabel manual page.
+|> 
+|> >keep in mind when answer thi question that when us motif you
+|> >can't us xtinstallacceler().
+|> 
+|> i can't think of a reason why not.
+|> 
+|> >how can you ensur that acceler work the same independ of
+|> >case?  what i want is ctrl+o and ctrl+o to both be acceler on on
+|> >menu entri.
+
+i find thi thread on motif acceler absoultli amaz.  if i were
+write an interfac to keyboard acceler, i would have on
+resourc call "acceler" that took a translat tabl, period.
+i would also implement it so that programm never ha to do ani work
+to get the acceler instal.  as soon as the end-user specifi
+on, it would be activ and automat instal.
+
+to get multipl acceler on a singl menu item i'd do someth like:
+
+	*menuitem.acceler: #overrid \n\
+		ctrl<kei>m:	fire() \n\
+		shift<kei>l:	fire() \n
+
+the acceler would work exactli like translat and you would
+automat see a "ctrl m" show up in your menuitem object.
+
+why in the world is the motif stuff so complic with so mani differ
+special case depend on what type of widget you're deal with?  there
+ha to be some reason.
+
+sorri for the polit tone of thi messag...
+
+--
+tom lastrang        toml@boulder.parcplac.com

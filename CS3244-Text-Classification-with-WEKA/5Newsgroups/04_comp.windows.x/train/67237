@@ -1,0 +1,21 @@
+from: bshaw@spdc.ti.com (bob shaw)
+subject: summari  xon and x11r5
+nntp-post-host: bobasun
+organ: ti semiconductor process and design center
+line: 15
+
+
+hi folk
+thank to the on that repli, howev, my problem turn out
+to be veri simpl.
+
+in my .xresourc i had a space after xterm*font:   10x20.
+remov thi and xrdb fix my problem.
+
+also, same symptom, wa that some of my user did not have the
+proper capit for xterm*font.
+
+thank again
+
+bob
+

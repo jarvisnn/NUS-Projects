@@ -1,0 +1,21 @@
+from: bcwhite@sune.uwaterloo.ca (brian c. white)
+subject: re: scsi on do
+keyword: scsi, do, streamer
+organ: univers of waterloo
+line: 15
+
+in articl <1993apr19.132748.18044@julian.uwo.ca> wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+>it wa the seagat 296n and the st-02 control.  i found that the
+>control couldn't keep up with a 1:1 interleav, so the best i could do
+>with the drive wa a 2:1 interleav and a data transfer of about 450 k/sec.
+
+accord to what other have told me, the st-296n is difficult to run at
+the 1:1 interleav even though seagat claim it.  i have a non-pc system
+(don't ask what it is, you probabl haven't heard of it) that is built
+around scsi and it can't do 1:1, either.
+
+                                        brian
+                           ( bcwhite@sune.uwaterloo.ca )
+
+-------------------------------------------------------------------------------
+    in theori, theori and practic ar the same.  in practic, thei're not.

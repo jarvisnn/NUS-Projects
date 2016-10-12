@@ -1,0 +1,38 @@
+from: manu@oa.olivetti.com (manu da)
+subject: overlap window without a titl bar
+organ: olivetti atc; cupertino ca, usa
+line: 31
+distribut: usa
+nntp-post-host: todi.oa.olivetti.com
+
+
+hi, 
+
+i have a simpl question. is it possibl to creat a overlap thickfram
+window without a titl bar; ie
+
+	(ws_overlap | ws_thickfram) & ~ws_caption 
+
+
+i don't seem to be abl to get rid off the titl bar.
+
+i have anoth question:
+
+i have a overlap window(sai v) which ha few child window (a,b,c, etc)
+the window show up with all it's children fine. now, i creat anoth 
+child(t) with a ws_thickfram style and place on top of on or more of
+it's sibl. style ws_thickfram is us so that i can resiz it. how do
+i make sure that the child 't' will alwai be at the top of it's sibl.
+i us setwindowpo() and bringwindowtotop() without success. what's happen
+is that while i am resiz 't' it show up but as soon as i let go, it goe
+behild it's sibl.
+
+ani help would be greatli appreci.
+
+manu 
+
+pleas mail me at manu@oa.olivetti.com
+
+
+
+

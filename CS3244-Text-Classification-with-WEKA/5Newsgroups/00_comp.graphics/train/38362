@@ -1,0 +1,46 @@
+from: lau@auriga.rose.brandei.edu (franki t. k. lau)
+subject: pc fastest line/circl draw routin: help!
+organ: brandei univers
+line: 41
+
+hi all,
+
+in short: look for veri fast assembl code for line/circl draw
+	  on svga graphic.
+
+complet:
+	i am think of a simpl but fast molecular
+graphic program to write on pc or clone. (ball-and-stick type)
+
+reason: program that i've seen ar far too slow for thi purpos.
+
+platform: 386/486 class machin.
+	  800x600-16 or 1024x728-16 vga graphic
+		(speed is import, 16-color for non-render
+		 purpos is enough; mai stai at 800x600 for
+		 speed reason.)
+         (hope the code would be gener enough for differ svga
+          card.  my own card is base on trident 8900c, not vesa?)
+
+what i'm look for?
+1) fast, veri fast routin to draw line/circl/simpl-shape
+   on abov-mention svga resolut.
+   presum in assembl languagin.
+	ye, veri fast pleas.
+2) relat code to help rotat/zoom/anim the draw on screen.
+   draw for begin, would be line, circl mainli, think of
+   text, els later.
+   (you know, the wai molecular graphic rotat, zoom a molecul)
+2) and ani other code (preferenti in c) that can help the 
+   project.
+
+final remark;-
+non-profit.  expect to becom share-, free-ware.
+
+	ani help is appreci.
+	thank
+
+-franki
+lau@tammi.harvard.edu
+
+ps pl also email, i mai miss repli-post.

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+ 
+{% load bscttags %}
+
+{% block BSCT_CONTENT %}
+
+<div class="page-header"><h1>user login</h1></div>
+
+<form method  = 'post' action="/user/login">
+    <p>
+        <label for="username">User name</label>
+        <input id="username" type="text" name="username"/>
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password"/>
+    </p>
+    <p>
+        <input type="submit"/>
+    </p>
+</form>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+from: rob@rjck.uucp (robert j.c. kyanko)
+subject: re: vga 640x400 graphic mode
+distribut: world
+organ: neptun softwar inc
+line: 15
+
+gchen@essex.ecn.uoknor.edu write in articl <c55doh.2ai@constel.ecn.uoknor.edu>:
+> 
+> greet!
+> 
+> doe anybodi know if it is possibl to set vga graphic mode to 640x400
+> instead of 640x480?  ani info is appreci!
+
+some vesa bio's support thi mode (0x100).  and *ani* vga should be abl to
+support thi (640x480 by 256 color) sinc it onli requir 256,000 byte.
+my 8514/a vesa tsr support thi; it's the onli vesa mode by card can support
+due to 8514/a restrict. (a wd/paradis)
+
+--
+i am not respons for anyth i do or sai -- i'm just an opinion.
+             robert j.c. kyanko (rob@rjck.uucp)

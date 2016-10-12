@@ -1,0 +1,66 @@
+from: car@access.digex.net (mr. blue)
+
+subject: some rooki question
+
+organ: express access onlin commun, greenbelt, md usa
+
+line: 27
+
+nntp-post-host: access.digex.net
+
+
+
+im new to xlib program. im have a problem i hope someon here can
+
+help me with. i creat a window, and i want it to have some background color,
+
+sai red, and draw an oval in it. further, when i resiz the window, i want
+
+to be abl to redraw the imag so that is fill the new window (whether it
+
+is larger or smaller.) im us aixwindow on an rs6000.
+
+
+
+my problem is thi: when i resiz the window, onli the "origin" part of the
+
+window that wa part of the window creation get drawn into. everyth els
+
+is a grei..the oval "tri" to redraw itself but get clip. i can see that
+
+it would be the right size if i could see all of it, but it onli show up in
+
+the region that wa the origin size of the window when creat.
+
+
+
+for exampl, i start out the window at 200x200 in width and height. if i
+
+resiz it to 400x400, the onli part that ha ani color drawn into it is
+
+is from the origin out to 200x200..the rest is grei. further the oval
+
+onli show up in that 200x200 area.
+
+
+
+what am i do wrong?? how can i get a window to resiz and redraw a 
+
+re-scale imag in it to take up the full size of the window?
+
+
+
+second question:
+
+could someon tell me what xaw and xmu ar???
+
+
+
+thank,
+
+chri
+
+
+
+
+

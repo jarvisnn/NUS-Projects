@@ -1,0 +1,78 @@
+from: tedm@tsoft.net (ted matsumura)
+
+subject: re: leak memori resourc in 3.1
+
+organ: tsoft bb and public access unix, +1 415 969 8238
+
+line: 34
+
+
+
+in articl <1993apr30.180317.5618@sea.gwu.edu> lourai@sea.gwu.edu (michael panayiotaki) write:
+
+>in articl <c6aw83.h7v@csn.org> richardf@teal.csn.org (iriemon) write:
+
+>
+
+>>dmittleman@bpavm.bpa.arizona.edu (daniel mittleman) write:
+
+>>:     i am run win 3.1 with ndw 2.2 on a 486sx with 8 meg of memori and a
+
+>>:     6 meg perm swap file and am get exceedingli frustrat that my
+
+>>:     applic ar not give back system resourc when i close them.
+
+>>:
+
+>>i've notic thi also.  the wai it wa explain to me is that window
+
+>>doe not clear the upper memori block after a program is done.  anyon
+
+>>out there know if thi is why?
+
+>> 
+
+>
+
+>there wa a post about someth similar a while back.  it seem window
+
+>doe *not* take it upon itself to free up ani sy. resourc an
+
+>applllic is us when that applic is done.  that job is left
+
+>entir to the applic.  that is, the applic ha to clean up
+
+>after itself when it quit.
+
+>
+
+>anyon out there know if there is a util for window which  will
+
+>clean up sy. resourc when an applic quit (mother.zip???).
+
+>
+
+>peac,
+
+>mickei
+
+
+
+it could also be that your shell is hog the resourc.  for exampl,
+
+open the app with data file that caus result low system resourc
+
+with ndw 2.x as shell,
+
+ 
+
+then do the same with program manag, and see if it's the shell or the
+
+app.
+
+ 
+
+ted
+
+
+

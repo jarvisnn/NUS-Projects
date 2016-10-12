@@ -1,0 +1,134 @@
+from: dejesu@eniac.sea.upenn.edu (cavali)
+subject: help need
+organ: univers of pennsylvania
+line: 128
+nntp-post-host: eniac.sea.upenn.edu
+
+hello.  i hope somebodi out here can help me.  i am current work
+on a project where i am try to commun from an ibm 386 with
+phoenix bio, us c++, to a board that i made with an intel 8085 cpu
+with uart chip.  the board work fine with the transmit command and 
+termin emul mode of kermit, but there seem to be someth wrong
+with the initi or protocol us when i try c++.  i need to
+access the unit i built us c, becaus i have a sizabl chunk of c
+code that i will be us to perform calcul and oper that
+will be veri difficult to code in assembl languag for the 8085.
+
+i have includ the assembl code that i am run and the c++ code
+that i am try to us.  if anyon can show me someth that i
+am do blatantli incorrectli or that i am miss becaus of my lack
+of knowledg about rs-232 serial commun, pleas e-mail me.
+i wrote the assembl languag to wait for a charact to be receiv and
+then to check it against the 0x20 charact, if a 0x20 is receiv, 
+the led will indic thi.  two c++ program that i have written do
+noth, but set up com port 2 and send the 0x20 charact.  on us
+the bioscom() function in bio.h the other us the softwar interrupt
+int86() function in do.h.  i have tripl check the baud rate ( 2400 )
+the pariti ( none ) the stop bit ( 1 ) the charact length ( 8 bit )
+and the interrupt call for ( 0x14 ).  current, i am at a loss as
+to what mai be wrong.  ani hardwar guru out there want to comment?
+
+
+						thank alot,
+						hubert de jesu
+						dejesu@eniac.sea.upenn.edu
+
+
+  				intel asm
+
+command     equ     3000h                ;command regist on 8155
+porta       equ     3001h                ;port a on 8155
+timerlo     equ     3004h                ;high 8 bit of 8155 timer
+timerhi     equ     3005h                ;low 8 bit of 8155 timer
+uartdata    equ     e000h                ;uart data regist
+uartcmd     equ     e001h                ;uart command regist
+
+            org     4000h                ;sram locat
+	    mvi     a,08h		 ;set low timer bit
+            sta     timerlo
+            mvi     a,40h		 ;set high timer bit
+            sta     timerhi
+            mvi     a,11111101b          ;start timer & enabl port a
+            sta     command
+
+            mvi     a,11h                ;displai 11 on 7-segment led
+            sta     porta
+
+            mvi     a,00h		 ;clear uart command
+            sta     uartcmd
+            sta     uartcmd
+            sta     uartcmd
+            mvi     a,01000000b		 ;intern reset uart 
+            sta     uartcmd
+	    lda     uartdata             ;remov extran data
+ 	    mvi     a,01001111b          ;init uart for 8 data bit,
+            sta     uartcmd              ;  no pariti, 1 stop bit, 64x async
+            mvi     a,00100111b          ;enabl transmit and receiv
+            sta     uartcmd
+
+init:       lda     uartcmd		 ;read statu regist
+            ani     02h                  ;is rxrdy?
+            jz      init                 ;no, loop
+
+            lda     uartdata             ;read data charact
+            cpi     ' '                  ;is charact = 0x20?
+            jnz     init                 ;no, loop
+     
+            mvi     a,22h                ;charact receiv, 
+            sta     porta                ;  displai 22 on 7-segment led
+            hlt
+            end
+
+                              c++ us bioscom()
+
+#includ <stdio.h>
+#includ <stdlib.h>
+#includ <bio.h>
+
+#defin init          0
+#defin send          1
+#defin receiv       2
+#defin statu        3
+
+#defin com2          1
+
+void
+main()
+{
+   char abyt;
+
+   abyt = 0xa3;
+   bioscom( init, abyt, com2 );
+   printf( "initi comm port 2\n" );
+
+   while( !( bioscom( statu, 0, com2 ) & 0x4000 ) )
+     ;
+   abyt = ' ';
+   bioscom( send, abyt, com2 );
+   printf( "sent start charact\n" );
+}
+
+
+        			c++ us int86()
+
+#includ <stdio.h>
+#includ <stdlib.h>
+#includ <do.h>
+#includ <bio.h>
+
+main()
+{
+   union reg regist;
+  
+   regist.h.ah = 0x00;
+   regist.h.al = 0xa7; 
+   regist.x.dx = 0x01;
+   int86( 0x14, &regist, &regist );
+   printf( "com2 initi\n" );
+ 
+   regist.h.ah = 0x01;
+   regist.h.al = 0x20;
+   regist.x.dx = 0x01;
+   int86( 0x14, &regist, &regist );
+   printf( "sent start charact\n" );
+ }

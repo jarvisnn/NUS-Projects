@@ -1,0 +1,46 @@
+from: styx@eurom.rhein-main.de (ruedig merz)
+
+subject: re: prevent user from hit ctrl-alt-bksp to exit x
+
+content-type: text/plain; charset=iso-8859-1
+
+line: 14
+
+content-transfer-encod: 8bit
+
+organ: free softwar associ of germani
+
+x-newsread: minew [fsag] version: 0.1
+
+
+
+hi,
+
+> hello,
+
+> 
+
+> 	i am admin for an rs/6000 run aix 3.2, x11r5, motif, and xdt3.
+
+> 	i want to prevent the user from hit cntl-alt-bkspc to exit x.
+
+
+
+try dontzap in /usr/lib/x11/xconfig
+
+
+
+cu
+
+	styx
+
+
+
+-----
+
+                ** free softwar associ of germani **
+
+                  great softwar should be free softwar
+
+                 phone: 069 - 6312083 data: 069 - 6312934
+

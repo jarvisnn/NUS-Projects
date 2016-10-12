@@ -1,0 +1,20 @@
+from: lmp8913@rigel.tamu.edu (preston, lisa m)
+subject: anoth cview question (wa cview answer)
+organ: texa a&m univers, academ comput servic
+line: 12
+distribut: world
+nntp-post-host: rigel.tamu.edu
+new-softwar: vax/vm vnew 1.41    
+
+
+	ha anybodi gotten cview to work in 32k or 64k color mode on a trident
+8900c hi-color card? at best the color come out screw up, and at worst the 
+program hang. i load the vesa driver, and the same thing happen on 2 
+differ machin.
+
+	if it doesn't work on the trident, doe anybodi know of a viewer that 
+doe?
+
+thanx!
+lisa 
+

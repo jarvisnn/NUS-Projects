@@ -1,0 +1,166 @@
+from: sherman@unx.sa.com (chri sherman)
+
+subject: re: povrai : tga -> rle
+
+nntp-post-host: workroom.unx.sa.com
+
+organ: sa institut inc.
+
+line: 77
+
+
+
+in <1rkkb6$gec@st-jame.comp.vuw.ac.nz> craig.humphrei@comp.vuw.ac.nz (craig andrew humphrei) write:
+
+
+
+
+
+>in articl <ltqp28innpa7@pageboi.cs.utexa.edu>, jhpark@cs.utexa.edu (jihun park) write:
+
+>>hello,
+
+>>i have some problem in convert tga file(gener by povrai) to
+
+>>rle file. when i convert, i do not get ani warn messag. but
+
+>>if i us xloadimag/getx11, someth is wrong.
+
+
+
+>[edit]
+
+
+
+>>i know that i need to instal ppmtorl and tgatoppm, but i do not spend
+
+>>time to instal them. even i do not want to gener .rgb from povrai
+
+>>and then convert them to rle, if possibl.(.rgb to rle work, but
+
+>>it will mess up my directori with so mani file, and it need 2 more
+
+>>step to final convert to rle file. sai cat | rawtorl | rleflip )
+
+>>doe ani bodi out there have same experi/problem ?
+
+
+
+
+
+>well for starter, why us rle file?  
+
+
+
+exactli...
+
+
+
+i didn't want to mess with tga or rle.  so i wrote the follow script. 
+
+all you need is the veri standard set of pbm util. 
+
+
+
+thi script is a .pov to .jpg convert.  just run it like thi:
+
+
+
+  pov2jpg 1280 1024 fred.pov 
+
+
+
+you will need to modifi the path's in the script to reflect where you put
+
+povrai and it includ file.  if you have a problem with disk space, you
+
+can us name pipe instead of temporari file.
+
+
+
+i hope you find it us...
+
+
+
+----------------------------------------------------------------------------
+
+
+
+#!/bin/sh
+
+
+
+if [ $# -lt 3 ] ; then
+
+  echo "usag:  $0 width height sourcefil.pov other_option"
+
+  exit
+
+fi
+
+
+
+width=$1
+
+height=$2
+
+datafil=$3
+
+shift 3
+
+
+
+#basedatafil=`echo $datafil | sed -e "s/\(.*\)\.pov/\1/"`
+
+
+
+thedatafil=`basenam $datafil` 
+
+basedatafil=`basenam $datafil .pov` 
+
+dirdatafil=`dirnam $datafil` 
+
+
+
+cd $dirdatafil
+
+/af/rnd.sa.com/u/sherman/pov/povsrc/build/povrai \
+
+  +l/af/rnd.sa.com/u/sherman/pov/povscn/includ \
+
+  +o/tmp/data$$ +w${width} +h${height} +fr +i${thedatafil} $*
+
+
+
+echo " "
+
+rawtopgm $width $height < /tmp/data$$.grn > /tmp/green$$
+
+rawtopgm $width $height < /tmp/data$$.red > /tmp/red$$
+
+rawtopgm $width $height < /tmp/data$$.blu > /tmp/blue$$
+
+rgb3toppm /tmp/red$$ /tmp/green$$ /tmp/blue$$ | cjpeg > ${basedatafil}.jpg 
+
+rm /tmp/red$$ /tmp/green$$ /tmp/blue$$ /tmp/data$$.grn /tmp/data$$.red \
+
+   /tmp/data$$.blu
+
+echo "wrote output to ${basedatafil}.jpg"
+
+
+
+---------------------------------------------------------------------------
+
+
+
+--
+
+     ____/     /     /     __  /    _  _/    ____/
+
+    /         /     /     /   /      /     /          chri sherman
+
+   /         ___   /        _/      /          /
+
+ _____/   __/   __/   __/ _\    _____/   _____/           sherman@unx.sa.com
+

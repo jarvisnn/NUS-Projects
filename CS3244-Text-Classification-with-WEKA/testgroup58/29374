@@ -1,0 +1,62 @@
+from: pb@idca.td.philip.nl (peter brouwer)
+
+subject: re: mysteri xdm file
+
+repli-to: pb@idca.td.philip.nl (peter brouwer)
+
+organ: digit equip enterpris b.v.,apeldoorn,the netherland.
+
+line: 25
+
+
+
+x-disclaim: all view ar my own unless expicitli state otherwis.
+
+
+
+in <1993mai18.235641.10747@csi.jpl.nasa.gov> mwett@csi.jpl.nasa.gov (matt wett) write:
+
+
+
+>i'm get lot of file in /usr/lib/x11/xdm of the form
+
+>	abert:0-a00138
+
+
+
+>i'm run xdm.  anybodi know what these ar and, better yet, how to
+
+>move them (i.e., what resourc can i chang to make them appear
+
+>somewher els)?
+
+
+
+that ar the authoris file for the server.
+
+depend on what type of kei your x support thei contain magic cooki,
+
+de base authent or sun de authent.
+
+
+
+the place is defin with the displaymanag.authdir 
+
+other thing like the file name can be chang as well see xdm manual page.
+
+
+
+
+
+
+
+--
+
+#peter brouwer,                | digit equip enterpris ,              #
+
+#net  : pb@idca.td.philip.nl | integr industri standard system,      #
+
+#phone:ext [+31] [-0]55 434218,| dept system engin, bld v1/b7          #
+
+#fax  :ext [+31] [-0]55 432103 | p.o.box 245,7300ae apeldoorn,the netherland#
+

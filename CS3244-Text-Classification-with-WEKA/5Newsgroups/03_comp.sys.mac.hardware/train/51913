@@ -1,0 +1,29 @@
+from: bauer@informatik.uni-ulm.de (christian bauer)
+subject: re: q700 at 34.5mhz, it's fine...
+nntp-post-host: christian.informatik.uni-ulm.de
+organ: univers of ulm
+line: 23
+
+in articl <lee5.734735026@husc.harvard.edu>, lee5@husc8.harvard.edu
+(patrick lee) wrote:
+> 
+> mene@informatik.tu-muenchen.de (rainer mene) write:
+> 
+> 
+> >i wonder why nobodi ha ever tri to replac the oscil onli, like on a mac iisi. as i understand the newer variabl speed overdr is onli hardwar, and alittl init which is us to adjust the speed. my idear is to replac the cristal oscil wit
+> h a socket and than i can chang the oscil veri easi. thi will be alot cheaper the the newer variabl speed overdr. i would gue onli 20$ to 50$ ar need to do the upgrad. 
+> 
+> >doe someon on the net ever tri thi variant of speed up the quadra 700??
+in the mai issu of c't magazin wa an articl about upgrad 040 model
+of appl. thei simpli chang crystal and add a fan.
+hammerhead: centri 610 wa abl to work with 25 mhz (cooler prefer)
+            and for 1000 dm you get an 68040 (33mhz) which work with the
+            appropri crystal at full speed. (extra cool requir)    
+            centri 650 like quadra 700 with extra cool 33mhz work on
+            most machin and for real power enthusiast thei us a
+            quadra 950 at 40 mhz wow! but for better descript you should
+            get thi issu of c't (a german pc magazin!) 
+
+christian bauer
+
+bauer@informatik.uni-ulm.de

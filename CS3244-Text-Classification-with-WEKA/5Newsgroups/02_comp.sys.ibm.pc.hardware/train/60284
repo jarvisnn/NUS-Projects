@@ -1,0 +1,46 @@
+from: doug_ok@mindlink.bc.ca (doug ok)
+subject: memori access time (wa re: sram and simm 4 sale)
+organ: mind link! - british columbia, canada
+line: 41
+
+> ben elliston write:
+>
+> msg-id: <734606726.aa00887@f262.n620.z3.fidonet.org>
+> post: mon, 12 apr 1993 10:41:0
+>
+> organ: compact solut, canberra act australia
+>
+>  > 64k of 25ns sram
+>
+> by my wai of think, michael, how could thi memori be static ram if it
+> ha a speed rate?  i didn't think sram need a refresh time.
+>
+> doesn't that make it fast dram?
+
+thi chip would take 25ns to return valid data after be issu an address.
+
+refresh time (none for sram, as you point out) is a differ paramet,
+and is not gener refer to except by motherboard design.
+>
+> cheer,
+> ben
+> ----------------------------------------------------------------------------
+> --
+> ben elliston
+> bachelor of engin (comput engin)
+> univers of canberra
+>
+> email:      tp923021@jarrah.canberra.edu.au
+> uucp:       ..!uunet!munnari!sserv.adfa.oz.au!compsol!root
+> fidonet:    3:620/262
+> ----------------------------------------------------------------------------
+> --
+> if a train station is where the train stop, what's a workstat?!
+> ----------------------------------------------------------------------------
+> --
+>
+>  * origin: % compact solut % canberra act australia % (3:620/262)
+
+
+--
+doug ok - vancouv, canada                  doug_ok@mindlink.bc.ca

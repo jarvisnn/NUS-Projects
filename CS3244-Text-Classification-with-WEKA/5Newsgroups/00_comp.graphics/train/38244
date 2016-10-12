@@ -1,0 +1,51 @@
+from: clipper@mccarthi.csd.uwo.ca (khun yee fung)
+subject: re: look for circl algorithm faster than bresenham
+organ: depart of comput scienc, the univers of western
+	ontario, london, ontario, canada
+in-repli-to: graem@labtam.labtam.oz.au's messag of wed, 14 apr 1993 04:49:46 gmt
+	<1993apr13.025240.8884@nwnexu.wa.com>
+	<1993apr14.044946.12144@labtam.labtam.oz.au>
+nntp-post-host: mccarthi.csd.uwo.ca
+line: 41
+
+>>>>> on wed, 14 apr 1993 04:49:46 gmt, graem@labtam.labtam.oz.au (graem gill) said:
+
+graem> 	ye, that's known as "bresenham run length slice algorithm for
+graem> increment line". see fundament algorithm for comput graphic,
+graem> springer-verlag, berlin heidelberg 1985.
+
+> i have tri to extrapol thi to circl but i can't figur out
+> how to determin the length of the slice. ani idea?
+
+graem> 	hmm. i don't think i can help you with thi, but you might
+graem> take a look at the follow:
+
+graem> 	"doubl-step increment gener of line and circl",
+graem> x. wu and j. g. rokn, comput graphic and imag process,
+graem> vol 37, no. 4, mar. 1987, pp. 331-334
+
+graem> 	"doubl-step gener of ellips", x. wu and j. g. rokn,
+graem> ieee comput graphic & applic, mai 1989, pp. 56-69
+
+anoth paper you might want to consid is:
+
+@articl{fungdraw,
+  titl="a run-length slice line draw algorithm without divis oper",
+  author="khun yee fung and tina m. nichol and a. k. dewdnei",
+  journal="comput graphic forum",
+  year=1992,
+  volum=11,
+  number=3,
+  page="c-267--c-277"
+}
+
+khun yee
+--
+khun yee fung    clipper@csd.uwo.ca
+depart of comput scienc
+middlesex colleg
+univers of western ontario
+london, ontario
+canada n6a 5b7
+tel: (519) 661-6889
+fax: (519) 661-3515

@@ -1,0 +1,34 @@
+from: apland@mala.bc.ca (ron apland)
+subject: re: w4wg & novel
+organ: malaspina colleg
+line: 29
+
+in articl <1993apr27.102626.1@csc.canterburi.ac.nz>, cctr132@csc.canterburi.ac.nz (nick fitzgerald, pc softwar consult, csc, uoc, nz) write:
+> in articl <1rh2mi$ea4@msuinfo.cl.msu.edu>, bilan@cp.msu.edu (thoma j
+> bilan) write:
+> 
+>> if i put lastdriv = z in my config.sy, netx will run but i can't access
+>> drive f: to log in to novel.  
+>> if i don't put lastdriv = z in my config.sy i can't access other w4wg 
+>> drive from the file-manag.
+>>
+>> it seem that there should be a wai to make netx work with the lastdriv = 
+>> statement in my config.sy.
+> 
+> first off, i haven't us w4wg (but i think that's about to chang!).
+> 
+> the problem is the lastdriv command and the wai netwar in gener (and
+> in thi case netx in particular) add drive to the devic chain. 
+> set lastdriv=z mean there ar no "unassign" (as oppos to
+> "unus") drive letter for netwar to us, as it tack it drive
+> map -onto the end- of the exist list of drive.  w4wg obvious
+> attach it network drive to "exist, unus" drive letter.
+> 
+> i'd guess the next thing i'd try is someth like lastdriv=m, which on
+> most machin will leav a fair swath of drive for w4wg and still
+> allow up to 13 netwar drive map as well.
+
+w4wg requir do drive.  i us lastdriv=j which make my first novel drive
+k and leav me drive g, h, i and j for w4wg.  my local do drive us a-f.
+
+ron

@@ -1,0 +1,17 @@
+from: eapu207@orion.oac.uci.edu (john peter kondi)
+subject: i need to make my vga do shade.
+nntp-post-host: orion.oac.uci.edu
+line: 12
+
+i have a routin that chang the color (rgb) attribut on my
+vga adapt, but it doesn't work in the mode that i need.  
+specif 68 hex.  an obscur mode, of cours, but i need to
+chang the zillion of color to 64 shade greyscal, but i do
+not have the correct memori address for the pointer i need.
+
+pleas, someon, i need the start address, or mayb somewher 
+i can find it.  thank you.
+
+john kondi
+eapu207@orion.oac.uci.edu
+

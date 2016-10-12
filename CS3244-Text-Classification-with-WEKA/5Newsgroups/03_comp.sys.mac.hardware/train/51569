@@ -1,0 +1,40 @@
+from: davisson@stein.u.washington.edu (gordon davisson)
+subject: re: interest adb behaviour on c650
+organ: univers of washington, seattl
+line: 34
+nntp-post-host: stein.u.washington.edu
+
+in articl <1993apr16.091202.15500@waikato.ac.nz> ldo@waikato.ac.nz (lawrenc d'oliveiro, waikato univers) write:
+>in articl <1993apr15.181440.15490@waikato.ac.nz>, i said:
+>> i know that plug and unplug adb devic with the power on is "not
+>> support", and you can hit problem if you have multipl devic with
+>> clash address, and all that.
+
+>i've had a coupl of e-mail respons from peopl who seem to believ that
+>thi sort of thing is not onli unsupport, it is downright danger.
+>
+>i have heard of no such warn from anybodi at appl. just to be sure, i
+>ask a coupl of our technician, on of whom ha been servic mac for
+>year. there is *no* danger of damag logic board by plug and unplug
+>adb devic with the power on.
+
+noooooooo!  i've been servic mac for year too, and i've had to
+repair a number of motherboard that had been damag thi wai.  it's
+rare, but it doe happen.
+
+mind you, thi doesn't mean you shouldn't do it.  the part that can
+blow (the adb power fuse and rf filter) aren't too expens, so if you
+have a someon around who can do compon-level repair, it mai be worth
+the risk (especi if you're around seattl, 'caus you might get to
+pai *me* to fix it :-))..  on the other hand, if your onli repair option
+is the appl-standard logic board swap (major $$$$), you should probabl
+plai it safe.
+
+>scsi, ye, adb, no...
+
+scsi: ye, adb: ye, floppi: ye...  thei can all caus troubl.
+
+--
+gordon davisson		davisson@stein.u.washington.edu
+westwind comput	(206) 632-8141
+4518 univers wai ne, suit 311, seattl wa 98105

@@ -1,0 +1,41 @@
+from: lapp@waterloo.hp.com (david lapp)
+subject: re: numlock mask? interfer with meta/compos/extendchar, ...
+nntp-post-host: hppadan.waterloo.hp.com
+organ: hp panacom div waterloo on canada
+x-newsread: tin [version 1.1 pl8.9]
+line: 34
+
+ralph seguin (rp@arbortext.com) wrote:
+: > my question is thi:  is there a mean of determin what the state
+: > of capslock and/or numlock is?
+
+: alright.  ignor thi.  i have delv a bit deeper (xkeyev) and
+: found what i wa look for.
+
+: ev->state   ha a bunch of mask to check against (lockmask is the on
+: for capslock).  unfortun, it appear that the numlock mask vari
+: from server to server.  how doe on tell what mask is numlock and
+: which ar for meta (mod1mask, mod2mask, mod3mask, mod4mask, mod5mask).
+: eg, sgi's vendor server ha mod2mask be numlock, wherea solari
+: 1.0.1 openwindow 3.0 ha mod3mask for numlock.  is there an
+: unambigu mean of determin numlock's mask at runtim for ani
+: given server?  sorri for the wast bandwidth and my appal ignor.
+
+you'll have to check the keysym(s) on each of the kei for each
+modifi. the on with numlock in it map is the modifi
+you want. a bit ugli perhap but i think it current the onli
+wai to do thi (and it doe have some preced as keysym ar 
+us to differenti capslock from shiftlock for the lock
+modifi).
+
+i don't know of an accept strategi for handl ambigu
+assign either. (ie. what if numlock is map for more then
+on modifi). i suppos first found is as good as ani.
+
+x doesn't handl lock modifi that well. 
+
+hope that help,
+
+dave lapp
+
+standard disclaim etc...

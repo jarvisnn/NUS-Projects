@@ -1,0 +1,18 @@
+from: cs89ssg@brunel.ac.uk (sunil gupta)
+subject: re: rtrace 8.2.0
+organ: brunel univers, uxbridg, uk
+line: 12
+x-newsread: tin [version 1.1 pl8]
+
+comp. graphic/cad (cgcad@bart.inescn.pt) wrote:
+: there is a new version of the rtrace rai-trace packag (8.2.0) at
+: asterix.inescn.pt [192.35.246.17] in directori pub/rtrace.
+: check the readm file.
+
+cant seem to reach the site from over here:
+
+>#ping 192.35.246.17
+>icmp net unreach from gatewai nsn-fix-pe.sura.net (192.80.214.253)
+>for icmp from ccw-24.brunel.ac.uk (134.83.176.30) to 192.35.246.17
+
+is it possibl for you to upload to a more mainstream ftp place?

@@ -1,0 +1,70 @@
+from: nurden1@elain.ee.und.ac.za (dale nurden)
+
+subject: re: bio password
+
+organ: elec. eng., univ. natal, durban, s. africa
+
+line: 29
+
+nntp-post-host: pc-elxx1.ee.und.ac.za
+
+
+
+>some of our student chang the ami bio password on a few of our comput 
+
+>and set it for alwai. what we'd like to know is if there is a wai to bypass 
+
+>or remov the password. we have tri switch bio, but to no avail. the 
+
+>batteri is solder to the bord, an all three machin is still under 
+
+>guarente so if that would have help we can't remov the batteri.
+
+
+
+as far as i know, there is no wai to get around the bio password except by 
+
+short out the power suppli to the cmo memori, therebi eras it. thi 
+
+will remov the password, but it will also destroi all the previou bio 
+
+set, so then you'll have to go and set them all up again. on my 386, 
+
+there is a jumper on the motherboard which is provid for the purpos of 
+
+short the batteri. you just short thi jumper briefli, and it interrupt 
+
+power to the cmo long enough to eras it. i would imagin there is 
+
+someth like thi on your board too. 
+
+
+
+in the futur, i would suggest that you set the password, and leav it on 
+
+"setup" onli. that wai, no-on els can go and reset it or set it to "
+
+alwai" unless thei know what password you us. thei had to do thi over 
+
+here too when thei got a bunch of new 386's, for just the same reason.
+
+
+
+-dale
+
+
+
+ /~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+
+|      dale m. nurden         \   /       nurden1@elain.ee.und.ac.za    |
+
+|                            _  #  _                                     |
+
+|  technic co-ordin       |       dept. of electron engin  |
+
+|    durban youth radio        /|\        univers of natal, durban    |
+
+|   durban, south africa    __/_|_\__            south africa            |
+
+ \______________________________________________________________________/
+

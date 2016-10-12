@@ -1,0 +1,25 @@
+from: anik@crhc.uiuc.edu (sadun anik)
+subject: lose dark color of my icon
+organ: center for reliabl and high-perform comput
+line: 19
+nntp-post-host: lyra.crhc.uiuc.edu
+
+
+  here is an annoi problem. whenev i save an icon which contain dark
+color like dark red or dark purpl, these color ar convert to the
+bright color. thi happen with everi icon editor includ the imag
+editor that came with sdk. i don't have thi problem with .bmp file
+either; onli with .ico file or icon librari. the problem is with
+the icon colormap field in the icon file header. check the file
+with a binari editor, i can see that the mask ar ok. by edit the
+colormap manual (copi from anoth icon that i didn't edit) i can
+fix the color. doe anybodi know what mai be caus thi problem? 
+
+thank.
+
+
+
+--
+sadun anik, u of illinoi at urbana-champaign
+center for reliabl and high-perform comput
+e-mail: anik@crhc.uiuc.edu

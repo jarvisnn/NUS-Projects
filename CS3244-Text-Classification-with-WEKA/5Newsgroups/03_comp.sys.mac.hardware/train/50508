@@ -1,0 +1,62 @@
+from: peter hansen <pgmoffc@bnr.ca>
+subject: re: help: 2 intern hd in mac ii?
+x-xxdate: tue, 6 apr 93 11:16:56 gmt
+nntp-post-host: bcarm382
+organ: bnr
+x-userag: nuntiu v1.1.1d17
+line: 54
+
+in articl <1993apr1.054820.3942@siemen.co.at> kurt netzer,
+kurt@siemen.co.at write:
+>is it possibl to instal a 2nd 3 1/2" 100 mb hd in a mac ii with a
+>5 1/4" 40 mb qunatum hd?
+>can i us a 50 pin cabl with 3 connector for the intern motherboard
+>scsi-connector and the 2 scsi-hd connector. the first hd is'nt
+termin
+>the second will be.
+>what about the power suppli. where can i connect a 3 1/2" amp-connector
+>to suppli my 3 1/2" hd?
+
+it is veri possibl to connect anoth intern hard disk in ani
+macintosh if you can find the space to put it. i have a iisi that came
+with a quantum 80 meg drive. when i ran into space problem, i slap in
+anoth 40 meg quantum that i had sit on a shelf. here is what i did.
+ 
+first off, i wa concern about space. sinc both drive ar quantum
+quarter height drive, i final decid that the logic place for them
+wa stack on upon the other. fine, thei fit snugli. (i have not had a
+problem with heat yet, and these drive have been run togeth for
+over two month.
+
+the next problem wa connect the drive. if you have a spare intern
+hard disk power cabl as i did, then half of your troubl ar over. just
+splice in the extra cabl so that you get on squar motherboard
+connector and two hard disk power connector. if you don't have a spare
+cabl, you will have to bui the wire and connector which can be found
+in ani good electron store for about $10. i would suggest properli
+solder/heatshrink the connect to reduc the possibl of
+short or bad connect.
+
+next, you need a ribbon cabl connect. again, i had a spare hard disk
+ribbon cabl, and i want to be care in case thi didn't word so what
+i did wa purchas a crimp on 50 pin cabl connector that gave me anoth
+male connector in the middl of my spare cabl. the part cost $10 again,
+and is easili attach with ani good wood vice. the theori behind us a
+crimp on connector is that if thi doesn't work, my origin cabl is not
+damag, and i can go back to the origin setup.
+
+have done all that, i couldn't be bother to check the dev note for
+power consumpt so i plug it in and it work like a charm to thi
+dai. 
+
+in a mac ii, everyth should work the same. be care with the id's of
+the drive, and ensur that the termin resistor on both drive ar
+intact. i did not try thi without the termin resistor but it
+seem logic that if i am split the scsi chain, that the signal
+should be termin at all the end.
+
+let me know if you have ani more question.
+
+peter hansen
+bell northern research
+pgmoffc@bnr.ca

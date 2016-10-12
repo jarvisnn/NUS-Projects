@@ -1,0 +1,27 @@
+from: gowen@jade.tuft.edu (g. lee owen)
+subject: re: postscript on x-termin
+in-repli-to: sp1henhj@edit's messag of 22 apr 93 14:08:31 gmt
+line: 20
+organ: tuft univers - medford, ma
+distribut: na
+
+
+> i have a problem when i'm us postscript. when i am work local 
+> on a sun sparcstat ipc the postscript work good, but when i connect
+> to the sun from a x-termin i just get error messag that the
+> postscript cannot connect to the new-displai.
+>  why doesn't postscript work on an x-termin
+
+	becaus xtermin do not have a new server.  xtermin have
+speed by natur of their limit function: onc you add new and
+everyth els, you have a workstat.  there ar workaround, i've
+heard, on involv a perl script.  what we ar try to do is
+replac program that need new (like pageview) with program that
+don't (like ghostview).
+	mayb someon els can elabor on the perl workaround; i
+have no person experi with it.
+
+  greg owen  { gowen@fort.cs.tuft.edu, gowen@jade.tuft.edu }
+system programm and ta, tuft univers comput scienc dept.
+  230-   all transfer ar disclaim by my host name and boss's address.
+  230-   if you don't like thi polici, disconnect now!

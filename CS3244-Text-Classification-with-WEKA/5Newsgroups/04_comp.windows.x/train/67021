@@ -1,0 +1,19 @@
+from: nchan@nova.ctr.columbia.edu (nui chan)
+subject: how to put rpc in hp x/motif environ?
+organ: columbia univers center for telecommun research
+x-post-from: nova.ctr.columbia.edu
+nntp-post-host: sol.ctr.columbia.edu
+line: 12
+
+
+hi, 
+
+ha anybodi implement an rpc server in the hp xwindow? in sun xview, there
+is a notifi_enabl_rpc_svc() call that automat execut the rpc process
+when it detect an incom request. i wonder if there is a similar function in
+hp x/motif that perform the same function.
+
+ani help is appreci.
+
+nui chan
+nchan@ctr.columbia.edu

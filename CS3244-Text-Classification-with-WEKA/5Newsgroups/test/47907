@@ -1,0 +1,100 @@
+from: ebosco@us.oracl.com (eric bosco)
+
+subject: re: emm386 and window
+
+nntp-post-host: monica.us.oracl.com
+
+repli-to: ebosco@us.oracl.com
+
+organ: oracl corp., redwood shore ca
+
+x-disclaim: thi messag wa written by an unauthent user
+
+              at oracl corpor.  the opinion express ar those
+
+              of the user and not necessarili those of oracl.
+
+line: 40
+
+
+
+in articl <ardi.313.736188058@ux1.cso.uiuc.edu> ardi@ux1.cso.uiuc.edu  
+
+(ardi mack) write:
+
+> >on my pc i almost exclus run window. the onli do base  
+
+applic  
+
+> >i have is procommplu.  in my config.sy i have emm386 load with the  
+
+> >option noem (no expand memori). follow a thread in on of the  
+
+comp  
+
+> >newsgroup, i read that it wa no necessari to have emm386 load.  
+
+inde,  
+
+> >in the manual, it sai that emm386 is us to get expand memori out  
+
+of  
+
+> >extend memori. sinc i have the noem option, it seem to me that the  
+
+> >emm386 devic is useless in my case. 
+
+> >
+
+> >should i us emm386 or should i remov it from my config.sy?
+
+> >
+
+> >thank for your help,
+
+> >
+
+> >-eric
+
+> 
+
+> emm386 noem enabl the system to us the "upper memori" between 640  
+
+and 
+
+> 1024.  that's a good place for devic driver, do kernal, etc.
+
+> (keep it in!)
+
+
+
+well, i thought that highmem.sy would do that too. i just took out emm386  
+
+of my config.sy, and i'm still load my other driver high (mous, vga  
+
+shadow bio, do-kei etc.) i haven't check mem/c, but i believ i have  
+
+manag to load them high (ie between 640kb and 1024kb).
+
+
+
+also, ever sinc i took out emm386, window load slightli faster, i get  
+
+about 3 extra meg of freemem in window (i'm run 386 enhanc with 4  
+
+meg ram, 7 meg swap) and i got rid of my ctrl-alt del reboot problem  
+
+(befor, the comput would not reboot us ctrl-alt-del after exit  
+
+window). 
+
+
+
+i would realli like to keep emm386 out of my config.sy. anybodi els have  
+
+info on thi???
+
+
+
+-eric
+

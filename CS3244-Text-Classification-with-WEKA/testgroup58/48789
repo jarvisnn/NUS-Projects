@@ -1,0 +1,116 @@
+from: kelsei@mdd.comm.mot.com (joe kelsei)
+
+subject: re: xv 3.00 ha escap!
+
+organ: motorola, mobil data divis - seattl, wa
+
+line: 53
+
+
+
+in <1rmhiuinnh2a@skeena.uc.ubc.ca> lindholm@uc.ubc.ca (georg lindholm) write:
+
+>in articl <1rlhhkinng62@skeena.uc.ubc.ca>, lindholm@uc.ubc.ca (georg lindholm) write:
+
+>> in articl <123645@netnew.upenn.edu> bradlei@grip.ci.upenn.edu (john bradlei) write:
+
+>> and here is the first patch :-) the follow fix some problem with the
+
+>> imakefil file and make it possibl to compil xv-3.00 under solari without 
+
+>> have to us the ucb stuff:
+
+
+
+>oop, i didn't get the signal process right (that what i get from do
+
+>the work on an ascii termin). here is the fix patch:
+
+
+
+the patch for xv.h need to us ``#ifdef svr4'' rather than the
+
+overli complex ``#if defin(sun) && defin(sysv)'' in order to
+
+gener compil xv on i386svr4architectur.  also, rand and srand
+
+don't work veri well--us lrand48 and seed48 to get better result.
+
+otherwis, xv-3.00 compil just fine on my esix system v 4.0.4 box
+
+with xfree86 and gcc-2.3.3.  i just uncom the gcc definit in
+
+the makefil, ad -l/usr/x386/lib -i/usr/x386/includ to the copt
+
+line and modifi lib to includ -lsocket -lnsl.  realli john, if you
+
+just us the imakefil thing like thi don't even have to get
+
+mention...
+
+
+
+*** 1.1	1993/04/28 08:33:13
+
+--- xv.h	1993/04/28 17:47:38
+
+***************
+
+*** 284,292 ****
+
+--- 284,298 ----
+
+  
+
+  
+
+  /* signal macro */
+
++ #ifdef svr4
+
++ #defin hold_sig         sighold(sigalrm)
+
++ #defin releas_sig      sigrels(sigalrm)
+
++ #defin paus_sig        sigpaus(sigalrm)
+
++ #els
+
+  #defin hold_sig         sigblock(sigmask(sigalrm))
+
+  #defin releas_sig      sigblock(0)
+
+  #defin paus_sig        sigpaus(0)
+
++ #endif
+
+  
+
+  
+
+  /* default for most folk */
+
+***************
+
+*** 318,323 ****
+
+--- 324,333 ----
+
+  #defin random  rand
+
+  #defin srandom srand
+
+  #endif
+
++ #ifdef svr4
+
++ #defin random lrand48
+
++ #defin srandom seed48
+
++ #endif
+
+  
+
+  
+

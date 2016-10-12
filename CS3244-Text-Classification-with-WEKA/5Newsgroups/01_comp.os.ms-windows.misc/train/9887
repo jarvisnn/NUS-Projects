@@ -1,0 +1,24 @@
+from: ekalenda@netcom.com (edward j kalenda)
+subject: re: overlap window without a titl bar
+organ: netcom on-line commun servic (408 241-9760 guest)
+distribut: usa
+line: 18
+
+from articl <1rc07h$ern@olivea.atc.olivetti.com>, by manu@oa.olivetti.com (manu da):
+> 
+> i have a overlap window(sai v) which ha few child window (a,b,c, etc)
+> the window show up with all it's children fine. now, i creat anoth 
+> child(t) with a ws_thickfram style and place on top of on or more of
+> it's sibl. style ws_thickfram is us so that i can resiz it. how do
+> i make sure that the child 't' will alwai be at the top of it's sibl.
+> i us setwindowpo() and bringwindowtotop() without success. what's happen
+> is that while i am resiz 't' it show up but as soon as i let go, it goe
+> behild it's sibl.
+
+the window is probobl on top but the lower window ar draw over it.
+try us ws_clipsibl to keep the lower sibl from draw on the
+top sibl's space.
+-- 
+
+ed
+ekalenda@netcom.com

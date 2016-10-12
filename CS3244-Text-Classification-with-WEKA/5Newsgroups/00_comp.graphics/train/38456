@@ -1,0 +1,75 @@
+from: lioness@mapl.circa.ufl.edu
+subject: re: comp.graphic.programm
+organ: center for instruct and research comput activ
+line: 68
+repli-to: lioness@ufcc.ufl.edu
+nntp-post-host: mapl.circa.ufl.edu
+
+in articl <andreasa.157.735211806@dhhalden.no>, andreasa@dhhalden.no (andrea arff) write:
+|>hello netter
+|>
+|>sorri, i don't know if thi is the right wai of do thi kind of thing,
+|>probabl should be a cfv, but sinc i don't have tha abil to creat a 
+|>new group myself, i just want to start the discuss. 
+|>
+|>i enjoi read c.g veri much, but i often find it difficult to sort out what
+|>i'm interest in. everyth from screen-driver, graphic card, graphic
+|>program and graphic program ar discus here. what i'd like is a 
+|>comp.graphic.programm new group.
+|>what do you other think.
+
+thi sound wonder, but it seem no on either want to spend time do
+thi, or thei don't have the power to do so.  for exampl, i would like
+to see a comp.graphic architectur like thi:
+
+comp.graphic.algorithm.2d
+comp.graphic.algorithm.3d
+comp.graphic.algorithm.misc
+comp.graphic.hardwar
+comp.graphic.misc
+comp.graphic.softwar/app
+
+howev, that is almost overkil.  someth more like thi would probabl
+make everyon a lot happier:
+
+comp.graphic.programm
+comp.graphic.hardwar
+comp.graphic.app
+comp.graphic.misc
+
+it would be nice to see special group devot to 2d, 3d, morph,
+raytrac, imag process, interact graphic, toolkit, languag,
+object system, etc. but these could be post to a relev group or
+have a mail list organ.
+
+that wai when someon read new thei don't have to see these subject
+head, which ar rather dispar:
+
+system specif stuff ( should be under comp.sy or comp.os.???.programm ):
+
+	"need help program gl"
+	"modex program inform?"
+	"fast sprite on pc"
+
+hardwar technic stuff:
+
+	"speed of weitek p9000"
+	"driver for speedstar 24x"
+
+applic orient stuff:
+
+	"vistapro 3.0 help"
+	"how good is 3dstudio?"
+	"best imag process program for amiga"
+
+program orient stuff:
+
+	"fast polygon routin need"
+	"good morph alogirhtm want"
+	"best depth sort for triangl?"
+	"which c++ librari to get?"
+
+i wish someon with the power would get a cfd and then a cfv go on
+thi stuff....thi newsgroup need it.
+
+brian

@@ -1,0 +1,110 @@
+from: rick@ee.uwm.edu (rick miller)
+
+subject: how to make your own x-face: in 0x000c easi step!
+
+summari: how's thi?
+
+organ: just me.
+
+line: 46
+
+nntp-post-host: 129.89.2.33
+
+x-face: %:a<m@dob}bo"'e",eeqgbn7qy(en7as5u([k//"g{6^hibi9x8~+pd($}6szf"&vvxcxsn
+
+ 8mw^0g#nvhe%w,`x"[j0s{r.~%zs:o|hfu=lwzygh
+
+
+
+will someon who can 'see' the x-face includ in thi header pleas repli
+
+and tell me if it turn out okai?
+
+
+
+i'm not all too sure about my view softwar.  i *hand*-convert thi
+
+thing in "vi" from a sun rasterfil... what a pain!
+
+
+
+for folk who haven't the slightest, it went like thi:
+
+
+
+-------------------------------------------------------------
+
+
+
+		how to make your own x-face:
+
+		   in 0x000f easi step!
+
+
+
+	1. scan my driver' licens into a *.pcx file.
+
+	2. us wingif to 'trim' my face out of the licens,
+
+		'reduc' it by half, and
+
+		convert it to *.bmp.
+
+	3. us paintbrush to touch up manual.
+
+	4. us wingif to 'reduc' it by half again.
+
+	5. us paintbrush to touch up again.
+
+	6. us wingif to 'reduc' it by half *again*
+
+		and convert it to *.gif.
+
+
+
+		[now over to the unix side...]
+
+
+
+	7. us snapshot to convert the *.gif to a sun rasterfil.
+
+	8. us iconedit to touch it up and
+
+		convert it to an x bitmap.
+
+	9. us "vi" (ye, a *text* editor) to manual convert
+
+		the rasterfil into the "uncompress x-face" format.
+
+		(lot of global "ed" command, and by the time you're
+
+		 done you'll mirror hex bytewis in your sleep!!)
+
+
+
+		[now over to the *linux* side...]
+
+
+
+	a. us "compfac" to convert it to what you see here:
+
+
+
+ %:a<m@dob}bo"'e",eeqgbn7qy(en7as5u([k//"g{6^hibi9x8~+pd($}6szf"&vvxcxsn
+
+ 8mw^0g#nvhe%w,`x"[j0s{r.~%zs:o|hfu=lwzygh
+
+
+
+	b. try view it by whatev mean you have avail.
+
+	c. go back to step 9, but do it *right* thi time.
+
+
+
+rick miller  <rick@ee.uwm.edu> | <ricxjo@discu.mil.wi.us>   ricxjo muelisto
+
+send a postcard, get on back! | enposxtigu bildkarton kaj vi ricevo alion!
+
+          rick miller // 16203 wood // muskego, wi. 53150 // usa
+

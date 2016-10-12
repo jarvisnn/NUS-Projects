@@ -1,0 +1,43 @@
+from: nagel@ucsu.colorado.edu (kurt nagel)
+subject: re: ami pro 3.0 and equat mode
+nntp-post-host: fido.colorado.edu
+organ: univers of colorado, boulder
+line: 37
+
+nagel@ucsu.colorado.edu (kurt nagel) write:
+
+>hi,
+
+>	i'm have a problem with amipro when write equat.  if the
+>equat extend past a certain point on a line, the whole thing disappear.
+>if i then try to delet the equat or cursor beyond the equat, ami
+>goe nut.  the line counter at the bottom of the screen increment
+>repeatedli and the onli wai out is to ctrl-atl-del.  if i have been
+>unfortun enough to save a document with on of these screw up
+>equat, the document is basic trash.  (although i have been
+>abl to fix them by go into an ascii editor and delet larg
+>chunk of the document)
+
+>	ha anyon els experienc thi?  doe lotu know about it
+>and or have a patch???????.
+
+>thank in advanc,
+
+>kurt
+>nagel@fido.colorado.edu
+
+i contact lotu about thi problem todai.  it ha been report previous
+and there is a fix.  apparantli the problem onli occur when tab charact
+ar us immedi preced the equat frame.  the work around when
+equat ar expect to touch the right margin is to delet at least on
+preced tab and us space to align the frame (or us set frame where
+place w/no text wrap around).  unforutn, onc the page run-on ha
+occur you ar hose. so the moral of the stori is us onli space charact
+to align equat frame.
+
+hope thi help the rest of you who have alreadi contact me with thi 
+problem.
+
+kurt
+nagel@fido.colorado.edu
+

@@ -1,0 +1,24 @@
+from: down@helio.nevada.edu (lamont down)
+subject: re: window 3.1 keep crash: pleas help
+line: 18
+nntp-post-host: cat.lv-lib.nevada.edu
+organ: unlv
+
+in articl <1993apr16.155637.15398@oracl.us.oracl.com> ebosco@us.oracl.com (eric bosco) write:
+>from: ebosco@us.oracl.com (eric bosco)
+>subject: window 3.1 keep crash: pleas help
+>date: fri, 16 apr 1993 15:56:37 gmt
+>
+>as the subject sai, window 3.1 keep crash (givinh me gpf) on me of  
+>late.  it wa never a veri stabl packag, but now it seem to crash everi  
+>dai.  the worst part about it is that it doe not crash consist: ie i  
+
+have you tri set file in your config.sy file to a fairli high
+number? (i've got mine set to 100; i've seen number from 40 to 100 
+recommend). also check your stack statement, stack=9,256 is a good
+start point. try increas it if it's alreadi set there (such as
+to stack=12,256, etc.). both stack and file have been identifi as
+_on_ caus of frequent win3.1 crash.
+
+lamont down
+down@nevada.edu

@@ -1,0 +1,107 @@
+from: daa7365@tamut.tamu.edu (diego a. aranda)
+subject: window sharewar monthli (inform)
+articl-i.d.: tamsun.1ps35rinnfpd
+organ: texa a&m univers, colleg station
+line: 100
+nntp-post-host: tamut.tamu.edu
+
+
+window sharewar monthli (wsm) is an on-line forum for inform about the
+newest and best window 3.x and nt sharewar/freewar softwar. 
+
+wsm is a compil of submiss from sharewar/freewar author in a singl
+window .hlp (help system) file.  all type of softwar mai be submit for
+entri in wsm - util, applic, game, program tool, etc.
+
+wsm benefit window sharewar/freewar author by allow them to public
+their softwar releas, inform user of updat version, and to increas
+their instal base of user.  those search for specif window softwar
+will benefit by have a complet list of avail softwar avail at their
+fingertip - complet with featur list, current price, and ani other
+relev inform.
+
+window softwar author mai submit entri to window sharewar monthli in the
+follow manner:
+
+1. compos a short summari of the function of the softwar.  includ all
+   special featur which ar uniqu to your product and which set it apart
+   from other program in the genr.  be sure to includ specif detail
+   such as: the current releas version, where the softwar is avail,
+   how much the registr fee cost, how much disk space is requir, ani
+   special requir (e.g. sound card, or vbrun200.dll, etc.), how the
+   author mai be contact, etc.  becaus text is highli compress, the
+   summari mai be as long as is necessari, howev, it is best to keep it
+   short.  a good guidelin is a singl screen of 12-point text at 640x480
+   resolut.  order form and other such addendum mai be includ if desir.
+   all submiss whould be in plain text (ascii) format.  format will
+   be exactli as it is submit - i will simpli cut and past text file
+   into a help author system.  if you requir special format 
+   convent - such as boldfac text or ital, or a larger font size,
+   indic so clearli within the text file.  for best result, us window
+   notepad to creat the .txt file. 
+ 
+2. includ up to 100k of window-format .bmp (bitmap) screen-shot which
+   displai the work or special featur of each program.  special case
+   (render applic for exampl) which requir 256-color bitmap mai
+   submit up to 250k of .bmp file - all other should observ the 100k limit
+   and us 16-color format.  for maximum compatibl with the softwar which
+   will be us to creat the wsm .hlp file (stefan olson's help writer's
+   assist for window), pleas save the bitmap with window paintbrush or
+   wingif. 
+
+3. includ a 16-color .bmp of the program's icon (.ico file).  mani program
+   ar avail to convert .ico to .bmp format, or window paintbrush mai be
+   us.  the .bmp will be embed in the summari text.
+
+4. doubl-check for spell error, format correct, etc.  
+
+5. compress the .txt file, the .bmp of the program icon, and ani addit
+   .bmp into a singl file us pkzip (ani version).
+
+6. submit the entri by uuencod the .zipfil, and e-mail it to:
+   
+   daa7365@tamut.tamu.edu
+
+   if submit via the internet or compuserv. if submit via america
+   onlin, send a brief messag indic submiss, and append the .zip
+   file, then e-mail to:
+
+   diegoaa
+
+7. if ani chang ar requir, or a new version is releas, complet
+   the abov procedur again.  send all submiss to the @tamut address,
+   and ani comment, suggest, critic, to daa7365@rigel.tamu.edu.
+
+all entri receiv befor the deadlin will be includ in the subsequ
+edit of wsm.  the editor will not be held respons for ani error, and
+we reserv the right to make chang to the entri.
+
+wsm is not limit to sharewar/freewar softwar.  a special area will be
+devot to commerci avail window 3.x and nt softwar.  commerci
+softwar author should follow the same step abov, with the except of
+the limit on size - the .txt file and .bmp mai be as larg as requir
+(and as larg as is practic for transmiss over phone line).  there
+is no charg for the publish of either sharewar/freewar or commerci
+product entri.  
+
+advertis for comput hardwar, softwar, bulletin board, etc. mai
+be submit as well. again, the same procedur appli, with the except of
+the size limit.  there is no charg for advertis space.  the first
+ten advertis submit each month will be includ; subsequ
+submiss will not be includ due to size constraint.
+
+wsm is current look for person will to devot the time to author
+column within wsm.  a c/c++ program section, a visual basic section, and
+two window-specif opinion/advic column ar envis.  all work will
+be on a voluntari basi.  if you wish to aid wsm and author a monthli column
+on on of the abov topic, pleas send us mail at daa7365@tamut.tamu.edu or
+diegoaa on america onlin.
+ 
+the first edit of wsm will be distribut mai 1st via america onlin,
+compuserv, and the internet.  the deadlin for submiss is april 28th.
+the first edit filenam will be wsm-1.zip, with each subsequ monthli
+releas continu in the seri name convent (wsm-2.zip, etc.).  each
+edit will be releas on the first of each month, and the deadlin for
+submiss will be at least three dai befor releas. 
+
+ 

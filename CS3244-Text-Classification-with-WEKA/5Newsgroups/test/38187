@@ -1,0 +1,58 @@
+from: jhardono@nickel.uc.indiana.edu (independ quorum distributor comput seller shipper)
+
+subject: why doe my window 3.1 restart my comput?
+
+nntp-post-host: nickel.uc.indiana.edu
+
+organ: indiana univers
+
+	i would like to know a caus of my window 3.1 problem. everi time
+
+line: 22
+
+
+
+file=30
+
+buffer=30
+
+devic=c:\window\himem.sy
+
+devic=c:\window\smartdrv.ex /doubl_buffer
+
+stack=9,256
+
+
+
+and also my autoexec.bat
+
+
+
+c:\vshield
+
+c:\window\smartdrv.ex /l
+
+rem ***************** mousewar 5.0 setup ******************
+
+path=c:\;c:\do;c:\window;c:\fax;c:\mous;c:\wp51\;
+
+set temp=c:\window\temp
+
+mous ser 2
+
+rem ********************************************************
+
+c:\do\share
+
+
+
+have you seen thi problem befor? pleas help me out...
+
+
+
+thank
+
+
+
+hadi
+

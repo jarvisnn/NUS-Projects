@@ -1,0 +1,44 @@
+from: colburn@caesar (alex colburn)
+subject: re: gui applic framework for window ??
+nntp-post-host: caesar.iaf.uiowa.edu
+organ: univers of iowa, imag analysi facil
+line: 38
+
+in articl <1993apr12.154418.14463@cimlinc.uucp> bharper@cimlinc.uucp (brett harper) write:
+>hello,
+>  
+>  i'm investig the purchas of an object orient applic framework.  i have
+>come across a few that look good:
+>zinc
+>----
+>  ha a platform independ resourc strategi.  (not too import for me right now)
+>
+>
+>brett.harper@cimlinc.com
+
+
+just a thought on resourc,  it is veri import if you do us a
+multiplatform toolkit to check on how it us resourc.  i have
+us glockenspeil commonview under motif and os2.  i wrote a resourc
+convert from os2 to motif, but it realli wasn't too easi, especi
+the name scheme. in motif you cannot renam control/widget.
+with window you can call the ok button id_ok in everi instanc,
+thi doesn't work for motif, you'd have to call it dialog1_ok,
+and motif expect a text string rather than a number.  so 
+your constructor should know how to convert a #defin into the
+proper resourc identifi.
+i'd check on how the toolkit expect name, and that if it doe
+us resourc, that is us resourc for all platform you intend to
+port to. ( by the wai, i would never us commonview or glockenspiel
+for anyth ) 
+
+
+
+alex.
+
+
+--
+__  __|       \      __|       alex colburn                  
+   |       /   \    |          imag analysi facil      
+   |      _____ \   __|	       univers of iowa          
+______| _/      _\ _|          colburn@tessa.iaf.uiowa.edu  

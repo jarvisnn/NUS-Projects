@@ -1,0 +1,42 @@
+from: ten0772@eaf000.ca.boe.com (timothi e. neto)
+subject: re: x-server multi screen
+organ: be41t
+line: 37
+
+rainer@sun3.eeam.elin.co.at (rainer hochreit) write:
+
+>hi xpert, some simpl question for you:
+
+>i've seen a lot of differ term, which seem to mean the same thing.
+>who can give an exact definit what these term mean:
+
+>	-) multi-screen
+>	-) multi-head
+>	-) multi-displai
+>	-) x-server zaphod mode
+
+>is there a limit how mani screen/displai a singl server can handl
+>(in an articel a read someth about an upper limit of 12) ?
+
+>how is the capabl call, if i want to move the cursor from on
+>screen/displai to anoth.
+
+>ani hint welcom.
+
+>thank, rainer.
+>-- 
+>rainer hochreit                | telephon: +43 (1) 89100 / 3961
+>elin-energieanwendung gesmbh     | telefax  : +43 (1) 89100 / 3387
+>penzingerstr. 76                 |
+>a-1141 wien, austria/europ      | e-mail   : rainer@elin.co.at
+
+as to how mani client mai be displai on a server, i believ the limit
+would be how much memori is avail to your server or alloc by the
+server.
+
+
+-- 
+indecis is the kei to | timothi e. neto  (206) 655-5190              1   000
+flexibl, & you can't | of b & t's gadget & widget work             1  0. .0
+e-mail god.              | flight system lab, boe comm. aircraft    1  0 _ 0
+my idea not boe's    | internet: ten0772@aw401.fsl.ca.boe.com    1   000

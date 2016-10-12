@@ -1,0 +1,46 @@
+from: bill.kayser@delft.sgp.slb.com (bill kayser)
+subject: re: gadget vs widget
+articl-i.d.: parsiv.199304060609.aa00309
+organ: the internet
+line: 38
+nntp-post-host: enterpoop.mit.edu
+to: xpert@expo.lc.mit.edu
+
+
+> 
+> > motif manag take a veri simplist approach to the wai thei handl event 
+> > for gadget: thei track for all event(such as motion notifi) wether or not 
+> > the gadget express interest in the event. as a result, gadget typic
+> > gener a great deal more network traffic.  those with x termin might find 
+> > a notic network perform drop as a result.
+> > 
+> > realli?  what's the point us gadget then?
+> 
+> it is a case of memori vs. network perform tradeoff.  gadget
+> save both client and server memori.  but memori is easili expand while
+> network perform is not, so if i were design motif i would
+> at least make it *possibl* to avoid us gadget.  at present you
+> realli don't have a choic becaus motif forc you to us gadget
+> in menu and in variou other place.
+> 
+> adrian nye
+> o'reilli and associ, inc.
+
+
+i've been us the xmgraph widget that's been float around and i
+notic the perform is significantli better us gadget, perhap
+even 100% faster.  i had heard in an old program cours that gadget
+were no longer ani benefit to perform, and that it's just as well
+to us widget everywher.  so why would ~50 pushbutton gadget be a lot
+quicker than 50 pushbutton in the graph?  should i start put gadget
+back into my long pulldown menu? 
+
+xmgraph manag children connect by xmarc widget in a direct network
+type graph with automat layout capabl.
+
+
+bill
+
+---------------------------------------------------------------------------
+                                         schlumberg geco-prakla
+                                         internet : kayser@delft.sgp.slb.com

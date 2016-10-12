@@ -1,0 +1,27 @@
+from: s903146@mailserv.cuhk.hk
+subject: re: do6 - no boot disk requir if you don't want emm386 to load
+nntp-post-host: wksa16.csc.cuhk.hk
+organ: comput servic centr, c.u.h.k.
+distribut: usa
+line: 20
+
+in articl <ls91poinnsvf@levelland.cs.utexa.edu> sm@cs.utexa.edu (stephen mark sanderson) write:
+>from: sm@cs.utexa.edu (stephen mark sanderson)
+>subject: do6 - no boot disk requir if you don't want emm386 to load
+>date: 8 apr 1993 15:12:40 -0500
+>everybodi, do 6 user in particular, take note:  if you want to plai game
+>that hate/us their own upper memori manag, do 6 is not a problem.  no
+>boot disk requir.  as your system start up, hit the f5 kei.  thi tell
+>it to bypass config and autoexec altogeth.  you get a plain, gener session
+>of do, with noth load.  <there's anoth function kei that actual
+>step thru config.sy ask if you want to execut each line, but i've
+>forgotten it at the moment...you can try find it - i think it's f9...>
+
+     no, you need not bypass the config.sy, in do 6.0, there is a function 
+of multi-config, have you tri boot.sy ? the multi-config is the kind that 
+you can choos you config.sy at the startup. and i find that is veri good. 
+it ha no conflict to qemm. (i have problem when us boot.sy)
+    the kei you sai is f8, which is trace the config.sy step by step.
+    sorri, if ani error :)
+
+phillip   (phillipau@cuhk.hk)

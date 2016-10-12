@@ -1,0 +1,41 @@
+from: roe@vax.oxford.ac.uk
+subject: re: ad convers
+organ: oxford univers vax 6620
+line: 36
+
+b-clark@nwu.edu (brian clark) write:
+
+> in articl <1993apr13.181720.13214@vax.oxford.ac.uk>, roe@vax.oxford.ac.uk
+> wrote:
+> >
+> > i am work a  data acquisit and analysi program to collect data
+> > from insect sensori organ.
+> >
+> > (stuff delet)
+> >
+> > anoth altern is the us of the sound input port.
+
+> can you realli make due with the non-exist dynam rang of an 8-bit
+> convert, of probabl dubiou linear and monoton, and perhap
+> ac-coupl as well?
+
+it clearli depend on the type of question you ar ask but in mani
+case it will do fine. the critic inform from the neuron is in
+the fire frequenc (maximum about 100 action potenti per
+second), and not in the amplitud of the signal or in detail of the
+signal shape. so the resolut of about 0.4 % you get with an 8 bit
+convertor is more then suffici.
+
+ac coupl doe not have to be a problem either, sinc in mani case
+you ar not interest in the dc level. my pre amplifi is ac coupl
+also. the critic point is the lowest frequenc that will pass. if
+the cutoff point is to high, the action potenti will be slightli
+distort. but even that normal doe not matter sinc it is the
+occurr of the spike that is import. 
+
+howev, i do want to know what exactli i can expect befor i start
+battl with the toolbox to get it go. as yet i have no clue were
+to start look for the technic specif.
+
+peter.  
+roe@vax.oxford.ac.uk

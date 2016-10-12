@@ -1,0 +1,26 @@
+from: roell@informatik.tu-muenchen.de (thoma roell)
+subject: re: 24 bit graphic card
+in-repli-to: rj002c@parsec.paradyn.com's messag of wed, 14 apr 1993 21:59:34 gmt
+organ: inst. fuer informatik, technisch univ. muenchen, germani
+line: 20
+
+>i am look for eisa or vesa local bu graphic card that support at least 
+>1024x786x24 resolut.  i know matrox ha on, but it is veri
+>expens. all the other card i know of, that support that
+>resoult, ar striaght isa. 
+
+what about the elsa winner4000 (s3 928, bt485, 4mb, eisa), or the
+metheu premier-4vl (s3 928, bt485, 4mb, isa/vl) ?
+
+>also ar there ani x server for a unix pc that support 24 bit?
+
+as it just happen, sgc ha a xserver (x386 1.4) that doe
+1024x768x24 on those card. pleas email to info@sgc.com for more
+detail.
+
+- thoma
+--
+-------------------------------------------------------------------------------
+da reh springt hoch, 				e-mail: roell@sgc.com
+da reh springt weit,				#includ <sy/pizza.h>
+wa soll es tun, es hat ja zeit ...

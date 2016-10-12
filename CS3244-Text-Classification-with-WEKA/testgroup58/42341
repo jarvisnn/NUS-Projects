@@ -1,0 +1,364 @@
+from: lindholm@uc.ubc.ca (georg lindholm)
+
+subject: re: xv 3.00 ha escap!
+
+organ: univers comput servic, ubc, canada
+
+line: 175
+
+distribut: world
+
+nntp-post-host: swiss.uc.ubc.ca
+
+
+
+in articl <1rlhhkinng62@skeena.uc.ubc.ca>, lindholm@uc.ubc.ca (georg lindholm) write:
+
+> in articl <123645@netnew.upenn.edu> bradlei@grip.ci.upenn.edu (john bradlei) write:
+
+> >no, not anoth fals alarm, not a "it'll certainli be done by *next* week"
+
+> >messag...  no, thi is the real thing.  i repeat, thi is *not* a drill!
+
+> >
+
+> >batten down the hatch, hide the women, and lock up the cow, xv 3.00 ha
+
+> >final escap.  i wa clean it cage thi morn when it overpow
+
+> >me, broke down the offic door, and fled the lab.  it wa last seen head
+
+> >in the gener direct of export.lc.mit.edu at nearli 30k per second...
+
+> >
+
+> >if found, it answer to the name of 'contrib/xv-3.00.tar.z'.
+
+> >
+
+> >have a blast.  i'm off to the vacat capit of the u.s.:  waco, texa.
+
+> 
+
+> and here is the first patch :-) the follow fix some problem with the
+
+> imakefil file and make it possibl to compil xv-3.00 under solari without 
+
+> have to us the ucb stuff:
+
+
+
+oop, i didn't get the signal process right (that what i get from do
+
+the work on an ascii termin). here is the fix patch:
+
+
+
+*** 1.1	1993/04/28 06:05:03
+
+--- imakefil	1993/04/28 08:20:35
+
+***************
+
+*** 209,215 ****
+
+  obj4=	xcmap.o
+
+  
+
+  program= xv bggen vdcomp xcmap
+
+! 
+
+  
+
+  #if defin(havejpeg) || defin(havetiff)
+
+  #  ifdef havejpeg
+
+--- 209,218 ----
+
+  obj4=	xcmap.o
+
+  
+
+  program= xv bggen vdcomp xcmap
+
+! all::
+
+! 	@echo ""
+
+! 	@echo "  did you rememb to 'make depend' first?"
+
+! 	@echo ""
+
+  
+
+  #if defin(havejpeg) || defin(havetiff)
+
+  #  ifdef havejpeg
+
+***************
+
+*** 222,238 ****
+
+       subdir = tiff
+
+  #  endif
+
+  #  defin passcdebugflag
+
+     makesubdir($(subdir))
+
+-    dependsubdir($(dubdir))
+
+  #endif
+
+  
+
+  
+
+  all::
+
+- 	@echo ""
+
+- 	@echo "  did you rememb to 'make depend' first?"
+
+- 	@echo ""
+
+- 
+
+- all::
+
+  	@echo "  build xv ..."
+
+  	@echo ""
+
+  
+
+--- 225,236 ----
+
+       subdir = tiff
+
+  #  endif
+
+  #  defin passcdebugflag
+
++ #  defin ihavesubdir
+
+     makesubdir($(subdir))
+
+  #endif
+
+  
+
+  
+
+  all::
+
+  	@echo "  build xv ..."
+
+  	@echo ""
+
+  
+
+***************
+
+*** 259,267 ****
+
+  
+
+  
+
+  src = $(src1) $(src2) $(src3) $(src4)
+
+- dependtarget()
+
+    
+
+  alltarget($(program))
+
+  
+
+  normalprogramtarget(xv,$(obj1),$(deplib),$(local_librari),)
+
+  normalprogramtarget(bggen,$(obj2),$(deplib),$(local_librari),)
+
+--- 257,269 ----
+
+  
+
+  
+
+  src = $(src1) $(src2) $(src3) $(src4)
+
+    
+
++ 
+
+  alltarget($(program))
+
++ dependtarget()
+
++ #ifdef ihavesubdir
+
++    dependsubdir($(subdir))
+
++ #endif
+
+  
+
+  normalprogramtarget(xv,$(obj1),$(deplib),$(local_librari),)
+
+  normalprogramtarget(bggen,$(obj2),$(deplib),$(local_librari),)
+
+*** 1.1	1993/04/28 06:09:50
+
+--- xcmap.c	1993/04/28 07:09:03
+
+***************
+
+*** 9,15 ****
+
+--- 9,19 ----
+
+  
+
+  /* includ file */
+
+  #includ <stdio.h>
+
++ #if defin(sun) && defin(sysv)
+
++ #includ <string.h>
+
++ #els
+
+  #includ <string.h>
+
++ #endif
+
+  #includ <ctype.h>
+
+  
+
+  #includ <x11/xo.h>
+
+*** 1.1	1993/04/28 08:33:13
+
+--- xv.h	1993/04/28 17:47:38
+
+***************
+
+*** 284,292 ****
+
+--- 284,298 ----
+
+  
+
+  
+
+  /* signal macro */
+
++ #if defin(sun) && defin(sysv)
+
++ #defin hold_sig         sighold(sigalrm)
+
++ #defin releas_sig      sigrels(sigalrm)
+
++ #defin paus_sig        sigpaus(sigalrm)
+
++ #els
+
+  #defin hold_sig         sigblock(sigmask(sigalrm))
+
+  #defin releas_sig      sigblock(0)
+
+  #defin paus_sig        sigpaus(0)
+
++ #endif
+
+  
+
+  
+
+  /* default for most folk */
+
+***************
+
+*** 318,323 ****
+
+--- 324,333 ----
+
+  #defin random  rand
+
+  #defin srandom srand
+
+  #endif
+
++ #if defin(sun) && defin(sysv)
+
++ #defin random() rand()
+
++ #defin srandom(x) srand(x)
+
++ #endif
+
+  
+
+  
+
+  
+
+*** 1.1	1993/04/28 06:17:41
+
+--- tiff/imakefil	1993/04/28 08:53:34
+
+***************
+
+*** 49,59 ****
+
+--- 49,69 ----
+
+  
+
+  tif_compress.o: imakefil
+
+  
+
++ #if hasgcc
+
+  g3state.h: mkg3state.c t4.h
+
+          -${rm} g3state.h
+
++ 	${cc} -tradit -o mkg3state ${cflag} mkg3state.c
+
++         ./mkg3state > g3state.h || rm g3state.h
+
++ #els
+
++ g3state.h: mkg3state.c t4.h
+
++         -${rm} g3state.h
+
+          ${cc} -o mkg3state ${cflag} mkg3state.c
+
+          ./mkg3state > g3state.h || rm g3state.h
+
++ #endif
+
+  
+
+  depend:: g3state.h
+
+  
+
++ clean::
+
++ 	-${rm} mkg3state g3state.h
+
++ 
+
+  dependtarget()
+

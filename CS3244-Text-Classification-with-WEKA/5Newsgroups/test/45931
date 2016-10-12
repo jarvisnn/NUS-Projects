@@ -1,0 +1,96 @@
+from: wng@geop.ubc.ca (william ng)
+
+subject: re: (q) scsi&id (i.e. 2 or more hard drive)
+
+organ: univers of b.c. geophys & astronomi
+
+line: 41
+
+distribut: world
+
+nntp-post-host: gaf.geop.ubc.ca
+
+
+
+in articl <1993apr19.220704.18518@new.cs.brandei.edu> 
+
+& wbarn@sura.net (bill barn) write:
+
+
+
+>>ha anyon (successfulli) put both scsi and id hard drive
+
+>>on the same system?
+
+
+
+>i would like to know as well, sinc i just bought a 200mb seagat id
+
+>drive and want to add it to my comput (a four-year-old gatewai
+
+>386/20), which current ha an 80mb seagat scsi drive.  the scsi
+
+>control is such that the doc told me not to specifi it in the cmo
+
+>setup, i.e. both hard drive set ar list as "not instal,"
+
+>and appar the scsi control work it wonder.  i wonder if
+
+>thi is a problem.  also, i rememb how, when i help my cousin
+
+>instal hi second id drive, we had to defin a master/slave
+
+>relationship for them; do i need to do someth similar here?
+
+
+
+>>i am particularli interest in have the scsi as the _boot_ drive.
+
+
+
+>same here.
+
+
+
+>ani help would be appreci, sinc i intend to instal thi drive
+
+>asap; i'd like to know what to do (and what not to do) befor i start.
+
+>thank!
+
+
+
+i have been us both id (or mfm) and scsi drive for year.  i have 2
+
+id and 1 scsi on on system and the other with 2 id, 2 scsi disk, and 
+
+1 scsi cdrom.  i current us alwai in2000 scsi card, but i also have
+
+a futur domain, a western digit scsi card, and i work with an adapt 
+
+befor.  as i recal, all these card can support boot and floppi drive.
+
+howev, to us with other control (id, mfm...) the boot drive ha to
+
+be the id (or mfm).  you can not boot from the scsi if you have other 
+
+control in the system.  if you gui onli have 2 drive (1 id, 1 scsi).
+
+just set up the id in your cmo setup.  make sure you can boot from it.
+
+then, set up the scsi control (irq, dma, etc). set the scsi drive to 
+
+id 0.  just plug and plai for all the card i seen so far.  onli if you 
+
+have more than 2 drive then you need driver for the third drive and so
+
+on.  if you have more question, email me, i will try to answer it.
+
+good luck!
+
+
+
+william
+
+
+

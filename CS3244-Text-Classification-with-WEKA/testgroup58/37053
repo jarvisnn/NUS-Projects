@@ -1,0 +1,86 @@
+from: b-clark@nwu.edu (brian clark)
+
+subject: re: unknown mac board nation instrument nb-dma-8
+
+nntp-post-host: aragorn14.acn.nwu.edu
+
+organ: northwestern univers
+
+distribut: usa
+
+line: 36
+
+
+
+in articl <c5ygdq.6mi@new.iastat.edu>, kmradk@iastat.edu (kevin m
+
+radk) wrote:
+
+> 
+
+> i need help identifi thi board that i found stuf awai in a corner.
+
+> 
+
+> as the titl sai, all that is print on it is nation instrument nb-dma-8.
+
+> it fit fine in my mac iici and snooper give the veri same name for the
+
+> board.  it look like it ha an hp-ib connector on the back of it and
+
+> anoth connector on the top (2 row by 25 pin).  it also look like
+
+> it ha an intel processor on it (#a82380-16 intel '86)
+
+> 
+
+> on an eeprom there is a sticker with the p/n 700584-01.
+
+> 
+
+> anybodi ever seen or heard of on?  or better yet, do you know what it doe?
+
+> we ar all clueless here.  our last option is to hook it up to our hp
+
+> workstat and see if ani smoke come out.
+
+
+
+it's made by (surpris) nation instrument:
+
+6504 bridg point parkwai
+
+austin, tx 78730-5039
+
+(800) 433-3488
+
+anonymous ftp at: ftp.natinst.com
+
+
+
+their 1991 catalog list the nb-8g as follow:
+
+
+
+fetch and deposit dma control (8 channel)
+
+ieee-488 interfac with data rate up to 850 kb/sec, with dma and
+
+program i/o
+
+   transfer
+
+8 16-bit counter timer channel
+
+rtsi bu (that's the connector on the top of the board - it link it with
+
+   other nation instrument board
+
+list price of $1295
+
+
+
+the board isn't in later catalog: it ha been superceed by the
+
+nb-dma2800.
+

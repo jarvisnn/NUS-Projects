@@ -1,0 +1,25 @@
+from: cca20@keel.ac.uk (j. atherton)
+subject: serial print
+line: 16
+distribut: world
+nntp-post-host: seq1.cc.keel.ac.uk
+summari: output to serial printer garbl with window app. (e.g. work)
+keyword: work handshak serial
+x-newsread: tin [version 1.1 pl6]
+
+hi,
+	we've been have problem on a few setup when print to a
+serial printer (dmp or laser). i have us work and window write. the
+output is ok from do and if i send plain text output, but anyth
+fanci garbl or just doesn't output. the except is output to a
+lserjet 4 which 'appear' to be fast enough receiv data, not to
+bother about handshak messag. i'm sure i'm not alon in thi. i've
+tri most of the print/network manag option i can think of. anyon
+had similar problem thei've cure and would like to tell me 'bout it??
+thank
+
+john atherton
+
+
+
+

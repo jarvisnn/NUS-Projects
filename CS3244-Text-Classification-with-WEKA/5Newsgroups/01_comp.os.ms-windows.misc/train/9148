@@ -1,0 +1,42 @@
+from: tedm@tsoft.net (ted matsumura)
+subject: re: window gripe...
+organ: tsoft bb and public access unix, +1 415 969 8238
+line: 37
+
+in articl <1ppmvf$qnh@bigboot.wpi.edu> bigal@wpi.wpi.edu (nathan charl crowel) write:
+>
+>hi there,
+>
+>     there's on thing about window that realli frost me.
+>i have 20mb of ram instal in my system. i us a 5mb (2.5mb
+>under window) disk-cach, and a 4mb perman swap file.
+>
+>     while i can never fill the memori up, i still have problem
+>sometim becaus i run out of gdi resourc. what give?
+>i think window could manag these resourc a littl better.
+>
+>     doe anyon have ani input on how to conserv these resourc
+>so that i can avoid thi problem?
+>
+>nate
+>--------------------------
+>nathan c. crowel, dept. of mechan engin/acrl
+>
+>worcest polytechn institut     e-mail: bigal@wpi.wpi.edu
+>
+>"cost the net hundr if not thousand of dollar"
+
+nathan,
+  win31 ha a fix limit of 64k gdi memori, regardless of physic ram
+instal, thi is twice that of win30, but not nearli robust enough for
+mani develop and power user.
+ 
+us amish launch as your shell, you can reduc gdi memori usag by as
+much as 15% over progman, ndw 2, dashboard, and other graphic type icon
+base and other shell.  also, nest, and full hot-kei global support
+is offer, someth no other shell have at thi time.
+ 
+ted matsumura, presid
+amish softwar, inc.
+
+:wq

@@ -1,0 +1,39 @@
+from: de7043@medtron.com (don eller)
+subject: re: midi file on ms-win3.1 and soundblast 1.0?
+articl-i.d.: medtron.1993apr22.190051.23597
+organ: medtron, inc.
+line: 31
+nntp-post-host: bhutan.inst.medtron.com
+x-newsread: tin [version 1.1 pl8]
+
+the cybard (dudek@acsu.buffalo.edu) wrote:
+: i have a 486dx-33 comput with a soundblast 1.0 card.  i'm run
+: microsoft window v3.1.  i have the sb driver set up properli to plai
+: normal sound (.wav file, etc.).  i want to plai midi file through the
+: media player that is includ with window.  i know i have to set up the
+: patch map or someth in the midi-mapper in the control panel.  i know
+: noth about midi.  (thi is to be the wai i'll get my feet wet.)
+
+: how do i set up window so that i can plai midi file?
+if you instal the soundblast window driver correctli, and have
+the latest driver, the media player should be setup to plai file
+author to microsoft's multimedia midi author standard (gener
+midi), see the section in the back of the voyetra manual in the
+soundblast midi upgrad kit.
+you'll find that midi file exist with all kind of differ
+map, so don't expect them to alwai sound correct without us
+some kind of midi file editor, such as voyetra's sequenc plu.
+
+you can attempt to us the midi-mapper to remap the patch for
+soundblast, but sinc you cannot modifi the sbfm.drv you ar allwai
+stuck with the instrument that come with thi driver.  unless you can
+find an editor for make modif to the instrument set in
+sbfm.drv , i would suggest you locat the earli version of
+soundblast driver that were map to mt32 voic, and the later
+driver that ar map to the gener midi voic.   
+:   
+: -- 
+: david thoma dudek /  v098pwx@ubvm.bitnet     \     __   _ the cybard
+:  state univers / dudek@sun.acsu.buffalo.edu   \   /  `-' )      ,,, 
+:    of new york   / "if music be the food of love, \  | | ()|||||||[:::}
+:     @ buffalo   /   plai on!" - wm. shakespear    \ `__.-._)      ''' 

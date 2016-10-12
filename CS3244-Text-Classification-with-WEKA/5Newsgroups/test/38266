@@ -1,0 +1,66 @@
+from: mich@lin.infolog.se (thoma michanek)
+
+subject: re: gui builder for vm
+
+organ: infolog, linkop, sweden
+
+line: 28
+
+
+
+in articl <352@trident.datasi.swri.edu> mark@trident.datasi.swri.edu (mark d. collier) write:
+
+>i am look for gui builder/uim's which run in a vm/openvm
+
+>environ. i am interest in both motif tool and gui-independ
+
+>tool such as xvt. my client also requir that the tool ha been
+
+>in product for at least 6 month in the vm environ. note
+
+>that i have the list of tool from the faq, but not the info on
+
+>vm avail.
+
+>
+
+>thank
+
+
+
+take a look at teleus, a complet uim from alsi (formerli telesoft).
+
+in the us, you can reach them at (619) 457 2700.
+
+
+
+alsi have an vm version of teleus v2.0.5 for vm v5.5 or higher,
+
+built us decwindow motif 1.0 (base on x11r4 and motif v1.1.1).
+
+
+
+btw, the vm port from the unix version wa made at my compani, and wa
+
+releas in novemb 1992.
+
+
+
+.- - - - - - - - - - - -.  _ _  _ ___ _  _   _   _  _  _  _   .- - - - - - - -.
+
+|    thoma michanek    |  | |\ | |_ / \ |  / \ / _ | / `|_`  | dial +46 13   |
+
+|  infolog linkop |  | | \| |  \_/ |_,\_/ \_| | \_,._|  | 210060  phone |
+
+| email:thoma.michanek |          _                          | 210068  direct|
+
+|       @lin.infolog.se |  l i n k o p i n g  -  s w e d e n  | 210155  fax   |
+
+`- - - - - - - - - - - -'                                     `- - - - - - - -'
+
+
+
+
+
+
+

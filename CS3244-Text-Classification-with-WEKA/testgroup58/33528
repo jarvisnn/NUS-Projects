@@ -1,0 +1,90 @@
+from: nmm1@cu.cam.ac.uk (nick maclaren)
+
+subject: re: blink cursor in xterm???
+
+nntp-post-host: boot.cu.cam.ac.uk
+
+organ: u of cambridg, england
+
+line: 39
+
+
+
+in articl <1tbpi9innfp3@earli-bird.think.com> barmar@think.com (barri margolin) write:
+
+>in articl <1993mai18.130845.6859@taylor.uucp> mark@taylor.uucp (mark a. davi) write:
+
+>>you ar stuck in a distribut system feedback loop!  what if you ar on an
+
+>>xtermin or run xterm over the net to anoth machin?  that is when the
+
+>>load problem occur.  if you had a machin with 20 xtermin attach and
+
+>>thei all had blink cursor in xterm's, thi could repres a consider
+
+>>ethernet bandwidth wast.
+
+>
+
+>ethernet certainli ha enough bandwidth for a few blink cursor.  my
+
+>lisp machin blink the cursor twice a second and updat the time in the
+
+>statu line everi second.  thi us under 1k byte/second, or about .1% of
+
+>the bandwidth of ethernet.  a hundr of them on a singl ethernet might be
+
+>a problem, but a coupl dozen should be fine.
+
+
+
+bandwidth is unlik to be the problem, except over a wet string network.
+
+on of major flaw of x is the horrend number of transact (and
+
+henc process switch) that it forc upon a host.  actual measur
+
+(hourli averag) ar 5 per second per log in user, which can lead to
+
+20-50 or more process switch (depend on whether each event is
+
+filter by the window manag as well as the applic and how
+
+mani process ar need for each charact.)
+
+
+
+while a blink cursor need onli the applic and the network
+
+process, and doe not add ani transact, it will add someth like
+
+10 process switch per second per user.  thi is a signific increas
+
+in overhead, especi as the applic mai have quit a larg work
+
+set.  if you want a rapidli blink cursor, there could be as mani
+
+as 50.
+
+
+
+if you want to go there, i wouldn't start from here!
+
+
+
+
+
+nick maclaren
+
+univers of cambridg comput laboratori,
+
+new museum site, pembrok street,
+
+cambridg cb2 3qg, england.
+
+email:  nmm1@cu.cam.ac.uk
+
+tel.:   +44 223 334761
+
+fax:    +44 223 334679
+

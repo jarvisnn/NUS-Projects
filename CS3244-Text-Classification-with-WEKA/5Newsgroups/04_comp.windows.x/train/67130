@@ -1,0 +1,29 @@
+from: etxmesa@eo.ericsson.se (michael salmon)
+subject: re: titl for xterm
+keyword: xterm
+nntp-post-host: eo6c02.ericsson.se
+repli-to: etxmesa@eo.ericsson.se (michael salmon)
+organ: ericsson telecom ab
+line: 21
+
+in articl <1r3fe2inn10d@fbi-new.informatik.uni-dortmund.de>
+markhof@ls12r.informatik.uni-dortmund.de (ingolf markhof) write:
+[...]
+|> i have an
+|> 
+|> 	alia precmd echo -n '^[]2\;${host}:$cwd^g'
+|> 
+|> in my ~/.tcshrc. thi is a special alia for tvtwm. 
+
+i presum that you meant to sai tcsh here ------^^^^^
+
+-- 
+
+michael salmon
+
+#includ	<standard.disclaim>
+#includ	<witti.sai>
+#includ	<fanci.pseudo.graphic>
+
+ericsson telecom ab
+stockholm

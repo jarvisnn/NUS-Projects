@@ -1,0 +1,40 @@
+from: whalei@sigma.kpc.com (ken whalei)
+subject: re: xcopyplan question
+in-repli-to: buzz@bear.com's messag of 19 apr 93 14:15:38 gmt
+organ: kubota pacif comput inc.
+	<buzz.93apr19101538@lion.bear.com>
+line: 33
+
+> 
+> in articl <whalei.93apr15103931@sigma.kpc.com> whalei@sigma.kpc.com (ken whalei) write:
+> >   actual, i must also ask the faq's #1 most popular reason why graphic
+> >   don't show up: do you wait for an expos event befor draw your
+> >   rectangl?
+> 
+> suppos you have an idl app with a realiz and map window that contain
+> xlib graphic.  a button widget, when press, will caus a new item
+> to be drawn in the window.  thi action clearli should not call xcopyarea() 
+> (or equiv) directli; instead, it should regist the exist of the new
+> item in a memori structur and let the expos event handler take care
+> of render the imag becaus at that time it is guarante that the
+> window is map.
+> 
+> the problem, of cours, is that no expos event is gener if the window
+> is visibl and map.  do you know the best wai to "tickl" a window so
+> that the expos event handler will be invok to draw thi new item?
+
+i specif made the abov comment assum that perhap the code fragment
+came from a simpl "open-draw-quit" client.  
+
+as per your question: why not have the button handler add the object, and
+then call the "window_redraw()" (or whatev) directli?  although, depend
+on how the overal applic is structur, there mai be no problem with
+render the object directli in respons to the button press.
+
+	ken
+
+--
+kenneth whalei			 (408) 748-6347
+kubota pacif comput, inc.	 email: whalei@kpc.com
+2630 walsh avenu
+santa clara, ca.  95051

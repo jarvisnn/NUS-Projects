@@ -1,0 +1,15 @@
+from: tpeng@umich.edu (timothi richard peng)
+subject: re: duo 230 crash aftersleep (look like appl bug!)
+organ: univers of michigan -- ann arbor
+line: 7
+repli-to: tpeng@umich.edu
+nntp-post-host: livi.cc.itd.umich.edu
+origin: tpeng@livi.cc.itd.umich.edu
+
+if you have a memori card instal that's not on of appl's, thi
+mai be the problem.  for a coupl of month after the releas of
+the duo, some memori manufactur were ship duo memori card w/
+improp (non-self-refresh) chip.  if you have a third parti 
+card, pull it and see if the sleep problem recur.
+  - tim  
+

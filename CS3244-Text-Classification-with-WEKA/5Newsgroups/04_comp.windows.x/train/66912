@@ -1,0 +1,29 @@
+from: straw@cam.nist.gov (mike_strawbridg_x3852)
+subject: need help with athena text widget
+organ: nation institut of standard & technolog, gaithersburg, md
+line: 24
+
+i want to creat a singl-line text widget for enter a small amount of text.
+
+i want it to be of fix width, but have a horizont scrollbar that scroll
+automat when the user type in order to keep the insert point
+visibl.
+
+in try to do thi i have two problem:
+
+ - the addit of the horizont scrollbar doe not make the text widget
+   taller, but instead it seem to cover part of the text.
+
+ - the scrollbar doe not scroll automat as the user type in text
+   in order to keep the insert point visibl.
+
+ani help is appreci.
+
+mike
+
+-----------------------------------------------------------------------
+name:   michael strawbridg             	tele: (301) 975-3852
+usmail: nation institut of standard 	arpa: straw@cam.nist.gov
+		and technolog            	uucp: uunet!cme-durer!straw
+        rm. b-146, bldg. 225
+        gaithersburg, md  20899

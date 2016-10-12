@@ -1,0 +1,27 @@
+from: make@cs.tu-berlin.de (m. kerkhoff)
+subject: re: us microsoft foundat class with borland c++ 3.1
+organ: technic univers of berlin, germani
+line: 17
+distribut: usa
+nntp-post-host: troll.cs.tu-berlin.de
+mime-version: 1.0
+content-type: text/plain; charset=iso-8859-1
+content-transfer-encod: 8bit
+
+hi all,
+
+ha anybodi tri to compil ctrltest from the mfc/sampl directori,
+after compil the mfc-lib with bwc ?
+
+seem to me, that bwc isn't abl to distinguish pointer to overload
+function.
+for exampl, imagin the follow 2 (overload) function:
+void same_name ( void ) 
+void same_name ( int )
+ 
+after try the whole dai, i think, with bwc it imposs to take the
+adress of on of the abov two function and assign it to a properli defin
+function pointer. 
+am i right ? ha anybodi els had thi problem ?
+
+	thanx

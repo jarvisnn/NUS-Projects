@@ -1,0 +1,23 @@
+from: ianhogg@milli.cs.umn.edu (ian j. hogg)
+subject: re: how do i find my appcontext?
+keyword: context, xt, motif, applic
+nntp-post-host: milli.cs.umn.edu
+organ: univers of minnesota, minneapoli, csci dept.
+line: 16
+
+in articl <1qvatv$9ic@pandora.sdsu.edu> masc0442@ucsnew.sdsu.edu (todd green) write:
+>
+>
+>is there an xt call to give me my applic context?
+>i am fix up an x/motif program, and am try to us xtappaddtimeout,
+>whose first argument is the app_context.  what call can i us
+>to give me thi valu?
+>
+
+    you can get the applicationcontext associ with a widget by call
+    xtwidgettoapplicationcontext.
+
+--
+===============================================================================
+ian hogg						ianhogg@cs.umn.edu
+                                                        (612) 424-6332

@@ -1,0 +1,18 @@
+from: mike@hopper.virginia.edu (michael chapman)
+subject: re: 4-plane xtermin (do i want on?)
+keyword: plane, xtermin
+organ: itc/uva commun access unix/internet project
+line: 12
+
+in articl <c63srv.57w@watserv1.uwaterloo.ca> chudel@watart.uwaterloo.ca (chri hudel) write:
+>
+>
+>ps: all r5 app run on r4/r3 server,right?
+
+the 4-bit server should work fine.  as far as i know, xtermin
+run older version can run the latest app as long as the host 
+machin ha the r5 librari instal. i could be wrong though.
+-- 
+mike@hopper.ac.virginia.edu 
+
+"i will not rais tax on the middl class." -unknown

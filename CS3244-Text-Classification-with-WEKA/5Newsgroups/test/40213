@@ -1,0 +1,94 @@
+from: mek@hydrox.enet.dec.com (mark klameru)
+
+subject: re: tiff complex
+
+x-receiv: by usenet.pa.dec.com; id aa16780; tue, 27 apr 93 10:55:53 -0700
+
+x-receiv: by enet-gw.pa.dec.com; id aa23355; tue, 27 apr 93 10:55:51 -0700
+
+x-receiv: from hydrox.enet; by decwrl.enet; tue, 27 apr 93 10:55:52 pdt
+
+x-to: comp.graphic.usenet
+
+x-appar-to: comp.graphic.usenet
+
+line: 38
+
+
+
+
+
+	anyon who think that tiff is too complex hasn't dealt with
+
+	cgm, asn.1, cda, dca, sgml, or ani on of a number of other
+
+	veri success file format.  peopl seem perfectli capabl
+
+	deal with these other.  deal with the format of tiff
+
+	is frankli less difficult than deal with the dct, lzw, and
+
+	fax encod of the imag data.  the major of the librari
+
+	which deal with tiff ar dedic to these other issu rather
+
+	than with simpli decod the tag and paramet.
+
+
+
+	perhap peopl ar overwhelm in comparison with some rather
+
+	simplemind format such as gif, pcx, and bmp, but to suggest
+
+	that tiff is so complex as to be doom to failur is ludicr.
+
+
+
+	that doesn't mean that gif isn't fine, but don't even thing about
+
+	us it in mani instanc.  gif is veri nice for us in low-end
+
+	photo applic and for screen grab and such, but it would
+
+	never do for high-volum or high-resolut system.  fax is nice,
+
+	but it doesn't do color (and gif doesn't do b&w all that well).
+
+	jpeg is nice for high-resolut color, but is slow for low-end.
+
+
+
+	the advantag tiff bring to the tabl is it abil to handl
+
+	all these situat (and then some).  natur it's more complex.
+
+	but i'ld rather propos tiff imag solut over imag
+
+	system base on have to deal with 3-4 file format anydai.
+
+
+
+	you mai find that tiff is too complic for your person tast
+
+	but pleas don't wrail against it's complex.  the complex
+
+	it contain is requir to provid the function it doe and
+
+	doesn't come close to the complex found in most commerci
+
+	viabl file format.
+
+
+
+
+
+	if we're in philosoph argument against complex, let's all
+
+	go program in scheme and forth and do imag with run length
+
+	encod.
+
+
+
+
+

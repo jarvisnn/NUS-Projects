@@ -1,0 +1,51 @@
+from: ata@spva.ph.ic.ac.uk (ata etemadi)
+subject: ideal oper system (wa: death blow to unix)
+nntp-post-host: prawn.sp.ph
+organ: imperi colleg of scienc, technolog, and medicin, london, england
+line: 45
+
+g'dai
+
+window nt is a step forward, but not by much. i guess for do user who
+think multi-task is realli _neat_ (add puke here) and ar overjoi to 
+be abl to us more than 64k of memori, it a major improv. for window
+user it more like an upgrad with facil most unix user take for 
+grant. most of  window user onli us pc for text process or run 
+3rd-parti applic anywai so the oper system featur ar not even 
+a real issu. my ideal oper system:
+
+	binari compat across all plaform. it should recogn
+	binari and configur on the fly, so i don't have to have
+	bin/mac bin/do bin/dec bin/sun bin/hp etc...
+
+	multi-cpu. so i can us the cpu on my pc and w/s and mac 
+	and transput and dsp. i don't know a singl site which 
+	ha gone for a singl vendor. i am not go to trade-in 
+	80mflop per h1 transput or ultra-fast fft on dsp chip.
+	note nt run on symmetr multi-cpu system.
+
+	built-in portabl gui/graphic tool. you can call drawbutton 
+	or drawlin and it doe the same thing no matter what platform 
+	or displai. it should also translat graphic command on-the-fly.
+	so i can us pc graphic s/w on my workstat and x softwar on 
+ 	my pc. i think gui ar not just nice to have but essenti.
+
+	configur front-end. so you can make it look like unix or do
+	or nt or os/2, and run shell script or command/bat file.
+
+	object orient. so i can program easili under it and not have
+	to re-invent the wheel if the network is not up to scratch
+	or my applic need to access sourc/object code on the fly.
+
+in other word it should have some ai capabl. that and a tight, clean
+kernel so you can actual understand it. anyon know of someth like thi ?
+
+	adio
+	     ata <(|)>.
+-- 
+| mail          dr ata etemadi, blackett laboratori,                          |
+|               space and atmospher physic group,                          |
+|               imperi colleg of scienc, technolog, and medicin,        |
+| internet/arpanet/earn/bitnet ata@spva.ph.ic.ac.uk or ata@c.mssl.ucl.ac.uk  |
+| span                              spva::ata       or     msslc:ata        |
+

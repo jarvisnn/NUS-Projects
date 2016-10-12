@@ -1,0 +1,54 @@
+from: beck@irzr17.inf.tu-dresden.de (andr beck)
+subject: re: ms window vs motif (gui design differ), wa re: futur of unix
+organ: dept. of comput scienc, tu dresden, germani.
+line: 46
+distribut: usa
+repli-to: andr_beck@ir.inf.tu-dresden.de
+nntp-post-host: irzr17.inf.tu-dresden.de
+
+
+in articl <ik.93apr9075401@sneaker.ctt.bellcor.com>, ik@sneaker.ctt.bellcor.com (ik su yoo ) write:
+|> >>>>> "aab" == andi burgess <aab@cichlid.com> write:
+|> 
+|>   aab> in <1993apr7.200950.16856@texhrc.uucp> pyeatt@texaco.com (larri d. pyeatt) write:
+|> 
+|>   aab> <some delet>
+|> 
+|>     >if you
+|>     >look close at motif, you will see that it is just ms-window
+|>     >with more ey-pleas color and textur.  the onli real differ
+|>     >is that an ms applic window can "contain" other toplevel children, 
+|>     >while a motif applic window "launch" it children out onto the
+|>     >desktop.
+|> 
+|>   aab> to those of you familiar with both gui, is thi correct? my experi
+|>   aab> with x make me think that thi msw behavior is easili duplic
+|>   aab> with x11. but i don't know msw...
+|> 
+|> anoth import differ is that msw doesn't have ani window that
+|> handl sophist geometri manag (like xmform). also, i believ
+|> that in window 3.x you're limit to 64k of resourc (window, menu,
+|> icon, etc.).
+
+imho thi whole discuss name "motif look like ms-windog" is total
+stupid. the onli thing remot influenc here can be the motif window
+manag, that featur an arrang of button and menu somewhat
+similiar to thi of the ms-w windowmanag agent, howev it name is.
+but mwm is onli a small part of motif, in fact, mwm and motif can work
+without each other, and if on doesn't like mwm outfit for some reason,
+he switch to anoth windowmanag. all thi doesn't influenc motif,
+which is a toolkit of widget to write applic, and thi toolkit
+is imho uncompar to ms-w, becaus it is much more wellorgan and
+featur alot of goodi more than the ms-w interfac.
+
+you cannot sai "a porsch look like a vw käfer" onli becaus thei have the
+wheel and the gear at the same posit. motif and ms-w ar complet
+differ world, onli on element of the motif world ha some gear and wheel
+at the same posit as ms-w.
+
+--
++-o-+--------------------------------------------------------------+-o-+
+| o |                \\\-  brain insid -///                       | o |
+| o |                    ^^^^^^^^^^^^^^^                           | o |
+| o | andr' beck (abpsoft) mehl: andr_beck@ir.inf.tu-dresden.de | o |
++-o-+--------------------------------------------------------------+-o-+

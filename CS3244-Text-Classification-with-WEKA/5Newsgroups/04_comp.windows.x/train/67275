@@ -1,0 +1,96 @@
+from: martinh@cac.washington.edu (martin hunt)
+subject: announc tcpview: a motif-base tcp/ip protocol analyz
+organ: uw network and distribut comput
+line: 89
+keyword: protocol analyz tcp/ip
+to: xannounc@expo.lc.mit.edu
+
+
+tcpview is the result of sever problem we had at uw.  we have sever
+network gener sniffer which ar heavili us to help debug problem on
+sever hundr subnet. these ar good tool, but thei ar 1) heavi, 
+2) hard to find when you need on, 3) limit in their softwar expand,
+4) difficult to us to upload data for analysi, 5) cannot be remot
+oper, and 6) cannot resolv name with dn, requir much manual 
+manipul of the name tabl.  we also sometim us tcpdump, but we found 
+it 1) too difficult for most peopl, 2) did not have enough inform for
+mani protocol, 3) could not be us interact, 4) could not handl
+tcp stream and 5) could not read sniffer file.  howev, tcpdump did do
+a reason job of decod a larg number of protocol, and could be easili
+modifi.  tcpview is an attempt to resolv these problem
+by ad a motif interfac to tcpdump and expand it featur.
+
+tcpview ha been test on a decstat 5000 and sun 4 under ultrix 4.2 and
+suno 4.1 respect.  it should work on the same system as tcpdump.
+it compil with cc and gcc on the dec and sun.  to build tcpview you will
+need motif 1.1 or better.
+
+the follow file ar avail for anonym ftp from 
+ftp.cac.washington.edu in /pub/network
+
+tcpview-1.0.tar.z	tcpview and tcpdump sourc code
+tcpview-1.0.sun.tar.z	sun4 binari
+tcpview-1.0.dec.tar.z	dec mip ultrix 4.2 binari
+
+what tcpview add to tcpdump:
+- easier interfac
+- enhanc protocol decod
+- hex displai of frame
+- captur base on time, number of frame, or user interrupt
+- can show ethernet address with manufactur's name
+- ethernet address host tabl
+- can easili follow a stream, highlight out-of-order frame
+- can send tcp data to an extern file or filter for addit
+	process.
+
+-------------------------------------------------------------------------------
+chang to tcpdump 2.2.1
+
+new featur:
+
+now read and write network gener sniffer file.  when us with '-r', the 
+file type will be automat detect.
+
+can now read in (and us) an snmp mib file.
+
+the hex format ha been chang.
+
+new time option have been ad.
+
+option were ad to allow view and process of the data in tcp packet.
+
+bug were fix in the rel tcp sequenc number. (-s flag)
+
+new flag:
+-r	read sniffer file.  not usual need, except for read from stdin
+-ttt	print delta time
+-tttt	print time rel to the first frame
+-w	write a sniffer save file (us with -w)
+-x	print frame (minu link-level header) in hexdump format.  
+	sampl output:
+
+16:36:23.349851 jeff.cac.washington.edu.1285 > nic.funet.fi.ftp: s 0:0(0) win 16384
+        0000  45 00 00 28 8a 98 00 00 3c 06 7c 9c 80 5f 70 02   |  e..(....<.|.._p.
+        0010  80 d6 06 64 05 05 00 15 5b 19 4a 00 00 00 00 00   |  ...d....[.j.....
+        0020  50 02 40 00 4e 13 00 00 00 00 00 00 00 00         |  p.@.n.........
+
+-x	print tcp data in hexdump format (us with -z)
+-z	write tcp data to stdout (us with -t to elimin timestamp)
+-z	write frame and tcp data to stdout
+
+
+martin m. hunt
+martinh@cac.washington.edu
+network & distribut comput
+univers of washington
+
+
+
+
+
+
+--
+
+-------------------------------------------------------------------------------
+martin hunt                            martinh@cac.washington.edu   
+network and distribut comput     univers of washington		  

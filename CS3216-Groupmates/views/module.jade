@@ -1,0 +1,81 @@
+extends ./base.jade
+
+block append head
+  link(rel='stylesheet', href='/stylesheets/modules.css')
+
+block header
+  include ./navbar.jade
+
+block content
+  include ./components/add_review_widget.jade
+  .container
+    .user-info-container.col-md-3.col-sm-0
+      mixin profile_sidebar(currentUser)
+    .module-wrapper.col-md-9.col-sm-12
+      h4.lead.text-uppercase #{module.code}: #{module.title}
+      .row.class-roster
+        ul.nav.nav-pills.user-type-nav(role='tablist')
+          li.active(role='presentation')
+            a(href="#groupmates-users", aria-controls="groupmates-users", role="tab", data-toggle="tab") Groupmates users
+          li(role='presentation')
+            a(href="#other-students", aria-controls="other-students", role="tab", data-toggle="tab") Other students
+        .tab-content
+          #groupmates-users.groupmates-users.tab-pane.active
+            if activeUsers.length == 0
+              .lead
+                | There are no Groupmates users in this class.
+                | However, you still can view and make reviews on all students!
+            else
+              each student in activeUsers
+                .col-md-15.col-sm-3.col-xs-6
+                  .classmate-box
+                    .classmate-front
+                      .classmate-avatar(style="background-image: url('http://graph.facebook.com/#{student.fbId}/picture?type=large')")
+                      .classmate-name #{student.name} <br> #{student.matricNumber}
+                    .classmate-back
+                      a.button.button-caution.button-circle(href='/user/#{student.id}', title="View page")
+                        span.glyphicon.glyphicon-eye-open
+
+                      if student.id !== currentUser.id
+                        .button.button-highlight.button-circle.add-review-button(
+                          data-reviewee-name=student.name,
+                          data-reviewee-fb-id=student.fbId,
+                          data-reviewee-id=student.id,
+                          data-module-code=module.code,
+                          title="Add review"
+                        )
+                          span.glyphicon.glyphicon-pencil
+          #other-students.other-students.tab-pane
+            each student in classRoster
+              .col-md-15.col-sm-3.col-xs-6
+                .classmate-box
+                  .classmate-front
+                    .classmate-avatar
+                      img(src="http://i57.servimg.com/u/f57/16/18/15/10/1875.jpg")
+                    .classmate-name #{student.Name} <br> #{student.UserID}
+                  .classmate-back
+                    a.button.button-caution.button-circle(
+                      href='/user/matric/#{student.UserID}/#{student.Name}', title="View page"
+                    )
+                      span.glyphicon.glyphicon-eye-open
+
+                    if student.UserID !== currentUser.id
+                      .button.button-highlight.button-circle.add-review-button(
+                        data-reviewee-name=student.Name,
+                        data-reviewee-fb-id=student.fbId,
+                        data-reviewee-id=student.UserID,
+                        data-module-code=module.code,
+                        title="Add review"
+                      )
+                        span.glyphicon.glyphicon-pencil
+
+  script.
+    !function(){
+      $('body').on('click', '.add-review-button', function(event) {
+        $('#add-review-widget-modal')
+          .data('revieweeId', $(this).data('revieweeId'))
+          .data('revieweeName', $(this).data('revieweeName'))
+          .data('moduleCode', $(this).data('moduleCode'))
+          .modal();
+      });
+    }();

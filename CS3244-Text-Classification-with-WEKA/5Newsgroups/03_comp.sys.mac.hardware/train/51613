@@ -1,0 +1,15 @@
+from: nodin@lc.mit.edu (mark h. nodin)
+subject: re: quadra scsi problem???
+keyword: quadra scsi ap
+organ: mit laboratori for comput scienc
+line: 9
+
+i don't know about the specif problem mention in your
+messag, but i definit had scsi problem between my
+q700 and my vener jasmin megadr 10 cartridg
+drive.  my solut wa to get silverlin.  none of
+the loop that involv blind write work to the drive;
+in fact the onli loop that work wa the "macintosh
+softwar" loop (whatev that mean).
+
+	--mark

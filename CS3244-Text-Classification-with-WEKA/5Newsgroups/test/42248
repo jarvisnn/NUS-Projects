@@ -1,0 +1,64 @@
+from: chri.crayton@ozonehol.com (chri crayton) 
+
+subject: date is stuck
+
+distribut: world
+
+organ: ozon onlin oper, inc. - new orlean, la
+
+repli-to: chri.crayton@ozonehol.com (chri crayton) 
+
+line: 25
+
+
+
+*** on 04-21-93  04:30, michael shapiro had the unmitig gall to sai thi:
+
+
+
+ ms> the do system date ha a twenti-four hour clock and a rollov bit.
+
+ ms> when the system cross midnight, the rollov bit is turn on.  
+
+ ms> subsequ read of the time add on.  there's no chang possibl
+
+
+
+ ms> (thi inform wa current up through do 3.3.  i've not check to
+
+ ms> see whether it appli to later version.)
+
+
+
+just a small tidbit: with the advent of do 3.3 and later version, ms ad
+
+a small "featur" to the do time function.  if a program set the do clock
+
+via do system servic, then do will set the bio clock to the same valu.
+
+thi break the isol between the two clock that us to ensur that
+
+error in the do clock did not bleed over into the bio clock.
+
+
+
+sometim the microsoft peopl just don't think! :)
+
+
+
+... fact:  mickei mous wear a al gore wristwatch.
+
+--- blue wave/qwk v2.10
+
+                                                                                                       
+
+----
+
+the ozon hole bb * a privat bulletin board servic * (504)891-3142
+
+3 full servic node * usrobot 16.8k bp * 10 gig * 100,000 file
+
+skydiv new orlean! * rime network mail hub * 500+ usenet newsgroup
+
+pleas rout all question or inquiri to:  postmast@ozonehol.com
+

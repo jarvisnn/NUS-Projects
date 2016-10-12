@@ -1,0 +1,70 @@
+from: ccastco@prism.gatech.edu (costa malama)
+
+subject: re: window 3.1 vs. commun proagram
+
+distribut: usa
+
+organ: georgia institut of technolog
+
+line: 29
+
+
+
+in articl <10377@lee.sea.ucla.edu> victorf@wright.sea.ucla.edu (victor friedman) write:
+
+ >can anybodi tell me what exactli window 3.1 doe to the com port???
+
+ >why can't i run a singl commun program under window? i have procomm+,
+
+ >quicklink, {commo} - neither of them respond to modem command after the
+
+ >connect ha final been establish, although i'm still abl to manag
+
+ >								vick.
+
+ >							(victorf@sea.ucla.edu)
+
+	thi is on of the trickiest problem w/ win 3.1 ... person i run
+
+telix 3.2 for do under window just fine (and 've been wait for the win
+
+version froever... :) ), but i have to admit i am the except to the rule:
+
+i have tri instal variou do comm prog on friend' machin, most of
+
+them w/ big problem... some of the stuff you have to lookout for: 
+
+1) alwai run the prog thru a .pif, never by call it .ex, 2) in the .pif
+
+_alwai_ toggl on _lock_applic_memori_ --actual thi is someth
+
+ms point out in the readm.wri file, and is especi critic for download
+
+3) go under ctrl panel/386 enh and check for _all_ your com port 'alwai warn'
+
+--it will help u w. debug thi thing and it's 'healthier' 4) check where
+
+ar u run the mous from - com port - 5) check the com port address from
+
+your bio setup and from ctrl panel/port/(setup?)/advanc..
+
+these might help u... if yu still have problem, get $100 and bui procomm+win..,
+
+:) hope it help somehow...
+
+
+
+
+
+
+
+-- 
+
+costa malama ____________________________________________________________
+
+georgia institut of technolog 
+
+oit ua -- oit doesn't pai me enough to share their opinion... 
+
+internet: ccastco@prism.gatech.edu
+

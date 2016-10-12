@@ -1,0 +1,50 @@
+from: phil@howtek.mv.com (phil hunt)
+subject: re: com port /modem/ mous conflict -realli?
+organ: howtek, inc.
+repli-to: phil@howtek.mv.com (phil hunt)
+x-mailer: uaccess - macintosh releas: 1.6v2
+line: 43
+
+
+in articl <1993apr11.120848.493@wnbb.nbg.sub.org> (comp.sy.ibm.pc.hardwar,alt.msdo.programm,comp.sy.ibm.pc.misc,uw.pc.gener,uw.pc.ibm,misc.forsal.comput.d,comp.dcom.modem,), oli@wnbb.nbg.sub.org (oliv duesel) write:
+] hi there,
+] 
+] yuri@windi.berkelei.edu (yuri yulaev) write:
+] 
+] : 	i have 1s/1p/1g  i/o card in my 386/40 pc. 
+] : when i plug in wang modem at com4,it work. if i chang
+] : it to com1- it doesn't. 
+] : program "chkport" give diagnost like "possibl com /irq
+] : conflict at com1" (with mous driver in memori).
+] 
+] sinc your io-card onli ha on serial port - thi should default to com1 ? 
+] under ms-do, you can't share irq's - so you'll have to set either your modem
+] or your mous to com2 ... us differ adress and irq's.
+] when you set two 'devic' onto the same irq - like com1 and com3 (or 2 and 4)
+] - the 'latter' on will alwai win, i.e. if you have your mous on com1 and
+] start us your modem on com3, your modem should work - but your mous will
+] stop do so, until reboot.
+] 
+] it should be no problem, set your modem to com2 ? (you didn't write 
+] anyth about other peripher ...)
+] 
+] i hope, it help a bit ....					by(t)e, oli.
+] 
+] 
+
+hi,
+
+i'm kind of new at the pc stuff.  my machin ha 4 serial port.  com 1 and3
+and 2 &4 share same irq.  you mean i can't plug a mous into com1 and a modem
+into com3 and expect both to work?
+
+if answer is no, should i chang irq's for com port to be differ?  and,
+doe it realli matter which irq i set the port too?
+
+phil
+
+--------------------------------------------------------------------
+phil hunt                          "wherev you go, there you ar!"
+howtek, inc.		                   
+
+internet: phil@howtek.mv.com   uucp: {decvax|harvard}!mv!howtek!phil

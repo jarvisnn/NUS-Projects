@@ -1,0 +1,82 @@
+x-to: mek@hydrox.enet.dec.com comp-graphic
+
+subject: re: tiff complex
+
+organ: i.e.c.c.
+
+x-cc: 
+
+from: johnl@iecc.cambridg.ma.us (john r. levin)
+
+line: 34
+
+
+
+in articl <9304271755.aa23355@enet-gw.pa.dec.com> you write:
+
+>anyon who think that tiff is too complex hasn't dealt with
+
+>cgm, asn.1, cda, dca, sgml, or ani on of a number of other
+
+>veri success file format.  peopl seem perfectli capabl
+
+>deal with these other.
+
+
+
+well, yeah, but unlik tiff thei all do substanti more than encod
+
+rectangular bitmap.  and the other ar hardli troubl free.  i hear that
+
+it is quit common for cgm implement not to interoper.
+
+
+
+the annoi thing about tiff is that is that along with the 50 us
+
+option, there ar 100 stupid option.  the most egregi exampl is that
+
+rather than pick a byte order and bit order and us it consist
+
+in all tiff file, byte and bit order ar option and all tiff reader on
+
+all machin, no matter what their natur byte order, have to be prepar
+
+to do byte swap.  there ar four slightli differ fax format --
+
+again, ani on of them would have been adequ.  rgb imag can be store
+
+by pixel or by compon, complex without function, etc, etc.  i also
+
+note that the tiff doc sai that aldu' experi show that lzw reliabl
+
+compress as well or better than ani of the fax format, suggest that
+
+none of the fax format ar realli us.
+
+
+
+what's wors, a lot of the format aren't even implement veri well,
+
+e.g., lzw limit code word to 12 bit, while 14 or 16 bit would have
+
+provid substanti better compress.  and the lzw method compress
+
+byte rather than pixel.
+
+
+
+but the absolut worst thing about tiff is that ani vendor can regist
+
+proprietari tiff code and format without even publicli document them.
+
+thi mean that there is no wai to write a tiff reader that can reliabl
+
+read all incom tiff file.  some standard.
+
+
+
+regard,
+
+john levin, johnl@iecc.cambridg.ma.us, {spdcc|ima|world}!iecc!johnl
+

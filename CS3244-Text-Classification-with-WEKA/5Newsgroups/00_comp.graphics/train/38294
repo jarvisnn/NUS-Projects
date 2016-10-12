@@ -1,0 +1,33 @@
+from: peter.vanderveen@visser.el.wau.nl  (peter van der veen)
+subject: re: font in pov??
+line: 30
+organ: wageningen agricultur univers
+x-newsread: ftpnuz (do) v1.0
+
+in articl <1qg9fc$et9@wampyr.cc.uow.edu.au> "g9134255@wampyr.cc.uow.edu.au (coronado emmanuel abad)" sai:
+> 
+> 
+> 	i have seen sever rai-trace scene (from mtv or wa it 
+> rayshad??) with stroke font appear as object in the imag.
+> the font/char had color, depth and even textur associ with
+> them.  now i wa wonder, is it possibl to do the same in pov??
+> 
+> 
+> thank,
+> 
+> noel
+> 
+ye, there ar server program which can convert font file (eq the borland
+font) to object consist of sphere, cone etc. 
+i've us a program (forgot it name/place, but i can look for it) which
+convert these borland font to three differ raytrac. vivid, pov and
+polyrai (which i like more (more flexibel/faster/us of express etc).
+the program ha a lot nice featur.
+so if interest give me a mail.
+
+ /*---------*\*/*-------------------------------------------*\
+ *|  ____/|  *|*    peter.vanderveen@visser.el.wau.nl       |*
+ *|  \ o.o|  *|*    depart of genet                  |*
+ *|   =(_)=  *|*    agricultur univers                 |*
+ *|     u    *|*    wageningen, the netherland             |*
+ \*---------*/*\*-------------------------------------------*/

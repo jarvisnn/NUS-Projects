@@ -1,0 +1,567 @@
+from: darrylo@srgenprp.sr.hp.com (darryl okahata)
+subject: re: problem with adaptec 1542b scsi and jumbo tape drive
+repli-to: darrylo@sr.hp.com
+organ: hewlett-packard / center for primal scream therapi
+x-newsread: tin [version 1.1 pl9.2]
+line: 560
+
+ron mastu (ronaldm@extro.ucc.su.oz.au) wrote:
+
+>     i've just replac my exist dtc scsi control with an adaptec 1542b,
+> and am now have troubl restor from a jumbo 250 tape drive.
+
+     here's a document that i wrote some time back.  it's slightli
+out-of-date, now that do 6 ha been releas, but much of it is still
+us.
+
+     -- darryl okahata
+	internet: darrylo@sr.hp.com
+
+disclaim: thi messag is the author's person opinion and doe not
+constitut the support, opinion or polici of hewlett-packard or of the
+littl green men that have been follow him all dai.
+
+===============================================================================
+$id: adaptec.txt 1.8 1993/01/25 00:55:08 darrylo rel darrylo $
+          hint and tip for the adaptec 1540/1542 scsi adapt
+
+
+     thi document contain hint and tip for get the adaptec
+1540/1542 scsi adapt to work with variou hardwar and softwar
+packag.  thei ar base upon my experi with an adaptec 1542a
+control, and will, hopefulli, help other.  howev, note that i
+cannot guarante that the follow will realli help you (it work for
+me), and the inform in thi document could possibl caus you to
+lose some or all of your file on your hard disk.
+
+     import!  back up the entir content of your hard disk befor
+try anyth base upon inform in thi document.
+
+     copyright 1993, by darryl okahata.  thi document mai be freeli
+copi for person us onli, and mai not be reprint in a for-profit
+public without the consent of the author.  pleas note that i have
+no connect with adaptec other than as a custom.
+
+topic cover in thi document:
+
+	* window 3.1 enhanc mode
+	* floppi-control-base tape backup devic
+	* sound card
+	* miscellan info
+
+     pleas note that part of thi document contain technic, and
+sometim ters, descript of problem.
+
+for refer:
+
+	adaptec technic support:	(800) 959-7274
+	adaptec bb (2400/9600):	(408) 945-7727
+
+pleas send comment, correct, etc. via email to me:
+
+	compuserv:	75206,3074
+	internet:	darrylo@sr.hp.com
+
+
+***** window 3.1 enhanc mode:
+
+     the window 3.1 instal program should automat configur do
+and window for us with the adaptec 1542.  howev, just in case
+someth went wrong, i'm go to describ some of the chang need
+to get window 3.1 work with the 1542.  also, you mai have notic
+that instal window 3.1 make your pc run much slower, even when
+you're not run window; method of speed it up ar discuss in
+the section call, "window 3.1 run slowli".
+
+
+* msdo configur:
+
+     the window instal program add the smartdriv disk cach to your
+config.sy and autoexec.bat file.  if you follow the instruct,
+you'll notic that you'll need to us doubl-buffer with smartdriv
+(thi is the default setup).  you'll also notic that your system run
+much, much slower -- in both window *and* msdo.  see the section
+call, "window 3.1 run slowli", for some wai of speed your system
+up.
+
+
+* window configur:
+
+     to get the adaptec 1542 to work with window, make sure that the
+"[388enh]" section of the system.ini file contain the entri:
+
+	virtualhdirq=off
+
+i believ that the window instal program automat add thi entri
+to system.ini, but i'm not sure.  if thi doesn't work for you, you
+might want to try ad some more line:
+
+	virtualhdirq=off
+	systemrombreakpoint=fals
+	emmexclud=a000-cfff
+
+(you probabl don't need the abov line, though.)  the
+"systemrombreakpoint" entri is us to enabl support for memori
+manag like qemm/386max (onli need if you us such program).
+
+
+* window 3.1 run slowli:
+
+     onc you do get window 3.1 run with the 1542, chanc ar that
+your system is run much slower than befor.  if it's not, it's
+probabl becaus:
+
+     1. you happen to be us aspi4do.sy version 3.1 in your
+	config.sy file.  congratul -- thi appear to be a
+	win solut.
+
+     2. you ar veri lucki.  whether your luck will hold out remain to
+	be seen ....
+
+if your system is run much slower than befor, thi is almost
+definit caus by smartdriv with doubl-buffer.  accord to the
+window document, and the microsoft technic note #q81808
+("smartdriv doubl buffer requir with aspi4do.sy"), you must us
+smartdriv with doubl-buffer enabl.  while thi work, it realli
+slow down your pc; i onc estim that thi slow my pc down by a
+factor of 5 (five).  as i consid thi unaccept, i look for other
+solut.
+
+     unfortun, you cannot just disabl doubl-buffer.  if you
+do, window 3.1 in enhanc mode will not work, and you might even
+destroi the content of your hard disk by try to run window 3.1.
+what you can do is on of the follow:
+
+     1. us other driver that provid doubl-buffer.  it is my
+	opinion that the unbeliev slow in smartdriv is caus
+	either by horribl ineffici doubl-buffer, or by a bug in
+	smartdriv.
+
+     2. us a driver that provid "vd" servic ("vd" stand for
+	"virtual dma servic").  thi is a standard, which is support
+	by window 3.1, that allow bu-master disk control (like
+	the 1542) to work with window.
+
+     after trash my hard disk countless time, i found the follow
+solut, none of which requir us smartdriv (note, howev, that i
+am now get occasion pariti error, which ar probabl *not* caus
+by these solut, but might be -- see below).  while the follow
+doe not requir smartdriv, us some kind of disk cach util is
+strongli recommend, as thi make window run much, much faster:
+
+1. if you do not have the aspi4do.sy driver, or you do not need aspi
+   function (for control a cdrom, tape drive, more than two
+   physic hard disk, etc.), you can add the scsiha.sy driver to your
+   config.sy file, e.g.:
+
+	driver=c:\scsiha.sy /v386
+
+   (window need the "/v386" option.)  thi driver must be load into
+   low memori (it cannot be load into high memori), and it occupi
+   about 16-20k.  as of novemb 1992, the scsiha.sy driver could be
+   obtain from the adaptec bb at (408)-945-7727 (hopefulli, it's
+   still there).
+
+2. if you need aspi function and have the aspi4do.sy driver, version
+   3.0 or 3.0a, you can us both the aspi4do.sy and scsiha.sy driver
+   in your config.sy file, e.g.:
+
+	driver=c:\aspi4do.sy
+	driver=c:\scsiha.sy /v386
+
+   amazingli enough, the scsiha.sy driver can also be load high
+   (assum you have do 5.0); i would have thought that thi would
+   crash my system, but it doesn't.  i ask adaptec's technic support
+   about thi, and thei said that load scsiha.sy high should be fine
+   as long as aspi4do.sy is load low.
+
+   on my system, not us scsiha.sy with aspi4do 3.0a would
+   occasion caus window 3.1 to crash upon restart or exit
+   window, with the addit result of a corrupt disk (some of my
+   c:\window\*.grp file would be corrupt).  for me, these crash
+   usual occur while make a differ program from progman.ex
+   the default window shell, and vice-versa.  thi is the reason
+   scsiha.sy mai be necessari.
+
+   i have absolut no idea if scsiha.sy is necessari with version of
+   aspi4do earlier than 3.0.
+
+   note that mani peopl can us aspi4do 3.0 or 3.0a without
+   scsiha.sy; thei do not seem to have ani problem at all.  i consid
+   these peopl lucki.  other, like me, have had all sort of problem.
+
+3. in my opinion, the best, but not necessarili the easiest, solut is
+   to upgrad to aspi4do 3.1.  the scsiha.sy driver is no longer
+   need.  unfortun, while you could get previou aspi4do
+   upgrad from the adaptec bb, the aspi4do 3.1 driver is not
+   avail from the adaptec bb.  as far as i know, there ar onli
+   three wai to get a copi:
+
+      * you can bui the new (as of novemb 1992) adaptec ez scsi driver
+	kit, which supposedli includ aspi4do 3.1 as well as other
+	driver, such as cdrom driver.  i believ the list price is
+	around $75.
+
+      * if you alreadi have a copi of an older version of aspi4do, you
+	can supposedli contact adaptec to upgrad it to ez scsi for
+	around $30.
+
+      * a copi of aspi4do 3.1 is includ in central point pc tool 8.0
+	for msdo.  note that the document and driver ar store in
+	differ directori.  note further that onli aspi4do is
+	includ; the cdrom driver and driver to support more than two
+	hard disk ar not includ.  thi is where i obtain my copi
+	of aspi4do 3.1.
+
+note, howev, that i am now get occasion pariti error with
+window.  in all probabl, defect hardwar in my pc is caus
+thi, as i upgrad my motherboard just after i found the abov
+solut.  howev, becaus these pariti error occur onli dure disk
+access, there is a veri small, but definit, possibl that the
+pariti error ar driver-relat (for exampl, chang the bu on/off
+time for certain disk transfer might caus thi).  i've run variou
+memori test for hour at a time, and these test have found no
+problem.  thi problem is probabl caus by memori with margin
+time requir, which caus pariti error dure disk transfer
+(thi is why the memori test didn't find ani problem -- the problem
+show up onli under disk i/o).  howev, i'm mention thi just in case
+it isn't a hardwar problem.
+
+
+***** floppi-control-base tape backup devic:
+
+     there ar two possibl problem with us the adaptec 1542 with a
+floppi-control-base tape backup devic, such as the colorado memori
+system jumbo 250:
+
+1. tape backup/restor can take a veri long time.  the tape drive
+   constantli start, stop, start, stop, etc.
+
+2. tape oper mai be errat, or encount too mani tape error.
+   (thi problem might be caus by defect hardwar on my 1542.
+   howev, i've heard of other peopl have similar problem, and so
+   i'm mention thi just in case it is not a hardwar problem on my
+   1542.)
+
+
+* tape backup/restor take a long time:
+
+     if you have a floppi-control-base tape backup devic, you mai
+have to adjust the adaptec 1540/1542 "bu on/off time" for best
+result when us the tape drive.  normal, while do a tape backup
+or restor, the tape drive motor should be continu run, with
+onli an occasion paus.  howev, the default bu time on the
+adaptec 1540/1542 mai caus the tape drive motor to start and stop,
+start and stop, everi few second.  thi caus needless wear to the
+tape and tape drive (howev, note that a dirti tape head or a defect
+tape drive can also caus thi -- make sure your tape head ar clean).
+thi also caus the tape backup or restor to take much, much longer
+than necessari.
+
+     the problem here is that these tape backup us the floppi dma to
+transfer data in memori to/from the tape drive, and the adaptec us dma
+to transfer data in memori to/from the hard disk.  the floppi dma need
+to feed data to the tape drive at a certain rate; if the tape drive is
+not fed data quickli enough by the floppi dma, the tape drive stop,
+rewind a bit, and restart (onc enough data is eventu fed to it).
+the default bu time on the adaptec (which is realli dma time) is
+"too larg".  for exampl, when a backup is done, data ha to be
+transfer from a hard disk to memori, and then from memori to the
+tape.  becaus the default time on the adaptec "hog" the memori too
+much (too much time is spent transfer data from a hard disk to
+memori), not enough time is spent transfer data from memori to the
+tape drive.  as a result, the tape drive constantli start and stop,
+becaus data is not fed to it quickli enough.
+
+     the solut is to chang the adaptec's bu on/off time.  the
+default factori set is 11 microsecond on, and 5 microsecond off.
+the "bu on" time need to be lower to 2-4 microsecond.  thi can
+be done in on of two wai:
+
+* if you have aspi4do, you can us the "/n" option.  for exampl, i us
+  a "bu on" time of 4 microsecond, which mean that i us the
+  follow line in my config.sy file:
+
+	devic=c:\aspi4do.sy /n4
+
+  note that there is no space between the "/n" and the "4".
+
+* if you don't have aspi4do, your onli recours is to try to find a
+  program call "setscsi.ex", which is veri difficult to find.  the
+  reason is that adaptec, for reason of their own, doe not seem to
+  want thi wide distribut.  i onc ask someon who work for
+  adaptec, and thei ask me to not upload it anywher.  if you have
+  anonym ftp access to the internet, you could try us archi to
+  hunt down a copi; i believ that there ar a coupl of site that have
+  it.  if you do find a copi, you run it like so:
+
+	setscsi -n:4
+
+  thi adjust the "bu on" time to 4 microsecond.  run
+  setscsi.ex without ani argument reset the bu time back to the
+  factori default.
+
+  note that it seem that you cannot us setscsi.ex if you us
+  aspi4do; setscsi.ex crash my system if aspi4do wa load.  i
+  could us setscsi.ex with scsiha.sy, howev.
+
+do not lower the "bu on" time below 2 microsecond, or increas it
+abov 11 microsecond.  if you lower it too low, the hard disk
+throughput will suddenli drop; your system will feel slower.  for me, 4
+microsecond work fine.  thi valu mai work fine for you, or you mai
+have to adjust it downward a littl.
+
+     onc you've lower the "bu on" time, tape backup and restor
+should run faster.
+
+     also, do not experi with the bu on/off time (with the other
+option that i have intention not describ), unless you know what
+you ar do.  bad combin can caus pariti error and wors, by
+starv memori refresh.
+
+     a program call bustifix.ex exist on the adaptec bb.  unless
+thi ha been upgrad sinc i last check (which ha been a while),
+thi is a self-extract archiv contain a batch file and a coupl
+of other file.  thi batch file wa suppos to allow on to set the
+bu on/off time for the 1540/1542 and other.  howev, when i tri
+run thi program with my 1542a, my system crash.  at the time, i
+wa run scsiha.sy, and i didn't check to see if there wa a
+conflict with it.  mayb thi old program work onli with the 1542b,
+although the doc sai that it work with the 1542a?
+
+
+* errat tape oper or too mani tape error:
+
+     thi "problem" mai or mai not exist.  although it exist on my
+system, a hardwar problem just on my particular 1542 could caus it.
+howev, i've heard of other peopl have similar problem, and so i'm
+mention thi just in case it isn't a hardwar problem just on my
+1542.
+
+     symptom of thi "problem", which persist even after clean the
+tape head:
+
+1. back up to tape encount "unus sector detect" error,
+   result in an abort tape backup.
+
+2. tape backup work, but the tape compar fail.
+
+3. the tape drive start, stop, start, stop, etc. much too often.
+   unlik the abov-mention problem ("tape backup/restor take a
+   long time"), where the tape drive start and stop everi few second,
+   thi kind of start/stop occur everi few 10-20 second or so.
+
+4. fastback plu 3.1 doe not find/see ani tape backup devic.  other
+   program, like central point backup and the cm jumbo softwar
+   (assum that you have a cm jumbo 250 tape drive) can find/see the
+   tape drive, but fastback plu 3.1 cannot.
+
+5. too mani tape read error.
+
+     although i do not know what is caus thi problem, i discov
+that us a differ floppi control solv it.  a few month ago, i
+upgrad my motherboard, which contain an integr floppi
+control.  as i alreadi had a floppi control on the 1542, i
+initi disabl the motherboard floppi control.  after a while, i
+decid to try disabl the 1542 floppi control and us the on on
+the motherboard.  when i did thi, the tape drive (a cm jumbo 250)
+reliabl increas dramat, and fastback plu 3.1 wa suddenli
+abl to find and us the tape drive.
+
+     i don't know if thi wa caus by a hardwar problem on my 1542.
+on the on hand, the floppi drive work great when thei were attach
+to the 1542, which seem to sai that there wa noth wrong with the
+1542.  on the other hand, the tape drive didn't work well attach to
+the 1542 floppi control, but it did work when attach to a differ
+control; thi could be an indic of a hardwar problem on my
+1542.  i did chang floppi drive cabl, and so it is conceiv that
+the problem wa in the cabl.  i don't know what the caus realli is;
+howev, if you're have similar problem, you might want to consid
+try a new floppi control.
+
+
+***** sound card:
+
+     mani popular sound card can plai or record digit sound, and
+thi is typic done us dma.  like the tape drive dma, the
+adaptec's dma can conflict with the sound card dma.  unlik that of the
+tape dma, thi "conflict" usual manifest itself as a pariti error
+(your system crash with a pariti error messag).  what happen is
+that, data is be transfer so quickli by the sound card and the
+adaptec, memori refresh cannot occur quickli enough, which caus a
+pariti error.  usual, get a pariti error mean that there is a
+hardwar problem with your system; in thi case, howev, the pariti
+error is not a symptom of bad hardwar.
+
+     i've found that such pariti error typic occur while record
+digit sound, and the chanc of such error increas as you increas
+the record fidel (e.g., higher sampl rate, record in stereo,
+record us 16-bit instead of 8, etc.).
+
+     like the tape drive solut, the solut here is to lower the
+adaptec's "bu on" time.  see the section on tape drive for
+inform on how thi is done.  note, howev, that thi mai or mai
+not solv the problem; it mai onli reduc the probabl of a pariti
+error.  the softwar us to record digit sound can greatli affect
+thi problem (i.e., some softwar is ineffici).  disk cach, the
+speed of your hard disk, and the amount of disk fragment can also
+affect thi.
+
+
+***** miscellan info:
+
+     thi section contain miscellan hint, tip, and rumor.  much
+of it is mere inform that i've heard or read about, and have not
+verifi.  i believ that the follow inform is correct, but i'm
+not sure.  us it at your own risk.
+
+* with qemm 6.00, 6.01, and 6.02, you need to specifi the "db="
+  paramet (e.g., "db=2"), unless you ar us the aspi4do driver.
+  if you don't, qemm will crash/hang at bootup.  although the qemm
+  manual mention thi, the instal program doe not seem to detect that
+  a 1542 is present and automat add thi option to the qemm
+  command line (at least, thi occur with the qemm 6.00 instal
+  program -- i haven't test ani other version).  earlier version of
+  qemm probabl need thi paramet, but i'm not sure (i've never us a
+  version earlier than 6.00).
+
+  if you us aspi4do, you do not need to give qemm the "db=" paramet.
+
+* some or all version of the 1542 do not support hard disk over on
+  gigabyt in size.  to support hard disk with capac over 1gb, you
+  need to get a new rom bio from adaptec.  i'm not sure if thi is
+  still true of the latest 1542bs be sold by adaptec.
+
+* to connect a cdrom drive to the 1542, you need a scsi cdrom drive and
+  some driver.  note that some cdrom drive have proprietari interfac
+  (non-scsi); these drive cannot be us with the 1542.  you have three
+  choic for cdrom driver (i have no idea how well the follow
+  solut work, or even if thei work -- the follow is secondhand
+  inform):
+
+     1. you can bui adaptec's ez scsi driver packag, which list for
+	someth like $75.  if you alreadi have older adaptec driver,
+	you can supposedli upgrad to ez scsi for around $30.  contact
+	adaptec for detail.  the ez scsi packag supposedli contain
+	everyth that you need.
+
+     2. you can bui the corelscsi! driver packag, which is made by the
+	same peopl that make coreldraw!  thi packag contain cdrom
+	driver, scsi tape driver, worm driver, etc.  i do not know
+	the list price, but i've seen thi packag sold for around
+	$80-$90.  note that corelscsi! doe not come with the aspi4do
+	driver, which is need.  if you do not alreadi have aspi4do,
+	you mai be better off get adaptec's ez scsi instead.
+
+     3. [thi method is obsolet, as the follow driver have been
+	obsolet by adaptec's ez scsi kit, but i'm mention it in
+	case someon alreadi ha these driver.]  you can us the
+	driver in the adaptec asw-1410 kit (aspi4do) and the asw-410
+	kit (aspi cdrom driver).  you will have to get a copi of
+	mscdex.ex (a high-level cdrom driver), if it is not includ in
+	the asw-410 kit, but thi is avail from sever bulletin
+	board.
+
+* to us a scsi tape drive with the 1542, you need softwar that know
+  how to talk to a scsi tape drive.  softwar that i've heard about ar
+  (again, like the abov section on cdrom drive, i have no idea how
+  well the follow solut work, or even if thei work -- the
+  follow is secondhand inform):
+
+     1. central point pc tool 8.0 for msdo supposedli support a larg
+	number of scsi tape drive.  it come with scsi driver
+	(aspi4do 3.1) as well as central point backup.
+
+     2. the corelscsi! driver packag contain a scsi tape backup
+	program (see the abov section on cdrom drive for more
+	detail).  howev, note that corelscsi! doe not come with, but
+	requir, aspi4do.
+
+* i've seen advertis that sell the 1542 in three configur:
+
+     1. 1542 scsi control with hard disk rom bio.
+     2. 1542 scsi control w/bio and adaptec aspi driver.
+     3. 1542 scsi control w/bio, adaptec aspi driver, and
+	corelscsi! driver/program.
+
+  i imagin that adaptec now sell the 1542 in a fourth configur:
+
+     4. 1542 scsi control w/bio and ez scsi driver (includ aspi
+	driver).
+
+* those peopl who us unix might be interest in a version of gnu tar
+  for msdo that talk to a scsi tape drive via the aspi4do driver (you
+  need thi driver befor you can us thi program).  i've never us
+  thi version of gnu tar, but i've heard that it work (i don't know
+  how well, though).  if you have anonym ftp access to the internet,
+  a copi can be found on wsmr-simtel20.armi.mil and mirror site:
+
+	pd1:<msdo.dskutl>
+	aspibin.zip  67841 920131 gnu tar for scsi tape drive, adaptec 154xx
+	aspipat.zip  21206 920131 patch for aspibin rel to gnu tar 1.10
+	aspisrc.zip 221370 920131 src for gnu tar for scsi tape, adaptec ctrlr
+
+  i have no idea if a copi can be found on compuserv; unixforum might
+  have it, if ani forum doe.
+
+* as far as msdo is concern, the 1542a and the 1542b control ar
+  the same; with msdo, the 1542a should work as well as the 1542b.
+  howev, the hardwar for these two board is not 100% ident, and
+  there is at least on (non-msdo) program that initi did not work
+  with a 1542a, but did work with a 1542b (bsd386 -- a 386 version of
+  bsd unix).
+
+* in case anyon's curiou, here's an edit copi of my config.sy file:
+
+	file=40
+	buffer=40
+	break=on
+	stack=10,256
+	devic=c:\sy\dev\aspi4do.sy /d /n4
+	devic=c:\qemm\qemm386.sy on ram rom dma=32 st:m x=f800-ffff
+	do=high,umb
+	devicehigh=c:\sy\dev\nnansi.sy
+	devicehigh=c:\do\setver.ex
+	shell = c:\do\command.com /p
+
+  note that i'm us qemm and aspi4do 3.1.  if i were us aspi4do
+  3.0 or 3.0a, i'd probabl have to us a config.sy that look like:
+
+	file=40
+	buffer=40
+	break=on
+	stack=10,256
+	devic=c:\sy\dev\aspi4do.sy /d /n4
+	devic=c:\qemm\qemm386.sy on ram rom dma=32 st:m x=f800-ffff
+	do=high,umb
+	devicehigh=c:\sy\dev\scsiha.sy /v386
+	devicehigh=c:\sy\dev\nnansi.sy
+	devicehigh=c:\do\setver.ex
+	shell = c:\do\command.com /p
+
+  if i weren't us aspi4do, i'd probabl us someth that look
+  like:
+
+	file=40
+	buffer=40
+	break=on
+	stack=10,256
+	devic=c:\sy\dev\scsiha.sy /v386
+	devic=c:\qemm\qemm386.sy on ram rom db=32 dma=32 st:m x=f800-ffff
+	do=high,umb
+	devicehigh=c:\sy\dev\nnansi.sy
+	devicehigh=c:\do\setver.ex
+	shell = c:\do\command.com /p
+
+  howev, if i us a floppi-control-base tape drive, or if i
+  plan to record high-qualiti sound from a sound card, i would still
+  need some wai of chang the adaptec's bu on/off time.  the first
+  two version of config.sy take care of thi, but thi last version
+  doesn't.
+
+
+
+local variabl:
+fill-column:	72
+eval:		(auto-fill-mode nil)
+end:

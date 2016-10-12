@@ -1,0 +1,40 @@
+from: richardf@teal.csn.org (iriemon)
+
+subject: re: leak memori resourc in 3.1
+
+nntp-post-host: teal.csn.org
+
+organ: colorado supernet, inc.
+
+x-newsread: tin 1.1 pl4
+
+line: 13
+
+
+
+dmittleman@bpavm.bpa.arizona.edu (daniel mittleman) write:
+
+:     thi mai be an faq (if so, pleas direct me to the known answer) but i
+
+:     am get frustrat and look for help.
+
+: 
+
+:     i am run win 3.1 with ndw 2.2 on a 486sx with 8 meg of memori and a
+
+:     6 meg perm swap file and am get exceedingli frustrat that my
+
+:     applic ar not give back system resourc when i close them.
+
+:
+
+i've notic thi also.  the wai it wa explain to me is that window
+
+doe not clear the upper memori block after a program is done.  anyon
+
+out there know if thi is why?
+
+ 
+
+: 
+

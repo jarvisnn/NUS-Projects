@@ -1,0 +1,138 @@
+from: jamesc@netcom.com (jame chuang)
+
+subject: re: ani info on cyrix 486dru2 chip?
+
+organ: netcom - onlin commun servic (408 241-9760 guest)
+
+line: 64
+
+
+
+it seem that there ar a lot of question regard the cyrix 386 compat
+
+486dlc and 486dru2.  my info come directli from cyrix's fast fax servic:
+
+and also from instal on of these chip in an ibm model 80.
+
+
+
+the 486dlc is a 486 instruct set compat cpu which fit into a 386dx
+
+socket (pin grid arrai, or pga).  the dlc current is avail in 3 speed.
+
+the 25, the 33, and the 40.  thei do not have a coprocessor on board, but ani
+
+softwar queri will return coproc as present.  i guess thei emul the
+
+coproc instruct.  math function ar on the 386dx level without the
+
+actual coprocessor.
+
+
+
+the intern cach on the 486dlc is 1k.  cyrix literatur claim a 85% hit
+
+rate.  my inform test show that the cach account for a 10% perform
+
+boost when it is enabl by softwar.  overal perform boost from a
+
+386dx-25 to a 486dlc-25 is about 60%.  the benchmark i us were nu si and
+
+qaplu dhryston and whetston.  the perform, with the cach enabl,
+
+is about on a par with my 386dx-40 with 256k extern cpu cach, which is
+
+around the perform for a 486sx-25.  the comput run noticebl faster,
+
+and do 6 with dblspace is not complain.  the compani claim os/2
+
+compat, but i didn't test it.
+
+
+
+the 486dru2 is not a chip, as commonli thought.  the 486dru2 is actual
+
+a small daughterboard slightli larger than the 386dx, which contain
+
+the logic to manag the clock doubler.  thi board plug into the 386dx
+
+pga, and the 486dlc-33 or 40 plug into thi board.  i guess the board
+
+doubl the frequenc appar to the cpu, and insert wait state when 
+
+access to the rest of the system is requir.  there ar no info avail
+
+from cyrix there.  anywai, the dru2 is avail for 386dx-16, and 386dx-20
+
+onli.  doubl these clock rate, and you get the 32mhz and the 40mhz dlc.
+
+if cyrix is plan to do the same thing for the dru2-50, then thei need
+
+to put out the 50mhz dlc2 first...
+
+
+
+i also test a dlc33 motherboard, along with a cyrix coprocessor.  with 64k
+
+extern cach, perform were about 30% faster than the 25, but still
+
+significantli (25%?) slower than an actual intel 486dx.
+
+
+
+imho, the dlc is a great, low price upgrad for peopl who can't afford, or
+
+can't instal, a new motherboard.  it is definit worth what i paid for it,
+
+but if you need 486dx-33 perform, the dlc33 won't cut it.  i'm not sure
+
+about the dlc-40, but i think even if it match the perform, it won't
+
+beat it in ani signific wai.
+
+
+
+the last time i post info about the dlc, peopl sent quit a bit of mail,
+
+ask where i got it.  so here is where i got mine:
+
+
+
+treasur chest peripher, thei advertis in the comput shopper.
+
+1-800-677-9781
+
+the 486dlc-25 kit wa $179.00
+
+
+
+but....
+
+
+
+i like the chip so much that i found the supplier, and becam a dealer.
+
+if you ar interest in the chip, e-mail me, and i can fax or mail you
+
+more info.   i'm well awar of the net's polici against commerci us,
+
+so i can;t post anymor info here.  howev, if there ar more question
+
+regard the 486dlc itself, i'll post what i can.
+
+
+
+jamesc
+
+909-396-0408
+
+
+
+
+
+-- 
+
+=========================================
+
+if someon ask if you ar a god, you sai... ye!
+

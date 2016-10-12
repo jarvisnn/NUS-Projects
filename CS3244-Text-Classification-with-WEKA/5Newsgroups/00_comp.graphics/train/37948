@@ -1,0 +1,47 @@
+from: sloan@ci.uab.edu (kenneth sloan)
+subject: re: surfac normal orient
+organ: ci, univers of alabama at birmingham
+line: 42
+
+in articl <1pscti$aq@travi.csd.harri.com> srp@travi.csd.harri.com (stephen pietrowicz) write:
+>...
+>how do you go about orient all normal in the same direct, given a 
+>set of point, edg and face? 
+
+look for edg inconsist.  consid two vertic, p and q, which
+ar connect by at least on edg.
+
+if (p,q) is an edg, then (q,p) should *not* appear.  
+
+if *both* (p,q) and (q,p) appear as edg, then the surfac "flip" when
+you travel across that edg.  thi is bad.  
+
+assum (warn...warn...warn) that you have an otherwis
+accept surfac - you can pick an edg, ani edg, and travers the
+surfac enforc consist with that edg.  
+
+    0) pick an edg (p,q), and mark it as "ok"
+    1) for each face, f, contain thi edg (if more than 2, oop)
+       make sure that all edg in f ar consist (i.e., the face
+       should be [(p,q),(q,r),(r,s),(s,t),(t,p)]).  flip those which
+       ar wrong. mark all of the edg in f as "ok",
+       and add them to a queue (check for duplic, and especi
+       inconsist - don't let the queue have both (p,q) and (q,p)). 
+    2) remov an edg from the queue, and go to 1).
+
+if a *mark* edg is discov to be inconsist, then you lose.
+
+if step 1) find more than on face share a particular edg, then you
+lose. 
+    
+otherwis, when done, all of the edg will be consist.  which mean
+that all of the surfac normal will either point in or out.  decid
+which wai is out is left as an exercis...
+
+
+
+-- 
+kenneth sloan                   comput and inform scienc
+sloan@ci.uab.edu               univers of alabama at birmingham
+(205) 934-2213                  115a campbel hall, uab station 
+(205) 934-5473 fax              birmingham, al 35294-1170

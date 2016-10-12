@@ -1,0 +1,42 @@
+CS3223 ASSIGNMENT 2
+
+TEAM MEMBERS: Nguyen Viet Dung (A0112068N), Tran Manh (A0112058).
+
+
+QUESTION 1
+Execution time for IS-b: 952.452 ms
+Execution time for BIS-b: 5734.062 ms
+Explanation for performance difference: Normally BIT will be effective if a sufficiently high proportion of the table is going to be accessed. So that BIT will ensure that as much of the disk access as possible is sequential. By contrast, IS does random access to the table data. However, in this specific query, it seems that the proportion of the accessed data is quite low; BIT is actually slowing down the performance since its extra overhead for the process of sorting first. So IS does a better performance than BIS in this case.
+
+
+QUESTION 2
+Execution time for IS-cb: 738.240 ms
+Execution time for BIS-cb: 577.262 ms
+Explanation for performance difference: ‘c=10’ is a matching predicate for cb_idx. This case is in contrast to the case in question 1. Here the proportion of the accessed data is high. So the overhead involved in sorting of BIS is smaller than the benefit that BIS can give. BIS will ensure the disk IO access is less random and give a better performance than IS in this case.
+
+
+QUESTION 3
+Execution time for IS-c: 1024.590 ms
+Execution time for BIS-c: 694.625 ms
+Execution time for IOS-cb: 270.098 ms
+Explanation for performance difference: IOS-cb does a search on cb_idx while IS-c and BIS-c do the search on c-idx. The size of cb_idx may be a bit larger than the size of c_idx so IOS-cb need a bit more time to seek on the tree. However, IOS-cb can save a lot more the cost of RID-lookup, as attribute b is in embedded in the tree already. So in the end, IOS-cb still performs the best among all. Meanwhile, IS-c and BIS-c need the RID-lookup so they are much slower. BIS-c is still faster than IS-c with the same reason in question 2: the proportion of matching data is high, so BIS-c gives more benefit than its overhead cost.
+
+
+QUESTION 4
+Execution time for BIS-cb: 533.263 ms
+Execution time for ABIS-b-c: 1990.932 ms
+Explanation for performance difference: ‘b=9 AND c=10’ is a matching predicate of cb_idx. So BIS-cb only needs 1 search on the tree and 1 RID-lookup for this query. Meanwhile ABIS-b-c does 2 search on 2 tree then ‘AND’ the result, it also need 2 RID-lookup rounds on 2 trees. So in the end, BIS-cb gives a much better performance than ABIS-b-c in this case.
+
+
+QUESTION 5
+Query: select * from r where (b = 10) and (c > 0)
+Execution time for IS-b: 583.542 ms
+Execution time for BIS-cb: 2979.158 ms
+Note: A high proportion of data matches the predicate ‘(b = 10) and (c > 0)’. So BIS-cb give more benefit of sequential disk access. Hence BIS-cb performs better than IS-b in this case.
+
+QUESTION 6
+Best query plan: Seq Scan (or Bitmap Index Scan on cb_idx)
+Execution time for best plan: 570.304 ms (577.919 ms foxr BIS-cb)
+Worst query plan: Index Scan using b_idx
+Execution time for worst plan: 1084.207 ms
+Note: For the best query plan, we have found that Seq Scan and BIS-cb are interchangeable as their execution time are quite close. This may due to a large proportion of matching data; so SS gives more benefit than the cost of reading non-matching data and BIS-cb can give benefit of sequential disk access. Meanwhile, IS-b plan is quite slow due to the cost of RID-lookup on non-matching data with ‘c=10’.

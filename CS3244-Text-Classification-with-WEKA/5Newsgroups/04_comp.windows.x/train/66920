@@ -1,0 +1,45 @@
+from: kbw@helio.ath.epa.gov (kevin b. weinrich)
+subject: why do i need "xrdb -m" when .xdefault unchang?
+organ: comput scienc corp.
+line: 38
+distribut: world
+nntp-post-host: helio.ath.epa.gov
+
+i'm have an x resourc problem us brian wilson's wscrawl 2.0
+(a wonder interact conferenc program, by the wai).  i'm 
+run openwindow 3.0 on a sparc 1+ under os 4.1.3.  i have
+the follow default in my .xdefault file (among mani other):
+  wscrawl.telepointernam:	kevin
+  wscrawl.syncscrollbar:		true
+  wscrawl.continuoustelepoint:	true
+  wscrawl.showpointercoordin:	fals
+  wscrawl*background:		lightblu
+  wscrawl*swindow*foreground:	yellow
+  wscrawl*draw_area_frame*foreground:	blue
+  wscrawl*keyboardfocuspolici:	pointer
+
+natur, i exit the server and restart it after ad
+those line to .xdefault .
+
+if i run the follow from a cmdtool (pwd = my home dir.):
+  xrdb -m .xdefault
+and then start up wscrawl, then all those default ar us
+properli.  wonder, ye?  except that i can't get them to be
+oper except by *manual* invok the afor-mention
+xrdb command.  if i try:
+  xrdb .xdefault
+the default "won't take."
+
+so, i tri to chang the xrdb call in my .xinitrc file from:
+  xrdb  $home/.xdefault
+to:
+  xrdb -m $home/.xdefault
+
+no go.  so i tri ad in:
+  xrdb -m /home/kbw/.xdefault
+at the begin or end of my .openwin-init file.  still no go.
+
+ani notion what give?  thank for the help.
+-- 
+kevin weinrich     comput scienc corp.
+kbw@helio.ath.epa.gov

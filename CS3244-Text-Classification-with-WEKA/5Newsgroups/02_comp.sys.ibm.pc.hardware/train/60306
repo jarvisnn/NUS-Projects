@@ -1,0 +1,33 @@
+from: swood@vela.ac.oakland.edu (scott wood)
+subject: re: more western digit hd info need
+organ: oakland univers, rochest, michigan, u.s.a.
+line: 27
+nntp-post-host: vela.ac.oakland.edu
+
+cs3sd3ae@macc.mcmaster.ca (holli       ks) write:
+
+`my western digit also ha three set of pin on the back. i am us it with
+`anoth hard drive as well and the set for the jumper were written right 
+`on the circuit board of the wd drive......ma sl ??
+
+well, i figur out how the jumper go.  now i have quit a differ
+problem that ha me perplex like you wouldn't know.  i have both drive
+work, the c: system format and all of my hardwar instal.  onli
+problem is, that dure the boot up sequenc, the comput doe not want
+to pass up look for a system on the a: drive.
+
+reiniti all goe fine and the bio seem to be configur to
+what is necessari.  all the drive test work, but when the thing come
+back around to the a: drive and there is no disk present, it just spin.
+if you insert a disk into drive a with a system howev, it work fine
+and boot up (ie how instal all my softwar)
+
+ani addit help on thi will be most welcom....
+
+swood
+
+-- 
+       hunt over in michigan?  don't despair - no close season on:
+         opossum, porcupin, weasel, red squirrel, skunk, starl,
+        feral pigeon, english sparrow, ground squirrel & woodchuck
+          anywai trout season open the last saturdai thi month.

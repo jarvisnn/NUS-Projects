@@ -1,0 +1,40 @@
+from: wlsmith@valv.heart.rri.uwo.ca (wayn smith)
+subject: re: recommend for a local bu (cach) id control
+organ: the john p. robart research institut, london, ontario
+distribut: usa
+nntp-post-host: valv.heart.rri.uwo.ca
+line: 33
+
+in articl <1993apr16.074836.6819@sol.ctr.columbia.edu> penev@venezia.rockefel.edu write:
+>| i would like to hear the net.wisdom and net.opinion on id control.
+>| i would liek to get a id control card for my vlb dx2 66 motherboard.
+>| what ar good option for thi (prefer under $200). it must also work
+>| under os/2 and be compat with stacker (and other disk compress s/w).
+
+>i have a maxtor 212mb on an isa id control, although my machin is
+>dx2/66 vlb. i ha the save transfer rate of 0.647 mb/s regardless of
+>the variat of the isa bu speed. i test it with speed between
+>5.5mhz and 8.33mhz. not _ani_ differ. the problem is not the
+>interfac between the control and the memori.
+>
+>my advic: bui 4meg of ram, save $70 and enjoi perform.
+
+comput: 286-25 mhz
+bu: isa (12.5 mhz)
+drive: maxtor 7213a (213 mb)
+
+                                    config.sy / autoexec.bat
+
+                     ms do 5             no           win 3.1
+                     smartdrv.sy        cach         smartdrv.ex
+
+core (v 2.7)         6950 k/sec          1390 k/sec     1395 k/sec
+norton si (v 5.0)     730 k/sec           980 k/sec      982 k/sec
+
+i'd still like to here from peopl with vlb-id.
+i still want to know what vlb bu speed is us with id drive.
+i still want to know if some (most ?) id drive can handl bu speed > 8 mhz.
+
+ps: a friend with a 286-20 and a new maxtor 7245 (245 meg id) drive get
+between 800 - 1000 k/sec (can't rememb exactli).  i think the bu is run
+at 8 mhz in thi case.  

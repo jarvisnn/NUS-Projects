@@ -1,0 +1,23 @@
+from: tomk@skywalk.bocaraton.ibm.com (thoma chun-hong kok)
+subject: re: hypercard for unix
+organ: ibm austin
+line: 18
+
+in articl <1993apr23.114028.17633@bernina.ethz.ch>, queloz@bernina.ethz.ch (ronald queloz) write:
+> hi netland,
+> 
+> doe anybodi know if there is someth like macintosh hypercard for ani unix 
+> platform?
+> 
+> 
+> thank in advanc
+> 
+> 
+> ron.
+
+-- 
+
+try metacard - a hypercard-like program environ on x.
+
+
+chun hong

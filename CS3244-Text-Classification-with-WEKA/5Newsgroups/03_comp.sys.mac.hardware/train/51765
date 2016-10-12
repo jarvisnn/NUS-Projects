@@ -1,0 +1,44 @@
+from: ub@carson.u.washington.edu (univers bookstor)
+subject: re: why doe appl give us a confus messag?
+articl-i.d.: shellei.1qs4fjinn74f
+organ: univers of washington, seattl
+line: 37
+nntp-post-host: carson.u.washington.edu
+
+in articl <c5ngii.bgx@new2.ci.umn.edu> bunt0003@student.tc.umn.edu (monthian buntan-1) write:
+>
+>hi there,
+>
+>doe anyon know why appl ha an ambigu messag for
+>c650 regard fpu?  in all mac price list i've seen, everi c650
+>ha the messag "fpu: option".  i know from what we've discuss in thi
+>newsgroup that all c650 have the fpu built in except the 4/80
+>configur.  why would thei be so unclear about thi issu in their
+>price list?
+>i'm plan to bui the c650 8/230/cd pretti soon, but i'm now get
+>confus with whether it come with fpu or not.
+>why sai "option" if it's built in?
+>pleas, anybodi help me understand thi game.
+>
+>regard,
+>
+>thian.
+>
+if you get the centri 650 with cd configur, you ar get a mac with
+a 68rc040 processor that ha built-in math coprocessor support.  my 
+understand is that the "option fpu" refer to your option of purchas
+the centri 650 4/80 without fpu or on of the other configur with fpu.
+
+appl doe not offer an upgrad from the non-fpu system to becom an fpu
+system.  and, it is unclear whether the '040 processor on the non-fpu system
+(a 68lc040) can be replac with a 68rc040 suppli by anoth vendor.
+appl did send a memo out at on point sate that the centri 610, which onli
+come with a non-fpu 68lc040 processor cannot be upgrad to support an fpu -
+the pin configur of the two chip appar do not match so you cannot
+swap on for anoth (again, accord to appl's memo).
+
+hope that help.
+
+kevin lohman
+univers book store, univers of washington
+buyer for the uw appl comput for educ program

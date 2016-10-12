@@ -1,0 +1,61 @@
+organ: penn state univers
+from: <dxb132@psuvm.psu.edu>
+subject: re: id vs scsi
+distribut: world
+line: 55
+
+in articl <1qmgtrinnf2a@dn1.nmsu.edu>, bgrubb@dant.nmsu.edu (grubb) sai:
+
+>dxb132@psuvm.psu.edu write:
+>>in articl <1qlbrlinn7rk@dn1.nmsu.edu>, bgrubb@dant.nmsu.edu (grubb) sai:
+>>>in pc magazin april 27, 1993:29 "although scsi is twice as fasst as esdi,
+>>>20% faster than id, and support up to 7 devic it accept ...ha
+>>>long been stall by incompat problem and instal headach."
+
+>>i love it when magazin writer make stupid statement like that re:
+>>perform. where do thei get those number? i'll list the actual
+>>perform rang, which should convinc anyon that such a
+>>statement is absurd:
+>>scsi-i rang from 0-5mb/s.
+>>scsi-ii rang from 0-40mb/s.
+>>id rang from 0-8.3mb/s.
+>>esdi is alwai 1.25mb/s (although there ar some non-standard version)
+
+>by your own data the "although scsi is twice as fast as esdi" is correct
+
+(how is 0-40 twice 1.25? do you just pick whatev scsi setup that make
+the statment "correct"?)
+even if you could make such a statement it would be meaningless unless
+you understood that esdi and id (i includ scsi and ata) ar
+complet differ (esdi is devic-level, like mfm/rll).
+
+
+>with a scsi-2 control chip scsi-1 can reach 10mb/s which is inde
+>"20% faster than id" {120% of 8.3 is 9.96}. all these scsi fact have been
+
+great, you can compar two number (ata ha sever speed mode, by the
+wai) but what the articl said wa mislead/wrong.
+
+>post to thi newsgroup in my mac & ibm info sheet {avail by ftp on
+>sumex-aim.stanford.edu (36.44.0.6) in the info-mac/report as
+>mac-ibm-compar[version #].txt (it should be 173 but 161 mai still be there)}
+
+i would recommend peopl call the ncr board and download the ansi spec
+if thei ar realli interest in thi stuff.
+
+
+>part of thi problem is both mac and ibm pc ar inconsi about what scsi
+>is which.  though it is well document that the quadra ha a scsi-2 chip
+>an appl salesperson said "it us a fast scsi-1 chip" {not at a 6mb/s,
+>10mb/s burst it doe not. scsi-1 is 5mb/s maximum synchron and quadra
+>us ansynchron scsi which is slower}  it seem that mac and ibm see
+
+someth is miss there. :) anywai, i agre. there's a lot of
+opportun for market jingo like "scsi-2 compliant" which tell
+you noth about the perform, whether it ha "wide" support, etc.
+
+>on refer for the quadra's scsi-2 control chip is
+>(digit review, oct 21, 1991 v8 n33 p8(1)).
+
+what doe it us? hopefulli a good ncr chip (e.g. 53c710)
+

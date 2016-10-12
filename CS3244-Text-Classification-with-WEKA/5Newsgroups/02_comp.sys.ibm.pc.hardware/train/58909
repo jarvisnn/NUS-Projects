@@ -1,0 +1,60 @@
+from: pschneid@rzu.unizh.ch ()
+subject: problem: maxtor lxt340s spin down with no reason
+keyword: maxtor 340, adaptec 1542, scsi
+organ: univers of zurich, switzerland
+x-newsread: tin [version 1.1 pl8]
+line: 53
+
+pleas help if you can with the follow strang problem:
+
+  the maxtor 340 drive in my 386 clone would from time to
+  time, for no obviou reason spin down complet (on can
+  tell by the sound) and simpli refus to be access. do
+  react with an error (drive d: cannot be access or
+  someth the like). unfortun, i cannot just reproduc
+  the error. sometim it occur more often, sometim
+  less. the last time it happen wa when i want to 
+  demonstr some softwar to a colleagu.
+    i would like to know if anybodi ha experienc similar
+  problem. i don't like to take the thing to the dealer
+  onli to be told that there's noth wrong with it. i
+  check the other post in thi group about maxtor, and
+  i don't seem to be the onli on who ha problem. howev,
+  no on describ the same problem, and i also have a 
+  differ configur.
+
+  thanx in advanc for ani e-mail help. 
+  
+  peter
+
+list of equip
+  comput "mandax" mainboard 386-33, 2mb
+  adaptec 1542 scsi master
+  maxtor lxt340s scsi-ii hard drive
+  nec cdr-83 cd-rom reader (problem remain with cd-rom remov)
+  et4000 vga card
+
+config.sy
+  file=30
+  devic=c:\do\setver.ex
+  devic=c:\window\himem.sy
+  devic=c:\system\aspi4do.sy
+  devic=c:\system\aswcdnec.sy /d:neccd
+  do=high
+  countri=041,,c:\do\countri.sy
+  devic=c:\do\displai.sy con=(ega,,1)
+
+autoex.bat
+  c:\window\smartdriv.sy
+  path=c:\window;c:\do
+  set temp=c:\do
+  mode con codepag prepar=((437) c:\do\ega.cpi)
+  mode con codepag select=437
+  keyb sg,,c:\do\keyboard.sy
+  c:\system\mscdex /d:neccd /l:d /v
+
+--
+/ peter schneider              []  englisch seminar         \
+| e-mail: pschneid@es.unizh.ch []  universitaet zurich        |
+|  phone: (41 1) 257 3554      []  plattenstrass 47          | 
+\    fax: (41 1) 262 1204      []  ch-8032 zurich/switzerland /

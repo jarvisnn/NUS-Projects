@@ -1,0 +1,68 @@
+from: penev@rockefel.edu (penio penev)
+
+subject: re: 66dx2 isa,vlb xor 50dx eisa ??  advic want...
+
+repli-to: penev@venezia.rockefel.edu
+
+organ: rockefel univers
+
+x-newsread: tin [version 1.1 pl8]
+
+x-post-from: venezia.rockefel.edu
+
+nntp-post-host: sol.ctr.columbia.edu
+
+line: 25
+
+
+
+on thu, 22 apr 1993 15:43:32 gmt glen osterhout (glen@tegra.com) wrote:
+
+| in articl <1993apr22.002231.13716@julian.uwo.ca> rmitch@iru.rri.uwo.ca (ross mitchel) write:
+
+| >i have a choic now between basic the abov system but with a
+
+| >486dx2-66 with isa and vlb,  or,   a 486dx-50 with eisa and no vlb (and thu
+
+| >the non-local bu version of the ati card).  which is better, keep in mind
+
+| >that i'm primarili interest in the last two task?  
+
+
+
+| the april 13 issu of pc magazin publish benchmark for the ati ultrapro
+
+| run on both vlb and eisa:
+
+
+
+| 	800x600,16	800x600,256	1024x768,16	1024x768,256
+
+| ----------------------------------------------------------------------
+
+| eisa	15.34		15.34		15.19		15.15
+
+| vlb	16.02		16.31		16.33		16.24
+
+
+
+thi a wighten speed avarag for mani window task. the origin
+
+poster (ross mitchel) wa primari interst in manipul larg
+
+imag, which impli move a lot of data from memori to the card. 
+
+
+
+doe anyon have the benchmark on thi particular task?
+
+
+
+--
+
+penio penev  x7423 (212)327-7423 (w) internet: penev@venezia.rockefel.edu
+
+
+
+disclaim: all oppinion ar mine.
+

@@ -1,0 +1,36 @@
+from: ntaib@silver.uc.indiana.edu (iskandar taib)
+subject: re: win nt - what is it???
+nntp-post-host: silver.uc.indiana.edu
+organ: indiana univers
+line: 30
+
+in articl <2bcf2664.3c6a@deneva.sdd.trw.com> reimert@.etdesg.trw.com (scott p. reimert) write:
+
+>somewher in thi thread, it ha been said that window nt (tm) is a 
+>multi-user os, as well as multi-thread, etc.  i certainli haven't
+>seen thi to be the case.  there ar seper account for each person,
+>and even seper directori if that is desir.  i don't see an 
+>implent of simultaneuo us though.
+
+sinc run ani gui over a network is go to slow it down by a
+fair amount, i expect window nt will be multius onli in the sens
+of share filesystem. someon will like write a telnetd for it so
+on could run charact-base app, but graphic-base app will have
+to be share by run the execut on the local cpu. thi is how
+thing ar shape up everywher: client-server architectur ar
+take over from the old cpu-termin setup. 
+
+note that the next doe thi: you can alwai telnet into a next and
+run charact-base app but you can't run the gui. (yeah, i know
+about x-window, just haven't been too impress by it...)..
+
+
+
+
+
+
+-- 
+-------------------------------------------------------------------------------
+iskandar taib                          | the onli thing wors than peach ala
+internet: ntaib@silver.uc.indiana.edu |    frog is frog ala peach
+bitnet:   ntaib@iubac                 !

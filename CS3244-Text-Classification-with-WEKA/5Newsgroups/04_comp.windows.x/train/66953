@@ -1,0 +1,46 @@
+from: mous@thunder.mcrcim.mcgill.edu (der mous)
+subject: re: x-server multi screen
+organ: mcgill research centr for intellig machin
+line: 42
+
+in articl <1qlop6$sgp@sun3.eeam.elin.co.at>, rainer@sun3.eeam.elin.co.at (rainer hochreit) write:
+
+> i've seen a lot of differ term, which seem to mean the same
+> thing.  who can give an exact definit what these term mean:
+
+> 	-) multi-screen
+> 	-) multi-head
+> 	-) multi-displai
+> 	-) x-server zaphod mode
+
+as appli to server, the first three ar fuzzi term.  "multi-head"
+tend to be us for ani system with multipl monitor, sometim even
+multipl screen even if thei're multiplex onto the same monitor (eg,
+a sun with a cg4 displai).  "multi-screen" and "multi-displai" would,
+if taken strictli, mean differ thing, but sinc the strict mean
+of "multi-displai" would refer to a system with multipl keyboard and
+pointer, when it's us it probabl refer to the same thing
+"multi-screen" would: a system that provid multipl screen.
+
+"zaphod" is a term appli to the wai the mit server switch the
+pointer from on screen to anoth by slide it off the side of the
+screen.
+
+> is there a limit how mani screen/displai a singl server can handl
+> (in an articel a read someth about an upper limit of 12) ?
+
+there is a protocol limit that restrict a given displai to at
+most 255 screen.  i know of no server that handl multipl displai
+on a singl invoc, unless possibl my kludg to the r4 server can
+be look upon as such; on a tcp-base system there is necessarili a
+limit of 65535 displai per machin, but thi is not a limit
+inher to x.
+
+what you read wa most like talk about a limit in some particular
+implement (probabl the mit on).  if it claim there wa a limit
+of 12 inher to x, the author of the articl had no busi write
+about x.
+
+					der mous
+
+				mous@mcrcim.mcgill.edu

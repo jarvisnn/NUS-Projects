@@ -1,0 +1,23 @@
+from: agallagh@slate.mine.colorado.edu (gallagh andrea j )
+subject: re: forc a window manag to accept specif coordin for a window
+organ: colorado school of mine
+line: 18
+
+
+in articl <c5r25y.hfz@cs.columbia.edu> ethan solomita write:
+> 
+> 	hi. i'm try to figur out how to make a window manag
+> place the window where the creat window command tell it,
+> regardless of what it mai think is right. (my applic ha
+> reason to know better)
+> 
+> 	i don't want to set the overrid-redirect becaus i do
+> want all the embellish that the window manag give, i just
+> want the wm to accept my choic of locat.
+
+	window = xcreatewindow(...);
+	xsettransientforhint(displai, window, window);
+	xmapwindow(...);
+
+thi is probabl cheat, and some window manag might still refus to 
+give it a border and all that other stuff, but it usual work.

@@ -1,0 +1,22 @@
+from: beck@irzr17.inf.tu-dresden.de (andr beck)
+subject: re: titl for xterm
+organ: dept. of comput scienc, tu dresden, germani.
+line: 14
+distribut: world
+repli-to: andr_beck@ir.inf.tu-dresden.de
+nntp-post-host: irzr17.inf.tu-dresden.de
+
+
+yet again,
+
+the escap sequenc you ar speak about here ar non standard and
+danger. in fact, an ansi compliant sequenc parser hang on them.
+
+why ar there such strang esc sequenc instead of compat dsc ?
+
+--
++-o-+--------------------------------------------------------------+-o-+
+| o |                \\\-  brain insid -///                       | o |
+| o |                    ^^^^^^^^^^^^^^^                           | o |
+| o | andr' beck (abpsoft) mehl: andr_beck@ir.inf.tu-dresden.de | o |
++-o-+--------------------------------------------------------------+-o-+

@@ -1,0 +1,51 @@
+### Users
+
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int(11)      | NO   | PRI | NULL    | auto_increment |
+| username    | varchar(255) | NO   | UNI | NULL    |                |
+| password    | varchar(255) | NO   |     | NULL    |                |
+| email       | varchar(255) | NO   | UNI | NULL    |                |
+| point       | int(11)      | YES  |     | 20      |                |
+| phoneNumber | int(11)      | YES  |     | NULL    |                |
+| createdAt   | datetime     | NO   |     | NULL    |                |
+| updatedAt   | datetime     | NO   |     | NULL    |                |
+| basicAuth   | varchar(255) | YES  |     | NULL    |                |
+| imgUrl      | text         | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+
+
+### Products
+
++-------------+-----------------------------------------------+------+-----+-----------+----------------+
+| Field       | Type                                          | Null | Key | Default   | Extra          |
++-------------+-----------------------------------------------+------+-----+-----------+----------------+
+| id          | int(11)                                       | NO   | PRI | NULL      | auto_increment |
+| name        | varchar(255)                                  | NO   |     | NULL      |                |
+| description | text                                          | NO   |     | NULL      |                |
+| status      | enum(bidding','expired','given')              | YES  |     | bidding   |                |
+| location    | varchar(255)                                  | NO   |     | NULL      |                |
+| expiryDate  | int(11)                                       | YES  |     | 0         |                |
+| userId      | int(11)                                       | NO   |     | NULL      |                |
+| imgUrls     | text                                          | YES  |     | NULL      |                |
+| highestBid  | int(11)                                       | YES  |     | 0         |                |
+| buyerId     | int(11)                                       | YES  |     | NULL      |                |
+| createdAt   | datetime                                      | NO   |     | NULL      |                |
+| updatedAt   | datetime                                      | NO   |     | NULL      |                |
++-------------+-----------------------------------------------+------+-----+-----------+----------------+
+
+
+### Activities
+
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| userId    | int(11)      | NO   |     | NULL    |                |
+| productId | int(11)      | NO   |     | NULL    |                |
+| title     | varchar(255) | YES  |     | NULL    |                |
+| message   | varchar(255) | NO   |     | NULL    |                |
+| createdAt | datetime     | NO   |     | NULL    |                |
+| updatedAt | datetime     | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+

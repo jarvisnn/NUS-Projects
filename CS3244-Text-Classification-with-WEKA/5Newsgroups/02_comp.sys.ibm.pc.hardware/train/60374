@@ -1,0 +1,28 @@
+from: storm@cs.mcgill.ca (marc wandschneid)
+subject: re: id vs scsi
+nntp-post-host: mnementh.cs.mcgill.ca
+organ: soc, mcgill univers, montreal, canada
+line: 22
+
+in articl <wayn.02uv@amtow.spacecoast.org> wayn@amtow.spacecoast.orgx-newssoftwar: grn 1.16f (10.17.92) by mike schwartz & michael b. smith write:
+>in articl <1993apr15.235509.29818@julian.uwo.ca> wlsmith@valv.heart.rri.uwo.ca (wayn smith) write:
+>>
+>> i won't argu that the scsi standard make for a good, well impliment
+>> data highwai, but i still want to know why it intrins better
+>> (than id, on an isa bu) when it come to multi-task os's when
+>> manag data from a singl scsi hard drive.
+>
+>i have been follow thi thread and figur i'd throw in my two cent...
+>
+>the amiga zorro ii bu is compar with the isa bu (7.16 vs 8.33 mhz).
+
+	except for the fact that it's superior in just about everi wai to
+the isa bu.
+
+>the amiga ha had a pre-empt multi-task  os sinc '85 and can
+>oper with 1 mb ram!  scsi is us almost exclus on these system.
+
+	except for the new system that now ship onli with id control.
+
+	toodlepip!
+	marc 'em.

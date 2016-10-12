@@ -1,0 +1,750 @@
+from: danj@welchgat.welch.jhu.edu (dan jacobson)
+
+subject: re: is there an ftp achiv for usg terrain data
+
+organ: john hopkin univ. welch medic librari
+
+line: 370
+
+
+
+in articl <c6dj25.6wl@cs.columbia.edu> olasov@cs.columbia.edu (benjamin olasov) write:
+
+>in articl <1993apr24.220701.26139@welchgat.welch.jhu.edu> danj@welchgat.welch.jhu.edu (dan jacobson) write:
+
+>
+
+>[a lot of interest stuff about gopher - delet]
+
+>
+
+>>if you've never heard of gopher don't worri it's free and on the net,
+
+>>write me a note if you'd like inform on how to get start.
+
+>>
+
+>>
+
+>>best of luck,
+
+>>
+
+>>dan jacobson
+
+>>
+
+>>danj@welchgat.welch.jhu.edu
+
+>
+
+>
+
+>i've heard of it but lost the intro post that came out a while back -
+
+>could you post it again?  i think it's of gener interest.
+
+>
+
+>
+
+>ben
+
+>-- 
+
+>ben olasov		olasov@cs.columbia.edu
+
+
+
+
+
+
+
+thi is a heavili edit/modifi version of the gopher faq intend to
+
+give peopl just start with gopher enough inform to get a
+
+client and jump into gopher-space - a complet version can be obtain
+
+as describ below.  onc you have a gopher client point it at 
+
+merlot.welch.jhu.edu and welcom to gopher-space!
+
+
+
+
+
+dan jacobson
+
+
+
+danj@welchgat.welch.jhu.edu
+
+
+
+-----
+
+
+
+common question and answer about the internet gopher, a
+
+client/server protocol for make a world wide inform servic,
+
+with mani implement.  post to comp.infosystem.gopher, 
+
+comp.answer, and new.answer everi two week.
+
+
+
+the most recent version of thi faq can be gotten through gopher, or
+
+via anonym ftp:
+
+
+
+rtfm.mit.edu:/pub/usenet/new.answer/gopher-faq
+
+
+
+those without ftp access should send e-mail to mail-server@rtfm.mit.edu
+
+with "send usenet/new.answer/find-sourc" in the bodi to find out
+
+how to do ftp by e-mail.
+
+
+
+------------------------------------------------------------------- 
+
+list of question in the gopher faq:
+
+
+
+q0:  what is gopher?
+
+q1:  where can i get gopher softwar?
+
+q2:  what do i need to access gopher?
+
+q3:  where ar there publicli avail login for gopher?
+
+q4:  who develop gopher softwar?
+
+q5: what is the relationship between gopher and (wai, www, ftp)?
+
+q6: ar paper or articl describ gopher avail?
+
+q7: what is veronica?
+
+q8: what is avail for biologi?
+
+-------------------------------------------------------------------
+
+q0:  what is gopher?
+
+
+
+a0:  the internet gopher client/server provid a distribut
+
+     inform deliveri system around which a world/campu-wide
+
+     inform system (cwi) can readili be construct.   while
+
+     provid a deliveri vehicl for local inform,  gopher
+
+     facilit access to other gopher and inform server
+
+     throughout the world. 
+
+
+
+-------------------------------------------------------------------
+
+q1:  where can i get gopher softwar?
+
+
+
+a1:  via anonym ftp to boombox.micro.umn.edu.  look in the directori
+
+     /pub/gopher
+
+
+
+--------------------------------------------------------------------
+
+q2:  what do i need to access gopher?
+
+
+
+a2:  you will need a gopher "client" program that run on your local pc
+
+     or workstat
+
+
+
+     there ar client for the follow system.  the directori
+
+     follow the name is the locat of the client on the anonym
+
+     ftp site boombox.micro.umn.edu (134.84.132.2) in the directori
+
+     /pub/gopher.
+
+
+
+      unix curs & emac   :  /pub/gopher/unix/gopher1.12.tar.z
+
+      xwindow (athena)     :  /pub/gopher/unix/xgopher1.2.tar.z
+
+      xwindow (motif)      :  /pub/gopher/unix/moog
+
+      xwindow (xview)      :  /pub/gopher/unix/xvgopher
+
+      macintosh hypercard   :  /pub/gopher/macintosh-turbogoph/old-version *
+
+      macintosh applic :  /pub/gopher/macintosh-turbogoph *
+
+      do w/clarkson driver :  /pub/gopher/pc_client/
+
+      nextstep              :  /pub/gopher/next/
+
+      vm/cm                :  /pub/gopher/rice_cm/ or /pub/gopher/viegoph/
+
+      vm                   :  /pub/gopher/vm/
+
+      os/2 2.0	            :  /pub/gopher/os2/
+
+      mv/xa                :  /pub/gopher/mv/
+
+
+
+     mani other client and server have been develop by other, the
+
+     follow is an attempt at a comprehens list.  
+
+
+
+      a microsoft window winsock client "the gopher book"
+
+        sunsit.unc.edu:/pub/micro/pc-stuff/ms-window/winsock/goph_tbk.zip
+
+
+
+      a macintosh applic, "macgoph".
+
+        ftp.cc.utah.edu:/pub/gopher/macintosh *
+
+
+
+      anoth macintosh applic, "gopherapp".
+
+        ftp.bio.indiana.edu:/util/gopher/gopherapp *
+
+
+
+      a port of the unix curs client for do with pc/tcp
+
+        oac.hsc.uth.tmc.edu:/public/do/misc/dosgoph.ex
+
+
+
+      a port of the unix curs client for pc-nf
+
+     	 bcm.tmc.edu:/nf/gopher.ex
+
+
+
+      a beta version of the pc gopher client for novel's lan workplac
+
+      for do
+
+         lennon.itn.med.umich.edu:/do/gopher
+
+
+
+      a vm decwindow client for us with wollongong or ucx
+
+         job.ac.ohio-state.edu:xgopher_client.share
+
+
+
+
+
+     * note: these macintosh client requir mactcp.
+
+
+
+     most of the abov client can also be fetch via a gopher client
+
+     itself.  put the follow on a gopher server:
+
+
+
+       type=1
+
+       host=boombox.micro.umn.edu
+
+       port=70
+
+       path=
+
+       name=gopher softwar distribut.
+
+
+
+ 
+
+     or point your gopher client at boombox.micro.umn.edu, port 70 and
+
+     look in the gopher directori.
+
+
+
+
+
+     there ar also a number of public telnet login site avail.
+
+     the univers of minnesota oper on on the machin
+
+     "consult.micro.umn.edu" (134.84.132.4) see q3 for more
+
+     inform about thi.  it is recommend that you run the client
+
+     softwar instead of log into the public telnet login site.  a
+
+     client us the custom featur of the local machin (mous,
+
+     scroll bar, etc.)  a local client is also faster.
+
+
+
+---------------------------------------------------------------------
+
+q3:  where ar there publicli avail login (ie place to telnet to
+
+     in order to get a tast of gopher) for gopher?
+
+
+
+a3:  here is a short list, us the site closest to you to minim
+
+     network lag.
+
+
+
+     telnet public login:
+
+
+
+     hostnam                  ip#              login   area
+
+     ------------------------- ---------------  ------  -------------
+
+     consult.micro.umn.edu  134.84.132.4	gopher  north america
+
+     gopher.uiuc.edu           128.174.33.160   gopher  north america
+
+     panda.uiowa.edu           128.255.40.201	panda   north america
+
+     gopher.sunet.se           192.36.125.2     gopher  europ
+
+     info.anu.edu.au           150.203.84.20    info    australia
+
+     gopher.chalmer.se        129.16.221.40    gopher  sweden
+
+     tolten.puc.cl             146.155.1.16     gopher  south america
+
+     ecnet.ec		           157.100.45.2     gopher  ecuador
+
+     gan.ncc.go.jp             160.190.10.1     gopher  japan
+
+
+
+
+
+     it is recommend that you run the client softwar instead of
+
+     log into the public login site.  a client us the
+
+     custom featur of the local machin (mous, scroll bar, etc.)
+
+     and give faster respons.  furthermor mani of the basic featur
+
+     of client - save a file to your hard drive, print a file
+
+     to a local printer, view imag, retriev file from ftp
+
+     site etc.... ar not avail by the telnet login.
+
+
+
+
+
+
+
+---------------------------------------------------------------------
+
+q4:  who develop gopher softwar?
+
+
+
+a4:  gopher wa origin develop in april 1991 by the univers
+
+     of minnesota microcomput, workstat, network center to help
+
+     our campu find answer to their comput question.  
+
+
+
+     it ha sinc grown into a full-fledg world wide inform
+
+     system us by a larg number of site in the world.
+
+
+
+     mani peopl have contribut to the project, too numer to
+
+     count. 
+
+
+
+     the peopl behind the much of the gopher softwar can be reach
+
+     via e-mail at gopher@boombox.micro.umn.edu, or via paper mail:
+
+   
+
+      internet gopher develop
+
+      100 union st. se #190
+
+      minneapoli, mn 55455  usa
+
+
+
+     or via fax at:
+
+ 
+
+      +1 (612) 625-6817
+
+
+
+---------------------------------------------------------------------
+
+q5: what is the relationship between gopher and (wai, www, ftp)?
+
+
+
+a5: gopher is intim intertwin with these two other system.
+
+     as ship the unix gopher server ha the capabl to: 
+
+     
+
+       - search local wai indic.
+
+       - queri remot wai server and funnel the result to gopher
+
+         client.
+
+       - queri remot ftp site and funnel the result to gopher
+
+         client.
+
+       - be queri by www (world wide web) client (either us
+
+         built in gopher queri or us nativ http queri.
+
+
+
+-------------------------------------------------------------------
+
+q6: ar paper or articl describ gopher avail?
+
+
+
+a6: gopher ha a whole chapter devot to it in :
+
+
+
+     _the_whole_internet_, ed kroll, o'reilli, 1992 (editor note:
+
+                             ..great book, go out and bui a bunch!)
+
+
+
+     _the_internet_passport: northwestnet's guid to our world onlin"
+
+     by jonathan kochmer and northwestnet. publish by northwestnet,
+
+     bellevu, wa. 1993. 516 pp. isbn 0-9635281-0-6. 
+
+     contact info: passport@nwnet.net, or (206) 562-3000
+
+
+
+     _a_student_guid_to_unix by harlei hahn. (publish mcgraw hill,
+
+     inc.; 1993 isbn 0-07-025511-3)
+
+
+
+
+
+     other refer includ:
+
+
+
+     _the_internet_gopher_, "connexion", juli 1992, interop.
+
+
+
+     _explor_internet_gopherspac_ "the internet societi new", v1n2 1992, 
+
+
+
+     (you can subscrib to the internet societi new by send e-mail to
+
+      isoc@nri.reston.va.us)
+
+
+
+     _the_internet_gopher_protocol_, proceed of the twenti-third
+
+          ietf, cnri, section 5.3
+
+
+
+     _internet_gopher_, proceed of canadian network '92
+
+
+
+     _the_internet_gopher_, internet: get start, sri
+
+          intern, section 10.5.5
+
+
+
+     _tool_help_internet_user_discov_on-line_treasur, computerworld,
+
+          juli 20, 1992
+
+
+
+     _tcp/ip_network_administr_, o'reilli.
+
+
+
+      balakrishan, b. (oct 1992)
+
+        "spigoph: make spire databas access through the
+
+      gopher protocol".  spire fall '92 workshop, chapel hill, north
+
+      carolina.
+
+
+
+      tomer, c.  inform technolog standard for librari,
+
+      _journal of the american societi for inform scienc_,
+
+      43(8):566-570, sept 1992.
+
+
+
+
+
+-------------------------------------------------------------------
+
+q7: what is veronica?
+
+
+
+a7: veronica:  veri easi rodent-orient net-wide index to 
+
+     computer archiv.
+
+
+
+     veronica offer a keyword search of most gopher-server menu titl
+
+     in the entir gopher web.  as archi is to ftp archiv, veronica 
+
+     is to gopherspac.  a veronica search produc a menu of gopher
+
+     item, each of which is a direct pointer to a gopher data sourc.
+
+     becaus veronica is access through a gopher client, it is easi
+
+     to us, and give access to all type of data support by the
+
+     gopher protocol.
+
+
+
+     to try veronica, select it from the "other gopher" menu on 
+
+     minnesota's gopher server, or point your gopher at:
+
+
+
+     name=veronica (search menu item in most of gopherspac) 
+
+     type=1 
+
+     port=70 
+
+     path=1/veronica 
+
+     host=futiqu.sc.unr.edu
+
+
+
+------------------------------------------------------------------------------
+
+
+
+q8: what is avail for biologi?
+
+
+
+a8: there is an incred amount of softwar, data and inform
+
+    availbl to biologist now by gopher.
+
+
+
+here is a brief list of the biolog databas that you can search 
+
+via gopher:
+
+
+
+      2.  bdt tropic data base search/
+
+      3.  biotechnet buyer guid - onlin catalogu for biologi <tel>
+
+      4.  search protein data bank header <?>
+
+      5.  chlamydomona genet center /
+
+      6.  crystal databas/
+
+      7.  hgmp databas - probe and primer /
+
+      8.  museum of paleontolog type specimen index <?>
+
+      9.  mycdb - mycobacterium databas <?>
+
+      10. search (drosophila) flybas (indiana)/
+
+      11. search (genbank + swiss-prot + pir + pdb)  <?>
+
+      12. search aatdb -  an arabidopsi thaliana databas <?>
+
+      13. search acedb - a caenorhabd elegan databas <?>
+
+      14. search compoundkb - a metabol compound databas <?>
+
+      15. search databas at welchlab (vector, promot, nrl-3d, est, omi../
+
+      16. search embl <?>
+
+      17. search genbank <?>
+
+      18. search genbank - 2 <?>
+
+      19. search genbank updat <?>
+
+      20. search limb <?>
+
+      21. search pir  <?>
+
+      22. search pir (keyword,speci...) <?>
+
+      23. search prosit <?>
+
+      24. search rebas - restrict enzym databas <?>
+
+      25. search swiss-prot <?>
+
+      26. search tfd <?>
+
+      27. search the c. elegan strain list  <?>
+
+      28. search the dna databas of japan <?>
+
+      29. search the ec enzym databas  <?>
+
+      30. search the graingen databas  <?>
+
+      31. search the maiz databas /
+
+      32.  clone vector: plasmid, phage, etc. <?>
+
+      33.  epd - eukaryot promot databas <?>
+
+      34.  est - express sequenc tag databas - human <?>
+
+      35.  west - express sequenc tag databas - c. elegan <?>
+
+      36.  kabat databas of protein of immunolog interest <?>
+
+      37.  nrl_3d protein sequenc-structur databas <?>
+
+      38.  omim - onlin mendelian inherit in man <?>
+
+      39.  seqanalref - sequenc analysi bibliograph refer data ban.. <?>
+
+      40. search rebas - restrict enzym databas <?>
+
+      41. search the ec enzym databas <?>
+
+      42. search the rodent section of genbank <?>
+
+      43. databas taxonomi (genbank, swiss-prot ...)/
+
+      44. retriev full pdb entri by access number <?>
+
+      45. search for all research fund by nih <?>
+
+      46. search for genom research fund by doe <?>
+
+      47. search for research fund by nsf <?>
+
+      48. search for research fund by the usda <?>
+
+      49. e-mail address of crystallograph/
+
+      50. e-mail address of yeast reasearch/
+
+      51. phonebook around the world/
+
+      52.  search and retriev softwar for all comput/
+
+      53.  search and retriev macintosh softwar/
+
+      54.  search and retriev do softwar/
+
+      55.  search and retriev gnu softwar/
+
+      56.  search and retriev softwar for biologi/
+
+      57.  search for agricultur softwar/
+
+      58.  search and retriev graphic softwar and data/
+
+      59.  search and retriev all onlin perl script/
+
+      60.  ftp site for biologi (56 archiv for softwar and data)/
+
+
+
+
+
+and the list goe on - thi is just the begin
+
+
+

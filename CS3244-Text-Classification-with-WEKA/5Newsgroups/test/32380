@@ -1,0 +1,48 @@
+from: ebosco@us.oracl.com (eric bosco)
+
+subject: emm386 and window
+
+nntp-post-host: monica.us.oracl.com
+
+repli-to: ebosco@us.oracl.com
+
+organ: oracl corp., redwood shore ca
+
+x-disclaim: thi messag wa written by an unauthent user
+
+              at oracl corpor.  the opinion express ar those
+
+              of the user and not necessarili those of oracl.
+
+line: 14
+
+
+
+
+
+on my pc i almost exclus run window. the onli do base applic  
+
+i have is procommplu.  in my config.sy i have emm386 load with the  
+
+option noem (no expand memori). follow a thread in on of the comp  
+
+newsgroup, i read that it wa no necessari to have emm386 load. inde,  
+
+in the manual, it sai that emm386 is us to get expand memori out of  
+
+extend memori. sinc i have the noem option, it seem to me that the  
+
+emm386 devic is useless in my case. 
+
+
+
+should i us emm386 or should i remov it from my config.sy?
+
+
+
+thank for your help,
+
+
+
+-eric
+

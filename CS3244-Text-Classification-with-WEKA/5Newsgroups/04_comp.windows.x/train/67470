@@ -1,0 +1,30 @@
+from: sti@cs.hut.fi (sami-jaakko tikka)
+subject: re: find out state of state kei (eg, capslock and numlock)
+organ: helsinki univers of technolog, cs lab
+line: 23
+distribut: inet
+nntp-post-host: tahma.cs.hut.fi
+
+in <9304211637.aa03386@blue.arbortext.com> rp@arbortext.com (ralph seguin) write:
+
+>my question is thi:  is there a mean of determin what the state
+>of capslock and/or numlock is?
+
+i don't know ani wai except to see what modifi ar on in th
+keypress event.  of cours if there is some reason why you need to
+alwai know the state of modifi even if your window don't have the
+keyborad focu you can alwai ask for keypress event from the root
+window.  then you get all the keypress and you alwai know what have
+been press.
+
+>an even more point question: is there an easi mean of make an x
+>keyboard act like a pc keyboard?  ie, capslock is activ, and the user
+>press shift-a, i'd like to get a lowercas 'a' instead of 'a'.
+
+i think thi is just a question of how to implement xlookupstr.
+you can alwai write anoth function that interpret the keypress
+as you like.  you can look at the implement of xlookupstr from
+the xlib sourc and then modifi it a littl bit.
+-- 
+        sami.tikka@hut.fi | /g=sami/s=tikka/o=hut/admd=fumail/c=fi/
+                           "live long and prosper!"

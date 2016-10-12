@@ -1,0 +1,13 @@
+from: rgasch@nl.oracl.com (robert gasch)
+subject: program argument: geometri
+organ: oracl europ
+line: 7
+x-newsread: tin [version 1.1 pl8]
+
+i have a question regard the process of program argument
+such as the -geometri option. sinc thi is a standard x option, 
+i'm wonder wether i have to pars it manual or whether there
+is some predefin function that will do thi for me?
+
+thank for ani info
+--> robret

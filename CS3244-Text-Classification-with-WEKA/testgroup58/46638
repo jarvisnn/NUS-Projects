@@ -1,0 +1,70 @@
+from: acifu@isluga.puc.cl (alejandro cifuent)
+
+subject: re: why is my mous so jumpi? (ms mous)
+
+nntp-post-host: isluga.puc.cl
+
+organ: pontificia universidad catolica de chile
+
+x-newsread: tin 1.1 pl5
+
+line: 28
+
+
+
+: eckton@uc.byu.edu (sean eckton) write:
+
+: 
+
+: >i have a microsoft serial mous and am us mous.com 8.00 (wa us 8.20 
+
+: >i think, but switch to 8.00 to see if it wa ani better).  vertic motion 
+
+: >is nice and smooth, but horizont motion is so bad i sometim can't click 
+
+: >on someth becaus my mous jump around.  i can be move the mous to 
+
+: >the right with rel uniform motion and the mous will move smoothli 
+
+: >for a bit, then jump to the right, then move smoothli for a bit then jump 
+
+: >again (mayb thi time to the left about .5 inch!).  thi is crazi!  i have 
+
+: >never had so much troubl with a mous befor.  anyon have ani solut?
+
+
+
+here is anoth hint:
+
+
+
+	i have a realli jump mous (ps2 type), and final the mous
+
+stop jump chang himem.sy (ye, himem!), is you us:
+
+
+
+devic=himem.sy /m:x
+
+
+
+x can be 1,2,...,8 (of cours my comput don't appear on the list for
+
+these paramet)
+
+
+
+ and mayb, your mous can stop jump... (but your problem look more
+
+like a dirti mous ;)...
+
+
+
+	hope it help (to anybodi!)
+
+
+
+alejandro cifuent h.
+
+acifu@isluga.puc.cl   
+

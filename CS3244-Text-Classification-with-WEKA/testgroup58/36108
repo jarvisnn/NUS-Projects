@@ -1,0 +1,74 @@
+from: cw@faultlin.com (carl schmidtmann)
+
+subject: re: ani wai to *stop* and applic from re-titl?
+
+nntp-post-host: gigo.faultlin.com
+
+organ: faultlin softwar group, inc
+
+distribut: ba
+
+line: 30
+
+
+
+in articl <1993mai13.212121.29048@colorado.edu>, hoswel@alumni.cs.colorado.edu (mike hoswel) write:
+
+|> 
+
+|> i'm quit familiar with a varieti of window titl *set* method.
+
+|> 
+
+|> my question is...  is there ani wai (via resourc, etc) to stop an
+
+|> applic's abil to re-name it's own name / iconnam properti?
+
+|> 
+
+
+
+sorri, that's a featur.  the icccm specifi how the app should set it titl, so the wm is oblig to do it.  if thi bother you, complain to the app writer.
+
+
+
+|> ...who care if it's not 'nice' to the applic -
+
+|> 
+
+|> 	i want control! ;-)
+
+|> 
+
+
+
+write your own wm that doesn't support the icccm.  or write an program that you give a window id and a titl.  the your program can set the window titl for the app and then if the app chang it, your program switch it back again.
+
+
+
+|> -mike
+
+|> 
+
+|> -- 
+
+|> mike hoswel - hoswel@ncar.ucar.edu |   never stop! / toast - bagel    |
+
+|> climat and global dynam          | disclaim: i repres myself onli |
+
+|> ncar, po box 3000, boulder co, 80307 +----------------+--------------------+
+
+|>   ...so i've got that go for me --- which is nice. |   think clearli.   |
+
+
+
+-- 
+
+_______________________________________________________________________________
+
+carl schmidtmann                                  faultlin softwar group, inc
+
+(408) 736-9655                                    867 karo court  
+
+cw@faultlin.com  ...!{appl|decwrl}!gigo!cw    sunnyval, ca 94086-8146
+

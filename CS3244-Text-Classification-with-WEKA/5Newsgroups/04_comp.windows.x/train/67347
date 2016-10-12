@@ -1,0 +1,47 @@
+from: ferguson@cs.rochest.edu (georg ferguson)
+subject: xarchi-2.0 avail on export
+organ: depart of comput scienc, univers of rochest
+line: 40
+nntp-post-host: enterpoop.mit.edu
+to: xannounc@expo.lc.mit.edu
+
+[pleas accept the follow announc for comp.window.x.announc. -gf]
+
+a complet revamp version of the x11 browser interfac to archi,
+xarchi, is now avail as
+	export.lc.mit.edu:/contrib/xarchi-2.0.tar.z
+
+for those not familar with archi or xarchi, i includ part of the
+manpag intro:
+
+  xarchi is an x11 browser interfac to the archi internet inform
+  system us the prospero virtual filesystem protocol.  archi
+  provid inform about file avail for ftp anywher on the
+  internet; xarchi displai thi inform us an easi-to-us,
+  point-and-click interfac.  xarchi allow you to further explor ftp
+  site by examin directori return as queri match, and allow
+  you to retriev file locat thi wai.
+
+xarchi 2.0 ha been extens test on r4, r5, and a varieti of
+other flavor of x, and on a wide rang of machin. a summari of the
+new featur (from the readm) follow:
+
+  * major improv includ:
+    - multipl select allow in browser for us with other new
+      featur (fwf multilist widget).
+    - abil to expand directori in browser.
+    - real fulli-integr ftp implement.
+    - abil to save and reload queri result, as well as print them.
+    - abil to resort result, and sort result by user-defin
+      pseudo-weight.
+    - onlin help browser.
+    - color resourc, done so that thei don't break mono displai.
+    - fwf fileselector widget for local file oper.
+    - makefil.dst's suppli for the imak-impair.
+
+georg
+-- 
+georg ferguson                 arpa: ferguson@cs.rochest.edu
+dept. of comput scienc       uucp: rutger!rochest!ferguson
+univers of rochest         vox:  (716) 275-2527
+rochest  ny  14627-0226       fax:  (716) 461-2018

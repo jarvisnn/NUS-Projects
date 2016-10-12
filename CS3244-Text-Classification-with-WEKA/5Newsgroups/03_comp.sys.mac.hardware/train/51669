@@ -1,0 +1,52 @@
+from: seanmcd@ac.dal.ca
+subject: powerpc rumin; wa re: lciii->powerpc?
+organ: dalhousi univers, halifax, nova scotia, canada
+line: 47
+
+in articl <186177@pyramid.pyramid.com>, andrem@pyrtech.mi.pyramid.com (andr molyneux) write:
+> in articl <1qksuq$1tt8@hal.gnu.ai.mit.edu>, mirski@hal.gnu.ai.mit.edu
+> (david joshua mirski) write:
+> |> hi. i own an lciii and i recent heard an interest rumor.
+> |> i heard that the lciii ha a built in slot for a powerpc chip.
+> |> is thi true? i heard that the slot is not the same as the pd
+> |> slot.  is that true?
+> |> 
+> |> thank
+> |> david mirski
+> |> mirski@gnu.ai.mit.edu
+> 
+> well, i also have an lc iii.  pop the top reveal:
+> 
+> 	on "socket" for an addit vram simm
+> 
+> 	on "socket" for a 72-pin ram simm
+> 
+> 	on socket for a flat-pack fpu
+> 
+> 	a processor-direct slot (pd) ident to the lc/lc ii, but with
+> 	an addit set of connet to on side (for the full 32-bit
+> 	data path that the lc/lc ii lack
+> 
+> that's it.  i guess a board with a powerpc chip could be made that would fit
+> in the pd, but that's the onli place.
+> 
+so, will it be possibl to have a nubu or pd powerpc upgrad, or will it 
+requir a logic board swap? it would be interest for appl to come out with
+a nubu powerpc that allow us of the cpu's 680x0, like rocketshar. but i 
+guess that's get a bit fantast!
+
+i wa wonder, sinc macweek report that develop were 'seed' with
+powerpc on a nubu card.
+
+also, ani word on machin arriv or estim speed? last i heard, the 
+estim were around 3-4 time the speed of a quadra in nativ risc mode. i
+heard an appl employe mumbl someth about the arriv of powerpc machin
+at a much earlier date that q1 94, but i doubt it's true.
+
+final, is the powerpc develop's cd 'mini-cours' avail? i saw it 
+advertis in the develop's univers calendar, and i'd like to know if it's
+at all *interest*.
+
+sean
+--------------
+seanmcd@ac.dal.ca

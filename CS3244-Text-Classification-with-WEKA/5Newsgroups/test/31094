@@ -1,0 +1,90 @@
+from: schit@ctp.com (subbarao chitturi)
+
+subject: start x window
+
+organ: cambridg technolog partner
+
+line: 40
+
+
+
+as soon as i am log into linux, i type
+
+
+
+# xinit
+
+
+
+set tcp so_linger : protocol not avail
+
+no siocgifconf
+
+xfree86 version 1.2/x window system
+
+(protocol version 11, revis 0, vendor releas 5000)
+
+configur driver:
+
+	vga256(256 colout svga):
+
+	  et4000, et 3000, pvga1, gvga, ati, tvga8900c, tgva9000
+
+    (us vt number 7)
+
+mous : type : mous system, devic : /dev/mous, baudrat:1200
+
+font path set to "usr/lib/x11/font/type1, /usr/lib/x11/font/75 dpi/,
+
+				  /usr/lib/x11/font/speedo, /usr/lib/x11/font/bitstream1/,
+
+				  /usr/lib/x11/font/misc.
+
+vga 256 : et4000 ( mem : ok numclock : 16 )
+
+vga 256 : clock : 25.2 28.3 47.8 41.2 25.4 0.0 47.6 0.0
+
+vga 256 : clock : 0.0  0.0  0.0  0.0  0.0  0.0 0.0  41.3
+
+vga 256 : too littl memori for virtual resolut 1024 1204
+
+
+
+*** a configur devic found, but displai mode could not be resolv. ***
+
+
+
+fatal server error:
+
+no screen found
+
+give up.
+
+xinit : interrupt system call(errno 4) : unabl to connect to x server
+
+xinit : no such process(errno 3) : server error.
+
+
+
+===========================================================================
+
+
+
+why am i get these messag when i type in xinit?
+
+is there a configur file for x-window(like config.sy for msdo)?
+
+how do i start the x session( from shell )?
+
+
+
+
+
+______________________________________________________
+
+
+
+subbarao chitturi
+
+schit@ctp.com
+

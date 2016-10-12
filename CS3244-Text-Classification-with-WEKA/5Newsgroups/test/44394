@@ -1,0 +1,172 @@
+from: michael@jester.gun.de (michael gerhard)
+
+distribut: world
+
+subject: re: how is a null modem cabl?
+
+x-newsread: tin [version 1.1 pl8]
+
+organ: privat coher system
+
+line: 76
+
+
+
+kevin kimmel - comput scienc/german undergrad (ke_kimmel@vax.cn.muskingum.edu) wrote:
+
+
+
+> 	i am interrest in the extrodinarili simpl concept of the null modem
+
+> cabl. (actual i have no idea, so don't count that last statement.)  what i'm
+
+> ask is what pin doe it us (or what ar it's specif?)  i just want
+
+> to solder on myself instead of bui on.  i don't even know what port is
+
+> us.
+
+
+
+db-25	db-9
+
+pin #	pin #	name	eia	ccitt	dte-dce	descript
+
+------------------------------------------------------------------------------
+
+ 1		fg	aa	 101	  ----	frame ground
+
+ 2	3	td	ba	 103	  --->	transmit data
+
+ 3	2	rd	bb	 104	  <---	receiv data
+
+ 4	7	rt	ca	 105	  --->	request to send
+
+ 5	8	ct	cb	 106	  <---	clear to send
+
+ 6	6	dsr	cc	 107	  <---	data set readi
+
+ 7	5	sg	ab	 102	  ----	signal ground
+
+ 8	1	dcd	cf	 109	  <---	data carrier detect
+
+ 9		--	--	  -	    -	posit dc test voltag
+
+10		--	--	  -	    -	neg dc test voltag
+
+11		qm	--	  -	  <---	equal mode
+
+12		sdcd	scf	 122	  <---	secondari data carrier detect
+
+13		sct	scb	 121	  <---	secondari clear to send
+
+14		std	sba	 118	  --->	secondari transmit data
+
+15		tc	db	 114	  <---	transmitt clock
+
+16		srd	sbb	 119	  <---	secondari receiv clock
+
+17		rc	dd	 115	  --->	receiv clock
+
+18		dcr	--	  -	  <---	divid clock receiv
+
+19		srt	sca	 120	  --->	secondari request to send
+
+20	4	dtr	cd	 108.2	  --->	data termin readi
+
+21		sq	cg	 110	  <---	signal qualiti
+
+22	9	ri	ce	 125	  <---	ring indic
+
+23		--	ch	 111	  --->	data rate selector
+
+24		--	ci	 112	  <---	data rate selector
+
+25		tc	da	 113	  <---	transmit clock
+
+
+
+.-.-.- from anoth post in c.s.i.p.h .-.-.-
+
+.-.-.- sorri, don't know the author .-.-.-.-.-.
+
+connect devic
+
+------------------
+
+ 
+
+  normal, a 7 wire connect is us. connect:
+
+        gnd1    to    gnd2
+
+	rxd1    to    txd2
+
+	txd1    to    rxd2
+
+	dtr1    to    dsr2
+
+	dsr1    to    dtr2
+
+	rt1    to    ct2
+
+	ct1    to    rt2
+
+  if a modem is connect, add line for the follow:
+
+        ri, dcd
+
+  if softwar want it, connect dcd1 to ct1 and dcd2 to ct2.
+
+  bewar! while pc us pin 2 for rxd and pin 3 for txd, modem normal
+
+have those pin revers! thi allow to easili connect pin1 to pin1, pin2
+
+to pin 2 etc. if you connect two pc, cross rxd and txd.
+
+ 
+
+  if hardwar handshak is not need, a so-call null-modem connect
+
+can be us. connect:
+
+        gnd1    to    gnd2
+
+	rxd1    to    txd2
+
+	txd1    to    rxd2
+
+addition, connect (if softwar need it):
+
+        rt1    to    ct1 & dcd1
+
+	rt2    to    ct2 & dcd2
+
+	dtr1    to    dsr1
+
+	dtr2    to    dsr2
+
+you won't need long wire for these!
+
+  the null-modem connect is us to establish an xon/xoff-transmiss
+
+between two pc (see softwar section for detail).
+
+  rememb: the name dtr, dsr, ct & rt refer to the line as seen from
+
+the pc. thi mean that for your data set dtr & rt ar incom signal
+
+and dsr & ct ar output!
+
+.-.-.-.- end .-.-.- 
+
+
+
+michael
+
+--
+
+*  michael@jester.gun.de  *   michael gerhard   *   preussenstrass 59  *
+
+                          *  germani 4040 neuss  *  voic: 49 2131 82238 *
+

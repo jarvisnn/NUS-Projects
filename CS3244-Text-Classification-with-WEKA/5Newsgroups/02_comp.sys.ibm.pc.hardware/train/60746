@@ -1,0 +1,24 @@
+from: spart@cs.uq.oz.au (geoff green)
+subject: multi i/o card with 16550 uart's
+repli-to: spart@cs.uq.oz.au
+organ: depart of comput scienc, the univers of queensland
+line: 18
+
+is it possibl to bui a serial i/o card with the 16550 uart's built in
+(rather than have to bui them separ, and socket them in)?
+
+my current i/o card us 8250's (correct number? the braindead on anywai).
+it also control two floppi drive, and two id hard drive.
+
+ideal, i'd like to get a new multi i/o card, that had 2 serial port with
+16550's and could also control anoth 2 id hd's. it would have to have
+configur address for both the serial port, and the id control, so
+it could co-exist with my exist card.
+
+doe such a beast exist? now the hard part - where can i get on in australia,
+prefer brisban?
+
+thank,
+geoff green (spart@cs.uq.oz.au)
+
+

@@ -1,0 +1,14 @@
+from: guykuo@carson.u.washington.edu (gui kuo)
+subject: re: iisi clock upgrad
+organ: univers of washington
+line: 8
+nntp-post-host: carson.u.washington.edu
+
+i have read on report of a brave soul who rewir the 40 mhz clock and a higher
+speed clock oscil's output through a doubl throw switch to allow differ
+ speed. there wa no mention of ani attempt to switch speed on the fly but
+if the si us time loop anyth like a quadra for access it floppi
+drive, dynam switch will wreak havoc. a quadra must reboot after have it
+clock speed significantli chang or it will be unabl to properli access it
+floppi drive.
+

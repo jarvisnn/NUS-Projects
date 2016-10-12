@@ -1,0 +1,52 @@
+from: tmcconn@sedona.intel.com (tom mcconnel~)
+subject: re: motif vs. [athena, etc.]
+organ: intel corpor
+line: 44
+distribut: world
+nntp-post-host: thunder.intel.com
+origin: tmcconn@sedona
+
+
+in articl <c5k6ny.azj@kirk.bu.oz.au>, bambi@kirk.bu.oz.au (david j. hugh) write:
+> berri@durian.citr.uq.oz.au (andrew berri) write:
+>
+> port of motif to both 386bsd and linux ar avail for a fee of about
+> $100.  thi is cost recoveri for the person who bought the right to
+> redistribut.  the activ in both the bsd and linux new group
+> pertain to motif ha been high.
+> 
+> 
+> >i just wonder if thi will also caus a diverg between commerci
+> >and non-commerci softwar (ie. you will onli get free softwar us
+> >athena or openlook widget set, and onli get commerci softwar us
+> >the motif widget set).  
+> 
+> 
+> i can't see why.  if just about everi workstat will come with motif
+> by default and you can bui it for under $100 for the "free" unix
+> platform, i can't see thi caus major problem.
+
+  let me add anoth of my concern: ye, i can bui a port of motif for "cheap",
+but i cannot get the sourc for "cheap", henc i am limit to us whatev x
+librari the motif port wa compil against (at least with older version of
+motif. i have been told that motif 1.2 can be us with ani x, but i have not
+seen it myself).
+
+  current, i have x11r5 run on eight differ unix platform, of which
+onli three came with motif. on those three, i am unabl to us the x11r5
+librari to build motif client, becaus i get link error between the
+vendor-suppli port of motif and my x11r5. i anticip have thi same
+problem when x11r6 becom avail.
+
+  the result is that i cannot build motif client that reli on x11r5, sinc i do
+not have motif compil under x11r5. true, i could bui anoth port of motif,
+but that sort of ruin the whole idea of "free", doesn't it?
+
+    cheer,
+
+    tom mcconnel
+-- 
+ tom mcconnel          |     internet: tmcconn@sedona.intel.com
+ intel, corp. c3-91     |     phone: (602)-554-8229
+ 5000 w. chandler blvd. | the opinion express ar my own. no on in 
+ chandler, az  85226    | their right mind would claim them.
